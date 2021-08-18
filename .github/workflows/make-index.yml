@@ -12,7 +12,12 @@ jobs:
       uses: actions/checkout@main
     - name: Create .id files
       run: |
-        ./scripts/make-index.sh
+        for file in `\find . -name '*.md'`; do
+          idfile="${file%/*}/.id"
+          if [ ! -f $idfile ]; then
+            sha1sum $file | awk '{ print $1 }' > $idfile
+          fi
+        done
     - name: Git commit
       run: |
         git add -N .
