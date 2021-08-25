@@ -1,0 +1,62 @@
+* -text
+
+.editorconfig text eol=lf
+.gitignore text eol=lf
+
+# Windows シェル系
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# .NET 関連
+*.cs text eol=crlf
+*.vb text eol=crlf
+*.sln text eol=crlf
+*.csproj text eol=crlf
+*.vbproj text eol=crlf
+
+# HTML, CSS 系
+*.css text eol=lf
+*.html text eol=lf
+*.less text eol=lf
+*.sass text eol=lf
+*.scss text eol=lf
+
+# JS, PHP 系
+*.js text eol=lf
+*.json text eol=lf
+*.ts text eol=lf
+*.vue text eol=lf
+*.php text eol=lf
+
+# その他
+*.md text eol=lf
+*.svg text eol=lf
+*.sh text eol=lf
+
+*.min.css linguist-generated
+*.min.js linguist-generated
+
+*.jpg binary
+*.jpeg binary
+*.tif binary
+*.tiff binary
+*.bmp binary
+*.gif binary
+*.png binary
+*.ico binary
+*.lzh filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text
+*.7z filter=lfs diff=lfs merge=lfs -text
+*.psd filter=lfs diff=lfs merge=lfs -text
+*.ai filter=lfs diff=lfs merge=lfs -text
+*.xls filter=lfs diff=lfs merge=lfs -text
+*.xlsx filter=lfs diff=lfs merge=lfs -text
+*.xlsm filter=lfs diff=lfs merge=lfs -text
+*.accdb filter=lfs diff=lfs merge=lfs -text
+*.laccdb filter=lfs diff=lfs merge=lfs -text
+*.ppt filter=lfs diff=lfs merge=lfs -text
+*.pptx filter=lfs diff=lfs merge=lfs -text
+*.exe filter=lfs diff=lfs merge=lfs -text
+*.dll filter=lfs diff=lfs merge=lfs -text
+*.iso filter=lfs diff=lfs merge=lfs -text
