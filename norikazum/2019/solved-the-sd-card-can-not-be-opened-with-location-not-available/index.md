@@ -1,0 +1,62 @@
+---
+title: 解決！SDカードが「場所が利用できません」となって開けない件
+date: 2019-05-31
+author: norikazum
+tags: [Windows 10, SDカード, その他, ライフハック]
+---
+
+こんにちは。
+
+今回は非常に短い記事です。
+
+私はSDカードに日々のバックアップを暗号化して取得しているのですが、エクスプローラーからアクセスすると、以下のようなエラーに見舞われました。
+
+**ファイルまたはディレクトリが壊れているため、読み取ることができません。**
+
+Dドライブにアクセスすると・・・
+<a href="images/solved-the-sd-card-can-not-be-opened-with-location-not-available-1.png"><img src="images/solved-the-sd-card-can-not-be-opened-with-location-not-available-1.png" alt="" width="264" height="300" class="alignnone size-full wp-image-9932" /></a>
+
+このエラーが(涙)・・・
+<a href="images/solved-the-sd-card-can-not-be-opened-with-location-not-available-2.png"><img src="images/solved-the-sd-card-can-not-be-opened-with-location-not-available-2.png" alt="" width="502" height="208" class="alignnone size-full wp-image-9931" /></a>
+
+
+・・・ 焦りました・・・が、以下の方法で **簡単に復旧** できました。
+
+1. コマンドプロンプトを管理者権限で開く
+1. `chkdsk d: /f` を実行する
+1. 解決！
+<a href="images/solved-the-sd-card-can-not-be-opened-with-location-not-available-3.png"><img src="images/solved-the-sd-card-can-not-be-opened-with-location-not-available-3.png" alt="" width="1251" height="938" class="alignnone size-full wp-image-9934" /></a>
+
+実行結果は以下のような出力になります。
+
+```
+C:\WINDOWS\system32>chkdsk d: /f
+ファイル システムの種類は exFAT です。
+ボリューム シリアル番号は 5874-90BD です
+ファイルとフォルダーを検査しています...
+ディレクトリ \ (706) のファイルを検査中に破損が見つかりました。
+ディレクトリ \ (707) のファイルを検査中に破損が見つかりました。
+ディレクトリ \ (708) のファイルを検査中に破損が見つかりました。
+ディレクトリ \ (709) のファイルを検査中に破損が見つかりました。
+ディレクトリ \FOUND.002\ (0) のファイルを検査中に破損が見つかりました。
+ファイルとディレクトリを検査中に破損が見つかりました。
+ボリューム ビットマップを検査中に破損が見つかりました。
+ファイルとフォルダーの検査を完了しました。
+
+Windows でファイル システムが修正されました。
+これ以上の操作は必要ありません。
+
+ 384573440 KB : 全ディスク領域
+ 155307776 KB : 21 個のファイル
+      1536 KB : 6 個のインデックス
+         0 KB : 不良セクター
+       512 KB : システムで使用中
+ 229263616 KB : 使用可能領域
+
+    262144 バイト : アロケーション ユニット サイズ
+   1502240 個     : 全アロケーション ユニット
+    895561 個     : 利用可能アロケーション ユニット
+```
+
+1枚でも多くのSDカードを救えますように・・・。
+それでは次回の記事でお会いしましょう。

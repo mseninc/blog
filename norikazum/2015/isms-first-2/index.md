@@ -1,0 +1,27 @@
+---
+title: 【社長奮闘記】ISO27001(ISMS) 取得への道2
+date: 2015-10-04
+author: norikazum
+tags: [情報セキュリティマネジメントシステム (ISMS), 移行記事, その他, 〇〇奮闘記]
+---
+
+MSENの桝田です。
+ 
+朝夕は涼しく、日中が暑い・・・。そんな休日でした。
+土曜日は、息子の運動会で撮影班だったのですが季節外れに体半分焼けてしまって、今もまだひりひりです・・・ｗ
+ 
+同じ、土曜にISMS取得にむけての第２回講習がありました。
+
+<a href="images/isms-first-2-1.jpg"><img src="images/isms-first-2-1.jpg" alt="" width="300" height="169" class="alignnone size-medium wp-image-4085" /></a>
+
+少しずつ具体化してきて、いよいよ宿題も出だしました。
+ 
+そのうちの１つ、ネットワーク環境を整備・整理するという重たい作業を先ほどまでかかってやりきりました。
+
+<a href="images/isms-first-2-2.jpg"><img src="images/isms-first-2-2.jpg" alt="" width="169" height="300" class="alignnone size-medium wp-image-4086" /></a>
+
+さて、まだまだ・・・。
+ 
+以上、桝田がお届けしました！
+
+（本記事は過去ブログからの移行記事です。）

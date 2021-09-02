@@ -1,0 +1,164 @@
+---
+title: ドライブシールドSS10でPC復元環境を構築する
+date: 2017-04-07
+author: jinna-i
+tags: [ドライブシールド, 復元環境, その他の技術]
+---
+
+こんにちは、じんないです。
+
+今回はIDK社の[ドライブシールドSS](http://www.idk.co.jp/page.php?d=bunkyo&f=driveshieldSS)を使った復元環境を構築してみます。
+
+とあるシステム導入の際に復元環境に触れる機会がありました。
+
+復元環境とは再起動すると元通りになる環境を指します。
+
+導入によるメリットとしては**ファイルの改ざん**や**個人情報の流失防止**、**ウィルスなどによる外部脅威からの防御**などさまざまです。
+
+学校や企業内PCをはじめ、パソコン教室、ホテルなど不特定多数のユーザが使用するPCに導入されています。
+
+弊社でもドライブシールドSSを導入し、評価を実施しました。
+
+使ってみて思ったのは、復元性の良さです。
+
+評価では仮想化環境を使用することが多いのですが、スナップショットだとドメイン参加後に復元するとうまくいかないことがしばしばありました。
+
+ところが、
+
+複数の復元ポイントを作成することができませんが、トライ&エラーを繰り返す必要のあるテストなんかにはもってこいではないかと思います。
+
+
+ではさっそっく、ドライブシールドによる復元環境を構築していきましょう。
+
+## 前提
+ドライブシールドSSには[スマートコントロール](http://www.idk.co.jp/page.php?d=bunkyo&f=smartcontrol)と呼ばれるリモートからクライアントを管理できるツールがありますが、今回は使用しません。
+
+
+## 事前作業
+
+### スリープ設定の無効化
+
+コントロールパネル > ハードウェアとサウンド > 電源オプション > プラン設定の編集　より、「詳細な電源設定の変更」をクリック。
+<a href="images/drive-shield-ss10-1.png"><img src="images/drive-shield-ss10-1.png" alt="" width="300" height="203" class="alignnone size-medium wp-image-4034" /></a>
+
+スリープ関係の設定をすべて**「なし」**や**「無効」**にします。
+<a href="images/drive-shield-ss10-2.png"><img src="images/drive-shield-ss10-2.png" alt="" width="275" height="300" class="alignnone size-medium wp-image-4035" /></a>
+
+### 更新プログラム確認の停止
+
+コントロールパネル > システムとセキュリティ > Windows Update > 設定の変更
+
+重要な更新プログラムで **「更新プログラムを確認しない（推奨されません）」**に設定
+<a href="images/drive-shield-ss10-3.png"><img src="images/drive-shield-ss10-3.png" alt="" width="300" height="203" class="alignnone size-medium wp-image-3970" /></a>
+
+### システム保護の無効化
+
+コントロールパネル > システムとセキュリティ > システム　より**「システムの保護」**をクリック
+<a href="images/drive-shield-ss10-4.png"><img src="images/drive-shield-ss10-4.png" alt="" width="300" height="201" class="alignnone size-medium wp-image-3973" /></a>
+
+システムの保護タブ > 構成 
+<a href="images/drive-shield-ss10-5.png"><img src="images/drive-shield-ss10-5.png" alt="" width="275" height="300" class="alignnone size-medium wp-image-3975" /></a>
+
+**システムの保護を無効にする**に設定
+<a href="images/drive-shield-ss10-6.png"><img src="images/drive-shield-ss10-6.png" alt="" width="271" height="300" class="alignnone size-medium wp-image-3977" /></a>
+
+## インストール
+
+OSのビット数にあったインストーラを実行
+<a href="images/drive-shield-ss10-7.png"><img src="images/drive-shield-ss10-7.png" alt="" width="300" height="212" class="alignnone size-medium wp-image-3980" /></a>
+
+ドライブシールドSSには.NET Framework 3.5が必要なため、「この機能をダウンロードしてインストールする」をクリック。
+<a href="images/drive-shield-ss10-8.png"><img src="images/drive-shield-ss10-8.png" alt="" width="300" height="219" class="alignnone size-medium wp-image-3981" /></a>
+
+インストールが完了し、「閉じる」をクリック。
+<a href="images/drive-shield-ss10-9.png"><img src="images/drive-shield-ss10-9.png" alt="" width="300" height="219" class="alignnone size-medium wp-image-3983" /></a>
+
+「Next」をクリック。
+<a href="images/drive-shield-ss10-10.png"><img src="images/drive-shield-ss10-10.png" alt="" width="300" height="232" class="alignnone size-medium wp-image-3984" /></a>
+
+「Next」をクリック。
+<a href="images/drive-shield-ss10-11.png"><img src="images/drive-shield-ss10-11.png" alt="" width="300" height="233" class="alignnone size-medium wp-image-3985" /></a>
+
+ライセンス条項に同意し、「Next」をクリック。
+<a href="images/drive-shield-ss10-12.png"><img src="images/drive-shield-ss10-12.png" alt="" width="300" height="233" class="alignnone size-medium wp-image-3986" /></a>
+
+今回はインターネット経由でライセンス認証するた真ん中の「Select to Register Manually」を選択し、「Next」をクリック。
+<a href="images/drive-shield-ss10-13.png"><img src="images/drive-shield-ss10-13.png" alt="" width="300" height="233" class="alignnone size-medium wp-image-3987" /></a>
+・**スマートコントロールから一括ラインセンス認証する場合**
+ 「Select to Register with Smart Controlo Managed Licensing」
+・**インターネット環境がない or プロキシ環境でライセンス認証する場合**
+「Select to Register Manually」
+
+
+ライセンスキーを入力し、「Next」をクリック。
+※認証が開始されます。
+<a href="images/drive-shield-ss10-14.png"><img src="images/drive-shield-ss10-14.png" alt="" width="300" height="231" class="alignnone size-medium wp-image-3989" /></a>
+
+パスワードを指定し、「Next」をクリック。
+このパスワードは復元を有効にしたり解除したりする場合に必要となります。
+<a href="images/drive-shield-ss10-15.png"><img src="images/drive-shield-ss10-15.png" alt="" width="300" height="232" class="alignnone size-medium wp-image-3990" /></a>
+
+次にキーボード・マウスのロック解除用のパスワードを入力し、「Next」をクリック。
+この設定はスマートコントロールからキーボードとマウスをロックした場合の解除用のパスワードです。
+スマートコントロールを使用しない場合はそれほど意識する必要はありません。
+<a href="images/drive-shield-ss10-16.png"><img src="images/drive-shield-ss10-16.png" alt="" width="300" height="235" class="alignnone size-medium wp-image-3993" /></a>
+
+今回はデフォルトインストールを行いますので、「Default Installation」を選択し「Next」をクリック。
+<a href="images/drive-shield-ss10-17.png"><img src="images/drive-shield-ss10-17.png" alt="" width="300" height="234" class="alignnone size-medium wp-image-3994" /></a>
+
+設定内容を確認し、「Next」をクリック。
+<a href="images/drive-shield-ss10-18.png"><img src="images/drive-shield-ss10-18.png" alt="" width="300" height="235" class="alignnone size-medium wp-image-3997" /></a>
+
+「Next」をクリックするとインストールが開始されます。
+<a href="images/drive-shield-ss10-19.png"><img src="images/drive-shield-ss10-19.png" alt="" width="300" height="232" class="alignnone size-medium wp-image-4005" /></a>
+
+「Finish」をクリックすると再起動され、インストールが完了します。
+<a href="images/drive-shield-ss10-20.png"><img src="images/drive-shield-ss10-20.png" alt="" width="300" height="234" class="alignnone size-medium wp-image-4007" /></a>
+
+## 動作チェック
+
+### まずは復元を有効化
+
+再起動が完了すると、タスクトレイに赤い六角形のアイコンが表示されます。
+<a href="images/drive-shield-ss10-21.png"><img src="images/drive-shield-ss10-21.png" alt="" width="282" height="189" class="alignnone size-full wp-image-4008" /></a>
+
+右クリックメニューから設定画面を起動します。
+<a href="images/drive-shield-ss10-22.png"><img src="images/drive-shield-ss10-22.png" alt="" width="300" height="194" class="alignnone size-medium wp-image-4009" /></a>
+
+インストールした直後は**プロテクト解除モード**になっています。
+「プロテクト有効」をクリックします。
+<a href="images/drive-shield-ss10-23.png"><img src="images/drive-shield-ss10-23.png" alt="" width="300" height="211" class="alignnone size-medium wp-image-4011" /></a>
+
+パスワードを求められますので、インストール時に入力したものを入力し「OK」をクリック。
+<a href="images/drive-shield-ss10-24.png"><img src="images/drive-shield-ss10-24.png" alt="" width="300" height="117" class="alignnone size-medium wp-image-4012" /></a>
+
+再起動が促されますので、再起動します。
+<a href="images/drive-shield-ss10-25.png"><img src="images/drive-shield-ss10-25.png" alt="" width="300" height="225" class="alignnone size-medium wp-image-4014" /></a>
+
+再度ログイン後、タイスクトレイのアイコンが緑になっています。
+<a href="images/drive-shield-ss10-26.png"><img src="images/drive-shield-ss10-26.png" alt="" width="198" height="166" class="alignnone size-full wp-image-4016" /></a>
+
+設定画面では、「プロテクトモード」になっています。
+これで復元が有効になりました。
+<a href="images/drive-shield-ss10-27.png"><img src="images/drive-shield-ss10-27.png" alt="" width="300" height="212" class="alignnone size-medium wp-image-4018" /></a>
+
+### 復元されるかCheck!!
+
+デスクトップ上に「復元テスト」というテキストファイルを作成します。
+<a href="images/drive-shield-ss10-28.png"><img src="images/drive-shield-ss10-28.png" alt="" width="300" height="197" class="alignnone size-medium wp-image-4027" /></a>
+
+ここで、再起動をかけます。
+
+再度ログインすると・・・
+
+先ほど作成したテキストファイルが無くなっており、元の状態に戻っていました。
+<a href="images/drive-shield-ss10-29.png"><img src="images/drive-shield-ss10-29.png" alt="" width="300" height="204" class="alignnone size-medium wp-image-4031" /></a>
+
+
+## あとがき
+
+冒頭で復元環境のメリットを述べましたが、設定を変更しても元に戻るので実は評価用マシンにも最適だったりします。
+
+仮想化されていればスナップショットで代用は可能ですが、物理環境でも復元できるのは大きなメリットではないでしょうか。
+
+ではまた。

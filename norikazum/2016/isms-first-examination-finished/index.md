@@ -1,0 +1,23 @@
+---
+title: 【社長奮闘記】ISMS審査終了
+date: 2016-03-08
+author: norikazum
+tags: [情報セキュリティマネジメントシステム (ISMS), 移行記事, その他, 〇〇奮闘記]
+---
+
+MSENの桝田です。
+
+先週、3/12 , 13 の2日間の2次審査を無事終え、、長かったISMS審査が終了しました。
+
+<a href="images/isms-first-examination-finished-1.jpg"><img src="images/isms-first-examination-finished-1.jpg" alt="" width="252" height="300" class="alignnone size-medium wp-image-4104" /></a>
+
+結果は、不適合にはならず、無事推薦してもらえることになりました。
+約3週間頃で最終的な認証結果が出るようです。
+ 
+無事認証を受けることが出来れば、次は運用となります
+7ヶ月に渡る取り組みで気づいたこと、取り組むべきことがたくさん見えました。
+ 
+とりあえず、ほっとしました。
+以上、桝田がお届けしました。
+
+（本記事は過去ブログからの移行記事です。）

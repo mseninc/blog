@@ -1,0 +1,31 @@
+---
+title: 【社長奮闘記】ISMS取得しました
+date: 2016-03-29
+author: norikazum
+tags: [情報セキュリティマネジメントシステム (ISMS), 移行記事, その他, 〇〇奮闘記]
+---
+
+こんにちは。
+MSENの桝田です。
+ 
+だんだん暖かくなり、桜も開花し、いよいよ春に訪れですね。
+ 
+さて、最近の投稿はISMSネタばかりで、今回もISMSネタなのですが、無事2016年3月23日付けでISO認定を受けました！
+
+<a href="images/isms-certified-1.jpg"><img src="images/isms-certified-1.jpg" alt="" width="300" height="169" class="alignnone size-medium wp-image-4108" /></a>
+
+昨年2015年9月から始まったコンサルティング講習は、2月までで9回を数え、審査は2回に渡り合計3回。
+ 
+サボり気味だった資料整備に追われる後半戦・・・。
+印刷枚数は1,000は軽く超えたような気が・・・。
+ 
+色々ありましたが、無事運用を始めるスタートラインに立てました。
+これからも良い運用が出来るように努めていきたいと思います。
+
+<a href="images/isms-certified-2.jpg"><img src="images/isms-certified-2.jpg" alt="" width="300" height="113" class="alignnone size-medium wp-image-4109" /></a>
+
+IS 643392 / ISO 27001
+ 
+以上、桝田がお届けしました。
+
+（本記事は過去ブログからの移行記事です。）
