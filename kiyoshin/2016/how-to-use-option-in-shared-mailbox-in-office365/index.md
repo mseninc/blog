@@ -15,29 +15,29 @@ Office365の便利なメール機能に**共有メールボックス**という�
 
 １．ページ右上にある**ユーザーアイコン**をクリックし、ユーザーメニューの**「他のメールボックスを開く」**をクリックします。
 
-![2016-06-22_02h07_14](images/how-to-use-option-in-shared-mailbox-in-office365-1.png)
+![](images/how-to-use-option-in-shared-mailbox-in-office365-1.png)
 
 ２．表示されたダイアログのテキストボックスに、アクセスしたい共有メールアドレスを入力し**「ディレクトリの検索」**をクリックします。
 
-![2016-06-22_02h22_49](images/how-to-use-option-in-shared-mailbox-in-office365-2.png)
+![](images/how-to-use-option-in-shared-mailbox-in-office365-2.png)
 
 ３．対象の共有メールボックスの内容が表示されるので、下部の**「開く」**をクリックします。
 
-![2016-06-22_02h23_10](images/how-to-use-option-in-shared-mailbox-in-office365-3.png)
+![](images/how-to-use-option-in-shared-mailbox-in-office365-3.png)
 
 アクセスしたい共有メールボックスが、新しいタブで開かれます。
 
-![2016-06-22_02h27_44](images/how-to-use-option-in-shared-mailbox-in-office365-4.png)
+![](images/how-to-use-option-in-shared-mailbox-in-office365-4.png)
 
 ## メールのオプションを表示
 
 １．アクセスした共有メールボックスのページ右上にある**歯車のアイコン**をクリックすると設定メニューがひらくので、メニュー下部にある**メール**をクリックします。
 
-![2016-06-22_02h32_25](images/how-to-use-option-in-shared-mailbox-in-office365-5.png)
+![](images/how-to-use-option-in-shared-mailbox-in-office365-5.png)
 
 共有メールボックスのメールのオプションが左側に表示されます。
 
-![2016-06-22_03h09_38](images/how-to-use-option-in-shared-mailbox-in-office365-6.png)
+![](images/how-to-use-option-in-shared-mailbox-in-office365-6.png)
 
 後は、通常のメールアカウントと同様に**自動応答**や**振り分け設定**を行うことが可能となりますので、用途に応じて設定をカスタマイズしてください。
 

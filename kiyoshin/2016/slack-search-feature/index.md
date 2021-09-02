@@ -19,7 +19,7 @@ Slack
 Slack の右上に以下の様な機能が備わっています。
 *バージョンによって多少デザイン等、違っている場合があります
 
-![slack 検索](images/slack-search-feature-1.png)
+![](images/slack-search-feature-1.png)
 
 ### (1) 検索バー
 ここに検索したい文字を入れてエンターキーを押すと検索できます。
@@ -34,7 +34,7 @@ Slack の右上に以下の様な機能が備わっています。
 
 検索バーをクリックすると以下の様な画面が出ます。
 
-![slack 検索](images/slack-search-feature-2.png)
+![](images/slack-search-feature-2.png)
 
 ### (1) from: 誰が発言したか で検索
 **誰かの発言だけ**を検索したい場合に使用します。
@@ -135,7 +135,7 @@ Ben & Jerry's
 [card url="http://www.benjerry.jp/"]
 
 食べたフレーバーは**チャンキーモンキー**
-![チャンキーモンキー](images/slack-search-feature-3.png)
+![](images/slack-search-feature-3.png)
 
 「むむっ…これは…うまい！」
 

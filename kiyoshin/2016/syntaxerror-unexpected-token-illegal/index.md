@@ -44,7 +44,7 @@ SyntaxError が出た時は、たいていタイプミスが原因なので、�
 
 めっちゃ遅いですが、最近 Miitomo を始めました。
 
-<img src="https://mseeeen.msen.jp/wp-content/uploads/2016/06/miitomo.jpg">
+![](images/syntaxerror-unexpected-token-illegal-1.jpg)
 
 始めた理由は、[カルドセプトリボルト](https://www.nintendo.co.jp/3ds/ay3j/)の体験版が欲しかったので、ダウンロードしただけなのですが、意外と楽しんでいます。
 

@@ -378,7 +378,7 @@ ATOM は標準で Markdown に対応していて、さらにリアルタイム�
 
 まぁ子供達はものすごく楽しんでいたので結局4、5時間滞在しちゃいましたが。
 
-![レゴランド](images/markdown-basic-rules-1.jpg)
+![](images/markdown-basic-rules-1.jpg)
 
 個人的にはマスター・ビルダー・アカデミーが一番楽しかったですね。
 
@@ -386,7 +386,7 @@ ATOM は標準で Markdown に対応していて、さらにリアルタイム�
 
 今回はハチを作りました。毎月お題は変わるそうです。
 
-![マスタービルダーアカデミー](images/markdown-basic-rules-2.jpg)
+![](images/markdown-basic-rules-2.jpg)
 
 ハチの制作対象年齢は6歳だったんですが、4歳の娘はしっかり作っていました。
 

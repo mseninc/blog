@@ -28,19 +28,19 @@ Slack | App Directory
 
 上記のSlack | App Directoryのリンクをクリックしてください。クリックすると以下の画像のようなページが表示されます。
 
-![hubot追加の方法](images/add-slack-to-hubot-1.png)
+![](images/add-slack-to-hubot-1.png)
 
 入力フォームに「hubot」と入力しエンターをクリックしてください。
 
-![SLACK_APP_HUBOT](images/add-slack-to-hubot-2.png)
+![](images/add-slack-to-hubot-2.png)
 
 オレンジ色のロボットのHubotさんがページに表示されたと思います。Hubotの下にあるInstallをクリックしてください。
 
-![Hubot追加方法](images/add-slack-to-hubot-3.png)
+![](images/add-slack-to-hubot-3.png)
 
 以下の画像のようにHubotの名前を入力するフォーム画面が表示されます。
 
-![hubot下のInstallクリック後](images/add-slack-to-hubot-4.png)
+![](images/add-slack-to-hubot-4.png)
 
 (1)Username : Hubotにつける名前を入力してください。
 
@@ -48,7 +48,7 @@ Slack | App Directory
 
 Add Hubot Integrationをクリックすると、以下の画像のようなHubotの設定画面が表示されます。
 
-![Hubot 入力サンプル](images/add-slack-to-hubot-5.png)
+![](images/add-slack-to-hubot-5.png)
 
 (1)API Token:外部サービスと繋げる際に必要となる、英数字が羅列されているTokenです。Hubotを連携できるサービスがある場合は、これを使い簡単に連携できます。
 
@@ -62,24 +62,24 @@ Add Hubot Integrationをクリックすると、以下の画像のようなHubot
 
 入力が完了したらSlackの画面左側部分を見てください。Direct Messageの部分にHubotが追加されています。
 
-![hubot画像](images/add-slack-to-hubot-6.png)
+![](images/add-slack-to-hubot-6.png)
 
 これでSlackにHubotを追加できました。
 
 ### チャンネルにHubotを追加する場合
 チャンネルにHubotを追加する場合は、左側の追加したいチャンネルをクリックし以下画像の赤枠部分をクリックします。
 
-![ChannelにHubotを追加する場合](images/add-slack-to-hubot-7.png)
+![](images/add-slack-to-hubot-7.png)
 
 以下の画面が表示されたと思います。①の部分には他にメンバーがいる場合は、Hubot以外にも表示されていますので、メンバー一覧からHubotをクリック、または入力フォームにhubotと入力します。
 
 Hubotが入力フォーム部分に画像の通り追加されたら、②の部分のInviteをクリックして追加完了です。
 
-![Channelにメンバーを追加](images/add-slack-to-hubot-8.png)
+![](images/add-slack-to-hubot-8.png)
 
 ### メンバーがチャット内に追加されているか確認する場合
 追加したチャンネル内に入り、下図の①の部分のMembersの部分をクリックすると右側の②の部分にメンバー一覧が表示されます。
 
-![メンバー一覧表示方法](images/add-slack-to-hubot-9.png)
+![](images/add-slack-to-hubot-9.png)
 
 これでHubotが追加されていれば完了です。

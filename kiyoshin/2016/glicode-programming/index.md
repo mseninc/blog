@@ -13,11 +13,11 @@ GLICODE（グリコード）
 
 <h2>GLICODE（グリコード）とは</h2>
 
-![グリコード01](images/glicode-programming-1.png)
+![](images/glicode-programming-1.png)
 
 ポッキー等を並べて、スマホアプリで撮影すると、置いたポッキーの命令通りにキャラクターが動いてくれます。
 
-![グリコード02](images/glicode-programming-2.png)
+![](images/glicode-programming-2.png)
 
 キャラクターを動かして、女の子の場所まで辿り着きましょう。
 
@@ -41,13 +41,13 @@ iPhone版はまだ公開されていません。
 
 <h2>命令一覧</h2>
 
-![グリコード03](images/glicode-programming-3.png)
+![](images/glicode-programming-3.png)
 
 左から、ビスコ、ポッキー、アーモンドピーク、アソビグリコが対応しています。
 
 ポッキーを ┃ ━ ┃ と置いて撮影すると、キャラクターが上右上と動くわけです。
 
-![グリコード04](images/glicode-programming-4.png)
+![](images/glicode-programming-4.png)
 
 アプリ内だとこういう風に撮影します。
 

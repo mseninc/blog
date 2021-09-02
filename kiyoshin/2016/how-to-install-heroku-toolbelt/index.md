@@ -13,24 +13,24 @@ Heroku Toolbeltのページはこちら
  
 今回はHeroku ToolbeltのWindows用のツールをダウンロードします。赤枠の部分を選択しクリックしてください。
 
-![heroku_toolbelt](images/how-to-install-heroku-toolbelt-1.png)
+![](images/how-to-install-heroku-toolbelt-1.png)
 
 ツールがダウンロードされたら、そのファイルをクリックして起動してください。  
 次に下記の様なウインドウが開くので、開いたら[Next]をクリックします。
 
-![installguide](images/how-to-install-heroku-toolbelt-2.png)
+![](images/how-to-install-heroku-toolbelt-2.png)
 
-![heroku_toolbelt_guide](images/how-to-install-heroku-toolbelt-3.png)
+![](images/how-to-install-heroku-toolbelt-3.png)
 
-![heroku_toolebelt_Fullinstall](images/how-to-install-heroku-toolbelt-4.png)
+![](images/how-to-install-heroku-toolbelt-4.png)
 
 次に、[Install]をクリックしてください。
 
-![heroku.install_ready](images/how-to-install-heroku-toolbelt-5.png)
+![](images/how-to-install-heroku-toolbelt-5.png)
 
 最後に[Finish]を押すと、インストール完了です。
 
-![install_finish](images/how-to-install-heroku-toolbelt-6.png)
+![](images/how-to-install-heroku-toolbelt-6.png)
 
 これでHeroku Toolbeltはインストール完了しているので、Herokuを利用されている方は、試しにコマンドを使ってみましょう。
 

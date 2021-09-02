@@ -18,13 +18,13 @@ tags: [ポケモンGO, その他, ライフハック]
 ## ポケコインとは
 ポケモンGO 内で使用できる仮想通貨です。
 
-<img src="https://mseeeen.msen.jp/wp-content/uploads/2016/07/pokecoin.png">
+![](images/pokemongo-pokecoin-getfree-1.png)
 
 メニューのショップから購入する事が可能ですが有料です。
 
-![pokemongo-menu](images/pokemongo-pokecoin-getfree-2.jpg)
+![](images/pokemongo-pokecoin-getfree-2.jpg)
 
-![pokecoin01](images/pokemongo-pokecoin-getfree-3.jpg)
+![](images/pokemongo-pokecoin-getfree-3.jpg)
 
 結構お高いですよね。
 
@@ -43,7 +43,7 @@ tags: [ポケモンGO, その他, ライフハック]
 
 2. ショップの防衛ボーナスアイコンをタップする
 ショップ画面の右上に盾のアイコンがあります。
-![pokecoin02](images/pokemongo-pokecoin-getfree-4.jpg)
+![](images/pokemongo-pokecoin-getfree-4.jpg)
 これをタップすると**防衛1回に対して10コイン + ほしのすな500**を入手する事ができます。
 **ポケモンを配置した後すぐでも1回分は必ず入手する事が可能**です。
 ただし、**一度タップすると22時間は押せなくなる**ので、防衛できるだけの戦力がある場合は、アイコンを押すタイミングを考えた方が、多くの報酬を手に入れる事ができます。

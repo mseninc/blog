@@ -22,7 +22,7 @@ Herokuはそれらを用意しなくても、簡単にアプリをアップロ�
 ## Herokuアカウントの登録
 [Herokuへのアカウント登録](https://signup.heroku.com/login) はこちらから
 
-![Heroku](images/get-heroku-account-for-free-1.png)
+![](images/get-heroku-account-for-free-1.png)
 
 以下を入力する画面が出てくるので、入力します。
 
@@ -33,17 +33,17 @@ Herokuはそれらを用意しなくても、簡単にアプリをアップロ�
 
 入力完了後、Create Free Account(無料のアカウントを作成）をクリックすると、入力したメールアドレスに、Herokuから以下の画像の様な、メールが届くので本文にあるアルファベットや数字の羅列が書かれたURL（赤枠部分）をクリックします。
 
-![heroku_send_mail](images/get-heroku-account-for-free-2.jpg)
+![](images/get-heroku-account-for-free-2.jpg)
 
 Herokuのパスワードを設定する画面が出てくるので、同じパスワードを２回入力します。
 
-![パスワード作成フォーム](images/get-heroku-account-for-free-3.jpg)
+![](images/get-heroku-account-for-free-3.jpg)
 
 パスワードを入力すると、設定完了になります。  
 下の画像の赤い部分をクリックして、Heroku内ページに移動します。
 
-![herokusetting](images/get-heroku-account-for-free-4.png)
+![](images/get-heroku-account-for-free-4.png)
 
 下記画面が表示されたら、これでHerokuのアカウント作成登録は完了しました。
 
-![heroku-login-image](images/get-heroku-account-for-free-5.jpg)
+![](images/get-heroku-account-for-free-5.jpg)

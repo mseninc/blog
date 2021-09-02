@@ -13,12 +13,12 @@ Slack
 
 上記のアドレスをクリックすると以下の画像のような画面が表示されますので、フォームにメールアドレスを入力し、Create New Teamをクリックしてください。
 
-![Slack登録画面](images/slack-registration-1.png)
+![](images/slack-registration-1.png)
 
 ## 確認コードの入力
 コードを入力する画面が表示されます。先ほど入力したメールアドレスに、この画面で入力する6桁のコードが書かれたメールが届くので、書かれている6桁のコードを入力してください。
 
-![コード入力画面](images/slack-registration-2.png)
+![](images/slack-registration-2.png)
 
 
 ## 使用者名とユーザー名の登録
@@ -28,55 +28,55 @@ Slack
 
 すべての入力ができたら、Nextを押してください。
 
-![アカウント名登録](images/slack-registration-3.png)
+![](images/slack-registration-3.png)
 
 ## パスワード登録
 ログインするためのパスワードを登録してください。
 
-![パスワード設定](images/slack-registration-4.png)
+![](images/slack-registration-4.png)
 
 ## Slackチーム名の登録
 Slackのチーム名を設定します。チーム名は登録後も変更可能です。
 
-![スラックチームの名前登録](images/slack-registration-5.png)
+![](images/slack-registration-5.png)
 
 ## チームドメインの登録
 Slackチームのドメイン名を登録します。<span style="color:red;">**Slackチームのドメイン名は、一度登録すると変更できません。**</span> 初期値はチーム名の登録時に入力したものが入力されています。使用できる文字は、英数字と-(ハイフン）のみです。
 
-![SlackTeamDomain](images/slack-registration-6.png)
+![](images/slack-registration-6.png)
 
 ## 確認コードの入力
 Slackチームのドメインの登録が完了すると、Slackからメールボックスに新しくコードの書かれたメールが届きます。メールを確認し、コードを入力してください。
 
-![確認コード用](images/slack-registration-7.png)
+![](images/slack-registration-7.png)
 
 ## 招待する
 招待したい人のメールアドレスを入力して、Send Inviteをクリックすると入力したメールアドレスに招待メールが送られます。招待したくない人は、Skip for nowをクリックして入力を飛ばしてください。
 
-![メンバー招待](images/slack-registration-8.png)
+![](images/slack-registration-8.png)
 
 ## Slackチャットのチュートリアル
 Explore Slackをクリックします。
 
-![Slackチュートリアル](images/slack-registration-9.png)
+![](images/slack-registration-9.png)
 
 SlackBotが、「やあ、私はスラックボットだよぉ。 お役に立ちたいと思っています。（でもまだBotなんだよね。ごめんね） 何か入力して始めてください。」と発言するので、何か適当な文字を入れてコメントしてください。
 
-![Slackチュートリアル](images/slack-registration-10.png)
+![](images/slack-registration-10.png)
 
 コメントすると、SlackBotが「あなたに会えて光栄です。少しだけSlackについてお教えします。」と言ってチュートリアルが始まります。（チュートリアルを飛ばしたい方は、Done?Click here to skipをクリックすると、Slackのチャットページが表示されて登録完了となります。）
 
 ### チュートリアル説明
-![Slack登録完了](images/slack-registration-11.png)
+![](images/slack-registration-11.png)
 
 これらがあなたのチャンネルです。チャンネルは、トピック（音楽というような）や、チーム(営業のような)といったプロジェクトのチャットの集まりです。チャンネルはPublic(公開設定)かPrivate(プライベート設定:招待した人のみ閲覧、書き込み可）かを選択できます。
 
-![チュートリアル２](images/slack-registration-12.png)
+![](images/slack-registration-12.png)
 
 直接メッセージを（指定したメンバーに）送ります。
 ダイレクトメッセージは１体１のプライベートな会話です。招待した人が登録完了すると、招待した人と個別にチャットができるようになります。
 
-![チュートリアル３](images/slack-registration-13.png)
+![](images/slack-registration-13.png)
 
 あなたのチームに人を招待します。
 Invite Peopleのボタンをクリックして同僚をチームに招待します。

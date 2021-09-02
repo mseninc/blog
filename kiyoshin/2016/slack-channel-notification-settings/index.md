@@ -9,19 +9,19 @@ Slack を日常的に使っていて、チャンネルが増えてくると「�
 
 ## 設定画面までの道のり
 1. まず、Slack 画面の左端にあるサイドバーメニューの **CHANNELS** から通知設定を変更したいチャンネルをクリックします。
-![slackchannelsettings01](images/slack-channel-notification-settings-1.png)
+![](images/slack-channel-notification-settings-1.png)
 
 2. クリックするとそのチャンネルの画面になるので、画面上部のメニューから 歯車のアイコン **Channel Settings** を見つけてください。
-![slackchannelsettings02](images/slack-channel-notification-settings-2.png)
+![](images/slack-channel-notification-settings-2.png)
 
 3. **Channel Settings** をクリックするとメニューが表示されるので、 **Notification Preferences** をクリックしてください。
-![slackchannelsettings03](images/slack-channel-notification-settings-3.png)
+![](images/slack-channel-notification-settings-3.png)
 
 4. **Notification Preferences** をクリックすると、ウインドウが開き、設定画面になります。
 
 ## チャンネル設定画面でできる事
 
-![slackchannelsettings04](images/slack-channel-notification-settings-4.png)
+![](images/slack-channel-notification-settings-4.png)
 
 ### Desktop notifications
 デスクトップアプリの設定です。

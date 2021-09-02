@@ -12,15 +12,15 @@ tags: [ポケモンGO, その他の技術]
 ## ポケモンGO のチュートリアル
 
 1. 世界観の説明
-![pokemongo-tutorial01](images/pokemongo-tutorial-1.jpg)
+![](images/pokemongo-tutorial-1.jpg)
 めっちゃ短い。というかほとんど説明されていない。
 
 2. アバターの作成
-![pokemongo-tutorial02](images/pokemongo-tutorial-2.png)
+![](images/pokemongo-tutorial-2.png)
 変更可能な箇所は、名前（重複、変更、日本語不可）、性別、肌の色、髪の色、目の色、帽子、上の服、下の服、靴、リュック
 
 3. 最初のポケモンをゲットする
-![pokemongo-tutorial03](images/pokemongo-tutorial-3.jpg)
+![](images/pokemongo-tutorial-3.jpg)
 いきなり目の前にヒトカゲ、ゼニガメ、フシギダネの初代御三家が出現します。
 
 ポケモンGO のチュートリアルってこれだけなんですよね。
@@ -33,7 +33,7 @@ tags: [ポケモンGO, その他の技術]
 
 ## ポケモンGO のゲーム内マニュアル（遊び方）
 
-![pokemongo-tutorial04](images/pokemongo-tutorial-4.jpg)
+![](images/pokemongo-tutorial-4.jpg)
 
 ゲーム内でも一応遊び方を確認できるようになっています。
 メインメニュー（モンスターボール） → 設定 → 遊び方 で確認できます。
@@ -48,7 +48,7 @@ tags: [ポケモンGO, その他の技術]
 
 バトルの説明なんてこれだけですからね！
 
-![pokemongo-tutorial05](images/pokemongo-tutorial-5.jpg)
+![](images/pokemongo-tutorial-5.jpg)
 
 恐ろしい事に、私の友人は攻撃をスワイプで避けられるという事さえ知らなかった・・・
 

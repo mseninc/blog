@@ -17,7 +17,7 @@ tags: [Scratch, 子どもたちのプログラミング教育, その他, ライ
 ## Scratch（スクラッチ）ってなに？
 教育用のプログラミング言語で、子供たちが簡単に学習できるように作成されています。
 
-![scratch01](images/whyprogramming-nhk-1.png)
+![](images/whyprogramming-nhk-1.png)
 
 まるでブロックを組み立てるようにしてプログラミングができます。
 
@@ -33,7 +33,7 @@ tags: [Scratch, 子どもたちのプログラミング教育, その他, ライ
 
 ## 厚切りジェイソンってどんな人？
 
-![atugirijason](images/whyprogramming-nhk-2.jpg)
+![](images/whyprogramming-nhk-2.jpg)
 
 [card url="https://ja.wikipedia.org/wiki/%E5%8E%9A%E5%88%87%E3%82%8A%E3%82%B8%E3%82%A7%E3%82%A4%E3%82%BD%E3%83%B3"]
 
