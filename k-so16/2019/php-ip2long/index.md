@@ -86,7 +86,7 @@ collect(explode(".", $ip))->map(function ($octet, $index) {
 ## 誰かライブラリ化してないのか
 頑張って10進ドット表記から数値に変換する方法を考えましたが...
 
-なんと、すでにPHPの標準ライブラリで [`ip2long()`](https://www.php.net/manual/ja/function.ip2long.php)[^ip2long]という関数が準備されていることを、[きよしん](https://mseeeen.msen.jp/category/articles-kiyoshin-wrote/)さんに教えてもらいました... (ﾄﾎﾎ)
+なんと、すでにPHPの標準ライブラリで [`ip2long()`](https://www.php.net/manual/ja/function.ip2long.php)[^ip2long]という関数が準備されていることを、[きよしん](https://mseeeen.msen.jp/category/articles-kiyoshin-wrote/)さんに教えてもらいました... (トホホ)
 
 わざわざPHPで実装したくない方は、 `ip2long()` を利用しましょう(笑)
 

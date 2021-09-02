@@ -20,7 +20,7 @@ tags: [ESP-WROOM-02, Arduino, その他の技術]
 スイッチサイエンスや Amazon でも入手可能ですが、単体の価格に関しては我らが**秋月電子通商では税込み250円と大変財布に優しい価格設定**となっております。
 
 - [ESP-WROOM-02 Wi-Fiモジュール（フラッシュ2MB） - スイッチサイエンス](https://www.switch-science.com/catalog/2346/)
-- [Ｗｉ－Ｆｉモジュール　ＥＳＰ－ＷＲＯＯＭ－０２ - 秋月電子通商](https://akizukidenshi.com/catalog/g/gM-09607/)
+- [Ｗｉ−Ｆｉモジュール　ＥＳＰ−ＷＲＯＯＭ−０２ - 秋月電子通商](https://akizukidenshi.com/catalog/g/gM-09607/)
 
 ただ、写真を見ればわかりますが、このモジュールは面実装タイプのため、ブレッドボードで遊ぶには変換基板が必要ですし、書き込みには FTDI の USB 変換アダプター (3.3V) が必要です。
 
@@ -30,7 +30,7 @@ tags: [ESP-WROOM-02, Arduino, その他の技術]
 
 前述の開発ボードと Micro-USB ケーブルのみです。
 
-- [ＥＳＰ－ＷＲＯＯＭ－０２開発ボード - 秋月電子通商](https://akizukidenshi.com/catalog/g/gK-12236/)
+- [ＥＳＰ−ＷＲＯＯＭ−０２開発ボード - 秋月電子通商](https://akizukidenshi.com/catalog/g/gK-12236/)
 
 ![](images/esp-wroom-02-first-step-1.jpg)
 

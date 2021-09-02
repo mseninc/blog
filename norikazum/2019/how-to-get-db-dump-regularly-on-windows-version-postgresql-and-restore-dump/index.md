@@ -130,8 +130,8 @@ c:\Program Files\PostgreSQL\9.6\bin>
 pg_restore: [アーカイバ(db)] TOC処理中にエラーがありました:
 pg_restore: [アーカイバ(db)] TOCエントリ2224; 0 0 COMMENT EXTENSION plpgsql のエ
 ラーです
-pg_restore: [アーカイバ(db)] could not execute query: ERROR:  諡｡蠑ｵ讖溯・ plpgs
-ql 縺ｮ謇譛芽・〒縺ｪ縺代ｌ縺ｰ縺ｪ繧翫∪縺帙ｓ
+pg_restore: [アーカイバ(db)] could not execute query: ERROR:  諡。蠑オ讖溯・ plpgs
+ql 縺ョ謇譛芽・〒縺ェ縺代ｌ縺ー縺ェ繧翫∪縺帙ｓ
    コマンド: COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
 
 警告: リストアにてエラーを無視しました: 1

@@ -64,4 +64,4 @@ Windows にログオンし、`Ctrl + Alt + Del` キーを押下します。(リ�
 
 ## 参考
 
-[Server Coreでコマンド・プロンプトを表示させる－ ＠IT](https://www.atmarkit.co.jp/fwin2k/win2ktips/1104corecmd/corecmd.html)
+[Server Coreでコマンド・プロンプトを表示させる− ＠IT](https://www.atmarkit.co.jp/fwin2k/win2ktips/1104corecmd/corecmd.html)

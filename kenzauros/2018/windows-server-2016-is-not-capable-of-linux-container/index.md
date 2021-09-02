@@ -154,7 +154,7 @@ Docker for Windows EE (Enterprise Edition) なら動くのかもしれません�
 で、いろいろ調べていくうち、そもそもな話に行き当たりました。
 
 > 現時点でWindows ServerのDockerコンテナはWindows Serverコンテナであり、そこで実行できるのはWindows Serverアプリケーションとなっていました。
-> [Windows ServerでLinuxコンテナが稼働可能に、今月のWindows Server 2016アップデートで。マイクロソフトが予告 － Publickey](https://www.publickey1.jp/blog/17/windows_serverlinuxwindows_server_2016.html)
+> [Windows ServerでLinuxコンテナが稼働可能に、今月のWindows Server 2016アップデートで。マイクロソフトが予告 − Publickey](https://www.publickey1.jp/blog/17/windows_serverlinuxwindows_server_2016.html)
 
 つまるところ、**Windows Server 2016 の Docker で Linux コンテナーは実行できない** ということです。
 

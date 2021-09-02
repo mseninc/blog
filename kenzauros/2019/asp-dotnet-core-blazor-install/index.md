@@ -283,5 +283,5 @@ VSCode でプロジェクトフォルダーを開き、 **F5 (デバッグの開
 ## 参考
 
 - [ASP.NET Core Blazor を使ってみる | Microsoft Docs](https://docs.microsoft.com/ja-jp/aspnet/core/blazor/get-started?view=aspnetcore-3.0&tabs=visual-studio-code)
-- [マイクロソフトの「Blazor」が正式版に、まずサーバサイドで。C#と.NET Core 3.0に対応したWebアプリケーションフレームワーク － Publickey](https://www.publickey1.jp/blog/19/blazorcnet_core_30web.html)
+- [マイクロソフトの「Blazor」が正式版に、まずサーバサイドで。C#と.NET Core 3.0に対応したWebアプリケーションフレームワーク − Publickey](https://www.publickey1.jp/blog/19/blazorcnet_core_30web.html)
 - [Blazor | Build client web apps with C# | .NET](https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor)
