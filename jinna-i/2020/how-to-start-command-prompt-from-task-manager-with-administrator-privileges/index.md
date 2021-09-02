@@ -11,7 +11,7 @@ Windows にログオンした際、デスクトップがいつまでも表示さ
 
 ログのトレースなどでサーバーが高負荷な状態になっており、再起動しても戻らないといった非常にレアのケースで役に立てるかと思われます(笑)
 
-<a href="images/how-to-start-command-prompt-from-task-manager-with-administrator-privileges-1.png"><img src="images/how-to-start-command-prompt-from-task-manager-with-administrator-privileges-1.png" alt="" width="1922" height="1112" class="alignnone size-full wp-image-13630" /></a>
+![](images/how-to-start-command-prompt-from-task-manager-with-administrator-privileges-1.png)
 
 ## 前提条件
 
@@ -24,37 +24,37 @@ Windows にログオンし、`Ctrl + Alt + Del` キーを押下します。(リ�
 
 タスクマネージャーを起動します。
 
-<a href="images/how-to-start-command-prompt-from-task-manager-with-administrator-privileges-2.png"><img src="images/how-to-start-command-prompt-from-task-manager-with-administrator-privileges-2.png" alt="" width="1922" height="1112" class="alignnone size-full wp-image-13634" /></a>
+![](images/how-to-start-command-prompt-from-task-manager-with-administrator-privileges-2.png)
 
 [詳細] をクリックします。
 
-<a href="images/how-to-start-command-prompt-from-task-manager-with-administrator-privileges-3.png"><img src="images/how-to-start-command-prompt-from-task-manager-with-administrator-privileges-3.png" alt="" width="380" height="381" class="alignnone size-full wp-image-13635" /></a>
+![](images/how-to-start-command-prompt-from-task-manager-with-administrator-privileges-3.png)
 
 [ファイル] > [新しいタスクの実行] をクリックします。
 
-<a href="images/how-to-start-command-prompt-from-task-manager-with-administrator-privileges-4.png"><img src="images/how-to-start-command-prompt-from-task-manager-with-administrator-privileges-4.png" alt="" width="682" height="608" class="alignnone size-full wp-image-13636" /></a>
+![](images/how-to-start-command-prompt-from-task-manager-with-administrator-privileges-4.png)
 
 開く欄に `cmd.exe` を入力し、[OK] をクリックします。このとき、**`このタスクに管理者特権を付与して作成します。` にチェックを入れると管理者権限でコマンドプロンプトを起動できます**。
 
-<a href="images/how-to-start-command-prompt-from-task-manager-with-administrator-privileges-5.png"><img src="images/how-to-start-command-prompt-from-task-manager-with-administrator-privileges-5.png" alt="" width="417" height="235" class="alignnone size-full wp-image-13637" /></a>
+![](images/how-to-start-command-prompt-from-task-manager-with-administrator-privileges-5.png)
 
 こんな感じでコマンドプロンプトが起動します。ここまでくればあとは何とでもなる感があるので安心できますね。
 
-<a href="images/how-to-start-command-prompt-from-task-manager-with-administrator-privileges-6.png"><img src="images/how-to-start-command-prompt-from-task-manager-with-administrator-privileges-6.png" alt="" width="1922" height="1112" class="alignnone size-full wp-image-13640" /></a>
+![](images/how-to-start-command-prompt-from-task-manager-with-administrator-privileges-6.png)
 
 ## 【おまけ】エクスプローラーが落ちてしまったときの復旧方法
 
 エクスプローラー (Explorer.exe) が落ちてしまって真っ黒になってしまったときも、同様の方法で復旧することができます。
 
-<a href="images/how-to-start-command-prompt-from-task-manager-with-administrator-privileges-7.png"><img src="images/how-to-start-command-prompt-from-task-manager-with-administrator-privileges-7.png" alt="" width="1922" height="1112" class="alignnone size-full wp-image-13649" /></a>
+![](images/how-to-start-command-prompt-from-task-manager-with-administrator-privileges-7.png)
 
 タスクマネージャーから [ファイル] > [新しいタスクの実行] をクリックし、開く欄に `Explorer` を入力して [OK] をクリックします。
 
-<a href="images/how-to-start-command-prompt-from-task-manager-with-administrator-privileges-8.png"><img src="images/how-to-start-command-prompt-from-task-manager-with-administrator-privileges-8.png" alt="" width="422" height="236" class="alignnone size-full wp-image-13650" /></a>
+![](images/how-to-start-command-prompt-from-task-manager-with-administrator-privileges-8.png)
 
 エクスプローラーが復旧し、デスクトップやタスクバーが表示されるようになりました。
 
-<a href="images/how-to-start-command-prompt-from-task-manager-with-administrator-privileges-9.png"><img src="images/how-to-start-command-prompt-from-task-manager-with-administrator-privileges-9.png" alt="" width="1922" height="1112" class="alignnone size-full wp-image-13651" /></a>
+![](images/how-to-start-command-prompt-from-task-manager-with-administrator-privileges-9.png)
 
 どちらかというとこちらの方が遭遇するケースが多いかもしれませんね。
 

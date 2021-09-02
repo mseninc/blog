@@ -12,7 +12,7 @@ tags: [Amazon Alexa, Amazon Echo, その他]
 ## Amazon Echo 現る
 じゃーーーーん！！
 
-<img src="images/first-play-with-amazon-alexa-echo-1.jpg" alt="" width="540" height="720" class="size-full wp-image-5988" /> 
+![](images/first-play-with-amazon-alexa-echo-1.jpg)
 
 というわけで、MSENに**Amazon Echo**がやってきました！！
 
@@ -22,9 +22,9 @@ tags: [Amazon Alexa, Amazon Echo, その他]
 
 記念撮影会を開催しましたので、まずはその写真をどうぞ。
 
-<img src="images/first-play-with-amazon-alexa-echo-2.jpg" alt="" width="720" height="540" class="alignnone size-full wp-image-6020" />
+![](images/first-play-with-amazon-alexa-echo-2.jpg)
 
-<img src="images/first-play-with-amazon-alexa-echo-3.jpg" alt="" width="540" height="720" class="alignnone size-full wp-image-6021" />
+![](images/first-play-with-amazon-alexa-echo-3.jpg)
 
 この堂々たる風貌。。。かっこいい。。。
 
@@ -33,31 +33,31 @@ tags: [Amazon Alexa, Amazon Echo, その他]
 撮影会も無事に終え、早速、先輩と共にセットアップです！！
 まずは、自分のスマートフォンに専用アプリをインストールします。
 
-<img src="images/first-play-with-amazon-alexa-echo-4.png" alt="" width="360" height="640" class="alignnone size-full wp-image-5987" />
+![](images/first-play-with-amazon-alexa-echo-4.png)
 
 アプリのインストールが完了したら、まずはアカウントを作成します。
 
-<img src="images/first-play-with-amazon-alexa-echo-5.png" alt="" width="360" height="640" class="alignnone size-full wp-image-6002" />
+![](images/first-play-with-amazon-alexa-echo-5.png)
 
 すると、Alexaアプリのホーム画面が表示されます。
 
-<img src="images/first-play-with-amazon-alexa-echo-6.png" alt="" width="360" height="640" class="alignnone size-full wp-image-6003" />
+![](images/first-play-with-amazon-alexa-echo-6.png)
 
 まずは**Echo自体がアクセスポイント**となってくれるので、スマートフォンのWi-Fi設定画面から、 **Amazon-7TV** に接続します。
 
-<img src="images/first-play-with-amazon-alexa-echo-7.png" alt="" width="360" height="256" class="alignnone size-full wp-image-5997" />
+![](images/first-play-with-amazon-alexa-echo-7.png)
 
 接続すると「Echoに接続しました」となります。
 
-<img src="images/first-play-with-amazon-alexa-echo-8.png" alt="" width="360" height="640" class="alignnone size-full wp-image-5998" />
+![](images/first-play-with-amazon-alexa-echo-8.png)
 
 次に、Echoに対して、自宅や会社のWi-Fiを設定してやります。
 
-<img src="images/first-play-with-amazon-alexa-echo-9.png" alt="" width="360" height="640" class="alignnone size-full wp-image-5999" />
+![](images/first-play-with-amazon-alexa-echo-9.png)
 
 これでセットアップ完了です！！
 
-<img src="images/first-play-with-amazon-alexa-echo-10.png" alt="" width="360" height="640" class="alignnone size-full wp-image-6000" />
+![](images/first-play-with-amazon-alexa-echo-10.png)
 
 
 さて、いよいよどんなことができるのか試していきます！！
@@ -78,7 +78,7 @@ tags: [Amazon Alexa, Amazon Echo, その他]
 
 更に、スキルを見ていくと
 
-<img src="images/first-play-with-amazon-alexa-echo-11.png" alt="" width="360" height="640" class="alignnone size-full wp-image-6001" />
+![](images/first-play-with-amazon-alexa-echo-11.png)
 
 ？？ピカチュウトーク？？？（笑）
 早速、*「アレクサ、ピカチュウ呼んで」*と話しかけてみます。
@@ -89,7 +89,7 @@ tags: [Amazon Alexa, Amazon Echo, その他]
 
 アレクサに話かけて、実行されたスキルが履歴としても残っていくみたいです。
 
-<img src="images/first-play-with-amazon-alexa-echo-12.png" alt="" width="162" height="1768" class="alignnone size-full wp-image-6012" />
+![](images/first-play-with-amazon-alexa-echo-12.png)
 
 まだまだいろんなスキルがありますので、これからいろいろ試していこうと思います！
 

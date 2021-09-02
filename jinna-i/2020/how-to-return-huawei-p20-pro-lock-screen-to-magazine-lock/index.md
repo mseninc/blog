@@ -22,17 +22,17 @@ HUAWEI P20 Pro にはマガジンロックと言って、ロック画面を毎�
 
 まずはロック画面で画面下側から上に向かってスワイプします。
 
-<a href="images/how-to-return-huawei-p20-pro-lock-screen-to-magazine-lock-1.png"><img src="images/how-to-return-huawei-p20-pro-lock-screen-to-magazine-lock-1.png" alt="" width="324" height="672" class="alignnone size-full wp-image-12637" /></a>
+![](images/how-to-return-huawei-p20-pro-lock-screen-to-magazine-lock-1.png)
 
 メニューが表示されるので、ゴミ箱アイコンをクリックします。**これだけです!!**
 
-<a href="images/how-to-return-huawei-p20-pro-lock-screen-to-magazine-lock-2.png"><img src="images/how-to-return-huawei-p20-pro-lock-screen-to-magazine-lock-2.png" alt="" width="324" height="672" class="alignnone size-full wp-image-12639" /></a>
+![](images/how-to-return-huawei-p20-pro-lock-screen-to-magazine-lock-2.png)
 
 するとあのランダムな写真のロック画面が戻ってきました!
 
 うれしくて10回くらいロック画面を行ったり来たりしてました。なんてったって1年半越しの思いですからね。
 
-<a href="images/how-to-return-huawei-p20-pro-lock-screen-to-magazine-lock-3.png"><img src="images/how-to-return-huawei-p20-pro-lock-screen-to-magazine-lock-3.png" alt="" width="324" height="672" class="alignnone size-full wp-image-12640" /></a>
+![](images/how-to-return-huawei-p20-pro-lock-screen-to-magazine-lock-3.png)
 
 
 ## あとがき

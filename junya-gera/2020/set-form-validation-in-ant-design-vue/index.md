@@ -21,7 +21,7 @@ Ant Design Vue 1.6.4
 
 今回はとある web サイトでユーザー登録をする際の入力チェックの実装を考えてみます。こちらがユーザー情報の入力フォームです。ここでは **`FormModel`** コンポーネントを `modal` の中で使用しています。詳しくは [Ant Design Vue/FormModel](https://www.antdv.com/components/form-model/)をご覧ください。
 
-<img src="images/set-form-validation-in-ant-design-vue-1.png" alt="" width="513" height="495" class="alignnone size-full wp-image-14449" />
+![](images/set-form-validation-in-ant-design-vue-1.png)
 
 ```
   <a-modal
@@ -161,7 +161,7 @@ rules: {
 
 ここまでの記述だけで、エラーメッセージをこんな感じで表示させることができました。
 
-<img src="images/set-form-validation-in-ant-design-vue-2.png" alt="" width="514" height="495" class="alignnone size-full wp-image-14435" />
+![](images/set-form-validation-in-ant-design-vue-2.png)
 
 
 ## バリデーションを自作する
@@ -200,7 +200,7 @@ import moment from 'moment';
 
 この記述により、利用開始日に登録日より前の日付を入力すると無事にエラーメッセージが表示されました。
 
-<img src="images/set-form-validation-in-ant-design-vue-3.png" alt="" width="515" height="562" class="alignnone size-full wp-image-14604" />
+![](images/set-form-validation-in-ant-design-vue-3.png)
 
 ## 感想
 公式をしっかり読み解けば簡単にあらゆる機能が実装できるのでとても便利でした。前回、エラーを解決するためのヒントは公式ドキュメントをしっかり読むことで得られると感想に書きましたが、それだけでなく**実装に詰まったときも、それが実現できる機能が公式ドキュメントを根気よく探せば見つかることが多いと感じました**。公式ドキュメントを読み解く力がまだまだ乏しいので、 Ant Design Vue 以外の技術に関しても公式を読んで理解をしていくよう心掛けます。

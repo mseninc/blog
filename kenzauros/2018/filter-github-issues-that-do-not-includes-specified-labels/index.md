@@ -15,11 +15,11 @@ tags: [GitHub, その他, ライフハック]
 
 「特定のラベルの Issue」は標準の GUI から下記のようにフィルタリングすることができます。
 
-<img src="images/filter-github-issues-that-do-not-includes-specified-labels-1.png" alt="GitHub Issue Filtering by Labels" width="631" height="532" class="aligncenter size-full wp-image-7201" />
+![GitHub Issue Filtering by Labels](images/filter-github-issues-that-do-not-includes-specified-labels-1.png)
 
 これで Filter には `is:open is:issue label:Support` という具合にラベル条件が指定されます。
 
-<img src="images/filter-github-issues-that-do-not-includes-specified-labels-2.png" alt="GitHub Issue Filtering by Labels" width="409" height="89" class="aligncenter size-full wp-image-7202" />
+![GitHub Issue Filtering by Labels](images/filter-github-issues-that-do-not-includes-specified-labels-2.png)
 
 では、「特定のラベルを**含まない** Issue」 を表示したい場合はどうすればいいでしょうか。
 
@@ -35,7 +35,7 @@ is:open is:issue label:Support -label:サンプルカテゴリ
 
 このとおり、サンプルカテゴリの Issue が除外されます。
 
-<img src="images/filter-github-issues-that-do-not-includes-specified-labels-3.png" alt="GitHub Issue Filtering by Labels" width="412" height="390" class="aligncenter size-full wp-image-7203" />
+![GitHub Issue Filtering by Labels](images/filter-github-issues-that-do-not-includes-specified-labels-3.png)
 
 端的に言えば、**条件に `-` つけるだけ**ですね。
 

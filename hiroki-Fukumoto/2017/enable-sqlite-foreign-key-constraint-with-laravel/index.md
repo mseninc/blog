@@ -105,7 +105,7 @@ SQLiteの外部キー制約を有効にするには`PRAGMA foreign_keys = ON;`�
 
 その答えは、<a href="https://laravel.com/docs/5.5/migrations">Laravel公式サイト（ページ下部）</a>にありました！！！
 
-<a href="images/enable-sqlite-foreign-key-constraint-with-laravel-1.png"><img src="images/enable-sqlite-foreign-key-constraint-with-laravel-1.png" alt="" width="934" height="246" class="aligncenter size-full wp-image-5645" /></a>
+![](images/enable-sqlite-foreign-key-constraint-with-laravel-1.png)
 
 >You may enable or disable foreign key constraints within your migrations by using the following methods:
 >```
@@ -155,7 +155,7 @@ class AppServiceProvider extends ServiceProvider {
 そして、SQLiteの中を見てみると、、、、
 （私は<a href="http://sqlitebrowser.org/">DB Browser for SQLite</a>でSQLiteの中身を確認しています。）
 
-<a href="images/enable-sqlite-foreign-key-constraint-with-laravel-2.png"><img src="images/enable-sqlite-foreign-key-constraint-with-laravel-2.png" alt="" width="813" height="224" class="aligncenter size-full wp-image-5704" /></a>
+![](images/enable-sqlite-foreign-key-constraint-with-laravel-2.png)
 
 `` FOREIGN KEY(`groups_id`) ``
 

@@ -66,7 +66,7 @@ OU が少ない場合はよいのですが、複数あったり入れ子構造�
 
 `DC=hogehoge,DC=co,DC=jp` の部分はお使いの環境に応じて読み替えてください。
 
-<a href="images/export-and-import-active-directory-ou-with-csvde-command-1.png"><img src="images/export-and-import-active-directory-ou-with-csvde-command-1.png" alt="" width="884" height="257" class="alignnone size-full wp-image-8641" /></a>
+![](images/export-and-import-active-directory-ou-with-csvde-command-1.png)
 
 `OU=Domain Controllers` はActive Directory が初期状態から存在する OU です。
 
@@ -80,7 +80,7 @@ OU が少ない場合はよいのですが、複数あったり入れ子構造�
 
 管理ツールから Active Directory ユーザーとコンピューターを起動すると、OU がインポートされていることが分かります。
 
-<a href="images/export-and-import-active-directory-ou-with-csvde-command-2.png"><img src="images/export-and-import-active-directory-ou-with-csvde-command-2.png" alt="" width="821" height="796" class="alignnone size-full wp-image-8642" /></a>
+![](images/export-and-import-active-directory-ou-with-csvde-command-2.png)
 
 今回は OU を対象としましたが、**ユーザーやセキュリティーグループなども csvde コマンドからエクスポート+インポートすることができます**。
 

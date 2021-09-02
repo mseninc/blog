@@ -13,17 +13,17 @@ tags: [CentOS, Linux]
 
 初期状態はどうなるか確認してみます。
 
-<a href="images/how-to-avoid-sleep-on-pc-closing-with-centos-7-1.png"><img src="images/how-to-avoid-sleep-on-pc-closing-with-centos-7-1.png" alt="screenshot-from-2016-09-24-00-50-47" width="737" height="495" class="alignnone size-full wp-image-2829" /></a>
+![screenshot-from-2016-09-24-00-50-47](images/how-to-avoid-sleep-on-pc-closing-with-centos-7-1.png)
 
 IPアドレスが、192.168.11.161 と分かったので、同じネットワークのWindowsマシンからPingを飛ばします。
 
 そして、ノートPCを閉じます。
 
-<a href="images/how-to-avoid-sleep-on-pc-closing-with-centos-7-2.jpg"><img src="images/how-to-avoid-sleep-on-pc-closing-with-centos-7-2.jpg" alt="dsc_0215" width="670" height="367" class="alignnone size-full wp-image-2830" /></a>
+![dsc_0215](images/how-to-avoid-sleep-on-pc-closing-with-centos-7-2.jpg)
 
 Pingの結果、
 
-<a href="images/how-to-avoid-sleep-on-pc-closing-with-centos-7-3.png"><img src="images/how-to-avoid-sleep-on-pc-closing-with-centos-7-3.png" alt="2016-09-24_00h51_27" width="594" height="514" class="alignnone size-full wp-image-2831" /></a>
+![2016-09-24_00h51_27](images/how-to-avoid-sleep-on-pc-closing-with-centos-7-3.png)
 
 閉じたあとは、Pingが飛ばなくなってスリープしていることが分かります。
 
@@ -51,7 +51,7 @@ Pingの結果、
 
 再度Pingを飛ばし、ノートPCを閉じます。
 
-<a href="images/how-to-avoid-sleep-on-pc-closing-with-centos-7-4.png"><img src="images/how-to-avoid-sleep-on-pc-closing-with-centos-7-4.png" alt="2016-09-24_01h40_28" width="511" height="353" class="alignnone size-full wp-image-2832" /></a>
+![2016-09-24_01h40_28](images/how-to-avoid-sleep-on-pc-closing-with-centos-7-4.png)
 
 途切れずPingが飛んでいることが確認できました。
 

@@ -11,7 +11,7 @@ Docker for Windows でうまく動いてくれたのでメモしておきます�
 
 ## 概要
 
-<img src="images/wordpress-39-with-php-56-mysql-57-on-docker-for-windows-1.png" alt="Docker + PHP 5.6 + MySQL 5.7 で WordPress 3.9" width="715" height="472" class="aligncenter size-full wp-image-8347" />
+![Docker + PHP 5.6 + MySQL 5.7 で WordPress 3.9](images/wordpress-39-with-php-56-mysql-57-on-docker-for-windows-1.png)
 
 Docker for Windows 上に PHP 5.6 のコンテナと MySQL 5.7 のコンテナを起動させ、ホストマシンの WordPress 3.9.9 を `http://localhost` でホストします。
 

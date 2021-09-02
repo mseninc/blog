@@ -14,15 +14,15 @@ tags: [その他, 〇〇奮闘記]
 ## 参拝
 午前中に参拝しましたが、やはりすごい人でした。
 
-<a href="images/2017-toka-ebisu-1.jpg"><img src="images/2017-toka-ebisu-1.jpg" alt="" width="864" height="1536" class="alignnone size-full wp-image-3553" /></a>
+![](images/2017-toka-ebisu-1.jpg)
 
 死闘の末、笹をゲットし子宝に並びました。
 
-<a href="images/2017-toka-ebisu-2.jpg"><img src="images/2017-toka-ebisu-2.jpg" alt="" width="864" height="1536" class="alignnone size-full wp-image-3554" /></a>
+![](images/2017-toka-ebisu-2.jpg)
 
 初みくじも引きました！（半吉・・・ｗ）
 
-<a href="images/2017-toka-ebisu-3.jpg"><img src="images/2017-toka-ebisu-3.jpg" alt="" width="864" height="1536" class="alignnone size-full wp-image-3555" /></a>
+![](images/2017-toka-ebisu-3.jpg)
 
 ## 1歩1歩
 
@@ -33,11 +33,11 @@ MS Engineering設立後、去年(2016年)から参拝を始めました。
 それがこちらです。
 1年間、福を集めてくれました^^
 
-<a href="images/2017-toka-ebisu-4.jpg"><img src="images/2017-toka-ebisu-4.jpg" alt="" width="864" height="1536" class="alignnone size-full wp-image-3552" /></a>
+![](images/2017-toka-ebisu-4.jpg)
 
 今年(2017年)は、3期目に向けて「熊手」と「箕」と「金の俵」の**3つ**にしました。
 
-<a href="images/2017-toka-ebisu-5.jpg"><img src="images/2017-toka-ebisu-5.jpg" alt="" width="864" height="1536" class="alignnone size-full wp-image-3556" /></a>
+![](images/2017-toka-ebisu-5.jpg)
 
 来年(2018年)も4つ飾り付けて投稿できるように頑張っていきたいと思います！
 
@@ -46,7 +46,7 @@ MS Engineering設立後、去年(2016年)から参拝を始めました。
 境内の周りには露天がいっぱい出ていますが、えびす堂のベビーカステラがおいしいです。
 すごく並びますが。。
 
-<a href="images/2017-toka-ebisu-6.jpg"><img src="images/2017-toka-ebisu-6.jpg" alt="" width="817" height="1184" class="alignnone size-full wp-image-3558" /></a>
+![](images/2017-toka-ebisu-6.jpg)
 
 袋もめでたい^^
 

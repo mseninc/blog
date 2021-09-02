@@ -19,23 +19,23 @@ YAMAHAの中小規模拠点向けVPNルーターであるRTX1210に、気にな�
 1. Web画面にアクセスし、管理権限でログインします。
 
 1. **管理**から**ファームウェア更新**に進みます。
-<a href="images/updated-rtx-1210-14-01-20-1.png"><img src="images/updated-rtx-1210-14-01-20-1.png" alt="" width="838" height="540" class="aligncenter size-full wp-image-5584" /></a>
+![](images/updated-rtx-1210-14-01-20-1.png)
 
 1. **ネットワーク経由でファームウェアファイルを確認後に更新します** へ進みます。
-<a href="images/updated-rtx-1210-14-01-20-2.png"><img src="images/updated-rtx-1210-14-01-20-2.png" alt="" width="1545" height="861" class="aligncenter size-full wp-image-5585" /></a>
+![](images/updated-rtx-1210-14-01-20-2.png)
 
 1. 更新可能なファームを確認し、**実行** を選択します。
-<a href="images/updated-rtx-1210-14-01-20-3.png"><img src="images/updated-rtx-1210-14-01-20-3.png" alt="" width="1564" height="875" class="aligncenter size-full wp-image-5586" /></a>
+![](images/updated-rtx-1210-14-01-20-3.png)
 
 1. ライセンス契約を**同意**します。
-<a href="images/updated-rtx-1210-14-01-20-4.png"><img src="images/updated-rtx-1210-14-01-20-4.png" alt="" width="1515" height="1028" class="aligncenter size-full wp-image-5587" /></a>
+![](images/updated-rtx-1210-14-01-20-4.png)
 
 1. 前項の同意をクリックした時点でアップデートが始まります。
 
 1. しばらくすると以下の画面が出るので、**トップへ戻る**を選択します。再起動は一瞬で完了しました。
-<a href="images/updated-rtx-1210-14-01-20-5.png"><img src="images/updated-rtx-1210-14-01-20-5.png" alt="" width="474" height="300" class="aligncenter size-full wp-image-5588" /></a>
+![](images/updated-rtx-1210-14-01-20-5.png)
 
 1. バージョンを確認すると正常に上がっていました。特に問題もなく無事完了です。
-<a href="images/updated-rtx-1210-14-01-20-6.png"><img src="images/updated-rtx-1210-14-01-20-6.png" alt="" width="419" height="160" class="aligncenter size-full wp-image-5589" /></a>
+![](images/updated-rtx-1210-14-01-20-6.png)
 
 AWSとRTX1210の連携記事は是非書きたいと思っていますのでお楽しみに。

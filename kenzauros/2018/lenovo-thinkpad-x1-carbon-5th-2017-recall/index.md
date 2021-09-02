@@ -20,13 +20,13 @@ tags: [ThinkPad, その他]
 
 まず、マシンタイプとシリアル番号を確認します。本体裏面のラベルに記載されている、 **TYPE** と **S/N** がそれにあたります。
 
-<a href="images/lenovo-thinkpad-x1-carbon-5th-2017-recall-1.jpg"><img src="images/lenovo-thinkpad-x1-carbon-5th-2017-recall-1.jpg" alt="" width="1092" height="781" class="aligncenter size-full wp-image-6593" /></a>
+![](images/lenovo-thinkpad-x1-carbon-5th-2017-recall-1.jpg)
 
 公式のリコール情報ページにアクセスします。
 
 >[Lenovo ThinkPad X1 Carbon 5th Gen Laptop Recall](https://support.lenovo.com/co/en/solutions/ht504453)
 
-[caption id="attachment_6592" align="aligncenter" width="1357"]<a href="images/lenovo-thinkpad-x1-carbon-5th-2017-recall-2.png"><img src="images/lenovo-thinkpad-x1-carbon-5th-2017-recall-2.png" alt="" width="1357" height="1196" class="size-full wp-image-6592" /></a> Lenovo ThinkPad X1 Carbon 5th Gen Laptop Recall[/caption]
+![](images/lenovo-thinkpad-x1-carbon-5th-2017-recall-2.png)
 
 **Determine if my laptop is being recalled** のところに下記の手順で入力します。
 
@@ -34,7 +34,7 @@ tags: [ThinkPad, その他]
 2. 8 桁の **シリアル番号 Serial Number** を入力します。（ハイフンやスペースは不要です）
 3. **Submit** (送信) ボタンを押します。
 
-<a href="images/lenovo-thinkpad-x1-carbon-5th-2017-recall-3.png"><img src="images/lenovo-thinkpad-x1-carbon-5th-2017-recall-3.png" alt="Lenovo ThinkPad X1 Carbon 5th Gen Laptop Recall Result" width="939" height="323" class="aligncenter size-full wp-image-6595" /></a>
+![Lenovo ThinkPad X1 Carbon 5th Gen Laptop Recall Result](images/lenovo-thinkpad-x1-carbon-5th-2017-recall-3.png)
 
 図のように 4 のところに **AFFECTED** と出れば、おめでとうございます！あなたはリコール対象です！
 

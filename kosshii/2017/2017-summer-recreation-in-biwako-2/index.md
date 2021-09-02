@@ -29,7 +29,7 @@ tags: [レク, その他]
 
 のっぺいうどんという言葉を初めて聞き、少し不安でしたが美味しくてよかったです。田楽は味噌が絶妙の甘さ加減でご飯が進みました。
 
-<img class="alignnone wp-image-4757 size-full" src="images/2017-summer-recreation-in-biwako-2-1.jpg" alt="" width="2364" height="1773" />
+![](images/2017-summer-recreation-in-biwako-2-1.jpg)
 
 ### ステンドグラス作成体験
 
@@ -39,11 +39,11 @@ tags: [レク, その他]
 
 まず好きなガラスを6枚選ぶのですが、種類が豊富で選ぶ工程が一番頭を使ったかもしれません。笑
 
-<img class="alignnone wp-image-4756 size-full" src="images/2017-summer-recreation-in-biwako-2-2.jpg" alt="" width="1773" height="2364" />
+![](images/2017-summer-recreation-in-biwako-2-2.jpg)
 
 ガラスのフチに銅テープをつけ、
 
-<img class="alignnone wp-image-4759 size-full" src="images/2017-summer-recreation-in-biwako-2-3.jpg" alt="" width="1478" height="1108" />
+![](images/2017-summer-recreation-in-biwako-2-3.jpg)
 
 はんだこてを使い貼り合わせていくのですが完成まで2時間近く作業するので結構神経を使います。
 
@@ -51,7 +51,7 @@ tags: [レク, その他]
 
 みなさんの並べた写真です。
 
-<img class="alignnone wp-image-4754 size-full" src="images/2017-summer-recreation-in-biwako-2-4.jpg" alt="" width="4032" height="3024" />
+![](images/2017-summer-recreation-in-biwako-2-4.jpg)
 
 ### クラブハリエ
 
@@ -65,6 +65,6 @@ tags: [レク, その他]
 
 そのためにも気持ちを張り詰めた日々だけでなく、時には仕事のことを忘れてゆっくりできる時間を過ごすのも、長い期間で見れば効率的なのかもしれません。
 
-<img class="alignnone wp-image-4755 size-full" src="images/2017-summer-recreation-in-biwako-2-5.jpg" alt="" width="4032" height="3024" />
+![](images/2017-summer-recreation-in-biwako-2-5.jpg)
 
 では次回、「MOS試験！試験前日模擬試験5割から合格！」でお会いしましょう。

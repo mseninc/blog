@@ -33,15 +33,15 @@ Alexa スキルを開発しようという方で Amazon アカウントをお持
 
 まずは Alexa Skills Kit を使うため、 [Amazon 開発者ポータル](https://developer.amazon.com/ja/) に飛び、「サインイン」をクリックしてください。
 
-<img src="images/amazon-alexa-skills-preparation-1.jpg" alt="" width="720" height="452" class="alignnone size-full wp-image-6202" />
+![](images/amazon-alexa-skills-preparation-1.jpg)
 
 すると、「Amazon Developerアカウント作成」というボタンがありますので、こちらをクリックしてください。
 
-<img src="images/amazon-alexa-skills-preparation-2.jpg" alt="" width="720" height="407" class="alignnone size-full wp-image-6199" />
+![](images/amazon-alexa-skills-preparation-2.jpg)
 
 アカウント作成画面が開きますので、画面に従って項目の入力をしてください。
 
-<img src="images/amazon-alexa-skills-preparation-3.jpg" alt="" width="720" height="689" class="alignnone size-full wp-image-6195" />
+![](images/amazon-alexa-skills-preparation-3.jpg)
 
 これで、**Amazon 開発者ポータルアカウント**の作成は完了です。
 
@@ -51,11 +51,11 @@ Alexa スキルを開発しようという方で Amazon アカウントをお持
 
 [Amazon Web Services (AWS)](https://aws.amazon.com/jp/register-flow/) にアクセスし、「今すぐ無料アカウント作成」をクリックしてください。
 
-<img src="images/amazon-alexa-skills-preparation-4.jpg" alt="" width="720" height="316" class="alignnone size-full wp-image-6205" />
+![](images/amazon-alexa-skills-preparation-4.jpg)
 
 アカウント作成画面が開きますので、あとは画面に従って項目の入力をしてください。
 
-<img src="images/amazon-alexa-skills-preparation-5.jpg" alt="" width="720" height="467" class="alignnone size-full wp-image-6206" />
+![](images/amazon-alexa-skills-preparation-5.jpg)
 
 これで、**Amazon Alexa** のスキルを作成する準備は完了です！！
 

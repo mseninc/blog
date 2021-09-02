@@ -11,7 +11,7 @@ tags: [VMware, vCenter Server, 仮想化技術]
 
 サービスを確認するとvCenterのサービスである **VMware VirtualCenter Server** が実行されていません。
 
-<a href="images/vcenter-server-service-not-startup-1.png"><img src="images/vcenter-server-service-not-startup-1.png" alt="" width="1165" height="750" class="alignnone size-full wp-image-4921" /></a>
+![](images/vcenter-server-service-not-startup-1.png)
 
 自動起動に設定しているのですが、前回サーバーを再起動したときにサービスが起動しなかったようです。
 
@@ -30,7 +30,7 @@ VMwareのKnowledge Baseによると、vCenterが使っているSQL Serverより�
 
 > ソース "VMware VirtualCenter Server" からのイベント ID 1000 の説明が見つかりません。このイベントを発生させるコンポーネントがローカル コンピューターにインストールされていないか、インストールが壊れています。ローカル コンピューターにコンポーネントをインストールするか、コンポーネントを修復してください。
 
-<a href="images/vcenter-server-service-not-startup-2.png"><img src="images/vcenter-server-service-not-startup-2.png" alt="" width="640" height="445" class="alignnone size-full wp-image-4919" /></a>
+![](images/vcenter-server-service-not-startup-2.png)
 
 ではさっそく、SQL Serverが使用するポートを変更していきましょう。
 
@@ -46,13 +46,13 @@ VMwareのKnowledge Baseによると、vCenterが使っているSQL Serverより�
 
 ` C:\> netstat -anb ` 
 
-<a href="images/vcenter-server-service-not-startup-3.png"><img src="images/vcenter-server-service-not-startup-3.png" alt="" width="676" height="105" class="alignnone size-full wp-image-4923" /></a>
+![](images/vcenter-server-service-not-startup-3.png)
 
 面倒な人は、そもそも1433を使ってるかどうかを確認しても良いでしょう。
 
 ` C:\> netstat -anb | find "1433" ` 
 
-<a href="images/vcenter-server-service-not-startup-4.png"><img src="images/vcenter-server-service-not-startup-4.png" alt="" width="676" height="126" class="alignnone size-full wp-image-4924" /></a>
+![](images/vcenter-server-service-not-startup-4.png)
 
 1433以外になっていた場合は、以下の手順で変更してきます。
 
@@ -60,25 +60,25 @@ VMwareのKnowledge Baseによると、vCenterが使っているSQL Serverより�
 
 スタートメニューより **SQL Server Configuration Manager** を起動します。
 
-<a href="images/vcenter-server-service-not-startup-5.png"><img src="images/vcenter-server-service-not-startup-5.png" alt="" width="297" height="55" class="alignnone size-full wp-image-4927" /></a>
+![](images/vcenter-server-service-not-startup-5.png)
 
 **SQL Server Network Configuration** を展開して **Protocols for VIM_SQLEXP** を選択し **TCP/IP** をダブルクリックします。
 ※VIM_SQLEXPの部分はお使いの環境により異なる場合があります。
 
-<a href="images/vcenter-server-service-not-startup-6.png"><img src="images/vcenter-server-service-not-startup-6.png" alt="" width="960" height="722" class="alignnone size-full wp-image-4928" /></a>
+![](images/vcenter-server-service-not-startup-6.png)
 
 **IP Address** タブより **TCP Dynamic Ports** の番号を確認します。
 今回は52230となっていました。
 
-<a href="images/vcenter-server-service-not-startup-7.png"><img src="images/vcenter-server-service-not-startup-7.png" alt="" width="409" height="403" class="alignnone size-full wp-image-4929" /></a>
+![](images/vcenter-server-service-not-startup-7.png)
 
 これを1433に変更します。
 
-<a href="images/vcenter-server-service-not-startup-8.png"><img src="images/vcenter-server-service-not-startup-8.png" alt="" width="409" height="403" class="alignnone size-full wp-image-4930" /></a>
+![](images/vcenter-server-service-not-startup-8.png)
 　　　　　　　　　
 OKをクリック。
 
-<a href="images/vcenter-server-service-not-startup-9.png"><img src="images/vcenter-server-service-not-startup-9.png" alt="" width="480" height="172" class="alignnone size-full wp-image-4931" /></a>
+![](images/vcenter-server-service-not-startup-9.png)
 
 SQL Serverのサービス **SQL Server (VIM_SQLEXP)** とvCenterのサービス **VMware VirtualCenter Server**を再起動します。
 
@@ -86,7 +86,7 @@ SQL Serverのサービス **SQL Server (VIM_SQLEXP)** とvCenterのサービス 
 
 遅延起動にしているので少し遅いですが、ちゃんと起動していました。
 
-<a href="images/vcenter-server-service-not-startup-10.png"><img src="images/vcenter-server-service-not-startup-10.png" alt="" width="1165" height="750" class="alignnone size-full wp-image-4932" /></a>
+![](images/vcenter-server-service-not-startup-10.png)
 
 めでたし、めでたし。
 

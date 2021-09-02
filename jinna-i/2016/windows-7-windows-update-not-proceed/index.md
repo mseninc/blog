@@ -15,7 +15,7 @@ Windows 10を使われている方も多いと思いますが、システム評�
 
 Service Pack 1までは順調だったのですが、その後のWindows Updateで現象は発生しました。
 
-<a href="images/windows-7-windows-update-not-proceed-1.png"><img src="images/windows-7-windows-update-not-proceed-1.png" alt="2016-12-02_06h30_27" width="797" height="555" class="alignnone size-full wp-image-3267" /></a>
+![2016-12-02_06h30_27](images/windows-7-windows-update-not-proceed-1.png)
 
 1時間・・・
 2時間・・・
@@ -41,11 +41,11 @@ Service Pack 1までは順調だったのですが、その後のWindows Update�
 もし、Windows Updateを実施している状態からインストールを試みるとインストールも進まない状態になる可能性がありますのでその場合は**コントロールパネル→管理ツール→サービス**から**Windows Update**を再起動してから再度実施してください。
 
 **検索していますから進まない**
-<a href="images/windows-7-windows-update-not-proceed-2.png"><img src="images/windows-7-windows-update-not-proceed-2.png" alt="Windows Updateが検索していますから進まない" width="382" height="139" class="alignnone size-full wp-image-3271" /></a>
+![Windows Updateが検索していますから進まない](images/windows-7-windows-update-not-proceed-2.png)
 
 **Windows Updateサービスを再起動すると、一旦エラーになる。**
 
-<a href="images/windows-7-windows-update-not-proceed-3.png"><img src="images/windows-7-windows-update-not-proceed-3.png" alt="2016-12-02_06h43_44" width="818" height="592" class="alignnone size-full wp-image-3269" /></a>
+![2016-12-02_06h43_44](images/windows-7-windows-update-not-proceed-3.png)
 
 
 ## 再度、更新プログラムの確認
@@ -53,14 +53,14 @@ Service Pack 1までは順調だったのですが、その後のWindows Update�
 PCのスペックにもよるかと思いますが、約5分で更新プログラムの確認が終わりました。
 あとはインストールするだけです。
 
-<img src="images/windows-7-windows-update-not-proceed-4.png" alt="j-windows7-002" width="800" height="560" class="alignnone size-full wp-image-3293" />
+![j-windows7-002](images/windows-7-windows-update-not-proceed-4.png)
 
 ## 目的のKBが適用されているかを確認する方法
 コマンドプロンプトを開き、以下を実行します。例としてKB3172065を確認する場合です。
 `systeminfo | find "KB3172605"`
 
 適用されていればこのように出力されます。
-<img src="images/windows-7-windows-update-not-proceed-5.png" alt="j-windows7-003" width="343" height="58" class="alignnone size-full wp-image-3295" />
+![j-windows7-003](images/windows-7-windows-update-not-proceed-5.png)
 
 もし、何も出力されなかった場合はそのKBは適用されていません。
 

@@ -11,7 +11,7 @@ tags: [Windows 10, Windows Server, グループポリシー, Microsoft Office, W
 
 Microsoft Office Professional Plus 2019 (ビジネス用永続ライセンス版) では、初回の起動時に使用許諾契約書に同意する画面が表示されます。
 
-<a href="images/accept-the-microsoft-office-license-agreement-from-group-policy-1.png"><img src="images/accept-the-microsoft-office-license-agreement-from-group-policy-1.png" alt="" width="1003" height="604" class="alignnone size-full wp-image-13282" /></a>
+![](images/accept-the-microsoft-office-license-agreement-from-group-policy-1.png)
 
 通常使われている PC では、一度使用許諾契約書に同意すると次回以降は表示されませんが、**シンクライアントで固定プロファイル使っている場合や復元環境の端末ではプロファイルが初期化されてしまうためにこの使用許諾契約書の同意画面が毎回表示されてしまうことがあります**。
 
@@ -53,7 +53,7 @@ Microsoft Office Professional Plus 2019 (ビジネス用永続ライセンス版
 - 値の種類: REG_DWORD
 - 値のデータ: 1
 
-<a href="images/accept-the-microsoft-office-license-agreement-from-group-policy-2.png"><img src="images/accept-the-microsoft-office-license-agreement-from-group-policy-2.png" alt="" width="467" height="520" class="alignnone size-full wp-image-13286" /></a>
+![](images/accept-the-microsoft-office-license-agreement-from-group-policy-2.png)
 
 同様に `AcceptAllEulas` を作成します。
 
@@ -64,13 +64,13 @@ Microsoft Office Professional Plus 2019 (ビジネス用永続ライセンス版
 - 値の種類: REG_DWORD
 - 値のデータ: 1
 
-<a href="images/accept-the-microsoft-office-license-agreement-from-group-policy-3.png"><img src="images/accept-the-microsoft-office-license-agreement-from-group-policy-3.png" alt="" width="469" height="522" class="alignnone size-full wp-image-13287" /></a>
+![](images/accept-the-microsoft-office-license-agreement-from-group-policy-3.png)
 
 グループポリシーを設定後、対象のユーザーでログオンすると、先ほど設定したレジストリが作成されていました。
 
 適当な Microsoft Office 製品を起動すると、初回起動でも使用許諾契約書に同意する画面が表示されないことを確認しました。
 
-<a href="images/accept-the-microsoft-office-license-agreement-from-group-policy-4.png"><img src="images/accept-the-microsoft-office-license-agreement-from-group-policy-4.png" alt="" width="1920" height="1080" class="alignnone size-full wp-image-13288" /></a>
+![](images/accept-the-microsoft-office-license-agreement-from-group-policy-4.png)
 
 ## [おまけ] Microsoft Office の管理用テンプレートを読み込む
 

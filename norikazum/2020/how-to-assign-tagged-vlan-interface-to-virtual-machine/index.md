@@ -10,7 +10,7 @@ tags: [CentOS, KVM, ネットワーク, vlan, 仮想化技術]
 今回は、 **KVM** (Kernel-based Virtual Machine) で作成した仮想マシンに **タグVLANで作成したネットワークインターフェースを割り当てる** 方法を紹介します。
 
 イメージは以下のような感じです。
-<a href="images/how-to-assign-tagged-vlan-interface-to-virtual-machine-1.png"><img src="images/how-to-assign-tagged-vlan-interface-to-virtual-machine-1.png" alt="" width="1829" height="721" class="alignnone size-full wp-image-12353" /></a>
+![](images/how-to-assign-tagged-vlan-interface-to-virtual-machine-1.png)
 
 ベース記事は以下になります。
 [\[CentOS7\] CentOS7でコマンドラインを利用してVLANタグインターフェースを作成する](https://mseeeen.msen.jp/create-vlan-tag-interface-using-command-line-in-centos7)
@@ -19,7 +19,7 @@ tags: [CentOS, KVM, ネットワーク, vlan, 仮想化技術]
 **KVMで利用するためにブリッジインターフェースを新規作成** します。
 
 この部分です。
-<a href="images/how-to-assign-tagged-vlan-interface-to-virtual-machine-2.png"><img src="images/how-to-assign-tagged-vlan-interface-to-virtual-machine-2.png" alt="" width="250" height="517" class="alignnone size-full wp-image-12356" /></a>
+![](images/how-to-assign-tagged-vlan-interface-to-virtual-machine-2.png)
 
 1. `/etc/sysconfig/network-scripts/ifcfg-br0-171` を作成
     ```
@@ -43,7 +43,7 @@ tags: [CentOS, KVM, ネットワーク, vlan, 仮想化技術]
 前項で **作成したブリッジインターフェースにVLANタグインターフェースを紐付け** ます。
 
 この部分です。
-<a href="images/how-to-assign-tagged-vlan-interface-to-virtual-machine-3.png"><img src="images/how-to-assign-tagged-vlan-interface-to-virtual-machine-3.png" alt="" width="288" height="635" class="alignnone size-full wp-image-12355" /></a>
+![](images/how-to-assign-tagged-vlan-interface-to-virtual-machine-3.png)
 
 1. `/etc/sysconfig/network-scripts/ifcfg-bond0.171` を修正
     ```
@@ -114,7 +114,7 @@ tags: [CentOS, KVM, ネットワーク, vlan, 仮想化技術]
 ここまでの環境ができれば、KVM側で `br0-171` などのブリッジインターフェースを指定することで、KVM側の `vnet` と紐付けが自動で行われます。
 
 この部分です。
-<a href="images/how-to-assign-tagged-vlan-interface-to-virtual-machine-4.png"><img src="images/how-to-assign-tagged-vlan-interface-to-virtual-machine-4.png" alt="" width="320" height="577" class="alignnone size-full wp-image-12358" /></a>
+![](images/how-to-assign-tagged-vlan-interface-to-virtual-machine-4.png)
 
 ## あとがき
 この方法を応用することで、KVMのネットワークを効率的に作成することができます。

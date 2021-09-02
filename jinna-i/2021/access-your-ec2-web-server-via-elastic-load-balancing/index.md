@@ -15,7 +15,7 @@ Application Load Balancer は [Elastic Load Balancing](https://aws.amazon.com/jp
 
 ## 想定環境
 
-<a href="images/access-your-ec2-web-server-via-elastic-load-balancing-1.png"><img src="images/access-your-ec2-web-server-via-elastic-load-balancing-1.png" alt="" width="925" height="618" class="alignnone size-full wp-image-17458" /></a>
+![](images/access-your-ec2-web-server-via-elastic-load-balancing-1.png)
 
 - クライアントから **https://balance.msen.jp** でアクセスしたときに、ロードバランサー (Application Load Balancer) を経由して Web サーバーの画面を表示させるようにします。
 - ロードバランサーに SSL サーバー証明書を設定し、**クライアントとロードバランサー間の通信は HTTPS** で、**ロードバランサーと Web サーバー間の通信は HTTP** で行えるように設定します。
@@ -46,7 +46,7 @@ sudo systemctl enable nginx
 
 EC2 インスタンスに Elastic IP アドレスを割り当て、ブラウザから `http://<Elastic IP>` でアクセスしまずはダイレクトに Web サーバーにアクセスできることを確認しておきます。この時 EC2 インスタンスに割り当てているセキュリティグループの設定で HTTP のアクセス元の制限を自身のグローバル IP アドレスなどに制限しておくとよいでしょう。Nginx では下記の初期画面が表示されます。
 
-<a href="images/access-your-ec2-web-server-via-elastic-load-balancing-2.png"><img src="images/access-your-ec2-web-server-via-elastic-load-balancing-2.png" alt="" width="1060" height="709" class="alignnone size-full wp-image-17424" /></a>
+![](images/access-your-ec2-web-server-via-elastic-load-balancing-2.png)
 
 確認が終わったら Elastic IP アドレスは不要になりますので解放して問題ありません。
 
@@ -54,78 +54,78 @@ EC2 インスタンスに Elastic IP アドレスを割り当て、ブラウザ�
 
 SSL サーバー証明書は AWS Certificate Manger から発行します。例として `balance.msen.jp` 用の証明書を発行します。
 
-<a href="images/access-your-ec2-web-server-via-elastic-load-balancing-3.png"><img src="images/access-your-ec2-web-server-via-elastic-load-balancing-3.png" alt="" width="1714" height="1468" class="alignnone size-full wp-image-17428" /></a>
+![](images/access-your-ec2-web-server-via-elastic-load-balancing-3.png)
 
 パブリック証明書を選択し、リクエストします。
 
-<a href="images/access-your-ec2-web-server-via-elastic-load-balancing-4.png"><img src="images/access-your-ec2-web-server-via-elastic-load-balancing-4.png" alt="" width="1696" height="529" class="alignnone size-full wp-image-17430" /></a>
+![](images/access-your-ec2-web-server-via-elastic-load-balancing-4.png)
 
 ドメイン名を入力し、次へをクリックします。例ではここで `balance.msen.jp` を入力します。
 
-<a href="images/access-your-ec2-web-server-via-elastic-load-balancing-5.png"><img src="images/access-your-ec2-web-server-via-elastic-load-balancing-5.png" alt="" width="1374" height="398" class="alignnone size-full wp-image-17431" /></a>
+![](images/access-your-ec2-web-server-via-elastic-load-balancing-5.png)
 
 msen.jp のドメインを所有しているかどうか検証が行われます。今回は DNS の検証を選択します。
 
-<a href="images/access-your-ec2-web-server-via-elastic-load-balancing-6.png"><img src="images/access-your-ec2-web-server-via-elastic-load-balancing-6.png" alt="" width="1398" height="389" class="alignnone size-full wp-image-17433" /></a>
+![](images/access-your-ec2-web-server-via-elastic-load-balancing-6.png)
 
 タグはわかりやすいように任意の名前を付けておきましょう。
 
-<a href="images/access-your-ec2-web-server-via-elastic-load-balancing-7.png"><img src="images/access-your-ec2-web-server-via-elastic-load-balancing-7.png" alt="" width="1357" height="307" class="alignnone size-full wp-image-17434" /></a>
+![](images/access-your-ec2-web-server-via-elastic-load-balancing-7.png)
 
 内容を確認し、リクエストします。
 
-<a href="images/access-your-ec2-web-server-via-elastic-load-balancing-8.png"><img src="images/access-your-ec2-web-server-via-elastic-load-balancing-8.png" alt="" width="1364" height="735" class="alignnone size-full wp-image-17435" /></a>
+![](images/access-your-ec2-web-server-via-elastic-load-balancing-8.png)
 
 リクエストしているドメインが本当に自身が管理するものなのかの検証が行われます。検証用の CNAME レコードが発行されますのでドメインの権威 DNS サーバーにこの CNAME を追加します。
 
-<a href="images/access-your-ec2-web-server-via-elastic-load-balancing-9.png"><img src="images/access-your-ec2-web-server-via-elastic-load-balancing-9.png" alt="" width="1364" height="555" class="alignnone size-full wp-image-17436" /></a>
+![](images/access-your-ec2-web-server-via-elastic-load-balancing-9.png)
 
 しばらく経過すると状況が **`検証保留中`** から **`発行済み`** に変わります。5分もかからなかったと思います。これで SSL 証明書の準備が完了しました。
 
-<a href="images/access-your-ec2-web-server-via-elastic-load-balancing-10.png"><img src="images/access-your-ec2-web-server-via-elastic-load-balancing-10.png" alt="" width="1477" height="333" class="alignnone size-full wp-image-17437" /></a>
+![](images/access-your-ec2-web-server-via-elastic-load-balancing-10.png)
 
 ## Application Load Balancer の構成
 
 EC2 のダッシュボードからロードバランサーを作成します。ロードバランサーのタイプは色々ありますが、今回は HTTPS トラフィックをバランスしたいので **Application Load Balancer** を作成します。
 
-<a href="images/access-your-ec2-web-server-via-elastic-load-balancing-11.png"><img src="images/access-your-ec2-web-server-via-elastic-load-balancing-11.png" alt="" width="1523" height="1045" class="alignnone size-full wp-image-17441" /></a>
+![](images/access-your-ec2-web-server-via-elastic-load-balancing-11.png)
 
 ロードバランサーの名前は任意のものを設定おきましょう。リスナーの設定では HTTPS (443) を待ち受けるように追加します。アベイラビリティゾーンのチェックは最低2つ以上必要です。
 
-<a href="images/access-your-ec2-web-server-via-elastic-load-balancing-12.png"><img src="images/access-your-ec2-web-server-via-elastic-load-balancing-12.png" alt="" width="1523" height="1045" class="alignnone size-full wp-image-17442" /></a>
+![](images/access-your-ec2-web-server-via-elastic-load-balancing-12.png)
 
 タグは適当に Name タグなどを追加して次の手順に進みます。
 
-<a href="images/access-your-ec2-web-server-via-elastic-load-balancing-13.png"><img src="images/access-your-ec2-web-server-via-elastic-load-balancing-13.png" alt="" width="1510" height="307" class="alignnone size-full wp-image-17443" /></a>
+![](images/access-your-ec2-web-server-via-elastic-load-balancing-13.png)
 
 ロードバランサーに割り当てる証明書を設定します。**ACM から選択する** にチェックを入れ、前項で作成した証明書を選択し次の手順に進みます。
 
-<a href="images/access-your-ec2-web-server-via-elastic-load-balancing-14.png"><img src="images/access-your-ec2-web-server-via-elastic-load-balancing-14.png" alt="" width="1523" height="1045" class="alignnone size-full wp-image-17444" /></a>
+![](images/access-your-ec2-web-server-via-elastic-load-balancing-14.png)
 
 ロードバランサーに割り当てるセキュリティグループを設定します。せっかくなのでロードバランサー専用のセキュリティグループを新規作成しておきましょう。ここで大事なことは **HTTPS (443) のみを許可し**、**EC2 インスタンスに割り当てるセキュリティグループと分ける** ことです。
 また、アクセス元を自身のグローバル IP アドレスなどに制限しておくとセキュリティ観点からもよいでしょう。
 
-<a href="images/access-your-ec2-web-server-via-elastic-load-balancing-15.png"><img src="images/access-your-ec2-web-server-via-elastic-load-balancing-15.png" alt="" width="1523" height="1045" class="alignnone size-full wp-image-17445" /></a>
+![](images/access-your-ec2-web-server-via-elastic-load-balancing-15.png)
 
 ## DNS レコードの登録
 
 Application Load Balancer の構成が終わると、ロードバランサーの DNS レコード (A レコード) が発行されます。`balance.msen.jp` にアクセスしたときに、このロードバランサーの A レコードを参照するように CNAME を設定する必要があります。
 
-<a href="images/access-your-ec2-web-server-via-elastic-load-balancing-16.png"><img src="images/access-your-ec2-web-server-via-elastic-load-balancing-16.png" alt="" width="931" height="237" class="alignnone size-full wp-image-17483" /></a>
+![](images/access-your-ec2-web-server-via-elastic-load-balancing-16.png)
 
 自身の管理するドメインの権威 DNS サーバーに CNAME を追加し、正常に名前解決ができれば OK です。アベイラビリティゾーンを2つ以上設定しているため、ロードバランサーの IP アドレスがアベイラビリティゾーンの数だけ返ってきます。
 
-<a href="images/access-your-ec2-web-server-via-elastic-load-balancing-17.png"><img src="images/access-your-ec2-web-server-via-elastic-load-balancing-17.png" alt="" width="459" height="157" class="alignnone size-full wp-image-17461" /></a>
+![](images/access-your-ec2-web-server-via-elastic-load-balancing-17.png)
 
 ## EC2 インスタンスのセキュリティグループ設定
 
 最後に EC2 インスタンスのセキュリティグループを設定します。今回の例では **ロードバランサーからのみ HTTP リクエストを受けるようにしたい** ので、セキュリティグループのソースに **ロードバランサーに割り当てたセキュリティグループを指定** します。
 
-<a href="images/access-your-ec2-web-server-via-elastic-load-balancing-18.png"><img src="images/access-your-ec2-web-server-via-elastic-load-balancing-18.png" alt="" width="1824" height="186" class="alignnone size-full wp-image-17465" /></a>
+![](images/access-your-ec2-web-server-via-elastic-load-balancing-18.png)
 
 以上ですべての設定が終わりましたのでクライアントから `https://balance.msen.jp` にアクセスします。Nginx のデフォルトページが表示されれば成功です。
 
-<a href="images/access-your-ec2-web-server-via-elastic-load-balancing-19.png"><img src="images/access-your-ec2-web-server-via-elastic-load-balancing-19.png" alt="" width="1000" height="766" class="alignnone size-full wp-image-17466" /></a>
+![](images/access-your-ec2-web-server-via-elastic-load-balancing-19.png)
 
 ### 504 Gateway Time-out になる場合
 
@@ -133,7 +133,7 @@ Application Load Balancer の構成が終わると、ロードバランサーの
 
 そんな場合は、ロードバランサーから EC2 インスタンスへの HTTP アクセスができていない可能性があります。先に記載したセキュリティグループの設定を確認してみてください。
 
-<a href="images/access-your-ec2-web-server-via-elastic-load-balancing-20.png"><img src="images/access-your-ec2-web-server-via-elastic-load-balancing-20.png" alt="" width="1000" height="766" class="alignnone size-full wp-image-17467" /></a>
+![](images/access-your-ec2-web-server-via-elastic-load-balancing-20.png)
 
 それではこの辺で。
 

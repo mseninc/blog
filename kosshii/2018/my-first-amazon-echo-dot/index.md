@@ -38,7 +38,7 @@ Amazon Echo Dot を購入したら壁掛けにしたい！！
 枠にAmazon Echo Dot を押し込んでコンセントに挿すだけ！
 
 実際の写真がこちら。
-<img src="images/my-first-amazon-echo-dot-1.jpg" alt="" width="225" height="300" class="aligncenter size-medium wp-image-6715" />
+![](images/my-first-amazon-echo-dot-1.jpg)
 
 かっこいい....
 けどコンセント周りの部分が青いのが気になる...と思った方いませんか？

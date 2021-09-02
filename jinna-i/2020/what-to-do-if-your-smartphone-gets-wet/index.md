@@ -23,7 +23,7 @@ tags: [スマホ, その他, ライフハック]
 
 通常の状態であれば、スピーカーの振動が空気を振動させますが、間に水の層が加わることでその振動が吸収されて小さくなってしまい、十分に振動を伝えることができません。
 
-<a href="images/what-to-do-if-your-smartphone-gets-wet-1.png"><img src="images/what-to-do-if-your-smartphone-gets-wet-1.png" alt="" width="867" height="676" class="alignnone size-full wp-image-13844" /></a>
+![](images/what-to-do-if-your-smartphone-gets-wet-1.png)
 
 プールや海で耳に水が入ると音が聞こえづらくなる現象と同じイメージです。
 
@@ -46,11 +46,11 @@ tags: [スマホ, その他, ライフハック]
 
 方法は簡単、**密閉できるジッパー袋にスマホと乾燥剤を入れて寝るだけ**です!!
 
-<a href="images/what-to-do-if-your-smartphone-gets-wet-2.jpg"><img src="images/what-to-do-if-your-smartphone-gets-wet-2.jpg" alt="" width="807" height="605" class="alignnone size-full wp-image-13851" /></a>
+![](images/what-to-do-if-your-smartphone-gets-wet-2.jpg)
 
 透明な袋であれば**顔認証もできますし、タッチ操作もできる**ので普段通りスマホを使うこともできます。ただし袋に穴が開いては意味がないで一晩くらいは触らず我慢しましょう笑
 
-<a href="images/what-to-do-if-your-smartphone-gets-wet-3.jpg"><img src="images/what-to-do-if-your-smartphone-gets-wet-3.jpg" alt="" width="530" height="706" class="alignnone size-full wp-image-13852" /></a>
+![](images/what-to-do-if-your-smartphone-gets-wet-3.jpg)
 
 試してはいませんが、ワイヤレス充電もできると思います。
 

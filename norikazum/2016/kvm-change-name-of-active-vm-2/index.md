@@ -31,17 +31,17 @@ jv-proxy　→　CentOS7.0 に変更する。
 
 1. 仮想マシンマネージャー(virt-manager)を起動します。
 2. 赤枠の新規作成マークをクリックします。
-<a href="images/kvm-change-name-of-active-vm-2-1.png"><img src="images/kvm-change-name-of-active-vm-2-1.png" alt="screenshot-from-2016-11-13-02-26-30" width="552" height="586" class="alignnone size-full wp-image-3187" /></a>
+![screenshot-from-2016-11-13-02-26-30](images/kvm-change-name-of-active-vm-2-1.png)
 3. 既存のディスクをインポート　を選択し進みます。
-<a href="images/kvm-change-name-of-active-vm-2-2.png"><img src="images/kvm-change-name-of-active-vm-2-2.png" alt="screenshot-from-2016-11-13-02-26-36" width="604" height="441" class="alignnone size-full wp-image-3189" /></a>
+![screenshot-from-2016-11-13-02-26-36](images/kvm-change-name-of-active-vm-2-2.png)
 4. 参照を選択し、仮想イメージファイルが配置されているパスから選択します。デフォルトでは、画像のように `/var/lib/libvirt/images`です。
-<a href="images/kvm-change-name-of-active-vm-2-3.png"><img src="images/kvm-change-name-of-active-vm-2-3.png" alt="screenshot-from-2016-11-13-02-26-47" width="1224" height="544" class="alignnone size-full wp-image-3190" /></a>
+![screenshot-from-2016-11-13-02-26-47](images/kvm-change-name-of-active-vm-2-3.png)
 5. OSの種類とバージョンを適切に選択します。
-<a href="images/kvm-change-name-of-active-vm-2-4.png"><img src="images/kvm-change-name-of-active-vm-2-4.png" alt="screenshot-from-2016-11-13-02-27-06" width="458" height="463" class="alignnone size-full wp-image-3191" /></a>
+![screenshot-from-2016-11-13-02-27-06](images/kvm-change-name-of-active-vm-2-4.png)
 6. 仮想マシンに設定するメモリ、CPUコア数を適切に設定し進みます。
-<a href="images/kvm-change-name-of-active-vm-2-5.png"><img src="images/kvm-change-name-of-active-vm-2-5.png" alt="screenshot-from-2016-11-13-02-27-14" width="450" height="441" class="alignnone size-full wp-image-3192" /></a>
+![screenshot-from-2016-11-13-02-27-14](images/kvm-change-name-of-active-vm-2-5.png)
 7. 変更したい名前を設定し、作成を完了します。
-<a href="images/kvm-change-name-of-active-vm-2-6.png"><img src="images/kvm-change-name-of-active-vm-2-6.png" alt="screenshot-from-2016-11-13-02-27-19" width="567" height="460" class="alignnone size-full wp-image-3193" /></a>
+![screenshot-from-2016-11-13-02-27-19](images/kvm-change-name-of-active-vm-2-6.png)
 
 ## あとがき
 

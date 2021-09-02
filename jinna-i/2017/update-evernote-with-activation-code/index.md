@@ -21,11 +21,11 @@ tags: [Evernote, その他, ライフハック]
 
 有効期限が近づくとEvernoteに以下のテロップがでるようになります。
 
-<a href="images/update-evernote-with-activation-code-1.png"><img src="images/update-evernote-with-activation-code-1.png" alt="" width="1022" height="726" class="alignnone size-full wp-image-5971" /></a>
+![](images/update-evernote-with-activation-code-1.png)
 
 クリックして進めるとここからプレミアムパックを購入できるようになっています。
 
-<a href="images/update-evernote-with-activation-code-2.png"><img src="images/update-evernote-with-activation-code-2.png" alt="" width="801" height="555" class="alignnone size-full wp-image-5972" /></a>
+![](images/update-evernote-with-activation-code-2.png)
 
 ## すでにアクティベーションコードを持っている場合
 
@@ -37,11 +37,11 @@ tags: [Evernote, その他, ライフハック]
 
 アクティベーションコードを入力し、 **続行する** をクリックします。
 
-<a href="images/update-evernote-with-activation-code-3.png"><img src="images/update-evernote-with-activation-code-3.png" alt="" width="1375" height="772" class="alignnone size-full wp-image-5973" /></a>
+![](images/update-evernote-with-activation-code-3.png)
 
 アカウントを確認して問題なければ、 **スタート** をクリックします。
 
-<a href="images/update-evernote-with-activation-code-4.png"><img src="images/update-evernote-with-activation-code-4.png" alt="" width="1375" height="772" class="alignnone size-full wp-image-5974" /></a>
+![](images/update-evernote-with-activation-code-4.png)
 
 ### Evernoteポイントをプレミアムに交換する
 
@@ -51,7 +51,7 @@ tags: [Evernote, その他, ライフハック]
 
 **Evernoteポイント** をクリックします。
 
-<a href="images/update-evernote-with-activation-code-5.png"><img src="images/update-evernote-with-activation-code-5.png" alt="" width="1375" height="772" class="alignnone size-full wp-image-5975" /></a>
+![](images/update-evernote-with-activation-code-5.png)
 
 3年分を購入したので、360ポイント付与されました。
 
@@ -59,17 +59,17 @@ tags: [Evernote, その他, ライフハック]
 
 ここからは任意で構いませんが、**プレミアム / 1年** をクリックします。
 
-<a href="images/update-evernote-with-activation-code-6.png"><img src="images/update-evernote-with-activation-code-6.png" alt="" width="1375" height="772" class="alignnone size-full wp-image-5976" /></a>
+![](images/update-evernote-with-activation-code-6.png)
 
 **確認**をクリックします。
 
-<a href="images/update-evernote-with-activation-code-7.png"><img src="images/update-evernote-with-activation-code-7.png" alt="" width="1375" height="772" class="alignnone size-full wp-image-5977" /></a>
+![](images/update-evernote-with-activation-code-7.png)
 
 あとは気が済むまでポイントを使っていきます。
 
 **アカウントの概要** から有効期限が延長されていることを確認します。
 
-<a href="images/update-evernote-with-activation-code-8.png"><img src="images/update-evernote-with-activation-code-8.png" alt="" width="1375" height="772" class="alignnone size-full wp-image-5978" /></a>
+![](images/update-evernote-with-activation-code-8.png)
 
 ## あとがき
 

@@ -278,13 +278,13 @@ VSCode でプロジェクトフォルダーを開き、 **F5 (デバッグの開
 
 デバッグ実行が開始されると下記のようなデバッグツールバーが表示されます。
 
-<a href="images/asp-dotnet-core-blazor-preview9-install-1.png"><img src="images/asp-dotnet-core-blazor-preview9-install-1.png" alt="" width="225" height="43" class="aligncenter size-full wp-image-10760" /></a>
+![](images/asp-dotnet-core-blazor-preview9-install-1.png)
 
 同時にブラウザーが起動して `https://localhost:5001` が開かれます。おそらく証明書の警告が表示されるので「詳細」を押して無視して開けば OK です。
 
 下記のようなデフォルトの Bootstrap 4 アプリが表示されればセットアップは完了です。
 
-<a href="images/asp-dotnet-core-blazor-preview9-install-2.png"><img src="images/asp-dotnet-core-blazor-preview9-install-2.png" alt="" width="903" height="427" class="aligncenter size-full wp-image-10761" /></a>
+![](images/asp-dotnet-core-blazor-preview9-install-2.png)
 
 この状態で "Counter" や "Fetch Data" などはすでに動的に動作しますので、操作してみましょう。
 

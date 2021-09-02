@@ -25,7 +25,7 @@ tags: [その他]
 
 物品については、ほとんどAmazonで調達しました。スーパーや百均のほうがコスパのいいものは、個別に買い出しにいって調達しています。
 
-<img src="images/emergency-packing-1.jpg" alt="災害対策用品" width="600" height="800" class="aligncenter size-full wp-image-8448" />
+![災害対策用品](images/emergency-packing-1.jpg)
 
 ## 物品リスト
 
@@ -82,7 +82,7 @@ tags: [その他]
 
 バッグは二～三人家庭用が 65L (写真左)、一人家庭用が 50L (写真右) にしました。
 
-<img src="images/emergency-packing-2.jpg" alt="災害対策用品用バックパック" width="800" height="600" class="aligncenter size-full wp-image-8450" />
+![災害対策用品用バックパック](images/emergency-packing-2.jpg)
 
 大きいほうのバックパックは最初 Amaazon のレビューで評価のよかった7000円ぐらいのよくわからないブランドの 80L を買いましたが、作りがイマイチなのと大きすぎたため、返品し、**[Amazonベーシックの65Lバックパック](https://www.amazon.co.jp/o/ASIN/B07B3STPYG/m1s-22/ref=nosim)** にしました。
 

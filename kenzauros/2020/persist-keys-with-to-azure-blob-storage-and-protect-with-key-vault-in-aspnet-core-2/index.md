@@ -39,11 +39,11 @@ Azure Blob Storage に Blob コンテナーをつくるため以下の手順を�
 
 ストレージ アカウント に遷移して [追加] をクリックします。
 
-<a href="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-2-1.png"><img src="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-2-1.png" alt="" width="1147" height="585" class="aligncenter size-full wp-image-11955" /></a>
+![](images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-2-1.png)
 
 プロパティを設定します。
 
-<a href="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-2-2.png"><img src="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-2-2.png" alt="" width="1147" height="871" class="aligncenter size-full wp-image-11956" /></a>
+![](images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-2-2.png)
 
 - サブスクリプション: 現在のサブスクリプションを指定
 - リソースグループ: アプリ/VM が動作しているリソースグループを指定
@@ -56,11 +56,11 @@ Azure Blob Storage に Blob コンテナーをつくるため以下の手順を�
 
 今回はその他の設定は特に行わないので、 [確認および作成] をクリックし、確認画面で問題なければ [作成] をクリックします。
 
-<a href="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-2-3.png"><img src="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-2-3.png" alt="" width="1147" height="871" class="aligncenter size-full wp-image-11957" /></a>
+![](images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-2-3.png)
 
 デプロイが進行し、しばらくすると完了しますので、 [リソースに移動] をクリックして作成したストレージアカウントに遷移します。下図はデプロイ後のストレージアカウントの状態です。
 
-<a href="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-2-4.png"><img src="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-2-4.png" alt="" width="1147" height="726" class="aligncenter size-full wp-image-11960" /></a>
+![](images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-2-4.png)
 
 ### Blob コンテナーを作る
 
@@ -68,11 +68,11 @@ Azure Blob Storage に Blob コンテナーをつくるため以下の手順を�
 
 ストレージアカウントの設定から [Blob service] → [コンテナー] からコンテナーを新規追加します。
 
-<a href="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-2-5.png"><img src="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-2-5.png" alt="" width="1147" height="726" class="aligncenter size-full wp-image-11961" /></a>
+![](images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-2-5.png)
 
 必要事項を入力します。
 
-<a href="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-2-6.png"><img src="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-2-6.png" alt="" width="477" height="279" class="aligncenter size-full wp-image-11962" /></a>
+![](images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-2-6.png)
 
 - 名前: `key-container`
 - パブリックアクセスレベル: `プライベート (匿名アクセスはありません)`
@@ -83,7 +83,7 @@ URL は `https://<ストレージアカウント名>.blob.core.windows.net/<コ�
 
 作成したらコンテナーの [プロパティ] から**コンテナーの URL** を取得します。この URL だけではファイルを書き込めないので、とりあえずメモしておきます。
 
-<a href="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-2-7.png"><img src="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-2-7.png" alt="" width="1147" height="387" class="aligncenter size-full wp-image-11963" /></a>
+![](images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-2-7.png)
 
 ### SAS トークンの生成
 
@@ -97,7 +97,7 @@ SAS にも種類がありますが、今回はアドホック SAS を使用し�
 
 ストレージアカウントの設定から [設定] → [Shared Access Signature] を選択し、必要事項を設定します。
 
-<a href="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-2-8.png"><img src="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-2-8.png" alt="" width="944" height="1091" class="aligncenter size-full wp-image-11993" /></a>
+![](images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-2-8.png)
 
 - 使用できるサービス: `BLOB`
 - 使用できるリソースの種類: `オブジェクト`
@@ -151,7 +151,7 @@ public void ConfigureServices(IServiceCollection services)
 
 起動後にアプリにアクセスし、ストレージアカウントの Storage Explorer などから **BLOB コンテナーを参照し、 `keys.xml` が生成されていれば成功**です。
 
-<a href="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-2-9.png"><img src="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-2-9.png" alt="" width="958" height="574" class="aligncenter size-full wp-image-12012" /></a>
+![](images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-2-9.png)
 
 `keys.xml` の中身は下記のようになっています。 `masterKey` が含まれていますが、暗号化されていないことが XML 内のコメントにも書かれています。
 

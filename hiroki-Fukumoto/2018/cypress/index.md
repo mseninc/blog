@@ -37,7 +37,7 @@ Web UIの自動テストをしてくれるツールです。
 `npx cypress open`
 
 しばらくすると、CypressのIDEが起動します。
-<img src="images/cypress-1.png" alt="" width="538" height="381" class="alignnone size-full wp-image-7797" />
+![](images/cypress-1.png)
 
 サンプルですでにいくつかのテストファイルが用意されています。
 任意のファイルを選択すると、自動テストが実行されます。
@@ -71,15 +71,15 @@ describe('My First Test', function() {
 
 保存すると自動的にCypressのIDEに追加したファイルが追加されています。
 
-<img src="images/cypress-2.png" alt="" width="535" height="398" class="alignnone size-full wp-image-7802" />
+![](images/cypress-2.png)
 
 `search_mseeeen.js` を選択すると自動テストが開始されます。
 
-<img src="images/cypress-3.png" alt="" width="675" height="385" class="alignnone size-full wp-image-7799" />
+![](images/cypress-3.png)
 
-<img src="images/cypress-4.png" alt="" width="677" height="386" class="alignnone size-full wp-image-7800" />
+![](images/cypress-4.png)
 
-<img src="images/cypress-5.png" alt="" width="674" height="495" class="alignnone size-full wp-image-7798" />
+![](images/cypress-5.png)
 
 凄いですね！
 あととにかくテスト実行時間が早いです。

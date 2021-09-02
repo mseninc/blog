@@ -166,7 +166,7 @@ import pdf from 'html-pdf';
 import qrcode from 'qrcode';
 
 qrcode.toDataURL('Hello, world').then((url) => {
-  const html = `<html><body><img src="images/export-pdf-with-qrcode-on-nodejs-1.${url}"></body></html>`;
+  const html = `<html><body><img src="${url}"></body></html>`;
   pdf.create(html).toFile('output.pdf', (err, res) => {
     if (err) {
       console.error(err);
@@ -184,7 +184,7 @@ qrcode.toDataURL('Hello, world').then((url) => {
 ```js
 (async() => {
   const url = await qrcode.toDataURL('Hello, world');
-  const html = `<html><body><img src="images/export-pdf-with-qrcode-on-nodejs-1.${url}"></body></html>`;
+  const html = `<html><body><img src="${url}"></body></html>`;
   pdf.create(html).toFile('output.pdf', (err, res) => {
     if (err) {
       console.error(err);

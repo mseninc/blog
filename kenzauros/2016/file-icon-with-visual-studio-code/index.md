@@ -25,7 +25,7 @@ Atom と同じ Electron ベースで更新も速く、プラグインにも対�
 
 Atom などはプラグインで対応していたのですが、 Code は元々プラグイン機能が非対応だったこともあって、今まで実装されていませんでした。
 
-<a href="images/file-icon-with-visual-studio-code-1.png"><img src="images/file-icon-with-visual-studio-code-1.png" alt="screenshot_01" width="1061" height="664" class="aligncenter size-full wp-image-2685" /></a>
+![screenshot_01](images/file-icon-with-visual-studio-code-1.png)
 
 ↑のようにプロジェクトエクスプローラーは殺風景で、同じような名前のファイル名が多いと、開き間違えも多かったのです。
 
@@ -37,15 +37,15 @@ Atom などはプラグインで対応していたのですが、 Code は元々
 
 メニューから [ファイル] → [基本設定] → [File Icon Theme] を選択します。
 
-<a href="images/file-icon-with-visual-studio-code-2.png"><img src="images/file-icon-with-visual-studio-code-2.png" alt="screenshot_02" width="1061" height="664" class="aligncenter size-full wp-image-2686" /></a>
+![screenshot_02](images/file-icon-with-visual-studio-code-2.png)
 
 プロンプトに現れたメニューから **Seti (Visual Studio Code)** を選択します。
 
-<a href="images/file-icon-with-visual-studio-code-3.png"><img src="images/file-icon-with-visual-studio-code-3.png" alt="screenshot_03" width="1061" height="664" class="aligncenter size-full wp-image-2687" /></a>
+![screenshot_03](images/file-icon-with-visual-studio-code-3.png)
 
 するとなんということでしょう！アイコンが表示されたではありませんか！
 
-<a href="images/file-icon-with-visual-studio-code-4.png"><img src="images/file-icon-with-visual-studio-code-4.png" alt="screenshot_07" width="1061" height="664" class="aligncenter size-full wp-image-2688" /></a>
+![screenshot_07](images/file-icon-with-visual-studio-code-4.png)
 
 ちょっとだけかわいくなりました。パチパチ！
 

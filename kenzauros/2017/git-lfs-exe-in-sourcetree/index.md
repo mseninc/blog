@@ -19,7 +19,7 @@ Git の GUI ツールである [SourceTree が Git LFS (Large File Storage) に�
 
 [ツール]→[オプション]→[Git] を開いて、**Git バージョン**のところを確認します。
 
-<a href="images/git-lfs-exe-in-sourcetree-1.png"><img src="images/git-lfs-exe-in-sourcetree-1.png" alt="" width="502" height="479" class="aligncenter size-full wp-image-3574" /></a>
+![](images/git-lfs-exe-in-sourcetree-1.png)
 
 [内蔵 Git を使用] が押せなくなっていれば、**内蔵 Git** が使用されています。反対に [システム Git を使用] が押せなくなっていれば、**システムにインストールされた Git** が使用されています。
 
@@ -27,7 +27,7 @@ Git の GUI ツールである [SourceTree が Git LFS (Large File Storage) に�
 
 なお、下記のように git-lfs v*.*.* と表示されていなければ、 Git LFS がインストールされていないか認識されていません。
 
-<a href="images/git-lfs-exe-in-sourcetree-2.png"><img src="images/git-lfs-exe-in-sourcetree-2.png" alt="" width="502" height="479" class="aligncenter size-full wp-image-3575" /></a>
+![](images/git-lfs-exe-in-sourcetree-2.png)
 
 ### SourceTree フォルダ配下の git-lfs.exe
 
@@ -47,7 +47,7 @@ SourceTree フォルダ配下の `git-lfs.exe` は環境にもよりますが、
 
 ### システム Git の場合
 
-<a href="images/git-lfs-exe-in-sourcetree-3.png"><img src="images/git-lfs-exe-in-sourcetree-3.png" alt="" width="918" height="570" class="aligncenter size-full wp-image-3577" /></a>
+![](images/git-lfs-exe-in-sourcetree-3.png)
 
 システム Git を使用している場合でも、なぜか Git LFS だけはインストールしたものが使われず、 `git_extras\` フォルダのものが使用されます。
 

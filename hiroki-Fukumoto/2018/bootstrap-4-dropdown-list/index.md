@@ -9,11 +9,11 @@ tags: [HTML, JavaScript, Bootstrap, Web]
 
 Bootstrapを使用してドロップダウンボタンを作って、選択した項目をボタンに表示させたい時ありますよね？
 
-<img src="images/bootstrap-4-dropdown-list-1.png" alt="" width="359" height="243" class="alignnone size-full wp-image-6650" />
+![](images/bootstrap-4-dropdown-list-1.png)
 
 こういうドロップダウンで「項目1」を選択すると、
 
-<img src="images/bootstrap-4-dropdown-list-2.png" alt="" width="153" height="71" class="alignnone size-full wp-image-6640" />
+![](images/bootstrap-4-dropdown-list-2.png)
 
 こんな感じで。
 

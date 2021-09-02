@@ -29,17 +29,17 @@ tags: [Raspberry Pi, その他の技術]
 
 **Google にログインした状態で [セキュリティ設定](https://myaccount.google.com/security) を開き、 [アプリ パスワード]** を選択します。
 
-<a href="images/send-mail-via-smtp-with-exim4-on-raspberry-pi-1.png"><img src="images/send-mail-via-smtp-with-exim4-on-raspberry-pi-1.png" alt="" width="1107" height="902" class="aligncenter size-full wp-image-15678" /></a>
+![](images/send-mail-via-smtp-with-exim4-on-raspberry-pi-1.png)
 
 **[アプリを選択] で「その他」**を選択し、適当なアプリ名を入力して **[生成]** を押します。今回は "My Alert" としました。
 
-<a href="images/send-mail-via-smtp-with-exim4-on-raspberry-pi-2.png"><img src="images/send-mail-via-smtp-with-exim4-on-raspberry-pi-2.png" alt="" width="1107" height="531" class="aligncenter size-full wp-image-15680" /></a>
+![](images/send-mail-via-smtp-with-exim4-on-raspberry-pi-2.png)
 
-<a href="images/send-mail-via-smtp-with-exim4-on-raspberry-pi-3.png"><img src="images/send-mail-via-smtp-with-exim4-on-raspberry-pi-3.png" alt="" width="1107" height="531" class="aligncenter size-full wp-image-15681" /></a>
+![](images/send-mail-via-smtp-with-exim4-on-raspberry-pi-3.png)
 
 **16 文字のアプリパスワードが生成**され、画面にが表示されます。これをアカウントのパスワードとして利用できます。
 
-<a href="images/send-mail-via-smtp-with-exim4-on-raspberry-pi-4.png"><img src="images/send-mail-via-smtp-with-exim4-on-raspberry-pi-4.png" alt="" width="1107" height="531" class="aligncenter size-full wp-image-15682" /></a>
+![](images/send-mail-via-smtp-with-exim4-on-raspberry-pi-4.png)
 
 <span style="color:red">当然ながら、**このパスワードによってアカウント情報にアクセスできるようになるため、取り扱いには注意**しましょう。同設定画面からいつでも削除できますので、不要になったアプリパスワードはすぐに削除しましょう。</span>
 
@@ -54,7 +54,7 @@ $ sudo dpkg-reconfigure exim4-config
 
 設定は図のようなダイアログ形式です。
 
-<a href="images/send-mail-via-smtp-with-exim4-on-raspberry-pi-5.png"><img src="images/send-mail-via-smtp-with-exim4-on-raspberry-pi-5.png" alt="" width="936" height="529" class="aligncenter size-full wp-image-15677" /></a>
+![](images/send-mail-via-smtp-with-exim4-on-raspberry-pi-5.png)
 
 exim 4 では下記のように設定します。ご自分の環境に合わせて書き換えてください。
 

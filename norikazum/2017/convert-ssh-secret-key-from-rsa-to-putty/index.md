@@ -13,7 +13,7 @@ CentOSなどにSSHでログインする際に、セキュリティ向上目的�
 
 コンソールツールにTeraTermを利用している場合、秘密鍵の読み込みがデフォルトではPutty形式（拡張子.ppk)となっています。
 
-<a href="images/convert-ssh-secret-key-from-rsa-to-putty-1.png"><img src="images/convert-ssh-secret-key-from-rsa-to-putty-1.png" alt="" width="300" height="169" class="alignnone size-medium wp-image-3613" /></a>
+![](images/convert-ssh-secret-key-from-rsa-to-putty-1.png)
 
 Linuxの `ssh-keygen -t rsa` コマンドでキーペアを作成すると、`id_rsa` というRSA形式の秘密鍵ができます。
 
@@ -25,27 +25,27 @@ RSA形式も読み込めるのですが、毎回ファイル種別を変更し�
 
 [http://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html](http://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 
-<a href="images/convert-ssh-secret-key-from-rsa-to-putty-2.png"><img src="images/convert-ssh-secret-key-from-rsa-to-putty-2.png" alt="" width="300" height="222" class="alignnone size-medium wp-image-3614" /></a>
+![](images/convert-ssh-secret-key-from-rsa-to-putty-2.png)
 
 ダウンロード先から、 `puttygen.exe` を起動します。
 
-<a href="images/convert-ssh-secret-key-from-rsa-to-putty-3.png"><img src="images/convert-ssh-secret-key-from-rsa-to-putty-3.png" alt="" width="300" height="185" class="alignnone size-medium wp-image-3615" /></a>
+![](images/convert-ssh-secret-key-from-rsa-to-putty-3.png)
 
 変換元の秘密鍵を読み込みます。
 
-<a href="images/convert-ssh-secret-key-from-rsa-to-putty-4.png"><img src="images/convert-ssh-secret-key-from-rsa-to-putty-4.png" alt="" width="300" height="253" class="alignnone size-medium wp-image-3616" /></a>
+![](images/convert-ssh-secret-key-from-rsa-to-putty-4.png)
 
 読み込む形式を **AllFiles** に変更し、読み込みます。
 
-<a href="images/convert-ssh-secret-key-from-rsa-to-putty-5.png"><img src="images/convert-ssh-secret-key-from-rsa-to-putty-5.png" alt="" width="300" height="226" class="alignnone size-medium wp-image-3617" /></a>
+![](images/convert-ssh-secret-key-from-rsa-to-putty-5.png)
 
 読み込み完了を知らせるウィンドウが出た場合は、OKで進みます。
 
 パスフレーズを入力し、保存します。
 
-<a href="images/convert-ssh-secret-key-from-rsa-to-putty-6.png"><img src="images/convert-ssh-secret-key-from-rsa-to-putty-6.png" alt="" width="300" height="253" class="alignnone size-medium wp-image-3622" /></a>
+![](images/convert-ssh-secret-key-from-rsa-to-putty-6.png)
 
-<a href="images/convert-ssh-secret-key-from-rsa-to-putty-7.png"><img src="images/convert-ssh-secret-key-from-rsa-to-putty-7.png" alt="" width="300" height="226" class="alignnone size-medium wp-image-3619" /></a>
+![](images/convert-ssh-secret-key-from-rsa-to-putty-7.png)
 
 以上で変換完了です。
 

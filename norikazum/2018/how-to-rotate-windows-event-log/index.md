@@ -16,7 +16,7 @@ Windows Serverを運用されている方には分かっていただけると思
 IPAが紹介している資料にも、高位影響レベルのシステムが保持するログの期間は3ヶ月～12ヶ月となっています。
 
 **4-7抜粋**
-<img src="images/how-to-rotate-windows-event-log-1.png" alt="" width="795" height="497" class="alignnone size-full wp-image-7967" />
+![](images/how-to-rotate-windows-event-log-1.png)
 [コンピュータセキュリティログ管理ガイド](https://www.ipa.go.jp/files/000025363.pdf)
 
 今回は、PowerShellを使って、セキュリティイベントログを高圧縮率の7zで圧縮し、ローテーションする方法を紹介します。
@@ -28,26 +28,26 @@ IPAが紹介している資料にも、高位影響レベルのシステムが�
 まず、標準の設定を確認します。
 
 イベントログから、**Windowsログ→セキュリティを右クリックしプロパティを選択** します。
-<img src="images/how-to-rotate-windows-event-log-2.png" alt="" width="784" height="550" class="alignnone size-full wp-image-7968" />
+![](images/how-to-rotate-windows-event-log-2.png)
 
 プロパティから、ログの設定は **必要に応じてイベントを上書きする** に設定されていることが分かります。
-<img src="images/how-to-rotate-windows-event-log-3.png" alt="" width="632" height="568" class="alignnone size-full wp-image-7969" />
+![](images/how-to-rotate-windows-event-log-3.png)
 
 これは、**Security.evtx** が設定されている最大ログサイズ(約130MB)に達した時点でログを上書きしてしまうという設定になります。
 
 同じ画面から、ログの保存先は `%SystemRoot%\System32\Winevt\Logs\` であることが分かりますので開いてみます。
 
-<img src="images/how-to-rotate-windows-event-log-4.png" alt="" width="690" height="387" class="alignnone size-full wp-image-7970" />
+![](images/how-to-rotate-windows-event-log-4.png)
 
 上記のように、**Security.evtx** が一つしかなく上書きされていることが分かります。
 
 ログが上書きされてしまっては困るので、同じプロパティ画面から、以下のように変更します。(ログサイズはデフォルトのままとします)
-<img src="images/how-to-rotate-windows-event-log-5.png" alt="" width="637" height="568" class="alignnone size-full wp-image-7971" />
+![](images/how-to-rotate-windows-event-log-5.png)
 **OKを押したタイミングで設定は反映されます。**
 
 この設定により、最大ログサイズに達したSecurity.evtxは、同じフォルダに **Archive-Security-2018-09-26-13-30-57-581.evtx** のような名前でArchiveされます。
 
-<img src="images/how-to-rotate-windows-event-log-6.png" alt="" width="708" height="213" class="alignnone size-full wp-image-7972" />
+![](images/how-to-rotate-windows-event-log-6.png)
 
 ここまでで、ログが上書きされることなく残るようになりました。
 
@@ -171,10 +171,10 @@ ZipAndMoveLogFiles
 ### 実行してみる
 準備が完了したら、**C:\batch\MoveAndZip-File.ps1** を実行してみます。
 
-<img src="images/how-to-rotate-windows-event-log-7.png" alt="" width="766" height="262" class="alignnone size-full wp-image-7978" />
+![](images/how-to-rotate-windows-event-log-7.png)
 
 PowerShellウィンドウが現れ、処理が終了すると消えます。
-<img src="images/how-to-rotate-windows-event-log-8.png" alt="" width="975" height="239" class="alignnone size-full wp-image-7979" />
+![](images/how-to-rotate-windows-event-log-8.png)
 
 ### スクリプトの動作概要
 
@@ -194,25 +194,25 @@ PowerShellウィンドウが現れ、処理が終了すると消えます。
 
 1. タスクスケジューラーを開きます。(**コントロールパネル→管理ツール→タスクスケジューラー**)
 2. 基本タスクの作成をクリックします。
-  <img src="images/how-to-rotate-windows-event-log-9.png" alt="" width="423" height="371" class="alignnone size-full wp-image-7982" />
+![](images/how-to-rotate-windows-event-log-9.png)
 3. 以下の流れを参考に作成します。
   [名称を入力します] (任意名称)
-  <img src="images/how-to-rotate-windows-event-log-10.png" alt="" width="694" height="489" class="alignnone size-full wp-image-7983" />
+![](images/how-to-rotate-windows-event-log-10.png)
   [毎日を選択します]
-  <img src="images/how-to-rotate-windows-event-log-11.png" alt="" width="697" height="491" class="alignnone size-full wp-image-7984" />
+![](images/how-to-rotate-windows-event-log-11.png)
   [実行する時間を指定します] (記事では3:00としています)
-  <img src="images/how-to-rotate-windows-event-log-12.png" alt="" width="694" height="485" class="alignnone size-full wp-image-7985" />
+![](images/how-to-rotate-windows-event-log-12.png)
   [プログラムの開始を選択します]
-  <img src="images/how-to-rotate-windows-event-log-13.png" alt="" width="696" height="485" class="alignnone size-full wp-image-7986" />
+![](images/how-to-rotate-windows-event-log-13.png)
   [以下のように入力します]
   ①プログラム/スクリプト部分 **%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe**
   ②引数の追加部分 **C:\batch\MoveAndZip-File.ps1**
   ③開始部分 `C:\`
-  <img src="images/how-to-rotate-windows-event-log-14.png" alt="" width="694" height="487" class="alignnone size-full wp-image-7987" />
+![](images/how-to-rotate-windows-event-log-14.png)
   [チェックを入れて完了します]
-  <img src="images/how-to-rotate-windows-event-log-15.png" alt="" width="698" height="485" class="alignnone size-full wp-image-7989" />
+![](images/how-to-rotate-windows-event-log-15.png)
   [①と②の設定を変更します] (完了をクリックした後、認証が求められるため応答します)
-  <img src="images/how-to-rotate-windows-event-log-16.png" alt="" width="539" height="390" class="alignnone size-full wp-image-7994" />
+![](images/how-to-rotate-windows-event-log-16.png)
 
 上記でタスクスケジューラーの設定は完了です。
 

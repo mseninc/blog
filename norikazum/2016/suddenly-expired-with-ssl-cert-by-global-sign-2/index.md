@@ -26,7 +26,7 @@ GlobalSignとやりとりをしたところ、**「中間証明書が古いま�
 
 気づいたところで、結合している中間証明書の文字列を置き換え、サービスを再起動することで改善しました。
 
-<a href="images/suddenly-expired-with-ssl-cert-by-global-sign-2-1.png"><img src="images/suddenly-expired-with-ssl-cert-by-global-sign-2-1.png" alt="2016-10-17_20h09_09" width="1072" height="557" class="alignnone size-full wp-image-3049" /></a>
+![2016-10-17_20h09_09](images/suddenly-expired-with-ssl-cert-by-global-sign-2-1.png)
 
 ## あとがき
 
@@ -44,7 +44,7 @@ openssl s_client -connect mseeeen.msen.jp:443 -showcerts
 
 そして、BEGIN CERTIFICATE　から始まるセクションの2段目が中間証明書となります。
 
-<a href="images/suddenly-expired-with-ssl-cert-by-global-sign-2-2.png"><img src="images/suddenly-expired-with-ssl-cert-by-global-sign-2-2.png" alt="2016-10-17_20h06_40" width="500" height="872" class="alignnone size-full wp-image-3048" /></a>
+![2016-10-17_20h06_40](images/suddenly-expired-with-ssl-cert-by-global-sign-2-2.png)
 
 この確認を直後に実施していれば、前回のブログで解決も合わせて紹介できたのに・・・。
 結論、ミスでした・・・。（反省）

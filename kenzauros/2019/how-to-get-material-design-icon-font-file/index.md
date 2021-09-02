@@ -9,7 +9,7 @@ Web デザインで使えるアイコンフォントは多いのですが、統�
 
 > [Icons - Material Design](https://material.io/tools/icons/?style=baseline)
 
-<a href="images/how-to-get-material-design-icon-font-file-1.png"><img src="images/how-to-get-material-design-icon-font-file-1.png" alt="List of Material Icons" width="1143" height="640" class="aligncenter size-full wp-image-10103" /></a>
+![List of Material Icons](images/how-to-get-material-design-icon-font-file-1.png)
 
 アイコンの検索は ↑ のページが見やすくて便利です。
 

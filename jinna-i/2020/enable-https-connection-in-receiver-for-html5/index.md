@@ -26,7 +26,7 @@ Citrix Virtual Apps や Desktops はクライアント端末に [Citrix Workspac
 
 前提として証明書認証局で SSL サーバー証明書が発行できる環境があるものとします。今回は Active Directory 証明書サービスを使いました。
 
-<a href="images/enable-https-connection-in-receiver-for-html5-1.png"><img src="images/enable-https-connection-in-receiver-for-html5-1.png" alt="" width="1022" height="553" class="alignnone size-full wp-image-12712" /></a>
+![](images/enable-https-connection-in-receiver-for-html5-1.png)
 
 ## Receiver for HTML5 の有効化
 
@@ -34,11 +34,11 @@ Citrix Virtual Apps や Desktops はクライアント端末に [Citrix Workspac
 
 Citrix Studio から [ポリシー] を開き、デフォルトの [unfiltered] を選択し、ポリシーを編集します。
 
-<a href="images/enable-https-connection-in-receiver-for-html5-2.png"><img src="images/enable-https-connection-in-receiver-for-html5-2.png" alt="" width="1578" height="876" class="alignnone size-full wp-image-12734" /></a>
+![](images/enable-https-connection-in-receiver-for-html5-2.png)
 
 [ICA] > [WebSocket] から [WebSocket 接続] のポリシーを **許可** に設定しておきます。
 
-<a href="images/enable-https-connection-in-receiver-for-html5-3.png"><img src="images/enable-https-connection-in-receiver-for-html5-3.png" alt="" width="587" height="482" class="alignnone size-full wp-image-12718" /></a>
+![](images/enable-https-connection-in-receiver-for-html5-3.png)
 
 ## StoreFront の SSL 化
 ### 証明書のバインド
@@ -52,11 +52,11 @@ StoreFront の SSL 化は IIS から証明書要求を行い、SSL サーバー�
 
 Citrix Studio からベース URL を変更します。
 
-<a href="images/enable-https-connection-in-receiver-for-html5-4.png"><img src="images/enable-https-connection-in-receiver-for-html5-4.png" alt="" width="1581" height="871" class="alignnone size-full wp-image-12720" /></a>
+![](images/enable-https-connection-in-receiver-for-html5-4.png)
 
 http を https に変更するだけで OK です。
 
-<a href="images/enable-https-connection-in-receiver-for-html5-5.png"><img src="images/enable-https-connection-in-receiver-for-html5-5.png" alt="" width="468" height="221" class="alignnone size-full wp-image-12721" /></a>
+![](images/enable-https-connection-in-receiver-for-html5-5.png)
 
 これでクライアント端末にルート CA の証明書がインポートされていれば、クライアント端末と StoreFront 間の HTTPS 通信は可能となります。
 
@@ -144,7 +144,7 @@ SSL to VDA enabled.
 ### CTX134123 を参照してくださいとなる場合
 
 
-<a href="images/enable-https-connection-in-receiver-for-html5-6.png"><img src="images/enable-https-connection-in-receiver-for-html5-6.png" alt="" width="401" height="307" class="alignnone size-full wp-image-12728" /></a>
+![](images/enable-https-connection-in-receiver-for-html5-6.png)
 
 > この Web ブラウザー内にセキュリティで保護された接続を作成できません。Citrix Knowledge Center の技術文書 CTX134123 を参照してください。
 
@@ -152,7 +152,7 @@ SSL to VDA enabled.
 
 ### サーバーに接続できませんとなる場合
 
-<a href="images/enable-https-connection-in-receiver-for-html5-7.png"><img src="images/enable-https-connection-in-receiver-for-html5-7.png" alt="" width="399" height="360" class="alignnone size-full wp-image-12729" /></a>
+![](images/enable-https-connection-in-receiver-for-html5-7.png)
 
 > サーバーに接続できません。HTML5 のローカルアクセスを構成する場合は、Citrix Knowledge Center の技術文書を参照してください。
 

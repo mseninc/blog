@@ -15,11 +15,11 @@ GitHub をお使いの方なら一度はクリックしたことがあるだろ�
 
 主題の**ファイルアップロードボタン**とはこれのことです。
 
-[caption id="attachment_17256" align="aligncenter" width="711"]<a href="images/hide-file-upload-bar-in-github-comment-1.png"><img src="images/hide-file-upload-bar-in-github-comment-1.png" alt="コメント欄のファイルアップロードボタン" width="711" height="228" class="size-full wp-image-17256" /></a> GitHub コメント欄のファイルアップロードボタン[/caption]
+![コメント欄のファイルアップロードボタン](images/hide-file-upload-bar-in-github-comment-1.png)
 
 これをクリックするとおなじみのファイル選択ダイアログが開きます (Windows)。アップロードするファイルを選択する機能なので当たり前なのですが。
 
-[caption id="attachment_17262" align="aligncenter" width="909"]<a href="images/hide-file-upload-bar-in-github-comment-2.png"><img src="images/hide-file-upload-bar-in-github-comment-2.png" alt="Windows のファイル選択ダイアログ" width="909" height="672" class="size-full wp-image-17262" /></a> Windows のファイル選択ダイアログが開いてしまう[/caption]
+![Windows のファイル選択ダイアログ](images/hide-file-upload-bar-in-github-comment-2.png)
 
 しかし**アップロードはドラッグ＆ドロップでもできますし、個人的にはわざわざここをクリックしてファイルを選択したくなったことがありません。**
 
@@ -40,13 +40,13 @@ GitHub で設定できればいいのですが、そんな細かい設定はあ�
 ### CSS の設定
 
 インストールが完了すると検索バーの右にアプリアイコンが出ます。
-（アイコンが表示されていなければ <img src="images/hide-file-upload-bar-in-github-comment-3.png" alt="拡張機能" class="wp-image-17263" style="width:auto;height:18px;margin:0;vertical-align:baseline;" /> を押してみてください）
+![拡張機能](images/hide-file-upload-bar-in-github-comment-3.png)
 
 **GitHub のなんらかのページ (https://github.com 下のどこか) をタブで開いた状態で、このアイコンをクリック**します。
 
 下記のようなウィンドウが開いたら **[次のスタイルを書く]** で **[github.com]** をクリックします。
 
-[caption id="attachment_17258" align="aligncenter" width="256"]<a href="images/hide-file-upload-bar-in-github-comment-4.png"><img src="images/hide-file-upload-bar-in-github-comment-4.png" alt="Stylus で github.com の CSS を追加" width="256" height="195" class="size-full wp-image-17258" /></a> Stylus で github.com の CSS を追加[/caption]
+![Stylus で github.com の CSS を追加](images/hide-file-upload-bar-in-github-comment-4.png)
 
 これで **github.com だけで有効なスタイルを定義できる**ので、下記のように定義します。
 
@@ -56,7 +56,7 @@ label.drag-and-drop {
 }
 ```
 
-[caption id="attachment_17259" align="aligncenter" width="999"]<a href="images/hide-file-upload-bar-in-github-comment-5.png"><img src="images/hide-file-upload-bar-in-github-comment-5.png" alt="Stylus で github.com の CSS を設定" width="999" height="652" class="size-full wp-image-17259" /></a> Stylus で github.com の CSS を設定[/caption]
+![Stylus で github.com の CSS を設定](images/hide-file-upload-bar-in-github-comment-5.png)
 
 右側のコード欄に記述したら、 **[保存]** ボタンをクリックします。
 
@@ -64,7 +64,7 @@ label.drag-and-drop {
 
 間違っていなければこれでファイルアップロードボタンが消えているはずです。
 
-[caption id="attachment_17257" align="aligncenter" width="711"]<a href="images/hide-file-upload-bar-in-github-comment-6.png"><img src="images/hide-file-upload-bar-in-github-comment-6.png" alt="GitHub のコメント欄のファイルアップロードボタンが消えた" width="711" height="228" class="size-full wp-image-17257" /></a> GitHub のコメント欄のファイルアップロードボタンが消えた[/caption]
+![GitHub のコメント欄のファイルアップロードボタンが消えた](images/hide-file-upload-bar-in-github-comment-6.png)
 
 無理矢理下部を消しただけなので見た目は少々悪いですが、気になる場合は調整してください。
 

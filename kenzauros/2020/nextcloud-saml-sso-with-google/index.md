@@ -38,13 +38,13 @@ Nextcloud 側からやりたくなってしまいますが、先に Google 側�
 
 - [Google 管理コンソール](https://admin.google.com/)
 
-<a href="images/nextcloud-saml-sso-with-google-1.png"><img src="images/nextcloud-saml-sso-with-google-1.png" alt="" width="1171" height="506" class="aligncenter size-full wp-image-14836" /></a>
+![](images/nextcloud-saml-sso-with-google-1.png)
 
 アプリ名を設定します。既存のものと重複しなければなんでも OK ですが、わかりやすく Nextcloud か nextcloud などにしておくとよいでしょう。
 
 入力したら「続行」をクリックします。
 
-<a href="images/nextcloud-saml-sso-with-google-2.png"><img src="images/nextcloud-saml-sso-with-google-2.png" alt="" width="1063" height="454" class="aligncenter size-full wp-image-14838" /></a>
+![](images/nextcloud-saml-sso-with-google-2.png)
 
 ### Google IdP 情報の取得
 
@@ -54,7 +54,7 @@ Google 側の IdP 情報が表示されます。のちほど**赤枠で囲った
 
 ここでは入力するものはないので「続行」をクリックします。
 
-<a href="images/nextcloud-saml-sso-with-google-3.png"><img src="images/nextcloud-saml-sso-with-google-3.png" alt="" width="1063" height="812" class="aligncenter size-full wp-image-14839" /></a>
+![](images/nextcloud-saml-sso-with-google-3.png)
 
 ### Nextcloud (SP) 情報の入力
 
@@ -78,7 +78,7 @@ ACS の URL | `https://<Nextcloud のアドレス>/index.php/apps/user_saml/saml
 
 入力したら「続行」をクリックします。
 
-<a href="images/nextcloud-saml-sso-with-google-4.png"><img src="images/nextcloud-saml-sso-with-google-4.png" alt="" width="1063" height="899" class="aligncenter size-full wp-image-14840" /></a>
+![](images/nextcloud-saml-sso-with-google-4.png)
 
 ### 属性マッピングの定義
 
@@ -96,21 +96,21 @@ Last name | `displayName`
 
 「完了」をクリックすると Google 側の設定は完了です。
 
-<a href="images/nextcloud-saml-sso-with-google-5.png"><img src="images/nextcloud-saml-sso-with-google-5.png" alt="" width="1063" height="774" class="aligncenter size-full wp-image-14841" /></a>
+![](images/nextcloud-saml-sso-with-google-5.png)
 
 ### ユーザーアクセスの有効化
 
 設定が完了すると追加したアプリの詳細画面になります。ここでデフォルトでは「ユーザー アクセス」が「オフ（すべてのユーザー）」になっていると思いますので、ここをクリックしてユーザーアクセスの設定画面を開きます。
 
-<a href="images/nextcloud-saml-sso-with-google-6.png"><img src="images/nextcloud-saml-sso-with-google-6.png" alt="" width="1063" height="716" class="aligncenter size-full wp-image-14844" /></a>
+![](images/nextcloud-saml-sso-with-google-6.png)
 
 サービスのステータスで「**オン（すべてのユーザー）**」を選択して、「保存」をクリックします。特定のグループや部門にアクセス権を設定する場合は、左メニューから選択して設定します。
 
-<a href="images/nextcloud-saml-sso-with-google-7.png"><img src="images/nextcloud-saml-sso-with-google-7.png" alt="" width="1063" height="516" class="aligncenter size-full wp-image-14843" /></a>
+![](images/nextcloud-saml-sso-with-google-7.png)
 
 **「ユーザー アクセス」が「オン（すべてのユーザー）」**になっていれば OK です。
 
-<a href="images/nextcloud-saml-sso-with-google-8.png"><img src="images/nextcloud-saml-sso-with-google-8.png" alt="" width="1063" height="716" class="aligncenter size-full wp-image-14845" /></a>
+![](images/nextcloud-saml-sso-with-google-8.png)
 
 これで Google 側の設定は終了です。
 
@@ -122,11 +122,11 @@ Last name | `displayName`
 
 アカウントメニューから「**アプリ**」を選びます。
 
-<a href="images/nextcloud-saml-sso-with-google-9.png"><img src="images/nextcloud-saml-sso-with-google-9.png" alt="" width="160" height="320" class="aligncenter size-full wp-image-14833" /></a>
+![](images/nextcloud-saml-sso-with-google-9.png)
 
 検索欄に **`saml`** とでも入力すると 「**SSO & SAML authentication**」 が表示されるので、「**ダウンロードして有効にする**」を選択します。
 
-<a href="images/nextcloud-saml-sso-with-google-10.png"><img src="images/nextcloud-saml-sso-with-google-10.png" alt="" width="866" height="255" class="aligncenter size-full wp-image-14834" /></a>
+![](images/nextcloud-saml-sso-with-google-10.png)
 
 ### SAML 認証の設定
 
@@ -134,7 +134,7 @@ Last name | `displayName`
 
 「**組み込みのSAML認証を使用する**」ボタンをクリックします。
 
-<a href="images/nextcloud-saml-sso-with-google-11.png"><img src="images/nextcloud-saml-sso-with-google-11.png" alt="" width="1152" height="642" class="aligncenter size-full wp-image-14835" /></a>
+![](images/nextcloud-saml-sso-with-google-11.png)
 
 まず、上のほうに警告がでているとおり、何も考えずに **SAML 認証だけ有効にしてしまうと Nextcloud の認証ができなくなり、管理者でログインできなくなる**恐れがあります。
 
@@ -143,7 +143,7 @@ Last name | `displayName`
 - ユーザー設定から、ログイン ID を今から連携する Google アカウントのメールアドレスにしたアカウントに管理者権限を与えておく
 - 下図のように**「複数のユーザーのバックエンド（LDAPなど）の使用を許可する (Allow the use of multiple user back-ends (e.g. LDAP))」にチェック**をいれておきます。（このチェックにより、 Nextcloud の元々の認証も利用できるようになります）
 
-<a href="images/nextcloud-saml-sso-with-google-12.png"><img src="images/nextcloud-saml-sso-with-google-12.png" alt="" width="754" height="313" class="aligncenter size-full wp-image-14849" /></a>
+![](images/nextcloud-saml-sso-with-google-12.png)
 
 次に IdP (Identity Provider = Google) の設定を入力します。
 
@@ -160,13 +160,13 @@ IdPの公開X.509証明書 <br> Public X.509 certificate of the IdP | Google の
 表示名をにマップする属性 <br> Attribute to map the displayname to. | Google の属性マッピングで Last name をマッピングした属性名 (任意) <br> 例. `displayName`
 電子メールアドレスをマップする属性 <br> Attribute to map the email address to. | Google の属性マッピングで Primary email をマッピングした属性名 (任意) <br> 例. `emailAddress`
 
-<a href="images/nextcloud-saml-sso-with-google-13.png"><img src="images/nextcloud-saml-sso-with-google-13.png" alt="" width="733" height="832" class="aligncenter size-full wp-image-14850" /></a>
+![](images/nextcloud-saml-sso-with-google-13.png)
 
 「IdPの公開X.509証明書」の設定欄などが表示されていないときは Show optional Identity Provider settings... をクリックします。
 
 設定できたら、ページ下部の「メタデータXMLをダウンロード」をクリックして、 metadata.xml を保存します。
 
-<a href="images/nextcloud-saml-sso-with-google-14.png"><img src="images/nextcloud-saml-sso-with-google-14.png" alt="" width="348" height="41" class="aligncenter size-full wp-image-14854" /></a>
+![](images/nextcloud-saml-sso-with-google-14.png)
 
 metadata.xml の中身は下記のようになっています。
 
@@ -192,7 +192,7 @@ metadata.xml の中身は下記のようになっています。
 
 ここまできたら、 Nextcloud からログアウトするか、別のブラウザーを開き、 Nextcloud のログイン画面を開きます。
 
-<a href="images/nextcloud-saml-sso-with-google-15.png"><img src="images/nextcloud-saml-sso-with-google-15.png" alt="" width="818" height="430" class="aligncenter size-full wp-image-14856" /></a>
+![](images/nextcloud-saml-sso-with-google-15.png)
 
 上記のように**ダイレクトログイン** (Nextcloud のユーザー認証) と先ほど追加した SAML 認証 (ここでは「**Google ログイン**」) が表示されているはずです。
 
@@ -200,11 +200,11 @@ metadata.xml の中身は下記のようになっています。
 
 うまく設定できていて、 Google アカウントにすでにログイン済みの場合は、そのまま Nextcloud にログインできるはずです。 Google アカウントにログインしていない場合は Google のログイン画面が表示されます。
 
-<a href="images/nextcloud-saml-sso-with-google-16.png"><img src="images/nextcloud-saml-sso-with-google-16.png" alt="" width="632" height="606" class="aligncenter size-full wp-image-14857" /></a>
+![](images/nextcloud-saml-sso-with-google-16.png)
 
 Google アカウントから無事サインインできれば成功です。お疲れ様でした！
 
-<a href="images/nextcloud-saml-sso-with-google-17.png"><img src="images/nextcloud-saml-sso-with-google-17.png" alt="" width="775" height="427" class="aligncenter size-full wp-image-14858" /></a>
+![](images/nextcloud-saml-sso-with-google-17.png)
 
 ## トラブルシューティング
 
@@ -212,7 +212,7 @@ Google アカウントから無事サインインできれば成功です。お�
 
 SAML 認証に失敗すると下記のような Google のエラーが表示されることがあります。
 
-<a href="images/nextcloud-saml-sso-with-google-18.png"><img src="images/nextcloud-saml-sso-with-google-18.png" alt="" width="631" height="406" class="aligncenter size-full wp-image-14862" /></a>
+![](images/nextcloud-saml-sso-with-google-18.png)
 
 エラーメッセージについては下記のページを参考にします。
 
@@ -226,7 +226,7 @@ SAML 認証に失敗すると下記のような Google のエラーが表示さ�
 
 Google Chrome や Internet Explorer, Firefox では動作確認できたのですが、なぜか **Edge (Chromium 版) では 403 (app_not_configured_for_user) がでてログインできません**。
 
-<a href="images/nextcloud-saml-sso-with-google-19.png"><img src="images/nextcloud-saml-sso-with-google-19.png" alt="" width="818" height="596" class="aligncenter size-full wp-image-14863" /></a>
+![](images/nextcloud-saml-sso-with-google-19.png)
 
 残念ながら現状ではこの問題は解決できていません。環境依存かもしれませんので、またなにかわかれば更新します。
 
@@ -236,7 +236,7 @@ SSO でログインすると ログアウト ボタンが表示されなくな�
 
 SAML 認証構成で **ログアウトできるようにするには Nextcloud の SAML IdP 設定に SLO (シングル・ログアウト) の URL を設定**する必要があります。 
 
-<a href="images/nextcloud-saml-sso-with-google-20.png"><img src="images/nextcloud-saml-sso-with-google-20.png" alt="" width="615" height="265" class="aligncenter size-full wp-image-14864" /></a>
+![](images/nextcloud-saml-sso-with-google-20.png)
 
 が、残念ながら **Google は SLO の URL を提供していません**。。。
 

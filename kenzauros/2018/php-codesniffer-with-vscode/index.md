@@ -37,7 +37,7 @@ pear install PHP_CodeSniffer
 
 VSCode の場合、 **phpcs** という拡張機能をインストールする必要があります。
 
-<a href="images/php-codesniffer-with-vscode-1.png"><img src="images/php-codesniffer-with-vscode-1.png" alt="VS Code に拡張機能 phpcs をインストール" width="544" height="165" class="aligncenter size-full wp-image-6068" /></a>
+![VS Code に拡張機能 phpcs をインストール](images/php-codesniffer-with-vscode-1.png)
 
 ## 使い方
 
@@ -72,7 +72,7 @@ PHP_CodeSniffer のコーディング標準は前述の既定のものを使用�
 
 まず、 **VSCode の設定 (`Ctrl+,`)** を開き、設定画面の右上のドロップダウンで「**ワークスペースの設定**」を選んで、 
 
-<a href="images/php-codesniffer-with-vscode-2.png"><img src="images/php-codesniffer-with-vscode-2.png" alt="" width="183" height="100" class="aligncenter size-full wp-image-6082" /></a>
+![](images/php-codesniffer-with-vscode-2.png)
 
 JSON に下記の設定を追加します。
 

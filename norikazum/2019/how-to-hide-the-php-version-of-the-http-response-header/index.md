@@ -43,12 +43,12 @@ PHPを利用するWebサービスにおいて、 **HTTP応答ヘッダーのPHP�
 
 表示された内容を **下にスクロール(④)** すると、 **X-Powered-By(⑤)** が表示されていることが確認できます。
 
-<a href="images/how-to-hide-the-php-version-of-the-http-response-header-1.png"><img src="images/how-to-hide-the-php-version-of-the-http-response-header-1.png" alt="" width="1807" height="1092" class="alignnone size-full wp-image-8744" /></a>
+![](images/how-to-hide-the-php-version-of-the-http-response-header-1.png)
 
 ### expose_php = Off の状態
 
 前項と同じ手順で表示し、設定が **非表示(①)** になっていることが確認できます。
 
-<a href="images/how-to-hide-the-php-version-of-the-http-response-header-2.png"><img src="images/how-to-hide-the-php-version-of-the-http-response-header-2.png" alt="" width="873" height="199" class="alignnone size-full wp-image-8746" /></a>
+![](images/how-to-hide-the-php-version-of-the-http-response-header-2.png)
 
 それでは次回の記事でお会いしましょう。

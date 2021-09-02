@@ -13,11 +13,11 @@ tags: [レク, その他]
 
 大阪から約 1.5 時間、和歌山の銘酒 **「黒牛」で有名な [名手酒造店](http://www.kuroushi.com/)**（名手はナテと読みます）へお邪魔しました。
 
-<img src="images/201809-wakayama-1.jpg" alt="" width="720" height="540" class="aligncenter size-full wp-image-8161" />
+![](images/201809-wakayama-1.jpg)
 
 試飲もしつつ
 
-<img src="images/201809-wakayama-2.jpg" alt="" width="720" height="540" class="aligncenter size-full wp-image-8162" />
+![](images/201809-wakayama-2.jpg)
 
 併設された [酒造り資料館 温故伝承館](http://www.kuroushi.com/onko/) で酒造りの歴史を学びました。
 
@@ -28,7 +28,7 @@ tags: [レク, その他]
 
 夜飲みのお酒などの買い出しをすませ、本日のお宿、**[串本ダイビングパーク](http://kushimoto.co.jp/diving/stay.php)** へ。
 
-<img src="images/201809-wakayama-3.jpg" alt="" width="720" height="405" class="aligncenter size-full wp-image-8164" />
+![](images/201809-wakayama-3.jpg)
 
 今回はダイビングはしませんが、写真のようなけっこうきれいなログハウスがあり、お子さん連れでも楽しめると思います。
 
@@ -36,31 +36,31 @@ tags: [レク, その他]
 
 夜は**花火**を楽しんだり
 
-<img src="images/201809-wakayama-4.jpg" alt="" width="720" height="540" class="aligncenter size-full wp-image-8168" />
+![](images/201809-wakayama-4.jpg)
 
 自家製の**燻製**を満喫しました。
 
-<img src="images/201809-wakayama-5.jpg" alt="" width="720" height="540" class="aligncenter size-full wp-image-8169" />
+![](images/201809-wakayama-5.jpg)
 
 ## 2日目
 
 二日目は **[橋杭岩](https://www.travel.co.jp/guide/article/9430/)** を観光したあと、
 
-<img src="images/201809-wakayama-6.jpg" alt="" width="720" height="540" class="aligncenter size-full wp-image-8158" />
+![](images/201809-wakayama-6.jpg)
 
 太地町でかつての**捕鯨船**と記念撮影しつつ、
 
-<img src="images/201809-wakayama-7.jpg" alt="" width="720" height="540" class="aligncenter size-full wp-image-8159" />
+![](images/201809-wakayama-7.jpg)
 
 **那智勝浦でまぐろと温泉**を堪能しにいきました。まぐろは [桂城](https://tabelog.com/wakayama/A3005/A300502/30000173/) さんでいただきました。
 
-<img src="images/201809-wakayama-8.jpg" alt="" width="720" height="540" class="aligncenter size-full wp-image-8160" />
+![](images/201809-wakayama-8.jpg)
 
 おなかがいっぱいになったところで、送迎船に乗り **[ホテル浦島](http://www.hotelurashima.co.jp/hotspring/)** へ。
 
 有名な洞窟温泉、**忘帰洞**にのぞみます。
 
-<img src="images/201809-wakayama-9.jpg" alt="" width="750" height="500" class="aligncenter size-full wp-image-8165" />
+![](images/201809-wakayama-9.jpg)
 ※画面はイメージです。
 
 台風の影響で一番外側には出られませんでしたが、やはり海をながめながらの温泉は気持ちよかったです。

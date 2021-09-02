@@ -15,7 +15,7 @@ tags: [その他]
 まずは撮影場所に向かうために、オフィスで集合し、心斎橋にある [スタジオリブ](https://www.studio-lib.com/) さんまで全員で移動しました。
 撮影の準備ができるまでしばらく待機。
 
-[caption id="attachment_9055" align="alignnone" width="800"]<img src="images/photo-studio-1.jpg" alt="" width="800" height="600" class="size-full wp-image-9055" /> やや緊張気味?
+![](images/photo-studio-1.jpg)
 <span style="font-size: 75%;">(ちなみに、私はスタジオでの撮影は初めてで、結構緊張していました)</span>
 [/caption]
 
@@ -24,19 +24,19 @@ tags: [その他]
 カメラマンの方に体の角度や表情などの指示を受けながら撮影をし、それぞれ良いと思った2枚を選択しました。
 私自身はカメラに映りなれてなくて、ちゃんと口角が上がっているか不安でしたが、実際に撮影されたものを見たらいい表情になっていて安心しました。
 
-[caption id="attachment_9060" align="alignnone" width="800"]<img src="images/photo-studio-2.jpg" alt="" width="800" height="600" class="size-full wp-image-9060" /> 撮影時の様子[/caption]
+![](images/photo-studio-2.jpg)
 
 ### 集合写真
 メンバー全員の個人撮影が終わったあと、集合写真を撮影しました。
 全員いい笑顔で撮影できたのではないかと思います。
 
-[caption id="attachment_9066" align="alignnone" width="800"]<img src="images/photo-studio-3.jpg" alt="" width="800" height="571" class="size-full wp-image-9066" /> MSENメンバー 集合写真[/caption]
+![](images/photo-studio-3.jpg)
 
 ## 昼食
 撮影後、写真が出来上がるまでに少し時間があったので、心斎橋にある「[アマーク・ド・パラディ｜Hamac de Paradis](https://www.hamac-de-paradis.jp/)」というビストロで昼食をとりました。
 メニューはどれも美味しそうで、何を注文するか悩ましかったです(笑)
 
-[caption id="attachment_9067" align="alignnone" width="800"]<img src="images/photo-studio-4.jpg" alt="" width="800" height="600" class="size-full wp-image-9067" /> 昼食 (コロッケランチ)[/caption]
+![](images/photo-studio-4.jpg)
 
 ちなみに、私は日替わりパスタランチのナポリタンを注文しました。
 
@@ -48,7 +48,7 @@ tags: [その他]
 写真の確認と業務を終えて、全員で「[和牛焼肉 布上](http://nunogami.jp/)」で夕食をとりました。
 美味しい焼肉とお酒とともに雑談をし、楽しい時間を過ごしました。
 
-[caption id="attachment_9070" align="alignnone" width="800"]<img src="images/photo-studio-5.jpg" alt="" width="800" height="600" class="size-full wp-image-9070" /> 夕食の様子[/caption]
+![](images/photo-studio-5.jpg)
 
 ## まとめ
 
@@ -69,4 +69,4 @@ MSENでの業務を通じて、頼られる人材に成長したいと考えて�
 ## おまけ
 撮影スタジオの待合室に、お風呂のアヒルが置いてあったので、[じんない](https://mseeeen.msen.jp/category/articles-jinnai-wrote/) さんが手に乗せて1枚パチリ。
 
-[caption id="attachment_9085" align="alignnone" width="600"]<img src="images/photo-studio-6.jpg" alt="" width="600" height="800" class="size-full wp-image-9085" /> どこかのWebページに載ってそうな1枚[/caption]
+![](images/photo-studio-6.jpg)

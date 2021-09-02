@@ -14,36 +14,36 @@ tags: [Excel, PDF, その他, ライフハック]
 文字では少し分かりにくいと思いますので、現象について確認しましょう。
 
 1. 複数シートのExcel
-<a href="images/excel-how-to-make-pdf-multiple-sheets-into-single-file-1.png"><img src="images/excel-how-to-make-pdf-multiple-sheets-into-single-file-1.png" alt="" width="893" height="758" class="aligncenter size-full wp-image-6665" /></a>
+![](images/excel-how-to-make-pdf-multiple-sheets-into-single-file-1.png)
 
 1. **ブック全体を印刷** に変更して印刷する
-<a href="images/excel-how-to-make-pdf-multiple-sheets-into-single-file-2.png"><img src="images/excel-how-to-make-pdf-multiple-sheets-into-single-file-2.png" alt="" width="736" height="1058" class="aligncenter size-full wp-image-6666" /></a>
+![](images/excel-how-to-make-pdf-multiple-sheets-into-single-file-2.png)
 
 1. 保存先が聞かれる
-<a href="images/excel-how-to-make-pdf-multiple-sheets-into-single-file-3.png"><img src="images/excel-how-to-make-pdf-multiple-sheets-into-single-file-3.png" alt="" width="1183" height="892" class="aligncenter size-full wp-image-6668" /></a>
+![](images/excel-how-to-make-pdf-multiple-sheets-into-single-file-3.png)
 
 1. PDFができた
-<a href="images/excel-how-to-make-pdf-multiple-sheets-into-single-file-4.png"><img src="images/excel-how-to-make-pdf-multiple-sheets-into-single-file-4.png" alt="" width="142" height="145" class="aligncenter size-full wp-image-6669" /></a>
+![](images/excel-how-to-make-pdf-multiple-sheets-into-single-file-4.png)
 
 1. しかし・・・すぐにまた保存先が聞かれ、「2シート目が別ファイルとして印刷される」現象が発生します
-<a href="images/excel-how-to-make-pdf-multiple-sheets-into-single-file-5.png"><img src="images/excel-how-to-make-pdf-multiple-sheets-into-single-file-5.png" alt="" width="1183" height="892" class="aligncenter size-full wp-image-6670" /></a>
+![](images/excel-how-to-make-pdf-multiple-sheets-into-single-file-5.png)
 
 ## 原因と解決
 
 ずばり原因は、**印刷品質設定がシート毎で異なっているから** です。
 
 **ページタイトル** → **印刷タイトル** から、**ページ設定** に進みます。
-<a href="images/excel-how-to-make-pdf-multiple-sheets-into-single-file-6.png"><img src="images/excel-how-to-make-pdf-multiple-sheets-into-single-file-6.png" alt="" width="1748" height="195" class="aligncenter size-full wp-image-6671" /></a>
+![](images/excel-how-to-make-pdf-multiple-sheets-into-single-file-6.png)
 
-<a href="images/excel-how-to-make-pdf-multiple-sheets-into-single-file-7.png"><img src="images/excel-how-to-make-pdf-multiple-sheets-into-single-file-7.png" alt="" width="812" height="657" class="aligncenter size-full wp-image-6674" /></a>
+![](images/excel-how-to-make-pdf-multiple-sheets-into-single-file-7.png)
 
 **印刷品質** 空欄になっています。
 もう1つのシートの設定が **600dpi** であることを事前に確認していましたので **600dpi** に設定します。
-<a href="images/excel-how-to-make-pdf-multiple-sheets-into-single-file-8.png"><img src="images/excel-how-to-make-pdf-multiple-sheets-into-single-file-8.png" alt="" width="812" height="657" class="aligncenter size-full wp-image-6688" /></a>
+![](images/excel-how-to-make-pdf-multiple-sheets-into-single-file-8.png)
 
 
 再度印刷すると・・・
-<a href="images/excel-how-to-make-pdf-multiple-sheets-into-single-file-9.png"><img src="images/excel-how-to-make-pdf-multiple-sheets-into-single-file-9.png" alt="" width="1729" height="563" class="aligncenter size-full wp-image-6675" /></a>
+![](images/excel-how-to-make-pdf-multiple-sheets-into-single-file-9.png)
 
 無事、1つのPDFファイルに2ページ印刷されました。
 

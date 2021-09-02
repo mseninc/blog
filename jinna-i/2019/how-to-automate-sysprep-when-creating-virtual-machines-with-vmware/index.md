@@ -16,17 +16,17 @@ Windows では仮想マシンテンプレートからデプロイした場合、
 ユーザーの SID はコンピューターの SID に アカウントの相対 ID (RID) を付与したもので構成されます。
 ちょうど、赤枠で囲っている部分がコンピューターの SID となります。
 
-<a href="images/how-to-automate-sysprep-when-creating-virtual-machines-with-vmware-1.png"><img src="images/how-to-automate-sysprep-when-creating-virtual-machines-with-vmware-1.png" alt="" width="978" height="510" class="alignnone size-full wp-image-10523" /></a>
+![](images/how-to-automate-sysprep-when-creating-virtual-machines-with-vmware-1.png)
 
 同じ SID であることがわかります。
 
-<a href="images/how-to-automate-sysprep-when-creating-virtual-machines-with-vmware-2.png"><img src="images/how-to-automate-sysprep-when-creating-virtual-machines-with-vmware-2.png" alt="" width="979" height="513" class="alignnone size-full wp-image-10524" /></a>
+![](images/how-to-automate-sysprep-when-creating-virtual-machines-with-vmware-2.png)
 
 本来は、テンプレートからデプロイした後に sysprep を実行することで、新たに SID を割り当てることができます。
 詳細は下記を参照。
 [Windows インストールのディスク複製に関するマイクロソフトの方針](https://support.microsoft.com/ja-jp/help/314828/the-microsoft-policy-for-disk-duplication-of-windows-installations)
 
-<a href="images/how-to-automate-sysprep-when-creating-virtual-machines-with-vmware-3.png"><img src="images/how-to-automate-sysprep-when-creating-virtual-machines-with-vmware-3.png" alt="" width="862" height="610" class="alignnone size-full wp-image-10525" /></a>
+![](images/how-to-automate-sysprep-when-creating-virtual-machines-with-vmware-3.png)
 
 しかしながら、仮想マシンをデプロイするたびに sysprep を実行するのは非常にナンセンスで何より面倒です。
 
@@ -42,39 +42,39 @@ vCenter Server を使用の環境なら、**ゲスト OS のカスタマイズ�
 
 vSpehre Client のインベントリから **仮想マシンのカスタマイズ仕様** をクリックします。
 
-<a href="images/how-to-automate-sysprep-when-creating-virtual-machines-with-vmware-4.png"><img src="images/how-to-automate-sysprep-when-creating-virtual-machines-with-vmware-4.png" alt="" width="1489" height="984" class="alignnone size-full wp-image-10530" /></a>
+![](images/how-to-automate-sysprep-when-creating-virtual-machines-with-vmware-4.png)
 
 **新規** をクリックします。
 
-<a href="images/how-to-automate-sysprep-when-creating-virtual-machines-with-vmware-5.png"><img src="images/how-to-automate-sysprep-when-creating-virtual-machines-with-vmware-5.png" alt="" width="1489" height="984" class="alignnone size-full wp-image-10531" /></a>
+![](images/how-to-automate-sysprep-when-creating-virtual-machines-with-vmware-5.png)
 
 カスタマイズ仕様に適当な名前をつけ、**新規セキュリティ ID(SID) の作成にチェックが入っていること**を確認します。あとは必要に応じてカスタマイズします。
 
-<a href="images/how-to-automate-sysprep-when-creating-virtual-machines-with-vmware-6.png"><img src="images/how-to-automate-sysprep-when-creating-virtual-machines-with-vmware-6.png" alt="" width="1489" height="984" class="alignnone size-full wp-image-10532" /></a>
+![](images/how-to-automate-sysprep-when-creating-virtual-machines-with-vmware-6.png)
 
 **1回実行するコマンド** という設定項目があり、以下のコマンドを登録しておくと便利です。このコマンドは**システムのプロパティ**と**ネットワーク接続**の画面を起動してくれるものです。どっちみちホスト名と IP アドレスを変更しないといけないので、初回ログオン時に起動してくれるようにしましょう。
 
 `C:\Windows\System32\sysdm.cpl`
 `C:\Windows\System32\ncpa.cpl`
 
-<a href="images/how-to-automate-sysprep-when-creating-virtual-machines-with-vmware-7.png"><img src="images/how-to-automate-sysprep-when-creating-virtual-machines-with-vmware-7.png" alt="" width="872" height="722" class="alignnone size-full wp-image-10534" /></a>
+![](images/how-to-automate-sysprep-when-creating-virtual-machines-with-vmware-7.png)
 
 ## カスタマイズ仕様の適用
 テンプレートからデプロイするとき、クローンオプションの選択で **オペレーティング システムのカスタマイズ** にチェックをいれます。
 
-<a href="images/how-to-automate-sysprep-when-creating-virtual-machines-with-vmware-8.png"><img src="images/how-to-automate-sysprep-when-creating-virtual-machines-with-vmware-8.png" alt="" width="921" height="749" class="alignnone size-full wp-image-10536" /></a>
+![](images/how-to-automate-sysprep-when-creating-virtual-machines-with-vmware-8.png)
 
 作成したカスタマイズ仕様を選択します。
 
-<a href="images/how-to-automate-sysprep-when-creating-virtual-machines-with-vmware-9.png"><img src="images/how-to-automate-sysprep-when-creating-virtual-machines-with-vmware-9.png" alt="" width="915" height="750" class="alignnone size-full wp-image-10537" /></a>
+![](images/how-to-automate-sysprep-when-creating-virtual-machines-with-vmware-9.png)
 
 設定の確認で、ゲスト OS のカスタマイズ仕様が適用されていることを確認します。
 
-<a href="images/how-to-automate-sysprep-when-creating-virtual-machines-with-vmware-10.png"><img src="images/how-to-automate-sysprep-when-creating-virtual-machines-with-vmware-10.png" alt="" width="902" height="743" class="alignnone size-full wp-image-10539" /></a>
+![](images/how-to-automate-sysprep-when-creating-virtual-machines-with-vmware-10.png)
 
 仮想マシンを起動し、**新しい SID が割り当てられていること**、**システムのプロパティが起動すること**、**ネットワーク接続が起動すること** を確認します。
 
-<a href="images/how-to-automate-sysprep-when-creating-virtual-machines-with-vmware-11.png"><img src="images/how-to-automate-sysprep-when-creating-virtual-machines-with-vmware-11.png" alt="" width="1557" height="1196" class="alignnone size-full wp-image-10540" /></a>
+![](images/how-to-automate-sysprep-when-creating-virtual-machines-with-vmware-11.png)
 
 あとはホスト名と IP アドレスを変更すれば OK です！
 

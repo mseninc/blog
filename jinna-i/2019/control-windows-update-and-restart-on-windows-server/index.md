@@ -32,7 +32,7 @@ Windows Server を運用していれば Windows Update (更新プログラム) �
 
 - **自動更新の構成: 3 - 自動ダウンロードしインストールを通知**
 
-<a href="images/control-windows-update-and-restart-on-windows-server-1.png"><img src="images/control-windows-update-and-restart-on-windows-server-1.png" alt="" width="686" height="635" class="alignnone size-full wp-image-10239" /></a>
+![](images/control-windows-update-and-restart-on-windows-server-1.png)
 
 このポリシーを有効にすることで、**更新プログラムは自動的にダウンロードするがインストールは任意**という状態になります。
 
@@ -47,7 +47,7 @@ Windows Server を運用していれば Windows Update (更新プログラム) �
 あとは (今回の例では) 毎月第4週目の土曜日にこのスクリプト実行すればよいです。
 
 タスクスケジューラの設定は割愛しますが、トリガーはこんな感じです。
-<a href="images/control-windows-update-and-restart-on-windows-server-2.png"><img src="images/control-windows-update-and-restart-on-windows-server-2.png" alt="" width="624" height="526" class="alignnone size-full wp-image-10246" /></a>
+![](images/control-windows-update-and-restart-on-windows-server-2.png)
 
 ## 再起動を制御する
 
@@ -55,7 +55,7 @@ Windows Server を運用していれば Windows Update (更新プログラム) �
 
 第4週目の日曜日にタスクが実行されるようにします。
 
-<a href="images/control-windows-update-and-restart-on-windows-server-3.png"><img src="images/control-windows-update-and-restart-on-windows-server-3.png" alt="" width="620" height="524" class="alignnone size-full wp-image-10250" /></a>
+![](images/control-windows-update-and-restart-on-windows-server-3.png)
 
 操作項目ではシャットダウンの exe ファイルを指定します。
 
@@ -65,17 +65,17 @@ Windows Server を運用していれば Windows Update (更新プログラム) �
   - `-t 0` : 再起動が実行されるまでの時間(0秒)
   - `-f` : 強制
 
-<a href="images/control-windows-update-and-restart-on-windows-server-4.png"><img src="images/control-windows-update-and-restart-on-windows-server-4.png" alt="" width="470" height="511" class="alignnone size-full wp-image-10249" /></a>
+![](images/control-windows-update-and-restart-on-windows-server-4.png)
 
 タスク実行時に使うユーザーアカウントは権限の問題で失敗しないよう `SYSTEM` アカウント指定します。
 
-<a href="images/control-windows-update-and-restart-on-windows-server-5.png"><img src="images/control-windows-update-and-restart-on-windows-server-5.png" alt="" width="559" height="397" class="alignnone size-full wp-image-10254" /></a>
+![](images/control-windows-update-and-restart-on-windows-server-5.png)
 
 最終的には **ダウンロードが完了した更新プログラムのインストールを実行するタスク** と **再起動を実行するタスク** の2つができていれば OK です。
 
-<a href="images/control-windows-update-and-restart-on-windows-server-6.png"><img src="images/control-windows-update-and-restart-on-windows-server-6.png" alt="" width="389" height="20" class="alignnone size-full wp-image-10259" /></a>
+![](images/control-windows-update-and-restart-on-windows-server-6.png)
 
-<a href="images/control-windows-update-and-restart-on-windows-server-7.png"><img src="images/control-windows-update-and-restart-on-windows-server-7.png" alt="" width="392" height="20" class="alignnone size-full wp-image-10260" /></a>
+![](images/control-windows-update-and-restart-on-windows-server-7.png)
 
 これで、**更新プログラムは毎月第4週目の土曜日にインストールし、毎月第4週目の日曜日に再起動する** という制御が可能になります。
 

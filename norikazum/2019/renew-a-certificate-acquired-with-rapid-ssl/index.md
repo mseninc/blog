@@ -13,34 +13,34 @@ tags: [SSL, 証明書, その他の技術]
 [SSL証明書 RapidSSL 4300円 ワイルドカード 39000円 (RapidSSL Strategic Partner)](https://www.rapid-ssl.jp/)
 
 1. **更新お申込** をクリックします。
-<a href="images/renew-a-certificate-acquired-with-rapid-ssl-1.png"><img src="images/renew-a-certificate-acquired-with-rapid-ssl-1.png" alt="" width="1440" height="1013" class="alignnone size-full wp-image-10693" /></a>
+![](images/renew-a-certificate-acquired-with-rapid-ssl-1.png)
 
 1. 最下部にスクロールし、 **お申し込みフォームへ** へ進みます。
-<a href="images/renew-a-certificate-acquired-with-rapid-ssl-2.png"><img src="images/renew-a-certificate-acquired-with-rapid-ssl-2.png" alt="" width="1440" height="1013" class="alignnone size-full wp-image-10694" /></a>
+![](images/renew-a-certificate-acquired-with-rapid-ssl-2.png)
 
 1. 以下を参考に入力します。ページ中のCSRはCSR作成ツールを利用します。
-<a href="images/renew-a-certificate-acquired-with-rapid-ssl-3.png"><img src="images/renew-a-certificate-acquired-with-rapid-ssl-3.png" alt="" width="1440" height="1013" class="alignnone size-full wp-image-10695" /></a>
+![](images/renew-a-certificate-acquired-with-rapid-ssl-3.png)
 [Rapid-SSL.jp 秘密鍵＆CSR(証明書署名要求)作成ツール2048ビット対応版](https://securitycenter.rapid-ssl.jp/tools/makePkeyCsr2048SHA2.php)
 
 1. 別ページで作成されますので、ページを閉じずに置いておきます。
-<a href="images/renew-a-certificate-acquired-with-rapid-ssl-4.png"><img src="images/renew-a-certificate-acquired-with-rapid-ssl-4.png" alt="" width="1440" height="1013" class="alignnone size-full wp-image-10697" /></a>
+![](images/renew-a-certificate-acquired-with-rapid-ssl-4.png)
 
 1. 作成したCSRを入力、各項目を入力して **作成** をクリックします。(ここまでは **手順4と同じ画面** です）
-<a href="images/renew-a-certificate-acquired-with-rapid-ssl-5.png"><img src="images/renew-a-certificate-acquired-with-rapid-ssl-5.png" alt="" width="1440" height="1013" class="alignnone size-full wp-image-10706" /></a>
+![](images/renew-a-certificate-acquired-with-rapid-ssl-5.png)
 
 1. 内容を確認し、進みます。
-<a href="images/renew-a-certificate-acquired-with-rapid-ssl-6.png"><img src="images/renew-a-certificate-acquired-with-rapid-ssl-6.png" alt="" width="1440" height="1013" class="alignnone size-full wp-image-10698" /></a>
+![](images/renew-a-certificate-acquired-with-rapid-ssl-6.png)
 
 1. 担当者情報を入力します。
 今回の紹介では、**発行承認はファイルアップロードで承認** を選択します。
-<a href="images/renew-a-certificate-acquired-with-rapid-ssl-7.png"><img src="images/renew-a-certificate-acquired-with-rapid-ssl-7.png" alt="" width="1440" height="1013" class="alignnone size-full wp-image-10703" /></a>
-<a href="images/renew-a-certificate-acquired-with-rapid-ssl-8.png"><img src="images/renew-a-certificate-acquired-with-rapid-ssl-8.png" alt="" width="1440" height="1013" class="alignnone size-full wp-image-10708" /></a>
+![](images/renew-a-certificate-acquired-with-rapid-ssl-7.png)
+![](images/renew-a-certificate-acquired-with-rapid-ssl-8.png)
 
 1. 申し込みを確定します。
-<a href="images/renew-a-certificate-acquired-with-rapid-ssl-9.png"><img src="images/renew-a-certificate-acquired-with-rapid-ssl-9.png" alt="" width="1440" height="1013" class="alignnone size-full wp-image-10709" /></a>
+![](images/renew-a-certificate-acquired-with-rapid-ssl-9.png)
 
 1. 決済情報を入力し、決済します。
-<a href="images/renew-a-certificate-acquired-with-rapid-ssl-10.png"><img src="images/renew-a-certificate-acquired-with-rapid-ssl-10.png" alt="" width="1440" height="1013" class="alignnone size-full wp-image-10704" /></a>
+![](images/renew-a-certificate-acquired-with-rapid-ssl-10.png)
 
 1. 承認のために、 **http(s)://documentroot/well-known/pki-validation/fileauth.txt** にメールで指定された文字列(PIN)を記載したファイルを配置します。配置すると、 **10分ほど** で　**「【通知】 SSL サーバ証明書発行完了のお知らせ」** というタイトルのメールが到着します。
 以下から状況を確認することもできます。

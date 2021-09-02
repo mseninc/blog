@@ -13,13 +13,13 @@ tags: [その他, 〇〇奮闘記]
 
 弊社は給与計算にfreeeを利用しておりますが、準備を進めているとfreeeでは電子申告ができる、ということで便利だしやってみようと思ったところ、電子申告には電子証明書が必要ということがわかり、取得にむけてアプローチしてみました。
 
-<img src="images/online-certificate-to-process-public-insurances-1.jpg" alt="roudouhoken01" width="897" height="103" class="alignnone size-full wp-image-733" />
+![roudouhoken01](images/online-certificate-to-process-public-insurances-1.jpg)
 
-<img src="images/online-certificate-to-process-public-insurances-2.jpg" alt="roudouhoken02" width="812" height="152" class="alignnone size-full wp-image-734" />
+![roudouhoken02](images/online-certificate-to-process-public-insurances-2.jpg)
 
 電子申告に進んでみると、・・・
 
-<img src="images/online-certificate-to-process-public-insurances-3.jpg" alt="roudouhoken03" width="653" height="119" class="alignnone size-full wp-image-735" />
+![roudouhoken03](images/online-certificate-to-process-public-insurances-3.jpg)
 
 電子証明が必要だとエラーが出ました。
 
@@ -38,6 +38,6 @@ tags: [その他, 〇〇奮闘記]
 
 **有料**か・・・取得だけに費用が発生するなら仕方ないなと思うけど、期間で費用が発生するのか・・・。
 
-<img src="images/online-certificate-to-process-public-insurances-4.png" alt="roudouhoken04" width="715" height="66" class="alignnone size-full wp-image-1002" />
+![roudouhoken04](images/online-certificate-to-process-public-insurances-4.png)
 
 現状では電子申告している業務が少ないため、今回は諦めました。足を使って労働局に払い込みに行こうと思います！

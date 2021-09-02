@@ -62,29 +62,29 @@ ls $dest_path | ? {$_.LastWriteTime -lt (Get-Date).AddDays(-14)} | rm
 
 ## タスクスケジューラーの設定
 * 基本タスクの作成へ進み、以下の流れで設定します
-    <a href="images/how-to-get-db-dump-regularly-on-windows-version-postgresql-and-restore-dump-1.png"><img src="images/how-to-get-db-dump-regularly-on-windows-version-postgresql-and-restore-dump-1.png" alt="" width="705" height="496" class="alignnone size-full wp-image-9241" /></a>
+![](images/how-to-get-db-dump-regularly-on-windows-version-postgresql-and-restore-dump-1.png)
 
-    <a href="images/how-to-get-db-dump-regularly-on-windows-version-postgresql-and-restore-dump-2.png"><img src="images/how-to-get-db-dump-regularly-on-windows-version-postgresql-and-restore-dump-2.png" alt="" width="709" height="494" class="alignnone size-full wp-image-9242" /></a>
+![](images/how-to-get-db-dump-regularly-on-windows-version-postgresql-and-restore-dump-2.png)
 
-    <a href="images/how-to-get-db-dump-regularly-on-windows-version-postgresql-and-restore-dump-3.png"><img src="images/how-to-get-db-dump-regularly-on-windows-version-postgresql-and-restore-dump-3.png" alt="" width="705" height="493" class="alignnone size-full wp-image-9243" /></a>
+![](images/how-to-get-db-dump-regularly-on-windows-version-postgresql-and-restore-dump-3.png)
 
-    <a href="images/how-to-get-db-dump-regularly-on-windows-version-postgresql-and-restore-dump-4.png"><img src="images/how-to-get-db-dump-regularly-on-windows-version-postgresql-and-restore-dump-4.png" alt="" width="706" height="490" class="alignnone size-full wp-image-9244" /></a>
+![](images/how-to-get-db-dump-regularly-on-windows-version-postgresql-and-restore-dump-4.png)
     * プログラム/スクリプト `%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe`
     * 引数の追加(オプション) `-ExecutionPolicy RemoteSigned -File ".\dbbackup.ps1"`
     * 開始 `C:\`
 
-    <a href="images/how-to-get-db-dump-regularly-on-windows-version-postgresql-and-restore-dump-5.png"><img src="images/how-to-get-db-dump-regularly-on-windows-version-postgresql-and-restore-dump-5.png" alt="" width="709" height="494" class="alignnone size-full wp-image-9245" /></a>
+![](images/how-to-get-db-dump-regularly-on-windows-version-postgresql-and-restore-dump-5.png)
 
-    <a href="images/how-to-get-db-dump-regularly-on-windows-version-postgresql-and-restore-dump-6.png"><img src="images/how-to-get-db-dump-regularly-on-windows-version-postgresql-and-restore-dump-6.png" alt="" width="558" height="395" class="alignnone size-full wp-image-9246" /></a>
+![](images/how-to-get-db-dump-regularly-on-windows-version-postgresql-and-restore-dump-6.png)
 
 * 設定を完了し、タスク実行ユーザーで認証します
-    <a href="images/how-to-get-db-dump-regularly-on-windows-version-postgresql-and-restore-dump-7.png"><img src="images/how-to-get-db-dump-regularly-on-windows-version-postgresql-and-restore-dump-7.png" alt="" width="387" height="298" class="alignnone size-full wp-image-9247" /></a>
+![](images/how-to-get-db-dump-regularly-on-windows-version-postgresql-and-restore-dump-7.png)
 
 * テスト的に手動でタスクを実行します
-    <a href="images/how-to-get-db-dump-regularly-on-windows-version-postgresql-and-restore-dump-8.png"><img src="images/how-to-get-db-dump-regularly-on-windows-version-postgresql-and-restore-dump-8.png" alt="" width="273" height="159" class="alignnone size-full wp-image-9248" /></a>
+![](images/how-to-get-db-dump-regularly-on-windows-version-postgresql-and-restore-dump-8.png)
 
 * 正常に取得できていることが確認できます
-    <a href="images/how-to-get-db-dump-regularly-on-windows-version-postgresql-and-restore-dump-9.png"><img src="images/how-to-get-db-dump-regularly-on-windows-version-postgresql-and-restore-dump-9.png" alt="" width="796" height="142" class="alignnone size-full wp-image-9249" /></a>
+![](images/how-to-get-db-dump-regularly-on-windows-version-postgresql-and-restore-dump-9.png)
 
 ## リストア方法
 
@@ -96,9 +96,9 @@ ls $dest_path | ? {$_.LastWriteTime -lt (Get-Date).AddDays(-14)} | rm
 
 1. **pgAdmin 4** を開き、データベースに接続します
 1. Databeseを右クリックし削除します
-<a href="images/how-to-get-db-dump-regularly-on-windows-version-postgresql-and-restore-dump-10.png"><img src="images/how-to-get-db-dump-regularly-on-windows-version-postgresql-and-restore-dump-10.png" alt="" width="465" height="485" class="alignnone size-full wp-image-10145" /></a>
+![](images/how-to-get-db-dump-regularly-on-windows-version-postgresql-and-restore-dump-10.png)
 ↓
-<a href="images/how-to-get-db-dump-regularly-on-windows-version-postgresql-and-restore-dump-11.png"><img src="images/how-to-get-db-dump-regularly-on-windows-version-postgresql-and-restore-dump-11.png" alt="" width="603" height="134" class="alignnone size-full wp-image-10321" /></a>
+![](images/how-to-get-db-dump-regularly-on-windows-version-postgresql-and-restore-dump-11.png)
 1. 同じ環境のDBを再度作成します
 
 以上で再生成は完了です。

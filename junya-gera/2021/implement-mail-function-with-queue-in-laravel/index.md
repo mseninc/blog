@@ -149,7 +149,7 @@ sail artisan migrate
 
 これで MySQL に `jobs` テーブルが作成されたはずなので確認してみます。ルートディレクトリで `docker-compose exec mysql mysql -uroot example_app` を実行し、 `example_app` というデータベースに入ったら、 `show tables;` でテーブルを見てみましょう。
 
-<img src="images/implement-mail-function-with-queue-in-laravel-1.png" alt="" width="246" height="195" class="alignnone size-full wp-image-16108" />
+![](images/implement-mail-function-with-queue-in-laravel-1.png)
 
 無事に作成できていました。
 
@@ -169,7 +169,7 @@ localhost/api/contact
 
 画面上は何も起こりませんが、これでメール送信ジョブが `jobs` テーブルに格納されたはずです。MySQL で `SELECT * FROM jobs;` で中身を確認できますが、`payload` カラムの値がごちゃごちゃしていて見づらいので、`SELECT id,queue FROM jobs;` を実行してレコードがあるかどうかだけ確認します。
 
-<img src="images/implement-mail-function-with-queue-in-laravel-2.png" alt="" width="334" height="185" class="alignnone size-full wp-image-16276" />
+![](images/implement-mail-function-with-queue-in-laravel-2.png)
 
 このようにメール送信ジョブがレコードとして格納されています。
 
@@ -191,7 +191,7 @@ sail artisan queue:work
 
 `http://localhost:8025/` にアクセスすると MailHog が開きます。以下のようにメールが送信されていました！
 
-<img src="images/implement-mail-function-with-queue-in-laravel-3.png" alt="" width="876" height="432" class="alignnone size-full wp-image-16277" />
+![](images/implement-mail-function-with-queue-in-laravel-3.png)
 
 ## 感想
 

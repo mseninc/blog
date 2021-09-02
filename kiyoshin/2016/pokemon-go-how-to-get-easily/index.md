@@ -15,7 +15,7 @@ tags: [ポケモンGO, その他, ライフハック]
 
 ポケモンGOは現実世界とのリンクを重要にしているので、ARモードと呼ばれる現実世界の風景の中で、ポケモンをゲットする事ができます。
 
-<img src="images/pokemon-go-how-to-get-easily-1.jpg" alt="pokemongo10">
+![pokemongo10](images/pokemon-go-how-to-get-easily-1.jpg)
 
 しかし、この機能はポケモンにモンスターボールを当てる事への難易度をかなり上げてしまいます。
 
@@ -27,7 +27,7 @@ tags: [ポケモンGO, その他, ライフハック]
 
 なので、少し味気なくなりますが、ARモードをオフにします。
 
-<img src="images/pokemon-go-how-to-get-easily-2.jpg" alt="pokemongo11">
+![pokemongo11](images/pokemon-go-how-to-get-easily-2.jpg)
 
 画面右上のARボタンをタップするとオフにできます。
 
@@ -43,7 +43,7 @@ ARモードオフの最大の利点は、**ポケモンを画面中央に固定�
 
 操作は簡単で、モンスターボールを投げる時に、**左画面端にそって少し勢いをつけて真上に投げる**というものです。
 
-<img src="images/pokemon-go-how-to-get-easily-3.jpg" alt="pokemongo12">
+![pokemongo12](images/pokemon-go-how-to-get-easily-3.jpg)
 
 こうする事によって、左端から真上に投げているのに、**自動的にポケモンに向かってカーブがかかり**、当たります。
 

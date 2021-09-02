@@ -31,7 +31,7 @@ Node.js でもいいんですが、ブラウザー上のほうが非開発者に
 
 **Pull Request の Files changed** からそのブランチで変更されたファイルの一覧が見えるので、これを使いましょう。
 
-<a href="images/extract-diff-file-names-from-github-pull-request-1.png"><img src="images/extract-diff-file-names-from-github-pull-request-1.png" alt="GitHub Pull Request" width="1054" height="496" class="aligncenter size-full wp-image-9228" /></a>
+![GitHub Pull Request](images/extract-diff-file-names-from-github-pull-request-1.png)
 
 この赤枠で囲った部分がファイル名で、この部分の HTML タグは下記のようになっています。
 
@@ -52,7 +52,7 @@ CSS クエリーでいえば **`.file-info > a`** にファイル名が格納さ
 
 Enter を押してやると、**ファイル名の一覧を配列で取得できます**。
 
-<a href="images/extract-diff-file-names-from-github-pull-request-2.png"><img src="images/extract-diff-file-names-from-github-pull-request-2.png" alt="Chrome 開発者ツール" width="1054" height="406" class="aligncenter size-full wp-image-9229" /></a>
+![Chrome 開発者ツール](images/extract-diff-file-names-from-github-pull-request-2.png)
 
 説明する必要もないぐらいですが、下記のような処理の流れです。
 

@@ -11,7 +11,7 @@ tags: [ThinkPad, その他, ライフハック]
 
 Windows では稀にあることで、まぁ再起動すれば直るだろうと思っていたのですが、なんだか見慣れない画面が・・・
 
-<a href="images/thinkpad-x1-carbon-5th-does-not-boot-with-os-error-due-to-detection-error-on-storage-device-1.jpg"><img src="images/thinkpad-x1-carbon-5th-does-not-boot-with-os-error-due-to-detection-error-on-storage-device-1.jpg" alt="" width="931" height="534" class="alignnone size-full wp-image-10834" /></a>
+![](images/thinkpad-x1-carbon-5th-does-not-boot-with-os-error-due-to-detection-error-on-storage-device-1.jpg)
 
 > 2100: Detection error on Storage Device (M.2)
 > Press Esc to continue.
@@ -33,15 +33,15 @@ SSD が逝ってしまったのかなぁとあれこれ Web で調べている�
 
 **分解はメーカーの保障対象外のとなるだけでなく、危険を伴いますので自己責任でお願いします。**
 
-<a href="images/thinkpad-x1-carbon-5th-does-not-boot-with-os-error-due-to-detection-error-on-storage-device-2.png"><img src="images/thinkpad-x1-carbon-5th-does-not-boot-with-os-error-due-to-detection-error-on-storage-device-2.png" alt="" width="934" height="703" class="alignnone size-full wp-image-10840" /></a>
+![](images/thinkpad-x1-carbon-5th-does-not-boot-with-os-error-due-to-detection-error-on-storage-device-2.png)
 
 ディスクは簡単にアクセスできる位置にありました。下側についているネジ1本で止まっているので、そのネジを外していきます。
 
-<a href="images/thinkpad-x1-carbon-5th-does-not-boot-with-os-error-due-to-detection-error-on-storage-device-3.png"><img src="images/thinkpad-x1-carbon-5th-does-not-boot-with-os-error-due-to-detection-error-on-storage-device-3.png" alt="" width="1496" height="1113" class="alignnone size-full wp-image-10856" /></a>
+![](images/thinkpad-x1-carbon-5th-does-not-boot-with-os-error-due-to-detection-error-on-storage-device-3.png)
 
 ネジを外したあと、少し持ち上げながら手前に引くと取り外すことができます。
 
-<a href="images/thinkpad-x1-carbon-5th-does-not-boot-with-os-error-due-to-detection-error-on-storage-device-4.jpg"><img src="images/thinkpad-x1-carbon-5th-does-not-boot-with-os-error-due-to-detection-error-on-storage-device-4.jpg" alt="" width="769" height="363" class="alignnone size-full wp-image-10841" /></a>
+![](images/thinkpad-x1-carbon-5th-does-not-boot-with-os-error-due-to-detection-error-on-storage-device-4.jpg)
 
 この SSD は M.2 タイプなので、メモリのように薄っぺらいです。
 
@@ -55,11 +55,11 @@ SSD が逝ってしまったのかなぁとあれこれ Web で調べている�
 
 これで起動しなかったらどうしようと心配しましたが、無事に Windows が起動してくれました。
 
-<a href="images/thinkpad-x1-carbon-5th-does-not-boot-with-os-error-due-to-detection-error-on-storage-device-5.png"><img src="images/thinkpad-x1-carbon-5th-does-not-boot-with-os-error-due-to-detection-error-on-storage-device-5.png" alt="" width="902" height="599" class="alignnone size-full wp-image-10843" /></a>
+![](images/thinkpad-x1-carbon-5th-does-not-boot-with-os-error-due-to-detection-error-on-storage-device-5.png)
 
 念のため Crystal Disk Info でステータスを確認しましたが、正常となっていました。
 
-<a href="images/thinkpad-x1-carbon-5th-does-not-boot-with-os-error-due-to-detection-error-on-storage-device-6.png"><img src="images/thinkpad-x1-carbon-5th-does-not-boot-with-os-error-due-to-detection-error-on-storage-device-6.png" alt="" width="674" height="718" class="alignnone size-full wp-image-10845" /></a>
+![](images/thinkpad-x1-carbon-5th-does-not-boot-with-os-error-due-to-detection-error-on-storage-device-6.png)
 
 ひとまず様子を見ようと思います。
 

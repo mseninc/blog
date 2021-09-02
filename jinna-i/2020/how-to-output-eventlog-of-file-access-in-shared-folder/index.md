@@ -44,7 +44,7 @@ tags: [Windows Server, セキュリティ, Windows]
 
 デフォルトでは "ファイル システム" と "ハンドル操作" のポリシーは **`監査なし`** に設定されています。
 
-<a href="images/how-to-output-eventlog-of-file-access-in-shared-folder-1.png"><img src="images/how-to-output-eventlog-of-file-access-in-shared-folder-1.png" alt="" width="619" height="242" class="alignnone size-full wp-image-12904" /></a>
+![](images/how-to-output-eventlog-of-file-access-in-shared-folder-1.png)
 
 監査を有効化するために下記の2つのコマンドを実行します。
 
@@ -53,7 +53,7 @@ tags: [Windows Server, セキュリティ, Windows]
 
 再度ポリシーを確認すると "ファイル システム" と "ハンドル操作" のポリシーは **`成功および失敗`** に変更されていることがわかります。
 
-<a href="images/how-to-output-eventlog-of-file-access-in-shared-folder-2.png"><img src="images/how-to-output-eventlog-of-file-access-in-shared-folder-2.png" alt="" width="616" height="245" class="alignnone size-full wp-image-12906" /></a>
+![](images/how-to-output-eventlog-of-file-access-in-shared-folder-2.png)
 
 
 ## システムアクセス制御リスト (SACL) の作成
@@ -64,30 +64,30 @@ tags: [Windows Server, セキュリティ, Windows]
 
 フォルダーのプロパティから [セキュリティ] タブを参照し、[詳細設定] をクリックします。
 
-<a href="images/how-to-output-eventlog-of-file-access-in-shared-folder-3.png"><img src="images/how-to-output-eventlog-of-file-access-in-shared-folder-3.png" alt="" width="429" height="600" class="alignnone size-full wp-image-12908" /></a>
+![](images/how-to-output-eventlog-of-file-access-in-shared-folder-3.png)
 
 [監査] タブから [追加] をクリックします。
 
-<a href="images/how-to-output-eventlog-of-file-access-in-shared-folder-4.png"><img src="images/how-to-output-eventlog-of-file-access-in-shared-folder-4.png" alt="" width="895" height="596" class="alignnone size-full wp-image-12910" /></a>
+![](images/how-to-output-eventlog-of-file-access-in-shared-folder-4.png)
 
 プリンシパルを選択します。
 
-<a href="images/how-to-output-eventlog-of-file-access-in-shared-folder-5.png"><img src="images/how-to-output-eventlog-of-file-access-in-shared-folder-5.png" alt="" width="411" height="165" class="alignnone size-full wp-image-12911" /></a>
+![](images/how-to-output-eventlog-of-file-access-in-shared-folder-5.png)
 
 監査対象のユーザーやセキュリティグループを指定します。今回は Everyone を対象としました。
 ※ Everyone とすることで Administrator も監査対象となります。
 
-<a href="images/how-to-output-eventlog-of-file-access-in-shared-folder-6.png"><img src="images/how-to-output-eventlog-of-file-access-in-shared-folder-6.png" alt="" width="546" height="284" class="alignnone size-full wp-image-12912" /></a>
+![](images/how-to-output-eventlog-of-file-access-in-shared-folder-6.png)
 
 種類は "成功" を指定し、[高度なアクセス許可を表示] をクリックします。
 
-<a href="images/how-to-output-eventlog-of-file-access-in-shared-folder-7.png"><img src="images/how-to-output-eventlog-of-file-access-in-shared-folder-7.png" alt="" width="1062" height="395" class="alignnone size-full wp-image-12913" /></a>
+![](images/how-to-output-eventlog-of-file-access-in-shared-folder-7.png)
 
 記録したい監査項目を選択します。ここは**読み取り系や書き込み系など監査したい系統に応じてチューニングが必要**となる部分です。
 今回はすべての監査を有効化しています。出力されるログが大量になるので注意が必要です。
 `このコンテナー内のオブジェクトまたはコンテナーのみにこれらの監査設定を適用する` にチェックを入れると、直下のフォルダやファイルのみに監査設定が適用されます。下位フォルダーへ継承したい場合はこのチェックは入れないことをお勧めします。
 
-<a href="images/how-to-output-eventlog-of-file-access-in-shared-folder-8.png"><img src="images/how-to-output-eventlog-of-file-access-in-shared-folder-8.png" alt="" width="1060" height="517" class="alignnone size-full wp-image-12914" /></a>
+![](images/how-to-output-eventlog-of-file-access-in-shared-folder-8.png)
 
 他にも監査対象の共有フォルダーがある場合は、これらの操作を繰り返してください。
 
@@ -98,7 +98,7 @@ tags: [Windows Server, セキュリティ, Windows]
 イベントログ (Security) のプロパティから "最大ログサイズ" や "イベントログサイズが最大値に達したとき" の動作を設定します。
 ※ 環境に応じて設定を変更してください。
 
-<a href="images/how-to-output-eventlog-of-file-access-in-shared-folder-9.png"><img src="images/how-to-output-eventlog-of-file-access-in-shared-folder-9.png" alt="" width="633" height="571" class="alignnone size-full wp-image-12917" /></a>
+![](images/how-to-output-eventlog-of-file-access-in-shared-folder-9.png)
 
 生ログはサイズも大きいので、下記の記事を参考に圧縮しておくことをおすすめします。
 
@@ -114,7 +114,7 @@ tags: [Windows Server, セキュリティ, Windows]
 
 セキュリティログにファイルオープンを示す `イベント4656` が記録されました。必要な情報が記載されていることが分かります。
 
-<a href="images/how-to-output-eventlog-of-file-access-in-shared-folder-10.png"><img src="images/how-to-output-eventlog-of-file-access-in-shared-folder-10.png" alt="" width="627" height="573" class="alignnone size-full wp-image-12919" /></a>
+![](images/how-to-output-eventlog-of-file-access-in-shared-folder-10.png)
 
 続いて下記の動作を行います。
 
@@ -123,6 +123,6 @@ tags: [Windows Server, セキュリティ, Windows]
 セキュリティログにファイルアクセス(Read/Write/削除など)を示す `イベント4656` が記録されました。
 先ほどの情報に加えアクセス情報に `WriteData(または AddFile)` が記録されていることが分かります。
 
-<a href="images/how-to-output-eventlog-of-file-access-in-shared-folder-11.png"><img src="images/how-to-output-eventlog-of-file-access-in-shared-folder-11.png" alt="" width="554" height="608" class="alignnone size-full wp-image-12921" /></a>
+![](images/how-to-output-eventlog-of-file-access-in-shared-folder-11.png)
 
 完全に操作ログを解析するのは大変な作業になりますが、**「誰が」「いつ」「どのファイルにアクセスしたのか」** の情報はこれらのログで確認することが可能です。

@@ -25,28 +25,28 @@ tags: [情報セキュリティマネジメントシステム (ISMS), その他,
 
 電子化可能な文書は GitHub の Wiki を活用するようにしました。
 
-<a href="images/completed-isms-recertification-audit-1.png"><img src="images/completed-isms-recertification-audit-1.png" alt="" width="1359" height="1047" class="alignnone size-full wp-image-8967" /></a>
+![](images/completed-isms-recertification-audit-1.png)
 
 markdownで記述することで、変更点が容易に判断でき改訂管理がとても楽になりました。
 
-<a href="images/completed-isms-recertification-audit-2.png"><img src="images/completed-isms-recertification-audit-2.png" alt="" width="1359" height="1060" class="alignnone size-full wp-image-8969" /></a>
+![](images/completed-isms-recertification-audit-2.png)
 
 情報セキュリティ委員会や監査の記録、課題などは Issues で管理し、それぞれにラベリングを行っています。Milestones で年度を登録しておけば、その年度の活動が一覧化できます。
 
-<a href="images/completed-isms-recertification-audit-3.png"><img src="images/completed-isms-recertification-audit-3.png" alt="" width="1359" height="1047" class="alignnone size-full wp-image-8971" /></a>
+![](images/completed-isms-recertification-audit-3.png)
 
 文書を電子化するのは結構大変でしたが、みんなで手分けしてやりました。期待以上に便利さを感じており、やってよかったなぁと実感しています。
 
 
 ### MAMORIO の導入
 
-<a href="images/completed-isms-recertification-audit-4.jpg"><img src="images/completed-isms-recertification-audit-4.jpg" alt="" width="912" height="684" class="alignnone size-full wp-image-8974" /></a>
+![](images/completed-isms-recertification-audit-4.jpg)
 
 業務で使う PC はもっぱらノートパソコンですが、その紛失防止と紛失時のトラッキングができるよう [MAMORIO](https://mamorio.jp/) を装着しました。
 
 スマホとペアリングしておけば、このようにトラッキングが可能です。紛失しないのが一番ですが、万が一の際にあるのとないのとでは大違いです。**今回の審査でも "Good Point!" をいただきました**。
 
-<a href="images/completed-isms-recertification-audit-5.jpg"><img src="images/completed-isms-recertification-audit-5.jpg" alt="" width="304" height="630" class="alignnone size-full wp-image-8976" /></a>
+![](images/completed-isms-recertification-audit-5.jpg)
 
 
 
@@ -60,7 +60,7 @@ markdownで記述することで、変更点が容易に判断でき改訂管理
 詳細は以下の記事を参照してください。
 [2018年 社内向け災害対策用品を整備しました (物品リストあり)](https://mseeeen.msen.jp/emergency-packing/)
 
-<a href="images/completed-isms-recertification-audit-6.jpg"><img src="images/completed-isms-recertification-audit-6.jpg" alt="災害対策用品" width="600" height="800" class="alignnone size-full wp-image-8448" /></a>
+![災害対策用品](images/completed-isms-recertification-audit-6.jpg)
 
 
 ## 来年度への意気込み

@@ -30,7 +30,7 @@ public class HogehogeController : ControllerBase
 
 これにより、実行時は自動的に `HostingEnvironment` がインジェクションされます。
 
-<img src="images/asp-net-core-get-root-paths-in-controllers-1.png" alt="実行時にインジェクションされた HostingEnvironment" width="510" height="181" class="aligncenter size-full wp-image-8358" />
+![実行時にインジェクションされた HostingEnvironment](images/asp-net-core-get-root-paths-in-controllers-1.png)
 
 この `IHostingEnvironment.WebRootPath` や `IHostingEnvironment.ContentRootPath` を使うことでパスが取得できます。
 

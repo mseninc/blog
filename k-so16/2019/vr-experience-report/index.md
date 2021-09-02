@@ -44,15 +44,15 @@ tags: [VR, その他]
 
 コントローラーは 左手用と右手用があり、ボタンもいくつか付いています。当然、ボタンを押せば操作が効くのですが、 **ボタンに触れているかを検知** するセンサもついているようです。 Oculus のホーム画面では、コントローラーを VR 越しに見ると自分の手として見えるのですが、各ボタンに触れているか否かで、指を曲げているか伸ばしているかが変わります。実際の手の動きと同じように動くのがすごいと感心していました。
 
-[caption id="attachment_11328" align="alignnone" width="600"]<img src="images/vr-experience-report-1.jpeg" alt="" width="600" height="800" class="size-full wp-image-11328" /> ボタンに触れている指のみ曲がる (画像は笑うセールスマンのマネ)[/caption]
+![](images/vr-experience-report-1.jpeg)
 
-[caption id="attachment_11470" align="alignnone" width="600"]<img src="images/vr-experience-report-2.jpg" alt="" width="600" height="800" class="size-full wp-image-11470" /> コントローラーのボタンに触れているかが VR にリンクしている[/caption]
+![](images/vr-experience-report-2.jpg)
 
-[caption id="attachment_11471" align="alignnone" width="800"]<img src="images/vr-experience-report-3.jpg" alt="" width="800" height="600" class="size-full wp-image-11471" /> 別角度から撮影[/caption]
+![](images/vr-experience-report-3.jpg)
 
 VR の中で指を曲げることができるので、当然、 **仮想空間の中のオブジェクトを掴むこともできます。** 私の場合、操作の感覚が自身の体に馴染むまでに少し時間がかかりましたが、比較的直感的に操作できると思います。
 
-[caption id="attachment_11472" align="alignnone" width="800"]<img src="images/vr-experience-report-4.jpeg" alt="" width="800" height="800" class="size-full wp-image-11472" /> VR の中の物を掴んでいる様子[/caption]
+![](images/vr-experience-report-4.jpeg)
 
 ## 所感
 実際に自分が仮想空間に入り込んでいる感覚なので、 **シミュレーション** で非常に役立つのではないかと感じました。例えば、自動車教習に運転シミュレーションがありますが、 VR を用いることで実際に車の中で運転をしているような感覚が得られそうです。

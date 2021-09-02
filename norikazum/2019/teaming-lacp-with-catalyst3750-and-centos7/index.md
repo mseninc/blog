@@ -10,13 +10,13 @@ tags: [CentOS, Linux, Cisco, Catalyst, チーミング, LACP]
 今回は、古いCatalyst(Version 12.1(14r)) と CentOS7 を使ってLACPでチーミングしてみたので紹介します。
 
 接続イメージはこのような感じです。
-<a href="images/teaming-lacp-with-catalyst3750-and-centos7-1.png"><img src="images/teaming-lacp-with-catalyst3750-and-centos7-1.png" alt="" width="1032" height="464" class="alignnone size-full wp-image-11671" /></a>
+![](images/teaming-lacp-with-catalyst3750-and-centos7-1.png)
 
 スイッチ側は `channel-group1` CentOS7側は `bond0` というチーミングインターフェースを構築します。
-<a href="images/teaming-lacp-with-catalyst3750-and-centos7-2.png"><img src="images/teaming-lacp-with-catalyst3750-and-centos7-2.png" alt="" width="1032" height="463" class="alignnone size-full wp-image-11672" /></a>
+![](images/teaming-lacp-with-catalyst3750-and-centos7-2.png)
 
 論理的には以下のような形となります。
-<a href="images/teaming-lacp-with-catalyst3750-and-centos7-3.png"><img src="images/teaming-lacp-with-catalyst3750-and-centos7-3.png" alt="" width="629" height="420" class="alignnone size-full wp-image-11673" /></a>
+![](images/teaming-lacp-with-catalyst3750-and-centos7-3.png)
 
 ## Catalyst側の設定
 
@@ -65,12 +65,12 @@ interface GigabitEthernet1/0/22
 Catalyst側の準備ができたので、次はCentOS7の準備を進めます。
 
 以下のように接続されている状態です。
-<a href="images/teaming-lacp-with-catalyst3750-and-centos7-4.jpg"><img src="images/teaming-lacp-with-catalyst3750-and-centos7-4.jpg" alt="" width="1210" height="907" class="alignnone size-full wp-image-11675" /></a>
+![](images/teaming-lacp-with-catalyst3750-and-centos7-4.jpg)
 
 今回は、 **nmcli (NetworkManager)を使って設定** します
 
 まず、認識している2ポートのインターフェース名を `ip a` コマンドで確認します。
-<a href="images/teaming-lacp-with-catalyst3750-and-centos7-5.jpg"><img src="images/teaming-lacp-with-catalyst3750-and-centos7-5.jpg" alt="" width="1613" height="1210" class="alignnone size-full wp-image-11545" /></a>
+![](images/teaming-lacp-with-catalyst3750-and-centos7-5.jpg)
 
 `enp0s25` と `enp0s26u1u2` と確認できました。
 これが **チーミングする2つのポート** となります。

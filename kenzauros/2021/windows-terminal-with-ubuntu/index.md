@@ -29,7 +29,7 @@ WSL2 と Ubuntu をインストールします。 Ubuntu が不要な方はこ�
 
 続いて、Windows の仮想化機能を有効にします。管理者として PowerShell を開き、以下を実行します。
 
-<a href="images/windows-terminal-with-ubuntu-1.png"><img src="images/windows-terminal-with-ubuntu-1.png" alt="" width="292" height="311" class="aligncenter size-full wp-image-15725" /></a>
+![](images/windows-terminal-with-ubuntu-1.png)
 
 ```
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
@@ -61,17 +61,17 @@ wsl --set-default-version 2
 
 とりあえずインストールできたら下記のようになりますので [起動] しましょう。
 
-<a href="images/windows-terminal-with-ubuntu-2.png"><img src="images/windows-terminal-with-ubuntu-2.png" alt="" width="1200" height="516" class="aligncenter size-full wp-image-15707" /></a>
+![](images/windows-terminal-with-ubuntu-2.png)
 
 起動すると Ubuntu のターミナルっぽい画面に "Installing, this may take a few minutes..." と表示されます。とはいえ、このインストールは一瞬で終わりました。
 
 **Ubuntu 用のユーザー名とパスワードを設定**します。
 
-<a href="images/windows-terminal-with-ubuntu-3.png"><img src="images/windows-terminal-with-ubuntu-3.png" alt="" width="979" height="512" class="aligncenter size-full wp-image-15708" /></a>
+![](images/windows-terminal-with-ubuntu-3.png)
 
 ユーザー名とパスワードが設定できれば Ubuntu が利用可能になります。
 
-<a href="images/windows-terminal-with-ubuntu-4.png"><img src="images/windows-terminal-with-ubuntu-4.png" alt="" width="979" height="512" class="aligncenter size-full wp-image-15709" /></a>
+![](images/windows-terminal-with-ubuntu-4.png)
 
 ## Windows ターミナルのインストールと設定
 
@@ -93,27 +93,27 @@ wsl --set-default-version 2
 
 タブ横の下向き矢印をクリックするとシェルの一覧が表示されます。
 
-<a href="images/windows-terminal-with-ubuntu-5.png"><img src="images/windows-terminal-with-ubuntu-5.png" alt="" width="869" height="375" class="aligncenter size-full wp-image-15711" /></a>
+![](images/windows-terminal-with-ubuntu-5.png)
 
 選択すると新しいタブが開き、そのシェルが起動します。ちなみに **Alt キーを押しながら選択すると画面を分割**できます。
 
-<a href="images/windows-terminal-with-ubuntu-6.png"><img src="images/windows-terminal-with-ubuntu-6.png" alt="" width="869" height="375" class="aligncenter size-full wp-image-15712" /></a>
+![](images/windows-terminal-with-ubuntu-6.png)
 
 **今のシェルを分割する場合は [Alt] + [Shift] + [;](+) キー（垂直方向）または [Alt] + [Shift] + [-] キー（水平方向）**を押します。[Alt] + [Shift] + [D] で現在のシェルを長辺方向に分割して複製します。
 
 なお、どんどん分割していくと下図のように分割されます。もはやカオスです。残念ながら、今のところ分割したペインの入れ替えはできないようですが、サイズ調整は **[Alt] + [Shift] + 方向キー** で可能です。
 
-<a href="images/windows-terminal-with-ubuntu-7.png"><img src="images/windows-terminal-with-ubuntu-7.png" alt="" width="887" height="470" class="aligncenter size-full wp-image-15716" /></a>
+![](images/windows-terminal-with-ubuntu-7.png)
 
 分割されたシェルを閉じるときは、`exit` してやれば、その分割部分は消えてくれます。
 
 なお、エクスプローラーの右クリックメニューにも **"Open in Windows Terminal" が追加されているはずなのでこれを選択することで、そのフォルダを起点としたターミナルを開く**ことができます。
 
-<a href="images/windows-terminal-with-ubuntu-8.png"><img src="images/windows-terminal-with-ubuntu-8.png" alt="" width="1287" height="617" class="aligncenter size-full wp-image-15718" /></a>
+![](images/windows-terminal-with-ubuntu-8.png)
 
 ただ、これで開いたあと別のシェルを開いてもカレントディレクトリが引き継がれないので若干不便です...
 
-<a href="images/windows-terminal-with-ubuntu-9.png"><img src="images/windows-terminal-with-ubuntu-9.png" alt="" width="1113" height="318" class="aligncenter size-full wp-image-15721" /></a>
+![](images/windows-terminal-with-ubuntu-9.png)
 
 一応開始ディレクトリは設定できるようですが、「引き継ぐ」ということができないようです。
 
@@ -129,7 +129,7 @@ wsl --set-default-version 2
 
 ちなみに **Windows ターミナルの設定**はユーザープロファイルの奥深くにある **`settings.json` に記述されていて、さきほどの下向き矢印から [設定] で開く**ことができます。
 
-<a href="images/windows-terminal-with-ubuntu-10.png"><img src="images/windows-terminal-with-ubuntu-10.png" alt="" width="271" height="241" class="aligncenter size-full wp-image-15715" /></a>
+![](images/windows-terminal-with-ubuntu-10.png)
 
 選択すると json ファイルが関連付けられているテキストエディターで `settings.json` が開きます。
 
@@ -247,7 +247,7 @@ GUID はあとで説明する `defaultProfile` に設定するために使用し
 
 Docker Desktop のダッシュボードから設定を開きます。
 
-<a href="images/windows-terminal-with-ubuntu-11.png"><img src="images/windows-terminal-with-ubuntu-11.png" alt="" width="1250" height="720" class="aligncenter size-full wp-image-15727" /></a>
+![](images/windows-terminal-with-ubuntu-11.png)
 
 "Use the WSL 2 based engine" にチェックを入れ、 [Apply & Restart] します。
 
@@ -255,10 +255,10 @@ Docker Desktop のダッシュボードから設定を開きます。
 
 次に **Resources / WSL INTEGRATION** から、統合機能を有効にするディストリビューション（ここでは Ubuntu-20.04 ）にチェックを入れ、また [Apply & Restart] で Docker を再起動します。
 
-<a href="images/windows-terminal-with-ubuntu-12.png"><img src="images/windows-terminal-with-ubuntu-12.png" alt="" width="1250" height="720" class="aligncenter size-full wp-image-15728" /></a>
+![](images/windows-terminal-with-ubuntu-12.png)
 
 これで下記のように Ubuntu から Docker が実行できるようになりました。
 
-<a href="images/windows-terminal-with-ubuntu-13.png"><img src="images/windows-terminal-with-ubuntu-13.png" alt="" width="707" height="299" class="aligncenter size-full wp-image-15729" /></a>
+![](images/windows-terminal-with-ubuntu-13.png)
 
 なお、プロンプトを見ればわかるとおり、 Ubuntu などの Linux シェルを開くと、 **Windows のファイルシステムが `/mnt` 以下にマウントされている**ので、 Linux 側から直接ファイル操作が可能です。

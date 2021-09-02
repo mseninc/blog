@@ -26,7 +26,7 @@ tags: [Node.js, Vue.js, Quasar Framework, Electron, Workshop, その他, 〇〇�
 
 今回はこんな感じのテキストエディタをつくることが目標です。
 
-<a href="images/electron-editor-1.gif"><img src="images/electron-editor-1.gif" alt="Electron でつくるテキストエディタ" width="1000" height="600" class="aligncenter size-full wp-image-10396" /></a>
+![Electron でつくるテキストエディタ](images/electron-editor-1.gif)
 
 
 プログラムのソースコードリポジトリ、詳細な資料は下記をご覧ください。

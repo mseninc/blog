@@ -21,17 +21,17 @@ Chrome の場合、下記の手順でブックマークレットを登録しま�
 
 登録するには ↑ のリンクをドラッグしてブックマークバーにドロップするのが一番簡単だと思います。
 
-<a href="images/gmail-unread-bookmarklet-1.png"><img src="images/gmail-unread-bookmarklet-1.png" alt="" width="344" height="333" class="aligncenter size-full wp-image-5526" /></a>
+![](images/gmail-unread-bookmarklet-1.png)
 
 あとは Gmail を開いた状態で**ブックマークバーに追加されたリンクをクリックするだけ**です。
 
-<a href="images/gmail-unread-bookmarklet-2.png"><img src="images/gmail-unread-bookmarklet-2.png" alt="" width="204" height="39" class="aligncenter size-full wp-image-5527" /></a>
+![](images/gmail-unread-bookmarklet-2.png)
 
 ※ちなみに Gmail 以外のサイトでは反応しないようにしてあります。
 
 ブックマークバーが表示されていない方は下記のメニューから表示させてください。
 
-<a href="images/gmail-unread-bookmarklet-3.png"><img src="images/gmail-unread-bookmarklet-3.png" alt="" width="639" height="281" class="aligncenter size-full wp-image-5528" /></a>
+![](images/gmail-unread-bookmarklet-3.png)
 
 ## ソースコード
 

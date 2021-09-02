@@ -82,7 +82,7 @@ $ npm run develop
 
 開発環境が **http://localhost:8000/** で起動します。
 
-<a href="images/blog-hosting-with-gatsbyjs-and-aws-amplify-1.png"><img src="images/blog-hosting-with-gatsbyjs-and-aws-amplify-1.png" alt="" width="859" height="881" class="aligncenter size-full wp-image-18008" /></a>
+![](images/blog-hosting-with-gatsbyjs-and-aws-amplify-1.png)
 
 起動しました🤘 簡単でした😋
 
@@ -90,7 +90,7 @@ $ npm run develop
 
 ディレクトリ構成は下記のようになっています。試しに `content/blog/hello-world/index.md` を書き換えてみましょう。
 
-<a href="images/blog-hosting-with-gatsbyjs-and-aws-amplify-2.png"><img src="images/blog-hosting-with-gatsbyjs-and-aws-amplify-2.png" alt="" width="1101" height="1018" class="aligncenter size-full wp-image-18009" /></a>
+![](images/blog-hosting-with-gatsbyjs-and-aws-amplify-2.png)
 
 ファイル先頭にある Frontmatter の title や description を書き換えました。
 
@@ -104,7 +104,7 @@ description: "Hello MSEN"
 
 ファイルを保存するとブラウザー側もライブリロードされて即表示されます。
 
-<a href="images/blog-hosting-with-gatsbyjs-and-aws-amplify-3.png"><img src="images/blog-hosting-with-gatsbyjs-and-aws-amplify-3.png" alt="" width="859" height="881" class="aligncenter size-full wp-image-18010" /></a>
+![](images/blog-hosting-with-gatsbyjs-and-aws-amplify-3.png)
 
 この執筆体験はいいですね❗
 
@@ -123,7 +123,7 @@ $ git remote add origin https://github.com/mseninc/gatsby-demo.git
 $ git push -u origin main
 ```
 
-<a href="images/blog-hosting-with-gatsbyjs-and-aws-amplify-4.png"><img src="images/blog-hosting-with-gatsbyjs-and-aws-amplify-4.png" alt="" width="1107" height="644" class="aligncenter size-full wp-image-18014" /></a>
+![](images/blog-hosting-with-gatsbyjs-and-aws-amplify-4.png)
 
 初期状態がプッシュされれば 🆗 です。
 
@@ -139,37 +139,37 @@ $ git push -u origin main
 
 早速 Amplify でホスティングしてみます。 **Amplify コンソールの "Host your web app" から "Get started"** を選びましょう。
 
-<a href="images/blog-hosting-with-gatsbyjs-and-aws-amplify-5.png"><img src="images/blog-hosting-with-gatsbyjs-and-aws-amplify-5.png" alt="" width="994" height="532" class="aligncenter size-full wp-image-18012" /></a>
+![](images/blog-hosting-with-gatsbyjs-and-aws-amplify-5.png)
 
 GitHub → Continue を選択します。
 
-<a href="images/blog-hosting-with-gatsbyjs-and-aws-amplify-6.png"><img src="images/blog-hosting-with-gatsbyjs-and-aws-amplify-6.png" alt="" width="876" height="622" class="aligncenter size-full wp-image-18013" /></a>
+![](images/blog-hosting-with-gatsbyjs-and-aws-amplify-6.png)
 
 GitHub の認証が入りますので、確認の上、権限を与えてください。
 
 リポジトリ・ブランチ選択画面でさきほどのリポジトリを選び、[次へ] をクリックします。
 
-<a href="images/blog-hosting-with-gatsbyjs-and-aws-amplify-7.png"><img src="images/blog-hosting-with-gatsbyjs-and-aws-amplify-7.png" alt="" width="708" height="604" class="aligncenter size-full wp-image-18015" /></a>
+![](images/blog-hosting-with-gatsbyjs-and-aws-amplify-7.png)
 
 ビルド設定は変更する必要がありませんでしたので、そのまま [次へ] をクリックします。
 
-<a href="images/blog-hosting-with-gatsbyjs-and-aws-amplify-8.png"><img src="images/blog-hosting-with-gatsbyjs-and-aws-amplify-8.png" alt="" width="694" height="776" class="aligncenter size-full wp-image-18016" /></a>
+![](images/blog-hosting-with-gatsbyjs-and-aws-amplify-8.png)
 
 設定を確認し、 [保存してデプロイ] をクリックします。
 
-<a href="images/blog-hosting-with-gatsbyjs-and-aws-amplify-9.png"><img src="images/blog-hosting-with-gatsbyjs-and-aws-amplify-9.png" alt="" width="709" height="667" class="aligncenter size-full wp-image-18017" /></a>
+![](images/blog-hosting-with-gatsbyjs-and-aws-amplify-9.png)
 
 ビルドがはじまり...
 
-<a href="images/blog-hosting-with-gatsbyjs-and-aws-amplify-10.png"><img src="images/blog-hosting-with-gatsbyjs-and-aws-amplify-10.png" alt="" width="976" height="368" class="aligncenter size-full wp-image-18018" /></a>
+![](images/blog-hosting-with-gatsbyjs-and-aws-amplify-10.png)
 
 検証まで完了すれば 🆗 です。赤で示したデプロイ先の URL を開きましょう。
 
-<a href="images/blog-hosting-with-gatsbyjs-and-aws-amplify-11.png"><img src="images/blog-hosting-with-gatsbyjs-and-aws-amplify-11.png" alt="" width="976" height="369" class="aligncenter size-full wp-image-18020" /></a>
+![](images/blog-hosting-with-gatsbyjs-and-aws-amplify-11.png)
 
 無事表示されました😃
 
-<a href="images/blog-hosting-with-gatsbyjs-and-aws-amplify-12.png"><img src="images/blog-hosting-with-gatsbyjs-and-aws-amplify-12.png" alt="" width="859" height="754" class="aligncenter size-full wp-image-18021" /></a>
+![](images/blog-hosting-with-gatsbyjs-and-aws-amplify-12.png)
 
 ### 下層ページがリダイレクトされる
 
@@ -185,19 +185,19 @@ Amplify コンソールの **"書き換えて、リダイレクト"** を確認�
 
 [編集] をクリックし、
 
-<a href="images/blog-hosting-with-gatsbyjs-and-aws-amplify-13.png"><img src="images/blog-hosting-with-gatsbyjs-and-aws-amplify-13.png" alt="" width="1081" height="532" class="aligncenter size-full wp-image-18022" /></a>
+![](images/blog-hosting-with-gatsbyjs-and-aws-amplify-13.png)
 
 2 件目を [ロールの削除] で削除し、 [保存] します。
 
-<a href="images/blog-hosting-with-gatsbyjs-and-aws-amplify-14.png"><img src="images/blog-hosting-with-gatsbyjs-and-aws-amplify-14.png" alt="" width="1008" height="471" class="aligncenter size-full wp-image-18023" /></a>
+![](images/blog-hosting-with-gatsbyjs-and-aws-amplify-14.png)
 
 最初の 1 つだけになれば 🆗 です。
 
-<a href="images/blog-hosting-with-gatsbyjs-and-aws-amplify-15.png"><img src="images/blog-hosting-with-gatsbyjs-and-aws-amplify-15.png" alt="" width="1096" height="531" class="aligncenter size-full wp-image-18024" /></a>
+![](images/blog-hosting-with-gatsbyjs-and-aws-amplify-15.png)
 
 無事 Kyle Mathews のアバターが表示されました🙌下層ページでリロードしても大丈夫です👍
 
-<a href="images/blog-hosting-with-gatsbyjs-and-aws-amplify-16.png"><img src="images/blog-hosting-with-gatsbyjs-and-aws-amplify-16.png" alt="" width="859" height="754" class="aligncenter size-full wp-image-18025" /></a>
+![](images/blog-hosting-with-gatsbyjs-and-aws-amplify-16.png)
 
 試しに Chrome で JavaScript を向こうにしてアクセスしてみましたが、無事コンテンツが表示されていました。
 
@@ -208,11 +208,11 @@ Amplify コンソールの **"書き換えて、リダイレクト"** を確認�
 
 `/hello-world/` ページを開くと卵の画像があるので、これのソースを見てみるとたしかに `srcset` が記述され、各サイズの画像が生成されていることがわかります。
 
-<a href="images/blog-hosting-with-gatsbyjs-and-aws-amplify-17.jpg"><img src="images/blog-hosting-with-gatsbyjs-and-aws-amplify-17.jpg" alt="" width="1329" height="700" class="aligncenter size-full wp-image-18029" /></a>
+![](images/blog-hosting-with-gatsbyjs-and-aws-amplify-17.jpg)
 
 記事側はただの Markdown としてしか書いていないのにすごいですね。
 
-<a href="images/blog-hosting-with-gatsbyjs-and-aws-amplify-18.png"><img src="images/blog-hosting-with-gatsbyjs-and-aws-amplify-18.png" alt="" width="622" height="86" class="aligncenter size-full wp-image-18030" /></a>
+![](images/blog-hosting-with-gatsbyjs-and-aws-amplify-18.png)
 
 ## まとめ
 

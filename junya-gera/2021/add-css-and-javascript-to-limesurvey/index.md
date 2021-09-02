@@ -12,29 +12,29 @@ tags: [LimeSurvey, Web]
 ## 追加するための流れ
 アンケートの作成をした後、トップページのヘッダーから「設定」→「テンプレート」と進んでいきます。その中で、CSS などを追加したいアンケートに設定を引き継ぎたいテンプレートを選び、「拡張」をクリックします。今回は vanilla を選択します。
 
-<img src="images/add-css-and-javascript-to-limesurvey-1.png" alt="" width="905" height="245" class="alignnone size-full wp-image-15865" />
+![](images/add-css-and-javascript-to-limesurvey-1.png)
 
 適当に名前を入力して右下のチェックをクリックします。今回はそのまま extends_vanilla という名前にします。
 
-<img src="images/add-css-and-javascript-to-limesurvey-2.png" alt="" width="615" height="233" class="alignnone size-full wp-image-15861" />
+![](images/add-css-and-javascript-to-limesurvey-2.png)
 
 これで vanilla の設定を引き継いだ extends_vanilla というテンプレートが作成され、そのテンプレートのエディタ画面に遷移されます。この画面の左側に、LimeSurvey の既存の設定ファイルが並んでいます。その中に `custom.js` 、 `custom.css` というファイルがあると思います。
 
-<img src="images/add-css-and-javascript-to-limesurvey-3.png" alt="" width="676" height="637" class="alignnone size-full wp-image-15879" />
+![](images/add-css-and-javascript-to-limesurvey-3.png)
 
 これらのファイルを編集することで、このテンプレートに設定されているアンケートに対して CSS 、JavaScript を反映させることができます。試しに `custom.js` を編集してみましょう。 jQuery が最初から使えるようになっているので、以下のように `alert` を記述してみます。編集が終わったら「ローカルテンプレートをコピーして変更を保存」を押します。
 
-<img src="images/add-css-and-javascript-to-limesurvey-4.png" alt="" width="920" height="438" class="alignnone size-full wp-image-15880" />
+![](images/add-css-and-javascript-to-limesurvey-4.png)
 
 「ローカルテンプレートをコピーして変更を保存」を押すことで、 `custom.js` の右の「継承された」という部分が「ローカル」に変わります。これでこの `custom.js` はこのテンプレート (今は extends_vanilla) 専用の `js` ファイルになりました。
 
 では実際にアンケートを開いて `alert` が表示されるか確認してみましょう。その前にアンケートの編集画面から「一般設定」を選択し、右側の「テンプレート」の部分を作成した extends_vanilla に設定しておきます。
 
-<img src="images/add-css-and-javascript-to-limesurvey-5.png" alt="" width="738" height="484" class="alignnone size-full wp-image-15882" />
+![](images/add-css-and-javascript-to-limesurvey-5.png)
 
 これで準備が整ったのでアンケートを開きます。
 
-<img src="images/add-css-and-javascript-to-limesurvey-6.png" alt="" width="1190" height="422" class="alignnone size-full wp-image-15883" />
+![](images/add-css-and-javascript-to-limesurvey-6.png)
 
 無事 `alert` が表示され、記述した JavaScript がアンケートに反映されたことがわかります。
 

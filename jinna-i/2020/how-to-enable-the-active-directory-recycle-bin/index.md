@@ -22,7 +22,7 @@ Active Directory にはごみ箱機能があり、その機能を有効化する
 削除されたオブジェクトは、まず、**削除されたオブジェクトの有効期間** というフェーズに移行します。この期間はデフォルトで180日です。この期間内であれば、オブジェクトは **SID や属性を含め完全に復元**することができます。
 そのあと、**Tombstone 有効期間** というフェーズに移行します。この期間もデフォルトは180日です。この期間に突入する際に**多くの属性が削除され、SID のみが復元**できる状態となります。
 
-<a href="images/how-to-enable-the-active-directory-recycle-bin-1.png"><img src="images/how-to-enable-the-active-directory-recycle-bin-1.png" alt="" width="830" height="523" class="alignnone size-full wp-image-13529" /></a>
+![](images/how-to-enable-the-active-directory-recycle-bin-1.png)
 
 **Active Directory ごみ箱機能はデフォルトでは無効**となっているため、有効化しなければなりません。
 
@@ -42,19 +42,19 @@ Active Directory ごみ箱機能は Active Directory 管理センターから有
 
 Active Directory 管理センターを起動し、右ペインにある [ごみ箱の有効化...] をクリックします。
 
-<a href="images/how-to-enable-the-active-directory-recycle-bin-2.png"><img src="images/how-to-enable-the-active-directory-recycle-bin-2.png" alt="" width="285" height="416" class="alignnone size-full wp-image-13456" /></a>
+![](images/how-to-enable-the-active-directory-recycle-bin-2.png)
 
 [OK] をクリックします。
 
-<a href="images/how-to-enable-the-active-directory-recycle-bin-3.png"><img src="images/how-to-enable-the-active-directory-recycle-bin-3.png" alt="" width="469" height="175" class="alignnone size-full wp-image-13457" /></a>
+![](images/how-to-enable-the-active-directory-recycle-bin-3.png)
 
 [OK] をクリックします。Active Directory ドメインコントローラーが複数ある場合は、すべてのドメインコントローラーで複製が完了するまでしばらく待ちましょう。
 
-<a href="images/how-to-enable-the-active-directory-recycle-bin-4.png"><img src="images/how-to-enable-the-active-directory-recycle-bin-4.png" alt="" width="493" height="220" class="alignnone size-full wp-image-13458" /></a>
+![](images/how-to-enable-the-active-directory-recycle-bin-4.png)
 
 Active Directory 管理センター上に `Deleted Objects` というコンテナーが出現していると思います。これがいわゆるごみ箱です。
 
-<a href="images/how-to-enable-the-active-directory-recycle-bin-5.png"><img src="images/how-to-enable-the-active-directory-recycle-bin-5.png" alt="" width="801" height="291" class="alignnone size-full wp-image-13459" /></a>
+![](images/how-to-enable-the-active-directory-recycle-bin-5.png)
 
 ## オブジェクトを削除してみる
 
@@ -62,21 +62,21 @@ Active Directory 管理センター上に `Deleted Objects` というコンテ�
 
 セキュリティグループは **`Domain Users`** と **`jinna-i-group`** に所属しています。
 
-<a href="images/how-to-enable-the-active-directory-recycle-bin-6.png"><img src="images/how-to-enable-the-active-directory-recycle-bin-6.png" alt="" width="620" height="619" class="alignnone size-full wp-image-13461" /></a>
+![](images/how-to-enable-the-active-directory-recycle-bin-6.png)
 
 属性エディタータブから `objectSid` を確認します。**属性エディタータブが無い場合は、Active Diretory ユーザーとコンピューターの [表示] > [拡張機能] を有効化すると表示される**ようになります。
 
 見切れていて恐縮ですが SID は `S-1-5-21-386949308-3539448719-3028307002-1127` であることがわかりました。
 
-<a href="images/how-to-enable-the-active-directory-recycle-bin-7.png"><img src="images/how-to-enable-the-active-directory-recycle-bin-7.png" alt="" width="493" height="643" class="alignnone size-full wp-image-13462" /></a>
+![](images/how-to-enable-the-active-directory-recycle-bin-7.png)
 
 では早速、ユーザーを削除します。
 
-<a href="images/how-to-enable-the-active-directory-recycle-bin-8.png"><img src="images/how-to-enable-the-active-directory-recycle-bin-8.png" alt="" width="407" height="370" class="alignnone size-full wp-image-13463" /></a>
+![](images/how-to-enable-the-active-directory-recycle-bin-8.png)
 
 Active Directory 管理センターに戻り、`Deleted Objects` コンテナーを確認します。削除したユーザー `jinna-i` が格納されています。
 
-<a href="images/how-to-enable-the-active-directory-recycle-bin-9.png"><img src="images/how-to-enable-the-active-directory-recycle-bin-9.png" alt="" width="691" height="96" class="alignnone size-full wp-image-13464" /></a>
+![](images/how-to-enable-the-active-directory-recycle-bin-9.png)
 
 ## オブジェクトの復元方法
 ### GUI による復元
@@ -85,17 +85,17 @@ Active Directory 管理センターに戻り、`Deleted Objects` コンテナー
 
 `Deleted Objects` コンテナーから復元したいオブジェクトを選択し、右ペインの [復元] をクリックします。いたって簡単です。
 
-<a href="images/how-to-enable-the-active-directory-recycle-bin-10.png"><img src="images/how-to-enable-the-active-directory-recycle-bin-10.png" alt="" width="1225" height="341" class="alignnone size-full wp-image-13466" /></a>
+![](images/how-to-enable-the-active-directory-recycle-bin-10.png)
 
 Active Directory ユーザーとコンピューターに戻ると、先ほど復元したユーザー `jinna-i` が元の場所に格納されています。
 
-<a href="images/how-to-enable-the-active-directory-recycle-bin-11.png"><img src="images/how-to-enable-the-active-directory-recycle-bin-11.png" alt="" width="330" height="88" class="alignnone size-full wp-image-13467" /></a>
+![](images/how-to-enable-the-active-directory-recycle-bin-11.png)
 
 所属するセキュリティグループもそのまま復元できており、SID も同じ番号となっていました。つまり同一のオブジェクトであると言えます。
 
-<a href="images/how-to-enable-the-active-directory-recycle-bin-12.png"><img src="images/how-to-enable-the-active-directory-recycle-bin-12.png" alt="" width="493" height="240" class="alignnone size-full wp-image-13468" /></a>
+![](images/how-to-enable-the-active-directory-recycle-bin-12.png)
 
-<a href="images/how-to-enable-the-active-directory-recycle-bin-13.png"><img src="images/how-to-enable-the-active-directory-recycle-bin-13.png" alt="" width="491" height="303" class="alignnone size-full wp-image-13469" /></a>
+![](images/how-to-enable-the-active-directory-recycle-bin-13.png)
 
 パスワードの有効期限が切れていなければこの状態でログオンできます。
 

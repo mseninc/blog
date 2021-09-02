@@ -23,7 +23,7 @@ KVMの概要は以下を参考に。
 ## 概要図
 
 概要図は以下のとおりです。
-<a href="images/how-to-connect-kvm-management-console-remotely-1.png"><img src="images/how-to-connect-kvm-management-console-remotely-1.png" alt="" width="937" height="643" class="alignnone size-full wp-image-12183" /></a>
+![](images/how-to-connect-kvm-management-console-remotely-1.png)
 
 **ログインするユーザーがsudoを実行できる** ことが前提となります。
 ※rootの直ログインは想定外です。
@@ -32,19 +32,19 @@ KVMの概要は以下を参考に。
 
 ## 手順
 1. **Teratermを起動** し、**リモートの(X)アプリケーションをローカルのXサーバに表示する** にチェックを入れます
-<a href="images/how-to-connect-kvm-management-console-remotely-2.png"><img src="images/how-to-connect-kvm-management-console-remotely-2.png" alt="" width="822" height="607" class="alignnone size-full wp-image-12185" /></a>
+![](images/how-to-connect-kvm-management-console-remotely-2.png)
 ↓
-<a href="images/how-to-connect-kvm-management-console-remotely-3.png"><img src="images/how-to-connect-kvm-management-console-remotely-3.png" alt="" width="473" height="332" class="alignnone size-full wp-image-11845" /></a>
+![](images/how-to-connect-kvm-management-console-remotely-3.png)
 1. **KVMサーバーにSSH接続** します
 1. **Xmingを起動** します(タスクトレイにひっそりと常駐します)
-<a href="images/how-to-connect-kvm-management-console-remotely-4.png"><img src="images/how-to-connect-kvm-management-console-remotely-4.png" alt="" width="39" height="36" class="alignnone size-full wp-image-12184" /></a>
+![](images/how-to-connect-kvm-management-console-remotely-4.png)
 1. `sudo cp /home/masuda/.Xauthority /root/` を実行します
 1. `sudo virt-manager` を実行します
 1. これでWARNINGが出るものの **KVM管理コンソールが表示** されます
 ```
 $(virt-manager:27148): dbind-WARNING **: 22:03:36.734: Couldn't connect to accessibility bus: Failed to connect to socket /tmp/dbus-7GWd4x8Rhi: 接続を拒否されました
 ```
-<a href="images/how-to-connect-kvm-management-console-remotely-5.png"><img src="images/how-to-connect-kvm-management-console-remotely-5.png" alt="" width="1245" height="572" class="alignnone size-full wp-image-12187" /></a>
+![](images/how-to-connect-kvm-management-console-remotely-5.png)
 
 この手順は **切断の都度実施する必要** があります。
 
@@ -53,9 +53,9 @@ $(virt-manager:27148): dbind-WARNING **: 22:03:36.734: Couldn't connect to acces
 
 **手順4** で、`sudo cp /home/masuda/.Xauthority /root/` を実行するように記載しましたが、実はこれがないと、以下のようなエラーが出て　**KVM管理コンソールが表示されません** 。
 
-<a href="images/how-to-connect-kvm-management-console-remotely-6.png"><img src="images/how-to-connect-kvm-management-console-remotely-6.png" alt="" width="423" height="170" class="alignnone size-full wp-image-11843" /></a>
+![](images/how-to-connect-kvm-management-console-remotely-6.png)
 ↓
-<a href="images/how-to-connect-kvm-management-console-remotely-7.png"><img src="images/how-to-connect-kvm-management-console-remotely-7.png" alt="" width="424" height="213" class="alignnone size-full wp-image-11844" /></a>
+![](images/how-to-connect-kvm-management-console-remotely-7.png)
 
 というエラーウィンドウが出て、
 

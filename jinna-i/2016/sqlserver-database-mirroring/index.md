@@ -22,7 +22,7 @@ AlwaysOn可用性グループとAlwaysOn FCIについては[こちらで詳し�
 ※自動フェールオーバーが不要な場合は、ミラーリング監視サーバーは必要ありません。
 また、OSはすべてWindows Server 2012 R2を使用します。
 
-<img src="images/sqlserver-database-mirroring-1.png" alt="" width="753" height="361" class="alignnone size-full wp-image-3476" />
+![](images/sqlserver-database-mirroring-1.png)
 
 ## 前提
 * プリンシパルサーバーとミラーサーバーに**SQL Server Standard Edition**以上がインストールされている。
@@ -45,12 +45,12 @@ AlwaysOn可用性グループとAlwaysOn FCIについては[こちらで詳し�
 * **サーバーのプロパティを確認**
 Microsoft SQL Server Management Studioを起動し、サーバーのプロパティを起動します。
 左ペインの「接続」から「このサーバーへのリモート接続を許可する」に**チェックが入っている**ことを確認します。
-<img src="images/sqlserver-database-mirroring-2.png" alt="" width="562" height="505" class="alignnone size-full wp-image-3460" />
+![](images/sqlserver-database-mirroring-2.png)
 
 * **TCP/IPを有効化**
 Sql Server Configuration Managerを起動し、「SQL Serverネットワークの構成」>「MSSQLSERVERのプロトコル」より「TCP/IP」が**有効**になっていることを確認します。
 **<span style="color:red;">Express Editionはデフォルトが無効になっているので注意してください。</span>**
-<img src="images/sqlserver-database-mirroring-3.png" alt="" width="538" height="199" class="alignnone size-full wp-image-3468" />
+![](images/sqlserver-database-mirroring-3.png)
 
 ## データベースのバックアップを取得
 **【プリンシパル側で実施】**
@@ -62,27 +62,27 @@ Sql Server Configuration Managerを起動し、「SQL Serverネットワーク�
 
 左ペインの「オプション」をクリックし、復旧モデルを確認。
 「完全」以外であれば、変更しておきます。
-<img src="images/sqlserver-database-mirroring-4.png" alt="" width="562" height="479" class="alignnone size-full wp-image-3464" />
+![](images/sqlserver-database-mirroring-4.png)
 
 ### バックアップは2つ必要
 バックアップには**完全**と**トランザクションログ**の2種類が必要です。
 
 対象のデータベースを右クリックし、「タスク」 > 「バックアップ」の順にクリック。
-<img src="images/sqlserver-database-mirroring-5.png" alt="" width="577" height="350" class="alignnone size-full wp-image-3469" />
+![](images/sqlserver-database-mirroring-5.png)
 
 バックアップの種類で「完全」を選択し、「OK」をクリック。
-<img src="images/sqlserver-database-mirroring-6.png" alt="" width="556" height="407" class="alignnone size-full wp-image-3470" />
+![](images/sqlserver-database-mirroring-6.png)
 
 ダイアログが出るので、「OK」をクリック。
-<img src="images/sqlserver-database-mirroring-7.png" alt="" width="495" height="108" class="alignnone size-full wp-image-3473" />
+![](images/sqlserver-database-mirroring-7.png)
 
 同様の手順で「トランザクションログ」もバックアップを取得します。
 このとき、バックアップ先を確認しておきましょう。
-<img src="images/sqlserver-database-mirroring-8.png" alt="" width="554" height="405" class="alignnone size-full wp-image-3471" />
+![](images/sqlserver-database-mirroring-8.png)
 
 確認したディレクトリにバックアップが作成されていることを確認します。
 ※「完全」と「トランザクションログ」の2つをバックアップしましたが、作成されるファイルは1つです。
-<img src="images/sqlserver-database-mirroring-9.png" alt="" width="559" height="418" class="alignnone size-full wp-image-3421" />
+![](images/sqlserver-database-mirroring-9.png)
 
 このファイルをコピーし、ミラーサーバーの同じディレクトリに格納します。
 
@@ -90,83 +90,83 @@ Sql Server Configuration Managerを起動し、「SQL Serverネットワーク�
 **【ミラー側で実施】**
 
 左ペインの「データベース」を右クリックし、「データベースの復元」をクリック。
-<img src="images/sqlserver-database-mirroring-10.png" alt="" width="618" height="397" class="alignnone size-full wp-image-3424" />
+![](images/sqlserver-database-mirroring-10.png)
 
 「デバイス」を選択し、右側の「...」をクリック。
-<img src="images/sqlserver-database-mirroring-11.png" alt="" width="613" height="504" class="alignnone size-full wp-image-3427" />
+![](images/sqlserver-database-mirroring-11.png)
 
 「追加」をクリック。
-<img src="images/sqlserver-database-mirroring-12.png" alt="" width="507" height="374" class="alignnone size-full wp-image-3428" />
+![](images/sqlserver-database-mirroring-12.png)
 
 先ほどプリンシパルからコピーしてきたバックアップファイルを選択し、「OK」をクリック。
-<img src="images/sqlserver-database-mirroring-13.png" alt="" width="550" height="373" class="alignnone size-full wp-image-3429" />
+![](images/sqlserver-database-mirroring-13.png)
 
 ちゃんと**完全**と**トランザクションログ**が含まれていることを確認します。
-<img src="images/sqlserver-database-mirroring-14.png" alt="" width="571" height="469" class="alignnone size-full wp-image-3430" />
+![](images/sqlserver-database-mirroring-14.png)
 
 左ペインの「オプション」から復旧状態を**「RESTORE WITH NORECOVERY」**に変更し、「OK」をクリック。
-<img src="images/sqlserver-database-mirroring-15.png" alt="" width="567" height="468" class="alignnone size-full wp-image-3432" />
+![](images/sqlserver-database-mirroring-15.png)
 
 ダイアログがでるので、「OK」をクリック。
-<img src="images/sqlserver-database-mirroring-16.png" alt="" width="364" height="171" class="alignnone size-full wp-image-3433" />
+![](images/sqlserver-database-mirroring-16.png)
 
 復元が完了すると、こんな表示になります。
-<img src="images/sqlserver-database-mirroring-17.png" alt="" width="487" height="335" class="alignnone size-full wp-image-3434" />
+![](images/sqlserver-database-mirroring-17.png)
 
 ## ミラーリング設定
 **【プリンシパル側で実施】**
 
 対象のデータベースを右クリックし、「タスク」 > 「ミラー」の順にクリック。
-<img src="images/sqlserver-database-mirroring-18.png" alt="" width="576" height="410" class="alignnone size-full wp-image-3437" />
+![](images/sqlserver-database-mirroring-18.png)
 
 「セキュリティの構成」をクリック。
-<img src="images/sqlserver-database-mirroring-19.png" alt="" width="557" height="504" class="alignnone size-full wp-image-3438" />
+![](images/sqlserver-database-mirroring-19.png)
 
 ウィザードが起動します。「次へ」をクリック。
-<img src="images/sqlserver-database-mirroring-20.png" alt="" width="500" height="454" class="alignnone size-full wp-image-3439" />
+![](images/sqlserver-database-mirroring-20.png)
 
 今回はミラーリング監視サーバーも構成するので、「はい」を選択して「次へ」をクリック。
-<img src="images/sqlserver-database-mirroring-21.png" alt="" width="500" height="452" class="alignnone size-full wp-image-3440" />
+![](images/sqlserver-database-mirroring-21.png)
 
 「ミラーリング監視サーバー インスタンス」にチェックが入っていることを確認し、「次へ」をクリック。
-<img src="images/sqlserver-database-mirroring-22.png" alt="" width="504" height="452" class="alignnone size-full wp-image-3441" />
+![](images/sqlserver-database-mirroring-22.png)
 
 「次へ」をクリック。
-<img src="images/sqlserver-database-mirroring-23.png" alt="" width="501" height="452" class="alignnone size-full wp-image-3442" />
+![](images/sqlserver-database-mirroring-23.png)
 
 ミラーサーバーインスタンスを選択。
-<img src="images/sqlserver-database-mirroring-24.png" alt="" width="500" height="452" class="alignnone size-full wp-image-3446" />
+![](images/sqlserver-database-mirroring-24.png)
 
 「接続」をクリック。
-<img src="images/sqlserver-database-mirroring-25.png" alt="" width="427" height="300" class="alignnone size-full wp-image-3444" />
+![](images/sqlserver-database-mirroring-25.png)
 
 「次へ」をクリック。
-<img src="images/sqlserver-database-mirroring-26.png" alt="" width="500" height="450" class="alignnone size-full wp-image-3445" />
+![](images/sqlserver-database-mirroring-26.png)
 
 同様に、ミラーリング監視サーバーインスタンスを選択し、接続できたら「次へ」をクリック。
-<img src="images/sqlserver-database-mirroring-27.png" alt="" width="499" height="451" class="alignnone size-full wp-image-3448" />
+![](images/sqlserver-database-mirroring-27.png)
 
 ここは空白でもOK。「次へ」をクリック。
-<img src="images/sqlserver-database-mirroring-28.png" alt="" width="495" height="454" class="alignnone size-full wp-image-3449" />
+![](images/sqlserver-database-mirroring-28.png)
 
 内容を確認して「完了」をクリック。
-<img src="images/sqlserver-database-mirroring-29.png" alt="" width="500" height="451" class="alignnone size-full wp-image-3450" />
+![](images/sqlserver-database-mirroring-29.png)
 
 エンドポイントの構成に完了したら、「閉じる」をクリック。
-<img src="images/sqlserver-database-mirroring-30.png" alt="" width="498" height="452" class="alignnone size-full wp-image-3451" />
+![](images/sqlserver-database-mirroring-30.png)
 
 ダイアログが表示されるので、「ミラーリングの開始」をクリック。
-<img src="images/sqlserver-database-mirroring-31.png" alt="" width="557" height="251" class="alignnone size-full wp-image-3452" />
+![](images/sqlserver-database-mirroring-31.png)
 
 状態が「同期完了：データベースは完全に同期されています」となればミラーリングは成功。「OK」をクリックして終了します。
 ※「同期中」となった場合は、しばらくしてから「最新の情報に更新」をクリックしてみてください。
-<img src="images/sqlserver-database-mirroring-32.png" alt="" width="556" height="503" class="alignnone size-full wp-image-3453" />
+![](images/sqlserver-database-mirroring-32.png)
 
 ### ミラーリング開始中にエラーが発生した場合 (SQL Server エラー 1418)
 
 ミラーリング中に以下のようなエラーが発生する場合があります。
 **データベース <データベース名> のAlterに失敗しました。**
-<img src="images/sqlserver-database-mirroring-33.png" alt="" width="621" height="257" class="alignnone size-full wp-image-3500" />
+![](images/sqlserver-database-mirroring-33.png)
 
 [マイクロソフトのWebページ(MSSQLSERVER_1418)](https://msdn.microsoft.com/ja-jp/library/aa337361.aspx)を見て、ネットワーク系かなと思いファイアウォールを無効にしてみたり、サービスアカウントの権限を変更してみたりしましたが、一向に解決する様子もなく。。。
 結局は、**ミラサーバーでバックアップから復元時に「RESTORE WITH <span style="color:red;">NO</span>RECOVERY」を選択し忘れていたことが原因**でした。
@@ -185,10 +185,10 @@ Sql Server Configuration Managerを起動し、「SQL Serverネットワーク�
 * シャットダウンする
 
 ミラーサーバーの状態を更新し、「プリンシパル/接続解除」と出ればOKです。
-<img src="images/sqlserver-database-mirroring-34.png" alt="" width="529" height="323" class="alignnone size-full wp-image-3455" />
+![](images/sqlserver-database-mirroring-34.png)
 
 また、イベントログにも以下のように自動フェールオーバーが行われたと出力されます。
-<img src="images/sqlserver-database-mirroring-35.png" alt="" width="545" height="379" class="alignnone size-full wp-image-3456" />
+![](images/sqlserver-database-mirroring-35.png)
 
 ## あとがき
 どうでしょう、うまくミラーリングできたでしょうか。

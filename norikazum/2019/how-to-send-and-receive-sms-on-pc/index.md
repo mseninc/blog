@@ -16,25 +16,25 @@ tags: [Android, SMS, その他, ライフハック]
 ## 設定は簡単
 
 1. Androidで **SMSアプリ** (私の場合メッセージというアプリ) を開き右上の **︙** から **ウェブ版Androidメッセージ** をタップします。
-<img src="images/how-to-send-and-receive-sms-on-pc-1.png" alt="" width="324" height="648" class="alignnone size-full wp-image-8723" />
+![](images/how-to-send-and-receive-sms-on-pc-1.png)
 
 1. 続けてAndroidで **QRコードスキャナ** をタップします。
-<img src="images/how-to-send-and-receive-sms-on-pc-2.png" alt="" width="324" height="648" class="alignnone size-full wp-image-8724" />
+![](images/how-to-send-and-receive-sms-on-pc-2.png)
 
 1. 次はPCで 以下のURLに接続します。
 >[PC 版メッセージ](https://messages.android.com/)
 
 1. PCに表示されたQRコードを **2** で起動したAndroidのQRコードスキャナで読み取ります。
-<img src="images/how-to-send-and-receive-sms-on-pc-3.png" alt="" width="1675" height="1219" class="alignnone size-full wp-image-8727" />
+![](images/how-to-send-and-receive-sms-on-pc-3.png)
 
 1. PC側のブラウザにポップアップで許可を求められるので **許可** します。
-<img src="images/how-to-send-and-receive-sms-on-pc-4.png" alt="" width="419" height="181" class="alignnone size-full wp-image-8728" />
+![](images/how-to-send-and-receive-sms-on-pc-4.png)
 
 ## PCでSMSが！
 
 使えるようになりました！
 
-<img src="images/how-to-send-and-receive-sms-on-pc-5.png" alt="" width="1675" height="1219" class="alignnone size-full wp-image-8729" />
+![](images/how-to-send-and-receive-sms-on-pc-5.png)
 
 LINEやSlackなどのチャットツールが当たり前になってもまだまだSMSって使いませんか？
 

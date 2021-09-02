@@ -11,7 +11,7 @@ tags: [Windows 10, プリンタ, ブルースクリーン, Windows]
 
 ブルースクリーンの写真を送っていただくと、以下の画面でした。
 
-<a href="images/blue-screen-on-win32kfull-sys-when-trying-to-print-on-windows-10-1.jpg"><img src="images/blue-screen-on-win32kfull-sys-when-trying-to-print-on-windows-10-1.jpg" alt="" width="1108" height="1478" class="alignnone size-full wp-image-15950" /></a>
+![](images/blue-screen-on-win32kfull-sys-when-trying-to-print-on-windows-10-1.jpg)
 
 画像から、 **win32kfull.sys が関連しているトラブル** が読み取れましたので調べてみるとリアルタイムな日付の記事で色々と引っかかりました。私は以下を参考にしました。
 
@@ -24,11 +24,11 @@ Windows アップデートカタログから お客様の Windows 10 のバー�
 
 以下の流れでインストールしました。
 
-<a href="images/blue-screen-on-win32kfull-sys-when-trying-to-print-on-windows-10-2.jpg"><img src="images/blue-screen-on-win32kfull-sys-when-trying-to-print-on-windows-10-2.jpg" alt="" width="436" height="294" class="alignnone size-full wp-image-15955" /></a>
+![](images/blue-screen-on-win32kfull-sys-when-trying-to-print-on-windows-10-2.jpg)
 
-<a href="images/blue-screen-on-win32kfull-sys-when-trying-to-print-on-windows-10-3.jpg"><img src="images/blue-screen-on-win32kfull-sys-when-trying-to-print-on-windows-10-3.jpg" alt="" width="729" height="586" class="alignnone size-full wp-image-15956" /></a>
+![](images/blue-screen-on-win32kfull-sys-when-trying-to-print-on-windows-10-3.jpg)
 
-<a href="images/blue-screen-on-win32kfull-sys-when-trying-to-print-on-windows-10-4.jpg"><img src="images/blue-screen-on-win32kfull-sys-when-trying-to-print-on-windows-10-4.jpg" alt="" width="723" height="591" class="alignnone size-full wp-image-15957" /></a>
+![](images/blue-screen-on-win32kfull-sys-when-trying-to-print-on-windows-10-4.jpg)
 
 これで無事解消しました。
 

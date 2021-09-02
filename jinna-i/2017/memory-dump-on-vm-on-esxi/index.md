@@ -41,16 +41,16 @@ tags: [Windows Server, VMware, ESXi, 仮想化, 仮想化技術]
 
 
 対象の仮想マシンが稼動するホストを選択します。
-<a href="images/memory-dump-on-vm-on-esxi-1.png"><img src="images/memory-dump-on-vm-on-esxi-1.png" alt="" width="300" height="195" class="alignnone size-medium wp-image-4442" /></a>
+![](images/memory-dump-on-vm-on-esxi-1.png)
 
 [管理] > [設定] > [セキュリティ プロファイル] よりサービスの[編集]をクリック
-<a href="images/memory-dump-on-vm-on-esxi-2.png"><img src="images/memory-dump-on-vm-on-esxi-2.png" alt="" width="300" height="195" class="alignnone size-medium wp-image-4443" /></a>
+![](images/memory-dump-on-vm-on-esxi-2.png)
 
 **ESXiシェル** と**SSH**のデーモンを起動させます。
-<a href="images/memory-dump-on-vm-on-esxi-3.png"><img src="images/memory-dump-on-vm-on-esxi-3.png" alt="" width="300" height="195" class="alignnone size-medium wp-image-4444" /></a>
+![](images/memory-dump-on-vm-on-esxi-3.png)
 
 ホストのサマリを見るとESXiシェルとSSHが有効になっている旨の警告表示が出ていますが、このままでOKです。
-<a href="images/memory-dump-on-vm-on-esxi-4.png"><img src="images/memory-dump-on-vm-on-esxi-4.png" alt="" width="300" height="93" class="alignnone size-medium wp-image-4445" /></a>
+![](images/memory-dump-on-vm-on-esxi-4.png)
 
 作業終了時に元に戻すことを覚えておきましょう。
 
@@ -60,13 +60,13 @@ tags: [Windows Server, VMware, ESXi, 仮想化, 仮想化技術]
 次は、メモリダンプの設定をしていきます。
 
 [システムのプロパティ] > [詳細設定] > 起動と回復より[設定]をクリック。
-<a href="images/memory-dump-on-vm-on-esxi-5.png"><img src="images/memory-dump-on-vm-on-esxi-5.png" alt="" width="270" height="300" class="alignnone size-medium wp-image-4446" /></a>
+![](images/memory-dump-on-vm-on-esxi-5.png)
 
 Windows Server 2012 R2のデフォルトは**自動メモリダンプ**になっています。
-<a href="images/memory-dump-on-vm-on-esxi-6.png"><img src="images/memory-dump-on-vm-on-esxi-6.png" alt="" width="259" height="300" class="alignnone size-medium wp-image-4448" /></a>
+![](images/memory-dump-on-vm-on-esxi-6.png)
 
 通常使用する場合ではこのままで問題ないと思いますが、不具合の調査や原因の追求を行う場合は、より多くのダンプを出力する**完全メモリダンプ**にしておくことをおすすめします。
-<a href="images/memory-dump-on-vm-on-esxi-7.png"><img src="images/memory-dump-on-vm-on-esxi-7.png" alt="" width="259" height="300" class="alignnone size-medium wp-image-4449" /></a>
+![](images/memory-dump-on-vm-on-esxi-7.png)
 
 詳細は以下をご覧ください。
 [Technet：完全メモリ ダンプ採取のための設定手順について](https://blogs.technet.microsoft.com/askcorejp/2016/11/17/complete-memory-dump/)
@@ -74,7 +74,7 @@ Windows Server 2012 R2のデフォルトは**自動メモリダンプ**になっ
 また、ダンプファイルの出力先も変更することができます。
 
 今回は**C:\MemoryDump\MEMORY.DMP**としました。
-<a href="images/memory-dump-on-vm-on-esxi-8.png"><img src="images/memory-dump-on-vm-on-esxi-8.png" alt="" width="259" height="300" class="alignnone size-medium wp-image-4450" /></a>
+![](images/memory-dump-on-vm-on-esxi-8.png)
 
 
 変更を反映するために再起動します。
@@ -115,13 +115,13 @@ Sending NMI to guest...
 ```
 
 すると、今頃はブルースクリーンが表示されて大騒ぎとなっていることでしょう。
-<a href="images/memory-dump-on-vm-on-esxi-9.png"><img src="images/memory-dump-on-vm-on-esxi-9.png" alt="" width="300" height="224" class="alignnone size-medium wp-image-4454" /></a>
+![](images/memory-dump-on-vm-on-esxi-9.png)
 
 メモリダンプの取得が完了すると自動的に再起動が行われます。
 
 再起動後、指定したパスにダンプファイルが出力されています。
 **完全メモリダンプ**を指定したので、物理メモリと同等のファイルサイズとなってます。
-<a href="images/memory-dump-on-vm-on-esxi-10.png"><img src="images/memory-dump-on-vm-on-esxi-10.png" alt="" width="300" height="165" class="alignnone size-medium wp-image-4455" /></a>
+![](images/memory-dump-on-vm-on-esxi-10.png)
 
 ## おわりに
 

@@ -46,17 +46,17 @@ Atom にはインストールした時から、Markdown に対応しています
 
 例として Markdown で適当に書いてみました。
 
-<img src="images/atom-markdown-realtime-preview-1.jpg" alt="Markdown1">
+![Markdown1](images/atom-markdown-realtime-preview-1.jpg)
 
 Markdown で文章が書けたら Atom で開いて、キーボードの **Ctrl + Shift + M** を同時に押してみてください。
 
-<img src="images/atom-markdown-realtime-preview-2.jpg" alt="Markdown3">
+![Markdown3](images/atom-markdown-realtime-preview-2.jpg)
 
 右側にプレビューが!
 
 なお、**リアルタイムでプレビューしてくれる**ので、Markdown を書きながらでも大丈夫です。
 
-<img src="images/atom-markdown-realtime-preview-3.jpg" alt="Markdown2">
+![Markdown2](images/atom-markdown-realtime-preview-3.jpg)
 
 Atom すごいね！
 
@@ -66,7 +66,7 @@ Atom すごいね！
 
 Markdown の**プレビュー画面を右クリックする**とメニューが出てきます。
 
-<img src="images/atom-markdown-realtime-preview-4.jpg" alt="Markdown4">
+![Markdown4](images/atom-markdown-realtime-preview-4.jpg)
 
 **Copy As HTML** を選ぶと、クリップボードに HTMLタグがコピーされます。後はテキストエディタ等に貼り付けして使用してください。
 

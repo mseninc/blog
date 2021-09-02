@@ -32,11 +32,11 @@ tags: [Windows Server, リモートデスクトップ, RDS, Windows]
 
 [システムのプロパティ] > [詳細設定] からユーザープロファイルの [設定] を開きます。
 
-<a href="images/how-to-apply-mandatory-user-profile-from-group-policy-1.png"><img src="images/how-to-apply-mandatory-user-profile-from-group-policy-1.png" alt="" width="471" height="533" class="alignnone size-full wp-image-12739" /></a>
+![](images/how-to-apply-mandatory-user-profile-from-group-policy-1.png)
 
 今回は既定のプロファイルをテンプレートに設定します。[既定のプロファイル]を選択し、[コピー先]をクリックします。
 
-<a href="images/how-to-apply-mandatory-user-profile-from-group-policy-2.png"><img src="images/how-to-apply-mandatory-user-profile-from-group-policy-2.png" alt="" width="449" height="473" class="alignnone size-full wp-image-12740" /></a>
+![](images/how-to-apply-mandatory-user-profile-from-group-policy-2.png)
 
 下記のとおり設定し、[OK] をクリックします。
 
@@ -48,12 +48,12 @@ tags: [Windows Server, リモートデスクトップ, RDS, Windows]
 - 固定プロファイル
 **チェックを入れない**
 
-<a href="images/how-to-apply-mandatory-user-profile-from-group-policy-3.png"><img src="images/how-to-apply-mandatory-user-profile-from-group-policy-3.png" alt="" width="462" height="309" class="alignnone size-full wp-image-12742" /></a>
+![](images/how-to-apply-mandatory-user-profile-from-group-policy-3.png)
 
 これで共有フォルダ上にテンプレート用のプロファイルがコピーされました。
 続いて `ntuser.dat` の拡張子を `ntuser.man` に変更します。man は mandatory の略称で、必須のプロファイルを意味します。`.man` 形式とすることで読み取り専用のプロファイルとなります。
 
-<a href="images/how-to-apply-mandatory-user-profile-from-group-policy-4.png"><img src="images/how-to-apply-mandatory-user-profile-from-group-policy-4.png" alt="" width="696" height="335" class="alignnone size-full wp-image-12746" /></a>
+![](images/how-to-apply-mandatory-user-profile-from-group-policy-4.png)
 
 ## グループポリシーの設定
 
@@ -85,7 +85,7 @@ tags: [Windows Server, リモートデスクトップ, RDS, Windows]
 
 プロファイルの状態と種類が **固定** となっていれば成功です。
 
-<a href="images/how-to-apply-mandatory-user-profile-from-group-policy-5.png"><img src="images/how-to-apply-mandatory-user-profile-from-group-policy-5.png" alt="" width="451" height="475" class="alignnone size-full wp-image-12751" /></a>
+![](images/how-to-apply-mandatory-user-profile-from-group-policy-5.png)
 
 デスクトップに何かファイルを作成し、ログオフ → ログオンしてみると作成したファイルが消えていることを確認できると思います。
 
@@ -95,7 +95,7 @@ tags: [Windows Server, リモートデスクトップ, RDS, Windows]
 こちらも固定ユーザープロファイルと同様にログオフすると中身が破棄されますが、テンプレートで設定した内容は反映されていないので正しく固定ユーザープロファイルが設定できていないことを表しています。
 作成したテンプレートにログオンしているユーザーの権限でアクセスができるか、パスが間違っていないかなどを確認してみてください。
 
-<a href="images/how-to-apply-mandatory-user-profile-from-group-policy-6.png"><img src="images/how-to-apply-mandatory-user-profile-from-group-policy-6.png" alt="" width="686" height="234" class="alignnone size-full wp-image-12752" /></a>
+![](images/how-to-apply-mandatory-user-profile-from-group-policy-6.png)
 
 ## 参考
 

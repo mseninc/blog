@@ -12,14 +12,14 @@ ESXi上の仮想マシンですが、コンソールを眺めていると、以�
 
 `"echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.`
 
-<a href="images/centos-fix-kernel-hang-up-1.png"><img src="images/centos-fix-kernel-hang-up-1.png" alt="" width="300" height="8" class="alignnone size-medium wp-image-4175" /></a>
+![](images/centos-fix-kernel-hang-up-1.png)
 
 ## 対処
 エラーにある、**dm-0** という部分はLVMのデバイス名なので、以下のコマンドを利用してどのパーティションかを特定します。
 
 `# cat /sys/block/dm-0/name`
 
-<a href="images/centos-fix-kernel-hang-up-2.png"><img src="images/centos-fix-kernel-hang-up-2.png" alt="" width="250" height="33" class="alignnone size-full wp-image-4169" /></a>
+![](images/centos-fix-kernel-hang-up-2.png)
 
 結果は、**centosroot** とでました。
 

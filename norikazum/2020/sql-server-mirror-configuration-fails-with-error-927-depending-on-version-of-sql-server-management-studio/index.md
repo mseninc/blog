@@ -21,7 +21,7 @@ tags: [SQL Server, データベースミラーリング, その他の技術]
 　　　　　データベース '○○' を開けません。復元中です。(Microsoft.SQL.Server, エラー:927)
 ```
 
-<a href="images/sql-server-mirror-configuration-fails-with-error-927-depending-on-version-of-sql-server-management-studio-1.png"><img src="images/sql-server-mirror-configuration-fails-with-error-927-depending-on-version-of-sql-server-management-studio-1.png" alt="" width="690" height="577" class="alignnone size-full wp-image-12390" /></a>
+![](images/sql-server-mirror-configuration-fails-with-error-927-depending-on-version-of-sql-server-management-studio-1.png)
 
 **手順は、過去に じんない が書いてくれた記事を参考** にしているので間違いはありません。
 [SQL Server 2014 でデータベースミラーリングを構成する](https://mseeeen.msen.jp/sqlserver-database-mirroring/)
@@ -35,9 +35,9 @@ tags: [SQL Server, データベースミラーリング, その他の技術]
 早速、古いSQL Server Management Studio でやってみました。
 すると・・・
 
-<a href="images/sql-server-mirror-configuration-fails-with-error-927-depending-on-version-of-sql-server-management-studio-2.png"><img src="images/sql-server-mirror-configuration-fails-with-error-927-depending-on-version-of-sql-server-management-studio-2.png" alt="" width="694" height="628" class="alignnone size-full wp-image-12392" /></a>
+![](images/sql-server-mirror-configuration-fails-with-error-927-depending-on-version-of-sql-server-management-studio-2.png)
 
-<a href="images/sql-server-mirror-configuration-fails-with-error-927-depending-on-version-of-sql-server-management-studio-3.png"><img src="images/sql-server-mirror-configuration-fails-with-error-927-depending-on-version-of-sql-server-management-studio-3.png" alt="" width="613" height="543" class="alignnone size-full wp-image-12402" /></a>
+![](images/sql-server-mirror-configuration-fails-with-error-927-depending-on-version-of-sql-server-management-studio-3.png)
 
 **成功** してしまいました。。
 
@@ -48,10 +48,10 @@ tags: [SQL Server, データベースミラーリング, その他の技術]
 
 ## あとがき
 ちなみに、失敗したバージョンは執筆時の最新 `15.0.18206.0` で、
-<a href="images/sql-server-mirror-configuration-fails-with-error-927-depending-on-version-of-sql-server-management-studio-4.png"><img src="images/sql-server-mirror-configuration-fails-with-error-927-depending-on-version-of-sql-server-management-studio-4.png" alt="" width="482" height="475" class="alignnone size-full wp-image-12393" /></a>
+![](images/sql-server-mirror-configuration-fails-with-error-927-depending-on-version-of-sql-server-management-studio-4.png)
 
 成功したバージョンは `12.0.2000.8` でした。
-<a href="images/sql-server-mirror-configuration-fails-with-error-927-depending-on-version-of-sql-server-management-studio-5.png"><img src="images/sql-server-mirror-configuration-fails-with-error-927-depending-on-version-of-sql-server-management-studio-5.png" alt="" width="488" height="620" class="alignnone size-full wp-image-12394" /></a>
+![](images/sql-server-mirror-configuration-fails-with-error-927-depending-on-version-of-sql-server-management-studio-5.png)
 
 原因はまだ不明ですが、何か分かれば記事にしたいと思います。
 ご存じの方おられましたら是非コメントいただけましたら幸いです。

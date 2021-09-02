@@ -227,7 +227,7 @@ Subscription のように外部データソースからデータを取得する�
 
 「データソースの追加」でデータソースタイプを「**なし (NONE)**」にして、適当な名前をつけてデータソースを追加します。
 
-<a href="images/advanced-use-of-subscription-in-appsync-graphql-1.png"><img src="images/advanced-use-of-subscription-in-appsync-graphql-1.png" alt="" width="784" height="425" class="aligncenter size-full wp-image-17907" /></a>
+![](images/advanced-use-of-subscription-in-appsync-graphql-1.png)
 
 ここでは `NoneDatasource` としました。
 
@@ -236,7 +236,7 @@ Subscription のように外部データソースからデータを取得する�
 今回の `onPostMessage` Subscription にリゾルバーをアタッチします。データソースは先ほど作成した `NoneDatasource` を選びます。
 
 
-<a href="images/advanced-use-of-subscription-in-appsync-graphql-2.png"><img src="images/advanced-use-of-subscription-in-appsync-graphql-2.png" alt="" width="757" height="776" class="aligncenter size-full wp-image-17908" /></a>
+![](images/advanced-use-of-subscription-in-appsync-graphql-2.png)
 
 **リクエスト**マッピングテンプレートは、基本的に入力をそのまま出力すればよいので、下記のようにします。呼び出し元のデータは **`$ctx.source`** (`$context.source`) に入ってくるようなので、これを JSON でそのまま書き出します。
 

@@ -15,14 +15,14 @@ tags: [ネットワーク, vlan, 801.1q, Linux]
 過去記事では、 `nmcli` ベースで設定しましたが今回は設定ファイルを編集する方法で実施しています。
 
 環境としてはこのような感じで、 **VLAN171とVLAN172をタグ** で流します。
-<a href="images/centos-how-to-create-teaming-vlan-tag-interface-1.png"><img src="images/centos-how-to-create-teaming-vlan-tag-interface-1.png" alt="" width="1032" height="489" class="alignnone size-full wp-image-11685" /></a>
+![](images/centos-how-to-create-teaming-vlan-tag-interface-1.png)
 
 論理的には以下のような環境を目指します。
-<a href="images/centos-how-to-create-teaming-vlan-tag-interface-2.png"><img src="images/centos-how-to-create-teaming-vlan-tag-interface-2.png" alt="" width="949" height="420" class="alignnone size-full wp-image-11691" /></a>
+![](images/centos-how-to-create-teaming-vlan-tag-interface-2.png)
 
 各レイヤのイメージは以下のとおりです。
 こちらのほうが分かりやすいかもしれません。
-<a href="images/centos-how-to-create-teaming-vlan-tag-interface-3.png"><img src="images/centos-how-to-create-teaming-vlan-tag-interface-3.png" alt="" width="1163" height="742" class="alignnone size-full wp-image-12291" /></a>
+![](images/centos-how-to-create-teaming-vlan-tag-interface-3.png)
 
 ## Catalyst の設定
 Catalyst3750のコンフィグは `show run` が以下のよう(抜粋)になっている状態とします。

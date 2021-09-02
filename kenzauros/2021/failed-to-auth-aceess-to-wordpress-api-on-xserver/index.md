@@ -100,7 +100,7 @@ WordPress の API については公式が一番まとまっています。
 
 ブラウザで試すのは難しいので、 **[Postman](https://www.postman.com/)** を利用します。
 
-[caption id="attachment_17077" align="aligncenter" width="986"]<a href="images/failed-to-auth-aceess-to-wordpress-api-on-xserver-1.png"><img src="images/failed-to-auth-aceess-to-wordpress-api-on-xserver-1.png" alt="Postman で WordPress API に BASIC 認証でアクセス失敗" width="986" height="834" class="size-full wp-image-17077" /></a> Postman で WordPress API に BASIC 認証でアクセス失敗[/caption]
+![Postman で WordPress API に BASIC 認証でアクセス失敗](images/failed-to-auth-aceess-to-wordpress-api-on-xserver-1.png)
 
 **Authorization** タブで Type を **Basic auth** にして Username に WordPress のログインユーザー名を、 Password にアプリケーションパスワードを入力します。
 
@@ -167,7 +167,7 @@ RewriteRule . /index.php [L]
 
 `.htaccess` を書き換えたら、いざ再チャレンジ！
 
-[caption id="attachment_17080" align="aligncenter" width="988"]<a href="images/failed-to-auth-aceess-to-wordpress-api-on-xserver-2.png"><img src="images/failed-to-auth-aceess-to-wordpress-api-on-xserver-2.png" alt="Postman で WordPress API に BASIC 認証でアクセス成功" width="988" height="886" class="size-full wp-image-17080" /></a> WordPress API に BASIC 認証でアクセス成功[/caption]
+![Postman で WordPress API に BASIC 認証でアクセス成功](images/failed-to-auth-aceess-to-wordpress-api-on-xserver-2.png)
 
 成功しました...！無事下書き状態のこの記事が取得できています。
 

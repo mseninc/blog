@@ -17,11 +17,11 @@ tags: [PHP, Slack, Web]
 
 OAuth Access Token をコピーしておきます。
 
-<a href="images/upload-files-to-slack-channel-by-php-1.png"><img src="images/upload-files-to-slack-channel-by-php-1.png" alt="" width="760" height="787" class="aligncenter size-full wp-image-8606" /></a>
+![](images/upload-files-to-slack-channel-by-php-1.png)
 
 スコープ (Scopes) にはファイル書き込みのため `files:write:user` が必要です。必要であればメッセージ投稿のため `chat:write:user` か `chat:write:bot` も付与しておきましょう。
 
-<a href="images/upload-files-to-slack-channel-by-php-2.png"><img src="images/upload-files-to-slack-channel-by-php-2.png" alt="" width="755" height="701" class="aligncenter size-full wp-image-8605" /></a>
+![](images/upload-files-to-slack-channel-by-php-2.png)
 
 ## PHP スクリプト
 

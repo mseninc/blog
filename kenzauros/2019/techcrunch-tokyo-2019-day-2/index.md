@@ -40,7 +40,7 @@ OYO LIFE は東京から開始し、大阪は10月、名古屋は11月からサ�
 
 37ヶ国語に対応しており、日本語ならたとえば**渋谷ヒカリエの入り口は「よみきる・ほほえみ・あまえび」**である。 (下図)
 
-<a href="images/techcrunch-tokyo-2019-day-2-1.jpg"><img src="images/techcrunch-tokyo-2019-day-2-1.jpg" alt="" width="450" height="800" class="aligncenter size-full wp-image-11463" /></a>
+![](images/techcrunch-tokyo-2019-day-2-1.jpg)
 
 アプリ上では 3mx3m がグリッドで表され、それぞれに別の3単語が振られていることがわかる。
 

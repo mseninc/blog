@@ -23,10 +23,10 @@ tags: [Redmine, ActiveDirectory, その他の技術]
 
 ## 手順
 1. 管理者でログインし、 **管理 → LDAP認証 → 新しい認証方式** をクリックします
-<a href="images/how-to-change-redmine-login-authentication-to-active-directory-authentication-1.png"><img src="images/how-to-change-redmine-login-authentication-to-active-directory-authentication-1.png" alt="" width="1573" height="949" class="alignnone size-full wp-image-14545" /></a>
+![](images/how-to-change-redmine-login-authentication-to-active-directory-authentication-1.png)
 
 2. 以下を参考に設定を入力し、保存ボタンをクリックします
-<a href="images/how-to-change-redmine-login-authentication-to-active-directory-authentication-2.png"><img src="images/how-to-change-redmine-login-authentication-to-active-directory-authentication-2.png" alt="" width="1573" height="949" class="alignnone size-full wp-image-14549" /></a>
+![](images/how-to-change-redmine-login-authentication-to-active-directory-authentication-2.png)
 ドメイン名が、`example.com` として記載
   1. 任意名
   2. ActiveDirectoryのIPアドレス or DNS名
@@ -42,7 +42,7 @@ tags: [Redmine, ActiveDirectory, その他の技術]
   12. mail
 
 1. テストボタンをクリックし、接続できることを確認します
-<a href="images/how-to-change-redmine-login-authentication-to-active-directory-authentication-3.png"><img src="images/how-to-change-redmine-login-authentication-to-active-directory-authentication-3.png" alt="" width="1573" height="949" class="alignnone size-full wp-image-14554" /></a>
+![](images/how-to-change-redmine-login-authentication-to-active-directory-authentication-3.png)
 
 以上で設定完了です。
 
@@ -50,24 +50,24 @@ tags: [Redmine, ActiveDirectory, その他の技術]
 
 ユーザーは admin のみ存在することを確認します。
 
-<a href="images/how-to-change-redmine-login-authentication-to-active-directory-authentication-4.png"><img src="images/how-to-change-redmine-login-authentication-to-active-directory-authentication-4.png" alt="" width="1570" height="1019" class="alignnone size-full wp-image-14556" /></a>
+![](images/how-to-change-redmine-login-authentication-to-active-directory-authentication-4.png)
 
 ログアウトし、ActiveDirectoryに登録されているユーザーでログインします。
-<a href="images/how-to-change-redmine-login-authentication-to-active-directory-authentication-5.png"><img src="images/how-to-change-redmine-login-authentication-to-active-directory-authentication-5.png" alt="" width="1570" height="1019" class="alignnone size-full wp-image-14557" /></a>
+![](images/how-to-change-redmine-login-authentication-to-active-directory-authentication-5.png)
 
 ログインできました！
-<a href="images/how-to-change-redmine-login-authentication-to-active-directory-authentication-6.png"><img src="images/how-to-change-redmine-login-authentication-to-active-directory-authentication-6.png" alt="" width="1570" height="1019" class="alignnone size-full wp-image-14558" /></a>
+![](images/how-to-change-redmine-login-authentication-to-active-directory-authentication-6.png)
 
 ユーザーが自動生成され、 名前・メールアドレスもActiveDirectoryで設定している値が自動で設定されています。
-<a href="images/how-to-change-redmine-login-authentication-to-active-directory-authentication-7.png"><img src="images/how-to-change-redmine-login-authentication-to-active-directory-authentication-7.png" alt="" width="1570" height="1019" class="alignnone size-full wp-image-14559" /></a>
+![](images/how-to-change-redmine-login-authentication-to-active-directory-authentication-7.png)
 
 簡単に ActiveDirectory と連携することができました。
 
 試しに、ActiveDirectory のアカウントを無効にしてみると、
-<a href="images/how-to-change-redmine-login-authentication-to-active-directory-authentication-8.png"><img src="images/how-to-change-redmine-login-authentication-to-active-directory-authentication-8.png" alt="" width="257" height="27" class="alignnone size-full wp-image-14590" /></a>
+![](images/how-to-change-redmine-login-authentication-to-active-directory-authentication-8.png)
 
 ログイン出来なくなりました。
-<a href="images/how-to-change-redmine-login-authentication-to-active-directory-authentication-9.png"><img src="images/how-to-change-redmine-login-authentication-to-active-directory-authentication-9.png" alt="" width="1675" height="954" class="alignnone size-full wp-image-14593" /></a>
+![](images/how-to-change-redmine-login-authentication-to-active-directory-authentication-9.png)
 
 ユーザー認証を ActiveDirectory に統合できるのでお勧めです。
 

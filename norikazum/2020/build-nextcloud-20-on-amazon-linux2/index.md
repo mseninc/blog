@@ -132,7 +132,7 @@ cp -p /etc/httpd/conf.d/ssl.conf{,.org}
 ```
 
 **TLS1.0とTLS1.1を無効化** することで[SSL Server Test](https://www.ssllabs.com/ssltest/)で **A+判定** を確認しています。
-<a href="images/build-nextcloud-20-on-amazon-linux2-1.png"><img src="images/build-nextcloud-20-on-amazon-linux2-1.png" alt="" width="1552" height="982" class="alignnone size-full wp-image-14468" /></a>
+![](images/build-nextcloud-20-on-amazon-linux2-1.png)
 
 #### 証明書の配置
 
@@ -316,11 +316,11 @@ Apacheの再起動を実施します
 1. 最小構成でインストールするためチェックを外す
 1. セットアップを完了します をクリック
 
-<a href="images/build-nextcloud-20-on-amazon-linux2-2.png"><img src="images/build-nextcloud-20-on-amazon-linux2-2.png" alt="" width="1552" height="1608" class="alignnone size-full wp-image-14472" /></a>
+![](images/build-nextcloud-20-on-amazon-linux2-2.png)
 
 
 無事セットアップが完了しました！
 
-<a href="images/build-nextcloud-20-on-amazon-linux2-3.png"><img src="images/build-nextcloud-20-on-amazon-linux2-3.png" alt="" width="1499" height="1095" class="alignnone size-full wp-image-14473" /></a>
+![](images/build-nextcloud-20-on-amazon-linux2-3.png)
 
 それでは次回の記事でお会いしましょう。

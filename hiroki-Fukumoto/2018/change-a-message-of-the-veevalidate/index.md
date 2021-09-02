@@ -21,7 +21,7 @@ VeeValidateの導入方法などは本記事では紹介しません。
 <input type="text" class="" v-model="emailAddress" name='email' v-validate="{ required: true }">
 ```
 
-<img src="images/change-a-message-of-the-veevalidate-1.png" alt="" width="617" height="146" class="alignnone size-full wp-image-7728" />
+![](images/change-a-message-of-the-veevalidate-1.png)
 
 `v-validate="{ required: true }"` で必須チェックが有効になります。
 `v-validate="'required'"` でも可能です。
@@ -35,7 +35,7 @@ name属性の属性値をそのまま表示せずに、任意のテキストに�
 <input type="text" class="" v-model="emailAddress" name='email' v-validate="{ required: true }" data-vv-as="メールアドレス">
 ```
 
-<img src="images/change-a-message-of-the-veevalidate-2.png" alt="" width="614" height="146" class="alignnone size-full wp-image-7730" />
+![](images/change-a-message-of-the-veevalidate-2.png)
 
 ここまでが基本的なVeeValidateの使用方法です。
 
@@ -57,7 +57,7 @@ const dict = {
 Validator.localize('ja', dict)
 ```
 
-<img src="images/change-a-message-of-the-veevalidate-3.png" alt="" width="618" height="145" class="alignnone size-full wp-image-7731" />
+![](images/change-a-message-of-the-veevalidate-3.png)
 
 `custom` に対象となるルール名をキー、メッセージを値として定義してください。
 そうすると、VeeValidateにデフォルトで定義されている固有のメッセージを上書きすることができます。

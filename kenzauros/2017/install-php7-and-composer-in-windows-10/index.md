@@ -33,11 +33,11 @@ vagrant (Homestead) を導入するのに PHP をインストールとはなん�
 
 ダウンロードしたら解凍して **C ドライブ直下に配置**します。別に他の場所でもいいのですが、一番わかりやすくてメンテしやすいので `C:\php` がおすすめです。
 
-<a href="images/install-php7-and-composer-in-windows-10-1.png"><img src="images/install-php7-and-composer-in-windows-10-1.png" alt="" width="176" height="384" class="aligncenter size-full wp-image-3866" /></a>
+![](images/install-php7-and-composer-in-windows-10-1.png)
 
 ### PATH の追加
 
-<a href="images/install-php7-and-composer-in-windows-10-2.png"><img src="images/install-php7-and-composer-in-windows-10-2.png" alt="PHP 7 のパス追加" width="1267" height="911" class="aligncenter size-full wp-image-3867" /></a>
+![PHP 7 のパス追加](images/install-php7-and-composer-in-windows-10-2.png)
 
 スタートボタン右クリックからシステムを開くか、 Windows + Pause キー でシステムを開き、下記の手順でパスを追加します。
 

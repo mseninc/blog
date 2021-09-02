@@ -27,86 +27,86 @@ NASをデータストアにマウントすることで、仮想マシンイメ�
 ### 共有フォルダの作成
 
 ブラウザからDS216jの管理コンソールに接続し、「コントロールパネル」を起動。
-<img src="images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-1.png" alt="" width="578" height="383" class="alignnone size-full wp-image-3516" />
+![](images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-1.png)
 
 「共有フォルダ」をクリック。
-<img src="images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-2.png" alt="" width="578" height="383" class="alignnone size-full wp-image-3518" />
+![](images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-2.png)
 
 「作成」をクリック。
-<img src="images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-3.png" alt="" width="578" height="383" class="alignnone size-full wp-image-3519" />
+![](images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-3.png)
 
 フォルダの名前を入力して「OK」をクリック。
-<img src="images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-4.png" alt="" width="578" height="383" class="alignnone size-full wp-image-3521" />
+![](images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-4.png)
 
 ### NFSの設定
 
 コントロールパネルより、「ファイルサービス」をクリック。
-<img src="images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-5.png" alt="" width="578" height="383" class="alignnone size-full wp-image-3524" />
+![](images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-5.png)
 
 Win/Mac/NFSタブ > NFSサービス　の「NFSを有効にする」をチェックして「適用」をクリック。
-<img src="images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-6.png" alt="" width="578" height="383" class="alignnone size-full wp-image-3525" />
+![](images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-6.png)
 
 左ペインの「共有フォルダ」より、前項で作成したフォルダを選択して「編集」をクリック。
-<img src="images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-7.png" alt="" width="592" height="412" class="alignnone size-full wp-image-3522" />
+![](images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-7.png)
 
 NFS権限タブの「作成」をクリック。
-<img src="images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-8.png" alt="" width="578" height="383" class="alignnone size-full wp-image-3523" />
+![](images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-8.png)
 
 ホスト名またはIP欄に接続するESXiホストのIPアドレスを入力。
 ※複数のESXiホストにマウントする場合は、ネットワークアドレスなどを指定してください。
 「マウントしたサブフォルダへのアクセスを許可する」をチェックして「OK」をクリック。
-<img src="images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-9.png" alt="" width="578" height="383" class="alignnone size-full wp-image-3527" />
+![](images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-9.png)
 
 作成されたことを確認して、「OK」をクリック。
-<img src="images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-10.png" alt="" width="578" height="383" class="alignnone size-full wp-image-3528" />
+![](images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-10.png)
 
 ### サブフォルダの作成
 
 コンソールトップより、「File Station」を起動。
-<img src="images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-11.png" alt="" width="578" height="383" class="alignnone size-full wp-image-3529" />
+![](images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-11.png)
 
 左ペインから作成したフォルダを選択 > 作成 > フォルダの作成の順にクリック。
-<img src="images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-12.png" alt="" width="578" height="383" class="alignnone size-full wp-image-3530" />
+![](images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-12.png)
 
 サブフォルダ名を入力し、「OK」をクリック。
 今回は、isoを入れておくためのフォルダを作成するので「iso」と名付けました。
-<img src="images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-13.png" alt="" width="578" height="383" class="alignnone size-full wp-image-3531" />
+![](images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-13.png)
 
 フォルダが作成されたことを確認。
-<img src="images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-14.png" alt="" width="578" height="383" class="alignnone size-full wp-image-3532" />
+![](images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-14.png)
 
 あとは、エクスプローラーから共有フォルダにアクセスし、ファイルなどをアップロードします。
 画像はCentOS7のisoをアップロード後の状態
-<img src="images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-15.png" alt="" width="578" height="383" class="alignnone size-full wp-image-3533" />
+![](images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-15.png)
 
 ## ESXiにマウント
 作成した共有フォルダをESXiにマウントします。
 
 ブラウザより「https://<ESXiのIPアドレス/ui>」にアクセスし、ログインします。
-<img src="images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-16.png" alt="" width="578" height="383" class="alignnone size-full wp-image-3534" />
+![](images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-16.png)
 
 左ペインのストレージをクリック。
-<img src="images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-17.png" alt="" width="578" height="383" class="alignnone size-full wp-image-3535" />
+![](images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-17.png)
 
 「新しいデータストア」をクリック。
-<img src="images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-18.png" alt="" width="578" height="383" class="alignnone size-full wp-image-3536" />
+![](images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-18.png)
 
 「NFSデータストアのマウント」を選択し、「次へ」をクリック。
-<img src="images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-19.png" alt="" width="578" height="383" class="alignnone size-full wp-image-3538" />
+![](images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-19.png)
 
 マウントするフォルダの名前、DS216jのIPアドレス、NFSシェアを入力し、「次へ」をクリック。
 NFSシェアはマウントするDS216jのディレクトリです。ここではサブフォルダのisoを指定しています。
 またパスは、**/<ボリューム名>/<フォルダ名>/<サブフォルダ名>** のように、**ボリューム名から指定**する必要があります。
-<img src="images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-20.png" alt="" width="578" height="383" class="alignnone size-full wp-image-3539" />
+![](images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-20.png)
 
 内容を確認して「完了」をクリック。
-<img src="images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-21.png" alt="" width="578" height="383" class="alignnone size-full wp-image-3540" />
+![](images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-21.png)
 
 データストアが追加されたことを確認します。
-<img src="images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-22.png" alt="" width="578" height="383" class="alignnone size-full wp-image-3542" />
+![](images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-22.png)
 
 データストアブラウザを起動してみると、先ほどアップロードしたCentOS7のisoがちゃんと入っています。
-<img src="images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-23.png" alt="" width="578" height="383" class="alignnone size-full wp-image-3543" />
+![](images/vsphere-esxi-synology-ds216j-mount-nfs-datastore-23.png)
 
 複数のESXiホストへマウントしたい場合は、同様の手順を繰り返してください。
 

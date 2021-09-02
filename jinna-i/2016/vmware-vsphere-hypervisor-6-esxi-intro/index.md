@@ -35,15 +35,15 @@ KVMについては、社長が紹介していますのでご覧ください。
 
 [VMwareのWebサイト](https://my.vmware.com/jp/web/vmware/evalcenter?p=free-esxi6)より、ESXiをダウンロードします。
 ダウンロードにはVMwareアカウントが必要ですので、お持ちでない場合は「アカウントの作成」より作成してください。
-<img src="images/vmware-vsphere-hypervisor-6-esxi-intro-1.png" alt="j-esxi-intro_002" width="1024" height="727" class="alignnone size-large wp-image-3094" />
+![j-esxi-intro_002](images/vmware-vsphere-hypervisor-6-esxi-intro-1.png)
 
 製品の登録が完了するとライセンスキーが発行され、パッケージのダウンロードが可能となります。
 「手動ダウンロード」をクリックし、ESXiのISOイメージをダウンロードします。
-<img src="images/vmware-vsphere-hypervisor-6-esxi-intro-2.png" alt="j-esxi-intro_003" width="1024" height="727" class="alignnone size-large wp-image-3096" />
+![j-esxi-intro_003](images/vmware-vsphere-hypervisor-6-esxi-intro-2.png)
 
 ダウンロードしたISOをブートメディアに焼きます。
 サイズも357MBと小さいので、筆者はCD-Rにしました。
-<img src="images/vmware-vsphere-hypervisor-6-esxi-intro-3.png" alt="j-esxi-intro_015" width="421" height="580" class="alignnone size-full wp-image-3098" />
+![j-esxi-intro_015](images/vmware-vsphere-hypervisor-6-esxi-intro-3.png)
 
 あとは、ESXiをインストールするマシンにブートメディアをセットし、インストールを行います。
 画面のスクリーンショットが取れないので、インストール手順は割愛させていただきます。
@@ -54,7 +54,7 @@ KVMについては、社長が紹介していますのでご覧ください。
 ## ESXiにアクセスしてみる
 
 インストールが完了したESXiの画面を見てもらえるとわかりますが、以下のような黄色とグレーの画面が表示されます。
-<img src="images/vmware-vsphere-hypervisor-6-esxi-intro-4.png" alt="j-esxi-intro_016e" width="1024" height="681" class="alignnone size-large wp-image-3124" />
+![j-esxi-intro_016e](images/vmware-vsphere-hypervisor-6-esxi-intro-4.png)
 
 ESXi単体ではIPアドレスやホスト名、DNSなどの設定をします。
 実際に仮想マシンを操作する場合はVMwareが提供しているクライアントインターフェースからESXiにリモート接続しておこないます。
@@ -69,43 +69,43 @@ ESXi単体ではIPアドレスやホスト名、DNSなどの設定をします�
 ESXiにはブラウザ経由でアクセスできます。
 ブラウザを起動し、ESXiのIPアドレスを入力して接続します。
 https://[IPアドレス]
-<img src="images/vmware-vsphere-hypervisor-6-esxi-intro-5.png" alt="j-esxi-intro_004e" width="1024" height="727" class="alignnone size-large wp-image-3102" />
+![j-esxi-intro_004e](images/vmware-vsphere-hypervisor-6-esxi-intro-5.png)
 
 ここでSSL証明書がインストールされていないためエラーが表示されますが、「このWebページの閲覧を続ける」をクリックします。
 ※ブラウザにより表現が異なります。
-<img src="images/vmware-vsphere-hypervisor-6-esxi-intro-6.png" alt="j-esxi-intro_005e" width="1024" height="727" class="alignnone size-large wp-image-3104" />
+![j-esxi-intro_005e](images/vmware-vsphere-hypervisor-6-esxi-intro-6.png)
 
 今回はHost Clientを使用しますので、「Open the VMware Host Client」をクリックします。
 ※ https://[IPアドレス]/ui/ で直接アクセスすることもできます。
-<img src="images/vmware-vsphere-hypervisor-6-esxi-intro-7.png" alt="j-esxi-intro_006e" width="1024" height="727" class="alignnone size-large wp-image-3106" />
+![j-esxi-intro_006e](images/vmware-vsphere-hypervisor-6-esxi-intro-7.png)
 
 ユーザー名にroot、ESXiのパスワードを入力し、ログインします。
-<img src="images/vmware-vsphere-hypervisor-6-esxi-intro-8.png" alt="j-esxi-intro_008" width="1024" height="727" class="alignnone size-large wp-image-3109" />
+![j-esxi-intro_008](images/vmware-vsphere-hypervisor-6-esxi-intro-8.png)
 
 ホーム画面はこんな感じです。
 vSphere Web Clientによく似たUIです。
-<img src="images/vmware-vsphere-hypervisor-6-esxi-intro-9.png" alt="j-esxi-intro_009" width="1024" height="628" class="alignnone size-large wp-image-3110" />
+![j-esxi-intro_009](images/vmware-vsphere-hypervisor-6-esxi-intro-9.png)
 
 ## ライセンス登録
 
 ホーム画面の左ペインより、「ホスト」 > 「管理」をクリックします。
-<img src="images/vmware-vsphere-hypervisor-6-esxi-intro-10.png" alt="j-esxi-intro_009e" width="1024" height="628" class="alignnone size-large wp-image-3111" />
+![j-esxi-intro_009e](images/vmware-vsphere-hypervisor-6-esxi-intro-10.png)
 
 ライセンスタブより「ライセンスの割り当て」をクリックします。
-<img src="images/vmware-vsphere-hypervisor-6-esxi-intro-11.png" alt="j-esxi-intro_010e" width="1024" height="628" class="alignnone size-large wp-image-3112" />
+![j-esxi-intro_010e](images/vmware-vsphere-hypervisor-6-esxi-intro-11.png)
 
 ポップアップウィンドウが表示されるので、製品登録時に発行されたライセンスを入力し、「ライセンスの確認」をクリックします。
-<img src="images/vmware-vsphere-hypervisor-6-esxi-intro-12.png" alt="j-esxi-intro_012e2" width="1024" height="628" class="alignnone size-large wp-image-3114" />
+![j-esxi-intro_012e2](images/vmware-vsphere-hypervisor-6-esxi-intro-12.png)
 
 ライセンス認証に成功すると以下のように表示されます。
-<img src="images/vmware-vsphere-hypervisor-6-esxi-intro-13.png" alt="j-esxi-intro_013e" width="1024" height="628" class="alignnone size-large wp-image-3115" />
+![j-esxi-intro_013e](images/vmware-vsphere-hypervisor-6-esxi-intro-13.png)
 
 ## まとめ
 
 さて、いよいよ仮想化基盤の準備ができました。
 図で示すと以下のような感じですね。
 ハードウェア上に仮想化用のハイパーバイザーが載っている状態です。
-<img src="images/vmware-vsphere-hypervisor-6-esxi-intro-14.png" alt="j-esxi-intro_001e" width="1024" height="537" class="alignnone size-large wp-image-3118" />
+![j-esxi-intro_001e](images/vmware-vsphere-hypervisor-6-esxi-intro-14.png)
 
 次は仮想マシンを作っていきましょう。
 [無償の仮想化基盤 VMware vSphere Hypervisor 6.0 (vSphere ESXi) を使ってみる。【 仮想マシン作成編 】](https://mseeeen.msen.jp/vmware-vsphere-hypervisor-6-esxi-intro-2/)

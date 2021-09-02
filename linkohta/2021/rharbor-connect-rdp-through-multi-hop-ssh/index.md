@@ -36,7 +36,7 @@ RHarbor は以下のような方に便利です。
 2. `プロパティ`の項目に**接続先の PC** のホストやポート、ユーザー名とパスワードなどの必要な情報を入力します。
 3. 右下のフロッピーディスクのボタンを押して保存します。
 
-![rharbor1](images/rharbor-connect-rdp-through-multi-hop-ssh-1.png)
+![rharbor1](https://mseeeen.msen.jp/wp-content/uploads/2021/06/2021-06-08_17h05_53.png)
 
 **SSH の設定が必要な場合の手順**
 
@@ -45,9 +45,9 @@ RHarbor は以下のような方に便利です。
 3. 右下のフロッピーディスクのボタンを押して保存します。
 4. `RDP` で**接続したい PC の`その他の設定`の`必要な接続`から先ほど設定した SSH を選択。**
 
-![rharbor2](images/rharbor-connect-rdp-through-multi-hop-ssh-2.png)
+![rharbor2](https://mseeeen.msen.jp/wp-content/uploads/2021/06/2021-06-08_17h08_10.png)
 
-![rharbor3](images/rharbor-connect-rdp-through-multi-hop-ssh-3.png)
+![rharbor3](https://mseeeen.msen.jp/wp-content/uploads/2021/06/2021-06-18_17h41_56.png)
 
 後は接続したい PC の項目にあるコンセントプラグのボタンを押すだけで接続することができます。
 
@@ -61,19 +61,19 @@ RHarbor は以下のような方に便利です。
 2. PC2(SSH) の接続設定を作成
 3. PC3(RDP) の接続設定を作成
 
-![ssh](images/rharbor-connect-rdp-through-multi-hop-ssh-4.png)
+![ssh](https://mseeeen.msen.jp/wp-content/uploads/2021/06/ssh.png)
 
 まず、 SSH で PC1 の設定を作ります。
 
-![tadan1](images/rharbor-connect-rdp-through-multi-hop-ssh-5.png)
+![tadan1](https://mseeeen.msen.jp/wp-content/uploads/2021/06/2021-06-16_15h49_23.png)
 
 次に、 SSH で PC2 の設定を作成します。**その際、`プロパティ`の`必要な接続`に PC1 を指定します。**
 
-![tadan2](images/rharbor-connect-rdp-through-multi-hop-ssh-6.png)
+![tadan2](https://mseeeen.msen.jp/wp-content/uploads/2021/06/2021-06-16_15h49_42.png)
 
 最後に RDP で PC3 の設定を作って、**`プロパティ`の`必要な接続`に PC2 に指定します。**
 
-![tadan3](images/rharbor-connect-rdp-through-multi-hop-ssh-7.png)
+![tadan3](https://mseeeen.msen.jp/wp-content/uploads/2021/06/2021-06-16_15h49_57-1.png)
 
 後は PC3 で接続するだけです。 PC1 → PC2 の順に接続が開始され、成功するとリモートデスクトップの認証画面が表示されます。
 

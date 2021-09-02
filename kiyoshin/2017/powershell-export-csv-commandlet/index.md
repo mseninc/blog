@@ -17,7 +17,7 @@ CSVファイルを出力する方法は読み込む方法と同様にいくつ�
 
 [Get-EventLog](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-eventlog?view=powershell-5.1) コマンドレットでシステムログを出力すると以下の通りになります。
 
-<img src="images/powershell-export-csv-commandlet-1.png" alt="" width="1394" height="692" class="alignleft size-full wp-image-5763" />
+![](images/powershell-export-csv-commandlet-1.png)
 
 上記の出力された内容をCSVファイルに出力してみます。
 

@@ -63,7 +63,7 @@ vue init webpack app
 
 インストールが完了した状態ではディレクトリ構成は次のようになっていました。
 
-<a href="images/organize-vue-js-dev-env-by-cli-1.png"><img src="images/organize-vue-js-dev-env-by-cli-1.png" alt="vue-cli でインストール後の Vue プロジェクト" width="262" height="903" class="aligncenter size-full wp-image-5424" /></a>
+![vue-cli でインストール後の Vue プロジェクト](images/organize-vue-js-dev-env-by-cli-1.png)
 
 ## npm パッケージのインストール
 
@@ -80,6 +80,6 @@ npm i
 
 インストール後、 `npm run dev` を実行すると `http://localhost:8080` で開発環境が起動し、 ブラウザーでデフォルトのトップページが立ち上がります。
 
-<a href="images/organize-vue-js-dev-env-by-cli-2.png"><img src="images/organize-vue-js-dev-env-by-cli-2.png" alt="" width="1062" height="766" class="aligncenter size-full wp-image-5425" /></a>
+![](images/organize-vue-js-dev-env-by-cli-2.png)
 
 これで Vue.js の開発環境構築は完了です。

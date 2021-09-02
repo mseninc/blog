@@ -10,7 +10,7 @@ tags: [Windows, Windows プロファイル, Windows10]
 [前回の記事](https://mseeeen.msen.jp/update-the-default-profile-without-using-sysprep/)で、**sysprepを使わずデフォルトプロファイルをカスタムする** を公開しましたが、
 このとき、 プロファイルのカスタムでは **既定のアプリ設定が引き継げない問題が発生** しました。
 
-<a href="images/how-to-customize-established-app-settings-1.png"><img src="images/how-to-customize-established-app-settings-1.png" alt="" width="475" height="363" class="alignnone size-full wp-image-13110" /></a>
+![](images/how-to-customize-established-app-settings-1.png)
 
 この **解消方法を紹介** させていただきます。
 
@@ -48,11 +48,11 @@ tags: [Windows, Windows プロファイル, Windows10]
 
 ## ローカルグループポリシーを設定
 1. **ファイル名を指定して実行** から `gpedit.msc` を実行します
-<a href="images/how-to-customize-established-app-settings-2.png"><img src="images/how-to-customize-established-app-settings-2.png" alt="" width="393" height="203" class="alignnone size-full wp-image-13118" /></a>
+![](images/how-to-customize-established-app-settings-2.png)
 1. **コンピューザーの構成→管理用テンプレート→Windowsコンポーネント→エクスプローラー** と開き、 **既定の関連付け構成ファイルの設定** を開きます
-<a href="images/how-to-customize-established-app-settings-3.png"><img src="images/how-to-customize-established-app-settings-3.png" alt="" width="1070" height="1165" class="alignnone size-full wp-image-13119" /></a>
+![](images/how-to-customize-established-app-settings-3.png)
 1. **未構成から有効に変更** し、 **構成ファイルに C:\Windows\System32\ExportDefaultApp.xml を指定** し OKをクリックします
-<a href="images/how-to-customize-established-app-settings-4.png"><img src="images/how-to-customize-established-app-settings-4.png" alt="" width="681" height="635" class="alignnone size-full wp-image-13120" /></a>
+![](images/how-to-customize-established-app-settings-4.png)
 
 これで、既定のアプリ設定がひな形ユーザーで設定したものと同様になります。
 

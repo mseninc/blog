@@ -9,9 +9,9 @@ tags: [Windows, Windows 10, その他, ライフハック]
 
 つい先ほど、PCにログインすると・・・
 
-<img src="images/turn-off-high-contrast-mode-in-windows-10-1.png" alt="" width="2875" height="1616" class="alignnone size-full wp-image-7404" />
+![](images/turn-off-high-contrast-mode-in-windows-10-1.png)
 
-<img src="images/turn-off-high-contrast-mode-in-windows-10-2.png" alt="" width="117" height="64" class="alignnone size-full wp-image-7412" />
+![](images/turn-off-high-contrast-mode-in-windows-10-2.png)
 
 「なんじゃこりゃーー」
 ※ちょっと分かりにくいと思うので、赤枠のところが普通とは違うことをお察しください。
@@ -31,14 +31,14 @@ tags: [Windows, Windows 10, その他, ライフハック]
 
 ここを参考にすると、[設定]→[個人設定]→[色]から、**[既定のアプリモードを選択します]** の部分を黒から白に変更するとありますが、
 
-<img src="images/turn-off-high-contrast-mode-in-windows-10-3.png" alt="" width="1602" height="1309" class="alignnone size-full wp-image-7405" />
+![](images/turn-off-high-contrast-mode-in-windows-10-3.png)
 
  **変更することができない** ・・・
 
 ん？
 同じ設定画面の少し上部にいくと、
 
-<img src="images/turn-off-high-contrast-mode-in-windows-10-4.png" alt="" width="1128" height="567" class="alignnone size-full wp-image-7406" />
+![](images/turn-off-high-contrast-mode-in-windows-10-4.png)
 
 **一部の設定はハイコントラストモードでは利用できません** という記述があります。
 
@@ -49,18 +49,18 @@ tags: [Windows, Windows 10, その他, ライフハック]
 設定トップから、 [コントラスト] と検索窓に入れて、 **ハイコントラスト設定** を開きます。
 なぜか、ハイ と コントラスト の間に半角スペースが入っているので、 [ハイコントラスト] と検索窓に入れると検索にかからないので注意です。
 
-<img src="images/turn-off-high-contrast-mode-in-windows-10-5.png" alt="" width="1602" height="1309" class="alignnone size-full wp-image-7407" />
+![](images/turn-off-high-contrast-mode-in-windows-10-5.png)
 
 早速オフにします。
 
-<img src="images/turn-off-high-contrast-mode-in-windows-10-6.png" alt="" width="1602" height="1309" class="alignnone size-full wp-image-7408" />
+![](images/turn-off-high-contrast-mode-in-windows-10-6.png)
 ※画面が[変更しています]、というようなメッセージだけになりますが、大丈夫です。冷静に。
 
 おぉぉ・・・戻りました。
 
-<img src="images/turn-off-high-contrast-mode-in-windows-10-7.png" alt="" width="1602" height="1309" class="alignnone size-full wp-image-7409" />
+![](images/turn-off-high-contrast-mode-in-windows-10-7.png)
 
-<img src="images/turn-off-high-contrast-mode-in-windows-10-8.png" alt="" width="2876" height="1617" class="alignnone size-full wp-image-7410" />
+![](images/turn-off-high-contrast-mode-in-windows-10-8.png)
 
 ## あとがき
 

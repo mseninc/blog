@@ -55,7 +55,7 @@ tags: [Windows Server, リモートデスクトップ, Windows]
 
 設定時間が経過すると下記のダイアログが表示され、2分後に切断されます。無慈悲にも延長の余地はありません。
 
-<a href="images/how-to-limit-remote-desktop-session-time-from-group-policy-1.png"><img src="images/how-to-limit-remote-desktop-session-time-from-group-policy-1.png" alt="" width="690" height="216" class="alignnone size-full wp-image-13483" /></a>
+![](images/how-to-limit-remote-desktop-session-time-from-group-policy-1.png)
 
 ### アイドルタイムアウト
 
@@ -66,7 +66,7 @@ tags: [Windows Server, リモートデスクトップ, Windows]
 
 設定時間が経過すると下記のダイアログが表示されます。しかし、先ほどの接続タイムアウトと異なり、操作を続けるとタイムアウトは免れることができます。
 
-<a href="images/how-to-limit-remote-desktop-session-time-from-group-policy-2.png"><img src="images/how-to-limit-remote-desktop-session-time-from-group-policy-2.png" alt="" width="687" height="214" class="alignnone size-full wp-image-13491" /></a>
+![](images/how-to-limit-remote-desktop-session-time-from-group-policy-2.png)
 
 ### 切断タイムアウト
 

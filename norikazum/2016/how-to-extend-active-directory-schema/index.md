@@ -17,7 +17,7 @@ Microsoftが提供しているOffice365サービスとActiveDirectory連携の�
 1. [こちらのリンク](https://www.microsoft.com/ja-jp/evalcenter/evaluate-exchange-server-2013)から、Exchange Server 2013 の評価版をダウンロードします。**ダウンロードはサインイン後に可能となるため、Microsoftアカウントの登録が事前に必要です。**
 1. C:\exchange 等任意のフォルダを作成します。
 1. ダウンロードしたファイルを実行し、c:\exchange を指定し展開します。**デスクトップなどに展開してしまうと大量のファイルが展開されてしまいますので注意が必要です。**
-<img src="images/how-to-extend-active-directory-schema-1.png" alt="exchange01" width="302" height="121" class="alignnone size-full wp-image-603" />
+![exchange01](images/how-to-extend-active-directory-schema-1.png)
 1. コマンドプロンプトを実行し、以下のコマンドにてスキーマを拡張します。
 ```
 cd c:\exchange
@@ -43,8 +43,8 @@ Exchange Server のセットアップは正常に完了しました。
 
 ## 確認
 1. ActiveDirecotryユーザとコンピュータを開き、**表示→拡張機能をクリック**し有効にします。
-<img src="images/how-to-extend-active-directory-schema-2.jpg" alt="ad-kakuchokinou" width="394" height="238" class="alignnone size-full wp-image-695" />
+![ad-kakuchokinou](images/how-to-extend-active-directory-schema-2.jpg)
 1. ActiveDirecotryユーザとコンピュータを開き、任意のユーザープロパティから、属性エディタータブを開きます。
-<img src="images/how-to-extend-active-directory-schema-3.png" alt="exchange02" width="485" height="633" class="alignnone size-full wp-image-605" />
+![exchange02](images/how-to-extend-active-directory-schema-3.png)
 
 **msDS-oo**が複数追加されていることが確認できればスキーマ拡張は成功です。

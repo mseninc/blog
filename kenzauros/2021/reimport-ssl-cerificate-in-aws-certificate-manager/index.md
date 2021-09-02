@@ -11,7 +11,7 @@ tags: [AWS, SSL]
 
 **TLS/SSL 証明書の期限が迫ると Certificate Manager 上で下記のような警告が表示される**ようになります。今回の証明書は後3日の命でした。
 
-<a href="images/reimport-ssl-cerificate-in-aws-certificate-manager-1.png"><img src="images/reimport-ssl-cerificate-in-aws-certificate-manager-1.png" alt="" width="1397" height="1226" class="aligncenter size-full wp-image-16118" /></a>
+![](images/reimport-ssl-cerificate-in-aws-certificate-manager-1.png)
 
 証明書の期限が切れるといろいろと影響を及ぼしますので早めに更新しましょう。
 
@@ -33,15 +33,15 @@ tags: [AWS, SSL]
 
 入力したら**「レビューとインポート」**をクリックします。
 
-<a href="images/reimport-ssl-cerificate-in-aws-certificate-manager-2.png"><img src="images/reimport-ssl-cerificate-in-aws-certificate-manager-2.png" alt="" width="1397" height="759" class="aligncenter size-full wp-image-16119" /></a>
+![](images/reimport-ssl-cerificate-in-aws-certificate-manager-2.png)
 
 現在と新しい証明書の内容を確認します。**有効期限が延びていれば OK** です。
 
-<a href="images/reimport-ssl-cerificate-in-aws-certificate-manager-3.png"><img src="images/reimport-ssl-cerificate-in-aws-certificate-manager-3.png" alt="" width="1397" height="783" class="aligncenter size-full wp-image-16120" /></a>
+![](images/reimport-ssl-cerificate-in-aws-certificate-manager-3.png)
 
 更新が完了すると一覧画面で警告が消えているはずです。念のためもう一度有効期限を確認しておきましょう。
 
-<a href="images/reimport-ssl-cerificate-in-aws-certificate-manager-4.png"><img src="images/reimport-ssl-cerificate-in-aws-certificate-manager-4.png" alt="" width="1397" height="783" class="aligncenter size-full wp-image-16123" /></a>
+![](images/reimport-ssl-cerificate-in-aws-certificate-manager-4.png)
 
 なお、**同じ証明書を複数リージョンで登録している場合は、個別に更新が必要**ですので注意してください。
 

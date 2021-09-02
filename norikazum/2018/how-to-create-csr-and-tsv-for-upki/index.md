@@ -26,7 +26,7 @@ UPKIは、国立情報学研究所(National Institute of Informatics※)が運�
 
 シチュエーションとして、弊社が学術機関のサーバーを設定する業者として証明書を入手するまでの流れを想定します。(あくまで一例です)
 
-<img src="images/how-to-create-csr-and-tsv-for-upki-1.png" alt="" width="1126" height="829" class="alignnone size-full wp-image-8183" />
+![](images/how-to-create-csr-and-tsv-for-upki-1.png)
 
 次項から順番に作業を開始していきましょう。
 
@@ -131,20 +131,20 @@ NIIで提供されているツールを利用して作成します。
 以下の流れで作成します。
 
 1. 以下の画像を参考に作成を開始します
-<img src="images/how-to-create-csr-and-tsv-for-upki-2.png" alt="" width="1425" height="952" class="alignnone size-full wp-image-8195" />
+![](images/how-to-create-csr-and-tsv-for-upki-2.png)
 
 1. ファイル選択から作成したCSRを読み込みます
-<img src="images/how-to-create-csr-and-tsv-for-upki-3.png" alt="" width="1425" height="952" class="alignnone size-full wp-image-8196" />
+![](images/how-to-create-csr-and-tsv-for-upki-3.png)
 ↓
-<img src="images/how-to-create-csr-and-tsv-for-upki-4.png" alt="" width="1425" height="952" class="alignnone size-full wp-image-8197" />
+![](images/how-to-create-csr-and-tsv-for-upki-4.png)
 ↓(無事読み込まれました)
-<img src="images/how-to-create-csr-and-tsv-for-upki-5.png" alt="" width="1425" height="952" class="alignnone size-full wp-image-8198" />
+![](images/how-to-create-csr-and-tsv-for-upki-5.png)
 
 1. 以下を参考に残りの情報を入力します
-<img src="images/how-to-create-csr-and-tsv-for-upki-6.png" alt="" width="1425" height="952" class="alignnone size-full wp-image-8199" />
+![](images/how-to-create-csr-and-tsv-for-upki-6.png)
 
 1. ここまででTSVが作成され、ダウンロードボタンを押せばTSVがダウンロードされます
-<img src="images/how-to-create-csr-and-tsv-for-upki-7.png" alt="" width="1425" height="952" class="alignnone size-full wp-image-8201" />
+![](images/how-to-create-csr-and-tsv-for-upki-7.png)
 
 以上でTSVの作成が完了です。
 

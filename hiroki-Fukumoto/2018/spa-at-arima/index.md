@@ -19,16 +19,16 @@ tags: [レク, その他]
 到着してまず最初に、温泉街を歩きました。
 雪がちらついており、冬の温泉街にはぴったりな風景でした。
 
-<img src="images/spa-at-arima-1.png" alt="" width="720" height="540" class="alignnone size-full wp-image-6576" />
+![](images/spa-at-arima-1.png)
 
-<img src="images/spa-at-arima-2.png" alt="" width="720" height="540" class="alignnone size-full wp-image-6575" />
+![](images/spa-at-arima-2.png)
 
-<img src="images/spa-at-arima-3.png" alt="" width="720" height="540" class="alignnone size-full wp-image-6574" />
+![](images/spa-at-arima-3.png)
 
 そして、有馬温泉と言えば*炭酸せんべい*！
 歩けば炭酸せんべいを販売しているお店があるという感じでした。
 
-<img src="images/spa-at-arima-4.png" alt="" width="720" height="540" class="alignnone size-full wp-image-6584" />
+![](images/spa-at-arima-4.png)
 
 *生炭酸せんべい*もありました！
 焼きたてから5秒以内に食べて！とのこと。
@@ -37,9 +37,9 @@ tags: [レク, その他]
 
 そして、歩くたびに発見する怪しい看板。。。
 
-<img src="images/spa-at-arima-5.png" alt="" width="720" height="772" class="alignnone size-full wp-image-6577" />
+![](images/spa-at-arima-5.png)
 
-<img src="images/spa-at-arima-6.png" alt="" width="720" height="540" class="alignnone size-full wp-image-6572" />
+![](images/spa-at-arima-6.png)
 
 子ども。。。？おじさん。。。？飛び出し坊やか！！（笑）
 
@@ -51,12 +51,12 @@ tags: [レク, その他]
 そしてまた歩いていると、なにやら風情のある階段を発見！！
 そこを駆け上がると
 
-<img src="images/spa-at-arima-7.png" alt="" width="720" height="960" class="alignnone size-full wp-image-6585" />
+![](images/spa-at-arima-7.png)
 
 神社を発見！！
 神社に雪。神々しいですね。
 
-<img src="images/spa-at-arima-8.png" alt="" width="720" height="540" class="alignnone size-full wp-image-6578" />
+![](images/spa-at-arima-8.png)
 
 ここは[湯泉神社（とうせんじんじゃ）](http://www.tousen.or.jp/)という神社で、*子宝・安産・厄除け・交通安全・商売繁盛・健康長寿祈願*などのご利益があるとのことで、メンバー全員にご利益があるようにしっかり参拝してきました。
 
@@ -65,12 +65,12 @@ tags: [レク, その他]
 さぁ、そろそろ宿のチェックインの時間が近づいてきましたので、宿へ向かいました。
 今回は[兵衛向陽閣](https://www.hyoe.co.jp/)さんにお世話になります。
 
-<img src="images/spa-at-arima-9.png" alt="" width="720" height="540" class="alignnone size-full wp-image-6580" />
+![](images/spa-at-arima-9.png)
 
 なんと、創業700年の歴史があるそうで、3種類の温泉があります！
 どんな部屋かわくわくしながら、向かうと、、、、
 
-<img src="images/spa-at-arima-10.png" alt="" width="720" height="540" class="alignnone size-full wp-image-6581" />
+![](images/spa-at-arima-10.png)
 
 *！！！！*
 いやー、素晴らしい。
@@ -88,9 +88,9 @@ tags: [レク, その他]
 さて、お楽しみの晩御飯です！
 お品書きはこんな感じでした。
 
-<img src="images/spa-at-arima-11.png" alt="" width="720" height="540" class="alignnone size-full wp-image-6571" />
+![](images/spa-at-arima-11.png)
 
-<img src="images/spa-at-arima-12.png" alt="" width="720" height="540" class="alignnone size-full wp-image-6573" />
+![](images/spa-at-arima-12.png)
 
 刺身、神戸牛、蟹などなど美味しいものをたくさんいただきました！
 

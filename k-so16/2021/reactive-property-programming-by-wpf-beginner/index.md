@@ -39,35 +39,35 @@ Visual Studio から WPF のプロジェクトを作成する方法を説明し�
 
 まず Visual Studio を開き、 **新しいプロジェクトの作成** を選択し、プロジェクトのテンプレート一覧から **WPF アプリケーション** を選択ます。
 
-[caption id="attachment_16227" align="aligncenter" width="800"]<a href="images/reactive-property-programming-by-wpf-beginner-1.png"><img src="images/reactive-property-programming-by-wpf-beginner-1.png" alt="" width="800" height="531" class="size-full wp-image-16227" /></a> Visual Studio の起動画面[/caption]
+![](images/reactive-property-programming-by-wpf-beginner-1.png)
 
-[caption id="attachment_16228" align="aligncenter" width="800"]<a href="images/reactive-property-programming-by-wpf-beginner-2.png"><img src="images/reactive-property-programming-by-wpf-beginner-2.png" alt="" width="800" height="531" class="size-full wp-image-16228" /></a> テンプレートの選択画面[/caption]
+![](images/reactive-property-programming-by-wpf-beginner-2.png)
 
 プロジェクト名やプロジェクトの保存先の設定画面に遷移したら、それぞれの項目について設定を行います。ソリューション名はプロジェクト名を入力すると自動的に入力されます。
 
-[caption id="attachment_16229" align="aligncenter" width="800"]<a href="images/reactive-property-programming-by-wpf-beginner-3.png"><img src="images/reactive-property-programming-by-wpf-beginner-3.png" alt="" width="800" height="531" class="size-full wp-image-16229" /></a> プロジェクト名の入力画面[/caption]
+![](images/reactive-property-programming-by-wpf-beginner-3.png)
 
 追加情報は特に変更する必要はないので、 **作成** ボタンを押します。これで WPF プロジェクトの作成が完了します。
 
-[caption id="attachment_16230" align="aligncenter" width="800"]<a href="images/reactive-property-programming-by-wpf-beginner-4.png"><img src="images/reactive-property-programming-by-wpf-beginner-4.png" alt="" width="800" height="531" class="size-full wp-image-16230" /></a> 追加情報の設定画面[/caption]
+![](images/reactive-property-programming-by-wpf-beginner-4.png)
 
 ## ReactiveProperty のインストール
 
 ソリューションエクスプローラーから、 **依存関係** を右クリックし、 **NuGet パッケージの管理** を選択します。
 
-[caption id="attachment_16231" align="aligncenter" width="351"]<a href="images/reactive-property-programming-by-wpf-beginner-5.png"><img src="images/reactive-property-programming-by-wpf-beginner-5.png" alt="" width="351" height="259" class="size-full wp-image-16231" /></a> 依存関係のコンテキストメニューから NuGet パッケージの管理を選択[/caption]
+![](images/reactive-property-programming-by-wpf-beginner-5.png)
 
 **参照** タブを選択し、 **ReactiveProperty** と検索してください。検索結果の一番上に **ReactiveProperty** と表示されるはずなので、それを選択してインストールします。特に事情がなければ最新版をインストールしましょう。
 
-[caption id="attachment_16232" align="aligncenter" width="800"]<a href="images/reactive-property-programming-by-wpf-beginner-6.png"><img src="images/reactive-property-programming-by-wpf-beginner-6.png" alt="" width="800" height="384" class="size-full wp-image-16232" /></a> ReactiveProperty を検索[/caption]
+![](images/reactive-property-programming-by-wpf-beginner-6.png)
 
-[caption id="attachment_16233" align="aligncenter" width="523"]<a href="images/reactive-property-programming-by-wpf-beginner-7.png"><img src="images/reactive-property-programming-by-wpf-beginner-7.png" alt="" width="523" height="607" class="size-full wp-image-16233" /></a> ReactiveProperty のインストール設定画面[/caption]
+![](images/reactive-property-programming-by-wpf-beginner-7.png)
 
 ## View の編集
 
 画面の UI の配置は **`MainWindow.xaml`** を編集します。 Visual Studio で `MainWindow.xaml` を開くと、上半分に画面のプレビューが、下半分に **XAML** と呼ばれる、ビューの UI の配置などを定義するための XML 形式の Markup が表示されます。
 
-[caption id="attachment_16266" align="aligncenter" width="800"]<a href="images/reactive-property-programming-by-wpf-beginner-8.png"><img src="images/reactive-property-programming-by-wpf-beginner-8.png" alt="" width="800" height="475" class="size-full wp-image-16266" /></a> XAML の編集画面[/caption]
+![](images/reactive-property-programming-by-wpf-beginner-8.png)
 
 入力用の `TextBox` と出力用の `Label` をビューに配置してみましょう。 `MainWindow.xaml` の `Grid` の中を以下のように編集します。
 
@@ -84,11 +84,11 @@ Visual Studio から WPF のプロジェクトを作成する方法を説明し�
 
 画面のプレビューが以下の画像のように表示されるはずです。
 
-[caption id="attachment_16235" align="aligncenter" width="800"]<a href="images/reactive-property-programming-by-wpf-beginner-9.png"><img src="images/reactive-property-programming-by-wpf-beginner-9.png" alt="" width="800" height="475" class="size-full wp-image-16235" /></a> コード例を実装したときのプレビュー画面[/caption]
+![](images/reactive-property-programming-by-wpf-beginner-9.png)
 
 デバッグ実行すると、実際に動作する際の画面が確認できます。
 
-[caption id="attachment_16234" align="aligncenter" width="800"]<a href="images/reactive-property-programming-by-wpf-beginner-10.png"><img src="images/reactive-property-programming-by-wpf-beginner-10.png" alt="" width="800" height="450" class="size-full wp-image-16234" /></a> デバッグの実行画面[/caption]
+![](images/reactive-property-programming-by-wpf-beginner-10.png)
 
 ## ViewModel の作成
 
@@ -99,15 +99,15 @@ Visual Studio から WPF のプロジェクトを作成する方法を説明し�
 1. **プロジェクトを右クリック** して「**追加**」を選択し「**新しいフォルダー**」を選択
     - フォルダー名を `ViewModels` として作成
 
-    [caption id="attachment_16239" align="aligncenter" width="645"]<a href="images/reactive-property-programming-by-wpf-beginner-11.png"><img src="images/reactive-property-programming-by-wpf-beginner-11.png" alt="" width="645" height="631" class="size-full wp-image-16239" /></a> フォルダーの作成[/caption]
+![](images/reactive-property-programming-by-wpf-beginner-11.png)
 
 1. **`ViewModels` フォルダーを右クリック** して「**追加**」を選択し「**クラス**」を選択
 
-    [caption id="attachment_16240" align="aligncenter" width="637"]<a href="images/reactive-property-programming-by-wpf-beginner-12.png"><img src="images/reactive-property-programming-by-wpf-beginner-12.png" alt="" width="637" height="326" class="size-full wp-image-16240" /></a> クラスの新規作成[/caption]
+![](images/reactive-property-programming-by-wpf-beginner-12.png)
 
 1. `ViewModel.cs` という名前で C# クラスファイルを作成
 
-    [caption id="attachment_16241" align="aligncenter" width="800"]<a href="images/reactive-property-programming-by-wpf-beginner-13.png"><img src="images/reactive-property-programming-by-wpf-beginner-13.png" alt="" width="800" height="555" class="size-full wp-image-16241" /></a> 新規作成のメニュー画面[/caption]
+![](images/reactive-property-programming-by-wpf-beginner-13.png)
 
 `ViewModel` クラスのファイルを作成したら、クラスファイルを選択して編集画面を開きます。 `ViewModel` クラスの作成の流れは次の通りです。
 
@@ -183,7 +183,7 @@ namespace MyFirstWpfApp
 
 実際に実行すると、 `TextBox` に入力された内容が `Label` に自動的に反映されることを確認できるはずです。
 
-[caption id="attachment_16263" align="aligncenter" width="800"]<a href="images/reactive-property-programming-by-wpf-beginner-14.gif"><img src="images/reactive-property-programming-by-wpf-beginner-14.gif" alt="" width="800" height="450" class="size-full wp-image-16263" /></a> 実際の動作の確認[/caption]
+![](images/reactive-property-programming-by-wpf-beginner-14.gif)
 
 ReactiveProperty を利用することで、手軽に簡単に MVVM のように UI コンポーネントとデータを制御できました。複雑な WPF アプリケーションを開発するには、 ReactiveProperty は不可欠といっても過言ではないですね(笑)
 

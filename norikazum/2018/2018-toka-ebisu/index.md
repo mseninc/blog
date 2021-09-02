@@ -16,12 +16,12 @@ tags: [その他, 〇〇奮闘記]
 ## 参拝・福笹
 午前中に参拝しましたが、平日なこともあって去年とは変わりとても落ち着いた感じです。
 
-<a href="images/2018-toka-ebisu-1.jpg"><img src="images/2018-toka-ebisu-1.jpg" alt="" class="aligncenter size-full wp-image-6352" /></a>
+![](images/2018-toka-ebisu-1.jpg)
 
 返納した去年の福笹です。
 1年間ありがとうございました。
 
-<a href="images/2018-toka-ebisu-2.jpg"><img src="images/2018-toka-ebisu-2.jpg" alt="" class="aligncenter size-full wp-image-6354" /></a>
+![](images/2018-toka-ebisu-2.jpg)
 
 今年の福笹です。
 
@@ -34,14 +34,14 @@ tags: [その他, 〇〇奮闘記]
 3.   「俵」　→金運や財運の豊作を願う(2017年3期目に向けて)
 4.   「打ち出の小槌」→打てばなんでも好きなものが出てくるといわれる(2018年4期目にむけて)
 
-<a href="images/2018-toka-ebisu-3.jpg"><img src="images/2018-toka-ebisu-3.jpg" alt="" class="aligncenter size-full wp-image-6353" /></a>
+![](images/2018-toka-ebisu-3.jpg)
 
 来年(2019年)も5つ目を飾り付けて投稿できるように頑張っていきたいと思います！
 
 ## あとがき
 
 3年連続で購入しているベビーカステラも今年は全く並ぶことなく購入できました。
-<a href="images/2018-toka-ebisu-4.jpg"><img src="images/2018-toka-ebisu-4.jpg" alt="" width="480" height="853" class="aligncenter size-full wp-image-6361" /></a>
+![](images/2018-toka-ebisu-4.jpg)
 
 福笹は **1月9日から11日まで終夜** いただけるようです。
 

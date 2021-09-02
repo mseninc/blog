@@ -40,19 +40,19 @@ yumで入るのでインストールしてみます。
 
 アプリケーション > システムツール > dconf エディター から起動し、さっそくスキーマを確認します。
 
-<a href="images/centos74-commonize-the-input-source-1.png"><img src="images/centos74-commonize-the-input-source-1.png" alt="" width="536" height="563" class="alignnone size-full wp-image-6877" /></a>
+![](images/centos74-commonize-the-input-source-1.png)
 
 入力ソースの設定は、`/org/gnome/desktop/input-sources/sources`にあります。
 
-<a href="images/centos74-commonize-the-input-source-2.png"><img src="images/centos74-commonize-the-input-source-2.png" alt="" width="803" height="311" class="alignnone size-full wp-image-6878" /></a>
+![](images/centos74-commonize-the-input-source-2.png)
 
 ここの値は言語設定のところとリンクしていて、実際に**入力ソース**の値を変更するとリアルタイムに反映されるのがわかります。
 
-<a href="images/centos74-commonize-the-input-source-3.png"><img src="images/centos74-commonize-the-input-source-3.png" alt="" width="740" height="410" class="alignnone size-full wp-image-6879" /></a>
+![](images/centos74-commonize-the-input-source-3.png)
 
 **日本語(かな漢字)**と**日本語**であれば、値は`('ibus', 'kkc'),('xkb', 'jp')`です。
 
-<a href="images/centos74-commonize-the-input-source-4.png"><img src="images/centos74-commonize-the-input-source-4.png" alt="" width="799" height="645" class="alignnone size-full wp-image-6881" /></a>
+![](images/centos74-commonize-the-input-source-4.png)
 
 最初に書いたほうがログイン時のデフォルト値になります。
 

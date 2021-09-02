@@ -20,7 +20,7 @@ vSphere Client から仮想マシンのサマリを参照すると、仮想マ�
 
 関連オブジェクトに接続しているストレージやネットワークなどが表示されるのですが、**過去に接続していて現在は接続していないものまで表示されることがあります**。
 
-<a href="images/unable-to-remove-unused-storage-or-network-from-virtual-machine-related-objects-1.png"><img src="images/unable-to-remove-unused-storage-or-network-from-virtual-machine-related-objects-1.png" alt="" width="868" height="977" class="alignnone size-full wp-image-12796" /></a>
+![](images/unable-to-remove-unused-storage-or-network-from-virtual-machine-related-objects-1.png)
 
 一部マスクしていますが、今回の例では `hogehoge Network` (ネットワーク)や `qnap2-iso` (ストレージ)が現在接続していないオブジェクトです。
 
@@ -28,7 +28,7 @@ vSphere Client から仮想マシンのサマリを参照すると、仮想マ�
 
 ※ `hogehoge Network` はネットワークアダプター1に、`qnap2-iso` はCD/DVDドライブ1 にそれぞれ接続していました。
 
-<a href="images/unable-to-remove-unused-storage-or-network-from-virtual-machine-related-objects-2.png"><img src="images/unable-to-remove-unused-storage-or-network-from-virtual-machine-related-objects-2.png" alt="" width="835" height="600" class="alignnone size-full wp-image-12798" /></a>
+![](images/unable-to-remove-unused-storage-or-network-from-virtual-machine-related-objects-2.png)
 
 ### 関連オブジェクトが消えないことの問題点
 
@@ -36,7 +36,7 @@ vSphere Client から仮想マシンのサマリを参照すると、仮想マ�
 
 ※ ESXi ホストからはアンマウントすることができます。
 
-<a href="images/unable-to-remove-unused-storage-or-network-from-virtual-machine-related-objects-3.png"><img src="images/unable-to-remove-unused-storage-or-network-from-virtual-machine-related-objects-3.png" alt="" width="864" height="601" class="alignnone size-full wp-image-12806" /></a>
+![](images/unable-to-remove-unused-storage-or-network-from-virtual-machine-related-objects-3.png)
 
 運用上大きな問題ではないですが、使用していないストレージの情報がいつまでも残っているのは気持ち悪いですし、同じ名前でデータストアをマウントすることができなくなります。
 
@@ -55,11 +55,11 @@ vSphere Client から仮想マシンのサマリを参照すると、仮想マ�
 スナップショットの管理から、スナップショットを削除します。
 ※ **対象の関連オブジェクトが含まれるスナップショットを削除しなければ解消しないので注意**しましょう。
 
-<a href="images/unable-to-remove-unused-storage-or-network-from-virtual-machine-related-objects-4.png"><img src="images/unable-to-remove-unused-storage-or-network-from-virtual-machine-related-objects-4.png" alt="" width="862" height="558" class="alignnone size-full wp-image-12808" /></a>
+![](images/unable-to-remove-unused-storage-or-network-from-virtual-machine-related-objects-4.png)
 
 再度、仮想マシンのサマリを参照すると、関連オブジェクトが削除されていることがわかります。
 
-<a href="images/unable-to-remove-unused-storage-or-network-from-virtual-machine-related-objects-5.png"><img src="images/unable-to-remove-unused-storage-or-network-from-virtual-machine-related-objects-5.png" alt="" width="869" height="928" class="alignnone size-full wp-image-12811" /></a>
+![](images/unable-to-remove-unused-storage-or-network-from-virtual-machine-related-objects-5.png)
 
 
 ## あとがき

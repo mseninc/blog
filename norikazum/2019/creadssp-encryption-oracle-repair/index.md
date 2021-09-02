@@ -32,12 +32,12 @@ tags: [Windows Server, Windows]
 1. グループポリシー管理を開きます
 1. 新規グループポリシーを作成し、右クリックから編集します(名前は任意)
 1. コンピュータの構成→管理用テンプレート→システム→資格情報の委任と開き暗号化オラクルの修復をダブルクリックします
-<a href="images/creadssp-encryption-oracle-repair-1.png"><img src="images/creadssp-encryption-oracle-repair-1.png" alt="" width="952" height="790" class="alignnone size-full wp-image-9690" /></a>
-1. <a href="images/creadssp-encryption-oracle-repair-2.png"><img src="images/creadssp-encryption-oracle-repair-2.png" alt="" width="1005" height="1021" class="alignnone size-full wp-image-9692" /></a>
+![](images/creadssp-encryption-oracle-repair-1.png)
+![](images/creadssp-encryption-oracle-repair-2.png)
 1. 有効にし、選択しを脆弱にします
-<a href="images/creadssp-encryption-oracle-repair-3.png"><img src="images/creadssp-encryption-oracle-repair-3.png" alt="" width="681" height="635" class="alignnone size-full wp-image-9693" /></a>
+![](images/creadssp-encryption-oracle-repair-3.png)
 1. ポリシーをリンクします
-<a href="images/creadssp-encryption-oracle-repair-4.png"><img src="images/creadssp-encryption-oracle-repair-4.png" alt="" width="422" height="446" class="alignnone size-full wp-image-9694" /></a>
+![](images/creadssp-encryption-oracle-repair-4.png)
 **暗号化オラクルの修復 がない場合は、Windows Updateをかけてください**
 
 ### クライアント(接続側)のレジストリで対応する場合
@@ -49,10 +49,10 @@ REG ADD HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System\CredSSP\P
 1. レジストリエディタを開き、以下のパスに追加されていることを確認
 `HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System\CredSSP\Parameters`
 追加前
-<a href="images/creadssp-encryption-oracle-repair-5.png"><img src="images/creadssp-encryption-oracle-repair-5.png" alt="" width="819" height="842" class="alignnone size-full wp-image-9686" /></a>
+![](images/creadssp-encryption-oracle-repair-5.png)
 
 追加後
-<a href="images/creadssp-encryption-oracle-repair-6.png"><img src="images/creadssp-encryption-oracle-repair-6.png" alt="" width="731" height="837" class="alignnone size-full wp-image-9687" /></a>
+![](images/creadssp-encryption-oracle-repair-6.png)
 
 https://blogs.technet.microsoft.com/askcorejp/2018/05/02/2018-05-rollup-credssp-rdp/#menu4
 

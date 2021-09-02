@@ -21,7 +21,7 @@ P20 ProやiPhoneの画面の端は丸くなっており、それなりのクオ�
 
 落胆していたときにメンバーからこんなんあるよと紹介してもらったのが、[ドコモのDOME GLASS](https://www.nttdocomo.co.jp/product/docomo_select/domeglass/)
 
-<a href="images/impression-of-using-dome-glass-for-huawei-p20-pro-1.jpg"><img src="images/impression-of-using-dome-glass-for-huawei-p20-pro-1.jpg" alt="" width="476" height="624" class="alignnone size-full wp-image-8075" /></a>
+![](images/impression-of-using-dome-glass-for-huawei-p20-pro-1.jpg)
 
 細かい説明は端折りますが、UV硬化樹脂の上にガラス乗っけて固めるので画面の端が丸くなっていても気泡や浮きがなくなるよという優れものです。
 
@@ -30,7 +30,7 @@ P20 ProやiPhoneの画面の端は丸くなっており、それなりのクオ�
 ## いいところ
 ### もちろん端は浮かない
 
-<a href="images/impression-of-using-dome-glass-for-huawei-p20-pro-2.jpg"><img src="images/impression-of-using-dome-glass-for-huawei-p20-pro-2.jpg" alt="" width="605" height="454" class="alignnone size-full wp-image-8078" /></a>
+![](images/impression-of-using-dome-glass-for-huawei-p20-pro-2.jpg)
 
 当たり前ですがピッタリフィットです。
 
@@ -41,7 +41,7 @@ P20 ProやiPhoneの画面の端は丸くなっており、それなりのクオ�
 ## ビミョーなところ
 ### 傷がつきやすい
 
-<a href="images/impression-of-using-dome-glass-for-huawei-p20-pro-3.jpg"><img src="images/impression-of-using-dome-glass-for-huawei-p20-pro-3.jpg" alt="" width="605" height="454" class="alignnone size-full wp-image-8081" /></a>
+![](images/impression-of-using-dome-glass-for-huawei-p20-pro-3.jpg)
 
 あくまで主観的で感覚の話ですが、**思ったより小傷がつきやすい**と思います。
 
@@ -51,7 +51,7 @@ P20 ProやiPhoneの画面の端は丸くなっており、それなりのクオ�
 
 ### ホコリがたまりやすい
 
-<a href="images/impression-of-using-dome-glass-for-huawei-p20-pro-4.jpg"><img src="images/impression-of-using-dome-glass-for-huawei-p20-pro-4.jpg" alt="" width="605" height="454" class="alignnone size-full wp-image-8082" /></a>
+![](images/impression-of-using-dome-glass-for-huawei-p20-pro-4.jpg)
 
 製品の仕様なのか処理が甘いのか、フィルムの端にUV硬化樹脂が微妙に残るというか見えていて、どうしてもホコリをキャッチしてしまうようです。
 
@@ -61,7 +61,7 @@ P20 ProやiPhoneの画面の端は丸くなっており、それなりのクオ�
 
 ### 衝撃で気泡が入る
 
-[caption id="attachment_8083" align="alignnone" width="605"]<a href="images/impression-of-using-dome-glass-for-huawei-p20-pro-5.jpg"><img src="images/impression-of-using-dome-glass-for-huawei-p20-pro-5.jpg" alt="" width="605" height="454" class="size-full wp-image-8083" /></a> 頑張ってかなり空気を追い出したが、少し気泡が残る[/caption]
+![](images/impression-of-using-dome-glass-for-huawei-p20-pro-5.jpg)
 
 打ちどころの問題かもしれませんが、テーブルから床に落ちた際に画面の角に気泡が入りました。
 

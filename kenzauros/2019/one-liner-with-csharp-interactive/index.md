@@ -15,11 +15,11 @@ Web でいえばちょうど開発者ツールの Console に相当するよう�
 
 **C# Interactive** は Visual Studio の **[表示] メニュー → [その他のウィンドウ(E)] → [C# インタラクティブ]** から起動します。
 
-<a href="images/one-liner-with-csharp-interactive-1.png"><img src="images/one-liner-with-csharp-interactive-1.png" alt="C# Interactive" width="758" height="523" class="aligncenter size-full wp-image-8996" /></a>
+![C# Interactive](images/one-liner-with-csharp-interactive-1.png)
 
 こんなペインが起動します。
 
-<a href="images/one-liner-with-csharp-interactive-2.png"><img src="images/one-liner-with-csharp-interactive-2.png" alt="C# Interactive" width="672" height="298" class="aligncenter size-full wp-image-8997" /></a>
+![C# Interactive](images/one-liner-with-csharp-interactive-2.png)
 
 ## 指定文字列のバイト配列を取得する
 

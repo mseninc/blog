@@ -17,7 +17,7 @@ LFS はもともとファイルサイズの大きいファイルを扱うもの�
 
 組織の場合は対象の組織に切り替えてから Setting → Billing を開きます。
 
-<a href="images/how-to-increase-git-lfs-data-capacity-1.png"><img src="images/how-to-increase-git-lfs-data-capacity-1.png" alt="" width="994" height="318" class="aligncenter size-full wp-image-3598" /></a>
+![](images/how-to-increase-git-lfs-data-capacity-1.png)
 
 **Billoing Overview / Git LFS Data** というところを見ると、使用量が確認できます。
 
@@ -35,17 +35,17 @@ LFS はもともとファイルサイズの大きいファイルを扱うもの�
 
 これは組織のメンバー数によらず一律ですのでが、毎月かかるコストになるので注意が必要です。まぁ一月 5 ドルで 50GB のクラウドストレージなら悪くはないと思います。
 
-<a href="images/how-to-increase-git-lfs-data-capacity-1.png"><img src="images/how-to-increase-git-lfs-data-capacity-1.png" alt="" width="994" height="318" class="aligncenter size-full wp-image-3598" /></a>
+![](images/how-to-increase-git-lfs-data-capacity-1.png)
 
 この画面の右側にある **Purchase more** をクリックすると購入画面に進めます。割と良心的で日割り計算してくれます。
 
-<a href="images/how-to-increase-git-lfs-data-capacity-2.png"><img src="images/how-to-increase-git-lfs-data-capacity-2.png" alt="" width="757" height="457" class="aligncenter size-full wp-image-3600" /></a>
+![](images/how-to-increase-git-lfs-data-capacity-2.png)
 
 決済情報（クレジットカード）はすでに登録されているので **Purchase 1 data pack** ボタンをクリックするとすぐに追加容量の購読がはじまります。
 
 購入後は転送量・ストレージともに 50GB 追加されていることがわかります。
 
-<a href="images/how-to-increase-git-lfs-data-capacity-3.png"><img src="images/how-to-increase-git-lfs-data-capacity-3.png" alt="" width="749" height="157" class="aligncenter size-full wp-image-3658" /></a>
+![](images/how-to-increase-git-lfs-data-capacity-3.png)
 
 ちなみに容量を追加しないまま使用していると下記のようなアラートメールがきます。
 

@@ -28,7 +28,7 @@ SNMP Trap の設定には ESXi に SSH で接続する必要があります。
 
 VMware Host Client 等から ESXi に接続し、SSH と ESXi シェルのサービスを起動しておきましょう。
 
-<a href="images/set-snmp-trap-for-esxi-1.png"><img src="images/set-snmp-trap-for-esxi-1.png" alt="" width="986" height="450" class="alignnone size-full wp-image-12284" /></a>
+![](images/set-snmp-trap-for-esxi-1.png)
 
 サービスが起動したらターミナルソフトから SSH 接続します。なお、 ESXi はチャレンジレスポンス認証です。
 

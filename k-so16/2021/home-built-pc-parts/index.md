@@ -74,7 +74,7 @@ PC の基盤となるパーツです。後述する CPU やメモリなどのパ
 
 マザーボードを選ぶ際には、 **どの規格に対応しているか** をしっかり確認する必要があります。間違った規格の物を選んでしまうと、マザーボードをケースに取り付けられなかったり、パーツをマザーボードに取り付けられないといったことが起こるので **慎重に選ぶ** 必要があります。
 
-[caption id="attachment_15342" align="aligncenter" width="600"]<a href="images/home-built-pc-parts-1.jpg"><img src="images/home-built-pc-parts-1.jpg" alt="" width="600" height="800" class="size-full wp-image-15342" /></a> <a href="https://www.asus.com/jp/" target="_blank" rel="noopener">ASUS</a> 製のマザーボード <strong><a href="https://www.asus.com/jp/Motherboards/TUF-GAMING-B550-PLUS/" target="_blank" rel="noopener">TUF Gaming B550-PLUS</a></strong>[/caption]
+![](images/home-built-pc-parts-1.jpg)
 
 基本的には取り付けたいパーツの規格に合ったマザーボードを選ぶのが無難でしょう。また、 PC ケースはマザーボードのサイズの規格に合うものを購入しないと取り付けられないので、その点も注意が必要です。
 
@@ -99,9 +99,9 @@ PC の頭脳と例えられるパーツで、 **コンピューターの命令�
 
 CPU のメーカーとして、 **[Intel](https://www.intel.co.jp/content/www/jp/ja/homepage.html)** の名前を知らない方はほとんどいないと思います。最近は **[AMD](https://www.amd.com/ja)** というメーカーが発売している **[Ryzen](https://www.amd.com/ja/processors/ryzen)** という CPU も注目されています。
 
-[caption id="attachment_15340" align="aligncenter" width="800"]<a href="images/home-built-pc-parts-2.jpg"><img src="images/home-built-pc-parts-2.jpg" alt="" width="800" height="600" class="size-full wp-image-15340" /></a> <a href="https://www.amd.com/ja" target="_blank" rel="noopener">AMD</a> 製の CPU <strong><a href="https://www.amd.com/ja/products/cpu/amd-ryzen-9-5950x" target="_blank" rel="noopener">Ryzen 9 5950X</a></strong>[/caption]
+![](images/home-built-pc-parts-2.jpg)
 
-[caption id="attachment_15341" align="aligncenter" width="800"]<a href="images/home-built-pc-parts-3.jpg"><img src="images/home-built-pc-parts-3.jpg" alt="" width="800" height="600" class="size-full wp-image-15341" /></a> CPU 本体は箱に対して小さい[/caption]
+![](images/home-built-pc-parts-3.jpg)
 
 マザーボードでの説明でも述べたように、取り付けたい CPU のソケットがマザーボードに対応しているか確認する必要があります。 CPU を中心として組み立てる場合は、 **CPU ソケットに対応するマザーボード** を選ぶ必要があります。
 
@@ -113,7 +113,7 @@ CPU のメーカーとして、 **[Intel](https://www.intel.co.jp/content/www/jp
 
 メモリにも規格があり、異なる規格のメモリはマザーボードに取り付けられないので注意が必要です。本記事の執筆時点(2020 年 12 月現在)では **DDR4** という規格が最新ですが、 1 世代前の **DDR3** とは **互換性がない** のでメモリやマザーボードは慎重に選びましょう。
 
-[caption id="attachment_15343" align="aligncenter" width="600"]<a href="images/home-built-pc-parts-4.jpg"><img src="images/home-built-pc-parts-4.jpg" alt="" width="600" height="800" class="size-full wp-image-15343" /></a> <a href="https://www.patriotmemory.com/" target="_blank" rel="noopener">Patriot Memory</a> 製メモリ (DDR4)[/caption]
+![](images/home-built-pc-parts-4.jpg)
 
 #### HDD / SSD
 
@@ -136,9 +136,9 @@ HDD も SSD も不揮発性メモリという役割は同じなのですが、�
         - 容量単価が高い
         - 書き込み回数が多くなると寿命が近くなる
 
-[caption id="attachment_15345" align="aligncenter" width="600"]<a href="images/home-built-pc-parts-5.jpg"><img src="images/home-built-pc-parts-5.jpg" alt="" width="600" height="800" class="size-full wp-image-15345" /></a> <a href="https://shop.westerndigital.com/ja-jp/wd" target="_blank" rel="noopener">Western Digital</a> 製 HDD (1TB)[/caption]
+![](images/home-built-pc-parts-5.jpg)
 
-[caption id="attachment_15344" align="aligncenter" width="800"]<a href="images/home-built-pc-parts-6.jpg"><img src="images/home-built-pc-parts-6.jpg" alt="" width="800" height="600" class="size-full wp-image-15344" /></a> <a href="https://www.crucial.jp/" target="_blank" rel="noopener">Crucial</a> 製 SSD (240GB)[/caption]
+![](images/home-built-pc-parts-6.jpg)
 
 SSD と HDD のそれぞれの利点を補いあって利用する方法もあります。例えば、 OS の起動に必要なデータは SSD に保管して、画像や音楽、その他インターネットからダウンロードしたデータなどは HDD に保存するといった使い方が考えられます。このような構成にすると、 OS が速く立ち上がり、かつ大容量のデータ保存領域を安価に実現できます。
 
@@ -148,7 +148,7 @@ SSD と HDD のそれぞれの利点を補いあって利用する方法もあ�
 
 GPU が搭載されている CPU を使用していてもグラフィックボードを搭載する理由は、 **グラフィックの処理を高速化** させる場合が一般的です。どうしても CPU に搭載されている GPU では処理能力が足りず、グラフィックの描画処理などが重くなりがちです PC の主な使用用途が VR のゲームのような **3D モデルを利用したゲーム** や **3D モデルの開発** などの場合はグラフィックボードの購入を検討すると良いでしょう。
 
-[caption id="attachment_15348" align="aligncenter" width="800"]<a href="images/home-built-pc-parts-7.jpg"><img src="images/home-built-pc-parts-7.jpg" alt="" width="800" height="600" class="size-full wp-image-15348" /></a> <a href="https://www.asus.com/jp/" target="_blank" rel="noopener">ASUS</a> 製グラフィックボード <strong><a href="https://www.nvidia.com/ja-jp/geforce/products/10series/geforce-gtx-1060/" target="_blank" rel="noopener">GeForce GTX 1060</a></strong>[/caption]
+![](images/home-built-pc-parts-7.jpg)
 
 余談ですが、一時期ビットコインなどの **仮想通貨のマイニング処理** を行うためにグラフィックボードの需要が高まり、手に入りづらいということもありました。 GPU をグラフィック処理以外の目的で使う場合もあるようです。
 
@@ -182,19 +182,19 @@ GPU が搭載されている CPU を使用していてもグラフィックボ�
 
     PC を動かすには当然 **電源** が必要です。製品によって **電力** が異なるので、 **パーツ構成に必要な電力** を満たすものを選びましょう。
 
-    [caption id="attachment_15350" align="aligncenter" width="800"]<a href="images/home-built-pc-parts-8.jpg"><img src="images/home-built-pc-parts-8.jpg" alt="" width="800" height="600" class="size-full wp-image-15350" /></a> <a href="https://www.keian.co.jp/" target="_blank" rel="noopener">恵安</a> 製 電源ユニット (520W)[/caption]
+![](images/home-built-pc-parts-8.jpg)
 
 - **ケース**
 
     **自分好みの外見のケースを選べる** のも自作 PC の醍醐味の 1 つです。ただし、 **マザーボードのサイズ** に合ったケースでないと、マザーボードがケースに取り付けられないので注意が必要です。また、 CPU クーラーやグラフィックボードが収まるサイズかを調べることも重要です。
 
-    [caption id="attachment_15353" align="aligncenter" width="800"]<a href="images/home-built-pc-parts-9.jpg"><img src="images/home-built-pc-parts-9.jpg" alt="" width="800" height="600" class="size-full wp-image-15353" /></a> <a href="https://antec.com/" target="_blank" rel="noopener">Antec</a> 製のケース[/caption]
+![](images/home-built-pc-parts-9.jpg)
 
 - **CPU クーラー**
 
     CPU に付属していることが多い CPU ファンですが、 **より高い冷却能力** が必要な場合は CPU ファンを購入して取り付けることも可能です。また、AMD 製の CPU の中には **CPU ファンが付属していない** ものもあるので、その場合は購入が必須です。
 
-    [caption id="attachment_15354" align="aligncenter" width="600"]<a href="images/home-built-pc-parts-10.jpg"><img src="images/home-built-pc-parts-10.jpg" alt="" width="600" height="800" class="size-full wp-image-15354" /></a> <a href="https://www.scythe.co.jp/" target="_blank" rel="noopener">SCYTHE</a> 製 CPU ファン <strong><a href="https://www.scythe.co.jp/product/cpu-cooler/scfm-2000/" target="_blank" rel="noopener">風魔 弐</a></strong>[/caption]
+![](images/home-built-pc-parts-10.jpg)
 
 ### 組み込むパーツの構成を決める
 

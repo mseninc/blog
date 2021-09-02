@@ -34,7 +34,7 @@ WSL 2 のディストリビューション内で docker コマンドを使用す
 
 Docker Desktop の設定画面を開き、 [Resources] → [WSL INTEGRATION] から 希望のディストリビューション（ここでは Ubuntu 20.04）のスイッチを ON にします。
 
-[caption id="attachment_17309" align="aligncenter" width="1250"]<a href="images/enable-docker-wsl-integration-on-ubuntu-1.png"><img src="images/enable-docker-wsl-integration-on-ubuntu-1.png" alt="WSL の Ubuntu 内で docker コマンドを有効にする" width="1250" height="720" class="size-full wp-image-17309" /></a> WSL の Ubuntu 内で docker コマンドを有効にする[/caption]
+![WSL の Ubuntu 内で docker コマンドを有効にする](images/enable-docker-wsl-integration-on-ubuntu-1.png)
 
 これで docker コマンドが思う存分叩けるようになったはずです！
 

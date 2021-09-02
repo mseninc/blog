@@ -25,15 +25,15 @@ Windows Server では標準で Windows Server バックアップという機能�
 
 ある日突然、Windows Server バックアップが失敗し、確認してみると**ディスク領域が不足している**ためエラーが出ていることがわかりました。
 
-<a href="images/windows-saerver-backup-fails-even-though-there-is-free-space-on-the-backup-destination-1.png"><img src="images/windows-saerver-backup-fails-even-though-there-is-free-space-on-the-backup-destination-1.png" alt="" width="504" height="668" class="alignnone size-full wp-image-11218" /></a>
+![](images/windows-saerver-backup-fails-even-though-there-is-free-space-on-the-backup-destination-1.png)
 
 ディスクの空き容量を見てみると、確かに**バックアップ保存先の E ドライブが枯渇気味**であることがわかりました。
 
-<a href="images/windows-saerver-backup-fails-even-though-there-is-free-space-on-the-backup-destination-2.png"><img src="images/windows-saerver-backup-fails-even-though-there-is-free-space-on-the-backup-destination-2.png" alt="" width="819" height="516" class="alignnone size-full wp-image-11215" /></a>
+![](images/windows-saerver-backup-fails-even-though-there-is-free-space-on-the-backup-destination-2.png)
 
 空き容量が 75GB あるので大丈夫だと思っていましたが、不要なファイルを削除して十分な空き容量を確保しました。
 
-<a href="images/windows-saerver-backup-fails-even-though-there-is-free-space-on-the-backup-destination-3.png"><img src="images/windows-saerver-backup-fails-even-though-there-is-free-space-on-the-backup-destination-3.png" alt="" width="578" height="190" class="alignnone size-full wp-image-11219" /></a>
+![](images/windows-saerver-backup-fails-even-though-there-is-free-space-on-the-backup-destination-3.png)
 
 しかしながらエラーが解消する兆しがなく、依然としてバックアップが失敗し続けます。
 
@@ -46,7 +46,7 @@ Windows Server では標準で Windows Server バックアップという機能�
 > 推奨事項: ボリュームのサイズが 1 GB を超える場合、各ボリュームについて、少なくとも 1 GB の空きディスク領域が必要です。
 > エラーの詳細: シャドウ コピーの記憶域ファイルまたはその他のシャドウ コピー データを作成するために利用できる十分な記憶域がありません。
 
-<a href="images/windows-saerver-backup-fails-even-though-there-is-free-space-on-the-backup-destination-4.png"><img src="images/windows-saerver-backup-fails-even-though-there-is-free-space-on-the-backup-destination-4.png" alt="" width="1481" height="666" class="alignnone size-full wp-image-11222" /></a>
+![](images/windows-saerver-backup-fails-even-though-there-is-free-space-on-the-backup-destination-4.png)
 
 よく見ると 「**これはバックアップ保存先と、バックアップに含まれるボリュームの両方について行う必要があります。**」と書かれています。
 
@@ -63,11 +63,11 @@ VSS の仕組みについては下記の Technet で詳しく説明されてい�
 バックアップ元 (D ドライブ) を確認すると空き領域は 235 MB となっていました。
 最小要件に「**500 MB を超えるボリュームに対して 320 MB の空き領域が必要**」と書かれていましたので早速空き領域を確保します。
 
-<a href="images/windows-saerver-backup-fails-even-though-there-is-free-space-on-the-backup-destination-5.png"><img src="images/windows-saerver-backup-fails-even-though-there-is-free-space-on-the-backup-destination-5.png" alt="" width="819" height="516" class="alignnone size-full wp-image-11252" /></a>
+![](images/windows-saerver-backup-fails-even-though-there-is-free-space-on-the-backup-destination-5.png)
 
 バックアップ元とバックアップ先で十分な空き領域が確保できたところで、もう一度 Windows Server バックアップを実行すると無事に成功しました。
 
-<a href="images/windows-saerver-backup-fails-even-though-there-is-free-space-on-the-backup-destination-6.png"><img src="images/windows-saerver-backup-fails-even-though-there-is-free-space-on-the-backup-destination-6.png" alt="" width="506" height="625" class="alignnone size-full wp-image-11223" /></a>
+![](images/windows-saerver-backup-fails-even-though-there-is-free-space-on-the-backup-destination-6.png)
 
 意外な盲点でしたが、VSS を知る良い機会となりました。
 何事にも**余裕が必要**ということですね。

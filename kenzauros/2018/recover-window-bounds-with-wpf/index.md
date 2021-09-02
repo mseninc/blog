@@ -15,7 +15,7 @@ tags: [WPF, C#, .NET]
 
 ちなみにユーザー設定ファイルは[ソリューションエクスプローラー]で[プロジェクト]を右クリックして[プロパティ]→[設定]から追加できます。
 
-<a href="images/recover-window-bounds-with-wpf-1.png"><img src="images/recover-window-bounds-with-wpf-1.png" alt="WPF のウィンドウ位置・サイズを保存するユーザー設定" width="953" height="332" class="aligncenter size-full wp-image-2042" /></a>
+![WPF のウィンドウ位置・サイズを保存するユーザー設定](images/recover-window-bounds-with-wpf-1.png)
 
 上図のように 5 つの設定を使用します。
 

@@ -36,11 +36,11 @@ Web API の観点からいくとリソース名が動作を表しているので
 
 AWS コンソールから **API Gateway** を選択します。
 
-<a href="images/start-ec2-instance-by-aws-lambda-through-api-gateway-1.png"><img src="images/start-ec2-instance-by-aws-lambda-through-api-gateway-1.png" alt="" width="199" height="152" class="aligncenter size-full wp-image-5539" /></a>
+![](images/start-ec2-instance-by-aws-lambda-through-api-gateway-1.png)
 
 まだ、作ったことがなければ案内が表示されるので「今すぐ始める」をクリックします。
 
-<a href="images/start-ec2-instance-by-aws-lambda-through-api-gateway-2.png"><img src="images/start-ec2-instance-by-aws-lambda-through-api-gateway-2.png" alt="" width="1003" height="607" class="aligncenter size-full wp-image-5540" /></a>
+![](images/start-ec2-instance-by-aws-lambda-through-api-gateway-2.png)
 
 ### API の作成
 
@@ -54,17 +54,17 @@ https://hogehoge.execute-api.us-east-2.amazonaws.com/prod/users
 
 「**新しい API**」 を選択して API 名は "EC2Control" とでも命名し、 **[API の作成]** をクリックします。
 
-<a href="images/start-ec2-instance-by-aws-lambda-through-api-gateway-3.png"><img src="images/start-ec2-instance-by-aws-lambda-through-api-gateway-3.png" alt="" width="1030" height="406" class="aligncenter size-full wp-image-5541" /></a>
+![](images/start-ec2-instance-by-aws-lambda-through-api-gateway-3.png)
 
 ### リソースの作成
 
 今回は `start`, `stop` の 2 つのリソースを作成するので、まず [リソース] メニューの [アクション] → **[リソースの作成]** をクリックします。
 
-<a href="images/start-ec2-instance-by-aws-lambda-through-api-gateway-4.png"><img src="images/start-ec2-instance-by-aws-lambda-through-api-gateway-4.png" alt="" width="1054" height="575" class="aligncenter size-full wp-image-5542" /></a>
+![](images/start-ec2-instance-by-aws-lambda-through-api-gateway-4.png)
 
 リソース名に `start` と入力します。このときリソースパスが `/start` となっていることを確認します。 [リソースの作成] を押すと、 `/start` リソースが追加されます。
 
-<a href="images/start-ec2-instance-by-aws-lambda-through-api-gateway-5.png"><img src="images/start-ec2-instance-by-aws-lambda-through-api-gateway-5.png" alt="" width="697" height="492" class="aligncenter size-full wp-image-5543" /></a>
+![](images/start-ec2-instance-by-aws-lambda-through-api-gateway-5.png)
 
 同様に `/stop` リソースも追加します。このとき、 `/start/stop` とならないよう、ルート (`/`) を選択した状態で追加し、ソースパスが `/stop` となっていることを確認してください。
 
@@ -74,29 +74,29 @@ https://hogehoge.execute-api.us-east-2.amazonaws.com/prod/users
 
 `/start` リソースを選択した状態で [アクション] → **[メソッドの作成]** をクリックします。
 
-<a href="images/start-ec2-instance-by-aws-lambda-through-api-gateway-6.png"><img src="images/start-ec2-instance-by-aws-lambda-through-api-gateway-6.png" alt="" width="367" height="360" class="aligncenter size-full wp-image-5544" /></a>
+![](images/start-ec2-instance-by-aws-lambda-through-api-gateway-6.png)
 
 メソッドに `GET` を選択してチェックマークをクリックします。
 
-<a href="images/start-ec2-instance-by-aws-lambda-through-api-gateway-7.png"><img src="images/start-ec2-instance-by-aws-lambda-through-api-gateway-7.png" alt="" width="767" height="173" class="aligncenter size-full wp-image-5545" /></a>
+![](images/start-ec2-instance-by-aws-lambda-through-api-gateway-7.png)
 
 セットアップ画面で 統合タイプに「Lambda 関数」を選び、 リージョンを選択して Lambda 関数の名前を入力し、 [保存] をクリックします。
 
-<a href="images/start-ec2-instance-by-aws-lambda-through-api-gateway-8.png"><img src="images/start-ec2-instance-by-aws-lambda-through-api-gateway-8.png" alt="" width="776" height="435" class="aligncenter size-full wp-image-5546" /></a>
+![](images/start-ec2-instance-by-aws-lambda-through-api-gateway-8.png)
 
 権限追加のダイアログは一応確認して、 [OK] をクリックします。
 
-<a href="images/start-ec2-instance-by-aws-lambda-through-api-gateway-9.png"><img src="images/start-ec2-instance-by-aws-lambda-through-api-gateway-9.png" alt="" width="607" height="248" class="aligncenter size-full wp-image-5547" /></a>
+![](images/start-ec2-instance-by-aws-lambda-through-api-gateway-9.png)
 
 これで `GET /start` のメソッドができました。構成図（フロー図）が表示されます。メソッドから Lambda 関数 `StartEC2Instance` が起動して結果が HTTP レスポンスとして返されることがわかります。
 
 とりあえずの動作確認のため、稲妻マークの **[テスト]** をクリックします。
 
-<a href="images/start-ec2-instance-by-aws-lambda-through-api-gateway-10.png"><img src="images/start-ec2-instance-by-aws-lambda-through-api-gateway-10.png" alt="" width="871" height="542" class="aligncenter size-full wp-image-5548" /></a>
+![](images/start-ec2-instance-by-aws-lambda-through-api-gateway-10.png)
 
 さらに **[テスト]**　をクリックすると API メソッドがテスト実行され、右側に結果が表示されます。ステータスが 200 になっていれば、メソッドの実装は完了です。
 
-<a href="images/start-ec2-instance-by-aws-lambda-through-api-gateway-11.png"><img src="images/start-ec2-instance-by-aws-lambda-through-api-gateway-11.png" alt="" width="844" height="709" class="aligncenter size-full wp-image-5549" /></a>
+![](images/start-ec2-instance-by-aws-lambda-through-api-gateway-11.png)
 
 同様に `/stop` リソースに対しても `GET` メソッドを定義しておきます。
 
@@ -106,37 +106,37 @@ https://hogehoge.execute-api.us-east-2.amazonaws.com/prod/users
 
 [アクション] → **[API のデプロイ]** をクリックします。
 
-<a href="images/start-ec2-instance-by-aws-lambda-through-api-gateway-12.png"><img src="images/start-ec2-instance-by-aws-lambda-through-api-gateway-12.png" alt="" width="316" height="447" class="aligncenter size-full wp-image-5550" /></a>
+![](images/start-ec2-instance-by-aws-lambda-through-api-gateway-12.png)
 
 "新しいステージ" を選択し、ステージ名に "prod" とします。この**ステージ名は URL の一部**になります。任意の名称で結構です。
 
 [デプロイ] ボタンをクリックすると API の URL が決定し、公開されます。
 
-<a href="images/start-ec2-instance-by-aws-lambda-through-api-gateway-13.png"><img src="images/start-ec2-instance-by-aws-lambda-through-api-gateway-13.png" alt="" width="608" height="413" class="aligncenter size-full wp-image-5551" /></a>
+![](images/start-ec2-instance-by-aws-lambda-through-api-gateway-13.png)
 
 デプロイが完了するとステージエディター画面に移ります。画面上部で **API の URL** を確認できます。
 
-<a href="images/start-ec2-instance-by-aws-lambda-through-api-gateway-14.png"><img src="images/start-ec2-instance-by-aws-lambda-through-api-gateway-14.png" alt="" width="895" height="655" class="aligncenter size-full wp-image-5552" /></a>
+![](images/start-ec2-instance-by-aws-lambda-through-api-gateway-14.png)
 
 ### 動作確認
 
 試しにブラウザーのアドレスバーに API の URL + `/start` と入力して Enter を押してみると...
 
-<a href="images/start-ec2-instance-by-aws-lambda-through-api-gateway-15.png"><img src="images/start-ec2-instance-by-aws-lambda-through-api-gateway-15.png" alt="" width="876" height="33" class="aligncenter size-full wp-image-5553" /></a>
+![](images/start-ec2-instance-by-aws-lambda-through-api-gateway-15.png)
 
 無事 EC2 インスタンスが起動しました！
 
 戻り値を定義していないのでブラウザーで開くと "null" とだけ表示されるのがダサいですが、そこはご愛嬌ということで。
 
-<a href="images/start-ec2-instance-by-aws-lambda-through-api-gateway-16.png"><img src="images/start-ec2-instance-by-aws-lambda-through-api-gateway-16.png" alt="" width="949" height="72" class="aligncenter size-full wp-image-5554" /></a>
+![](images/start-ec2-instance-by-aws-lambda-through-api-gateway-16.png)
 
 今度は `/stop` で叩いてみると...
 
-<a href="images/start-ec2-instance-by-aws-lambda-through-api-gateway-17.png"><img src="images/start-ec2-instance-by-aws-lambda-through-api-gateway-17.png" alt="" width="874" height="32" class="aligncenter size-full wp-image-5555" /></a>
+![](images/start-ec2-instance-by-aws-lambda-through-api-gateway-17.png)
 
 無事 EC2 インスタンスが立ち下がりました！
 
-<a href="images/start-ec2-instance-by-aws-lambda-through-api-gateway-18.png"><img src="images/start-ec2-instance-by-aws-lambda-through-api-gateway-18.png" alt="" width="948" height="70" class="aligncenter size-full wp-image-5556" /></a>
+![](images/start-ec2-instance-by-aws-lambda-through-api-gateway-18.png)
 
 これで Web API から EC2 インスタンスの起動・終了が制御できるようになりました。
 

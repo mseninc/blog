@@ -33,7 +33,7 @@ tags: [Excel, Microsoft Print to PDF, その他, ライフハック]
 
 確かに私と端末Aの設定は **125%** となっており、 端末Bの設定は **100%** でした。
 
-<img src="images/excel-printing-result-depends-on-windows-dpi-scaling-1.png" alt="" width="455" height="390" class="aligncenter size-full wp-image-8799" />
+![](images/excel-printing-result-depends-on-windows-dpi-scaling-1.png)
 
 「テキスト、アプリ、その他の項目のサイズを変更する」の設定値を **100%** に変更すると、端末Bで出力したものと一致しました。
 

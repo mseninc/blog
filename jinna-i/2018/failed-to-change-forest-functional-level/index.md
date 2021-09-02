@@ -11,7 +11,7 @@ Windows Server 2016 で構成している Active Directory ドメインコント
 
 > ディレクトリ パーティションが少なくとも1つのレプリケーション パートナーで正常にレプリケートされていないため、FSMO の役割の所有者を検証できませんでした。
 
-<a href="images/failed-to-change-forest-functional-level-1.png"><img src="images/failed-to-change-forest-functional-level-1.png" alt="" width="481" height="158" class="alignnone size-full wp-image-8468" /></a>
+![](images/failed-to-change-forest-functional-level-1.png)
 
 ## 環境
 - OS： Windows Server 2016
@@ -63,7 +63,7 @@ Windows Server 2016 で構成している Active Directory ドメインコント
 
 「Active Directory管理センター」から「フォレストの機能レベルの昇格」をクリックし、機能レベルを変更します。
 
-<a href="images/failed-to-change-forest-functional-level-2.png"><img src="images/failed-to-change-forest-functional-level-2.png" alt="" width="481" height="175" class="alignnone size-full wp-image-8470" /></a>
+![](images/failed-to-change-forest-functional-level-2.png)
 
 今度は無事に機能レベルの引き上げができました。
 

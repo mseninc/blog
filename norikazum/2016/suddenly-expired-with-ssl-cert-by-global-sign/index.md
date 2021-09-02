@@ -11,7 +11,7 @@ tags: [その他の技術]
 
 弊社のサイトを確認しようとすると・・・
 
-<a href="images/suddenly-expired-with-ssl-cert-by-global-sign-1.png"><img src="images/suddenly-expired-with-ssl-cert-by-global-sign-1.png" alt="2016-10-14_23h55_10" width="791" height="407" class="alignnone size-full wp-image-3032" /></a>
+![2016-10-14_23h55_10](images/suddenly-expired-with-ssl-cert-by-global-sign-1.png)
 
 
 え・・・？
@@ -20,7 +20,7 @@ tags: [その他の技術]
 あわてて、chromeでも確認すると・・・
 
 
-<a href="images/suddenly-expired-with-ssl-cert-by-global-sign-2.png"><img src="images/suddenly-expired-with-ssl-cert-by-global-sign-2.png" alt="2016-10-14_21h16_46" width="775" height="415" class="alignnone size-full wp-image-3033" /></a>
+![2016-10-14_21h16_46](images/suddenly-expired-with-ssl-cert-by-global-sign-2.png)
 
 
 えーーーー
@@ -73,22 +73,22 @@ IEのキャッシュや、SSL証明書のキャッシュクリアをしても直
 
 ・・・
 
-<a href="images/suddenly-expired-with-ssl-cert-by-global-sign-3.png"><img src="images/suddenly-expired-with-ssl-cert-by-global-sign-3.png" alt="2016-10-14_23h55_10" width="791" height="407" class="alignnone size-full wp-image-3038" /></a>
+![2016-10-14_23h55_10](images/suddenly-expired-with-ssl-cert-by-global-sign-3.png)
 
 まだあきらめない。
 
 IEのインターネットオプションから、キャッシュのクリア実施。
 
-<a href="images/suddenly-expired-with-ssl-cert-by-global-sign-4.png"><img src="images/suddenly-expired-with-ssl-cert-by-global-sign-4.png" alt="2016-10-15_00h10_25" width="476" height="565" class="alignnone size-full wp-image-3039" /></a>
+![2016-10-15_00h10_25](images/suddenly-expired-with-ssl-cert-by-global-sign-4.png)
 
 ↓
 
-<a href="images/suddenly-expired-with-ssl-cert-by-global-sign-5.png"><img src="images/suddenly-expired-with-ssl-cert-by-global-sign-5.png" alt="2016-10-15_00h10_35" width="457" height="574" class="alignnone size-full wp-image-3040" /></a>
+![2016-10-15_00h10_35](images/suddenly-expired-with-ssl-cert-by-global-sign-5.png)
 
 
 同じくIEのインターネットオプションから、SSLキャッシュのクリア実施。
 
-<a href="images/suddenly-expired-with-ssl-cert-by-global-sign-6.png"><img src="images/suddenly-expired-with-ssl-cert-by-global-sign-6.png" alt="2016-10-15_01h04_23" width="476" height="565" class="alignnone size-full wp-image-3041" /></a>
+![2016-10-15_01h04_23](images/suddenly-expired-with-ssl-cert-by-global-sign-6.png)
 
 **はい、同じ現象でだめ。**
 
@@ -106,7 +106,7 @@ IEのインターネットオプションから、キャッシュのクリア実
 
 結果は文字がグレーの網掛け(安全ではない）になるか、緑の網掛け(安全)になるか、なのですが影響受けているところは多そうでした。
 
-<a href="images/suddenly-expired-with-ssl-cert-by-global-sign-7.png"><img src="images/suddenly-expired-with-ssl-cert-by-global-sign-7.png" alt="2016-10-15_00h55_53" width="994" height="549" class="alignnone size-full wp-image-3036" /></a>
+![2016-10-15_00h55_53](images/suddenly-expired-with-ssl-cert-by-global-sign-7.png)
 
 進展があれば更新します。
 そのときにお会いしましょう。

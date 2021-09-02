@@ -14,7 +14,7 @@ tags: [DNS, ネットワーク, その他の技術]
 **※事前に `example.com` というドメインをValue-domainで取得している前提です。**
 **※ドメイン名、IPアドレスは架空のものです。**
 
-<img src="images/build-dynamic-dns-with-value-domain-1.png" alt="" width="1325" height="787" class="alignnone size-full wp-image-7653" />
+![](images/build-dynamic-dns-with-value-domain-1.png)
 
 DNSの仕組みについて詳細な説明は割愛しますが、 `hogehoge.example.com` に登録されているIPアドレスが `192.168.10.1` として登録されている状態で、このIPアドレスが変化しない状態(固定IP)であれば、ダイナミックDNSの仕組みを使う必要はありません。
 
@@ -28,7 +28,7 @@ DNSの仕組みについて詳細な説明は割愛しますが、 `hogehoge.exa
 
 以下のようなイメージです。
 
-<img src="images/build-dynamic-dns-with-value-domain-2.png" alt="" width="1631" height="787" class="alignnone size-full wp-image-7654" />
+![](images/build-dynamic-dns-with-value-domain-2.png)
 
 これを解決する仕組みがダイナミックDNSです。
 [ダイナミックドメインネームシステム - Wikipedia](https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%8A%E3%83%9F%E3%83%83%E3%82%AF%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%8D%E3%83%BC%E3%83%A0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0)
@@ -42,7 +42,7 @@ DNSの仕組みについて詳細な説明は割愛しますが、 `hogehoge.exa
 
 以下のようなイメージです。
 
-<img src="images/build-dynamic-dns-with-value-domain-3.png" alt="" width="1579" height="787" class="alignnone size-full wp-image-7748" />
+![](images/build-dynamic-dns-with-value-domain-3.png)
 
 前提条件は以下のとおりとなります。
 
@@ -55,15 +55,15 @@ Value-Domainにログインし、対象のドメインに対してダイナミ�
 
 [https://www.value-domain.com/ddns.php?action=dyn2&domainname=example.com](https://www.value-domain.com/ddns.php?action=dyn2&domainname=example.com)
 
-<img src="images/build-dynamic-dns-with-value-domain-4.png" alt="" width="892" height="954" class="alignnone size-full wp-image-7659" />
+![](images/build-dynamic-dns-with-value-domain-4.png)
 
 こうなります。
-<img src="images/build-dynamic-dns-with-value-domain-5.png" alt="" width="834" height="191" class="alignnone size-full wp-image-7662" />
+![](images/build-dynamic-dns-with-value-domain-5.png)
 
 同画面から、更新用のパスワードを設定します。
-<img src="images/build-dynamic-dns-with-value-domain-6.png" alt="" width="881" height="473" class="alignnone size-full wp-image-7660" />
+![](images/build-dynamic-dns-with-value-domain-6.png)
 
-<img src="images/build-dynamic-dns-with-value-domain-7.png" alt="" width="875" height="913" class="alignnone size-full wp-image-7661" />
+![](images/build-dynamic-dns-with-value-domain-7.png)
 
 ### 変更用のURLを準備する
 
@@ -77,7 +77,7 @@ Value-Domainにログインし、対象のドメインに対してダイナミ�
 
 準備ができたところで、ブラウザのURL欄に貼り付けてEnterを押してみましょう。
 
-<img src="images/build-dynamic-dns-with-value-domain-8.png" alt="" width="1210" height="199" class="alignnone size-full wp-image-7663" />
+![](images/build-dynamic-dns-with-value-domain-8.png)
 
 正しく変更できました。
 
@@ -100,24 +100,24 @@ Value-Domainにログインし、対象のドメインに対してダイナミ�
     * password の部分を前項で設定したパスワードに修正
 
 1. 右下のWindowsマークの上で右クリックし、 **ファイル名を指定して実行** をクリックします
-  <img src="images/build-dynamic-dns-with-value-domain-9.png" alt="" width="348" height="221" class="alignnone size-full wp-image-7670" />
+![](images/build-dynamic-dns-with-value-domain-9.png)
 
 1. **taskschd.msc /s** と入力し、OKをクリックします
-  <img src="images/build-dynamic-dns-with-value-domain-10.png" alt="" width="456" height="272" class="alignnone size-full wp-image-7671" />
+![](images/build-dynamic-dns-with-value-domain-10.png)
 
 1. 「基本タスクの作成へ」進みます
-  <img src="images/build-dynamic-dns-with-value-domain-11.png" alt="" width="982" height="704" class="alignnone size-full wp-image-7672" />
+![](images/build-dynamic-dns-with-value-domain-11.png)
 
 1. 任意の名前を入力します
-  <img src="images/build-dynamic-dns-with-value-domain-12.png" alt="" width="870" height="610" class="alignnone size-full wp-image-7676" />
+![](images/build-dynamic-dns-with-value-domain-12.png)
 
 1. 以下の画像の流れで毎日12:00に実行されるように設定します
-  <img src="images/build-dynamic-dns-with-value-domain-13.png" alt="" width="870" height="610" class="alignnone size-full wp-image-7677" />
-  <img src="images/build-dynamic-dns-with-value-domain-14.png" alt="" width="870" height="610" class="alignnone size-full wp-image-7678" />
-  <img src="images/build-dynamic-dns-with-value-domain-15.png" alt="" width="870" height="610" class="alignnone size-full wp-image-7679" />
+![](images/build-dynamic-dns-with-value-domain-13.png)
+![](images/build-dynamic-dns-with-value-domain-14.png)
+![](images/build-dynamic-dns-with-value-domain-15.png)
 
 1. 各項目を以下を参考に入力します
-  <img src="images/build-dynamic-dns-with-value-domain-16.png" alt="" width="694" height="484" class="alignnone size-full wp-image-7743" />
+![](images/build-dynamic-dns-with-value-domain-16.png)
 
   [プログラム/スクリプト]
   `%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe`
@@ -130,13 +130,13 @@ Value-Domainにログインし、対象のドメインに対してダイナミ�
   **C:\Users\user\Documents は保存場所です。**
 
 1. **プロパティダイアログを開く** にチェックを入れて完了します
-  <img src="images/build-dynamic-dns-with-value-domain-17.png" alt="" width="692" height="484" class="alignnone size-full wp-image-7750" />
+![](images/build-dynamic-dns-with-value-domain-17.png)
 
 1. ログオフ状態でも実行されるように、以下にチェックを入れてOKをクリックします
-  <img src="images/build-dynamic-dns-with-value-domain-18.png" alt="" width="538" height="388" class="alignnone size-full wp-image-7756" />
+![](images/build-dynamic-dns-with-value-domain-18.png)
 
 1. パスワードが求められるので、入力してOKをクリックします。
-  <img src="images/build-dynamic-dns-with-value-domain-19.png" alt="" width="313" height="258" class="alignnone size-full wp-image-7700" />
+![](images/build-dynamic-dns-with-value-domain-19.png)
 
 以上で完了です。
 
@@ -150,7 +150,7 @@ Value-Domainにログインし、対象のドメインに対してダイナミ�
 17：00 にタスクが起動するように設定して、ログオフしました。
 
 無事、更新されてますね。
-<img src="images/build-dynamic-dns-with-value-domain-20.png" alt="" width="841" height="162" class="alignnone size-full wp-image-7701" />
+![](images/build-dynamic-dns-with-value-domain-20.png)
 
 ### DNSの浸透待ち時間
 
@@ -162,7 +162,7 @@ Value-domain上で更新され、それが世界中に伝播されるのに時�
 Vlaue-domainの初期設定ではTTLが1200秒となっていて、これを一番短い120秒まで短くした場合、経験上 だいたい30分ほどで反映されます。
 
 [Value-domainのTTL設定画面]
-<img src="images/build-dynamic-dns-with-value-domain-21.png" alt="" width="836" height="169" class="alignnone size-full wp-image-7702" />
+![](images/build-dynamic-dns-with-value-domain-21.png)
 
 ### 正しく変更されたか確認する方法
 
@@ -171,16 +171,16 @@ Vlaue-domainの初期設定ではTTLが1200秒となっていて、これを一�
 今回の例では、まず現在のIPアドレスを確認するために、 **社内PCから** 以下のサイトに接続し、画像の赤枠部分をメモします。
 [確認くん](https://www.ugtop.com/spill.shtml)
 
-<img src="images/build-dynamic-dns-with-value-domain-22.png" alt="" width="1471" height="469" class="alignnone size-full wp-image-7703" />
+![](images/build-dynamic-dns-with-value-domain-22.png)
 
 続けて以下のサイトで `example.com` がどのIPアドレスになっているか確認します。
 [nslookup(dig)テスト【DNSサーバ接続確認】](https://www.cman.jp/network/support/nslookup.html)
 
-<img src="images/build-dynamic-dns-with-value-domain-23.png" alt="" width="907" height="751" class="alignnone size-full wp-image-7704" />
+![](images/build-dynamic-dns-with-value-domain-23.png)
 
 ↓
 
-<img src="images/build-dynamic-dns-with-value-domain-24.png" alt="" width="487" height="384" class="alignnone size-full wp-image-7705" />
+![](images/build-dynamic-dns-with-value-domain-24.png)
 
 この2つのIPアドレスが同じであれば浸透した確認になります。
 
@@ -208,6 +208,6 @@ objIE.Navigate2 "https://dyn.value-domain.com/cgi-bin/dyn.fcg?d=example.com&p=pa
 
 記事のレビュー時に、スタッフから **「最上位権限で実行する」にチェックを入れたらどうか？** とアドバイスがあり、やってみるといけました！
 
-<img src="images/build-dynamic-dns-with-value-domain-25.png" alt="" width="559" height="385" class="alignnone size-full wp-image-7754" />
+![](images/build-dynamic-dns-with-value-domain-25.png)
 
 では、また次回の記事で。

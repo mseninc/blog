@@ -15,17 +15,17 @@ tags: [Windows]
 以下のURLよりProcess Explorer ツールをダウンロードします。
 [https://technet.microsoft.com/en-us/sysinternals/processexplorer.aspx](https://technet.microsoft.com/en-us/sysinternals/processexplorer.aspx)
 
-<a href="images/find-pid-of-process-locking-file-1.png"><img src="images/find-pid-of-process-locking-file-1.png" alt="2016-11-29_14h16_54" width="1283" height="812" class="alignnone size-full wp-image-3245" /></a>
+![2016-11-29_14h16_54](images/find-pid-of-process-locking-file-1.png)
 
 
 ダウンロードしたファイルを解凍します。
 初回起動時のみ、承諾画面が出るので**Agree**を選択します。
 
-<a href="images/find-pid-of-process-locking-file-2.png"><img src="images/find-pid-of-process-locking-file-2.png" alt="2016-11-29_13h40_00" width="482" height="284" class="alignnone size-full wp-image-3248" /></a>
+![2016-11-29_13h40_00](images/find-pid-of-process-locking-file-2.png)
 
 解凍したフォルダから、**procexp.exe**を管理者として実行します。
 
-<a href="images/find-pid-of-process-locking-file-3.png"><img src="images/find-pid-of-process-locking-file-3.png" alt="2016-11-29_14h19_16" width="751" height="463" class="alignnone size-full wp-image-3246" /></a>
+![2016-11-29_14h19_16](images/find-pid-of-process-locking-file-3.png)
 
 ## 特定方法
 
@@ -33,17 +33,17 @@ tags: [Windows]
 
 以下の画像は、開いている状態で削除しようとしたときのエラー画面です。
 
-<a href="images/find-pid-of-process-locking-file-4.png"><img src="images/find-pid-of-process-locking-file-4.png" alt="2016-11-29_14h18_20" width="560" height="340" class="alignnone size-full wp-image-3247" /></a>
+![2016-11-29_14h18_20](images/find-pid-of-process-locking-file-4.png)
 
 1. procexp.exeを開いた状態から、ツール上部の **[Find] - [Find Handle or DLL]**をクリックし、**[Handle or DLL substring:]** 欄にスナップショットファイルの**フルパス**を入力し**Search**をクリックします。
-<a href="images/find-pid-of-process-locking-file-5.png"><img src="images/find-pid-of-process-locking-file-5.png" alt="2016-11-29_14h38_06" width="617" height="332" class="alignnone size-full wp-image-3249" /></a>
+![2016-11-29_14h38_06](images/find-pid-of-process-locking-file-5.png)
 
 2. Searchが完了すると指定したファイルを使っているプロセスが特定されます。
-<a href="images/find-pid-of-process-locking-file-6.png"><img src="images/find-pid-of-process-locking-file-6.png" alt="2016-11-29_14h39_38" width="617" height="332" class="alignnone size-full wp-image-3251" /></a>
+![2016-11-29_14h39_38](images/find-pid-of-process-locking-file-6.png)
 **PIDが15240**と特定ができました。
 
 3. タスクマネージャーの詳細からPIDを検索し、確認します。
-<a href="images/find-pid-of-process-locking-file-7.png"><img src="images/find-pid-of-process-locking-file-7.png" alt="2016-11-29_14h51_32" width="832" height="741" class="alignnone size-full wp-image-3257" /></a>
+![2016-11-29_14h51_32](images/find-pid-of-process-locking-file-7.png)
 
 ここまでの確認から、ファイルを開いているプロセスは**Excel.exe**であることが確認できました。
 

@@ -19,7 +19,7 @@ WPF でとりあえずソフトを作るときに便利なのが Metro 調の UI
 
 下記のサンプルアプリのスクリーンショットをご覧ください。
 
-<a href="images/avoid-to-convert-case-automatically-in-wpf-with-mahapps-1.png"><img src="images/avoid-to-convert-case-automatically-in-wpf-with-mahapps-1.png" alt="勝手に大文字やら小文字に変換してくれる MahApps.Metro さん" width="491" height="274" class="aligncenter size-full wp-image-795" /></a>
+![勝手に大文字やら小文字に変換してくれる MahApps.Metro さん](images/avoid-to-convert-case-automatically-in-wpf-with-mahapps-1.png)
 
 **ウィンドウ (MetroWindow) やグループボックス (GroupBox) のタイトルが大文字化される**のに加え、**ボタンに至ってはキャプションがなぜか小文字化**されます。
 
@@ -64,7 +64,7 @@ Button は標準スタイルと `AccentedSquareButtonStyle` のようなスタ�
 
 すべて適用したあとのアフターなスクリーンショットです。
 
-<a href="images/avoid-to-convert-case-automatically-in-wpf-with-mahapps-2.png"><img src="images/avoid-to-convert-case-automatically-in-wpf-with-mahapps-2.png" alt="アフター" width="491" height="274" class="aligncenter size-full wp-image-801" /></a>
+![アフター](images/avoid-to-convert-case-automatically-in-wpf-with-mahapps-2.png)
 
 ## 参考
 

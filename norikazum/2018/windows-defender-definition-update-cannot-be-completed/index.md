@@ -13,7 +13,7 @@ tags: [Windows 10, Windows Update, Windows Defender, Windows]
 
 Windows Updateを実行すると、以下のようにDefenderの定義更新が始まり、しばらくすると保留になり「最新です」となるものの、再度実行するまた現れるということを繰り返していました。
 
-<img src="images/windows-defender-definition-update-cannot-be-completed-1.png" alt="" width="1089" height="712" class="alignnone size-full wp-image-8019" />
+![](images/windows-defender-definition-update-cannot-be-completed-1.png)
 
 ## 改善への道
 
@@ -31,11 +31,11 @@ Windows Updateを実行すると、以下のようにDefenderの定義更新が�
   MpCmdRun.exe -SignatureUpdate
   ```
 3. Signature update finished. と出るまで待機する
-  <img src="images/windows-defender-definition-update-cannot-be-completed-2.png" alt="" width="805" height="404" class="alignnone size-full wp-image-8020" />
+![](images/windows-defender-definition-update-cannot-be-completed-2.png)
 4. Windows Updateを実行する
-  <img src="images/windows-defender-definition-update-cannot-be-completed-3.png" alt="" width="1155" height="706" class="alignnone size-full wp-image-8021" />
+![](images/windows-defender-definition-update-cannot-be-completed-3.png)
 5. 無事最新になる
-<img src="images/windows-defender-definition-update-cannot-be-completed-4.png" alt="" width="1154" height="713" class="alignnone size-full wp-image-8022" />
+![](images/windows-defender-definition-update-cannot-be-completed-4.png)
 
 ## あとがき
 
@@ -49,9 +49,9 @@ CmdTool: Failed with hr = 0x80070652. Check C:\Users\administrator\AppData\Local
 この場合、サービスから **Windows Update** を停止し、**設定→更新とセキュリティ→Windows Update** からUpdateを再試行することで改善しました。
 (前回のWindows Updateが中途半端に実行されている可能性があるのだろうか・・・。)
 
-<img src="images/windows-defender-definition-update-cannot-be-completed-5.png" alt="" width="978" height="700" class="alignnone size-full wp-image-8024" />
+![](images/windows-defender-definition-update-cannot-be-completed-5.png)
 
-<img src="images/windows-defender-definition-update-cannot-be-completed-6.png" alt="" width="976" height="153" class="alignnone size-full wp-image-8025" />
+![](images/windows-defender-definition-update-cannot-be-completed-6.png)
 
 久しぶりにWindows Updateを実施してみたらDefenderが全然更新されない！という方はおられないでしょうか。
 

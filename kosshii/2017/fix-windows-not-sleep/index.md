@@ -20,7 +20,7 @@ tags: [Windows]
 デスクトップを右クリックして**ディスプレイ設定**をクリック
 左にあるメニュー欄の**電源とスリープ**をクリック
 
-<img src="images/fix-windows-not-sleep-1.png" alt="" width="2551" height="1373" class="alignnone size-full wp-image-5925" />
+![](images/fix-windows-not-sleep-1.png)
 
 スリープ状態にする設定が、**なし**になっていれば、お好きな時間を設定してください。設定した時間を経過するとスリープ状態になると思います。
 
@@ -34,7 +34,7 @@ tags: [Windows]
 
 すると**コマンドプロンプト**のアイコンが表示されると思うので、**右クリック**→**管理者として実行**を押して開きます。
 
-<img src="images/fix-windows-not-sleep-2.png" alt="" width="183" height="300" class="aligncenter size-medium wp-image-5929" />
+![](images/fix-windows-not-sleep-2.png)
 次に、下記を実行してみてください。
 
 ```

@@ -17,27 +17,27 @@ Google スプレッドシートを更新すれば、 PHP で取得する値も�
 まずは、Google スプレッドシートにデータを入力してください。
 今回はサンプルとして以下のようなデータを準備しました。
 
-<img src="images/php-get-values-from-google-spreadsheet-1.png" alt="" width="720" height="356" class="alignnone size-full wp-image-6107" />
+![](images/php-get-values-from-google-spreadsheet-1.png)
 
 ## Google スプレッドシートの共有設定を行う
 
 データの準備が完了したら、Google スプレッドシートの共有設定を行います。
 
-<img src="images/php-get-values-from-google-spreadsheet-2.png" alt="" width="1036" height="114" class="aligncenter size-full wp-image-12930" />
+![](images/php-get-values-from-google-spreadsheet-2.png)
 
 画面右上の「共有」をクリックすると以下のようなダイアログが表示されます。
 
-<img src="images/php-get-values-from-google-spreadsheet-3.png" alt="" width="648" height="409" class="aligncenter size-full wp-image-12931" />
+![](images/php-get-values-from-google-spreadsheet-3.png)
 
 リンクを取得 の下部に `制限付き 追加されたユーザーのみが、このリンクから開くことができます` と表示されている場合は、 **リンクを知っている全員に変更** をクリックしてください。
 
-<img src="images/php-get-values-from-google-spreadsheet-4.png" alt="" width="652" height="373" class="aligncenter size-full wp-image-12932" />
+![](images/php-get-values-from-google-spreadsheet-4.png)
 
 上記のダイアログが表示されますので、 **リンクを知っている全員** に切り替わっていることを確認し、「完了」をクリック
 
 Google スプレッドシートの名前を設定していない場合、下記のダイアログが表示されます。
 
-<img src="images/php-get-values-from-google-spreadsheet-5.png" alt="" width="373" height="247" class="aligncenter size-full wp-image-12935" />
+![](images/php-get-values-from-google-spreadsheet-5.png)
 
 必要に応じて名前を設定してください。スキップを選択しても支障はありません。
 
@@ -45,19 +45,19 @@ Google スプレッドシートの名前を設定していない場合、下記�
 
 共有設定が完了したら、以下の順に操作し、 Google スプレッドシートをウェブに公開します。
 
-<img src="images/php-get-values-from-google-spreadsheet-6.png" alt="" width="961" height="1138" class="alignnone size-full wp-image-6110" />
+![](images/php-get-values-from-google-spreadsheet-6.png)
 
 画面上部の「ファイル」をクリックし、メニューから「ウェブに公開] をクリックします。
 
-<img src="images/php-get-values-from-google-spreadsheet-7.png" alt="" width="559" height="431" class="aligncenter size-full wp-image-12933" />
+![](images/php-get-values-from-google-spreadsheet-7.png)
 
 「公開」をクリックします。
 
-<img src="images/php-get-values-from-google-spreadsheet-8.png" alt="" width="452" height="139" class="aligncenter size-full wp-image-12934" />
+![](images/php-get-values-from-google-spreadsheet-8.png)
 
 確認ダイアログが表示されるので、「OK」をクリックします。
 
-<img src="images/php-get-values-from-google-spreadsheet-9.png" alt="" width="559" height="715" class="aligncenter size-full wp-image-12936" />
+![](images/php-get-values-from-google-spreadsheet-9.png)
 
 **変更が加えられたときに自動的に再公開する** にチェックをいれておけば、 Google スプレッドシートを更新した時、わざわざ再公開の操作を行わなくて済みます。
 
@@ -71,7 +71,7 @@ Google スプレッドシートの値を PHP で取得するためには、デ�
 Google スプレッドシートの ID というのは、データを入力したシートの URL のこの部分になります。
 `https://docs.google.com/spreadsheets/d/GoogleスプレッドシートのID/edit#gid=0`
 
-<img src="images/php-get-values-from-google-spreadsheet-10.png" alt="" width="720" height="215" class="alignnone size-full wp-image-6108" />
+![](images/php-get-values-from-google-spreadsheet-10.png)
 
 ## PHP で値を取得する
 
@@ -161,10 +161,10 @@ object(stdClass)#1 (3) {
 
 PHP ファイルを実行してみると、指定した`苗字`と`名前`が Google スプレッドシートから取得できていることがわかります。
 
-<img src="images/php-get-values-from-google-spreadsheet-11.png" alt="" width="790" height="57" class="alignnone size-full wp-image-6121" />
+![](images/php-get-values-from-google-spreadsheet-11.png)
 
 ## Excel として出力する
 
 また、 Google スプレッドシートのデータは Excel としても保存することができますので、ぜひご活用ください！
 
-<img src="images/php-get-values-from-google-spreadsheet-12.png" alt="" width="973" height="1190" class="alignnone size-full wp-image-6112" />
+![](images/php-get-values-from-google-spreadsheet-12.png)

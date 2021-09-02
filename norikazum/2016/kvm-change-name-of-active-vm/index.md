@@ -19,15 +19,15 @@ KVM構築の記事は以下を参考にしてください。
 
 KVMの管理画面(virt-manager)から、単純に名前を変えてみます。
 
-<a href="images/kvm-change-name-of-active-vm-1.png"><img src="images/kvm-change-name-of-active-vm-1.png" alt="screenshot-from-2016-11-12-22-41-09" width="1288" height="875" class="alignnone size-full wp-image-3165" /></a>
+![screenshot-from-2016-11-12-22-41-09](images/kvm-change-name-of-active-vm-1.png)
 
-<a href="images/kvm-change-name-of-active-vm-2.png"><img src="images/kvm-change-name-of-active-vm-2.png" alt="screenshot-from-2016-11-12-22-41-26" width="1292" height="881" class="alignnone size-full wp-image-3171" /></a>
+![screenshot-from-2016-11-12-22-41-26](images/kvm-change-name-of-active-vm-2.png)
 
 変更後、起動すると以下のようなエラーで動作しなくなります。**再度同じ名前に戻せば動きます。**
 
 >仮想マシンの開始中にエラーが発生しました：内部エラー：モニターに接続中にプロセスが終了しました：
 
-<a href="images/kvm-change-name-of-active-vm-3.png"><img src="images/kvm-change-name-of-active-vm-3.png" alt="screenshot-from-2016-11-12-22-41-38" width="391" height="440" class="alignnone size-full wp-image-3167" /></a>
+![screenshot-from-2016-11-12-22-41-38](images/kvm-change-name-of-active-vm-3.png)
 
 
 ## 変更の流れ
@@ -71,12 +71,12 @@ bc6b8e06-4830-47a9-bbbf-2d74bb8cdcba
 
 名前と、UUIDを変更します。UUIDの部分は `uuidgen` で出力された値を設定します。以下の画像は変更後となります。
 
-<a href="images/kvm-change-name-of-active-vm-4.png"><img src="images/kvm-change-name-of-active-vm-4.png" alt="2016-11-12_23h06_08" width="539" height="91" class="alignnone size-full wp-image-3168" /></a>
+![2016-11-12_23h06_08](images/kvm-change-name-of-active-vm-4.png)
 
 仮想イメージファイル名を変更します。
 以下の画像は変更後となります。
 
-<a href="images/kvm-change-name-of-active-vm-5.png"><img src="images/kvm-change-name-of-active-vm-5.png" alt="2016-11-12_23h30_58" width="558" height="64" class="alignnone size-full wp-image-3169" /></a>
+![2016-11-12_23h30_58](images/kvm-change-name-of-active-vm-5.png)
 
 
 ### 変更前の仮想マシンを削除する
@@ -103,7 +103,7 @@ bc6b8e06-4830-47a9-bbbf-2d74bb8cdcba
 今回は、以下の画像のようにデバイスを削除して起動することを確認しました。
 ※以下の画像は名前変更後のchannelデバイスです。
 
-<a href="images/kvm-change-name-of-active-vm-6.png"><img src="images/kvm-change-name-of-active-vm-6.png" alt="screenshot-from-2016-11-13-02-26-16" width="1173" height="957" class="alignnone size-full wp-image-3173" /></a>
+![screenshot-from-2016-11-13-02-26-16](images/kvm-change-name-of-active-vm-6.png)
 
 設定ファイルの編集で、以下のように書き換えることで削除しなくても起動が可能になると思います。
 
@@ -112,7 +112,7 @@ bc6b8e06-4830-47a9-bbbf-2d74bb8cdcba
 # vi VMSVPROXY.xml
 ```
 
-<a href="images/kvm-change-name-of-active-vm-7.png"><img src="images/kvm-change-name-of-active-vm-7.png" alt="screenshot-from-2016-11-13-02-25-45" width="996" height="98" class="alignnone size-full wp-image-3174" /></a>
+![screenshot-from-2016-11-13-02-25-45](images/kvm-change-name-of-active-vm-7.png)
 
 
 ## あとがき

@@ -45,7 +45,7 @@ tags: [.NET, .NET Framework, Visual Studio]
 
 NuGet からインストール可能なので VS のパッケージ管理か、コマンドでインストールします。
 
-<a href="images/env-file-with-dotnet-app-1.png"><img src="images/env-file-with-dotnet-app-1.png" alt="NuGet で DotNetEnv のインストール" width="878" height="725" class="aligncenter size-full wp-image-8622" /></a>
+![NuGet で DotNetEnv のインストール](images/env-file-with-dotnet-app-1.png)
 
 Visual Studio パッケージマネージャー:
 
@@ -70,7 +70,7 @@ EXPIRATION_PERIOD = 365
 
 `.env` ファイルを出力ディレクトリにコピーするように設定しておきます。
 
-<a href="images/env-file-with-dotnet-app-2.png"><img src="images/env-file-with-dotnet-app-2.png" alt="" width="409" height="465" class="aligncenter size-full wp-image-8625" /></a>
+![](images/env-file-with-dotnet-app-2.png)
 
 ### .env ファイルの読み込み
 

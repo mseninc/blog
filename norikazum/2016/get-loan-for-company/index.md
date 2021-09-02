@@ -71,7 +71,7 @@ tags: [その他, 〇〇奮闘記]
 
 日本政策金融公庫から電話確認はなく、12月26日に帰宅してポストを確認すると封書が。
 
-<a href="images/get-loan-for-company-1.jpg"><img src="images/get-loan-for-company-1.jpg" alt="" width="864" height="1536" class="alignnone size-full wp-image-3483" /></a>
+![](images/get-loan-for-company-1.jpg)
 
 早速開封すると、**あなた様からのお申し込みにつきましては、次のとおりご融資することになりましたので、お知らせいたします。**
 

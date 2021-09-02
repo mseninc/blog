@@ -50,7 +50,7 @@ npm i
 
 GitLab から情報を取得するために、移行するリポジトリからデータを読み取る権限をもったユーザーでログインし、 **Access Token を発行する必要があります**。
 
-<a href="images/migrate-gitlab-issues-to-github-1.png"><img src="images/migrate-gitlab-issues-to-github-1.png" alt="" width="1044" height="600" class="aligncenter size-full wp-image-5261" /></a>
+![](images/migrate-gitlab-issues-to-github-1.png)
 
 1. ユーザーアイコンから
 2. Settings →
@@ -61,7 +61,7 @@ GitLab から情報を取得するために、移行するリポジトリから�
 
 移行が終わればトークンは無効化するので、スコープや有効期限はゆるゆるでもかまいません（適宜設定してください）。
 
-<a href="images/migrate-gitlab-issues-to-github-2.png"><img src="images/migrate-gitlab-issues-to-github-2.png" alt="" width="1044" height="397" class="aligncenter size-full wp-image-5262" /></a>
+![](images/migrate-gitlab-issues-to-github-2.png)
 
 生成されたトークンをコピーしておき、なくさないようにします。
 
@@ -69,7 +69,7 @@ GitLab から情報を取得するために、移行するリポジトリから�
 
 リポジトリフォルダーにある **`sample_settings.json` を `settings.json` にリネーム**し、テキストエディターで開きます。
 
-<a href="images/migrate-gitlab-issues-to-github-3.png"><img src="images/migrate-gitlab-issues-to-github-3.png" alt="" width="1077" height="682" class="aligncenter size-full wp-image-5264" /></a>
+![](images/migrate-gitlab-issues-to-github-3.png)
 
 下記の部分を編集します。
 
@@ -96,7 +96,7 @@ GitLab から情報を取得するために、移行するリポジトリから�
 
 下図のようにプロジェクト一覧が表示されれば、 GitLab 側の設定がうまくできている証拠です。
 
-<a href="images/migrate-gitlab-issues-to-github-4.png"><img src="images/migrate-gitlab-issues-to-github-4.png" alt="" width="635" height="147" class="aligncenter size-full wp-image-5265" /></a>
+![](images/migrate-gitlab-issues-to-github-4.png)
 
 ここで **移行元** のプロジェクトの ID を確認し、`settings.json` で `null` のままにしていた `gitlab.projectID` に設定します。
 
@@ -116,6 +116,6 @@ GitLab から情報を取得するために、移行するリポジトリから�
 
 GitHub の Issues が増えていれば成功です。 (GitLab でクローズされていたものはちゃんと Closed になっています)
 
-<a href="images/migrate-gitlab-issues-to-github-5.png"><img src="images/migrate-gitlab-issues-to-github-5.png" alt="" width="1059" height="858" class="aligncenter size-full wp-image-5267" /></a>
+![](images/migrate-gitlab-issues-to-github-5.png)
 
 あらためて、すばらしきスクリプトを作ってくださった [piceaTech](https://github.com/piceaTech) さんに感謝いたします。

@@ -128,7 +128,7 @@ recognizer.lang = fixRecognitionLang(lang);
 
 試しに Chrome の開発者ツール (DevTools) を使って Android をデバッグしてみたところ、**「普通话 (中国大陆)」を選択したときは `lang` プロパティに `cmn-Hans-CN` が設定されており、これで無事に中国が認識できました**。
 
-<a href="images/speech-recognition-in-android-chrome-not-recognize-mandarin-1.png"><img src="images/speech-recognition-in-android-chrome-not-recognize-mandarin-1.png" alt="" width="1142" height="716" class="aligncenter size-full wp-image-10459" /></a>
+![](images/speech-recognition-in-android-chrome-not-recognize-mandarin-1.png)
 
 ということは、 **Chrome の場合は PC でも Android でも [Web Speech API のデモページのソースコード](https://www.google.com/intl/ja/chrome/demos/speech.html) にある一覧が正しい**ということでよさそうです。
 

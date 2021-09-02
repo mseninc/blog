@@ -9,7 +9,7 @@ tags: [その他, 〇〇奮闘記]
 
 連休明けの2020年9月23日に出社すると、 **「委託元との取引に関する調査」へのご協力のお願い** のハガキが届いていました。
 
-<a href="images/responded-to-a-survey-on-transactions-with-consignors-1.jpg"><img src="images/responded-to-a-survey-on-transactions-with-consignors-1.jpg" alt="" width="756" height="1008" class="alignnone size-full wp-image-14017" /></a>
+![](images/responded-to-a-survey-on-transactions-with-consignors-1.jpg)
 
 中小企業庁が主体となっている調査のようです。 
 
@@ -33,7 +33,7 @@ tags: [その他, 〇〇奮闘記]
 1. 以下のURLにアクセスします
 [委託元との取引に関する調査](https://rsch.jp/646065aa7a17e752/login.php)
 1. ハガキに書かれている **IDとパスワードを入力** し **同意して調査に参加する** をクリックします
-<a href="images/responded-to-a-survey-on-transactions-with-consignors-2.png"><img src="images/responded-to-a-survey-on-transactions-with-consignors-2.png" alt="" width="1533" height="945" class="alignnone size-full wp-image-13997" /></a>
+![](images/responded-to-a-survey-on-transactions-with-consignors-2.png)
 1. **SQ1～SQ10までを回答します**
     - SQ1　　会社名(必須)
     - SQ2　　郵便番号(必須)
@@ -49,7 +49,7 @@ tags: [その他, 〇〇奮闘記]
     - SQ10　 委託元から[不当な行為](https://rsch.jp/646065aa7a17e752/winpop.php?imgName=top.jpg)(協力金の減額、買いたたき、返品等)を行われたことはありますか？(必須)
 1. SQ10 を **ない** と選択し、**次へ** をクリックすると入力内容の確認となりさらに **次へ** をクリックすると回答が送信され **あっという間に終了** しました。
 
-<a href="images/responded-to-a-survey-on-transactions-with-consignors-3.png"><img src="images/responded-to-a-survey-on-transactions-with-consignors-3.png" alt="" width="1533" height="703" class="alignnone size-full wp-image-13999" /></a>
+![](images/responded-to-a-survey-on-transactions-with-consignors-3.png)
 
 ## あとがき
 SQ10の質問が重要で、それ以外は会社情報を入力でした。

@@ -10,7 +10,7 @@ MSENの桝田です。
 1月も1週目が終わり、3連休明けいかがお過ごしでしょうか。
 1月10日は、今宮戎の十日戎に行ってきました。
 
-<a href="images/toka-ebisu-2016-1.jpg"><img src="images/toka-ebisu-2016-1.jpg" alt="" width="300" height="225" class="alignnone size-medium wp-image-4114" /></a>
+![](images/toka-ebisu-2016-1.jpg)
 
 メンバー3人と家族を連れて行きましたが、夜は子供には危ないということで午前中に行ってきました。
  
@@ -18,7 +18,7 @@ MSENの桝田です。
  
 早速、帰社して事務所に飾りました。
 
-<a href="images/toka-ebisu-2016-2.jpg"><img src="images/toka-ebisu-2016-2.jpg" alt="" width="225" height="300" class="alignnone size-medium wp-image-4115" /></a>
+![](images/toka-ebisu-2016-2.jpg)
 
 今年も昨年以上に頑張っていきます！
 以上、桝田がお届けしました。

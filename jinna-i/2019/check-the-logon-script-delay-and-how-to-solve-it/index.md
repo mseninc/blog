@@ -25,7 +25,7 @@ tags: [Windows, ActiveDirectory]
 
 `gpresult /z`
 
-<a href="images/check-the-logon-script-delay-and-how-to-solve-it-1.png"><img src="images/check-the-logon-script-delay-and-how-to-solve-it-1.png" alt="" width="674" height="491" class="alignnone size-full wp-image-9312" /></a>
+![](images/check-the-logon-script-delay-and-how-to-solve-it-1.png)
 
 > このスクリプトはまだ実行されていません。
 
@@ -55,7 +55,7 @@ Windows 8.1 時代では少しでもログオン処理を早くしたいとい�
 
 **未構成から無効に変更します**。
 
-<a href="images/check-the-logon-script-delay-and-how-to-solve-it-2.png"><img src="images/check-the-logon-script-delay-and-how-to-solve-it-2.png" alt="" width="683" height="635" class="alignnone size-full wp-image-9315" /></a>
+![](images/check-the-logon-script-delay-and-how-to-solve-it-2.png)
 
 このポリシーを適用することで、Windows 8.1 でも遅延せずログオンスクリプトを実行できます。
 

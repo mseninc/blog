@@ -21,7 +21,7 @@ Web アプリではセキュリティの観点からブラウザ経由でクリ�
 
 Clipboard API の対応状況は下記のとおりです。
 
-<a href="images/copy-text-to-clipboard-with-javascript-in-2021-1.png"><img src="images/copy-text-to-clipboard-with-javascript-in-2021-1.png" alt="Clipboard API のブラウザー対応状況" width="1011" height="407" class="size-full wp-image-15500" /></a>
+![Clipboard API のブラウザー対応状況](images/copy-text-to-clipboard-with-javascript-in-2021-1.png)
 
 はい、当然のごとく、 IE は鬼門ですね。
 

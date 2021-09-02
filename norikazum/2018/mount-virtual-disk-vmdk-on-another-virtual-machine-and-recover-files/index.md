@@ -11,7 +11,7 @@ VMware上で仮想マシンを運用しているケースはそれなりに多�
 突如仮想マシンが壊れて再起不能になることが稀にあります。
 
 このような感じで。
-<img src="images/mount-virtual-disk-vmdk-on-another-virtual-machine-and-recover-files-1.png" alt="" width="1286" height="547" class="alignnone size-full wp-image-8377" />
+![](images/mount-virtual-disk-vmdk-on-another-virtual-machine-and-recover-files-1.png)
 
 非常にショックな状態ですが、こんな状態でもなんとか **作成していたファイルや設定を救出したい** 、なんてこともあると思います。
 
@@ -28,7 +28,7 @@ VMware上で仮想マシンを運用しているケースはそれなりに多�
 ※**救出元** がLVM形式の場合に必要
 
 イメージは以下のような形です。
-<img src="images/mount-virtual-disk-vmdk-on-another-virtual-machine-and-recover-files-2.png" alt="" width="932" height="663" class="alignnone size-full wp-image-8383" />
+![](images/mount-virtual-disk-vmdk-on-another-virtual-machine-and-recover-files-2.png)
 
 ### 救出元VMDKを救出先に追加する
 
@@ -40,13 +40,13 @@ VMware上で仮想マシンを運用しているケースはそれなりに多�
 
 1. 作成した **救出先** の仮想マシンを **右クリック→設定の編集** へと進みます。
 1. **新規デバイスを追加** を選択し、**既存のハードディスク** を選択します。
-<img src="images/mount-virtual-disk-vmdk-on-another-virtual-machine-and-recover-files-3.png" alt="" width="265" height="402" class="alignnone size-full wp-image-8379" />
+![](images/mount-virtual-disk-vmdk-on-another-virtual-machine-and-recover-files-3.png)
 1. データーストア上の救出元VMDKを指定します。このとき、ファイル名に番号が付いていないVMDKを指定します。
-<img src="images/mount-virtual-disk-vmdk-on-another-virtual-machine-and-recover-files-4.png" alt="" width="1076" height="732" class="alignnone size-full wp-image-8380" />
+![](images/mount-virtual-disk-vmdk-on-another-virtual-machine-and-recover-files-4.png)
 
 以下のように追加されますので、OKで確定します。
 
-<img src="images/mount-virtual-disk-vmdk-on-another-virtual-machine-and-recover-files-5.png" alt="" width="1066" height="968" class="alignnone size-full wp-image-8381" />
+![](images/mount-virtual-disk-vmdk-on-another-virtual-machine-and-recover-files-5.png)
 
 そのとき、 **救出先** のログに以下のように出力されます。
 

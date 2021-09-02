@@ -77,13 +77,13 @@ end
 `route.rb` に `get 'people/add'` と `post 'people/add', to: 'people#create'` を追記してルーティングしておくのも忘れないようにしましょう。
 
 `rails s` で アプリを起動後、`localhost:3000/people/add` にアクセスして以下の画像のようになっていれば成功です。
-![add](images/ruby-on-rails5-1.png)
+![add](https://mseeeen.msen.jp/wp-content/uploads/2021/07/2021-07-09_17h15_35.png)
 
 追加できることも確認しておきましょう。
-![add2](images/ruby-on-rails5-2.png)
+![add2](https://mseeeen.msen.jp/wp-content/uploads/2021/07/2021-07-09_17h36_47.png)
 
 データの追加ができていれば大丈夫です。
-![add3](images/ruby-on-rails5-3.png)
+![add3](https://mseeeen.msen.jp/wp-content/uploads/2021/07/2021-07-09_17h36_54.png)
 
 ### データの参照
 
@@ -141,10 +141,10 @@ Rails のルーティングは、 `route.rb` の上からの記載順にマッ�
 `people/:id` のルーティングを先に定義すると、 `add` や後で追加する `delete` が `:id` のパラメーターとして認識されてしまいます。
 
 `localhost:3000/people/index` にアクセスして、以下の画像のような画面になっていれば成功です。
-![show](images/ruby-on-rails5-4.png)
+![show](https://mseeeen.msen.jp/wp-content/uploads/2021/07/2021-07-09_17h18_04.png)
 
 ID をクリックすれば Person の情報にアクセスできます。
-![show2](images/ruby-on-rails5-5.png)
+![show2](https://mseeeen.msen.jp/wp-content/uploads/2021/07/2021-07-09_17h18_09.png)
 
 ### データの更新
 
@@ -204,13 +204,13 @@ end
 `route.rb` へ `get 'people/edit/:id', to: 'people#edit'` と `patch 'people/edit/:id', to: 'people#update'` を追記してルーティングします。
 
 `localhost:3000/people/index` にアクセスして、 `edit` リンクを押してみましょう。
-![edit](images/ruby-on-rails5-6.png)
+![edit](https://mseeeen.msen.jp/wp-content/uploads/2021/07/2021-07-09_17h18_37.png)
 
 `Edit` リンクから編集画面にアクセスして以下の画像のような画面になっているか確認しましょう。
-![edit2](images/ruby-on-rails5-7.png)
+![edit2](https://mseeeen.msen.jp/wp-content/uploads/2021/07/2021-07-09_17h18_43.png)
 
 編集できれば成功です。
-![edit3](images/ruby-on-rails5-8.png)
+![edit3](https://mseeeen.msen.jp/wp-content/uploads/2021/07/2021-07-09_17h18_55.png)
 
 ### データの削除
 
@@ -247,13 +247,13 @@ end
 `route.rb` に `get 'people/delete/:id', to: 'people#delete'` を追記してルーティングすれば完了です。
 
 `localhost:3000/people/index` にアクセスして、 `Delete` リンクを押してみましょう。
-![delete](images/ruby-on-rails5-9.png)
+![delete](https://mseeeen.msen.jp/wp-content/uploads/2021/07/2021-07-09_17h19_17.png)
 
 以下の画像のようなウィンドウが出てきます。
-![delete2](images/ruby-on-rails5-10.png)
+![delete2](https://mseeeen.msen.jp/wp-content/uploads/2021/07/2021-07-09_17h19_30.png)
 
 `OK` ボタンを押して削除ができていれば完了です。
-![delete3](images/ruby-on-rails5-11.png)
+![delete3](https://mseeeen.msen.jp/wp-content/uploads/2021/07/2021-07-09_17h19_43.png)
 
 最終的な `route.rb` は以下のようになると思います。
 ```rb

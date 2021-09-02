@@ -24,33 +24,33 @@ OS：Windows Server 2012 R2
 対象OU：User配下の **Staff**
 ドメイン： **jinnai.net**
 
-<a href="images/count-activedirectory-users-1.png"><img src="images/count-activedirectory-users-1.png" alt="" width="772" height="475" class="alignnone size-full wp-image-4976" /></a>
+![](images/count-activedirectory-users-1.png)
 
 Windows Server 2008 R2でも動作確認済みです。
 
 ## GUIから確認する
 
 **Active Directoryユーザーとコンピューター** を起動します。
-<a href="images/count-activedirectory-users-2.png"><img src="images/count-activedirectory-users-2.png" alt="" width="772" height="475" class="alignnone size-full wp-image-4977" /></a>
+![](images/count-activedirectory-users-2.png)
 
 **表示** ＞ **カスタマイズ** の順にクリックします。
-<a href="images/count-activedirectory-users-3.png"><img src="images/count-activedirectory-users-3.png" alt="" width="771" height="474" class="alignnone size-full wp-image-4978" /></a>
+![](images/count-activedirectory-users-3.png)
 
 **説明バー** にチェックを入れ、 **OK** をクリックします。
-<a href="images/count-activedirectory-users-4.png"><img src="images/count-activedirectory-users-4.png" alt="" width="391" height="457" class="alignnone size-full wp-image-4979" /></a>
+![](images/count-activedirectory-users-4.png)
 
 すると、説明バーにオブジェクトの数が表示されます。
-<a href="images/count-activedirectory-users-5.png"><img src="images/count-activedirectory-users-5.png" alt="" width="772" height="475" class="alignnone size-full wp-image-4980" /></a>
+![](images/count-activedirectory-users-5.png)
 
 注意点としては、カウントするのはあくまでオブジェクトの数でありユーザー数ではないことです。
 
 グループやコンピューターが同じOUに所属している場合はフィルターする必要があります。
 
 フィルターのアイコンをクリックします。
-<a href="images/count-activedirectory-users-6.png"><img src="images/count-activedirectory-users-6.png" alt="" width="772" height="475" class="alignnone size-full wp-image-4991" /></a>
+![](images/count-activedirectory-users-6.png)
 
 **次の種類のオブジェクトのみを表示** を選択し、**ユーザー** にチェックを入れてOKをクリックします。
-<a href="images/count-activedirectory-users-7.png"><img src="images/count-activedirectory-users-7.png" alt="" width="457" height="395" class="alignnone size-full wp-image-4992" /></a>
+![](images/count-activedirectory-users-7.png)
 
 これでユーザー数のみが表示されるようになります。
 
@@ -77,7 +77,7 @@ Get-ADUserで取ってきたデータを一旦配列に入れ、そのデータ�
 -ResultSetSize $null
 ```
 
-<a href="images/count-activedirectory-users-8.png"><img src="images/count-activedirectory-users-8.png" alt="" width="997" height="331" class="alignnone size-full wp-image-4981" /></a>
+![](images/count-activedirectory-users-8.png)
 
 また、Get-ADUserが無いよって怒られた場合は以下コマンドを実行してモジュールをインポートしてみてください。
 
@@ -95,7 +95,7 @@ C:\Users\administrator>dsquery user "OU=Staff,OU=User,DC=jinnai,DC=net" | find /
 ```
 
 **"OU=Staff,OU=User,DC=jinnai,DC=net"** の部分は環境にあったDNに変更してください。
-<a href="images/count-activedirectory-users-9.png"><img src="images/count-activedirectory-users-9.png" alt="" width="677" height="493" class="alignnone size-full wp-image-4985" /></a>
+![](images/count-activedirectory-users-9.png)
 
 ## まとめ
 

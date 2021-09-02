@@ -23,4 +23,4 @@ tags: [その他, 〇〇奮闘記]
 
 本年も株式会社MSENをよろしくお願いいたします。
 
-<a href="images/msen-fifth-period-1.jpg"><img src="images/msen-fifth-period-1.jpg" alt="" width="1226" height="875" class="alignnone size-full wp-image-9111" /></a>
+![](images/msen-fifth-period-1.jpg)

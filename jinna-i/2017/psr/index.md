@@ -37,36 +37,36 @@ Windows標準という点ではマルですが、「撮って」「貼っつけ�
 評価する環境はWindows Server 2016です。
 
 スタートメニューから**ステップ記録ツール(psr.exe)**を起動します。
-<a href="images/psr-1.png"><img src="images/psr-1.png" alt="" width="170" height="300" class="alignnone size-medium wp-image-4369" /></a>
+![](images/psr-1.png)
 
 こんな画面が表示されます。
-<a href="images/psr-2.png"><img src="images/psr-2.png" alt="" width="300" height="74" class="alignnone size-medium wp-image-4371" /></a>
+![](images/psr-2.png)
 
 右側の▼印から設定画面を出します。
-<a href="images/psr-3.png"><img src="images/psr-3.png" alt="" width="300" height="118" class="alignnone size-medium wp-image-4372" /></a>
+![](images/psr-3.png)
 
 デフォルトでは画像取り込み枚数の上限が25枚になっています。
-<a href="images/psr-4.png"><img src="images/psr-4.png" alt="" width="300" height="154" class="alignnone size-medium wp-image-4373" /></a>
+![](images/psr-4.png)
 
 クリックするたびにキャプチャが取得されるので25枚なんてあっという間です。
 取りこぼしの無いように最大数の999枚に設定しておきましょう。
 ※Windows7は99枚が最大です。
-<a href="images/psr-5.png"><img src="images/psr-5.png" alt="" width="300" height="154" class="alignnone size-medium wp-image-4374" /></a>
+![](images/psr-5.png)
 
 「記録の開始」をクリックするとキャプチャの取得を開始します。
-<a href="images/psr-6.png"><img src="images/psr-6.png" alt="" width="300" height="74" class="alignnone size-medium wp-image-4376" /></a>
+![](images/psr-6.png)
 
 この間にOSの設定やソフトウェアのインストールを実施します。
 
 クリックすると赤いポインタが表示されます。これがキャプチャの取得のサインです。
-<a href="images/psr-7.png"><img src="images/psr-7.png" alt="" width="300" height="107" class="alignnone size-medium wp-image-4379" /></a>
+![](images/psr-7.png)
 
 「記録の停止」をクリックすると終了します。
-<a href="images/psr-8.png"><img src="images/psr-8.png" alt="" width="300" height="69" class="alignnone size-medium wp-image-4377" /></a>
+![](images/psr-8.png)
 
 ウィンドウが起動し、取得したキャプチャの一覧が表示されます。
 「保存」からMHTML形式で保存することができ、以後はブラウザで閲覧が可能です。
-<a href="images/psr-9.png"><img src="images/psr-9.png" alt="" width="253" height="300" class="alignnone size-medium wp-image-4381" /></a>
+![](images/psr-9.png)
 
 
 

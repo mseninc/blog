@@ -14,54 +14,54 @@ CentOSの最新版バージョン8が2019年9月24日にリリースされまし
 
 [Download CentOS](https://www.centos.org/download/)
 
-<a href="images/installing-centos8-1.png"><img src="images/installing-centos8-1.png" alt="" width="1705" height="1034" class="alignnone size-full wp-image-11161" /></a>
+![](images/installing-centos8-1.png)
 
 適当なリンクからISOをダウンロードします。
 CentOS7までにあった、Minimalバージョンはなくなっているようです。
 
-<a href="images/installing-centos8-2.png"><img src="images/installing-centos8-2.png" alt="" width="1705" height="1034" class="alignnone size-full wp-image-11162" /></a>
+![](images/installing-centos8-2.png)
 
 執筆時点では、 `CentOS-8-x86_64-1905-dvd1.iso` でした。
 
 6.6GB・・・大容量です。。
 
-<a href="images/installing-centos8-3.png"><img src="images/installing-centos8-3.png" alt="" width="196" height="47" class="alignnone size-full wp-image-11163" /></a>
+![](images/installing-centos8-3.png)
 
 CentOS8をインストールした環境は、 **Windows Server 2019上のHyper-V** です。
 Hyper-V の **バージョンは 10.0.14939.0**
 
-<a href="images/installing-centos8-4.png"><img src="images/installing-centos8-4.png" alt="" width="362" height="270" class="alignnone size-full wp-image-11334" /></a>
+![](images/installing-centos8-4.png)
 
 仮想マシンのスペックは、 **CPU1コア** 、 **メモリ2GB** です。
 
 ## インストール
 
 1. まずは、ISOでブートした状態。
-<a href="images/installing-centos8-5.png"><img src="images/installing-centos8-5.png" alt="" width="639" height="476" class="alignnone size-full wp-image-11317" /></a>
+![](images/installing-centos8-5.png)
 
 1. 続いて言語選択です。これまでと変わりませんね。
-<a href="images/installing-centos8-6.png"><img src="images/installing-centos8-6.png" alt="" width="1147" height="861" class="alignnone size-full wp-image-11318" /></a>
+![](images/installing-centos8-6.png)
 
 1. インストール概要に進みます。以下はデフォルト状態です。
-<a href="images/installing-centos8-7.png"><img src="images/installing-centos8-7.png" alt="" width="1146" height="861" class="alignnone size-full wp-image-11319" /></a>
+![](images/installing-centos8-7.png)
 
 1. ソフトウェアの選択から、最小構成も選択することができました。GUIを見てみたいのでデフォルトのまま進めます。
-<a href="images/installing-centos8-8.png"><img src="images/installing-centos8-8.png" alt="" width="1147" height="859" class="alignnone size-full wp-image-11320" /></a>
+![](images/installing-centos8-8.png)
 
 1. インストール先を選択し、ストレージ設定で **カスタムを選択** して **完了をクリック** します。
-<a href="images/installing-centos8-9.png"><img src="images/installing-centos8-9.png" alt="" width="1145" height="854" class="alignnone size-full wp-image-11322" /></a>
+![](images/installing-centos8-9.png)
 
 1. どのようなパーティションになるか確認したいので、 **標準パーティションを選択** へ変更して **自動的に作成します** をクリックします。
-<a href="images/installing-centos8-10.png"><img src="images/installing-centos8-10.png" alt="" width="1143" height="857" class="alignnone size-full wp-image-11323" /></a>
+![](images/installing-centos8-10.png)
 
 1. CentOS7と変わらず、デフォルトの **ファイルシステムはxfs** でした。評価なのでこのままインストールします。
-<a href="images/installing-centos8-11.png"><img src="images/installing-centos8-11.png" alt="" width="1151" height="854" class="alignnone size-full wp-image-11324" /></a>
+![](images/installing-centos8-11.png)
 
 1. **インストールの開始** をクリックします。
-<a href="images/installing-centos8-12.png"><img src="images/installing-centos8-12.png" alt="" width="1147" height="850" class="alignnone size-full wp-image-11325" /></a>
+![](images/installing-centos8-12.png)
 
 1. ユーザー作成についてもCentOS7までと変わりはなさそうです。rootのみを設定して進めます。
-<a href="images/installing-centos8-13.png"><img src="images/installing-centos8-13.png" alt="" width="1142" height="855" class="alignnone size-full wp-image-11326" /></a>
+![](images/installing-centos8-13.png)
 
 環境に依存しているところもあると思いますが、インストールが完了するまでの所要時間は、およそ30分程度でした。
 
@@ -69,7 +69,7 @@ Hyper-V の **バージョンは 10.0.14939.0**
 
 いよいよインストールが完了して起動をしてみると・・・
 
-<a href="images/installing-centos8-14.png"><img src="images/installing-centos8-14.png" alt="" width="1147" height="858" class="alignnone size-full wp-image-11333" /></a>
+![](images/installing-centos8-14.png)
 
 **画面が真っ黒で起動しません。。**
 
@@ -82,12 +82,12 @@ Rescue モード で起動してみても同じ現象で起動しませんでし
 
 GUIに問題があるかと思い、最小構成で再度インストールしてみました。
 
-<a href="images/installing-centos8-15.png"><img src="images/installing-centos8-15.png" alt="" width="1138" height="852" class="alignnone size-full wp-image-11354" /></a>
+![](images/installing-centos8-15.png)
 
 おー、起動しました。
 rootでログインも出来ました。
 
-<a href="images/installing-centos8-16.png"><img src="images/installing-centos8-16.png" alt="" width="335" height="115" class="alignnone size-full wp-image-11365" /></a>
+![](images/installing-centos8-16.png)
 
 ## 変わったこと
 

@@ -18,10 +18,10 @@ tags: [その他, 〇〇奮闘記]
 まずは結果から。といっても正式な合格発表ではなく、 CBT 方式で受験後に午前は点数、午後は大問ごとの正答率がメールで送られてきます。私はこんな感じでした。
 
 ～午前～
-<img src="images/take-the-kihon-joho-exam-at-cbt-1.png" alt="" width="681" height="642" class="alignnone size-full wp-image-15745" />
+![](images/take-the-kihon-joho-exam-at-cbt-1.png)
 
 ～午後～
-<img src="images/take-the-kihon-joho-exam-at-cbt-2.png" alt="" width="707" height="932" class="alignnone size-full wp-image-15746" />
+![](images/take-the-kihon-joho-exam-at-cbt-2.png)
 
 午後に関しては点数ではないので確定ではないですが、全体の正答率が 73% ぐらいなので大丈夫かなと思ってます。
 
@@ -39,7 +39,7 @@ tags: [その他, 〇〇奮闘記]
 まずは午前について。最初にキタミ式をしっかり1周したあと、2周目を読み終わった分野から順に[基本情報技術者試験ドットコム](https://www.fe-siken.com/)の[分野別過去問題](https://www.fe-siken.com/index_te.html)で過去問を解いていきました。**出題された年度が古い問題は今後は出題されにくいという推測**と、**同じ問題ばかりになる**ことから、例えば「基礎理論」の「離散数学」の場合は現在101問あるので50問だけ解くなど、各項目の新しい問題から半分を解くようにしていました。
 
 これを最終的に全項目を2回やりました。さらに2回やる中で**間違えてしまった問題、苦戦した問題などを全てメモに取り、試験直前はそれらの問題だけを解く**ようにし、できるだけ穴をつくらないようにしました。画像はそのスマホのメモです。
-<img src="images/take-the-kihon-joho-exam-at-cbt-3.png" alt="" width="510" height="550" class="alignnone size-full wp-image-15763" />
+![](images/take-the-kihon-joho-exam-at-cbt-3.png)
 
 これらのほとんどは電車通勤の間でだけ行い、計算が必要な問題だけ家で手を動かして解きました。**スキマ時間の有効さが身に沁みました**。
 
@@ -53,7 +53,7 @@ tags: [その他, 〇〇奮闘記]
 問題は残りの3つ、特にアルゴリズムでした。最初はいくら時間をかけても理解できず、最後まで問題を解ききれないレベルでした。これと表計算についてはもう**何回もやって慣れるしかない**と思います。過去問の問題によってはかかる時間や正答率がバラバラで安定しなかったので最後まで不安でしたが、本番でちゃんと特訓の成果が出せたので良かったです。
 
 例: 平成27年 秋のアルゴリズム問題より抜粋。こんな感じの擬似プログラムが出てきます。慣れたら解けるようになります。
-<img src="images/take-the-kihon-joho-exam-at-cbt-4.png" alt="" width="555" height="640" class="alignnone size-full wp-image-15762" />
+![](images/take-the-kihon-joho-exam-at-cbt-4.png)
 
 ネットワークも情報セキュリティのように午前問題の拡張版のような感じですが、計算問題がメインであり、計算を行うための知識も必要なので個人的には難しかったです。ただ、計算自体が難しいわけではないので、しっかり対策ができれば安定するのではないかと思ってます（私は間に合いませんでした）。
 

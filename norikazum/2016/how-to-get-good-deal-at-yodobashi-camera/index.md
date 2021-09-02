@@ -7,7 +7,7 @@ tags: [その他, ライフハック]
 
 インフラ強化中のため、ハードディスクを**ヨドバシカメラ梅田**に探しに行きました。
 
-<a href="images/how-to-get-good-deal-at-yodobashi-camera-1.png"><img src="images/how-to-get-good-deal-at-yodobashi-camera-1.png" alt="DSC_0078" width="1146" height="992" class="alignnone size-full wp-image-1260" /></a>
+![DSC_0078](images/how-to-get-good-deal-at-yodobashi-camera-1.png)
 
 ## ヨドバシ・ドット・コムのほうが安いことがある
 
@@ -15,7 +15,7 @@ tags: [その他, ライフハック]
 
 念のため、ネットではどれぐらいの値段かな？と型番（WD10EZRZ/YP）で検索すると、一番上にヨドバシドットコムが出てきてなんと・・・・！
 
-<a href="images/how-to-get-good-deal-at-yodobashi-camera-2.png"><img src="images/how-to-get-good-deal-at-yodobashi-camera-2.png" alt="2016-06-25_10h32_13" width="849" height="300" class="alignnone size-full wp-image-1262" /></a>
+![2016-06-25_10h32_13](images/how-to-get-good-deal-at-yodobashi-camera-2.png)
 
 ネットで買うと、6,860円と1,320円も安い！16％という驚異の割引率！(笑)
 
@@ -23,7 +23,7 @@ tags: [その他, ライフハック]
 
 しかも、ヨドバシドットコムには、ネットで注文して店頭で受け取るというサービスがあります。
 
-<a href="images/how-to-get-good-deal-at-yodobashi-camera-3.png"><img src="images/how-to-get-good-deal-at-yodobashi-camera-3.png" alt="2016-06-25_10h36_26" width="208" height="31" class="alignnone size-full wp-image-1263" /></a>
+![2016-06-25_10h36_26](images/how-to-get-good-deal-at-yodobashi-camera-3.png)
 
 在庫があるのは目の前にいるので明らかなので、その場で店頭受け取りで購入しました。
 

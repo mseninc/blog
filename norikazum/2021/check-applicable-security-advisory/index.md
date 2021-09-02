@@ -101,7 +101,7 @@ rm -rf ${body}
 
 このようなメールが通知されます。
 
-<a href="images/check-applicable-security-advisory-1.jpg"><img src="images/check-applicable-security-advisory-1.jpg" alt="" width="870" height="583" class="alignnone size-full wp-image-16996" /></a>
+![](images/check-applicable-security-advisory-1.jpg)
 
 ## あとがき
 これを cron に登録して日々チェックしようかなと考えています。

@@ -9,7 +9,7 @@ tags: [その他]
 
 今後のさらなる発展と飛躍のため、社名をシンプルにし、ロゴとのイメージ統一を図ることにいたしました。これを契機に、名前だけでなく、開発するプロダクトについても、よりシンプルにわかりやすいものを追求していきます。
 
-<a href="images/company-name-change-1.png"><img src="images/company-name-change-1.png" alt="" width="320" height="132" class="aligncenter size-full wp-image-5347" /></a>
+![](images/company-name-change-1.png)
 
 新社名: **株式会社MSEN** （英語表記: **MSEN Inc.**）
 変更年月日: 2017年10月17日 (火)

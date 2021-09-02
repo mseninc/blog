@@ -15,7 +15,7 @@ tags: [Kubernetes, その他, 〇〇奮闘記]
 ## 概要
 Cloud Native Kansai は、関西で k8s や Rancher, AWS などの技術についての勉強会です。 Cloud Native や、その関連技術に興味がある人なら、初心者でも Welcome な勉強会です。
 
-[caption id="attachment_10284" align="alignnone" width="800"]<img src="images/cloud-native-kansai-4th-1.jpg" alt="" width="800" height="600" class="size-full wp-image-10284" /> Cloud Native Kansai #04 のオープニング[/caption]
+![](images/cloud-native-kansai-4th-1.jpg)
 
 今回は以下の発表を聴講しました。
 

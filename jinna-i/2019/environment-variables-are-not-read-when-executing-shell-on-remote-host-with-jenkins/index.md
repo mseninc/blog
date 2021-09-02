@@ -26,7 +26,7 @@ SSH 経由でコマンド実行する際は **非対話モード** となるの�
 
 実際に jenkins で `echo $PATH` をしてみると。
 
-<a href="images/environment-variables-are-not-read-when-executing-shell-on-remote-host-with-jenkins-1.png"><img src="images/environment-variables-are-not-read-when-executing-shell-on-remote-host-with-jenkins-1.png" alt="" width="360" height="126" class="alignnone size-full wp-image-10378" /></a>
+![](images/environment-variables-are-not-read-when-executing-shell-on-remote-host-with-jenkins-1.png)
 
 こんな感じで、任意で設定したパスが全く通ってないことがわかります。
 
@@ -36,11 +36,11 @@ SSH 経由でコマンド実行する際は **非対話モード** となるの�
 
 `source ~/.bash_profile`
 
-<a href="images/environment-variables-are-not-read-when-executing-shell-on-remote-host-with-jenkins-2.png"><img src="images/environment-variables-are-not-read-when-executing-shell-on-remote-host-with-jenkins-2.png" alt="" width="673" height="231" class="alignnone size-full wp-image-10377" /></a>
+![](images/environment-variables-are-not-read-when-executing-shell-on-remote-host-with-jenkins-2.png)
 
 結果は以下のとおり、パスが通りました。
 
-<a href="images/environment-variables-are-not-read-when-executing-shell-on-remote-host-with-jenkins-3.png"><img src="images/environment-variables-are-not-read-when-executing-shell-on-remote-host-with-jenkins-3.png" alt="" width="914" height="151" class="alignnone size-full wp-image-10379" /></a>
+![](images/environment-variables-are-not-read-when-executing-shell-on-remote-host-with-jenkins-3.png)
 
 エックスサーバーなどのレンタルサーバーでは、root 権限が与えられていないために `/sbin:/usr/sbin:/bin:/usr/bin:` などを触ることができません。
 

@@ -9,7 +9,7 @@ tags: [情報セキュリティマネジメントシステム (ISMS), 移行記�
  
 先週2/6(土)に長らく講習を続けていた、ISMSの1段階目の審査が行われました。
 
-<a href="images/isms-first-examination-day-1-1.jpg"><img src="images/isms-first-examination-day-1-1.jpg" alt="" width="276" height="300" class="alignnone size-medium wp-image-4099" /></a>
+![](images/isms-first-examination-day-1-1.jpg)
 
 結果は、無事通過（2段階目に進める）しました。
  

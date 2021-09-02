@@ -17,7 +17,7 @@ tags: [Amazon Alexa, Amazon Echo, その他]
 
 Alexa では **Amazon Music** の楽曲を聞くことができるので、特に**洋楽**や**ジャズ**なんかは快適です。
 
-<a href="images/play-my-playlist-with-amazon-echo-alexa-1.jpg"><img src="images/play-my-playlist-with-amazon-echo-alexa-1.jpg" alt="Alexa と Amazon Music" width="1266" height="738" class="aligncenter size-full wp-image-6843" /></a>
+![Alexa と Amazon Music](images/play-my-playlist-with-amazon-echo-alexa-1.jpg)
 
 Amazon Music は Amazon のサービスなのでスキルを起動する必要がありません。再生するときの面倒が少ないのがメリットです。
 
@@ -97,7 +97,7 @@ Alexa でたとえば「ほげほげ」というプレイリストを再生し�
 
 そんなこんなで、試行錯誤してあきらめかけたとき、ふと入力した「**パイナップル**」が大ヒットしました。
 
-<a href="images/play-my-playlist-with-amazon-echo-alexa-2.jpg"><img src="images/play-my-playlist-with-amazon-echo-alexa-2.jpg" alt="Alexa にパイナップル" width="720" height="480" class="aligncenter size-full wp-image-6841" /></a>
+![Alexa にパイナップル](images/play-my-playlist-with-amazon-echo-alexa-2.jpg)
 
 ほぼ 100％ の認識率です。
 
@@ -129,7 +129,7 @@ Alexa でたとえば「ほげほげ」というプレイリストを再生し�
 Amazon Music アプリを起動して、
 **プレイリストを長押し → プレイリストを編集 → 画面上部の名前欄を編集して「完了」**を押します。
 
-<a href="images/play-my-playlist-with-amazon-echo-alexa-3.png"><img src="images/play-my-playlist-with-amazon-echo-alexa-3.png" alt="Amazon Music プレイリストの名前変更" width="1217" height="720" class="aligncenter size-full wp-image-6839" /></a>
+![Amazon Music プレイリストの名前変更](images/play-my-playlist-with-amazon-echo-alexa-3.png)
 
 ちなみに、**編集しただけでは Alexa に反映されないことがありますので、そんなときはスマホの Alexa アプリを強制終了させて、再起動すれば OK** です。
 
@@ -143,7 +143,7 @@ Amazon Music アプリを起動して、
 **メニュー → ミュージック＆本 → Amazon My Music → プレイリスト → マイプレイリスト** (遠い!)
 から、プレイリストを選択することで再生させることができます。
 
-<a href="images/play-my-playlist-with-amazon-echo-alexa-4.png"><img src="images/play-my-playlist-with-amazon-echo-alexa-4.png" alt="" width="1217" height="720" class="aligncenter size-full wp-image-6838" /></a>
+![](images/play-my-playlist-with-amazon-echo-alexa-4.png)
 
 ただ、**ペアリングしたスマホの所有者が家にいないといけない**という致命的な欠点があります。
 

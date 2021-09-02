@@ -9,7 +9,7 @@ MSENの桝田です。
 
 先週、3/12 , 13 の2日間の2次審査を無事終え、、長かったISMS審査が終了しました。
 
-<a href="images/isms-first-examination-finished-1.jpg"><img src="images/isms-first-examination-finished-1.jpg" alt="" width="252" height="300" class="alignnone size-medium wp-image-4104" /></a>
+![](images/isms-first-examination-finished-1.jpg)
 
 結果は、不適合にはならず、無事推薦してもらえることになりました。
 約3週間頃で最終的な認証結果が出るようです。

@@ -12,7 +12,7 @@ tags: [Windows Server, Windows]
 ## トラブル内容
 Windows Server 2012 R2では、以下のように **ネットワークアダプタの種別** というものが存在します。（Windows Server 2008 R2 も同様です。）
 
-<a href="images/windows-server-network-adapter-type-issue-1.png"><img src="images/windows-server-network-adapter-type-issue-1.png" alt="2016-09-13_10h37_32" width="848" height="419" class="alignnone size-full wp-image-2711" /></a>
+![2016-09-13_10h37_32](images/windows-server-network-adapter-type-issue-1.png)
 
 種別には、**プライベート、パブリック、ドメイン（ドメイン参加時のみ）の3種類** があります。
 
@@ -24,7 +24,7 @@ Windows Server 2012 R2では、以下のように **ネットワークアダプ�
 
 確認すると、Windowsファイアウォールの設定でドメインネットワークのみRDPを許可していたので再起動後の種別変更でつながらなくなっていました。
 
-<a href="images/windows-server-network-adapter-type-issue-2.png"><img src="images/windows-server-network-adapter-type-issue-2.png" alt="2016-09-13_10h41_19" width="829" height="471" class="alignnone size-full wp-image-2715" /></a>
+![2016-09-13_10h41_19](images/windows-server-network-adapter-type-issue-2.png)
 
 ## 原因
 調査の結果、**システム起動時 (NLAサービス起動時) にドメインコントローラと通信ができなかったためにパブリックネットワークと判断されていました。**（NLA (Network Location Awareness) サービスは、ネットワーク構成の変化を監視しているサービスです。）

@@ -8,7 +8,7 @@ tags: [CentOS, Linux]
 こんにちは、じんないです。
 
 CentOS7系ではGNOMEデスクトップをインストールしている場合、サインインの際にデスクトップの種類を変更することができます。
-<a href="images/centos7-how-to-fix-gnome-desktop-type-1.png"><img src="images/centos7-how-to-fix-gnome-desktop-type-1.png" alt="" width="489" height="371" class="alignnone size-full wp-image-7813" /></a>
+![](images/centos7-how-to-fix-gnome-desktop-type-1.png)
 
 上から「GNOME」「GNOMEクラシック」「カスタム」があり、**デフォルトはGNOMEクラシック**となっています。
 
@@ -55,13 +55,13 @@ gnome-classic.desktop  gnome-custom-session.desktop  gnome.desktop
 ```
 
 再度サインインをしてみると。
-<a href="images/centos7-how-to-fix-gnome-desktop-type-2.png"><img src="images/centos7-how-to-fix-gnome-desktop-type-2.png" alt="" width="395" height="244" class="alignnone size-full wp-image-7814" /></a>
+![](images/centos7-how-to-fix-gnome-desktop-type-2.png)
 
 設定ボタンが消えてデスクトップが選べないようになっています。
 
 そのままサインインするとGNOMEクラシックのデスクトップが表示されました。
 
-<a href="images/centos7-how-to-fix-gnome-desktop-type-3.png"><img src="images/centos7-how-to-fix-gnome-desktop-type-3.png" alt="" width="795" height="596" class="alignnone size-full wp-image-7815" /></a>
+![](images/centos7-how-to-fix-gnome-desktop-type-3.png)
 
 ### yum update時の注意
 

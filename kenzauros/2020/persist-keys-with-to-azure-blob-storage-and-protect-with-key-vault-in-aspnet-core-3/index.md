@@ -31,11 +31,11 @@ tags: [Microsoft Azure, ASP.NET Core, .NET]
 
 **Azure Active Directory** の [アプリの登録] を開き、 [新規登録] をクリックします。
 
-<a href="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3-1.png"><img src="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3-1.png" alt="" width="1147" height="767" class="aligncenter size-full wp-image-11966" /></a>
+![](images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3-1.png)
 
 プロパティを設定して [登録] をクリックします。
 
-<a href="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3-2.png"><img src="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3-2.png" alt="" width="1147" height="775" class="aligncenter size-full wp-image-11967" /></a>
+![](images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3-2.png)
 
 - 名前: `HogehogeApp`
 - サポートされているアカウントの種類: `この組織ディレクトリのみに含まれるアカウント (<テナント> のみ - シングル テナント)`
@@ -43,7 +43,7 @@ tags: [Microsoft Azure, ASP.NET Core, .NET]
 
 作成されると自動的に詳細ページに遷移しますので、 **[アプリケーション (クライアント) ID]** をメモしておきます。これを `ProtectKeysWithAzureKeyVault` メソッドの第2引数 `clientId` にわたすことになります。
 
-<a href="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3-3.png"><img src="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3-3.png" alt="" width="1147" height="510" class="aligncenter size-full wp-image-11968" /></a>
+![](images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3-3.png)
 
 ### シークレットの発行
 
@@ -51,7 +51,7 @@ Key Vault 認証用に**クライアント シークレット**を発行しま�
 
 [管理] → [証明書とシークレット] から [新しいクライアント シークレット] をクリックします。
 
-<a href="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3-4.png"><img src="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3-4.png" alt="" width="1147" height="676" class="aligncenter size-full wp-image-11969" /></a>
+![](images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3-4.png)
 
 - 説明: `Key Vault 認証用`
 - 有効期限: `なし`
@@ -60,7 +60,7 @@ Key Vault 認証用に**クライアント シークレット**を発行しま�
 
 シークレットが発行されたら [値] をメモしておきます。これが `ProtectKeysWithAzureKeyVault` メソッドの第3引数に渡す `clientSecret` になります。
 
-<a href="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3-5.png"><img src="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3-5.png" alt="" width="828" height="179" class="aligncenter size-full wp-image-11970" /></a>
+![](images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3-5.png)
 
 以上でアプリの登録は完了です。
 
@@ -72,11 +72,11 @@ Key Vault 認証用に**クライアント シークレット**を発行しま�
 
 **キーコンテナー (Azure Key Vault)** に遷移し、 **[追加]** をクリックします。
 
-<a href="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3-6.png"><img src="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3-6.png" alt="" width="1147" height="338" class="aligncenter size-full wp-image-11964" /></a>
+![](images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3-6.png)
 
 プロパティを設定します。
 
-<a href="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3-7.png"><img src="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3-7.png" alt="" width="1147" height="767" class="aligncenter size-full wp-image-11965" /></a>
+![](images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3-7.png)
 
 - サブスクリプション: 現在のサブスクリプションを指定
 - リソースグループ: アプリ/VM が動作しているリソースグループを指定
@@ -88,7 +88,7 @@ Key Vault 認証用に**クライアント シークレット**を発行しま�
 
 キーコンテナーが作成されたら [設定] → [キー] から新しいキーを作成します。 [生成/インポート] をクリックします。
 
-<a href="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3-8.png"><img src="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3-8.png" alt="" width="320" height="538" class="aligncenter size-full wp-image-11951" /></a>
+![](images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3-8.png)
 
 - オプション: `生成`
 - 名前: `data-protection-key`
@@ -100,11 +100,11 @@ Key Vault 認証用に**クライアント シークレット**を発行しま�
 
 上記内容で [作成] し、生成されたキーを選択します。
 
-<a href="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3-9.png"><img src="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3-9.png" alt="" width="861" height="161" class="aligncenter size-full wp-image-11952" /></a>
+![](images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3-9.png)
 
 現在のバージョンのキーを選択します。
 
-<a href="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3-10.png"><img src="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3-10.png" alt="" width="733" height="651" class="aligncenter size-full wp-image-11953" /></a>
+![](images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3-10.png)
 
 ここでやっと **キー識別子 (URI)** が取得できます。これを `ProtectKeysWithAzureKeyVault` メソッドの第1引数 `keyIdentifier` にわたすことになります。
 
@@ -140,7 +140,7 @@ public void ConfigureServices(IServiceCollection services)
 
 起動後にアプリにアクセスし、ストレージアカウントの Storage Explorer などから **BLOB コンテナーを参照し、 `keys.xml` が生成されていれば成功**です。
 
-<a href="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3-11.png"><img src="images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3-11.png" alt="" width="958" height="574" class="aligncenter size-full wp-image-12012" /></a>
+![](images/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3-11.png)
 
 `keys.xml` の中身は下記のようになっています。暗号化前にあった `masterKey` という要素は消え、 Azure Key Vault のキーを暗号鍵として暗号化されたデータ保護キーが記録されています。
 

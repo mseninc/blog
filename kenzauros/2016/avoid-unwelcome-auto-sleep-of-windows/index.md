@@ -46,7 +46,7 @@ Windows キーかスタートボタンを押して regedit + Enter でレジス�
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\238C9FA8-0AAD-41ED-83F4-97BE242C8F20\7bc4a2f9-d8fc-4469-b07b-33eb785aaca0
 ```
 
-[caption id="attachment_312" align="alignnone" width="1001"]<a href="images/avoid-unwelcome-auto-sleep-of-windows-1.png"><img src="images/avoid-unwelcome-auto-sleep-of-windows-1.png" alt="レジストリエディターで HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\238C9FA8-0AAD-41ED-83F4-97BE242C8F20\7bc4a2f9-d8fc-4469-b07b-33eb785aaca0 を開く" width="1001" height="738" class="size-full wp-image-312" /></a> レジストリエディターで HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\238C9FA8-0AAD-41ED-83F4-97BE242C8F20\7bc4a2f9-d8fc-4469-b07b-33eb785aaca0 を開く[/caption]
+![レジストリエディターで HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\238C9FA8-0AAD-41ED-83F4-97BE242C8F20\7bc4a2f9-d8fc-4469-b07b-33eb785aaca0 を開く](images/avoid-unwelcome-auto-sleep-of-windows-1.png)
 
 右側にある **Attributes をダブルクリックし、値を 2 に書き換え**ます。終わったらレジストリエディターを閉じます。
 
@@ -54,11 +54,11 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\238C9FA8
 
 電源マークを右クリックするなどして**電源オプション**を開きます。
 
-[caption id="attachment_316" align="alignnone" width="404"]<a href="images/avoid-unwelcome-auto-sleep-of-windows-2.png"><img src="images/avoid-unwelcome-auto-sleep-of-windows-2.png" alt="電源オプションを開く" width="404" height="136" class="size-full wp-image-316" /></a> 電源オプションを開く[/caption]
+![電源オプションを開く](images/avoid-unwelcome-auto-sleep-of-windows-2.png)
 
 スリープの下に **システム無人タイムアウト** が出現しているはずなので、これの時間を長めに設定します。
 
-[caption id="attachment_317" align="alignnone" width="406"]<a href="images/avoid-unwelcome-auto-sleep-of-windows-3.png"><img src="images/avoid-unwelcome-auto-sleep-of-windows-3.png" alt="スリープ→システム無人タイムアウトを設定" width="406" height="450" class="size-full wp-image-317" /></a> スリープ→システム無人タイムアウトを設定[/caption]
+![スリープ→システム無人タイムアウトを設定](images/avoid-unwelcome-auto-sleep-of-windows-3.png)
 
 [OK] を押して完了です。おそらくこれですぐにスリープすることはなくなったはずです。
 

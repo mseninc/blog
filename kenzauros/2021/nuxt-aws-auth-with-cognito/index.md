@@ -45,27 +45,27 @@ tags: [AWS, Vue.js, Nuxt.js, Cognito]
 
 Cognito のコンソールの [ユーザープールを作成する] を選び、適当なユーザープール名を入力して「デフォルトを確認する」を選びます。ここでは名前を `NuxtAuthUserPool` としました。
 
-<a href="images/nuxt-aws-auth-with-cognito-1.png"><img src="images/nuxt-aws-auth-with-cognito-1.png" alt="" width="848" height="468" class="aligncenter size-full wp-image-16369" /></a>
+![](images/nuxt-aws-auth-with-cognito-1.png)
 
 属性の設定の編集ボタンを押します。
 
-<a href="images/nuxt-aws-auth-with-cognito-2.png"><img src="images/nuxt-aws-auth-with-cognito-2.png" alt="" width="668" height="284" class="aligncenter size-full wp-image-16370" /></a>
+![](images/nuxt-aws-auth-with-cognito-2.png)
 
 サインイン方法の設定で**ユーザー名（任意のユーザー名）**にチェックを入れておきます。
 
-<a href="images/nuxt-aws-auth-with-cognito-3.png"><img src="images/nuxt-aws-auth-with-cognito-3.png" alt="" width="691" height="821" class="aligncenter size-full wp-image-16371" /></a>
+![](images/nuxt-aws-auth-with-cognito-3.png)
 
 下記のようになっていればとりあえず OK でしょう。
 
-<a href="images/nuxt-aws-auth-with-cognito-4.png"><img src="images/nuxt-aws-auth-with-cognito-4.png" alt="" width="665" height="415" class="aligncenter size-full wp-image-16372" /></a>
+![](images/nuxt-aws-auth-with-cognito-4.png)
 
 次にアプリクライアントの設定で「アプリクライアントの追加」を選びます。
 
-<a href="images/nuxt-aws-auth-with-cognito-5.png"><img src="images/nuxt-aws-auth-with-cognito-5.png" alt="" width="684" height="263" class="aligncenter size-full wp-image-16373" /></a>
+![](images/nuxt-aws-auth-with-cognito-5.png)
 
 クライアント名も適当に設定し、**「クライアントシークレットの生成」からチェックを外して**おきます。
 
-<a href="images/nuxt-aws-auth-with-cognito-6.png"><img src="images/nuxt-aws-auth-with-cognito-6.png" alt="" width="912" height="783" class="aligncenter size-full wp-image-16374" /></a>
+![](images/nuxt-aws-auth-with-cognito-6.png)
 
 上記を設定して、保存するとユーザープールが作成されます。
 
@@ -77,7 +77,7 @@ Cognito のコンソールの [ユーザープールを作成する] を選び�
 
 **OAuth のフローは `Implicit grant`、スコープは `email openid profile`** として保存します。このあたりは必要に応じて設定してください。
 
-<a href="images/nuxt-aws-auth-with-cognito-7.png"><img src="images/nuxt-aws-auth-with-cognito-7.png" alt="" width="615" height="727" class="aligncenter size-full wp-image-16375" /></a>
+![](images/nuxt-aws-auth-with-cognito-7.png)
 
 今回の例ではドメインの設定は不要です。
 
@@ -320,19 +320,19 @@ export default {
 
 自動的に `/login` にリダイレクトされるはずなので、ユーザー名とパスワードを入力して Sign in ボタンを押します。
 
-<a href="images/nuxt-aws-auth-with-cognito-8.png"><img src="images/nuxt-aws-auth-with-cognito-8.png" alt="" width="437" height="38" class="aligncenter size-full wp-image-16363" /></a>
+![](images/nuxt-aws-auth-with-cognito-8.png)
 
 成功するとホーム (`/`) にジャンプするはずです。図のように `$auth.user` の中身が表示されていれば OK です。
 
-<a href="images/nuxt-aws-auth-with-cognito-9.png"><img src="images/nuxt-aws-auth-with-cognito-9.png" alt="" width="329" height="81" class="aligncenter size-full wp-image-16364" /></a>
+![](images/nuxt-aws-auth-with-cognito-9.png)
 
 Vuex によって Local Storage にトークンなどが保存されます。
 
-<a href="images/nuxt-aws-auth-with-cognito-10.png"><img src="images/nuxt-aws-auth-with-cognito-10.png" alt="" width="838" height="218" class="aligncenter size-full wp-image-16365" /></a>
+![](images/nuxt-aws-auth-with-cognito-10.png)
 
 ここで Logout を押すと Vuex のログイン情報がクリアされ、ログイン画面にリダイレクトされます。
 
-<a href="images/nuxt-aws-auth-with-cognito-11.png"><img src="images/nuxt-aws-auth-with-cognito-11.png" alt="" width="837" height="151" class="aligncenter size-full wp-image-16366" /></a>
+![](images/nuxt-aws-auth-with-cognito-11.png)
 
 ## まとめ
 

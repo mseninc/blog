@@ -11,7 +11,7 @@ tags: [Vim, その他の技術]
 
 ある時、***Vim*** をつかってファイルを編集しようとしたとき誤って、***Vim***` でディレクトリを開いてしまいました。すると見慣れない画面が出てきました。
 
-<img src="images/what-is-netrw-1.png" alt="" width="900" height="390" class="aligncenter size-medium wp-image-15410" />
+![](images/what-is-netrw-1.png)
 
 いつもと違う画面が出てきてきたので、詳しく画面を見てみると、**Netrw Directory Listing**と書いていたので調べてみました。**Netrw**ってなに？？？
 
@@ -33,11 +33,11 @@ Netrw を使うとファイルの読み込み、書き込み、ネットワー�
 
 まず手始めにディレクトリをを作成してみます。`d` を入力すると、ディレクトリが作成できます。
 
-<img src="images/what-is-netrw-2.png" alt="" width="900" height="150" class="aligncenter size-medium wp-image-15414" />
+![](images/what-is-netrw-2.png)
 
 `Please give directory name:` と表示されるのでディレクトリ名を入力してみます。
 
-<img src="images/what-is-netrw-3.png" alt="" width="900" height="117" class="aligncenter size-medium wp-image-15417" />
+![](images/what-is-netrw-3.png)
 
 すると、きちんと`sample` ディレクトリができていました。
 

@@ -22,7 +22,7 @@ tags: [Node.js, gulp, Windows]
 
 [https://github.com/marcelklehr/nodist/releases](https://github.com/marcelklehr/nodist/releases)
 
-<img src="images/windows-nodejs-gulpjs-install-1.png" alt="Nodist" width="998" height="418" class="aligncenter size-full wp-image-8941" />
+![Nodist](images/windows-nodejs-gulpjs-install-1.png)
 
 赤枠のファイルをダウンロードしましょう。
 

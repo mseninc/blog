@@ -13,7 +13,7 @@ tags: [WordPress, Markdown, Bookmarklet, その他, ライフハック]
 
 **WordPress を触っていると、未公開のページのリンクを取得したい**ことがあります。パーマリンク部分を右クリックして「リンクのアドレスをコピー」でもかまわないのですが、タイトルを個別にコピーしないといけないのが面倒です。
 
-<a href="images/bookmarklet-for-wp-markdown-link-1.png"><img src="images/bookmarklet-for-wp-markdown-link-1.png" alt="WordPress 編集画面のタイトルとパーマリンクを取得したい" width="766" height="307" class="aligncenter size-full wp-image-6988" /></a>
+![WordPress 編集画面のタイトルとパーマリンクを取得したい](images/bookmarklet-for-wp-markdown-link-1.png)
 
 ということで、（WordPress の記事を Markdown で書いている人しか嬉しくなさそうですが）上図のように**編集画面で記事タイトルとパーマリンクを取得して `[タイトル](URL)` 形式にするブックマークレット**を作りましたので、紹介します。
 

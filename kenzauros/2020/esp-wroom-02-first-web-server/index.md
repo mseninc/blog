@@ -15,7 +15,7 @@ tags: [ESP-WROOM-02, Arduino, その他の技術]
 
 **ブラウザーからアクセスして下記のように簡易的な HTTP レスポンスを返す**ところまでをやります。
 
-<a href="images/esp-wroom-02-first-web-server-1.png"><img src="images/esp-wroom-02-first-web-server-1.png" alt="s" width="687" height="384" class="aligncenter size-full wp-image-13916" /></a>
+![s](images/esp-wroom-02-first-web-server-1.png)
 
 実装にあたって下記の参考サイトを参考にさせていただきました。ソースはほぼそのままです。誠にありがとうございます。
 
@@ -38,7 +38,7 @@ ESP8266 ボードのセットアップが完了している場合、 **ESP8266 �
 
 Arduino IDE の **[スケッチ] メニュー → [ライブラリをインクルード] に ESP8266* が表示されていれば OK** です。
 
-<a href="images/esp-wroom-02-first-web-server-2.png"><img src="images/esp-wroom-02-first-web-server-2.png" alt="Arduino IDE に ESP8266 のライブラリが表示されている" width="606" height="616" class="aligncenter size-full wp-image-13926" /></a>
+![Arduino IDE に ESP8266 のライブラリが表示されている](images/esp-wroom-02-first-web-server-2.png)
 
 ### なにはともあれ試してみる
 
@@ -115,7 +115,7 @@ Arduino IDE から **[スケッチ] メニュー → [マイコンボードに�
 
 これでコンパイルされて ESP-WROOM-02 に書き込まれるはずです。
 
-<a href="images/esp-wroom-02-first-web-server-3.png"><img src="images/esp-wroom-02-first-web-server-3.png" alt="ESP-WROOM-02 に Web サーバープログラムを書き込んだところ" width="606" height="845" class="aligncenter size-full wp-image-13914" /></a>
+![ESP-WROOM-02 に Web サーバープログラムを書き込んだところ](images/esp-wroom-02-first-web-server-3.png)
 
 ステータスが上記のようになったら完了です。
 
@@ -123,17 +123,17 @@ Arduino IDE から **[スケッチ] メニュー → [マイコンボードに�
 
 書き込みが完了したら、 **[ツール] メニュー → [シリアルモニタ] を起動した状態 (CR および LF, 74880 bps) で RST スイッチ**を押します。
 
-<a href="images/esp-wroom-02-first-web-server-4.png"><img src="images/esp-wroom-02-first-web-server-4.png" alt="ESP-WROOM-02 で Web サーバーが起動した" width="648" height="368" class="aligncenter size-full wp-image-13915" /></a>
+![ESP-WROOM-02 で Web サーバーが起動した](images/esp-wroom-02-first-web-server-4.png)
 
 Connecting... から Connected に変わって IP アドレスが表示されれば OK です。
 
 ではブラウザーからこの表示された IP アドレスにアクセスし、こんな感じで表示されれば OK です。**アクセスするたびに Counter がインクリメント**されていきます。
 
-<a href="images/esp-wroom-02-first-web-server-1.png"><img src="images/esp-wroom-02-first-web-server-1.png" alt="ESP-WROOM-02 で Web サーバーが起動した" width="687" height="384" class="aligncenter size-full wp-image-13916" /></a>
+![ESP-WROOM-02 で Web サーバーが起動した](images/esp-wroom-02-first-web-server-1.png)
 
 ちなみに存在しないページにアクセスするとちゃんと Not found になります。
 
-<a href="images/esp-wroom-02-first-web-server-5.png"><img src="images/esp-wroom-02-first-web-server-5.png" alt="ESP-WROOM-02 で Web サーバーが起動した (Not found)" width="687" height="384" class="aligncenter size-full wp-image-13917" /></a>
+![ESP-WROOM-02 で Web サーバーが起動した (Not found)](images/esp-wroom-02-first-web-server-5.png)
 
 ## ソースコード確認
 

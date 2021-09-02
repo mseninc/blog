@@ -24,51 +24,51 @@ tags: [Linux, Red Hat]
 以下の手順で仮想マシンを作成します(特別な手順はありません)
 
 1. vCenterにログインし、 **仮想ホスト→右クリックから新規仮想マシン** をクリック
-<a href="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-1.png"><img src="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-1.png" alt="" width="433" height="1014" class="alignnone size-full wp-image-14048" /></a>
+![](images/red-hat-enterprise-linux-8-1-on-vmware-esxi-1.png)
 
 1. **新規仮想マシンの作成** を選択しNEXTをクリック
-<a href="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-2.png"><img src="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-2.png" alt="" width="1086" height="894" class="alignnone size-full wp-image-14049" /></a>
+![](images/red-hat-enterprise-linux-8-1-on-vmware-esxi-2.png)
 
 1. **動作させる仮想ホストを選択** しNEXTをクリック
-<a href="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-3.png"><img src="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-3.png" alt="" width="1085" height="896" class="alignnone size-full wp-image-14050" /></a>
+![](images/red-hat-enterprise-linux-8-1-on-vmware-esxi-3.png)
 
 1. **仮想マシンを格納するストレージを選択** しNEXTをクリック
-<a href="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-4.png"><img src="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-4.png" alt="" width="1087" height="889" class="alignnone size-full wp-image-14051" /></a>
+![](images/red-hat-enterprise-linux-8-1-on-vmware-esxi-4.png)
 
 1. **ESXi 6.7 以降** を選択しNEXTをクリック
-<a href="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-5.png"><img src="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-5.png" alt="" width="1085" height="891" class="alignnone size-full wp-image-14052" /></a>
+![](images/red-hat-enterprise-linux-8-1-on-vmware-esxi-5.png)
 
 1. **Linux→Red Hat Enterprise Linux8(64ビット)** を選択しNEXTをクリック
-<a href="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-6.png"><img src="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-6.png" alt="" width="1087" height="899" class="alignnone size-full wp-image-14053" /></a>
+![](images/red-hat-enterprise-linux-8-1-on-vmware-esxi-6.png)
 
 1. **ハードウェアをカスタマイズ(①～③)し、準備でダウンロードしたISOを指定(④)** し、NEXTをクリック
-<a href="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-7.png"><img src="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-7.png" alt="" width="1085" height="891" class="alignnone size-full wp-image-14058" /></a>
+![](images/red-hat-enterprise-linux-8-1-on-vmware-esxi-7.png)
 
 1. 設定を確認しFINISHをクリック
-<a href="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-8.png"><img src="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-8.png" alt="" width="1078" height="890" class="alignnone size-full wp-image-14064" /></a>
+![](images/red-hat-enterprise-linux-8-1-on-vmware-esxi-8.png)
 
 無事作成できました
-<a href="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-9.png"><img src="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-9.png" alt="" width="1754" height="1215" class="alignnone size-full wp-image-14056" /></a>
+![](images/red-hat-enterprise-linux-8-1-on-vmware-esxi-9.png)
 
 ## Red Hat Enterprise Linux 8のインストール
 仮想マシンを起動し、Webコンソールを起動します。
-<a href="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-10.png"><img src="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-10.png" alt="" width="1368" height="800" class="alignnone size-full wp-image-14067" /></a>
+![](images/red-hat-enterprise-linux-8-1-on-vmware-esxi-10.png)
 
 以下の流れでインストールを実施しました
 
 1. ISOからブートされので、 **2行目の(デフォルトで選択されている) Test this media & install Red Hat Enterprise Linux 8.1.0 が選ばれた状態でEnter** を押します
-<a href="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-11.png"><img src="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-11.png" alt="" width="1502" height="985" class="alignnone size-full wp-image-14069" /></a>
+![](images/red-hat-enterprise-linux-8-1-on-vmware-esxi-11.png)
 
 1. ブート後、checkが走るので待ちます
-<a href="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-12.png"><img src="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-12.png" alt="" width="1502" height="985" class="alignnone size-full wp-image-14070" /></a>
+![](images/red-hat-enterprise-linux-8-1-on-vmware-esxi-12.png)
 
 1. **日本語を選択** し続行をクリック
-<a href="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-13.png"><img src="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-13.png" alt="" width="1502" height="985" class="alignnone size-full wp-image-14071" /></a>
+![](images/red-hat-enterprise-linux-8-1-on-vmware-esxi-13.png)
 
 1. **最小構成に変更** します
-<a href="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-14.png"><img src="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-14.png" alt="" width="1502" height="985" class="alignnone size-full wp-image-14072" /></a>
+![](images/red-hat-enterprise-linux-8-1-on-vmware-esxi-14.png)
 ↓
-<a href="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-15.png"><img src="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-15.png" alt="" width="1502" height="985" class="alignnone size-full wp-image-14073" /></a>
+![](images/red-hat-enterprise-linux-8-1-on-vmware-esxi-15.png)
 
 1. **パーティションを変更** します
 
@@ -81,38 +81,38 @@ tags: [Linux, Red Hat]
 
     [C.4. 推奨されるパーティション設定スキーム Red Hat Enterprise Linux 8 | Red Hat Customer Portal](https://access.redhat.com/documentation/ja-jp/red_hat_enterprise_linux/8/html/performing_an_advanced_rhel_installation/recommended-partitioning-scheme_partitioning-reference)
 
-    <a href="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-16.png"><img src="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-16.png" alt="" width="1502" height="985" class="alignnone size-full wp-image-14074" /></a>
+![](images/red-hat-enterprise-linux-8-1-on-vmware-esxi-16.png)
     ↓
-<a href="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-17.png"><img src="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-17.png" alt="" width="1502" height="985" class="alignnone size-full wp-image-14075" /></a>
+![](images/red-hat-enterprise-linux-8-1-on-vmware-esxi-17.png)
 ↓
-<a href="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-18.png"><img src="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-18.png" alt="" width="1502" height="985" class="alignnone size-full wp-image-14076" /></a>
+![](images/red-hat-enterprise-linux-8-1-on-vmware-esxi-18.png)
 ↓
-<a href="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-19.png"><img src="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-19.png" alt="" width="938" height="458" class="alignnone size-full wp-image-14077" /></a>
+![](images/red-hat-enterprise-linux-8-1-on-vmware-esxi-19.png)
 
 1. **ネットワークとホスト名を変更** します
-<a href="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-20.png"><img src="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-20.png" alt="" width="1502" height="985" class="alignnone size-full wp-image-14082" /></a>
+![](images/red-hat-enterprise-linux-8-1-on-vmware-esxi-20.png)
 ↓
-<a href="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-21.png"><img src="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-21.png" alt="" width="1502" height="985" class="alignnone size-full wp-image-14083" /></a>
+![](images/red-hat-enterprise-linux-8-1-on-vmware-esxi-21.png)
 ↓
-<a href="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-22.png"><img src="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-22.png" alt="" width="1502" height="985" class="alignnone size-full wp-image-14084" /></a>
+![](images/red-hat-enterprise-linux-8-1-on-vmware-esxi-22.png)
 ↓
-<a href="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-23.png"><img src="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-23.png" alt="" width="1502" height="985" class="alignnone size-full wp-image-14085" /></a>
+![](images/red-hat-enterprise-linux-8-1-on-vmware-esxi-23.png)
 ↓
-<a href="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-24.png"><img src="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-24.png" alt="" width="1502" height="985" class="alignnone size-full wp-image-14086" /></a>
+![](images/red-hat-enterprise-linux-8-1-on-vmware-esxi-24.png)
 ↓
-<a href="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-25.png"><img src="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-25.png" alt="" width="1502" height="985" class="alignnone size-full wp-image-14087" /></a>
+![](images/red-hat-enterprise-linux-8-1-on-vmware-esxi-25.png)
 
 1. **インストールの開始** をクリック
-<a href="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-26.png"><img src="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-26.png" alt="" width="1502" height="985" class="alignnone size-full wp-image-14088" /></a>
+![](images/red-hat-enterprise-linux-8-1-on-vmware-esxi-26.png)
 
 1. **rootのパスワード設定** と **管理ユーザーの設定** を行い完了を待機します
-<a href="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-27.png"><img src="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-27.png" alt="" width="1502" height="985" class="alignnone size-full wp-image-14089" /></a>
+![](images/red-hat-enterprise-linux-8-1-on-vmware-esxi-27.png)
 
 1. 完了しました
-<a href="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-28.png"><img src="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-28.png" alt="" width="1502" height="985" class="alignnone size-full wp-image-14092" /></a>
+![](images/red-hat-enterprise-linux-8-1-on-vmware-esxi-28.png)
 
 無事起動できました。
-<a href="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-29.png"><img src="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-29.png" alt="" width="1502" height="985" class="alignnone size-full wp-image-14093" /></a>
+![](images/red-hat-enterprise-linux-8-1-on-vmware-esxi-29.png)
 
 ## アクティベーションとサブスクライブ
 インストール直後は、 **ライセンスのアクティベーションと製品が登録されておらずシステムのアップグレードやパッケージのインストールができません** 。
@@ -137,12 +137,12 @@ tags: [Linux, Red Hat]
 カスタマーポータルを確認すると、**仮想マシンが1登録されている**ことが確認できます。
 [Red Hat Customer Portal-サブスクリプションの管理](https://access.redhat.com/management)
 
-<a href="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-30.png"><img src="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-30.png" alt="" width="1752" height="1154" class="alignnone size-full wp-image-14094" /></a>
+![](images/red-hat-enterprise-linux-8-1-on-vmware-esxi-30.png)
 
 システム登録も確認できました。
 [Red Hat Customer Portal-システム](https://access.redhat.com/management/systems)
 
-<a href="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-31.png"><img src="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-31.png" alt="" width="1752" height="1154" class="alignnone size-full wp-image-14095" /></a>
+![](images/red-hat-enterprise-linux-8-1-on-vmware-esxi-31.png)
 
 ### サブスクライブ
 
@@ -165,10 +165,10 @@ This system is registered to Red Hat Subscription Management, but is not receivi
 ```
 
 - 実行前のシステム詳細画面
-<a href="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-32.png"><img src="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-32.png" alt="" width="1752" height="1154" class="alignnone size-full wp-image-14097" /></a>
+![](images/red-hat-enterprise-linux-8-1-on-vmware-esxi-32.png)
 
 - 実行後システム詳細画面
-<a href="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-33.png"><img src="images/red-hat-enterprise-linux-8-1-on-vmware-esxi-33.png" alt="" width="1752" height="1154" class="alignnone size-full wp-image-14098" /></a>
+![](images/red-hat-enterprise-linux-8-1-on-vmware-esxi-33.png)
 
 ##  VMware Tools のインストール
 アクティベーションとサブスクライブが完了したので、これでパッケージのインストールが実行できます。

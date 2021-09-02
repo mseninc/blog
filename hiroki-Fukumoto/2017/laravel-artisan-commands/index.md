@@ -29,7 +29,7 @@ Laravelで開発を行っていると、度々Artisanコマンドを叩くこと
 Visual Studio Codeを立ち上げて、 `表示` → `統合ターミナル` を選択してみてください。
 (または、 `Ctrl` + `@` )
 
-<img src="images/laravel-artisan-commands-1.png" alt="" width="2560" height="1316" class="alignnone size-full wp-image-5804" />
+![](images/laravel-artisan-commands-1.png)
 
 こんな感じで、エディタ内にターミナルが表示され、エディタ内でArtisanコマンドを叩けるようになります！
 しかも、自動的にルートディレクトリまで移動してくれてるので、楽ですね。

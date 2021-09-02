@@ -11,7 +11,7 @@ CDやDVDにデータを収録し、納品することがあるのですが出来
 
 ## 検査の流れ
 以下が検査の流れになります。
-<a href="images/inspection-of-cd-drive-with-eset-results-in-an-error-occurred-when-reading-the-boot-sector-1.png"><img src="images/inspection-of-cd-drive-with-eset-results-in-an-error-occurred-when-reading-the-boot-sector-1.png" alt="" width="1125" height="843" class="alignnone size-full wp-image-12384" /></a>
+![](images/inspection-of-cd-drive-with-eset-results-in-an-error-occurred-when-reading-the-boot-sector-1.png)
 
 ## エラー内容
 `ディスクE:のブートセクタ - を読み込む際にエラーが発生しました`
@@ -19,7 +19,7 @@ CDやDVDにデータを収録し、納品することがあるのですが出来
 `[4] ファイルを開くことができません。ほかのアプリケーションまたはオペレーティングシステムが使用中の可能性があります。`
 
 このような画面です。
-<a href="images/inspection-of-cd-drive-with-eset-results-in-an-error-occurred-when-reading-the-boot-sector-2.png"><img src="images/inspection-of-cd-drive-with-eset-results-in-an-error-occurred-when-reading-the-boot-sector-2.png" alt="" width="996" height="748" class="alignnone size-full wp-image-12361" /></a>
+![](images/inspection-of-cd-drive-with-eset-results-in-an-error-occurred-when-reading-the-boot-sector-2.png)
 
 以下のリンクページも参考にしていたのですが、ピンポイントで同じではなかったで **サポート窓口に問合せ** を行いました。
 [「- を開けません」「- を開く際にエラーが発生しました」の意味は？ | ESETサポート情報 | 個人向け製品 | キヤノンITソリューションズ](https://eset-support.canon-its.jp/faq/show/191?category_id=34&site_domain=private)

@@ -14,10 +14,10 @@ tags: [Windows 10, SDカード, その他, ライフハック]
 **ファイルまたはディレクトリが壊れているため、読み取ることができません。**
 
 Dドライブにアクセスすると・・・
-<a href="images/solved-the-sd-card-can-not-be-opened-with-location-not-available-1.png"><img src="images/solved-the-sd-card-can-not-be-opened-with-location-not-available-1.png" alt="" width="264" height="300" class="alignnone size-full wp-image-9932" /></a>
+![](images/solved-the-sd-card-can-not-be-opened-with-location-not-available-1.png)
 
 このエラーが(涙)・・・
-<a href="images/solved-the-sd-card-can-not-be-opened-with-location-not-available-2.png"><img src="images/solved-the-sd-card-can-not-be-opened-with-location-not-available-2.png" alt="" width="502" height="208" class="alignnone size-full wp-image-9931" /></a>
+![](images/solved-the-sd-card-can-not-be-opened-with-location-not-available-2.png)
 
 
 ・・・ 焦りました・・・が、以下の方法で **簡単に復旧** できました。
@@ -25,7 +25,7 @@ Dドライブにアクセスすると・・・
 1. コマンドプロンプトを管理者権限で開く
 1. `chkdsk d: /f` を実行する
 1. 解決！
-<a href="images/solved-the-sd-card-can-not-be-opened-with-location-not-available-3.png"><img src="images/solved-the-sd-card-can-not-be-opened-with-location-not-available-3.png" alt="" width="1251" height="938" class="alignnone size-full wp-image-9934" /></a>
+![](images/solved-the-sd-card-can-not-be-opened-with-location-not-available-3.png)
 
 実行結果は以下のような出力になります。
 

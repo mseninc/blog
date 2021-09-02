@@ -14,15 +14,15 @@ tags: [CentOS, ownCloud, ActiveDirectory, その他の技術]
 ## 有効化
 1. 管理権限でログインします。
 1. 右上のユーザー名から、設定を開きます。
-<a href="images/make-owncloud-10-active-directory-authenticated-1.png"><img src="images/make-owncloud-10-active-directory-authenticated-1.png" alt="" width="346" height="448" class="aligncenter size-full wp-image-6953" /></a>
+![](images/make-owncloud-10-active-directory-authenticated-1.png)
 1. 日本語化もしておきましょう。
-<a href="images/make-owncloud-10-active-directory-authenticated-2.png"><img src="images/make-owncloud-10-active-directory-authenticated-2.png" alt="" width="1184" height="750" class="aligncenter size-full wp-image-6954" /></a>
+![](images/make-owncloud-10-active-directory-authenticated-2.png)
 1. アプリから **LDAP Integration** を有効にします。
-<a href="images/make-owncloud-10-active-directory-authenticated-3.png"><img src="images/make-owncloud-10-active-directory-authenticated-3.png" alt="" width="1176" height="849" class="aligncenter size-full wp-image-6955" /></a>
+![](images/make-owncloud-10-active-directory-authenticated-3.png)
 ↓
-<a href="images/make-owncloud-10-active-directory-authenticated-4.png"><img src="images/make-owncloud-10-active-directory-authenticated-4.png" alt="" width="853" height="614" class="aligncenter size-full wp-image-6956" /></a>
+![](images/make-owncloud-10-active-directory-authenticated-4.png)
 1. ユーザー認証メニューが追加されていることが確認できます。
-<a href="images/make-owncloud-10-active-directory-authenticated-5.png"><img src="images/make-owncloud-10-active-directory-authenticated-5.png" alt="" width="1177" height="843" class="aligncenter size-full wp-image-6957" /></a>
+![](images/make-owncloud-10-active-directory-authenticated-5.png)
 
 ## 設定手順
 設定手順は、 ownCloud 9 で紹介した以下の記事の **手順6** から実施してください。

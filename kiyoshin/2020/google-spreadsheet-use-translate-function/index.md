@@ -42,7 +42,7 @@ tags: [Google Spreadsheet, その他の技術]
 
 #### 翻訳結果
 
-<a href="images/google-spreadsheet-use-translate-function-1.png"><img src="images/google-spreadsheet-use-translate-function-1.png" alt="" width="373" height="83" class="aligncenter size-full wp-image-13409" /></a>
+![](images/google-spreadsheet-use-translate-function-1.png)
 
 期待していた感じの翻訳結果になったかと思います。
 
@@ -58,7 +58,7 @@ tags: [Google Spreadsheet, その他の技術]
 
 #### 翻訳結果
 
-<a href="images/google-spreadsheet-use-translate-function-2.png"><img src="images/google-spreadsheet-use-translate-function-2.png" alt="" width="372" height="107" class="aligncenter size-full wp-image-13414" /></a>
+![](images/google-spreadsheet-use-translate-function-2.png)
 
 A1 の翻訳前の値と同じ内容に翻訳されているので、いい感じかと思います。
 
@@ -79,7 +79,7 @@ or
 
 #### 翻訳結果
 
-<a href="images/google-spreadsheet-use-translate-function-3.png"><img src="images/google-spreadsheet-use-translate-function-3.png" alt="" width="606" height="84" class="aligncenter size-full wp-image-13416" /></a>
+![](images/google-spreadsheet-use-translate-function-3.png)
 
 Google 翻訳で同じ内容を翻訳にかけると `イタリアの美味しいパスタが食べたいです。` と翻訳されたので、概ね正しい結果が得られたかと思います。
 

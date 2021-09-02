@@ -60,11 +60,11 @@ $
 
 `http://limesurvey のアドレス/index.php/admin` にアクセスするとログイン画面が表示されるはずです。先ほど設定したアカウントでログインします。
 
-<a href="images/reinitialize-limesurvey-with-another-database-1.png"><img src="images/reinitialize-limesurvey-with-another-database-1.png" alt="" width="419" height="541" class="aligncenter size-full wp-image-15598" /></a>
+![](images/reinitialize-limesurvey-with-another-database-1.png)
 
 初回のログイン時は少し時間がかかります。ログイン後、ようこそ画面が表示されれば完了です。
 
-<a href="images/reinitialize-limesurvey-with-another-database-2.png"><img src="images/reinitialize-limesurvey-with-another-database-2.png" alt="" width="621" height="426" class="aligncenter size-full wp-image-15599" /></a>
+![](images/reinitialize-limesurvey-with-another-database-2.png)
 
 ## 参考
 

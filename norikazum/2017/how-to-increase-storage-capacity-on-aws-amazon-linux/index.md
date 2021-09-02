@@ -32,17 +32,17 @@ tmpfs               1001     0      1001   0% /dev/shm
 1. **EC2→ボリューム**と進みます。
 
 1. 変更するボリューム上にマウスカーソルを合わせ、右クリックから**ボリュームの変更** に進みます。
-<a href="images/how-to-increase-storage-capacity-on-aws-amazon-linux-1.png"><img src="images/how-to-increase-storage-capacity-on-aws-amazon-linux-1.png" alt="" width="574" height="416" class="aligncenter size-full wp-image-5185" /></a>
+![](images/how-to-increase-storage-capacity-on-aws-amazon-linux-1.png)
 
 1. 51GBから52GBに増量します。インスタンスは起動状態で実行可能です。
-<a href="images/how-to-increase-storage-capacity-on-aws-amazon-linux-2.png"><img src="images/how-to-increase-storage-capacity-on-aws-amazon-linux-2.png" alt="" width="872" height="539" class="aligncenter size-full wp-image-5186" /></a>
+![](images/how-to-increase-storage-capacity-on-aws-amazon-linux-2.png)
 ↓
-<a href="images/how-to-increase-storage-capacity-on-aws-amazon-linux-3.png"><img src="images/how-to-increase-storage-capacity-on-aws-amazon-linux-3.png" alt="" width="865" height="546" class="aligncenter size-full wp-image-5187" /></a>
+![](images/how-to-increase-storage-capacity-on-aws-amazon-linux-3.png)
 
 1. 確認に応答します。
-<a href="images/how-to-increase-storage-capacity-on-aws-amazon-linux-4.png"><img src="images/how-to-increase-storage-capacity-on-aws-amazon-linux-4.png" alt="" width="873" height="414" class="aligncenter size-full wp-image-5188" /></a>
+![](images/how-to-increase-storage-capacity-on-aws-amazon-linux-4.png)
 ↓
-<a href="images/how-to-increase-storage-capacity-on-aws-amazon-linux-5.png"><img src="images/how-to-increase-storage-capacity-on-aws-amazon-linux-5.png" alt="" width="873" height="286" class="aligncenter size-full wp-image-5191" /></a>
+![](images/how-to-increase-storage-capacity-on-aws-amazon-linux-5.png)
 
 1. インスタンスを再起動します。
 
@@ -63,7 +63,7 @@ tmpfs               1001     0      1001   0% /dev/shm
 
 ただし、**拡大は出来るが、縮小はできないこと**、**一度変更すると6時間空けないと連続で変更できない** ということが確認されたので注意が必要です。
 
-<a href="images/how-to-increase-storage-capacity-on-aws-amazon-linux-6.png"><img src="images/how-to-increase-storage-capacity-on-aws-amazon-linux-6.png" alt="" width="876" height="386" class="aligncenter size-full wp-image-5189" /></a>
+![](images/how-to-increase-storage-capacity-on-aws-amazon-linux-6.png)
 
 それでは次回の記事でお会いしましょう。
 

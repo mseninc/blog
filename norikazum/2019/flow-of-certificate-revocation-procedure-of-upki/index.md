@@ -22,7 +22,7 @@ tags: [セキュリティ, サーバー, NII, SSL, CRL, その他の技術]
 事前準備として、**旧証明書を準備** してください。
 ファイル転送が困難な場合は、サーバーに接続し `cat` コマンドで出力された `-----BEGIN CERTIFICATE-----` から `-----END CERTIFICATE-----` までをテキストに貼り付けて **cer拡張子で保存** しても可能です。
 
-<a href="images/flow-of-certificate-revocation-procedure-of-upki-1.png"><img src="images/flow-of-certificate-revocation-procedure-of-upki-1.png" alt="" width="98" height="98" class="alignnone size-full wp-image-8865" /></a>
+![](images/flow-of-certificate-revocation-procedure-of-upki-1.png)
 
 公式の手順は以下になりますので適宜ご参考ください。
 [失効手続き - UPKI電子証明書発行サービス](https://certs.nii.ac.jp/join/ee/case3/)
@@ -33,22 +33,22 @@ tags: [セキュリティ, サーバー, NII, SSL, CRL, その他の技術]
 [TSV作成ツール: トップメニュー](https://certs.nii.ac.jp/tsv-tool/)
 
 1. 作成を開始します
-<a href="images/flow-of-certificate-revocation-procedure-of-upki-2.png"><img src="images/flow-of-certificate-revocation-procedure-of-upki-2.png" alt="" width="1729" height="1047" class="alignnone size-full wp-image-8863" /></a>
+![](images/flow-of-certificate-revocation-procedure-of-upki-2.png)
 
 1. TSVファイルの種別に **失効申請用TSV** を選択します
-<a href="images/flow-of-certificate-revocation-procedure-of-upki-3.png"><img src="images/flow-of-certificate-revocation-procedure-of-upki-3.png" alt="" width="1729" height="1047" class="alignnone size-full wp-image-8864" /></a>
+![](images/flow-of-certificate-revocation-procedure-of-upki-3.png)
 
 1. 準備した旧証明書ファイルを読み込みます
-<a href="images/flow-of-certificate-revocation-procedure-of-upki-4.png"><img src="images/flow-of-certificate-revocation-procedure-of-upki-4.png" alt="" width="1729" height="1047" class="alignnone size-full wp-image-8867" /></a>
+![](images/flow-of-certificate-revocation-procedure-of-upki-4.png)
 
 1. 読込完了後、残りの項目(利用者管理者E-mail、失効理由、失効理由コメント）を入力し完了します
-<a href="images/flow-of-certificate-revocation-procedure-of-upki-5.png"><img src="images/flow-of-certificate-revocation-procedure-of-upki-5.png" alt="" width="1729" height="986" class="alignnone size-full wp-image-8873" /></a>
+![](images/flow-of-certificate-revocation-procedure-of-upki-5.png)
 
 1. 作成されたTSVをダウンロードします
-<a href="images/flow-of-certificate-revocation-procedure-of-upki-6.png"><img src="images/flow-of-certificate-revocation-procedure-of-upki-6.png" alt="" width="1729" height="1047" class="alignnone size-full wp-image-8869" /></a>
+![](images/flow-of-certificate-revocation-procedure-of-upki-6.png)
 
 ダウンロードすることができました。
-<a href="images/flow-of-certificate-revocation-procedure-of-upki-7.png"><img src="images/flow-of-certificate-revocation-procedure-of-upki-7.png" alt="" width="291" height="67" class="alignnone size-full wp-image-8870" /></a>
+![](images/flow-of-certificate-revocation-procedure-of-upki-7.png)
 
 ## 学術機関にTSVを送付
 
@@ -63,11 +63,11 @@ NIIから学術機関にサーバ証明書の失効が完了した旨の連絡�
 学術機関から失効通知を共有していただくことで失効の確認は出来ますが、自身で確認したい場合の方法を紹介します。
 
 1. 旧証明書を開き、 **詳細タブ** の **CRL配布ポイント** のURLに接続し **CRLをダウンロード** します
-<a href="images/flow-of-certificate-revocation-procedure-of-upki-8.png"><img src="images/flow-of-certificate-revocation-procedure-of-upki-8.png" alt="" width="587" height="734" class="alignnone size-full wp-image-8909" /></a>
+![](images/flow-of-certificate-revocation-procedure-of-upki-8.png)
 `fullcrlg4.crl` がダウンロードできます。
 
 1. 同じく旧証明書を開き、 **シリアル番号** をコピーします
-<a href="images/flow-of-certificate-revocation-procedure-of-upki-9.png"><img src="images/flow-of-certificate-revocation-procedure-of-upki-9.png" alt="" width="587" height="734" class="alignnone size-full wp-image-8917" /></a>
+![](images/flow-of-certificate-revocation-procedure-of-upki-9.png)
 
 1. CRLに旧証明書のシリアル番号があるか確認します
 **CRLはWindows上でダブルクリック** することで開けますが **検索することは困難** です。

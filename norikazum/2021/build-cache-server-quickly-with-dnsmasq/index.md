@@ -22,16 +22,16 @@ tags: [Linux, DNS, dnsmasq]
 - Schneider Electric のネットワークカード( UPS Network Management Card 2 )
 
 以下の環境で **UPSから名前解決をしたい！** というケースでした
-<a href="images/build-cache-server-quickly-with-dnsmasq-1.jpg"><img src="images/build-cache-server-quickly-with-dnsmasq-1.jpg" alt="" width="472" height="526" class="alignnone size-full wp-image-16916" /></a>
+![](images/build-cache-server-quickly-with-dnsmasq-1.jpg)
 
 ## 設定前のテスト
 Schneider Electric のネットワークカード からテストします。
 
 事前に、DNSサーバーを設定します。
-<a href="images/build-cache-server-quickly-with-dnsmasq-2.jpg"><img src="images/build-cache-server-quickly-with-dnsmasq-2.jpg" alt="" width="423" height="260" class="alignnone size-full wp-image-16922" /></a>
+![](images/build-cache-server-quickly-with-dnsmasq-2.jpg)
 
 はい、引けません。
-<a href="images/build-cache-server-quickly-with-dnsmasq-3.jpg"><img src="images/build-cache-server-quickly-with-dnsmasq-3.jpg" alt="" width="458" height="365" class="alignnone size-full wp-image-16917" /></a>
+![](images/build-cache-server-quickly-with-dnsmasq-3.jpg)
 
 ## dnsmasq 設定
 今回は、`/etc/resolv.conf` に記載のDNSサーバーに転送するので事前に記載しておきます。
@@ -108,7 +108,7 @@ tcp    LISTEN  0       32                  [::]:53                  [::]:*
 再度、Schneider Electric のネットワークカード からテストします。
 
 無事名前解決できましたね。
-<a href="images/build-cache-server-quickly-with-dnsmasq-4.jpg"><img src="images/build-cache-server-quickly-with-dnsmasq-4.jpg" alt="" width="520" height="350" class="alignnone size-full wp-image-16920" /></a>
+![](images/build-cache-server-quickly-with-dnsmasq-4.jpg)
 
 ## あとがき
 めんどくさがりの私へ、ここまで記載した内容をコピペで実行できるように以下を記載しておきます。

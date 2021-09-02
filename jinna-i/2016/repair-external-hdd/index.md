@@ -21,14 +21,14 @@ tags: [電子工作, その他, ライフハック]
 分解はいたって簡単。
 底面にあるこのプラスねじを外します。
 ※2番のプラスドライバーが必要です。
-<img src="images/repair-external-hdd-1.jpg" alt="j-exhdd_002" width="600" height="450" class="alignnone size-medium wp-image-2919" />
+![j-exhdd_002](images/repair-external-hdd-1.jpg)
 
 ねじが外れると、このようにパカッと外れます。
-<img src="images/repair-external-hdd-2.jpg" alt="j_exhdd_003" width="600" height="450" class="alignnone size-medium wp-image-2922" />
+![j_exhdd_003](images/repair-external-hdd-2.jpg)
 
 両サイドのパネルを前面方向に引き出します。
 シールド用の薄い銅板がついているので、注意しましょう。
-<img src="images/repair-external-hdd-3.jpg" alt="j_exhdd_004" width="600" height="450" class="alignnone size-medium wp-image-2925" />
+![j_exhdd_004](images/repair-external-hdd-3.jpg)
 
 いよいよ中身が見えてきました。
 
@@ -36,11 +36,11 @@ tags: [電子工作, その他, ライフハック]
 ## 犯人はコイツだ！
 
 電源内蔵タイプのものなので、まずは電源回路周辺からチェックしていきます。
-<img src="images/repair-external-hdd-4.jpg" alt="j_exhdd_005" width="600" height="450" class="alignnone size-medium wp-image-2927" />
+![j_exhdd_005](images/repair-external-hdd-4.jpg)
 
 眺めていると、さっそく怪しいものが出てきました。
 電源回路の電解コンデンサが膨らんでいるではありませんか。
-<img src="images/repair-external-hdd-5.jpg" alt="j_exhdd_006" width="600" height="450" class="alignnone size-medium wp-image-2930" />
+![j_exhdd_006](images/repair-external-hdd-5.jpg)
 
 長時間の通電や熱がこもる状態(高温高負荷)だと、電解コンデンサの劣化が著しく早くなります。
 症状が進行すると天面の溝(故意的に作った十字の溝)から破裂してしまうこともしばしば。。。
@@ -51,10 +51,10 @@ tags: [電子工作, その他, ライフハック]
 ## 部品の交換
 
 基板とケースを固定しているプラスねじ2本を取り外します。
-<img src="images/repair-external-hdd-6.jpg" alt="j_exhdd_007" width="600" height="450" class="alignnone size-medium wp-image-2939" />
+![j_exhdd_007](images/repair-external-hdd-6.jpg)
 
 基板両端のコネクタをはずすと本体から分離できます。
-<img src="images/repair-external-hdd-7.jpg" alt="j_exhdd_009" width="600" height="450" class="alignnone size-medium wp-image-2943" />
+![j_exhdd_009](images/repair-external-hdd-7.jpg)
 
 問題のコンデンサは以下の2つ。
 **・16V 1000uF 105℃ × 1**
@@ -66,7 +66,7 @@ tags: [電子工作, その他, ライフハック]
 新旧コンデンサ比較。
 左：取り外したコンデンサ
 右：新品のコンデンサ（東信工業製）
-<img src="images/repair-external-hdd-8.jpg" alt="j_exhdd_010" width="600" height="450" class="alignnone size-medium wp-image-2947" />
+![j_exhdd_010](images/repair-external-hdd-8.jpg)
 
 コンデンサはいつもお世話になっている[共立電子](http://silicon.kyohritsu.com/)さん(@日本橋)で購入しました。
 WEBショップでも同じものを購入することができます。
@@ -74,10 +74,10 @@ WEBショップでも同じものを購入することができます。
 [10V/2200uF/105℃品](http://eleshop.jp/shop/g/g3CE138/)
 
 新品のコンデンサをはんだ付けし、元通り組み上げていけば完成です。
-<img src="images/repair-external-hdd-9.jpg" alt="j_exhdd_011" width="600" height="450" class="alignnone size-medium wp-image-2950" />
+![j_exhdd_011](images/repair-external-hdd-9.jpg)
 
 今回使用したツールはこれだけ。
-<img src="images/repair-external-hdd-10.jpg" alt="j_exhdd_013" width="600" height="450" class="alignnone size-medium wp-image-3013" />
+![j_exhdd_013](images/repair-external-hdd-10.jpg)
 #2プラスドライバー、はんだごて、こて先クリーナー、はんだ吸い取り線、はんだ。
 ※ドライバーは貫通タイプでないものを推奨します。
 
@@ -91,7 +91,7 @@ WEBショップでも同じものを購入することができます。
 
 そしてPCに接続し、、、
 
-<img src="images/repair-external-hdd-11.png" alt="j_exhdd_012" width="1024" height="760" class="alignnone size-large wp-image-2953" />
+![j_exhdd_012](images/repair-external-hdd-11.png)
 
 **無事に認識してくれました！**
 

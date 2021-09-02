@@ -16,39 +16,39 @@ tags: [レク, その他]
 途中、湯浅で昼食。
 5月はしらすの最盛期ということもあり、[かどや食堂](http://www.yuasa-kadoya.com/)さんにお邪魔して生しらすを堪能しました！
 
-<a href="images/2019-spring-recreation-day1-1.jpg"><img src="images/2019-spring-recreation-day1-1.jpg" alt="" width="647" height="485" class="size-full wp-image-9824" /></a>
+![](images/2019-spring-recreation-day1-1.jpg)
 
 [しらす丼の食べ歩きマップ](http://www.town.yuasa.wakayama.jp/publics/download/?file=/files/content_type/type019/183/201601191409187373.pdf)も公開されているので、湯浅に行かれる際は要 Check です！
 
 腹も満たされたところで熊野方面へ。
 せっかく来たのだからと[熊野本宮大社](http://www.hongutaisha.jp/)を参拝。無事にこれたことへの感謝をお伝えしてきました。
 
-<a href="images/2019-spring-recreation-day1-2.jpg"><img src="images/2019-spring-recreation-day1-2.jpg" alt="" width="807" height="605" class="alignnone size-full wp-image-9829" /></a>
+![](images/2019-spring-recreation-day1-2.jpg)
 
 めちゃくちゃデカい大斎原の鳥居に圧倒。
-<a href="images/2019-spring-recreation-day1-3.jpg"><img src="images/2019-spring-recreation-day1-3.jpg" alt="" width="647" height="485" class="alignnone size-full wp-image-9830" /></a>
+![](images/2019-spring-recreation-day1-3.jpg)
 
 ここから10分ほど走ったところが本日のお宿。**[熊野　四季亭](http://kumano.shikitei.info/)**です。
 実はここ、[2年前の夏レク](https://mseeeen.msen.jp/2017-summer-recreation-in-biwako-1/)でお邪魔させてもらったところの姉妹店だそうです。
 
-<a href="images/2019-spring-recreation-day1-4.jpg"><img src="images/2019-spring-recreation-day1-4.jpg" alt="" width="807" height="605" class="alignnone size-full wp-image-9832" /></a>
+![](images/2019-spring-recreation-day1-4.jpg)
 
 宿のすぐ裏に綺麗な渓流もあってロケーションは最高です。
 
-<a href="images/2019-spring-recreation-day1-5.jpg"><img src="images/2019-spring-recreation-day1-5.jpg" alt="" width="807" height="605" class="alignnone size-full wp-image-9834" /></a>
+![](images/2019-spring-recreation-day1-5.jpg)
 
 準備した後は、念願のかんぱーい。
 ※ビビりながらスパークリングを開けるシャチョー
 
-<a href="images/2019-spring-recreation-day1-6.jpg"><img src="images/2019-spring-recreation-day1-6.jpg" alt="" width="816" height="613" class="size-full wp-image-9836" /></a>
+![](images/2019-spring-recreation-day1-6.jpg)
 
 気心の知れた仲間とともにする BBQ はまた格別です。
 
-<a href="images/2019-spring-recreation-day1-7.jpg"><img src="images/2019-spring-recreation-day1-7.jpg" alt="" width="647" height="485" class="alignnone size-full wp-image-9838" /></a>
+![](images/2019-spring-recreation-day1-7.jpg)
 
 もはやレギュラーになりつつある燻製。ベーコンとチーズ、そして意外にうまいのがナッツです！赤ワインやハイボールとも相性抜群ですね。これはもう外せません。
 
-<a href="images/2019-spring-recreation-day1-8.jpg"><img src="images/2019-spring-recreation-day1-8.jpg" alt="" width="730" height="548" class="alignnone size-full wp-image-9840" /></a>
+![](images/2019-spring-recreation-day1-8.jpg)
 
 そんなこんなで時間を忘れて、いろんなことを語り合い、夜は更けていったのでした。
 

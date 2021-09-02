@@ -16,27 +16,27 @@ tags: [AWS]
 では、早速登録してみましょう。※作成にはクレジットカードが必要です。
 
 1. [https://aws.amazon.com/jp/](https://aws.amazon.com/jp/) へアクセスし、 **まずは無料で始める** をクリックします。
-<a href="images/create-aws-account-201710-1.png"><img src="images/create-aws-account-201710-1.png" alt="" width="1418" height="969" class="aligncenter size-full wp-image-5356" /></a>
+![](images/create-aws-account-201710-1.png)
 
 1. 必要項目を入力し **続行** をクリックします。
-<a href="images/create-aws-account-201710-2.png"><img src="images/create-aws-account-201710-2.png" alt="" width="1418" height="969" class="aligncenter size-full wp-image-5357" /></a>
+![](images/create-aws-account-201710-2.png)
 
 1. 今回は **会社アカウント** として作成します。必要情報を入力し **アカウントを作成して続行** をクリック
 入力項目は半角英数でないとエラーになります。このタイミングでアカウントは作成されます。
-<a href="images/create-aws-account-201710-3.png"><img src="images/create-aws-account-201710-3.png" alt="" width="1418" height="1129" class="aligncenter size-full wp-image-5358" /></a>
+![](images/create-aws-account-201710-3.png)
 
 1. 支払い情報を登録します。課金されるかどうかにかかわらず **クレジットカード登録が必要** です。
-<a href="images/create-aws-account-201710-4.png"><img src="images/create-aws-account-201710-4.png" alt="" width="1418" height="1129" class="aligncenter size-full wp-image-5359" /></a>
+![](images/create-aws-account-201710-4.png)
 
 1. 本人確認を行います。画面の文字を入力し、 **すぐに連絡を受ける** をクリックします。次の画面でPINコードが表示され、かかってきた電話で聞いたPINコードを入力すれば本人確認は完了です。
-<a href="images/create-aws-account-201710-5.png"><img src="images/create-aws-account-201710-5.png" alt="" width="1418" height="1454" class="aligncenter size-full wp-image-5360" /></a>
+![](images/create-aws-account-201710-5.png)
 
 1. サポートプランに無料の Basic を選択し、下にスクロールし **続行** をクリックします。
-<a href="images/create-aws-account-201710-6.png"><img src="images/create-aws-account-201710-6.png" alt="" width="1727" height="1277" class="aligncenter size-full wp-image-5361" /></a>
+![](images/create-aws-account-201710-6.png)
 
 1. これで登録完了です。
-<a href="images/create-aws-account-201710-7.png"><img src="images/create-aws-account-201710-7.png" alt="" width="1727" height="1277" class="aligncenter size-full wp-image-5362" /></a>
-<a href="images/create-aws-account-201710-8.png"><img src="images/create-aws-account-201710-8.png" alt="" width="1727" height="1277" class="aligncenter size-full wp-image-5363" /></a>
+![](images/create-aws-account-201710-7.png)
+![](images/create-aws-account-201710-8.png)
 
 ## あとがき
 
@@ -74,7 +74,7 @@ tags: [AWS]
 
 一連のやりとりがこちら。
 
-<a href="images/create-aws-account-201710-9.png"><img src="images/create-aws-account-201710-9.png" alt="" width="632" height="860" class="aligncenter size-full wp-image-5365" /></a>
+![](images/create-aws-account-201710-9.png)
 
 英語、話したい・・・。
 

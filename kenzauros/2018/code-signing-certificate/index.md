@@ -11,7 +11,7 @@ tags: [.NET, Visual Studio, 証明書]
 
 **Microsoft SmartScreen** とは Windows 8 や 10 をつかっていてアプリを実行しようとしたりすると表示されるアレです。
 
-<img src="images/code-signing-certificate-1.png" alt="SmartScreen" width="682" height="271" class="aligncenter size-full wp-image-8271" />
+![SmartScreen](images/code-signing-certificate-1.png)
 
 Windows 10 では 8 より厳しくなったため、この画面で [OK] を押すと起動しようとしたアプリは終了してしまい、図中の  [詳細情報] を押さないと [実行] ボタンが表示されないため、 PC に詳しくない人にアプリを使ってもらうのが難しくなってしまいました。
 
@@ -111,7 +111,7 @@ pfx ファイルは Visual Studio で署名するときに使用します。フ�
 
 VS がインストールされている開発者の方であれば、スタートメニューから **Visual Studio 開発者コマンドプロンプト** を起動して使うとすでにパスが通っているので便利です。
 
-<img src="images/code-signing-certificate-2.png" alt="VS2017 開発者コマンドプロンプト" width="318" height="323" class="aligncenter size-full wp-image-8260" />
+![VS2017 開発者コマンドプロンプト](images/code-signing-certificate-2.png)
 
 下記ではわかりやすいように `c:\cert` フォルダでも作って作業することにします。
 
@@ -135,7 +135,7 @@ makecert -n "CN=MSEN,O=MSEN,C=JP" -b 01/01/2000 -e 01/01/2100 -r -sv msen.pvk ms
 
 証明書の期限が切れると当然ながら署名できなくなり、延長するか変更して再インストールする必要がでてきますので、特に期限を重視しないのであれば、 `-b` (開始日) と `-e` (終了日) オプションで期限を長めに設定しておいたほうが無難です。
 
-<img src="images/code-signing-certificate-3.png" alt="makecert で秘密鍵のパスワードを入力" width="979" height="512" class="aligncenter size-full wp-image-8278" />
+![makecert で秘密鍵のパスワードを入力](images/code-signing-certificate-3.png)
 
 鍵のパスワードを入力する画面が現れるので、なるべく複雑なものを設定します。
 （ここでは以下、 `PASSWORD` とします）
@@ -155,7 +155,7 @@ pvk2pfx -pvk msen.pvk -spc msen.cer -pfx msen.pfx -f -pi "PASSWORD"
 
 成功すると特にメッセージもなく `.pfx` ファイルが生成されます。
 
-<img src="images/code-signing-certificate-4.png" alt="生成されたオレオレ証明書ファイル" width="506" height="108" class="aligncenter size-full wp-image-8262" />
+![生成されたオレオレ証明書ファイル](images/code-signing-certificate-4.png)
 
 以上で証明書ファイルの作成は完了です。
 
@@ -166,11 +166,11 @@ pvk2pfx -pvk msen.pvk -spc msen.cer -pfx msen.pfx -f -pi "PASSWORD"
 
 Visual Studio でプロジェクトのプロパティを開き、 [署名] タブから [アセンブリに署名する] にチェックを入れ、ドロップダウンで [参照...] を選びます。
 
-<img src="images/code-signing-certificate-5.png" alt="Visual Studio 署名設定" width="807" height="530" class="aligncenter size-full wp-image-8265" />
+![Visual Studio 署名設定](images/code-signing-certificate-5.png)
 
 先ほど作成した `.pfx` ファイルを指定します。パスワードを聞かれますので、作成時のパスワードを入力します。
 
-<img src="images/code-signing-certificate-6.png" alt="VS プロジェクトに登録された pfx ファイル" width="1202" height="536" class="aligncenter size-full wp-image-8266" />
+![VS プロジェクトに登録された pfx ファイル](images/code-signing-certificate-6.png)
 
 完了するとプロジェクトのルートに `.pfx` ファイルが追加されます。
 
@@ -210,11 +210,11 @@ Visual Studio でプロジェクトのプロパティを開き、 [署名] タ�
 
 クライアントに直接インストールする場合は、クライアントマシンで `.cer` ファイルをダブルクリックし、 **[証明書のインストール]** をクリックします。
 
-<img src="images/code-signing-certificate-7.png" alt="オレオレ証明書のインストール" width="470" height="587" class="aligncenter size-full wp-image-8282" />
+![オレオレ証明書のインストール](images/code-signing-certificate-7.png)
 
 [ローカルコンピューター] を選んで次へ進みます。
 
-<img src="images/code-signing-certificate-8.png" alt="証明書のインストール" width="652" height="688" class="aligncenter size-full wp-image-8285" />
+![証明書のインストール](images/code-signing-certificate-8.png)
 
 次に証明書ストア（証明書保管場所）を選びますが、今回は**「オレの作った証明書が正義じゃ！」というオレオレ証明書なので、信頼されたルート証明機関にルート証明書として登録します。**
 

@@ -41,13 +41,13 @@ Puppeteer は Node.js のモジュールであるため、 **`npm install` で�
 
 コンソールの「関数の概要」にある "Layers" というやつから設定できます。
 
-<a href="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-1-1.png"><img src="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-1-1.png" alt="" width="859" height="342" class="aligncenter size-full wp-image-15998" /></a>
+![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-1-1.png)
 
 こうしておけば、 **Lambda 関数自体は（ほぼ）ハンドラを含んだファイルのみにすることができます**ので、差し替えもコンソール上での編集も容易です。
 
 レイヤーを使用した Lambda 関数のイメージは下図のようになります。
 
-<a href="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-1-2.png"><img src="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-1-2.png" alt="" width="438" height="320" class="aligncenter size-full wp-image-16044" /></a>
+![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-1-2.png)
 
 
 ## 日本語フォントの話
@@ -58,7 +58,7 @@ Windows などのリッチな環境に慣れていると忘れがちですが、
 
 そのまま **Web サイトを表示すると豆腐（□）だらけ**になります。
 
-<a href="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-1-3.png"><img src="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-1-3.png" alt="" width="1196" height="680" class="aligncenter size-full wp-image-16028" /></a>
+![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-1-3.png)
 
 ということで日本語フォントをなんらかの方法で外部から注入してやる必要があります。今回は日本語フォントとして、下記の理由で **Noto Font** を採用します。
 
@@ -91,19 +91,19 @@ Windows などのリッチな環境に慣れていると忘れがちですが、
 
 **適当なフォルダに `.fonts` フォルダを作成し、そこに必要なフォントファイルを入れます。この `.fonts` フォルダごと Zip で圧縮します。**今回は下記のような内容になりました。
 
-<a href="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-1-4.png"><img src="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-1-4.png" alt="" width="828" height="422" class="aligncenter size-full wp-image-15988" /></a>
+![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-1-4.png)
 
 Lambda のコンソールから**「レイヤー」**を開き、**「レイヤーの作成」**をクリックします。
 
-<a href="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-1-5.png"><img src="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-1-5.png" alt="" width="883" height="608" class="aligncenter size-full wp-image-15986" /></a>
+![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-1-5.png)
 
 適当な名前を入力し、**「アップロード」**ボタンを押してさきほど圧縮した `.fonts` の Zip ファイルを選択します。特に設定は不要なので、**「作成」**をクリックします。
 
-<a href="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-1-6.png"><img src="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-1-6.png" alt="" width="883" height="868" class="aligncenter size-full wp-image-15987" /></a>
+![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-1-6.png)
 
 レイヤーが作成できたら **ARN をコピー** しておきます。
 
-<a href="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-1-7.png"><img src="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-1-7.png" alt="" width="1138" height="675" class="aligncenter size-full wp-image-15989" /></a>
+![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-1-7.png)
 
 この **ARN をのちほど Lambda 関数側に設定**します。
 

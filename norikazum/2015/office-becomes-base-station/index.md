@@ -23,7 +23,7 @@ Docomo携帯の電波が弱いこと。。
  
 法務局への登録などが必要で、少し時間がかかりやっと昨日、取り付けてもらうことが出来ました。
 
-<a href="images/office-becomes-base-station-1.jpg"><img src="images/office-becomes-base-station-1.jpg" alt="" width="169" height="300" class="alignnone size-medium wp-image-4135" /></a>
+![](images/office-becomes-base-station-1.jpg)
 
 接続としては、
 光ファイバー

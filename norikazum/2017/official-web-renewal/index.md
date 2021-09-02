@@ -13,7 +13,7 @@ tags: [その他, 〇〇奮闘記]
 
 ３月からの三期目がスタートしましたが、早速、新しい『道』を進んでいることもあり、気持ちの切り替えにもぴったりの一新になっています。
 
-<a href="images/official-web-renewal-1.png"><img src="images/official-web-renewal-1.png" alt="" width="300" height="201" class="alignnone size-medium wp-image-4188" /></a>
+![](images/official-web-renewal-1.png)
 [https://msen.jp](https://msen.jp)
 
 どーん、という感じで少し恥ずかしいですが。(笑)

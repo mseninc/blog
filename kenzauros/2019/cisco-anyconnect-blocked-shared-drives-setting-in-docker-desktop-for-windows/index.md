@@ -19,7 +19,7 @@ ERROR: for laradock_mysql_1  Cannot create container for service mysql: b'Drive 
 
 "Drive sharing seems blocked by a firewall" だそうなので、 Docker Desktop の Settings から Shared Drives を確認するとたしかに C ドライブが外れている。
 
-<a href="images/cisco-anyconnect-blocked-shared-drives-setting-in-docker-desktop-for-windows-1.png"><img src="images/cisco-anyconnect-blocked-shared-drives-setting-in-docker-desktop-for-windows-1.png" alt="Docker Desktop Share Drives Setting" width="1009" height="600" class="aligncenter size-full wp-image-9998" /></a>
+![Docker Desktop Share Drives Setting](images/cisco-anyconnect-blocked-shared-drives-setting-in-docker-desktop-for-windows-1.png)
 
 これにチェックをつけて [Apply] を試みるも、下記のエラーではじかれてしまう。
 
@@ -32,7 +32,7 @@ ERROR: for laradock_mysql_1  Cannot create container for service mysql: b'Drive 
 
 ホストの 445 へのアクセスができるようにファイアウォールを設定せよというだけだった。
 
-<a href="images/cisco-anyconnect-blocked-shared-drives-setting-in-docker-desktop-for-windows-2.png"><img src="images/cisco-anyconnect-blocked-shared-drives-setting-in-docker-desktop-for-windows-2.png" alt="DockerSmbMount Windows ファイアウォール設定" width="1435" height="797" class="aligncenter size-full wp-image-10001" /></a>
+![DockerSmbMount Windows ファイアウォール設定](images/cisco-anyconnect-blocked-shared-drives-setting-in-docker-desktop-for-windows-2.png)
 
 Windows ファイアウォールを確認したところ、 **`DockerSmbMount`** という規則がおり、どうも普通に開いているようだ。念のため Windows ファイアウォールを一時的に無効にしてみたが、改善されなかった。
 
@@ -52,13 +52,13 @@ Windows ファイアウォールを確認したところ、 **`DockerSmbMount`**
 
 タスクトレイの Docker Desktop から Restart してみた。
 
-<a href="images/cisco-anyconnect-blocked-shared-drives-setting-in-docker-desktop-for-windows-3.png"><img src="images/cisco-anyconnect-blocked-shared-drives-setting-in-docker-desktop-for-windows-3.png" alt="Docker Desktop 再起動" width="267" height="358" class="aligncenter size-full wp-image-10004" /></a>
+![Docker Desktop 再起動](images/cisco-anyconnect-blocked-shared-drives-setting-in-docker-desktop-for-windows-3.png)
 
 ### DockerNAT の設定変更
 
 `vEthernet (DockerNAT)` のプロパティから「Microsoft ネットワーク用ファイルとプリンター共有」のチェックを外して反映し、チェックを戻して反映してみた。
 
-<a href="images/cisco-anyconnect-blocked-shared-drives-setting-in-docker-desktop-for-windows-4.png"><img src="images/cisco-anyconnect-blocked-shared-drives-setting-in-docker-desktop-for-windows-4.png" alt="" width="733" height="554" class="aligncenter size-full wp-image-10002" /></a>
+![](images/cisco-anyconnect-blocked-shared-drives-setting-in-docker-desktop-for-windows-4.png)
 
 ### DockerNAT のネットワークカテゴリーの変更
 
@@ -97,11 +97,11 @@ IPv6Connectivity : NoTraffic
 
 をやってみましたが効かなかったため、とりあえず Disconnect してみました。
 
-<a href="images/cisco-anyconnect-blocked-shared-drives-setting-in-docker-desktop-for-windows-5.png"><img src="images/cisco-anyconnect-blocked-shared-drives-setting-in-docker-desktop-for-windows-5.png" alt="Cisco AnyConnect" width="411" height="191" class="aligncenter size-full wp-image-10006" /></a>
+![Cisco AnyConnect](images/cisco-anyconnect-blocked-shared-drives-setting-in-docker-desktop-for-windows-5.png)
 
 すると、アラ不思議。 Shared Drives の設定がすんなりと通ってしまいました。
 
-<a href="images/cisco-anyconnect-blocked-shared-drives-setting-in-docker-desktop-for-windows-6.png"><img src="images/cisco-anyconnect-blocked-shared-drives-setting-in-docker-desktop-for-windows-6.png" alt="Shared Drives の設定に成功" width="832" height="573" class="aligncenter size-full wp-image-10007" /></a>
+![Shared Drives の設定に成功](images/cisco-anyconnect-blocked-shared-drives-setting-in-docker-desktop-for-windows-6.png)
 
 再び、 AnyConnect で VPN にも接続し、 Shared Drives の設定を変更してみましたが、問題なく動作しました。
 

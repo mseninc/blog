@@ -14,13 +14,13 @@ LimeSurvey には、「質問 X の回答が Y だった場合のみ 質問 Z �
 ## 条件を記述できる場所
 結論から言うと、質問の編集画面の中に自由に条件を記述できる場所がありました。ずばりココです。
 
-<img src="images/write-conditional-branches-freely-in-lime-survey-1.png" alt="" width="640" height="516" class="alignnone size-full wp-image-15813" />
+![](images/write-conditional-branches-freely-in-lime-survey-1.png)
 
 質問編集画面の右側、「全般オプション」タブの一番下の部分です。「出現条件」と書いてあるにも関わらず、なかなか気づけませんでした。一所懸命 [LimeSurvey マニュアル](https://manual.limesurvey.org/LimeSurvey_Manual/ja)を読んでどこで条件を記述できるのか探していました。視野が狭いですね。
 
 ちなみに質問グループにも同様の記述欄があります。
 
-<img src="images/write-conditional-branches-freely-in-lime-survey-2.png" alt="" width="1049" height="732" class="alignnone size-full wp-image-15829" />
+![](images/write-conditional-branches-freely-in-lime-survey-2.png)
 
 ## 条件の書き方
 基本的な条件の書き方は以下のようになります。

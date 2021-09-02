@@ -13,7 +13,7 @@ Nextcloud は GUI からも自身のアップデートができますが、比�
 
 Nextcloud の設定ページからアップデーターを使って更新しようとしたところ、下記のようにダウンロード後の処理で失敗しました。今回のバージョンは 20.0.0 → 20.0.3 でした。
 
-<a href="images/failed-to-update-nextcloud-1.png"><img src="images/failed-to-update-nextcloud-1.png" alt="" width="632" height="786" class="aligncenter size-full wp-image-15218" /></a>
+![](images/failed-to-update-nextcloud-1.png)
 
 **途中で失敗すると `Step 5 is currently in process. Please reload this page later.` といったメッセージが表示され、アップデートを再開することができません。**
 
@@ -200,7 +200,7 @@ Maintenance mode disabled
 
 アップデートによって下記のように `The database is missign some primary keys` というメッセージが表示されました。
 
-<a href="images/failed-to-update-nextcloud-2.png"><img src="images/failed-to-update-nextcloud-2.png" alt="" width="1136" height="521" class="aligncenter size-full wp-image-15220" /></a>
+![](images/failed-to-update-nextcloud-2.png)
 
 コマンドをたたけということなので、愚直に実行しました。
 

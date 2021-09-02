@@ -28,7 +28,7 @@ OS が起動したあとであれば、[PrintScreen]キーやキャプチャー�
 
 ビデオキャプチャーはこんな感じです。思ってたより小型で、ケーブルの方が目立っています。
 
-<a href="images/get-screenshots-of-bios-and-post-screens-with-gv-usb3-1.png"><img src="images/get-screenshots-of-bios-and-post-screens-with-gv-usb3-1.png" alt="" width="1196" height="884" class="alignnone size-full wp-image-10361" /></a>
+![](images/get-screenshots-of-bios-and-post-screens-with-gv-usb3-1.png)
 
 
 ## 映像入力のコンバート
@@ -39,7 +39,7 @@ OS が起動したあとであれば、[PrintScreen]キーやキャプチャー�
 
 筆者の場合は、事務所に転がっていたコンバーターを使用しました。
 
-<a href="images/get-screenshots-of-bios-and-post-screens-with-gv-usb3-2.png"><img src="images/get-screenshots-of-bios-and-post-screens-with-gv-usb3-2.png" alt="" width="1166" height="882" class="alignnone size-full wp-image-10358" /></a>
+![](images/get-screenshots-of-bios-and-post-screens-with-gv-usb3-2.png)
 
 ## ソフトウェアのインストール
 
@@ -47,18 +47,18 @@ OS が起動したあとであれば、[PrintScreen]キーやキャプチャー�
 
 キャプチャするだけなら上2つでいいかもしれません。
 
-<a href="images/get-screenshots-of-bios-and-post-screens-with-gv-usb3-3.png"><img src="images/get-screenshots-of-bios-and-post-screens-with-gv-usb3-3.png" alt="" width="600" height="400" class="alignnone size-full wp-image-10363" /></a>
+![](images/get-screenshots-of-bios-and-post-screens-with-gv-usb3-3.png)
 
 ## スクリーンショットの取得
 
 ソフトウェアを起動し、サーバーの電源を入れると。
 
-<a href="images/get-screenshots-of-bios-and-post-screens-with-gv-usb3-4.jpg"><img src="images/get-screenshots-of-bios-and-post-screens-with-gv-usb3-4.jpg" alt="" width="2792" height="1287" class="alignnone size-full wp-image-10365" /></a>
+![](images/get-screenshots-of-bios-and-post-screens-with-gv-usb3-4.jpg)
 
 おおー、ちゃんと BIOS の画面が表示されました。60fps 出ているので遅延等もありません。
 
 [静止画] というボタンをクリックすると、`%userprofile%\Documents\HDMixCapture\Image` 配下にキャプチャがどんどん溜まっていきます。
-<a href="images/get-screenshots-of-bios-and-post-screens-with-gv-usb3-5.png"><img src="images/get-screenshots-of-bios-and-post-screens-with-gv-usb3-5.png" alt="" width="609" height="162" class="alignnone size-full wp-image-10366" /></a>
+![](images/get-screenshots-of-bios-and-post-screens-with-gv-usb3-5.png)
 
 ### 拡張子の変更
 
@@ -67,10 +67,10 @@ OS が起動したあとであれば、[PrintScreen]キーやキャプチャー�
 ちょっとサイズが大きくなってしまうので、png 形式に変えておきましょう。
 
 [設定] をクリックします。
-<a href="images/get-screenshots-of-bios-and-post-screens-with-gv-usb3-6.png"><img src="images/get-screenshots-of-bios-and-post-screens-with-gv-usb3-6.png" alt="" width="609" height="162" class="alignnone size-full wp-image-10368" /></a>
+![](images/get-screenshots-of-bios-and-post-screens-with-gv-usb3-6.png)
 
 [静止画設定] > [静止画の保存形式] を **png** に変更して適用します。
-<a href="images/get-screenshots-of-bios-and-post-screens-with-gv-usb3-7.png"><img src="images/get-screenshots-of-bios-and-post-screens-with-gv-usb3-7.png" alt="" width="846" height="471" class="alignnone size-full wp-image-10369" /></a>
+![](images/get-screenshots-of-bios-and-post-screens-with-gv-usb3-7.png)
 
 ## あとがき
 

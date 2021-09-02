@@ -9,7 +9,7 @@ tags: [Zapier, その他]
 
 今日社内で読み方の話になりました。私はずっと「**ザピアー**」と読んでましたが、 Zapier をググると意外と「**ザピエル**」派がいらっしゃることが判明しました。
 
-<a href="images/how-to-pronounce-zapier-1.png"><img src="images/how-to-pronounce-zapier-1.png" alt="" width="654" height="614" class="aligncenter size-full wp-image-11363" /></a>
+![](images/how-to-pronounce-zapier-1.png)
 
 [ザビエル](https://ja.wikipedia.org/wiki/%E3%83%95%E3%83%A9%E3%83%B3%E3%82%B7%E3%82%B9%E3%82%B3%E3%83%BB%E3%82%B6%E3%83%93%E3%82%A8%E3%83%AB) にしか見えないんですが、困ったときは公式に聞いてみましょう。
 
@@ -25,7 +25,7 @@ https://twitter.com/zapier/status/507316890281467905
 
 ## しかし別の読み方も
 
-<a href="images/how-to-pronounce-zapier-2.png"><img src="images/how-to-pronounce-zapier-2.png" alt="" width="630" height="220" class="aligncenter size-full wp-image-11368" /></a>
+![](images/how-to-pronounce-zapier-2.png)
 
 この公式アカウントのツイートに対し、
 

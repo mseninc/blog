@@ -29,11 +29,11 @@ Windows 10 を使っていて、ストレスを感じることナンバー15、 
 
 ファイル名を指定して実行 ([Windows] + [R]) を開き、 `gpedit.msc` と入力して [OK] で**ローカルグループポリシーエディター**を開く
 
-<a href="images/disable-aero-shake-windows-10-1.png"><img src="images/disable-aero-shake-windows-10-1.png" alt="Windows 10 で Aero Shake を無効化する" width="399" height="206" class="aligncenter size-full wp-image-11818" /></a>
+![Windows 10 で Aero Shake を無効化する](images/disable-aero-shake-windows-10-1.png)
 
 **[ユーザーの構成] → [管理用テンプレート] → [デスクトップ] → [Aero Shake のウィンドウ最小化のマウス ジェスチャをオフにする]** をダブルクリックして開き、 **[有効]** にして [OK] を押すだけです。
 
-<a href="images/disable-aero-shake-windows-10-2.png"><img src="images/disable-aero-shake-windows-10-2.png" alt="Windows 10 で Aero Shake を無効化する" width="1175" height="806" class="aligncenter size-full wp-image-11819" /></a>
+![Windows 10 で Aero Shake を無効化する](images/disable-aero-shake-windows-10-2.png)
 
 特に再起動は不要で即座に無効になります。
 

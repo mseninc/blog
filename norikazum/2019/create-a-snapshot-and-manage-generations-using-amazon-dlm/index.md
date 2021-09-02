@@ -27,10 +27,10 @@ tags: [AWS, EBS, SnapShot, DLM]
 前回の記事で利用した `monitor` インスタンスの `EBSボリューム` を対象にします。
 
 まず、 **Nameタグ** が設定されていない場合は設定します。
-<a href="images/create-a-snapshot-and-manage-generations-using-amazon-dlm-1.png"><img src="images/create-a-snapshot-and-manage-generations-using-amazon-dlm-1.png" alt="" width="1643" height="944" class="alignnone size-full wp-image-10048" /></a>
+![](images/create-a-snapshot-and-manage-generations-using-amazon-dlm-1.png)
 
 **EC2→ライフサイクルマネージャー→スナップショットのライフサイクルポリシーを作成する** と進みます。
-<a href="images/create-a-snapshot-and-manage-generations-using-amazon-dlm-2.png"><img src="images/create-a-snapshot-and-manage-generations-using-amazon-dlm-2.png" alt="" width="1643" height="944" class="alignnone size-full wp-image-10047" /></a>
+![](images/create-a-snapshot-and-manage-generations-using-amazon-dlm-2.png)
 
 
 ### ポリシー作成の流れ
@@ -43,13 +43,13 @@ tags: [AWS, EBS, SnapShot, DLM]
 時間はUTC設定になっているので、日本時間の **9時** と **21時** に実行されることになります。
 
 画面では以下のようになります。
-<a href="images/create-a-snapshot-and-manage-generations-using-amazon-dlm-3.png"><img src="images/create-a-snapshot-and-manage-generations-using-amazon-dlm-3.png" alt="" width="1643" height="866" class="alignnone size-full wp-image-10050" /></a>
-<a href="images/create-a-snapshot-and-manage-generations-using-amazon-dlm-4.png"><img src="images/create-a-snapshot-and-manage-generations-using-amazon-dlm-4.png" alt="" width="1638" height="860" class="alignnone size-full wp-image-10051" /></a>
-<a href="images/create-a-snapshot-and-manage-generations-using-amazon-dlm-5.png"><img src="images/create-a-snapshot-and-manage-generations-using-amazon-dlm-5.png" alt="" width="1643" height="878" class="alignnone size-full wp-image-10052" /></a>
+![](images/create-a-snapshot-and-manage-generations-using-amazon-dlm-3.png)
+![](images/create-a-snapshot-and-manage-generations-using-amazon-dlm-4.png)
+![](images/create-a-snapshot-and-manage-generations-using-amazon-dlm-5.png)
 
 作成されました。
-<a href="images/create-a-snapshot-and-manage-generations-using-amazon-dlm-6.png"><img src="images/create-a-snapshot-and-manage-generations-using-amazon-dlm-6.png" alt="" width="1643" height="944" class="alignnone size-full wp-image-10055" /></a>
-<a href="images/create-a-snapshot-and-manage-generations-using-amazon-dlm-7.png"><img src="images/create-a-snapshot-and-manage-generations-using-amazon-dlm-7.png" alt="" width="1643" height="944" class="alignnone size-full wp-image-10056" /></a>
+![](images/create-a-snapshot-and-manage-generations-using-amazon-dlm-6.png)
+![](images/create-a-snapshot-and-manage-generations-using-amazon-dlm-7.png)
 
 ## 動作確認
 ポリシーを設定して3日間様子見て確認しました。
@@ -57,7 +57,7 @@ tags: [AWS, EBS, SnapShot, DLM]
 ### 設定翌日の9時
 取れてますね！
 
-<a href="images/create-a-snapshot-and-manage-generations-using-amazon-dlm-8.png"><img src="images/create-a-snapshot-and-manage-generations-using-amazon-dlm-8.png" alt="" width="1935" height="1280" class="alignnone size-full wp-image-10064" /></a>
+![](images/create-a-snapshot-and-manage-generations-using-amazon-dlm-8.png)
 
 開始時間が、9:36になってなっているのでポリシー作成画面に記載があった、
 >スナップショットは、指定された開始時間から1時間以内に作成が開始されます。
@@ -66,23 +66,23 @@ tags: [AWS, EBS, SnapShot, DLM]
 
 #### ポリシー修正
 スナップショットを見てみると `monitor` のバックアップだということがわかりにくいので以下のようにタグを付けるようにポリシーを変更しました。
-<a href="images/create-a-snapshot-and-manage-generations-using-amazon-dlm-9.png"><img src="images/create-a-snapshot-and-manage-generations-using-amazon-dlm-9.png" alt="" width="1346" height="1190" class="alignnone size-full wp-image-10065" /></a>
+![](images/create-a-snapshot-and-manage-generations-using-amazon-dlm-9.png)
 
 さて、本日の21時でどうなるか。
 
 ### 設定翌日の21時
 
 **赤枠** のとおり、 **タグが付いたスナップショット** が無事取得できていました。
-<a href="images/create-a-snapshot-and-manage-generations-using-amazon-dlm-10.png"><img src="images/create-a-snapshot-and-manage-generations-using-amazon-dlm-10.png" alt="" width="1479" height="153" class="alignnone size-full wp-image-10075" /></a>
+![](images/create-a-snapshot-and-manage-generations-using-amazon-dlm-10.png)
 
 ## ローテーション確認
 
 ### ローテーション直前(4回取得)の状態
-<a href="images/create-a-snapshot-and-manage-generations-using-amazon-dlm-11.png"><img src="images/create-a-snapshot-and-manage-generations-using-amazon-dlm-11.png" alt="" width="1565" height="525" class="alignnone size-full wp-image-10079" /></a>
+![](images/create-a-snapshot-and-manage-generations-using-amazon-dlm-11.png)
 
 ### ローテーション確認
 正常に設定した4世代でローテーションされている
-<a href="images/create-a-snapshot-and-manage-generations-using-amazon-dlm-12.png"><img src="images/create-a-snapshot-and-manage-generations-using-amazon-dlm-12.png" alt="" width="1525" height="543" class="alignnone size-full wp-image-10081" /></a>
+![](images/create-a-snapshot-and-manage-generations-using-amazon-dlm-12.png)
 
 ## あとがき
 記事を書き終わってから気づきましたが、参考にさせていただいたサイトでも東京リージョンに対応したことを記事にされていました。

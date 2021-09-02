@@ -7,7 +7,7 @@ tags: [ポケモンGO, その他, ライフハック]
 
 以前、ポケモンの攻略情報サイトでみたことがある<span style="font-size:18px;">**ジムの防衛ボーナスカウントは10個**</span>までというのを見て、ジムを10個以上取れる人なんていないから嘘言ってるんだろうと思ったので検証してみました。
 
-<img src="images/pokemongo-gym-10count-1.jpg" alt="ジムボーナスカウント10" width="288" height="512" class="aligncenter size-large wp-image-2291" />
+![ジムボーナスカウント10](images/pokemongo-gym-10count-1.jpg)
 
 私はガチ勢のレベル帯でなく、ジムは落とせるが長期で防衛できる程ではないレベル26なので運も必要です。
 
@@ -41,47 +41,47 @@ tags: [ポケモンGO, その他, ライフハック]
 ## ジム制圧時系列
 以下の地図の通りに行き、桜ノ宮橋の下部分のジムから順に中之島までで3つほどジムを制圧し、中之島のバラ園にあるジムを制覇して、この時点で4つ制圧しました。実は10個もとれると思っていなく最初のスクリーンショットを取っていなかったのが悔やまれます。
 
-<img src="images/pokemongo-gym-10count-2.png" alt="2016-08-15_15h38_41" width="737" height="461" class="aligncenter size-full wp-image-2343" />
+![2016-08-15_15h38_41](images/pokemongo-gym-10count-2.png)
 
 中之島バラ園の下の道をぐるっと回って、ここは川に囲まれていて涼しいし蚊もいないし、芝生もあってマッチョなお兄さんが筋トレしていたり、カップルがデートしていたりデートスポットやな～と思いながら中央公会堂の方へ上がりました。ポータルが4つ重なっている部分をぬけ、北浜方面へ向かうと赤枠部分に激弱シャワーズが出てきました。なにか運が向いているのを感じちゃってます。
 
-<img src="images/pokemongo-gym-10count-3.png" alt="中の島" width="288" height="512" class="aligncenter size-full wp-image-2326" />
+![中の島](images/pokemongo-gym-10count-3.png)
 
-<img src="images/pokemongo-gym-10count-4.jpg" alt="旅の始まり" width="288" height="512" class="aligncenter size-large wp-image-2228" />
+![旅の始まり](images/pokemongo-gym-10count-4.jpg)
 
 ここまででポケモンGOを始めてから最高の6ジムを達成します。ここで私はボーナスをゲットしちゃいます。もったいない！※ボーナスボタンは22時間に1度しか押せません。ボーナスはジム配置している数(最大10配置)×10のボーナスに星の砂500とポケコイン10のボーナスが貰えます。
 
-<img src="images/pokemongo-gym-10count-5.jpg" alt="Screenshot_20160809-020731" width="288" height="512" class="aligncenter size-large wp-image-2334" />
+![Screenshot_20160809-020731](images/pokemongo-gym-10count-5.jpg)
 
 中之島のバラ園を抜けると北浜駅の方にしか行けなかったので、ぐるっと橋を渡り北浜駅の方へ、そこから見えるジムをタッチし、簡単に倒せそうなジムや、配置できそうなジムを探しそこに向かいジムに配置していきました。
 
-<img src="images/pokemongo-gym-10count-6.png" alt="2016-08-15_15h44_20" width="708" height="673" class="aligncenter size-full wp-image-2346" />
+![2016-08-15_15h44_20](images/pokemongo-gym-10count-6.png)
 
 自転車を走らせジムにポケモンを配置し、HEPのマクドナルドまでの間は中々ジムへの配置数が増えず、配置してもすぐ取られるという状態が続き、1時間かけて1つ増の7ジムでした。
 
-<img src="images/pokemongo-gym-10count-7.jpg" alt="Screenshot_20160809-031041" width="288" height="512" class="aligncenter size-large wp-image-2337" />
+![Screenshot_20160809-031041](images/pokemongo-gym-10count-7.jpg)
 
 HEPからは以下の様なルートをとりました。この辺はお寺が多く、ジムも多く、自チームで配置できる枠が空いてたところが多かったため、スムーズに増やせました。移動中に取られた分を上回る数とれたのが大きかったです。
 
-<img src="images/pokemongo-gym-10count-8.png" alt="2016-08-15_16h01_48" width="708" height="673" class="aligncenter size-large wp-image-2361" />
+![2016-08-15_16h01_48](images/pokemongo-gym-10count-8.png)
 
 HEP周辺のマクドナルドから約8分ほどで8ジム制圧。
 
-<img src="images/pokemongo-gym-10count-9.jpg" alt="Screenshot_20160809-031844" width="288" height="512" class="aligncenter size-large wp-image-2351" />
+![Screenshot_20160809-031844](images/pokemongo-gym-10count-9.jpg)
 
 その3分後に、9ジムへ配置しました。これはいけるっ!もうすぐで10ジム!!と思いきや、それは簡単に問屋が卸しません。ここからが長かったです。よし後1つで10ジム制覇と思い、簡単に配置できそうな桜ノ宮駅方面のジムへ向かい着いてみると、<span style="font-size:16;">**がーん!**</span>配置されてる…**がーん!!**配置ジム数2つも減ってる。あきらめようかと思ったものの、とりあえず周りのジムを見てみると黄色のジム2つおける所がある。いける!!
 
-<img src="images/pokemongo-gym-10count-10.jpg" alt="Screenshot_20160809-032156" width="288" height="512" class="aligncenter size-large wp-image-2356" />
+![Screenshot_20160809-032156](images/pokemongo-gym-10count-10.jpg)
 
 さっき下った長い坂を上り、自チームの人が落としてくれたジム2つに置き、次のすぐ近くのジムへ向かいました。どうもこの辺で自チームの人が近くのジムを回っていたみたいで、顔は見ていないのですが、いつのまにか一緒にジムに攻撃していました。この辺りは完全に運が良かったです。そこからはジムの減りも少なく、1つとり1つとられ、2つとり1つとられでなんとか10ジム配置達成できました。
 
-<img src="images/pokemongo-gym-10count-11.jpg" alt="Screenshot_20160809-032527" width="288" height="512" class="aligncenter size-large wp-image-2366" />
+![Screenshot_20160809-032527](images/pokemongo-gym-10count-11.jpg)
 
 10ジム達成後は、実際に11ジム目をとれるのか、あの真偽が確かめるチャンスと思い11ジム12ジムをとりに、京橋から野江の方へ向かいジムにおいていきました。
 
 <span style="font-size:24px;">残念!10ジムまでしかカウントされない!!</span>
 
-<img src="images/pokemongo-gym-10count-1.jpg" alt="ジムボーナスカウント10" width="288" height="512" class="aligncenter size-large wp-image-2291" />
+![ジムボーナスカウント10](images/pokemongo-gym-10count-1.jpg)
 
 上記はジムをとっている間に取られている可能性があるので余分に12ジム取得した時の画像
 ## あとがき
@@ -90,6 +90,6 @@ HEP周辺のマクドナルドから約8分ほどで8ジム制圧。
 これだけ苦労するなら、防衛ボーナスの上限はなくてもいいんじゃないかなと思います。
 
 <40分後の配置数>
-<img src="images/pokemongo-gym-10count-12.jpg" alt="30537" width="288" height="512" class="aligncenter size-large wp-image-2384" />
+![30537](images/pokemongo-gym-10count-12.jpg)
 
 減りすぎでしょー

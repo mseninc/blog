@@ -46,7 +46,7 @@ WPF の DataGrid はまぁそれなりの見栄えにはなるのですが、い
 
 というわけで別にボタンを置いてもいいのですが、場所もとりますし、できたら下図のようにヘッダー部分のチェックボックスで一括制御ができるようにしたいと思うのです。
 
-<a href="images/wpf-datagrid-checkbox-column-with-bulk-selector-1.png"><img src="images/wpf-datagrid-checkbox-column-with-bulk-selector-1.png" alt="" width="117" height="203" class="aligncenter size-full wp-image-3853" /></a>
+![](images/wpf-datagrid-checkbox-column-with-bulk-selector-1.png)
 
 当然、同様に考えた先人もいるわけでいくつかのページがヒットしますが、下記のページがわかりやすいです。
 
@@ -87,7 +87,7 @@ target element is 'CheckBox' (Name=''); target property is 'IsChecked' (type 'Nu
 
 これについては原因が不明で、「DataGrid の Header が WPF の VisualTree 上に含まれないので取得できない」と書いてあるページがあるのですが、 VisualTree をのぞいてみたところ、VisualTree 的には DataGrid の子孫に DataGridColumnHeader と　CheckBox が含まれていました。
 
-<a href="images/wpf-datagrid-checkbox-column-with-bulk-selector-2.png"><img src="images/wpf-datagrid-checkbox-column-with-bulk-selector-2.png" alt="" width="851" height="803" class="aligncenter size-full wp-image-3698" /></a>
+![](images/wpf-datagrid-checkbox-column-with-bulk-selector-2.png)
 
 しかし VisualTree 上で DataContext を追っていくと DataGridColumnHeader で DataContext が消失していました。このせいで取得できないようです。
 

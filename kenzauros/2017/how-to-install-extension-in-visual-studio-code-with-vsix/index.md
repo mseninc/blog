@@ -16,11 +16,11 @@ tags: [Visual Studio Code, その他の技術]
 1. アクティビティーバーの拡張機能をクリックするか、 `Ctrl+Shift+X` を押して**拡張機能**ウィンドウを表示します。
 1. **...** をクリックしてメニューを開き、
 1. **VSIX からのインストール...** を選択します。
-  <a href="images/how-to-install-extension-in-visual-studio-code-with-vsix-1.png"><img src="images/how-to-install-extension-in-visual-studio-code-with-vsix-1.png" alt="" width="560" height="389" class="aligncenter size-full wp-image-4474" /></a>
+![](images/how-to-install-extension-in-visual-studio-code-with-vsix-1.png)
 1. `*.vsix` ファイルを選択して、
 1. 開く(O) をクリックします。
-  <a href="images/how-to-install-extension-in-visual-studio-code-with-vsix-2.png"><img src="images/how-to-install-extension-in-visual-studio-code-with-vsix-2.png" alt="" width="906" height="452" class="aligncenter size-full wp-image-4475" /></a>
+![](images/how-to-install-extension-in-visual-studio-code-with-vsix-2.png)
 1. インストールに成功すると、メッセージが表示されるので、 **今すぐ再度読み込む** をクリックして VSCode を再起動します。
-  <a href="images/how-to-install-extension-in-visual-studio-code-with-vsix-3.png"><img src="images/how-to-install-extension-in-visual-studio-code-with-vsix-3.png" alt="" width="1352" height="52" class="aligncenter size-full wp-image-4479" /></a>
+![](images/how-to-install-extension-in-visual-studio-code-with-vsix-3.png)
 
 ちなみに拡張機能開発環境で VSIX ファイルを生成するにはプロジェクトルートで `vsce package` を叩くだけです。同じフォルダに `*.vsix` ファイルが生成されます。

@@ -19,7 +19,7 @@ C# 側からの Excel の制御は `Microsoft.Office.Interop.Excel` 名前空間
 
 下図のようなプリンター選択用のコンボボックス (ComboBox) を作ります。なお、コントロールがリストボックス (ListBox) でも同じように実装できます。
 
-<a href="images/printer-selector-in-wpf-1.png"><img src="images/printer-selector-in-wpf-1.png" alt="WPF でプリンター選択コンボボックスをつくる" width="505" height="183" class="aligncenter size-full wp-image-848" /></a>
+![WPF でプリンター選択コンボボックスをつくる](images/printer-selector-in-wpf-1.png)
 
 System.Drawing.Printing 名前空間にある [PrinterSettings](https://msdn.microsoft.com/ja-jp/library/system.drawing.printing.printersettings(v=vs.110).aspx) クラスの [InstalledPrinters](https://msdn.microsoft.com/ja-jp/library/system.drawing.printing.printersettings.installedprinters(v=vs.110).aspx) スタティックプロパティを利用します。そのまんまな名前でわかりやすい。
 

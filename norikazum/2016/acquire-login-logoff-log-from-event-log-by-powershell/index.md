@@ -13,11 +13,11 @@ tags: [PowerShell, Windows Server, Windows]
 
 Windows Server 2012 R2 で**ログイン・ログオフのログは、イベントビューアーの Windows ログ→セキュリティに記録されます。**
 
-<a href="images/acquire-login-logoff-log-from-event-log-by-powershell-1.png"><img src="images/acquire-login-logoff-log-from-event-log-by-powershell-1.png" alt="2016-11-28_00h42_01" width="972" height="638" class="alignnone size-full wp-image-3222" /></a>
+![2016-11-28_00h42_01](images/acquire-login-logoff-log-from-event-log-by-powershell-1.png)
 
 上記で選択したログをダブルクリックすると、詳細のウインドウがでます。
 
-<a href="images/acquire-login-logoff-log-from-event-log-by-powershell-2.png"><img src="images/acquire-login-logoff-log-from-event-log-by-powershell-2.png" alt="2016-11-28_00h46_06" width="809" height="651" class="alignnone size-full wp-image-3223" /></a>
+![2016-11-28_00h46_06](images/acquire-login-logoff-log-from-event-log-by-powershell-2.png)
 
 これらのログを1行1行を追いかけ、ログイン・ログオフを追いかけるには大きな工数がかかるだけではなく精度も下がってしまいます。
 
@@ -49,7 +49,7 @@ get-winevent -logname Security -filterxpath "*[System[Provider[@Name='Microsoft-
 
 前項のコマンドで、以下のように採取できます。
 
-<a href="images/acquire-login-logoff-log-from-event-log-by-powershell-3.png"><img src="images/acquire-login-logoff-log-from-event-log-by-powershell-3.png" alt="2016-11-28_01h06_40" width="772" height="883" class="alignnone size-full wp-image-3225" /></a>
+![2016-11-28_01h06_40](images/acquire-login-logoff-log-from-event-log-by-powershell-3.png)
 
 これを見ていただければ気づいていただけるかと思いますが、ログイン・ログオフのログが複数行表示されています。
 調査しましたが、はっきりとした理由がわからないので、わかる方がいらっしゃいましたら、教えてください。

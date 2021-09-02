@@ -11,7 +11,7 @@ tags: [Windows 10, Windows Update, Windows]
 
 自動構成を無効にすると、以下のように**更新プログラムのチェックがグレーアウト**されてクリックすることができません。
 
-<a href="images/how-to-windows-update-when-check-button-is-disabled-1.png"><img src="images/how-to-windows-update-when-check-button-is-disabled-1.png" alt="" width="1086" height="633" class="alignnone size-full wp-image-7544" /></a>
+![](images/how-to-windows-update-when-check-button-is-disabled-1.png)
 
 しかし、いざ更新しようとグループポリシーを無効にしても、更新プログラムのチェックボタンがグレーアウトのままで返ってきません。
 
@@ -58,14 +58,14 @@ GUIじゃないとイヤ！って人はこっちからどうぞ。
 
 ` Microsoft > windows > Update Orchestrator > Schedule Scan `
 
-<a href="images/how-to-windows-update-when-check-button-is-disabled-2.png"><img src="images/how-to-windows-update-when-check-button-is-disabled-2.png" alt="" width="1135" height="662" class="alignnone size-full wp-image-7548" /></a>
+![](images/how-to-windows-update-when-check-button-is-disabled-2.png)
 
 これで更新プログラムのチェックが始まったかと思います。
 
-<a href="images/how-to-windows-update-when-check-button-is-disabled-3.png"><img src="images/how-to-windows-update-when-check-button-is-disabled-3.png" alt="" width="1085" height="632" class="alignnone size-full wp-image-7550" /></a>
+![](images/how-to-windows-update-when-check-button-is-disabled-3.png)
 
 チェックが完了すると、更新プログラムのチェックボタンが押せるようになっています。
 
-<a href="images/how-to-windows-update-when-check-button-is-disabled-4.png"><img src="images/how-to-windows-update-when-check-button-is-disabled-4.png" alt="" width="1086" height="633" class="alignnone size-full wp-image-7551" /></a>
+![](images/how-to-windows-update-when-check-button-is-disabled-4.png)
 
 ではまた。

@@ -48,7 +48,7 @@ unmanaged な配列を確保して暗号化して不要になったら解放し�
 
 さて、先のことはそのときに考えるとして、これまで使ってきたものはどうするのか、という問題が残ります。最たるものが **WPF のパスワード表示コントロール PasswordBox** です。
 
-[caption id="attachment_13017" align="aligncenter" width="357"]<a href="images/passwordbox-and-securepassword-in-dotnet-core-with-wpf-1.png"><img src="images/passwordbox-and-securepassword-in-dotnet-core-with-wpf-1.png" alt="" width="357" height="128" class="size-full wp-image-13017" /></a> WPF の PasswordBox[/caption]
+![](images/passwordbox-and-securepassword-in-dotnet-core-with-wpf-1.png)
 
 ご存知のとおり、この PasswordBox は SecurePassword という SecureString 型のプロパティをもっており、このプロパティにアクセスすることでユーザーが入力したパスワードを取得する、というのが推奨でした。
 

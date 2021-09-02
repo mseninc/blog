@@ -28,52 +28,52 @@ NFS サーバーは Windows Server の標準機能として提供されていま
 
 `[ファイルサービスと記憶域サービス] > [ファイルサービスおよび iSCSI サービス] > [NFS サーバー]`
 
-<a href="images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-1.png"><img src="images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-1.png" alt="" width="782" height="559" class="alignnone size-full wp-image-14792" /></a>
+![](images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-1.png)
 
-<a href="images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-2.png"><img src="images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-2.png" alt="" width="789" height="563" class="alignnone size-full wp-image-14793" /></a>
+![](images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-2.png)
 
 ### NFS 共有を作成する
 
 役割が追加できたら、NFS 共有するフォルダーを作成します。今回は例として `C:\export` を共有します。
 
-<a href="images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-3.png"><img src="images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-3.png" alt="" width="435" height="511" class="alignnone size-full wp-image-14796" /></a>
+![](images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-3.png)
 
 サーバーマネージャーから新しい共有ウィザードを起動し、**[NFS 共有 - 簡易]** を選択して [次へ] をクリックします。
 
 `[サーバーマネージャー] > [ファイルサービスと記憶域サービス] > [共有]`
 
-<a href="images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-4.png"><img src="images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-4.png" alt="" width="961" height="733" class="alignnone size-full wp-image-14797" /></a>
+![](images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-4.png)
 
 カスタムパスに `C:\export` を入力し、[次へ] をクリックします。
 
-<a href="images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-5.png"><img src="images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-5.png" alt="" width="764" height="563" class="alignnone size-full wp-image-14800" /></a>
+![](images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-5.png)
 
 共有名を指定し [次へ] をクリックします。**ここで表示されている [共有するリモートパス] は後で使用しますので、メモしておいてください**。
 
-<a href="images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-6.png"><img src="images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-6.png" alt="" width="763" height="559" class="alignnone size-full wp-image-14801" /></a>
+![](images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-6.png)
 
 認証方法を下記のとおり設定し、[次へ] をクリックします。
 
-<a href="images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-7.png"><img src="images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-7.png" alt="" width="763" height="562" class="alignnone size-full wp-image-14802" /></a>
+![](images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-7.png)
 
 NFS 共有を許可するホストを追加します。ESXi の IP アドレスを入力し、共有アクセス許可は **[読み取り/書き込み]** を選択します。
 マウントする ESXi が複数ある場合は同様の手順で追加します。なお、**vCenter Server が存在する環境でも vCenter Server のアクセスを追加する必要はありません**。
 
-<a href="images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-8.png"><img src="images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-8.png" alt="" width="766" height="567" class="alignnone size-full wp-image-14804" /></a>
+![](images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-8.png)
 
 内容を確認し [次へ] をクリックします。あとはウェイザードに従い、共有を作成します。
 
-<a href="images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-9.png"><img src="images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-9.png" alt="" width="768" height="563" class="alignnone size-full wp-image-14805" /></a>
+![](images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-9.png)
 
 ## ESXi からマウントする
 ### 新しいデータストアを追加する
 vSphere Client から新しいデータストアを追加します。[NFS] を選択し、[NEXT] をクリックします。
 
-<a href="images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-10.png"><img src="images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-10.png" alt="" width="876" height="724" class="alignnone size-full wp-image-14809" /></a>
+![](images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-10.png)
 
 [NFS 3] を選択し [NEXT] をクリックします。
 
-<a href="images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-11.png"><img src="images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-11.png" alt="" width="878" height="724" class="alignnone size-full wp-image-14810" /></a>
+![](images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-11.png)
 
 NFS シェアの詳細を設定し、[NEXT] をクリックします。
 ※ パラメーターを抜粋していますので、表現の揺らぎはご容赦ください。
@@ -82,25 +82,25 @@ NFS シェアの詳細を設定し、[NEXT] をクリックします。
 - **フォルダ**: 先の手順で確認した [共有するリモートパス] の`:` 以降を指定
 - **サーバ**: NFS サーバーの IP アドレスを指定
 
-<a href="images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-12.png"><img src="images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-12.png" alt="" width="880" height="725" class="alignnone size-full wp-image-14811" /></a>
+![](images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-12.png)
 
 マウントする ESXi を選択し [NEXT] をクリックします。
 
-<a href="images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-13.png"><img src="images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-13.png" alt="" width="878" height="728" class="alignnone size-full wp-image-14814" /></a>
+![](images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-13.png)
 
 [FINISH] をクリックして完了します。この時正常にマウントできなかった場合は、これまでの手順を確認してみてください。
 
-<a href="images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-14.png"><img src="images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-14.png" alt="" width="877" height="733" class="alignnone size-full wp-image-14815" /></a>
+![](images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-14.png)
 
 空き容量などストレージの情報も正常に取得できていました。
 
-<a href="images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-15.png"><img src="images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-15.png" alt="" width="861" height="168" class="alignnone size-full wp-image-14817" /></a>
+![](images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-15.png)
 
 ### ディスクタイプはシックプロビジョニングになる
 
 マウントしたデータストアに **シンプロビジョニング** の仮想マシンを移行したところ、ディスクタイプが **シックプロビジョニング (Eager Zeroed)** になっていることがわかりました。
 
-<a href="images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-16.png"><img src="images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-16.png" alt="" width="867" height="302" class="alignnone size-full wp-image-14818" /></a>
+![](images/configure-nfs-server-on-windows-server-and-mount-as-datastore-from-esxi-16.png)
 
 NAS などで NFS マウントしているデータストア間で仮想マシンを移行したり、新しい仮想マシン作成してもシンプロビジョニングのままとなりますが、**Windows Server の NFS サーバーのデータストアに仮想マシンを移行したり新しい仮想マシンを作成すると シックプロビジョニング (Eager Zeroed) になってしまいます**。
 

@@ -29,7 +29,7 @@ ReactiveProperty を利用して MVVM な WPF アプリケーションの開発�
 
 **`ReactiveProperty<T>`** はビューやモデルから、 **監視対象とするデータの値が直接変更される場合** に利用します。例えば、 WPF の `TextBox` の入力データを監視するような場合は、ビューから値が変更されることが考えられるので、 `ReactiveProperty<T>` を用いた監視が適切です。
 
-[caption id="attachment_16285" align="aligncenter" width="591"]<a href="images/difference-between-reactiveproperty-and-ireadonlyreactiveproperty-1.png"><img src="images/difference-between-reactiveproperty-and-ireadonlyreactiveproperty-1.png" alt="" width="591" height="289" class="size-full wp-image-16285" /></a> ReactiveProperty<T> の動作イメージ[/caption]
+![](images/difference-between-reactiveproperty-and-ireadonlyreactiveproperty-1.png)
 
 `ReactiveProperty<T>` で値を変更するには `Value` プロパティを変更します。ビューやモデルから `Value` プロパティを書き換えることで監視対象のデータの値が書き換わり、変更が検知されます。
 
@@ -50,7 +50,7 @@ class ViewModel
 
 身長と体重から BMI を求めるように、 **あるデータに基づいて値が計算されるようなデータを監視** する場合、その値は **直接変更されるべきではない** ので、 **`ReadOnlyReactiveProperty<T>`** を利用します。 `ReactiveProperty<T>` で監視しているデータに基づいて値を自動計算させる場合、 `ReactiveProperty<T>` のインスタンスの　**`Select()`** メソッドで変換処理をしたのち、 **`ToReadOnlyReactiveProperty<T>()`** メソッドを起動します。
 
-[caption id="attachment_16289" align="aligncenter" width="475"]<a href="images/difference-between-reactiveproperty-and-ireadonlyreactiveproperty-2.png"><img src="images/difference-between-reactiveproperty-and-ireadonlyreactiveproperty-2.png" alt="" width="475" height="669" class="size-full wp-image-16289" /></a> ReadOnlyReactiveProperty<T> の動作イメージ[/caption]
+![](images/difference-between-reactiveproperty-and-ireadonlyreactiveproperty-2.png)
 
 以下は `InputValue` の値の文字列を `ToLowerCase()` で小文字に変換して `OutputValue` で監視するコード例です。入力フォームの値の変更と同期して小文字に変換した文字列をラベルなどに出力するような場合に利用できます。
 
@@ -92,12 +92,12 @@ OutputValue.Value = "i'm feeling good :-)";
 
 撮影したフジの花の写真を以下に掲載します。
 
-<a href="images/difference-between-reactiveproperty-and-ireadonlyreactiveproperty-3.jpg"><img src="images/difference-between-reactiveproperty-and-ireadonlyreactiveproperty-3.jpg" alt="" width="800" height="600" class="aligncenter size-full wp-image-16295" /></a>
+![](images/difference-between-reactiveproperty-and-ireadonlyreactiveproperty-3.jpg)
 
-<a href="images/difference-between-reactiveproperty-and-ireadonlyreactiveproperty-4.jpg"><img src="images/difference-between-reactiveproperty-and-ireadonlyreactiveproperty-4.jpg" alt="" width="800" height="600" class="aligncenter size-full wp-image-16296" /></a>
+![](images/difference-between-reactiveproperty-and-ireadonlyreactiveproperty-4.jpg)
 
-<a href="images/difference-between-reactiveproperty-and-ireadonlyreactiveproperty-5.jpg"><img src="images/difference-between-reactiveproperty-and-ireadonlyreactiveproperty-5.jpg" alt="" width="800" height="600" class="aligncenter size-full wp-image-16297" /></a>
+![](images/difference-between-reactiveproperty-and-ireadonlyreactiveproperty-5.jpg)
 
-<a href="images/difference-between-reactiveproperty-and-ireadonlyreactiveproperty-6.jpg"><img src="images/difference-between-reactiveproperty-and-ireadonlyreactiveproperty-6.jpg" alt="" width="800" height="600" class="aligncenter size-full wp-image-16298" /></a>
+![](images/difference-between-reactiveproperty-and-ireadonlyreactiveproperty-6.jpg)
 
 スマートフォンのカメラでも手軽に高画質な写真が撮れるようにはなりましたが、実際に見た感動を写真に収めるのはなかなか難しいですね(笑)

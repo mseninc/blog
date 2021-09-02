@@ -54,7 +54,7 @@ wevtutil qe Security /c:10 /f:XML > security-logs.xml
 
 まず、取得される側のマシンの**ファイアウォール設定で「リモートイベントのログ管理 (RPC)」を許可**しておく必要があります。
 
-[caption id="attachment_5622" align="aligncenter" width="1205"]<a href="images/acquire-event-log-in-remote-machine-with-wevtutil-1.png"><img src="images/acquire-event-log-in-remote-machine-with-wevtutil-1.png" alt="リモートイベントのログ管理 (RPC) を有効にする" width="1205" height="415" class="size-full wp-image-5622" /></a> リモートイベントのログ管理 (RPC) を有効にする[/caption]
+![リモートイベントのログ管理 (RPC) を有効にする](images/acquire-event-log-in-remote-machine-with-wevtutil-1.png)
 
 ### ユーザーアカウントと権限の設定
 
@@ -62,7 +62,7 @@ wevtutil qe Security /c:10 /f:XML > security-logs.xml
 
 このユーザーを Builtin/**Event Log Readers** グループに所属させます。これにより、このリモートマシンのイベントログを読み取ることができるようになります。
 
-<a href="images/acquire-event-log-in-remote-machine-with-wevtutil-2.png"><img src="images/acquire-event-log-in-remote-machine-with-wevtutil-2.png" alt="Wevtutil から接続するユーザーを Builtin/Event Log Readers グループに所属させる" width="723" height="240" class="aligncenter size-full wp-image-6169" /></a>
+![Wevtutil から接続するユーザーを Builtin/Event Log Readers グループに所属させる](images/acquire-event-log-in-remote-machine-with-wevtutil-2.png)
 
 リモート側の準備は以上です。
 
@@ -94,15 +94,15 @@ wevtutil qe Security /r:ホスト名 /u:ユーザー /p:パスワード /f:XML /
 
 まず、**イベントビューアー**を開き、 **[操作] → [現在のログをフィルター]** を選択します。
 
-<a href="images/acquire-event-log-in-remote-machine-with-wevtutil-3.png"><img src="images/acquire-event-log-in-remote-machine-with-wevtutil-3.png" alt="イベントビューアーで現在のログをフィルターをクリック" width="357" height="335" class="aligncenter size-full wp-image-5792" /></a>
+![イベントビューアーで現在のログをフィルターをクリック](images/acquire-event-log-in-remote-machine-with-wevtutil-3.png)
 
 (1) 任意の検索条件を入れて、 (2) **[XML] タブ**を開きます。
 
-<a href="images/acquire-event-log-in-remote-machine-with-wevtutil-4.png"><img src="images/acquire-event-log-in-remote-machine-with-wevtutil-4.png" alt="検索条件を入れて XML タブを開く" width="543" height="551" class="aligncenter size-full wp-image-5794" /></a>
+![検索条件を入れて XML タブを開く](images/acquire-event-log-in-remote-machine-with-wevtutil-4.png)
 
 XML でフィルターが表示されているので `<select>` タグの中身をコピーし、これを XPath クエリとして使用します。
 
-<a href="images/acquire-event-log-in-remote-machine-with-wevtutil-5.png"><img src="images/acquire-event-log-in-remote-machine-with-wevtutil-5.png" alt="" width="543" height="551" class="aligncenter size-full wp-image-5795" /></a>
+![](images/acquire-event-log-in-remote-machine-with-wevtutil-5.png)
 
 ただし、 `<select>` タグの中身は `<` や `>` などの XML の特殊文字がエスケープされているので、 `&lt;` や `&gt;` をそれぞれ `<` や `>` に置換してから使用してください。
 

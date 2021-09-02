@@ -33,11 +33,11 @@ Git の場合、ソースコードは各開発者の手元にある程度のク�
 
 GitHub の **[Personal setting](https://github.com/settings/profile)** ページを開き、 **[developer settings]** をクリックします。
 
-<a href="images/import-github-repositories-to-gitlab-1.png"><img src="images/import-github-repositories-to-gitlab-1.png" alt="Generate Personal Access Token in GitHub for Importing repositories to GitLab" width="1143" height="739" class="aligncenter size-full wp-image-10216" /></a>
+![Generate Personal Access Token in GitHub for Importing repositories to GitLab](images/import-github-repositories-to-gitlab-1.png)
 
 左メニューの **[Personal access tokens]** をクリックし、 **[Generate new token]** をクリックします。
 
-<a href="images/import-github-repositories-to-gitlab-2.png"><img src="images/import-github-repositories-to-gitlab-2.png" alt="Generate Personal Access Token in GitHub for Importing repositories to GitLab" width="1143" height="739" class="aligncenter size-full wp-image-10217" /></a>
+![Generate Personal Access Token in GitHub for Importing repositories to GitLab](images/import-github-repositories-to-gitlab-2.png)
 
 New personal access token 画面では **[Select scopes] で [repo] スコープ**を選択します。これでこのトークンでリポジトリ操作が可能になります。
 
@@ -45,11 +45,11 @@ New personal access token 画面では **[Select scopes] で [repo] スコープ
 
 **[Generate token]** をクリックするとトークンが生成されます。
 
-<a href="images/import-github-repositories-to-gitlab-3.png"><img src="images/import-github-repositories-to-gitlab-3.png" alt="Generate Personal Access Token in GitHub for Importing repositories to GitLab" width="1143" height="640" class="aligncenter size-full wp-image-10218" /></a>
+![Generate Personal Access Token in GitHub for Importing repositories to GitLab](images/import-github-repositories-to-gitlab-3.png)
 
 トークン一覧画面でチェックマークのついたものが今生成されたトークンです。**コピーボタンを押してコピー**します。このトークンは二度と表示できませんので、必要な場合はメモっておきます。ただし、忘れた場合は古いものを失効 (Delete) させて再発行すればいいので、あまりどこかに置いておかないほうがいいでしょう。
 
-<a href="images/import-github-repositories-to-gitlab-4.png"><img src="images/import-github-repositories-to-gitlab-4.png" alt="Generate Personal Access Token in GitHub for Importing repositories to GitLab" width="1143" height="739" class="aligncenter size-full wp-image-10226" /></a>
+![Generate Personal Access Token in GitHub for Importing repositories to GitLab](images/import-github-repositories-to-gitlab-4.png)
 
 
 ### GitLab に GitHub リポジトリをインポート
@@ -58,21 +58,21 @@ New personal access token 画面では **[Select scopes] で [repo] スコープ
 
 GitLab を開き、メニューバーの + ボタンから **[New project]** を選択します。
 
-<a href="images/import-github-repositories-to-gitlab-5.png"><img src="images/import-github-repositories-to-gitlab-5.png" alt="GitLab New Project" width="1143" height="739" class="aligncenter size-full wp-image-10213" /></a>
+![GitLab New Project](images/import-github-repositories-to-gitlab-5.png)
 
 **[Import project]** タブから **[GitHub]** を選択します。
 
-<a href="images/import-github-repositories-to-gitlab-6.png"><img src="images/import-github-repositories-to-gitlab-6.png" alt="GitLab Import Project from GitHub" width="1143" height="739" class="aligncenter size-full wp-image-10214" /></a>
+![GitLab Import Project from GitHub](images/import-github-repositories-to-gitlab-6.png)
 
 **[Personal Access Token]** というテキストボックスに先ほど生成したトークンを貼り付け、 **[List your GitHub repositories]** をクリックします。
 
-<a href="images/import-github-repositories-to-gitlab-7.png"><img src="images/import-github-repositories-to-gitlab-7.png" alt="Set GitHub Personal Access Token To GitLab" width="1143" height="739" class="aligncenter size-full wp-image-10220" /></a>
+![Set GitHub Personal Access Token To GitLab](images/import-github-repositories-to-gitlab-7.png)
 
 次の画面で自分が権限を持っている GitHub リポジトリの一覧が表示されます。
 
 **[From GitHub]** 列が GitHub のリポジトリ名、 **[To GitLab]** 列が GitLab にどういう名前でインポートするかの設定です。所有者 (画像では root になっている) とリポジトリ名を設定し、 **[Import]** ボタンをクリックすると、そのリポジトリのインポートが開始されます。
 
-<a href="images/import-github-repositories-to-gitlab-8.png"><img src="images/import-github-repositories-to-gitlab-8.png" alt="Import GitHub repository to Gitlab" width="1143" height="739" class="aligncenter size-full wp-image-10221" /></a>
+![Import GitHub repository to Gitlab](images/import-github-repositories-to-gitlab-8.png)
 
 ちなみに複数リポジトリの [Import] をクリックすると、スケジュールされて順次インポートが実行されます。
 
@@ -80,11 +80,11 @@ GitLab を開き、メニューバーの + ボタンから **[New project]** を
 
 しばらくするとインポートが完了し、リポジトリが表示できます。 Git としてのコミット記録やブランチだけでなく、 **Issue** や **Merge Requests** (GitHub の Pull request) も移行できていることがわかります。
 
-<a href="images/import-github-repositories-to-gitlab-9.png"><img src="images/import-github-repositories-to-gitlab-9.png" alt="Imported GitHub repository to Gitlab" width="1346" height="945" class="aligncenter size-full wp-image-10222" /></a>
+![Imported GitHub repository to Gitlab](images/import-github-repositories-to-gitlab-9.png)
 
 Issue やマージリクエストを開いてみると、コメント内にある、**別の Issue や PR へのリンクも機能している**ことがわかります。
 
-<a href="images/import-github-repositories-to-gitlab-10.png"><img src="images/import-github-repositories-to-gitlab-10.png" alt="Imported GitHub repository to Gitlab" width="1346" height="945" class="aligncenter size-full wp-image-10223" /></a>
+![Imported GitHub repository to Gitlab](images/import-github-repositories-to-gitlab-10.png)
 
 ただし、Issue やマージリクエスト、コメントの発言者は GitLab のシステム上はすべてインポートしたユーザーになり、 GitHub で投稿したユーザーは `Created by: ユーザー名` という形でコメントの一部として記述されます。
 

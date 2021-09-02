@@ -8,43 +8,43 @@ tags: [Google, GSuite, その他, ライフハック]
 こんにちは。
 
 ある日、GMailの上部にこんな通知があらわれました。
-<a href="images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-1.png"><img src="images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-1.png" alt="" width="695" height="66" class="alignnone size-full wp-image-9169" /></a>
+![](images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-1.png)
 
 こちらから確認すると、99%利用で枯渇寸前でした。
 [ドライブ ストレージ](https://drive.google.com/u/1/settings/storage?i=u)
 
-<a href="images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-2.png"><img src="images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-2.png" alt="" width="1620" height="1010" class="alignnone size-full wp-image-9173" /></a>
+![](images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-2.png)
 
 上記画面から容量を追加することも出来ますが、Googleサポートに確認するとこの場合、 **支払いが組織への一括請求とならない**ようで、管理者から容量を追加します。
 
 ## Google ドライブストレージのライセンスを有効にする
 1. [管理コンソール](https://admin.google.com/msen.jp/AdminHome?hl=ja#) にアクセス
 1. 左上の **三** から **アプリ → GSuite** と進みます
-<a href="images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-3.png"><img src="images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-3.png" alt="" width="1397" height="955" class="alignnone size-full wp-image-9171" /></a>
+![](images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-3.png)
 1. **サービスを追加** をクリックします
-<a href="images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-4.png"><img src="images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-4.png" alt="" width="1397" height="955" class="alignnone size-full wp-image-9174" /></a>
+![](images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-4.png)
 1. **Googleドライブストレージ** の **今すぐ追加** をクリックします
-<a href="images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-5.png"><img src="images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-5.png" alt="" width="1397" height="955" class="alignnone size-full wp-image-9175" /></a>
+![](images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-5.png)
 1. **開始する** をクリックします
-<a href="images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-6.png"><img src="images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-6.png" alt="" width="1397" height="955" class="alignnone size-full wp-image-9176" /></a>
+![](images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-6.png)
 1. **次へ** をクリックします ( **この画面で支払いは確定しません** )
-<a href="images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-7.png"><img src="images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-7.png" alt="" width="1397" height="1088" class="alignnone size-full wp-image-9177" /></a>
+![](images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-7.png)
 1. 支払い情報を確認し **次へ** をクリックします 
-<a href="images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-8.png"><img src="images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-8.png" alt="" width="1397" height="1088" class="alignnone size-full wp-image-9178" /></a>
+![](images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-8.png)
 1. **次へ** をクリックします
-<a href="images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-9.png"><img src="images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-9.png" alt="" width="1397" height="1088" class="alignnone size-full wp-image-9179" /></a>
+![](images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-9.png)
 **Google ドライブストレージがアクティブ** になり追加されたことが確認できます
-<a href="images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-10.png"><img src="images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-10.png" alt="" width="1095" height="654" class="alignnone size-full wp-image-9180" /></a>
+![](images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-10.png)
 
 ## ユーザーに容量追加オプションを適用する
 1. 左上の **三** から **ディレクトリ → ユーザー** と進みます
-<a href="images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-11.png"><img src="images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-11.png" alt="" width="1397" height="1088" class="alignnone size-full wp-image-9182" /></a>
+![](images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-11.png)
 1. 追加する **ユーザーをチェック(①)** し、右上の **┇(②)** をクリックし **ライセンスを割り当てる(③)** をクリックします
-<a href="images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-12.png"><img src="images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-12.png" alt="" width="1590" height="1090" class="alignnone size-full wp-image-9184" /></a>
+![](images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-12.png)
 1. プランを選択し、 **割当** をクリックします (画像の20GBは最小単位です)
-<a href="images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-13.png"><img src="images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-13.png" alt="" width="630" height="607" class="alignnone size-full wp-image-9185" /></a>
+![](images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-13.png)
 プラン右の▼をクリックすると選択一覧がでます
-<a href="images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-14.png"><img src="images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-14.png" alt="" width="465" height="257" class="alignnone size-full wp-image-9186" /></a>
+![](images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-14.png)
 
 以上で完了です。
 
@@ -54,7 +54,7 @@ tags: [Google, GSuite, その他, ライフハック]
 
 無事増えていました。
 
-<a href="images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-15.png"><img src="images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-15.png" alt="" width="1472" height="1090" class="alignnone size-full wp-image-9187" /></a>
+![](images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-15.png)
 
 すぐにアクセスすると **!マーク** が表示されていましたが2,3分まってF5でページを更新すれば増えました。
 
@@ -65,7 +65,7 @@ tags: [Google, GSuite, その他, ライフハック]
 
 ## あとがき
 ただ・・・、読んでいただき気づかれたかもしれませんが個人ページから増量する方が **100GBでも月250円** と安いように見えます。
-<a href="images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-16.png"><img src="images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-16.png" alt="" width="1472" height="1090" class="alignnone size-full wp-image-9190" /></a>
+![](images/how-to-increase-drive-capacity-from-organization-administrators-with-gsuite-16.png)
 
 こちらは再度Googleに問い合わせをして続報を掲載したいと思います。
 

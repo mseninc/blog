@@ -10,15 +10,15 @@ tags: [Linux]
 今回はCentOS7+KVMで仮想マシンを構築します。
 
 【ノートPCサーバのOS概要】
-<a href="images/make-virtual-machine-with-kvm-in-centos-7-1.png"><img src="images/make-virtual-machine-with-kvm-in-centos-7-1.png" alt="2016-09-24_01h50_44" width="348" height="250" class="alignnone size-full wp-image-2837" /></a>
+![2016-09-24_01h50_44](images/make-virtual-machine-with-kvm-in-centos-7-1.png)
 
 【全体概要】
-<a href="images/make-virtual-machine-with-kvm-in-centos-7-2.png"><img src="images/make-virtual-machine-with-kvm-in-centos-7-2.png" alt="2016-09-26_00h47_22" width="753" height="326" class="alignnone size-full wp-image-2935" /></a>
+![2016-09-26_00h47_22](images/make-virtual-machine-with-kvm-in-centos-7-2.png)
 
 ノートPCサーバのCentOS7は事前に開発環境としてインストールを実施しています。
 そのため、インストール直後からKVM(libvirtd)関連のパッケージはインストール済みです。
 
-<a href="images/make-virtual-machine-with-kvm-in-centos-7-3.jpg"><img src="images/make-virtual-machine-with-kvm-in-centos-7-3.jpg" alt="dsc_0213" width="960" height="540" class="alignnone size-full wp-image-2856" /></a>
+![dsc_0213](images/make-virtual-machine-with-kvm-in-centos-7-3.jpg)
 
 ノートPCサーバ側の操作は全てコマンドラインで実施していきたいと思います。
 
@@ -56,20 +56,20 @@ BIOSの設定でVirtualization TechnologyをEnableにする。
 
 1.1 赤枠のリンクへ移動
 
-<a href="images/make-virtual-machine-with-kvm-in-centos-7-4.png"><img src="images/make-virtual-machine-with-kvm-in-centos-7-4.png" alt="2016-09-24_02h06_28" width="1148" height="613" class="alignnone size-full wp-image-2838" /></a>
+![2016-09-24_02h06_28](images/make-virtual-machine-with-kvm-in-centos-7-4.png)
 
 1.1 赤枠のリンクへ移動
 
-<a href="images/make-virtual-machine-with-kvm-in-centos-7-5.png"><img src="images/make-virtual-machine-with-kvm-in-centos-7-5.png" alt="2016-09-24_02h07_19" width="1073" height="599" class="alignnone size-full wp-image-2839" /></a>
+![2016-09-24_02h07_19](images/make-virtual-machine-with-kvm-in-centos-7-5.png)
 
 1.1 赤枠からEXEをダウンロード
 
-<a href="images/make-virtual-machine-with-kvm-in-centos-7-6.png"><img src="images/make-virtual-machine-with-kvm-in-centos-7-6.png" alt="2016-09-24_02h07_56" width="665" height="590" class="alignnone size-full wp-image-2840" /></a>
+![2016-09-24_02h07_56](images/make-virtual-machine-with-kvm-in-centos-7-6.png)
 
 インストールは複雑ではないので、直感でインストール出来ると思います。
 起動すると、このような画面が出てきます。
 
-<a href="images/make-virtual-machine-with-kvm-in-centos-7-7.png"><img src="images/make-virtual-machine-with-kvm-in-centos-7-7.png" alt="2016-09-24_16h24_00" width="452" height="187" class="alignnone size-full wp-image-2844" /></a>
+![2016-09-24_16h24_00](images/make-virtual-machine-with-kvm-in-centos-7-7.png)
 
 
 ## 仮想OS構築
@@ -140,13 +140,13 @@ tcp        0      0 127.0.0.1:5900          0.0.0.0:*               LISTEN      
 ### 仮想OSに接続
 Tiger VNC で接続します。
 
-<a href="images/make-virtual-machine-with-kvm-in-centos-7-8.png"><img src="images/make-virtual-machine-with-kvm-in-centos-7-8.png" alt="2016-09-24_19h37_10" width="448" height="181" class="alignnone size-full wp-image-2852" /></a>
+![2016-09-24_19h37_10](images/make-virtual-machine-with-kvm-in-centos-7-8.png)
 
 ### 仮想OSのインストール
 Tiger VNCで接続後、CentOSのインストールを進めます。
 ※ここではCentOSのインストール詳細は割愛します。
 
-<a href="images/make-virtual-machine-with-kvm-in-centos-7-9.png"><img src="images/make-virtual-machine-with-kvm-in-centos-7-9.png" alt="2016-09-24_19h43_01" width="640" height="510" class="alignnone size-full wp-image-2854" /></a>
+![2016-09-24_19h43_01](images/make-virtual-machine-with-kvm-in-centos-7-9.png)
 
 操作感は遅延などの違和感はほぼ感じませんでした。
 
@@ -161,13 +161,13 @@ Tiger VNCで接続後、CentOSのインストールを進めます。
 すると、ライセンス同意の画面となっていますので以下を参考に進めます。
 **入力部分を赤枠で囲っています。**
 
-<a href="images/make-virtual-machine-with-kvm-in-centos-7-10.png"><img src="images/make-virtual-machine-with-kvm-in-centos-7-10.png" alt="2016-09-24_20h08_30" width="837" height="667" class="alignnone size-full wp-image-2857" /></a>
+![2016-09-24_20h08_30](images/make-virtual-machine-with-kvm-in-centos-7-10.png)
 
 ログイン出来ることを確認しました。
 
-<a href="images/make-virtual-machine-with-kvm-in-centos-7-11.png"><img src="images/make-virtual-machine-with-kvm-in-centos-7-11.png" alt="2016-09-24_20h10_16" width="1023" height="705" class="alignnone size-full wp-image-2858" /></a>
+![2016-09-24_20h10_16](images/make-virtual-machine-with-kvm-in-centos-7-11.png)
 
-<a href="images/make-virtual-machine-with-kvm-in-centos-7-12.png"><img src="images/make-virtual-machine-with-kvm-in-centos-7-12.png" alt="2016-09-24_20h11_01" width="1024" height="694" class="alignnone size-full wp-image-2859" /></a>
+![2016-09-24_20h11_01](images/make-virtual-machine-with-kvm-in-centos-7-12.png)
 
 ## あとがき
 

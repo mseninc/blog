@@ -11,7 +11,7 @@ tags: [AWS, RDS, Amazon Aurora]
 
 記事中にVPCにサブネットを2つ作成して→DBサブネットグループを作成したVPCサブネット2つを指定して作成する、という手順がありますが、これと同じ状態でRDSのエンジンに**Amazon Aurora**を指定すると、エラーになることが分かりました。
 
-<a href="images/error-when-starting-amazon-aurora-1.png"><img src="images/error-when-starting-amazon-aurora-1.png" alt="" width="904" height="785" class="aligncenter size-full wp-image-5433" /></a>
+![](images/error-when-starting-amazon-aurora-1.png)
 
 エラーの内容は以下のとおりです。
 
@@ -23,9 +23,9 @@ tags: [AWS, RDS, Amazon Aurora]
 
 早速、VPCサブネットをもう1つ追加し、DBサブネットグループを再作成しました。
 
-<a href="images/error-when-starting-amazon-aurora-2.png"><img src="images/error-when-starting-amazon-aurora-2.png" alt="" width="1468" height="354" class="aligncenter size-full wp-image-5415" /></a>
+![](images/error-when-starting-amazon-aurora-2.png)
 
-<a href="images/error-when-starting-amazon-aurora-3.png"><img src="images/error-when-starting-amazon-aurora-3.png" alt="" width="1057" height="750" class="aligncenter size-full wp-image-5416" /></a>
+![](images/error-when-starting-amazon-aurora-3.png)
 
 この状態でAuroraを指定すると無事作成することができました。
 

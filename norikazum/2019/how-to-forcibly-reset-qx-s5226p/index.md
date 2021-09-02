@@ -18,17 +18,17 @@ tags: [ネットワーク, スイッチ, その他の技術]
 1. 電源を入れ、 `Press Ctrl-B to enter Boot Menu...` が見えたらすぐに `Ctrl+B` を押します。
 パスワードが求められますが、 `Enter` を押します。
 `BOOT MENU` がでるので、`4` を入力してEnterを押します。
-<a href="images/how-to-forcibly-reset-qx-s5226p-1.png"><img src="images/how-to-forcibly-reset-qx-s5226p-1.png" alt="" width="822" height="625" class="alignnone size-full wp-image-11755" /></a>
+![](images/how-to-forcibly-reset-qx-s5226p-1.png)
 
 1. `2` を選択して、Enterを押します。 (.cfgから始まるファイルを選択) `bin` とか消すと恐らく動かなくなりますのでご注意。
-<a href="images/how-to-forcibly-reset-qx-s5226p-2.png"><img src="images/how-to-forcibly-reset-qx-s5226p-2.png" alt="" width="822" height="607" class="alignnone size-full wp-image-11756" /></a>
+![](images/how-to-forcibly-reset-qx-s5226p-2.png)
 
 1. 削除確認に `Y` を入力してEnterを押します。
 続けて、 `0` を入力して機器を再起動します。
-<a href="images/how-to-forcibly-reset-qx-s5226p-3.png"><img src="images/how-to-forcibly-reset-qx-s5226p-3.png" alt="" width="822" height="607" class="alignnone size-full wp-image-11757" /></a>
+![](images/how-to-forcibly-reset-qx-s5226p-3.png)
 
 1. 再起動後、無事 `パスワードなしでログイン` できました。
-<a href="images/how-to-forcibly-reset-qx-s5226p-4.png"><img src="images/how-to-forcibly-reset-qx-s5226p-4.png" alt="" width="822" height="607" class="alignnone size-full wp-image-11758" /></a>
+![](images/how-to-forcibly-reset-qx-s5226p-4.png)
 
 ## あとがき
 久しぶりに触りましたが、QXはよく使われるCiscoと違い少しコンフィグに癖がありますね。参考になれば幸いです。

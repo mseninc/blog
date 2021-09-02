@@ -10,12 +10,12 @@ tags: [その他, ライフハック]
 **こんな小さな事務所**でもそれなりに訪問営業は多いものでして、てっきり営業だと思い片手間に聞いていると、「国の調査です・・・」とのことで少し態度を変えました(笑)
 
 **こんな小さな事務所**
-<img src="images/economic-census-h28-1.jpg" alt="DSC_0001" width="300" height="169" class="alignnone size-medium wp-image-357" />
+![DSC_0001](images/economic-census-h28-1.jpg)
 
 内容は、経済センサス活動調査というもののようで、[ここ](http://www.stat.go.jp/data/e-census/)には以下のように紹介されていました。（原文のまま）
 > 経済センサスは、事業所及び企業の経済活動の状態を明らかにし、我が国における包括的な産業構造を明らかにするとともに、事業所・企業を対象とする各種統計調査の実施のための母集団情報 を整備することを目的としています。経済センサスは、事業所・企業の基本的構造を明らかにする「経済センサス‐基礎調査」と事業所・企業の経済活動の状況を明らかにする「経済センサス‐活動調査」の二つから成り立っています。経済センサスにより作成される経済構造統計は、国勢統計（国勢調査）、国民経済計算に準ずる重要な統計として、「統計法」（平成19年法律第53号）という法律に基づいた基幹統計に位置付け られています。
 
-<img src="images/economic-census-h28-2.jpg" alt="seifutoukei" width="268" height="300" class="alignnone size-medium wp-image-358" />
+![seifutoukei](images/economic-census-h28-2.jpg)
 
 のようです。
 
@@ -30,7 +30,7 @@ tags: [その他, ライフハック]
 
 初めて受ける調査で勉強になりました。
 
-<a href="images/economic-census-h28-3.jpg"><img src="images/economic-census-h28-3.jpg" alt="keizai-chosa27" width="300" height="269" class="alignnone size-medium wp-image-362" /></a>
+![keizai-chosa27](images/economic-census-h28-3.jpg)
 
 
 [総務省統計局](http://www.stat.go.jp/)

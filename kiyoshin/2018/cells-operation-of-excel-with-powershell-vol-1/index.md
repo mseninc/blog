@@ -102,6 +102,6 @@ $sheet.Range("A5","C5") = "200","400","600"
 `$sheet.Cells.Item(縦,横)` をインクリメントさせながら複数のセルに値を設定するといった方法もあります。
 
 今回紹介した操作を順に行うと下記のExcelシートが出来上がるかと思います。
-<img src="images/cells-operation-of-excel-with-powershell-vol-1-1.png" alt="" width="1276" height="629" class="alignleft size-full wp-image-7176" />
+![](images/cells-operation-of-excel-with-powershell-vol-1-1.png)
 
 それでは、セルの基本操作 Vol.2 でお会いしましょう。

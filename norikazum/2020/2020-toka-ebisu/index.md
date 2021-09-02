@@ -15,16 +15,16 @@ tags: [その他, 〇〇奮闘記]
 ## 参拝・福笹
 午前中にいきましたが、去年同様に混雑はありませんでした。
 
-<a href="images/2020-toka-ebisu-1.jpg"><img src="images/2020-toka-ebisu-1.jpg" alt="" width="3024" height="4032" class="alignnone size-full wp-image-11919" /></a>
+![](images/2020-toka-ebisu-1.jpg)
 
 返納した去年の福笹です。
 1年間ありがとうございました。
 
-<a href="images/2020-toka-ebisu-2.jpg"><img src="images/2020-toka-ebisu-2.jpg" alt="" width="3024" height="4032" class="alignnone size-full wp-image-11920" /></a>
+![](images/2020-toka-ebisu-2.jpg)
 
 そして、今年の福笹です。
 
-<a href="images/2020-toka-ebisu-3.jpg"><img src="images/2020-toka-ebisu-3.jpg" alt="" width="4032" height="3024" class="alignnone size-full wp-image-11921" /></a>
+![](images/2020-toka-ebisu-3.jpg)
 
 毎年この時期は期末となっていて、次の期に向けて飾りを1つずつ増やしています。
 
@@ -52,17 +52,17 @@ tags: [その他, 〇〇奮闘記]
 末吉でした！
 微妙。。
 
-<a href="images/2020-toka-ebisu-4.jpg"><img src="images/2020-toka-ebisu-4.jpg" alt="" width="1512" height="2016" class="alignnone size-full wp-image-11926" /></a>
+![](images/2020-toka-ebisu-4.jpg)
 
 良い一年でありますように。
-<a href="images/2020-toka-ebisu-5.jpg"><img src="images/2020-toka-ebisu-5.jpg" alt="" width="1259" height="1494" class="alignnone size-full wp-image-11927" /></a>
+![](images/2020-toka-ebisu-5.jpg)
 
 ## あとがき
 
 恒例のベビーカステラと、干支の飴(笑)
-<a href="images/2020-toka-ebisu-6.jpg"><img src="images/2020-toka-ebisu-6.jpg" alt="" width="1512" height="2016" class="alignnone size-full wp-image-11924" /></a>
+![](images/2020-toka-ebisu-6.jpg)
 
-<a href="images/2020-toka-ebisu-7.jpg"><img src="images/2020-toka-ebisu-7.jpg" alt="" width="1153" height="915" class="alignnone size-full wp-image-11925" /></a>
+![](images/2020-toka-ebisu-7.jpg)
 
 福笹は **1月9日から11日まで終夜** いただけるようです。
 
@@ -70,5 +70,5 @@ tags: [その他, 〇〇奮闘記]
 
 2020年もスタッフ一同頑張って参りますのでどうぞよろしくお願いいたします！
 
-<a href="images/2020-toka-ebisu-8.jpg"><img src="images/2020-toka-ebisu-8.jpg" alt="" width="1597" height="1348" class="alignnone size-full wp-image-11922" /></a>
+![](images/2020-toka-ebisu-8.jpg)
 

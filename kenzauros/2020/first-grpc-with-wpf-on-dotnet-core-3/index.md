@@ -25,7 +25,7 @@ C# 版の公式情報は下記を参照してください。 ASP.NET Core だけ
 
 動作イメージは下図のような感じです。 5 分ぐらいでできちゃいます。
 
-<a href="images/first-grpc-with-wpf-on-dotnet-core-3-1.png"><img src="images/first-grpc-with-wpf-on-dotnet-core-3-1.png" alt="" width="970" height="523" class="aligncenter size-full wp-image-12785" /></a>
+![](images/first-grpc-with-wpf-on-dotnet-core-3-1.png)
 
 ソースコードは GitHub においていますので、参考にしてください。
 
@@ -103,9 +103,9 @@ message StartConnectRequest {
 
 VS だと似たような名前のテンプレートが多くてややこしいですが、下記の2種類です。いずれも .NET Core になっているか注意してください。
 
-<a href="images/first-grpc-with-wpf-on-dotnet-core-3-2.png"><img src="images/first-grpc-with-wpf-on-dotnet-core-3-2.png" alt="" width="528" height="92" class="aligncenter size-full wp-image-12772" /></a>
+![](images/first-grpc-with-wpf-on-dotnet-core-3-2.png)
 
-<a href="images/first-grpc-with-wpf-on-dotnet-core-3-3.png"><img src="images/first-grpc-with-wpf-on-dotnet-core-3-3.png" alt="" width="529" height="95" class="aligncenter size-full wp-image-12771" /></a>
+![](images/first-grpc-with-wpf-on-dotnet-core-3-3.png)
 
 両方のプロジェクトに NuGet から下記のパッケージをインストールします。 Grpc もいろいろややこしい名前のパッケージがいっぱいありますが、とりあえず **Grpc** で大丈夫です。
 
@@ -122,7 +122,7 @@ VS だと似たような名前のテンプレートが多くてややこしい�
 
 ここまでで下記のような構成になっていれば OK です。
 
-<a href="images/first-grpc-with-wpf-on-dotnet-core-3-4.png"><img src="images/first-grpc-with-wpf-on-dotnet-core-3-4.png" alt="" width="1208" height="905" class="aligncenter size-full wp-image-12775" /></a>
+![](images/first-grpc-with-wpf-on-dotnet-core-3-4.png)
 
 `.proto` ファイルもちゃんとシンタックスハイライトされて見やすいですね。
 
@@ -138,11 +138,11 @@ VS だと似たような名前のテンプレートが多くてややこしい�
 
 プロジェクトファイルの内容は下図のようになります。
 
-<a href="images/first-grpc-with-wpf-on-dotnet-core-3-5.png"><img src="images/first-grpc-with-wpf-on-dotnet-core-3-5.png" alt="" width="793" height="433" class="aligncenter size-full wp-image-12776" /></a>
+![](images/first-grpc-with-wpf-on-dotnet-core-3-5.png)
 
 ここまでできたら **`HogeHoge.Rpc` をビルド**します。ビルドが正常終了すると `HogeHoge.Rpc\obj\Debug\netcoreapp3.1` あたりに **`Commander.cs` と `CommanderGrpc.cs` が自動生成**されているはずです。
 
-<a href="images/first-grpc-with-wpf-on-dotnet-core-3-6.png"><img src="images/first-grpc-with-wpf-on-dotnet-core-3-6.png" alt="" width="901" height="410" class="aligncenter size-full wp-image-12777" /></a>
+![](images/first-grpc-with-wpf-on-dotnet-core-3-6.png)
 
 この 2 つに gRPC のクラス群の詰め合わせセットが含まれています。ではこのクラスを用いてサービスを実装します。
 
@@ -152,7 +152,7 @@ VS だと似たような名前のテンプレートが多くてややこしい�
 
 クラス内で `override` をタイプすると `.proto` で定義した `Activate` や `StartConnect` がオーバライド可能になっていることがわかります。
 
-<a href="images/first-grpc-with-wpf-on-dotnet-core-3-7.png"><img src="images/first-grpc-with-wpf-on-dotnet-core-3-7.png" alt="" width="657" height="162" class="aligncenter size-full wp-image-12778" /></a>
+![](images/first-grpc-with-wpf-on-dotnet-core-3-7.png)
 
 さっそく2つのメソッドをオーバライドします。
 
@@ -216,7 +216,7 @@ public class CommanderService : Commander.CommanderBase
 
 ダサいですが下図のような感じです。
 
-<a href="images/first-grpc-with-wpf-on-dotnet-core-3-8.png"><img src="images/first-grpc-with-wpf-on-dotnet-core-3-8.png" alt="" width="332" height="248" class="aligncenter size-full wp-image-12781" /></a>
+![](images/first-grpc-with-wpf-on-dotnet-core-3-8.png)
 
 ### サーバーの起動
 
@@ -309,7 +309,7 @@ private async void StartConnectButton_Click(object sender, RoutedEventArgs e)
 
 試しに 4 プロセス起動してみたところです。最初の 1 プロセス以外は "Client mode" で起動しており、 Activate や StartConnect ボタンの動作によってメッセージが適切に表示されていることがわかります。
 
-<a href="images/first-grpc-with-wpf-on-dotnet-core-3-9.png"><img src="images/first-grpc-with-wpf-on-dotnet-core-3-9.png" alt="" width="970" height="523" class="aligncenter size-full wp-image-12780" /></a>
+![](images/first-grpc-with-wpf-on-dotnet-core-3-9.png)
 
 
 ### WPF での gRPC 実装の注意

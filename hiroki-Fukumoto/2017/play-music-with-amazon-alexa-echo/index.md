@@ -21,13 +21,13 @@ tags: [Amazon Alexa, Amazon Echo, その他]
 まず、**「アレクサ、音楽かけて」**と呼びかけるとAmazon Musicからジャンルをランダムに選択して音楽を再生しているみたいです。
 以下がAmazon Musicのジャンル一覧になりますので、参考までにどうぞ！
 
-<img src="images/play-music-with-amazon-alexa-echo-1.jpg" alt="" width="720" height="316" class="alignnone size-full wp-image-6027" />
+![](images/play-music-with-amazon-alexa-echo-1.jpg)
 
 ジャンルにないものを呼びかけると「すみません。ライブラリにありません。」と反応するか、曲数の多いAmazon Music Unlimitedの案内が始まります。
 Alexaとのやり取りだけで、Amazon Music Unlimitedの登録を済ませることもできるようです。
 ちなみに、登録すると言ってないのになぜか登録されていました（笑）
 
-<img src="images/play-music-with-amazon-alexa-echo-2.png" alt="" width="244" height="640" class="alignnone size-full wp-image-6029" />
+![](images/play-music-with-amazon-alexa-echo-2.png)
 
 契約等に関することは、注意しておきましょう！
 
@@ -62,7 +62,7 @@ NMB48も「**NMB**」でOKでした。
 
 しかし、ある会話だけが履歴として残されていたんです。
 
-<img src="images/play-music-with-amazon-alexa-echo-3.png" alt="" width="360" height="640" class="alignnone size-full wp-image-6033" />
+![](images/play-music-with-amazon-alexa-echo-3.png)
 
 「愛してるよ」だけが履歴として残されているんです（笑）
 

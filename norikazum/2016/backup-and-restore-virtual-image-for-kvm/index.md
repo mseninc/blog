@@ -50,7 +50,7 @@ KVMの構築は以前 [こちら](https://mseeeen.msen.jp/make-virtual-mac…-kv
 1. リストアされた、centos7を起動
 `virsh start centos7`
 
-<a href="images/backup-and-restore-virtual-image-for-kvm-1.png"><img src="images/backup-and-restore-virtual-image-for-kvm-1.png" alt="screenshot-from-2016-09-25-19%3a57%3a00" width="1026" height="774" class="alignnone size-full wp-image-2885" /></a>
+![screenshot-from-2016-09-25-19%3a57%3a00](images/backup-and-restore-virtual-image-for-kvm-1.png)
 
 無事起動できました。
 
@@ -63,40 +63,40 @@ KVMの構築は以前 [こちら](https://mseeeen.msen.jp/make-virtual-mac…-kv
 
 そのような場合は、事前に /etc/fstab から静的な記述を削除するか、移行後に以下の画面となった後にrootのパスワードを入力し、 /etc/fstab を修正して再起動すると起動します。
 
-<a href="images/backup-and-restore-virtual-image-for-kvm-2.png"><img src="images/backup-and-restore-virtual-image-for-kvm-2.png" alt="screenshot-from-2016-09-25-20%3a46%3a44" width="719" height="138" class="alignnone size-full wp-image-2903" /></a>
+![screenshot-from-2016-09-25-20%3a46%3a44](images/backup-and-restore-virtual-image-for-kvm-2.png)
 
 
 続いて、今回発生したエラーのなかで、CPUとネットワーク＋α（その他）の解消方法を紹介します。
 
 ### CPUのエラー
 
-<a href="images/backup-and-restore-virtual-image-for-kvm-3.png"><img src="images/backup-and-restore-virtual-image-for-kvm-3.png" alt="screenshot-from-2016-09-25-16%3a04%3a59" width="395" height="224" class="alignnone size-full wp-image-2874" /></a>
+![screenshot-from-2016-09-25-16%3a04%3a59](images/backup-and-restore-virtual-image-for-kvm-3.png)
 
 設定値が、元PCの状態となっている。
 
-<a href="images/backup-and-restore-virtual-image-for-kvm-4.png"><img src="images/backup-and-restore-virtual-image-for-kvm-4.png" alt="screenshot-from-2016-09-25-16%3a05%3a06" width="983" height="675" class="alignnone size-full wp-image-2875" /></a>
+![screenshot-from-2016-09-25-16%3a05%3a06](images/backup-and-restore-virtual-image-for-kvm-4.png)
 
 設定をクリアする。
 
-<a href="images/backup-and-restore-virtual-image-for-kvm-5.png"><img src="images/backup-and-restore-virtual-image-for-kvm-5.png" alt="screenshot-from-2016-09-25-16%3a05%3a18" width="981" height="684" class="alignnone size-full wp-image-2876" /></a>
+![screenshot-from-2016-09-25-16%3a05%3a18](images/backup-and-restore-virtual-image-for-kvm-5.png)
 
 ### ネットワークのエラー
 
-<a href="images/backup-and-restore-virtual-image-for-kvm-6.png"><img src="images/backup-and-restore-virtual-image-for-kvm-6.png" alt="screenshot-from-2016-09-25-16%3a05%3a50" width="398" height="244" class="alignnone size-full wp-image-2877" /></a>
+![screenshot-from-2016-09-25-16%3a05%3a50](images/backup-and-restore-virtual-image-for-kvm-6.png)
 
 状態を確認し、default に変更する。
 
-<a href="images/backup-and-restore-virtual-image-for-kvm-7.png"><img src="images/backup-and-restore-virtual-image-for-kvm-7.png" alt="screenshot-from-2016-09-25-16%3a06%3a07" width="981" height="678" class="alignnone size-full wp-image-2878" /></a>
+![screenshot-from-2016-09-25-16%3a06%3a07](images/backup-and-restore-virtual-image-for-kvm-7.png)
 
 ↓ **以下に変更する**
 
-<a href="images/backup-and-restore-virtual-image-for-kvm-8.png"><img src="images/backup-and-restore-virtual-image-for-kvm-8.png" alt="screenshot-from-2016-09-25-16%3a06%3a12" width="978" height="683" class="alignnone size-full wp-image-2879" /></a>
+![screenshot-from-2016-09-25-16%3a06%3a12](images/backup-and-restore-virtual-image-for-kvm-8.png)
 
 ### その他
 
 手元の評価では以下が設定に残っているとエラーとなりましたので削除しました。
 
-<a href="images/backup-and-restore-virtual-image-for-kvm-9.png"><img src="images/backup-and-restore-virtual-image-for-kvm-9.png" alt="screenshot-from-2016-09-25-16%3a33%3a36" width="982" height="675" class="alignnone size-full wp-image-2881" /></a>
+![screenshot-from-2016-09-25-16%3a33%3a36](images/backup-and-restore-virtual-image-for-kvm-9.png)
 
 いかがでしょうか。
 ハードウェアの考慮は必要ですが、非常に簡単な手順でバックアップとリストアができました。

@@ -26,7 +26,7 @@ element.textContent = 'こんにちは、じゅんじゅんです';
 ## window オブジェクトについて
 ブラウザ上の情報は全てオブジェクトとして扱うことができ、総称してブラウザオブジェクトと呼びます。**全てのブラウザオブジェクトの親**となるものが [window オブジェクト](https://developer.mozilla.org/ja/docs/Web/API/Window)です。言わばブラウザそのものです。`console.log(window)` とするか、デベロッパーツールの Console で `window` と打つことで以下のように確認できます。
 
-<img src="images/elements-can-be-referenced-without-using-getelementbyid-1.png" alt="" width="489" height="487" class="alignnone size-full wp-image-15520" />
+![](images/elements-can-be-referenced-without-using-getelementbyid-1.png)
 
 JavaScript に元々入っているメソッド・プロパティがずらっと並んでいます。よく使う `alert` メソッドや `document` プロパティ (これが `window` に読み込まれたものが `document` オブジェクト) もありますね。
 
@@ -68,7 +68,7 @@ global = 'グローバルです';
 
 もう一度 window オブジェクトを確認してみると、今宣言した `global` という変数が window オブジェクトのプロパティとして登録されています。
 
-<img src="images/elements-can-be-referenced-without-using-getelementbyid-2.png" alt="" width="311" height="124" class="alignnone size-full wp-image-15532" />
+![](images/elements-can-be-referenced-without-using-getelementbyid-2.png)
 
 ブラウザ内では window オブジェクトがグローバルオブジェクトなので、実は**グローバル変数、グローバル関数というものは window オブジェクトのプロパティ、メソッドのこと**なのです。 **window プロパティとして追加された id 属性はグローバル変数になるので、名前の衝突が起こりやすくなります**。例えば、以下のように先に同名の window プロパティを宣言していると、後から id 属性を設定しても window プロパティに追加されず、要素の参照ができません。
 
@@ -98,7 +98,7 @@ global = 'グローバルです';
   element.textContent = 'こんにちは、じゅんじゅんです';
 </script>
 ```
-<img src="images/elements-can-be-referenced-without-using-getelementbyid-3.png" alt="" width="508" height="133" class="alignnone size-full wp-image-15562" />
+![](images/elements-can-be-referenced-without-using-getelementbyid-3.png)
 
 このように非常に不安定な状態となります。**コード自体は短くはなりますがそもそも正しい動作をしなくなる可能性が高くなるので、使用するメリットは少ない**と思います。きちんと `getElementById` を使うようにしましょう。
 

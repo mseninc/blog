@@ -17,15 +17,15 @@ tags: [JavaScript, Node.js, Slack, AWS, EC2, RDS, Lambda, API Gateway]
 
 Slack のワークスペース設定の [Manage] から [Custom Integrations] → [Slash Commands] を選択します。
 
-<img src="images/aws-ec2-rds-instance-control-via-slack-slash-command-3-1.png" alt="" width="1029" height="462" class="aligncenter size-full wp-image-7899" />
+![](images/aws-ec2-rds-instance-control-via-slack-slash-command-3-1.png)
 
 [Add Configuration] を押します。
 
-<img src="images/aws-ec2-rds-instance-control-via-slack-slash-command-3-2.png" alt="" width="994" height="401" class="aligncenter size-full wp-image-7900" />
+![](images/aws-ec2-rds-instance-control-via-slack-slash-command-3-2.png)
 
 [Choose a Command] で希望のコマンド名 (今回は `/hoge-staging`) を入力し、 [Add Slash Command Integration] を押します。
 
-<img src="images/aws-ec2-rds-instance-control-via-slack-slash-command-3-3.png" alt="" width="988" height="490" class="aligncenter size-full wp-image-7901" />
+![](images/aws-ec2-rds-instance-control-via-slack-slash-command-3-3.png)
 
 [Integration Settings] で Slash Command を設定します。
 
@@ -34,28 +34,28 @@ Slack のワークスペース設定の [Manage] から [Custom Integrations] �
 - Token : この Slash Command のトークン
 - Customize Name : この Slash Command がチャンネルに結果などを流す際の名前
 
-<img src="images/aws-ec2-rds-instance-control-via-slack-slash-command-3-4.png" alt="" width="1004" height="753" class="aligncenter size-full wp-image-7902" />
+![](images/aws-ec2-rds-instance-control-via-slack-slash-command-3-4.png)
 
 **Show this command in the autocomplete list のところを設定しておくと Slack の入力欄で `/` を入力した際にヘルプが表示される**ようになります。
 
-<img src="images/aws-ec2-rds-instance-control-via-slack-slash-command-3-5.png" alt="" width="1003" height="430" class="aligncenter size-full wp-image-7903" />
+![](images/aws-ec2-rds-instance-control-via-slack-slash-command-3-5.png)
 
 入力が終わったら画面下部の [Save Integration] を押して、コマンドを保存します。
 
 一旦保存すると、 Slack 上ではすでに下記のように Slash Command が使えるかのように候補が表示されます。
 
-<img src="images/aws-ec2-rds-instance-control-via-slack-slash-command-3-6.png" alt="" width="633" height="167" class="aligncenter size-full wp-image-7904" />
+![](images/aws-ec2-rds-instance-control-via-slack-slash-command-3-6.png)
 
 
 ## Lambda 関数の発行
 
 Lambda 関数の設定画面に戻り、空けてあった**環境変数 `SLASH_COMMAND_TOKEN` に今作ったスラッシュコマンドの Token を設定**し、 [保存] してから、 **[新しいバージョンを発行]** を押します。
 
-<img src="images/aws-ec2-rds-instance-control-via-slack-slash-command-3-7.png" alt="" width="892" height="561" class="aligncenter size-full wp-image-7905" />
+![](images/aws-ec2-rds-instance-control-via-slack-slash-command-3-7.png)
 
 確認ダイアログで [発行] を押すと Lambda 関数が発行されます。これで API からこの Lambda 関数が呼び出せるようになりました。
 
-<img src="images/aws-ec2-rds-instance-control-via-slack-slash-command-3-8.png" alt="" width="833" height="282" class="aligncenter size-full wp-image-7906" />
+![](images/aws-ec2-rds-instance-control-via-slack-slash-command-3-8.png)
 
 
 ## API Gateway から動作テスト
@@ -64,11 +64,11 @@ Lambda で個別にテストもできますが、今回は **API Gateway から�
 
 API の GET メソッドの設定に戻り、 **[テスト]** をクリックします。
 
-<img src="images/aws-ec2-rds-instance-control-via-slack-slash-command-3-9.png" alt="" width="1071" height="528" class="aligncenter size-full wp-image-7910" />
+![](images/aws-ec2-rds-instance-control-via-slack-slash-command-3-9.png)
 
 **[クエリ文字列] に Slash Command からのクエリを模した `text=start&token=<Slash Command のトークン>` を記入**し、 [テスト] ボタンを押します。
 
-<img src="images/aws-ec2-rds-instance-control-via-slack-slash-command-3-10.png" alt="" width="923" height="898" class="aligncenter size-full wp-image-7907" />
+![](images/aws-ec2-rds-instance-control-via-slack-slash-command-3-10.png)
 
 右半分に実行結果が表示され、 [レスポンス本文] に `"response_type": "in_channel",` などが記載されていれば API → Lambda まできちんと動作しています。
 
@@ -81,7 +81,7 @@ API の GET メソッドの設定に戻り、 **[テスト]** をクリックし
 
 さっそく Slack で自分宛ての DM ででも `/hoge-staging start` と叩いてみましょう。きっと実行されるはずです！
 
-<img src="images/aws-ec2-rds-instance-control-via-slack-slash-command-3-11.png" alt="" width="641" height="323" class="aligncenter size-full wp-image-7908" />
+![](images/aws-ec2-rds-instance-control-via-slack-slash-command-3-11.png)
 
 おつかれさまでした。
 
@@ -90,7 +90,7 @@ API の GET メソッドの設定に戻り、 **[テスト]** をクリックし
 
 Slack 上で下記のように**カラーバー付きの表示にできるように Lambda 関数の実行結果を、 Slack の仕様に合わせた JSON** で返しています。
 
-<img src="images/aws-ec2-rds-instance-control-via-slack-slash-command-3-11.png" alt="" width="641" height="323" class="aligncenter size-full wp-image-7908" />
+![](images/aws-ec2-rds-instance-control-via-slack-slash-command-3-11.png)
 
 Lambda 関数の実行成功時は、 AWS 制御関数の結果を返すため、下記のような JSON になっています。この場合は **`"response_type"` を `"in_channel"` にして、チャンネルに結果が表示し、動作したことを他のメンバーに知らせる**ようにしています。
 

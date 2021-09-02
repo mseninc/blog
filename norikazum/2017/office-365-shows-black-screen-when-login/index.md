@@ -16,15 +16,15 @@ tags: [Office365, その他の技術]
 現象は以下のとおりです。
 
 1. ログインします。
-<a href="images/office-365-shows-black-screen-when-login-1.png"><img src="images/office-365-shows-black-screen-when-login-1.png" alt="2016-12-03_23h16_36" width="1422" height="758" class="alignnone size-full wp-image-3277" /></a>
+![2016-12-03_23h16_36](images/office-365-shows-black-screen-when-login-1.png)
 
 2. 以下のような真っ白な画面で無限ループしてしまいます。
-<a href="images/office-365-shows-black-screen-when-login-2.png"><img src="images/office-365-shows-black-screen-when-login-2.png" alt="2016-12-03_23h15_12" width="1436" height="827" class="alignnone size-full wp-image-3279" /></a>
+![2016-12-03_23h15_12](images/office-365-shows-black-screen-when-login-2.png)
 
 
 ## 解決策
 
-<a href="images/office-365-shows-black-screen-when-login-3.png"><img src="images/office-365-shows-black-screen-when-login-3.png" alt="2016-12-03_23h15_12" width="1083" height="35" class="alignnone size-full wp-image-3286" /></a>
+![2016-12-03_23h15_12](images/office-365-shows-black-screen-when-login-3.png)
 
 1. 先に https://login.microsoftonline.com/ をコピーしておきます。
 2. ブラウザーのアドレスバーで URL を全選択し、**瞬時に ↑ の URL を貼り付けて、Enter！**します。
@@ -39,7 +39,7 @@ tags: [Office365, その他の技術]
 Office365はその機能をどんどん増やしています。
 執筆時に確認すると、以下のサービスを提供していました。
 
-<a href="images/office-365-shows-black-screen-when-login-4.png"><img src="images/office-365-shows-black-screen-when-login-4.png" alt="2016-12-03_23h30_11" width="1281" height="424" class="alignnone size-full wp-image-3281" /></a>
+![2016-12-03_23h30_11](images/office-365-shows-black-screen-when-login-4.png)
 
 すごい数ですよね・・・。
 弊社もせっかく契約しているのだからと、色々使ってみては社内で議論しています。

@@ -29,14 +29,14 @@ query session
 ```
 というコマンドを使います。
 
-<a href="images/switch-remote-desktop-session-in-windows-1.png"><img src="images/switch-remote-desktop-session-in-windows-1.png" alt="2016-09-13_09h28_08" width="720" height="283" class="alignnone size-full wp-image-2722" /></a>
+![2016-09-13_09h28_08](images/switch-remote-desktop-session-in-windows-1.png)
 
 **rdp-tcp#1 がコマンド実行時に利用しているセッションです。**
 
 ひとつ下にある、rdp-tcp#0(ID3) に戻りたい場合、```tscon 2```を実行します。
 数字の部分は**ID**部分の数字です。
 
-<a href="images/switch-remote-desktop-session-in-windows-2.png"><img src="images/switch-remote-desktop-session-in-windows-2.png" alt="2016-09-13_09h28_27" width="723" height="405" class="alignnone size-full wp-image-2723" /></a>
+![2016-09-13_09h28_27](images/switch-remote-desktop-session-in-windows-2.png)
 
 この手順でセッションの切替を実行することができます。
 

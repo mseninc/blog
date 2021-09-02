@@ -23,7 +23,7 @@ Git クライアントからのアクセスもその一つで、もちろん Sou
 
 **Personal Settings → Two-factor authentication の Status が On になっていれば 2 段階認証が有効** になっています。
 
-<a href="images/access-github-with-sourcetree-with-two-factor-authentication-1.png"><img src="images/access-github-with-sourcetree-with-two-factor-authentication-1.png" alt="" width="1001" height="438" class="aligncenter size-full wp-image-4059" /></a>
+![](images/access-github-with-sourcetree-with-two-factor-authentication-1.png)
 
 ## パーソナルアクセストークンの生成
 
@@ -31,11 +31,11 @@ Git クライアントからのアクセスもその一つで、もちろん Sou
 
 * [Personal Access Tokens](https://github.com/settings/tokens)
 
-<a href="images/access-github-with-sourcetree-with-two-factor-authentication-2.png"><img src="images/access-github-with-sourcetree-with-two-factor-authentication-2.png" alt="" width="1105" height="442" class="aligncenter size-full wp-image-3702" /></a>
+![](images/access-github-with-sourcetree-with-two-factor-authentication-2.png)
 
 **Generate new token** をクリックします。
 
-<a href="images/access-github-with-sourcetree-with-two-factor-authentication-3.png"><img src="images/access-github-with-sourcetree-with-two-factor-authentication-3.png" alt="" width="1105" height="1140" class="aligncenter size-full wp-image-4060" /></a>
+![](images/access-github-with-sourcetree-with-two-factor-authentication-3.png)
 
 **Token description** は後で判別しやすいような名前をつけます。ここでは SourceTree で使うため "SourceTree" としています。
 
@@ -43,7 +43,7 @@ Git クライアントからのアクセスもその一つで、もちろん Sou
 
 スコープを選択したら **Generate token** をクリックします。
 
-<a href="images/access-github-with-sourcetree-with-two-factor-authentication-4.png"><img src="images/access-github-with-sourcetree-with-two-factor-authentication-4.png" alt="" width="1105" height="551" class="aligncenter size-full wp-image-3703" /></a>
+![](images/access-github-with-sourcetree-with-two-factor-authentication-4.png)
 
 トークンが生成されると Personal access tokens 画面にハッシュ文字列のようなトークンが表示されます。
 
@@ -57,10 +57,10 @@ Git クライアントからのアクセスもその一つで、もちろん Sou
 
 **トークン文字列がわからなくなった場合は躊躇なく再発行**しましょう。再発行は何度でもできますが、当然以前のトークンは無効になるので、使い回しをしないように心がけましょう。
 
-<a href="images/access-github-with-sourcetree-with-two-factor-authentication-5.png"><img src="images/access-github-with-sourcetree-with-two-factor-authentication-5.png" alt="" width="757" height="476" class="aligncenter size-full wp-image-4061" /></a>
+![](images/access-github-with-sourcetree-with-two-factor-authentication-5.png)
 
 Private access tokens の一覧画面で再発行するトークンの **Edit** をクリックします。
 
-<a href="images/access-github-with-sourcetree-with-two-factor-authentication-6.png"><img src="images/access-github-with-sourcetree-with-two-factor-authentication-6.png" alt="" width="754" height="436" class="aligncenter size-full wp-image-4063" /></a>
+![](images/access-github-with-sourcetree-with-two-factor-authentication-6.png)
 
 あとは **Regenerate token** をクリックすると新規発行時と同じように新しいトークンが発行されますので、それをコピーして使用します。

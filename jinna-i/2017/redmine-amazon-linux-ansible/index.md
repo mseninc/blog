@@ -25,7 +25,7 @@ AWSのEC2 (t2.micro/1 core/1GB RAM) に作成されたAmazon Linuxを対象と�
 
 EC2にインスタンスを作成したあと、セキュリティグループの設定で インバウンド HTTP(80) を許可しておいてください。
 
-<a href="images/redmine-amazon-linux-ansible-1.png"><img src="images/redmine-amazon-linux-ansible-1.png" alt="" width="967" height="141" class="alignnone size-full wp-image-5163" /></a>
+![](images/redmine-amazon-linux-ansible-1.png)
 
 ## インストール手順
 
@@ -139,7 +139,7 @@ passengerの初期化し失敗しましたよ的なエラーメッセージが�
 /usr/local/lib/ruby/gems/2.4.0/gems/passenger-5.1.7/bin/passenger-config compile-agent
 ```
 
-<a href="images/redmine-amazon-linux-ansible-2.png"><img src="images/redmine-amazon-linux-ansible-2.png" alt="" width="810" height="390" class="alignnone size-full wp-image-5178" /></a>
+![](images/redmine-amazon-linux-ansible-2.png)
 
 > `Your system does not have a lot of virtual memory`
 
@@ -178,7 +178,7 @@ playbookの冒頭で `yum update` を組み込んでいるのでご安心くだ�
 
 余談ではありますが、Amazon LinuxのマシンにSSH接続をするとyum updateをしてくれと書いてあるんですよね。
 
-<a href="images/redmine-amazon-linux-ansible-3.png"><img src="images/redmine-amazon-linux-ansible-3.png" alt="" width="635" height="139" class="alignnone size-full wp-image-5179" /></a>
+![](images/redmine-amazon-linux-ansible-3.png)
 
 「EC2の文字が浮かびあがっててスゲー」と気を取られて、スルーしてました。
 

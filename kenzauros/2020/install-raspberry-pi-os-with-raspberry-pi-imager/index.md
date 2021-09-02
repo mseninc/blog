@@ -38,31 +38,31 @@ GUI が不要だったので Desktop のない Lite 版を選びました。
 
 インストールできたら SD カードリーダーに Micro SD カードをセットし、スタートメニューから Raspberry Pi Imager を起動します。
 
-<a href="images/install-raspberry-pi-os-with-raspberry-pi-imager-1.png"><img src="images/install-raspberry-pi-os-with-raspberry-pi-imager-1.png" alt="Raspberry Pi Imager" width="780" height="396" class="aligncenter size-full wp-image-13335" /></a>
+![Raspberry Pi Imager](images/install-raspberry-pi-os-with-raspberry-pi-imager-1.png)
 
 **CHOOSE SD CARD** で書き込む SD カードを選択し、 **CHOOSE OS** をクリックします。
 
-<a href="images/install-raspberry-pi-os-with-raspberry-pi-imager-2.png"><img src="images/install-raspberry-pi-os-with-raspberry-pi-imager-2.png" alt="Raspberry Pi Imager" width="682" height="452" class="aligncenter size-full wp-image-13336" /></a>
+![Raspberry Pi Imager](images/install-raspberry-pi-os-with-raspberry-pi-imager-2.png)
 
 OS を選択すると自動でイメージをダウンロードできます。 Lite の場合は **Raspberry Pi OS (other)** からたどってください。
 
-<a href="images/install-raspberry-pi-os-with-raspberry-pi-imager-3.png"><img src="images/install-raspberry-pi-os-with-raspberry-pi-imager-3.png" alt="Raspberry Pi Imager" width="682" height="452" class="aligncenter size-full wp-image-13337" /></a>
+![Raspberry Pi Imager](images/install-raspberry-pi-os-with-raspberry-pi-imager-3.png)
 
 すでにダウンロードしてあるイメージを使うには一番下にある **Use custom** を選んで `.img` ファイルを選択します。
 
-<a href="images/install-raspberry-pi-os-with-raspberry-pi-imager-4.png"><img src="images/install-raspberry-pi-os-with-raspberry-pi-imager-4.png" alt="Raspberry Pi Imager" width="682" height="452" class="aligncenter size-full wp-image-13338" /></a>
+![Raspberry Pi Imager](images/install-raspberry-pi-os-with-raspberry-pi-imager-4.png)
 
 **WRITE** ボタンを押すと書き込みが開始されます。しばし待ちます。
 
-<a href="images/install-raspberry-pi-os-with-raspberry-pi-imager-5.png"><img src="images/install-raspberry-pi-os-with-raspberry-pi-imager-5.png" alt="Raspberry Pi Imager" width="682" height="452" class="aligncenter size-full wp-image-13339" /></a>
+![Raspberry Pi Imager](images/install-raspberry-pi-os-with-raspberry-pi-imager-5.png)
 
 書き込みが完了すると自動的にベリファイが走ります。しばし待ちます。
 
-<a href="images/install-raspberry-pi-os-with-raspberry-pi-imager-6.png"><img src="images/install-raspberry-pi-os-with-raspberry-pi-imager-6.png" alt="Raspberry Pi Imager" width="682" height="452" class="aligncenter size-full wp-image-13340" /></a>
+![Raspberry Pi Imager](images/install-raspberry-pi-os-with-raspberry-pi-imager-6.png)
 
 ベリファイが完了すると完了です。
 
-<a href="images/install-raspberry-pi-os-with-raspberry-pi-imager-7.png"><img src="images/install-raspberry-pi-os-with-raspberry-pi-imager-7.png" alt="Raspberry Pi Imager" width="682" height="452" class="aligncenter size-full wp-image-13341" /></a>
+![Raspberry Pi Imager](images/install-raspberry-pi-os-with-raspberry-pi-imager-7.png)
 
 なんと以上です。他のツールがなにもいりません。非常に便利ですね。
 

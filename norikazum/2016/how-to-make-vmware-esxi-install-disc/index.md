@@ -27,7 +27,7 @@ VMware社より公開されているインストールISOの中にネットワ�
 
 ふむふむ、なるほど**Intel社のI218V**やな、ということが分かりました。
 
-<img src="images/how-to-make-vmware-esxi-install-disc-1.png" alt="2016-06-21_23h41_20" width="796" height="159" class="alignnone size-full wp-image-1082" />
+![2016-06-21_23h41_20](images/how-to-make-vmware-esxi-install-disc-1.png)
 
 ## ドライバの入手
 次に、ESXiに組み込むためのドライバを検索します。
@@ -37,22 +37,22 @@ VMware社より公開されているインストールISOの中にネットワ�
 上部に、I218がありました。
 リンクをクリックし、進みます。
 
-<img src="images/how-to-make-vmware-esxi-install-disc-2.png" alt="2016-06-21_23h43_22" width="1170" height="455" class="alignnone size-full wp-image-1083" />
+![2016-06-21_23h43_22](images/how-to-make-vmware-esxi-install-disc-2.png)
 
 ダウンロードリンクをクリックし、任意の場所にダウンロードします。
 
-<img src="images/how-to-make-vmware-esxi-install-disc-3.png" alt="2016-06-21_23h45_54" width="313" height="112" class="alignnone size-full wp-image-1084" />
+![2016-06-21_23h45_54](images/how-to-make-vmware-esxi-install-disc-3.png)
 
 ## カスタムディスク作成ツール
 カスタムインストールディスクを作成するためのツールを入手します。
 
 [ここ](http://www.v-front.de/p/esxi-customizer.html)から入手します。
 
-<img src="images/how-to-make-vmware-esxi-install-disc-4.png" alt="2016-06-21_23h50_25" width="563" height="335" class="alignnone size-full wp-image-1088" />
+![2016-06-21_23h50_25](images/how-to-make-vmware-esxi-install-disc-4.png)
 
 ↓
 
-<img src="images/how-to-make-vmware-esxi-install-disc-5.png" alt="2016-06-21_23h50_54" width="547" height="160" class="alignnone size-full wp-image-1089" />
+![2016-06-21_23h50_54](images/how-to-make-vmware-esxi-install-disc-5.png)
 
 ## カスタムディスクの作成
 ダウンロードしたツールを解凍し、解凍して出来たフォルダの中の**ESXi-Customizer.cmd**を実行します。
@@ -60,7 +60,7 @@ VMware社より公開されているインストールISOの中にネットワ�
 って、ん？えーーー！？
 **Windows 10では動かんのかい！**
 
-<img src="images/how-to-make-vmware-esxi-install-disc-6.png" alt="2016-06-21_23h53_03" width="478" height="160" class="alignnone size-full wp-image-1090" />
+![2016-06-21_23h53_03](images/how-to-make-vmware-esxi-install-disc-6.png)
 
 記事書きながらやってたので。。
 
@@ -68,23 +68,23 @@ VMware社より公開されているインストールISOの中にネットワ�
 
 起動直後はこんな画面になります。
 
-<img src="images/how-to-make-vmware-esxi-install-disc-7.png" alt="2016-06-21_23h56_56" width="515" height="301" class="alignnone size-full wp-image-1092" />
+![2016-06-21_23h56_56](images/how-to-make-vmware-esxi-install-disc-7.png)
 
 続けて、ISOとドライバを指定して**Run**をクリックします。
 
-<img src="images/how-to-make-vmware-esxi-install-disc-8.png" alt="2016-06-21_23h58_58" width="512" height="300" class="alignnone size-full wp-image-1095" />
+![2016-06-21_23h58_58](images/how-to-make-vmware-esxi-install-disc-8.png)
 
 このメッセージは**いいえ**で進めます。
 
-<img src="images/how-to-make-vmware-esxi-install-disc-9.png" alt="2016-06-22_00h00_45" width="477" height="293" class="alignnone size-full wp-image-1097" />
+![2016-06-22_00h00_45](images/how-to-make-vmware-esxi-install-disc-9.png)
 
 このメッセージは**はい**で進めます。
 
-<img src="images/how-to-make-vmware-esxi-install-disc-10.png" alt="2016-06-22_00h08_31" width="418" height="235" class="alignnone size-full wp-image-1103" />
+![2016-06-22_00h08_31](images/how-to-make-vmware-esxi-install-disc-10.png)
 
 完了しました。
 
-<img src="images/how-to-make-vmware-esxi-install-disc-11.png" alt="2016-06-22_00h09_15" width="419" height="187" class="alignnone size-full wp-image-1104" />
+![2016-06-22_00h09_15](images/how-to-make-vmware-esxi-install-disc-11.png)
 
 出来たISOはライティングソフト書き込みを行います。
 **340MBだったので、十分CD-Rで足りますね！**

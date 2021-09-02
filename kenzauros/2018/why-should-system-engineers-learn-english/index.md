@@ -19,7 +19,7 @@ tags: [資格, 英語, その他, ライフハック]
 まず**エンジニア個人のモチベーション（動機）**としては、なにより「**英語圏の情報が活用できるようになる**」ことが挙げられます。
 
 
-<img src="images/why-should-system-engineers-learn-english-1.jpg" alt="" width="800" height="533" class="aligncenter size-full wp-image-7496" />
+![](images/why-should-system-engineers-learn-english-1.jpg)
 
 近年は Qiita など日本語の情報サイトも多いですが、やはりまだほとんどのテクノロジーの発祥は英語圏であり、中国のプロジェクトであってもドキュメントは英語のことがほとんどです。
 
@@ -38,7 +38,7 @@ tags: [資格, 英語, その他, ライフハック]
 
 ## なぜ会社で推進するのか
 
-<img src="images/why-should-system-engineers-learn-english-2.jpg" alt="" width="800" height="533" class="aligncenter size-full wp-image-7490" />
+![](images/why-should-system-engineers-learn-english-2.jpg)
 
 もちろん、先に紹介した個人としてのモチベーションのほかに、**会社としてのモチベーション**が存在します。
 
@@ -62,7 +62,7 @@ tags: [資格, 英語, その他, ライフハック]
 
 このため、「**英語が読めなくても読める**」時代にきています。しかし「英語が読めなくても英語の情報も得られる」と考えるのは早計かもしれません。
 
-<img src="images/why-should-system-engineers-learn-english-3.jpg" alt="" width="800" height="502" class="aligncenter size-full wp-image-7493" />
+![](images/why-should-system-engineers-learn-english-3.jpg)
 
 しかし、**情報を得るためには「読む」以前に「見つける」**ことが必要です。日本語でもそうですが、案外この「見つける」ほうが難しいものです。
 
@@ -73,7 +73,7 @@ tags: [資格, 英語, その他, ライフハック]
 
 ## なぜ TOEIC でなく英検か
 
-<img src="images/why-should-system-engineers-learn-english-4.jpg" alt="" width="800" height="533" class="aligncenter size-full wp-image-7492" />
+![](images/why-should-system-engineers-learn-english-4.jpg)
 
 長らく日本で英語力をはかる指標として TOEIC が絶大なる人気を誇っており、大企業や国立大学までもが、こぞって TOEIC のスコアを基準に採用しました。
 
@@ -83,7 +83,7 @@ TOEIC とそれにのっかった英語教育ビジネスは、日本の英語�
 
 英検はその陰で脈々と続いてきました。私自身、 20 年ぶりに受けて分かったのは、英検は**バランスのよい試験**だということです。
 
-<img src="images/why-should-system-engineers-learn-english-5.png" alt="" width="277" height="300" class="aligncenter size-medium wp-image-7498" />
+![](images/why-should-system-engineers-learn-english-5.png)
 
 TOEIC はどうしても「読む」「聞く」のインプット側だけに特化してしまいます。読み書きの能力を高めるには、当然ながら「書く」トレーニングが必要ですし、英会話で聞いているだけでは文字通り、話になりません。
 
@@ -99,7 +99,7 @@ TOEIC でも [Speaking & Writing](http://www.iibc-global.org/toeic/test/sw.html)
 
 ## まとめ
 
-<img src="images/why-should-system-engineers-learn-english-4.jpg" alt="" width="800" height="533" class="aligncenter size-full wp-image-7492" />
+![](images/why-should-system-engineers-learn-english-4.jpg)
 
 ということで MSEN では英語力向上を推しています。
 

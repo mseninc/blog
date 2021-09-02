@@ -19,7 +19,7 @@ tags: [その他, ライフハック]
 実は、一度リジェクトされましたｗ
 
 LINEからこんなメールが届きました。
-<a href="images/release-line-creators-stamp-1.png"><img src="images/release-line-creators-stamp-1.png" alt="" width="1066" height="999" class="aligncenter size-full wp-image-4675" /></a>
+![](images/release-line-creators-stamp-1.png)
 
 メッセージセンターを確認すると具体的に修正点が記載されているので、その通りに修正しました。
 指摘は、以下の2点でした。
@@ -31,15 +31,15 @@ LINEからこんなメールが届きました。
 
 **[英語表記の修正]**
 
-<a href="images/release-line-creators-stamp-2.png"><img src="images/release-line-creators-stamp-2.png" alt="" width="1045" height="474" class="aligncenter size-full wp-image-4669" /></a>
+![](images/release-line-creators-stamp-2.png)
 
-<a href="images/release-line-creators-stamp-3.png"><img src="images/release-line-creators-stamp-3.png" alt="" width="1082" height="485" class="aligncenter size-full wp-image-4670" /></a>
+![](images/release-line-creators-stamp-3.png)
 
 **[販売国の修正]**
 
-<a href="images/release-line-creators-stamp-4.png"><img src="images/release-line-creators-stamp-4.png" alt="" width="680" height="171" class="aligncenter size-full wp-image-4671" /></a>
+![](images/release-line-creators-stamp-4.png)
 
-<a href="images/release-line-creators-stamp-5.png"><img src="images/release-line-creators-stamp-5.png" alt="" width="1163" height="746" class="aligncenter size-full wp-image-4672" /></a>
+![](images/release-line-creators-stamp-5.png)
 
 2点の修正を行い、再度審査リクエストを出し、**3日後**に無事承認されました。
 
@@ -62,25 +62,25 @@ LINEからこんなメールが届きました。
 クリエイターズスタンプのアイテム管理から以下の流れでリリースします。
 
 1. 承認されているアイテムを選択する
-<a href="images/release-line-creators-stamp-6.png"><img src="images/release-line-creators-stamp-6.png" alt="" width="1674" height="1224" class="aligncenter size-full wp-image-4679" /></a>
+![](images/release-line-creators-stamp-6.png)
 
 1. リリースをクリックする
-<a href="images/release-line-creators-stamp-7.png"><img src="images/release-line-creators-stamp-7.png" alt="" width="1674" height="1224" class="aligncenter size-full wp-image-4680" /></a>
+![](images/release-line-creators-stamp-7.png)
 
 1. 注意を確認しOKをクリックする
-<a href="images/release-line-creators-stamp-8.png"><img src="images/release-line-creators-stamp-8.png" alt="" width="330" height="669" class="aligncenter size-full wp-image-4681" /></a>
+![](images/release-line-creators-stamp-8.png)
 
 無事、リリースされました！
-<a href="images/release-line-creators-stamp-9.png"><img src="images/release-line-creators-stamp-9.png" alt="" width="1674" height="1224" class="aligncenter size-full wp-image-4683" /></a>
+![](images/release-line-creators-stamp-9.png)
 
 
 ## あとがき
 
 公開後にマイページを眺めていると、こんな統計もありましたｗ
 
-<a href="images/release-line-creators-stamp-10.png"><img src="images/release-line-creators-stamp-10.png" alt="" width="1189" height="951" class="aligncenter size-full wp-image-4687" /></a>
+![](images/release-line-creators-stamp-10.png)
 
-<a href="images/release-line-creators-stamp-11.png"><img src="images/release-line-creators-stamp-11.png" alt="" width="1195" height="949" class="aligncenter size-full wp-image-4688" /></a>
+![](images/release-line-creators-stamp-11.png)
 
 LINEスタンプを公開するために、企画から実施し、とても良い経験ができました。
 

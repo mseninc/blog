@@ -7,7 +7,7 @@ tags: [その他]
 
 本日(9/14)に帰宅すると、ポストに国勢調査の封書が届いていました。
 
-<a href="images/2020-census-1.jpg"><img src="images/2020-census-1.jpg" alt="" width="1512" height="2016" class="alignnone size-full wp-image-13897" /></a>
+![](images/2020-census-1.jpg)
 
 芦田愛菜さんが出ているCMを思い出しました。
 [芦田愛菜、国勢調査を呼びかけ　CMキャラクターに　国勢調査2020新CM - YouTube](https://www.youtube.com/watch?v=RdIjaw1uFV4)
@@ -36,13 +36,13 @@ tags: [その他]
 
 1. [https://e-kokusei.go.jp](https://e-kokusei.go.jp) にアクセスします
 1. **回答をはじめる** をクリックします
-<a href="images/2020-census-2.png"><img src="images/2020-census-2.png" alt="" width="1638" height="1018" class="alignnone size-full wp-image-13888" /></a>
+![](images/2020-census-2.png)
 1. **インターネット回答利用ガイド** にかかれている **ログインIDを入力し次へ** をクリックします
-<a href="images/2020-census-3.png"><img src="images/2020-census-3.png" alt="" width="1638" height="1018" class="alignnone size-full wp-image-13889" /></a>
+![](images/2020-census-3.png)
 1. 続けて **アクセスキーを入力しログイン** をクリックします
-<a href="images/2020-census-4.png"><img src="images/2020-census-4.png" alt="" width="743" height="377" class="alignnone size-full wp-image-13890" /></a>
+![](images/2020-census-4.png)
 1. **入力をはじめる** をクリックします
-<a href="images/2020-census-5.png"><img src="images/2020-census-5.png" alt="" width="1638" height="1018" class="alignnone size-full wp-image-13892" /></a>
+![](images/2020-census-5.png)
 
 ## アンケート内容
 
@@ -71,9 +71,9 @@ tags: [その他]
 
 続けて、**電話番号・住所の入力** →**入力内容の確認** → **次へ** と進み、 **パスワード設定後に送信** して完了となります。
 
-<a href="images/2020-census-6.png"><img src="images/2020-census-6.png" alt="" width="1407" height="619" class="alignnone size-full wp-image-13895" /></a>
+![](images/2020-census-6.png)
 
-<a href="images/2020-census-7.png"><img src="images/2020-census-7.png" alt="" width="749" height="822" class="alignnone size-full wp-image-13896" /></a>
+![](images/2020-census-7.png)
 
 ## 感想
 

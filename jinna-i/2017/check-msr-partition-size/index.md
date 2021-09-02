@@ -15,13 +15,13 @@ tags: [Windows, もくもく会]
 
 UEFIベースのシステムでは、以下のパーティション構成がとられています。
 
-[caption id="attachment_5846" align="alignnone" width="725"]<a href="images/check-msr-partition-size-1.gif"><img src="images/check-msr-partition-size-1.gif" alt="" width="725" height="237" class="size-full wp-image-5846" /></a> 引用元：https://technet.microsoft.com/ja-jp/library/dd799232(v=ws.10).aspx[/caption]
+![](images/check-msr-partition-size-1.gif)
 
 左から、回復パーティション、EFIシステムパーティション(ESP)、Microsoft予約パーティション、システムパーティション
 
 これらのパーティションサイズはディスクの管理から確認することができます。
 
-<a href="images/check-msr-partition-size-2.png"><img src="images/check-msr-partition-size-2.png" alt="" width="824" height="456" class="alignnone size-full wp-image-5844" /></a>
+![](images/check-msr-partition-size-2.png)
 
 しかしながら **ディスクの管理では Microsoft予約パーティション(MSR)のサイズは確認することができません**。
 

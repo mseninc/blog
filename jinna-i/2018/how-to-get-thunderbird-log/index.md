@@ -78,7 +78,7 @@ setx NSPR_LOG_FILE C:\thunderbird.log
 
 メールサーバーの設定が間違っている場合はここでコケます。
 
-<a href="images/how-to-get-thunderbird-log-1.png"><img src="images/how-to-get-thunderbird-log-1.png" alt="" width="731" height="410" class="alignnone size-full wp-image-7287" /></a>
+![](images/how-to-get-thunderbird-log-1.png)
 
 > Thunderbird はあなたのアカウント設定を見つけられませんでした。
 
@@ -111,13 +111,13 @@ WireShark等でパケットをのぞいてみるとよくわかりますが、�
 
 メールアカウントが間違っていても、メールサーバーの設定があっている場合はここまでいけます。
 
-<a href="images/how-to-get-thunderbird-log-2.png"><img src="images/how-to-get-thunderbird-log-2.png" alt="" width="731" height="410" class="alignnone size-full wp-image-7289" /></a>
+![](images/how-to-get-thunderbird-log-2.png)
 
 > 次のアカウント設定が、指定されたサーバーを調べることにより見つかりました。
 
 なんでだよ。って感じですが、このまま[完了]をクリックしてみます。
 
-<a href="images/how-to-get-thunderbird-log-3.png"><img src="images/how-to-get-thunderbird-log-3.png" alt="" width="731" height="410" class="alignnone size-full wp-image-7290" /></a>
+![](images/how-to-get-thunderbird-log-3.png)
 
 > 設定を確認してください。ユーザー名やパスワードが間違っていませんか？
 

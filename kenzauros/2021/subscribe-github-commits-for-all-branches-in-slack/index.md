@@ -42,7 +42,7 @@ Slack の適当なチャンネルか DM で **`/github help`** とタイプし�
 
 ただ、 `subscribe` だけではプルリクに対するレビューやコメントが通知されません。弊社ではコミットの通知も出したいので、これでは不足です。
 
-[caption id="attachment_16720" align="aligncenter" width="519"]<a href="images/subscribe-github-commits-for-all-branches-in-slack-1.png"><img src="images/subscribe-github-commits-for-all-branches-in-slack-1.png" alt="/github subscribe でデフォルトで通知される機能と通知されない機能" width="519" height="239" class="size-full wp-image-16720" /></a> /github subscribe でデフォルトで通知される機能と通知されない機能[/caption]
+![/github subscribe でデフォルトで通知される機能と通知されない機能](images/subscribe-github-commits-for-all-branches-in-slack-1.png)
 
 ということで `/github subscribe` にオプションをつける必要があります。オプションは下記のようになっています。
 
@@ -68,13 +68,13 @@ Slack の適当なチャンネルか DM で **`/github help`** とタイプし�
 
 下記のように応答が返ってくれば OK です。
 
-[caption id="attachment_16724" align="aligncenter" width="497"]<a href="images/subscribe-github-commits-for-all-branches-in-slack-2.png"><img src="images/subscribe-github-commits-for-all-branches-in-slack-2.png" alt="/github subscribe の応答" width="497" height="122" class="size-full wp-image-16724" /></a> /github subscribe の応答[/caption]
+![/github subscribe の応答](images/subscribe-github-commits-for-all-branches-in-slack-2.png)
 
 正直リポジトリが多いと管理がめっちゃ面倒です。
 
 私は毎回 Slack の検索で `subscribe` を検索して過去に打ったものを使い回していましたが、 IME の辞書にでも登録したほうが幸せになれるかもしれません。
 
-[caption id="attachment_16722" align="aligncenter" width="826"]<a href="images/subscribe-github-commits-for-all-branches-in-slack-3.png"><img src="images/subscribe-github-commits-for-all-branches-in-slack-3.png" alt="ATOK に /github subscribe コマンドを登録してみた" width="826" height="205" class="size-full wp-image-16722" /></a> ATOK に /github subscribe コマンドを登録してみた[/caption]
+![ATOK に /github subscribe コマンドを登録してみた](images/subscribe-github-commits-for-all-branches-in-slack-3.png)
 
 ## 旧 Github Notification との相違点
 

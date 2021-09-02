@@ -109,7 +109,7 @@ end
 因みに**上の erb コードは Bootstrap のスタイルを適用していない**ので、適用したい場合は[前回の記事](https://mseeeen.msen.jp/ruby-on-rails3/)を参考にしてやってみてください。
 
 `rails s` で起動して、下のような画面になっていれば OK です。**下の画面は Bootstrap を適用しています。**
-![model](images/ruby-on-rails4-1.png)
+![model](https://mseeeen.msen.jp/wp-content/uploads/2021/06/2021-06-02_15h31_21.png)
 
 ## まとめ
 

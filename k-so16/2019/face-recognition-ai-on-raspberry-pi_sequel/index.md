@@ -25,13 +25,13 @@ HOG 特徴量は色の明暗の勾配の向きと大きさを用いるので、 
 
 特徴量が求まったら、写っている個人の名前などのラベルとともに、メモリやディスクなどの記憶媒体に保存します。学習した特徴量と検出された顔の特徴量の差が閾値以下であれば、結びついているラベルを利用して個人を識別できます。
 
-[caption id="attachment_11681" align="aligncenter" width="800"]<img src="images/face-recognition-ai-on-raspberry-pi_sequel-1.png" alt="" width="800" height="491" class="size-full wp-image-11681" /> 検出された顔が誰かを特定 (pi という名前で学習)[/caption]
+![](images/face-recognition-ai-on-raspberry-pi_sequel-1.png)
 
 個人の顔を人工知能に学習させたら、カメラに写っている人物の顔と学習済みの顔データの特徴量を **ユークリッド距離** を用いて比較します。求まった距離が閾値以下であれば同一人物の顔として識別され、閾値を超えたら異なる人として認識されます。
 
 特徴量を比較する他の手法として、 **k-近傍法** が挙げられていましたが、ユークリッド距離を用いるほうが精度が上がるとのことでした。比較の指標に何を用いれば良いかは試行錯誤して見つけるしかないようです。
 
-[caption id="attachment_11741" align="aligncenter" width="800"]<img src="images/face-recognition-ai-on-raspberry-pi_sequel-2.png" alt="" width="800" height="251" class="size-full wp-image-11741" /> 2 つ の n 次元の特徴量 a, b からユークリッド距離を求める方法[/caption]
+![](images/face-recognition-ai-on-raspberry-pi_sequel-2.png)
 
 ### IoT としての顔認識の応用
 個人の顔識別の応用例として、オフィスに入った際に、個人を識別して好みのコーヒーをいれる **IoT** (Internet of Things: モノのインターネット) システムを考えます。このシステムでは、個人の顔は既に学習済みであることを前提とします。
@@ -40,7 +40,7 @@ HOG 特徴量は色の明暗の勾配の向きと大きさを用いるので、 
 
 IoT で小さなデータ通信を行う場合、 **MQTT** というプロトコルが利用されます。 MQTT には通信を発行する **Publisher**, 購読する **Subscriber**, Publisher と Subscriber を仲介する **Broker** の 3 つのロールがあります。カメラで個人を識別して好みのコーヒーを淹れるシステムを考える場合、 カメラが Publisher, コーヒーマシンが Subscriber にあたります。 Broker はクラウドで提供されているサービスを利用することが一般的です。
 
-[caption id="attachment_11761" align="aligncenter" width="438"]<img src="images/face-recognition-ai-on-raspberry-pi_sequel-3.png" alt="" width="438" height="356" class="size-full wp-image-11761" /> MQTT による通信[/caption]
+![](images/face-recognition-ai-on-raspberry-pi_sequel-3.png)
 
 クラウド側で顔識別の処理を行う場合、画像のようなサイズの大きいデータを端末からクラウドに送らなければならず、通信に時間がかかります。 **エッジコンピューティング** によって、顔識別のような解析をエッジ側の端末で行うことで、クラウドに送信するデータ量を少なくできます。
 

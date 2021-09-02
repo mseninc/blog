@@ -24,7 +24,7 @@ tags: [C#, .NET]
 
 ## 設定ファイルを埋め込みリソースに変更
 
-<a href="images/load-nlog-config-from-embedded-resources-1.png"><img src="images/load-nlog-config-from-embedded-resources-1.png" alt="設定ファイルを埋め込みリソースに変更" width="401" height="450" class="aligncenter size-full wp-image-9327" /></a>
+![設定ファイルを埋め込みリソースに変更](images/load-nlog-config-from-embedded-resources-1.png)
 
 まず、 `NLog.config` のビルドアクションを **埋め込みリソース** に設定します。
 

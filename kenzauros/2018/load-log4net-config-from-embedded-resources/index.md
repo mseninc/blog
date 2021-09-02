@@ -16,7 +16,7 @@ log4net の config ファイル (`log4net.config` とか `Log4net.Config.xml` �
 
 ## 設定ファイルを埋め込みリソースに変更
 
-<a href="images/load-log4net-config-from-embedded-resources-1.png"><img src="images/load-log4net-config-from-embedded-resources-1.png" alt="設定ファイルを埋め込みリソースに変更" width="354" height="508" class="aligncenter size-full wp-image-6551" /></a>
+![設定ファイルを埋め込みリソースに変更](images/load-log4net-config-from-embedded-resources-1.png)
 
 なにはともあれ `log4net.config` のビルドアクションを **埋め込みリソース** に設定します。
 

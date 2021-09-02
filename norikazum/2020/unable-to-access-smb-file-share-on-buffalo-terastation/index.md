@@ -17,7 +17,7 @@ tags: [Windows Server, TeraStation, CIFS, Buffalo, Windows]
 ## 共有設定
 Terastationの **共有設定はとてもシンプルSMBのみ許可** しています。
 
-<a href="images/unable-to-access-smb-file-share-on-buffalo-terastation-1.png"><img src="images/unable-to-access-smb-file-share-on-buffalo-terastation-1.png" alt="" width="599" height="593" class="alignnone size-full wp-image-14522" /></a>
+![](images/unable-to-access-smb-file-share-on-buffalo-terastation-1.png)
 
 この設定だけで、本来は  `\\192.168.11.212` でアクセスできるはずです。
 
@@ -26,7 +26,7 @@ Terastationの **共有設定はとてもシンプルSMBのみ許可** してい
 しかし、 **接続できない** ・・・
 認証ポップアップすらでません。
 
-<a href="images/unable-to-access-smb-file-share-on-buffalo-terastation-2.png"><img src="images/unable-to-access-smb-file-share-on-buffalo-terastation-2.png" alt="" width="786" height="631" class="alignnone size-full wp-image-14530" /></a>
+![](images/unable-to-access-smb-file-share-on-buffalo-terastation-2.png)
 
 **ファイアウォールを無効** にしたり、 **再起動したり** しましたが、解決せず・・・。
 
@@ -36,15 +36,15 @@ Terastationの **共有設定はとてもシンプルSMBのみ許可** してい
 
 1. テラステーションに管理者でログイン
 1. ファイル共有 -> SMBプロトコルの設定画面を開く
-<a href="images/unable-to-access-smb-file-share-on-buffalo-terastation-3.png"><img src="images/unable-to-access-smb-file-share-on-buffalo-terastation-3.png" alt="" width="1095" height="771" class="alignnone size-full wp-image-14531" /></a>
+![](images/unable-to-access-smb-file-share-on-buffalo-terastation-3.png)
 1. ユーザー設定の部分で デフォルト設定の 「ゲストとしてログインする」から **資格情報の入力画面を表示する** に変更して OK をクリックする
-<a href="images/unable-to-access-smb-file-share-on-buffalo-terastation-4.png"><img src="images/unable-to-access-smb-file-share-on-buffalo-terastation-4.png" alt="" width="535" height="531" class="alignnone size-full wp-image-14532" /></a>
+![](images/unable-to-access-smb-file-share-on-buffalo-terastation-4.png)
 
 **再起動は不要** でした。
 
 再確認すると・・・ **接続できました！** 
 
-<a href="images/unable-to-access-smb-file-share-on-buffalo-terastation-5.png"><img src="images/unable-to-access-smb-file-share-on-buffalo-terastation-5.png" alt="" width="787" height="631" class="alignnone size-full wp-image-14533" /></a>
+![](images/unable-to-access-smb-file-share-on-buffalo-terastation-5.png)
 
 ## あとがき
 

@@ -23,7 +23,7 @@ tags: [VMware, ESXi, 仮想化, 仮想化技術]
 
 ## 構成
 
-<a href="images/install-esxi65-to-shuttle-sz270r9-1.jpg"><img src="images/install-esxi65-to-shuttle-sz270r9-1.jpg" alt="" width="807" height="605" class="alignnone size-full wp-image-6502" /></a>
+![](images/install-esxi65-to-shuttle-sz270r9-1.jpg)
 
 * 本体：[SZ270R9 Shuttle Japan](http://shuttle-japan.jp/sz270r9/)
 * CPU：[Intel Core i5 7600/(Kaby Lake-S) 4C/4T](https://ark.intel.com/ja/products/97150/Intel-Core-i5-7600-Processor-6M-Cache-up-to-4_10-GHz)
@@ -40,29 +40,29 @@ ESXiのOSはUSBメモリーにインストールし、仮想マシンを入れ�
 USBメモリーは8GB以上にしましょう。OS領域は1GBほどですが、あまりカツカツだとスクラッチパーティションが同居できなくなるようです。
 
 ## SZ270R9の組み立て
-<a href="images/install-esxi65-to-shuttle-sz270r9-2.jpg"><img src="images/install-esxi65-to-shuttle-sz270r9-2.jpg" alt="" width="807" height="605" class="alignnone size-full wp-image-6504" /></a>
+![](images/install-esxi65-to-shuttle-sz270r9-2.jpg)
 
 フロントパネルはガンダムライクで、RGBのLEDが実装されていて綺麗に発色してくれます笑
 
 後述のBIOS設定で輝度調整ができ、好みの色味を表現できるようです。
 
-<a href="images/install-esxi65-to-shuttle-sz270r9-3.jpg"><img src="images/install-esxi65-to-shuttle-sz270r9-3.jpg" alt="" width="807" height="605" class="alignnone size-full wp-image-6506" /></a>
+![](images/install-esxi65-to-shuttle-sz270r9-3.jpg)
 
 NICは向かって右側が1番(vmnic0)、左側が2番(vmnic1)です。
 
 モニター出力はDPと見せかけて**デフォルトはHDMI**です。
 
-<a href="images/install-esxi65-to-shuttle-sz270r9-4.jpg"><img src="images/install-esxi65-to-shuttle-sz270r9-4.jpg" alt="" width="807" height="605" class="alignnone size-full wp-image-6507" /></a>
+![](images/install-esxi65-to-shuttle-sz270r9-4.jpg)
 
 上から見るとこんな感じです。丸く肉抜きされた金具の上に3.5インチのディスクが4本詰めますが、今回はディスクレスなので空っぽです。
 
 メモリーやCPUの実装の際に邪魔になるので、金具は取り外しておきましょう。上部のネジ4本で簡単にはずれます。
 
-<a href="images/install-esxi65-to-shuttle-sz270r9-5.jpg"><img src="images/install-esxi65-to-shuttle-sz270r9-5.jpg" alt="" width="807" height="605" class="alignnone size-full wp-image-6508" /></a>
+![](images/install-esxi65-to-shuttle-sz270r9-5.jpg)
 
 横はこんなんです。
 
-<a href="images/install-esxi65-to-shuttle-sz270r9-6.jpg"><img src="images/install-esxi65-to-shuttle-sz270r9-6.jpg" alt="" width="807" height="605" class="alignnone size-full wp-image-6509" /></a>
+![](images/install-esxi65-to-shuttle-sz270r9-6.jpg)
 
 CPUとメモリーを実装します。CPUの放熱グリスは本体に付属されています。
 
@@ -76,13 +76,13 @@ CPUとメモリーを実装します。CPUの放熱グリスは本体に付属�
 
 VMwareからESXiのインストールメディアをダウンロードし、[Rufus](https://rufus.akeo.ie/?locale=ja_JP)というツールでISOイメージを焼いていきます。
 
-<a href="images/install-esxi65-to-shuttle-sz270r9-7.png"><img src="images/install-esxi65-to-shuttle-sz270r9-7.png" alt="" width="122" height="121" class="alignnone size-full wp-image-6512" /></a>
+![](images/install-esxi65-to-shuttle-sz270r9-7.png)
 
 Rufusをダウンロードしたら、exeを実行します。
 
 更新しろとか色々うるさく言われますが、基本は[OK]で大丈夫です。
 
-<a href="images/install-esxi65-to-shuttle-sz270r9-8.png"><img src="images/install-esxi65-to-shuttle-sz270r9-8.png" alt="" width="455" height="518" class="alignnone size-full wp-image-6513" /></a>
+![](images/install-esxi65-to-shuttle-sz270r9-8.png)
 
 USBメモリーを接続すると、**デバイス**に自動認識されます。
 
@@ -96,7 +96,7 @@ USBメモリーを接続すると、**デバイス**に自動認識されます�
 
 ### BIOS設定
 
-<a href="images/install-esxi65-to-shuttle-sz270r9-9.jpg"><img src="images/install-esxi65-to-shuttle-sz270r9-9.jpg" alt="" width="797" height="453" class="alignnone size-full wp-image-6524" /></a>
+![](images/install-esxi65-to-shuttle-sz270r9-9.jpg)
 
 PCの電源を入れたら、弾丸で**DELキー**を連打します。
 
@@ -114,11 +114,11 @@ PCの電源を入れたら、弾丸で**DELキー**を連打します。
 
 あとは、ESXiをインストールしていきます。※手順は割愛します。
 
-<a href="images/install-esxi65-to-shuttle-sz270r9-10.jpg"><img src="images/install-esxi65-to-shuttle-sz270r9-10.jpg" alt="" width="439" height="149" class="alignnone size-full wp-image-6525" /></a>
+![](images/install-esxi65-to-shuttle-sz270r9-10.jpg)
 
 Select a Disk to Install or Upgradeの画面で、インストール先のUSBメモリーを選択します。
 
-<a href="images/install-esxi65-to-shuttle-sz270r9-11.jpg"><img src="images/install-esxi65-to-shuttle-sz270r9-11.jpg" alt="" width="475" height="188" class="alignnone size-full wp-image-6526" /></a>
+![](images/install-esxi65-to-shuttle-sz270r9-11.jpg)
 
 この時思いましたが、インストールメディア用のUSBメモリーとブート用のUSBメモリーは違う銘柄か、せめて容量を変えておいたほうがよいですね。
 
@@ -126,11 +126,11 @@ Select a Disk to Install or Upgradeの画面で、インストール先のUSBメ
 
 インストールが完了したら、インストールメディア用のUSBメモリーを抜いて再起動します。
 
-<a href="images/install-esxi65-to-shuttle-sz270r9-12.jpg"><img src="images/install-esxi65-to-shuttle-sz270r9-12.jpg" alt="" width="393" height="189" class="alignnone size-full wp-image-6527" /></a>
+![](images/install-esxi65-to-shuttle-sz270r9-12.jpg)
 
 ESXiが正常に起動すればOKです。
 
-<a href="images/install-esxi65-to-shuttle-sz270r9-13.jpg"><img src="images/install-esxi65-to-shuttle-sz270r9-13.jpg" alt="" width="784" height="440" class="alignnone size-full wp-image-6529" /></a>
+![](images/install-esxi65-to-shuttle-sz270r9-13.jpg)
 
 あとは、ネットワーク設定などをして、vSphere Host Clientで接続しましょう。
 
@@ -140,7 +140,7 @@ ESXiが正常に起動すればOKです。
 
 * **Shuttle Tuning > Front LED Function**
 
-<a href="images/install-esxi65-to-shuttle-sz270r9-14.jpg"><img src="images/install-esxi65-to-shuttle-sz270r9-14.jpg" alt="" width="801" height="378" class="alignnone size-full wp-image-6530" /></a>
+![](images/install-esxi65-to-shuttle-sz270r9-14.jpg)
 
 デフォルトはDefault(Enabled)になっていて、周期的に色が変わり、Disabledにすると消灯します。
 

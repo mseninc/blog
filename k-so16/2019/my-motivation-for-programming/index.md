@@ -66,7 +66,7 @@ HTML はプログラミング言語ではないので、厳密にはプログラ
 
 本格的に作ったわけではないので、決してクオリティは高くありませんでしたが、動いた時の感動は大きいものでした。特にプログラミングを始めて 1, 2 年目は、少ない知識ながら、自分で何かを作れたのが非常に楽しいと感じていたことを、今でも鮮明に覚えています。今でも、ちょっとしたプログラムで、動いて当たり前のレベルでも、動くのが嬉しかったりします (笑)
 
-[caption id="attachment_10669" align="alignnone" width="600"]<img src="images/my-motivation-for-programming-1.jpg" alt="" width="600" height="800" class="size-full wp-image-10669" /> プログラミングの独学のために購入した書籍群 (積み残しも多い)[/caption]
+![](images/my-motivation-for-programming-1.jpg)
 
 
 ## MSEN のプログラマーになってから

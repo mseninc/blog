@@ -19,14 +19,14 @@ tags: [Office365, その他の技術]
 
 Office 365 のホーム画面 (https://www.office.com/) 右上の歯車アイコンをクリックし、 **[アプリの設定] → [Office 365]** を選びます。
 
-<a href="images/how-to-enable-multi-factor-auth-by-google-authenticator-on-office-365-1.png"><img src="images/how-to-enable-multi-factor-auth-by-google-authenticator-on-office-365-1.png" alt="" width="480" class="aligncenter size-full wp-image-5007" /></a>
+![](images/how-to-enable-multi-factor-auth-by-google-authenticator-on-office-365-1.png)
 
 左メニューで
 1. [セキュリティとプライバシー] を選択
 2. [追加のセキュリティ検証]をクリック
 3. [アカウントのセキュリティに使用する電話番号を更新します。] リンクをクリック
 
-<a href="images/how-to-enable-multi-factor-auth-by-google-authenticator-on-office-365-2.png"><img src="images/how-to-enable-multi-factor-auth-by-google-authenticator-on-office-365-2.png" alt="" width="480" class="aligncenter size-full wp-image-5006" /></a>
+![](images/how-to-enable-multi-factor-auth-by-google-authenticator-on-office-365-2.png)
 
 追加のセキュリティ確認 画面が表示されたら、
 1. [アプリの確認コードを使用する] を選択
@@ -35,24 +35,24 @@ Office 365 のホーム画面 (https://www.office.com/) 右上の歯車アイコ
 4. [認証アプリ] にチェック
 5. [構成] ボタンをクリック
 
-<a href="images/how-to-enable-multi-factor-auth-by-google-authenticator-on-office-365-3.png"><img src="images/how-to-enable-multi-factor-auth-by-google-authenticator-on-office-365-3.png" alt="" width="480" class="aligncenter size-full wp-image-5008" /></a>
+![](images/how-to-enable-multi-factor-auth-by-google-authenticator-on-office-365-3.png)
 
 モバイルアプリケーションの構成 画面で **QR コードが表示されますが、このままだと Google Authenticator から読めない**ので、 [通知をオフにしてアプリを構成] をクリックします。
 （QR コードが Google Authenticator でも対応できるものに変化します。）
 
-<a href="images/how-to-enable-multi-factor-auth-by-google-authenticator-on-office-365-4.png"><img src="images/how-to-enable-multi-factor-auth-by-google-authenticator-on-office-365-4.png" alt="" width="480" class="aligncenter size-full wp-image-5009" /></a>
+![](images/how-to-enable-multi-factor-auth-by-google-authenticator-on-office-365-4.png)
 
 QR コードが変わったらスマホで **Google Authenticator** を開いて QR コードを読み取り、 [次へ] をクリックします。
 
-<a href="images/how-to-enable-multi-factor-auth-by-google-authenticator-on-office-365-5.png"><img src="images/how-to-enable-multi-factor-auth-by-google-authenticator-on-office-365-5.png" alt="" width="480" class="aligncenter size-full wp-image-5010" /></a>
+![](images/how-to-enable-multi-factor-auth-by-google-authenticator-on-office-365-5.png)
 
 スマホの Google Authenticator で **Microsoft** が追加され、 6 桁の認証コードが表示されていますので、 Office 365 側にこのコードを入力します。
 
-<a href="images/how-to-enable-multi-factor-auth-by-google-authenticator-on-office-365-6.png"><img src="images/how-to-enable-multi-factor-auth-by-google-authenticator-on-office-365-6.png" alt="" width="240" class="aligncenter size-full wp-image-5028" /></a>
+![](images/how-to-enable-multi-factor-auth-by-google-authenticator-on-office-365-6.png)
 
 「確認コード用にモバイルアプリが構成されました」となっていれば OK です。 [保存] ボタンをクリックし、完了します。携帯電話での認証がまだの場合、このあと電話か SMS での認証がはじまるかもしれません。
 
-<a href="images/how-to-enable-multi-factor-auth-by-google-authenticator-on-office-365-7.png"><img src="images/how-to-enable-multi-factor-auth-by-google-authenticator-on-office-365-7.png" alt="" width="480" class="aligncenter size-full wp-image-5011" /></a>
+![](images/how-to-enable-multi-factor-auth-by-google-authenticator-on-office-365-7.png)
 
 ここまでで多段階認証の設定が完了しました。次回からログイン時はパスワードを入力したあと、 Google Authenticator の 6 桁コードを求められるようになります。
 
@@ -64,24 +64,24 @@ QR コードが変わったらスマホで **Google Authenticator** を開いて
 
 さきほどの 追加のセキュリティ確認 画面の右上に [アプリケーション パスワード] というリンクがあります（わかりにくい）。
 
-<a href="images/how-to-enable-multi-factor-auth-by-google-authenticator-on-office-365-8.png"><img src="images/how-to-enable-multi-factor-auth-by-google-authenticator-on-office-365-8.png" alt="" width="480" class="aligncenter size-full wp-image-5030" /></a>
+![](images/how-to-enable-multi-factor-auth-by-google-authenticator-on-office-365-8.png)
 
 [作成] ボタンをクリックします。
 
-<a href="images/how-to-enable-multi-factor-auth-by-google-authenticator-on-office-365-9.png"><img src="images/how-to-enable-multi-factor-auth-by-google-authenticator-on-office-365-9.png" alt="" width="480" class="aligncenter size-full wp-image-5013" /></a>
+![](images/how-to-enable-multi-factor-auth-by-google-authenticator-on-office-365-9.png)
 
 1. [名前] に "Outlook" など任意の名前を入力する
 2. [次へ] をクリック
 
-<a href="images/how-to-enable-multi-factor-auth-by-google-authenticator-on-office-365-10.png"><img src="images/how-to-enable-multi-factor-auth-by-google-authenticator-on-office-365-10.png" alt="" width="480" class="aligncenter size-full wp-image-5018" /></a>
+![](images/how-to-enable-multi-factor-auth-by-google-authenticator-on-office-365-10.png)
 
 これでアプリケーション パスワードが生成されるので、 [パスワードをクリップボードにコピー] でパスワードをコピーしておき、 [閉じる] をクリック
 
-<a href="images/how-to-enable-multi-factor-auth-by-google-authenticator-on-office-365-11.png"><img src="images/how-to-enable-multi-factor-auth-by-google-authenticator-on-office-365-11.png" alt="" width="480" class="aligncenter size-full wp-image-5019" /></a>
+![](images/how-to-enable-multi-factor-auth-by-google-authenticator-on-office-365-11.png)
 
 アプリケーション パスワードが発行されたことが確認できます。
 
-<a href="images/how-to-enable-multi-factor-auth-by-google-authenticator-on-office-365-12.png"><img src="images/how-to-enable-multi-factor-auth-by-google-authenticator-on-office-365-12.png" alt="" width="480" class="aligncenter size-full wp-image-5020" /></a>
+![](images/how-to-enable-multi-factor-auth-by-google-authenticator-on-office-365-12.png)
 
 **このアプリケーション パスワードは使いまわすものではないので、アプリごとに発行するようにし、パスワードも極力メモらず使い切りにします。アプリで再認証する場合は、同じ手順で新しいパスワードを発行すれば OK です。**
 

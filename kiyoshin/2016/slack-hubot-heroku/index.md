@@ -52,14 +52,14 @@ HUBOTさんの中身を入れる箱を作ります。コマンドプロントで
 
 コマンドを実行すると、以下の様なロボットの絵が出てきます。順番に入力を求められるので、以下を参考に入力してください。
 
-<img src="images/slack-hubot-heroku-1.jpg" alt="hubotslack_adapter" width="441" height="313" class="alignnone size-full wp-image-280" />
+![hubotslack_adapter](images/slack-hubot-heroku-1.jpg)
 
 Owner：HUBOTの雇い主(主に自分の名前等）
 Bot name：HUBOTの名前（フォルダ名が分かりやすいかも）
 Description：どんな役割をするBotなのかの説明文（なくても大丈夫）
 Bot adapter：使用するツール名(今回は<span style="color:red;">**slack**</span>と入力)
 
-<img src="images/slack-hubot-heroku-2.png" alt="hubot_slack_adapter" width="480" height="348" class="alignnone size-full wp-image-284" />
+![hubot_slack_adapter](images/slack-hubot-heroku-2.png)
 
 成功すると上記の様な表示が出ます。次にGit Bashを開き下記コマンドを実行してください。
 
@@ -69,7 +69,7 @@ Bot adapter：使用するツール名(今回は<span style="color:red;">**slack
 
 しばらくすると、以下の様な表示がされますので、表示が止まったらエンターを押してください。
 
-<img src="images/slack-hubot-heroku-3.jpg" alt="bin/hubot" width="563" height="190" class="alignnone size-full wp-image-394" />
+![bin/hubot](images/slack-hubot-heroku-3.jpg)
 
 ```hubot>```と表示されたと思います。表示されたら、何回かエンター押すと入力画面になるので```hubot>hubot ping```と打ってエンターを押してください。
 
@@ -101,7 +101,7 @@ module.exports = (robot) ->
 ```
 res.sendの後にres.randomを入れると、ランダムで[]に入れた単語をHUBOTさんが発言してくれます。乳酸菌飲料が書かれている部分を編集すると発言する内容が変わります。
 
-<img src="images/slack-hubot-heroku-4.jpg" alt="nyusankin" width="300" height="247" class="alignnone size-medium wp-image-404" />
+![nyusankin](images/slack-hubot-heroku-4.jpg)
 
 書き終えたら保存してください。
 ## Herokuの環境づくり
@@ -131,7 +131,7 @@ Heroku内にHUBOTさんのスクリプトなどを乗せる場所を作り構築
 
 実行すると、ブラウザで以下の様なページが立ち上がったかと思います。
 
-<img src="images/slack-hubot-heroku-5.png" alt="Heroku Open" width="846" height="273" class="aligncenter size-full wp-image-2157" />
+![Heroku Open](images/slack-hubot-heroku-5.png)
 
 **これによってブラウザでページが開くと思います。そのページのURL（赤枠で囲っている部分)はHerokuとSlackを繋げるために設定するときに必要ですので、URLをメモなどにコピー&ペーストして保存するか開いたページを保管しておいてください。**
 
@@ -154,9 +154,9 @@ HUBOT_SLACK_TOKENを取得するにはHUBOTを追加している必要があり�
 
 ※HUBOT_SLACK_TOKENはSlackにHUBOTを追加し、HUBOTのコンフィグを見ると表示されています。※見られない場合は権限がないので管理者等に聞いてみてください。
 
-<img src="images/slack-hubot-heroku-6.png" alt="slack_hubot" width="269" height="300" class="alignnone size-medium wp-image-460" />
+![slack_hubot](images/slack-hubot-heroku-6.png)
 
-<img src="images/slack-hubot-heroku-7.png" alt="slack×hubot_API" width="796" height="581" class="alignnone size-full wp-image-463" />
+![slack×hubot_API](images/slack-hubot-heroku-7.png)
 
 ### コマンドで設定する場合
 ```
@@ -168,7 +168,7 @@ heroku config:add HUBOT_SLACK_TOKEN=HUBOTのtokenを入力
 ### Herokuのページで登録する場合
 Herokuのサイト上で登録する場合、Herokuにログインし、Personal appsを押しSettingsをクリックすると、画面が変わりConfig Variablesが出てきます。クリックすると以下の画像のような項目が出てくるので、画像のように入力してください。
 
-<img src="images/slack-hubot-heroku-8.png" alt="Config_Variables" width="850" height="254" class="alignnone size-full wp-image-468" />
+![Config_Variables](images/slack-hubot-heroku-8.png)
 
 ## HUBOTさんをHerokuに連れてきて働いてもらいます
 最後に、Herokuにpushして スクリプトを動作させます。
@@ -179,7 +179,7 @@ Herokuのサイト上で登録する場合、Herokuにログインし、Personal
 
 試しにchannelにHUBOTさんをinvite(招待）して、「乳酸菌」と打ってみてください。なにか乳酸菌飲料の名前を返してくれると思います。
 
-<img src="images/slack-hubot-heroku-4.jpg" alt="nyusankin" width="300" height="247" class="alignnone size-medium wp-image-404" />
+![nyusankin](images/slack-hubot-heroku-4.jpg)
 
 うわあああ 倒れるぅぅう
 　　　　 ＿_∩

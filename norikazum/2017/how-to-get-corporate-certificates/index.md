@@ -28,22 +28,22 @@ tags: [その他, 〇〇奮闘記]
 
 エレベーターでB1Fから2Fまで上がります。
 
-<a href="images/how-to-get-corporate-certificates-1.jpg"><img src="images/how-to-get-corporate-certificates-1.jpg" alt="" width="864" height="1536" class="alignnone size-full wp-image-3372" /></a>
+![](images/how-to-get-corporate-certificates-1.jpg)
 
 印鑑カードを準備します。
 
-<a href="images/how-to-get-corporate-certificates-2.jpg"><img src="images/how-to-get-corporate-certificates-2.jpg" alt="" width="864" height="1536" class="alignnone size-full wp-image-3373" /></a>
+![](images/how-to-get-corporate-certificates-2.jpg)
 
 2Fに入ってすぐ左側にこのような機械があります。
 この機械で申請します。
 
-<a href="images/how-to-get-corporate-certificates-3.jpg"><img src="images/how-to-get-corporate-certificates-3.jpg" alt="" width="864" height="1536" class="alignnone size-full wp-image-3374" /></a>
+![](images/how-to-get-corporate-certificates-3.jpg)
 
 同じ大阪ですが【管轄外】から進みます。
 本社がある大阪市福島区を探して入力を進めます。
 入力を進めるとカード挿入を求められます。
 
-<a href="images/how-to-get-corporate-certificates-4.jpg"><img src="images/how-to-get-corporate-certificates-4.jpg" alt="" width="864" height="1536" class="alignnone size-full wp-image-3375" /></a>
+![](images/how-to-get-corporate-certificates-4.jpg)
 
 続けて必要な証明書を選択します。
 1つの手続きで1種類ずつの手続きになります。
@@ -51,16 +51,16 @@ tags: [その他, 〇〇奮闘記]
 
 1種類終われば、続けて申請するボタンがありますのではじめからの必要はありません。
 
-<a href="images/how-to-get-corporate-certificates-5.jpg"><img src="images/how-to-get-corporate-certificates-5.jpg" alt="" width="864" height="1536" class="alignnone size-full wp-image-3376" /></a>
+![](images/how-to-get-corporate-certificates-5.jpg)
 
 申請が終わると、最後に手続き者の名前を入力し完了です。
 履歴事項全部証明書と印鑑証明書を1通ずつ申請で1050円と受付票が出てきました。
 
-<a href="images/how-to-get-corporate-certificates-6.jpg"><img src="images/how-to-get-corporate-certificates-6.jpg" alt="" width="864" height="1536" class="alignnone size-full wp-image-3377" /></a>
+![](images/how-to-get-corporate-certificates-6.jpg)
 
 部屋の奥に印紙販売所があるので、「1050円分の印紙ください」という感じで声をかけ買います。
 
-<a href="images/how-to-get-corporate-certificates-7.jpg"><img src="images/how-to-get-corporate-certificates-7.jpg" alt="" width="864" height="1536" class="alignnone size-full wp-image-3378" /></a>
+![](images/how-to-get-corporate-certificates-7.jpg)
 
 ここまでで、申請手続きは完了で椅子に座ってしばし待ちます。
 
@@ -73,13 +73,13 @@ tags: [その他, 〇〇奮闘記]
 
 これで、無事証明書を取得できました。
 
-<a href="images/how-to-get-corporate-certificates-8.jpg"><img src="images/how-to-get-corporate-certificates-8.jpg" alt="" width="1398" height="567" class="alignnone size-full wp-image-3380" /></a>
+![](images/how-to-get-corporate-certificates-8.jpg)
 
 ## あとがき
 
 駐車場はありますが、各窓口横にある印を自分で押す必要がありますので忘れないようにしましょう。
 
-<a href="images/how-to-get-corporate-certificates-9.jpg"><img src="images/how-to-get-corporate-certificates-9.jpg" alt="" width="864" height="1536" class="alignnone size-full wp-image-3379" /></a>
+![](images/how-to-get-corporate-certificates-9.jpg)
 
 株式発行などの手続きは本局に行く必要がありますので事前に電話などで確認すると確実かと思います。
 

@@ -53,7 +53,7 @@ tags: [Windows, Windows Server]
 
 これらの項目にチェックが入っていることを確認しておきます。
 
-<a href="images/how-to-limit-shared-folders-to-access-only-from-specific-computers-1.png"><img src="images/how-to-limit-shared-folders-to-access-only-from-specific-computers-1.png" alt="" width="1052" height="657" class="alignnone size-full wp-image-17529" /></a>
+![](images/how-to-limit-shared-folders-to-access-only-from-specific-computers-1.png)
 
 当初、**`ファイルとプリンターの共有`** のみでよいと思っていたのですが、**`ファイル サーバー リモート管理`** も 445 ポートを使っているため影響があります。
 
@@ -61,7 +61,7 @@ tags: [Windows, Windows Server]
 
 [コントロール パネル] - [システムとセキュリティ] - [Windows ファイアウォール] - [詳細設定] から [受信の規則] を開きます。
 
-<a href="images/how-to-limit-shared-folders-to-access-only-from-specific-computers-2.png"><img src="images/how-to-limit-shared-folders-to-access-only-from-specific-computers-2.png" alt="" width="1066" height="704" class="alignnone size-full wp-image-17531" /></a>
+![](images/how-to-limit-shared-folders-to-access-only-from-specific-computers-2.png)
 
 **ファイル サーバー リモート管理** と **ファイルとプリンターの共有** から始まる**すべての規則**に下記を実施します。
 
@@ -71,11 +71,11 @@ tags: [Windows, Windows Server]
 
 この項目を設定することで、**指定した IP アドレスからのアクセスしか許可しないようにできます**。余談ですが、リモートデスクトップ接続のアクセス制御などにも応用できます。
 
-<a href="images/how-to-limit-shared-folders-to-access-only-from-specific-computers-3.png"><img src="images/how-to-limit-shared-folders-to-access-only-from-specific-computers-3.png" alt="" width="763" height="566" class="alignnone size-full wp-image-17533" /></a>
+![](images/how-to-limit-shared-folders-to-access-only-from-specific-computers-3.png)
 
 あとは、一覧からローカルポート順にソートしてポート 137～139, 445 を使用している規則に漏れがないか確認し、ほかにもある場合はそちらも同様に設定します。
 
-<a href="images/how-to-limit-shared-folders-to-access-only-from-specific-computers-4.png"><img src="images/how-to-limit-shared-folders-to-access-only-from-specific-computers-4.png" alt="" width="1356" height="823" class="alignnone size-full wp-image-17840" /></a>
+![](images/how-to-limit-shared-folders-to-access-only-from-specific-computers-4.png)
 
 ## サービスの再起動
 
@@ -83,7 +83,7 @@ tags: [Windows, Windows Server]
 
 Server サービスを再起動し、一旦すべての Windows 共有へのアクセスを切断しておきましょう。
 
-<a href="images/how-to-limit-shared-folders-to-access-only-from-specific-computers-5.png"><img src="images/how-to-limit-shared-folders-to-access-only-from-specific-computers-5.png" alt="" width="904" height="170" class="alignnone size-full wp-image-17841" /></a>
+![](images/how-to-limit-shared-folders-to-access-only-from-specific-computers-5.png)
 
 ではまた。
 

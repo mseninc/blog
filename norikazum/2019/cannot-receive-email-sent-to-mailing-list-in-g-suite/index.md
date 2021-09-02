@@ -19,7 +19,7 @@ tags: [GSuite, スパムメール, その他, ライフハック]
 
 環境的には以下のようなイメージです。
 
-<a href="images/cannot-receive-email-sent-to-mailing-list-in-g-suite-1.png"><img src="images/cannot-receive-email-sent-to-mailing-list-in-g-suite-1.png" alt="" width="1198" height="667" class="alignnone size-full wp-image-9468" /></a>
+![](images/cannot-receive-email-sent-to-mailing-list-in-g-suite-1.png)
 
 上記の図にも記載しましたが、 **お客様メールサーバーのログには正常に送信できたことが記録** されていました。
 ```
@@ -38,39 +38,39 @@ Googleに問い合わせをしたところ、 Google 管理コンソールから
 1. ログを検索
 **レポート → 監査 → メールログ** を検索
 以下の画像では、**送信者のIP** で検索していますが特定できる他の指定で問題ありません。
-<a href="images/cannot-receive-email-sent-to-mailing-list-in-g-suite-2.png"><img src="images/cannot-receive-email-sent-to-mailing-list-in-g-suite-2.png" alt="" width="1504" height="930" class="alignnone size-full wp-image-9445" /></a>
+![](images/cannot-receive-email-sent-to-mailing-list-in-g-suite-2.png)
 上記から、送信したメールがGoogleで止まっていることが分かります。
 
 2. メーリングリスト(グループ情報)を確認
 G Suiteでは、メーリングリストはグループとして管理されますので、 **グループ** という表現になります。
 
 左上の **三** から、 **ディレクトリ → グループ** へと進みます。
-<a href="images/cannot-receive-email-sent-to-mailing-list-in-g-suite-3.png"><img src="images/cannot-receive-email-sent-to-mailing-list-in-g-suite-3.png" alt="" width="606" height="357" class="alignnone size-full wp-image-9471" /></a>
+![](images/cannot-receive-email-sent-to-mailing-list-in-g-suite-3.png)
 
 送れなかった **グループを選択し設定を変更をクリック** します。
-<a href="images/cannot-receive-email-sent-to-mailing-list-in-g-suite-4.png"><img src="images/cannot-receive-email-sent-to-mailing-list-in-g-suite-4.png" alt="" width="1504" height="930" class="alignnone size-full wp-image-9446" /></a>
+![](images/cannot-receive-email-sent-to-mailing-list-in-g-suite-4.png)
 
 遷移した画面を **下にスクロールし詳細設定をクリック** します。
-<a href="images/cannot-receive-email-sent-to-mailing-list-in-g-suite-5.png"><img src="images/cannot-receive-email-sent-to-mailing-list-in-g-suite-5.png" alt="" width="1504" height="930" class="alignnone size-full wp-image-9447" /></a>
+![](images/cannot-receive-email-sent-to-mailing-list-in-g-suite-5.png)
 
 **別ウィンドウでグループ詳細設定画面** が開きます。
 
 保留されたメッセージの確認と送信については、 **メッセージ → 保留中のメッセージ** へ進み 以下の画像を参考に許可を出します。
 
-<a href="images/cannot-receive-email-sent-to-mailing-list-in-g-suite-6.png"><img src="images/cannot-receive-email-sent-to-mailing-list-in-g-suite-6.png" alt="" width="1504" height="930" class="alignnone size-full wp-image-9451" /></a>
+![](images/cannot-receive-email-sent-to-mailing-list-in-g-suite-6.png)
 
 上記と同画面に、以下のような **今後許可する** 設定があるのでそちらを選択したあとに再送してもまた保留になりました。
 なぜなのかは今回追求していません。
 
-<a href="images/cannot-receive-email-sent-to-mailing-list-in-g-suite-7.png"><img src="images/cannot-receive-email-sent-to-mailing-list-in-g-suite-7.png" alt="" width="1504" height="930" class="alignnone size-full wp-image-9450" /></a>
+![](images/cannot-receive-email-sent-to-mailing-list-in-g-suite-7.png)
 
 保留(管理キューに溜めない)にしないためには、 **設定 → 管理** から以下のように変更します。
 
-<a href="images/cannot-receive-email-sent-to-mailing-list-in-g-suite-8.png"><img src="images/cannot-receive-email-sent-to-mailing-list-in-g-suite-8.png" alt="" width="1504" height="930" class="alignnone size-full wp-image-9452" /></a>
+![](images/cannot-receive-email-sent-to-mailing-list-in-g-suite-8.png)
 
 **保存を忘れないように注意です。**
 
-<a href="images/cannot-receive-email-sent-to-mailing-list-in-g-suite-9.png"><img src="images/cannot-receive-email-sent-to-mailing-list-in-g-suite-9.png" alt="" width="1504" height="930" class="alignnone size-full wp-image-9453" /></a>
+![](images/cannot-receive-email-sent-to-mailing-list-in-g-suite-9.png)
 
 これで、無事に届くようになりました。
 

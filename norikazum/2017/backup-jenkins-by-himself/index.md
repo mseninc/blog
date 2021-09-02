@@ -23,7 +23,7 @@ Jenkins記事が続いておりますｗ
 バックアップに利用するプラグインをインストールします。
 
 1. **Jenkinsの管理**→**プラグインの管理**と進み、フィルターに**Exclusive Execution Plugin**と入力しインストールします。以下の参考画像はインストール済みのため出ておりません。（インストール済みに出ます）
-<a href="images/backup-jenkins-by-himself-1.png"><img src="images/backup-jenkins-by-himself-1.png" alt="" width="300" height="179" class="alignnone size-medium wp-image-4355" /></a>
+![](images/backup-jenkins-by-himself-1.png)
 
 ## ジョブを作成する
 
@@ -31,16 +31,16 @@ Jenkins記事が続いておりますｗ
 * [jenkins-backup-script](https://github.com/sue445/jenkins-backup-script)
 
 1. **新規ジョブ作成**から、**ジョブの名称**を入れ、**フリースタイル・プロジェクトのビルド** を選択し**OK**で進みます。
-<a href="images/backup-jenkins-by-himself-2.png"><img src="images/backup-jenkins-by-himself-2.png" alt="" width="300" height="179" class="alignnone size-medium wp-image-4356" /></a>
+![](images/backup-jenkins-by-himself-2.png)
 
 1．ソースコード管理の部分は**Git**にチェックをいれ、Repository URLに`https://github.com/sue445/jenkins-backup-script.git`を入力します。続けて、Branch Specifierに`0.0.3`と入力します。
-<a href="images/backup-jenkins-by-himself-3.png"><img src="images/backup-jenkins-by-himself-3.png" alt="" width="300" height="160" class="alignnone size-medium wp-image-4350" /></a>
+![](images/backup-jenkins-by-himself-3.png)
 
 1. ビルド・トリガの部分は**定期的に実行**にチェックをいれ、`0 3 * * *`と入力します。これは毎日AM3:00に実行するという意味になりますので、適宜変更してください。
-<a href="images/backup-jenkins-by-himself-4.png"><img src="images/backup-jenkins-by-himself-4.png" alt="" width="300" height="114" class="alignnone size-medium wp-image-4352" /></a>
+![](images/backup-jenkins-by-himself-4.png)
 
 1. ビルド環境の部分は**ビルドを排他的に実行**にチェックを入れます。
-<a href="images/backup-jenkins-by-himself-5.png"><img src="images/backup-jenkins-by-himself-5.png" alt="" width="300" height="100" class="alignnone size-medium wp-image-4353" /></a>
+![](images/backup-jenkins-by-himself-5.png)
 
 1. ビルドの部分は**ビルドの手順の追加**から**シェルの実行**を選び、以下のように入力します。
  ```
@@ -49,16 +49,16 @@ Jenkins記事が続いておりますｗ
 続けて、**ビルドの手順の追加**から**シェルの実行**を選び、`find /mnt/backup/backup_* -mtime +30 -delete`と入力します。1つめの設定はバックアップ設定、2つめの設定はバックアップファイルのローテーション設定になります。`/mnt/backup`の部分は任意です。また、ローテーションの`+30`の部分も残したい日数に変更してください。`+30`であれば、30日間保存になります。
 
 1. ビルド後の処理は、**ビルド後の手順の追加**から**Slack Notification**を選びます。各項目任意でチェックをいれ最後のProject Channelに通知したいSlackのチャンネル名を記載します。Custom Messageの部分に、`https://URL/job/${JOB_NAME}/${BUILD_NUMBER}/consoleText`と入力するとコンソール結果がSlackに通知され確認が簡単になります。入力後に保存ボタンを押してプロジェクトを保存します。
-<a href="images/backup-jenkins-by-himself-6.png"><img src="images/backup-jenkins-by-himself-6.png" alt="" width="273" height="300" class="alignnone size-medium wp-image-4354" /></a>
+![](images/backup-jenkins-by-himself-6.png)
 
 これでJenkinsの設定は終了です。
 
 ## 実行テスト
 1. プロジェクト画面から、**ビルド実行**ボタンをクリックします。
-<a href="images/backup-jenkins-by-himself-7.png"><img src="images/backup-jenkins-by-himself-7.png" alt="" width="300" height="167" class="alignnone size-medium wp-image-4357" /></a>
+![](images/backup-jenkins-by-himself-7.png)
 
 1. 即実行され、Slackに通知されました。
-<a href="images/backup-jenkins-by-himself-8.png"><img src="images/backup-jenkins-by-himself-8.png" alt="" width="300" height="170" class="alignnone size-medium wp-image-4358" /></a>
+![](images/backup-jenkins-by-himself-8.png)
 コンソールログの最後を見ると**Finished: SUCCESS**となっており正常に終了していることが確認できました。
 
 ## あとがき

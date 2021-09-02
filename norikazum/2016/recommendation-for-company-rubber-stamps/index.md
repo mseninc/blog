@@ -26,7 +26,7 @@ tags: [その他, 〇〇奮闘記]
 そのときのタイプはシャチハタタイプでした。
 (下記のようなタイプ)
 
-<a href="images/recommendation-for-company-rubber-stamps-1.png"><img src="images/recommendation-for-company-rubber-stamps-1.png" alt="2016-08-06_00h28_59" width="334" height="331" class="alignnone size-full wp-image-2170" /></a>
+![2016-08-06_00h28_59](images/recommendation-for-company-rubber-stamps-1.png)
 
 当初作成した並び順は、**住所**、**会社名**、**代表名** でした。
 
@@ -40,7 +40,7 @@ tags: [その他, 〇〇奮闘記]
 
 そこで、組み合わせタイプを検討し買い換えました。実際使用中のゴム印がこちらです。
 
-<a href="images/recommendation-for-company-rubber-stamps-2.jpg"><img src="images/recommendation-for-company-rubber-stamps-2.jpg" alt="DSC_0172" width="929" height="420" class="alignnone size-full wp-image-2171" /></a>
+![DSC_0172](images/recommendation-for-company-rubber-stamps-2.jpg)
 
 **ASKULの幅52mmタイプ**
 [https://spc.askul.co.jp/cstamp/cs0211.30570](https://spc.askul.co.jp/cstamp/cs0211.30570)
@@ -51,9 +51,9 @@ tags: [その他, 〇〇奮闘記]
 
 もし今後事務所の移転などが発生しても住所部分だけを買い足せば対応できるのでコスト的にもメリットがあると思います。
 
-<a href="images/recommendation-for-company-rubber-stamps-3.jpg"><img src="images/recommendation-for-company-rubber-stamps-3.jpg" alt="DSC_0171" width="960" height="540" class="alignnone size-full wp-image-2172" /></a>
+![DSC_0171](images/recommendation-for-company-rubber-stamps-3.jpg)
 
-<a href="images/recommendation-for-company-rubber-stamps-4.jpg"><img src="images/recommendation-for-company-rubber-stamps-4.jpg" alt="DSC_0173" width="960" height="540" class="alignnone size-full wp-image-2173" /></a>
+![DSC_0173](images/recommendation-for-company-rubber-stamps-4.jpg)
 
 ## あとがき
 このタイプで非常に満足なのですが、1点だけ欠点があります。シャチハタタイプではないのでインクスタンプを一緒に持ち歩かないといけないのですが、押印した後、きれいにインクを拭き取ることができずケースや手にインクがついてしまうことです。

@@ -15,23 +15,23 @@ tags: [DNS, VPN, ネットワーク, Windows]
 
 この図に示すネットワークを元に説明を進めます。
 
-<img src="images/how-to-refer-to-dns-server-in-vpn-1.png" alt="" width="1574" height="545" class="alignnone size-full wp-image-7127" />
+![](images/how-to-refer-to-dns-server-in-vpn-1.png)
 
 ## 事前設定
 
 1. ネットワーク接続を開き、VPNインターフェースのプロパティを開きます
-<img src="images/how-to-refer-to-dns-server-in-vpn-2.png" alt="" width="1158" height="857" class="alignnone size-full wp-image-7116" />
+![](images/how-to-refer-to-dns-server-in-vpn-2.png)
 
 1. ネットワークタブからインターネットプロトコルバージョン4を選択しプロパティを選択します
-<img src="images/how-to-refer-to-dns-server-in-vpn-3.png" alt="" width="484" height="718" class="alignnone size-full wp-image-7117" />
+![](images/how-to-refer-to-dns-server-in-vpn-3.png)
 
 1. DNSサーバーのIPアドレスを指定し、詳細設定に進みます
-<img src="images/how-to-refer-to-dns-server-in-vpn-4.png" alt="" width="534" height="688" class="alignnone size-full wp-image-7118" />
+![](images/how-to-refer-to-dns-server-in-vpn-4.png)
 
 1. 自動メトリックのチェックを外し、 インターフェースメトリックに **1** を入力しOKで閉じます
-<img src="images/how-to-refer-to-dns-server-in-vpn-5.png" alt="" width="534" height="738" class="alignnone size-full wp-image-7119" />
+![](images/how-to-refer-to-dns-server-in-vpn-5.png)
 ↓
-<img src="images/how-to-refer-to-dns-server-in-vpn-6.png" alt="" width="534" height="738" class="alignnone size-full wp-image-7120" />
+![](images/how-to-refer-to-dns-server-in-vpn-6.png)
 
 1. その後の設定画面もOKで閉じていき変更を確定します
 

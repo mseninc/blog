@@ -30,7 +30,7 @@ partedコマンドも本来は対話形式ですが、`-s`オプションを追�
 
 1本のローカルディスクからWindowsとLinuxのパーティションを切り出します。
 
-<a href="images/automatically-create-windows-and-linux-partitions-with-parted-command-1.png"><img src="images/automatically-create-windows-and-linux-partitions-with-parted-command-1.png" alt="" width="562" height="67" class="alignnone size-full wp-image-7350" /></a>
+![](images/automatically-create-windows-and-linux-partitions-with-parted-command-1.png)
 
 パーティションサイズはそれぞれ20GB。
 

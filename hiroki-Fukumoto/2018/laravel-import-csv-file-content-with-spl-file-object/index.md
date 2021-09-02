@@ -34,7 +34,7 @@ Route::post('csv-imports/csv', 'CsvImportController@store');
 
 次に、画面を実装します。
 
-<img src="images/laravel-import-csv-file-content-with-spl-file-object-1.png" alt="" width="567" height="217" class="alignnone size-full wp-image-6454" />
+![](images/laravel-import-csv-file-content-with-spl-file-object-1.png)
 
 ソースコードはこのようになります。
 

@@ -49,7 +49,7 @@ chroot化のスクリプトとして、以下のコマンドを実行してい�
 
 これは何をしているかというと、bindに必要なディレクトリとファイルを` /var/named/chroot `にマウントしているんですね。
 
-<a href="images/bind-chroot-important-point-1.png"><img src="images/bind-chroot-important-point-1.png" alt="" width="874" height="823" class="alignnone size-full wp-image-4589" /></a>
+![](images/bind-chroot-important-point-1.png)
 
 例を挙げると以下のような感じです。
 

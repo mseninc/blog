@@ -13,7 +13,7 @@ tags: [SQL Server, Windows]
 
 となり開けなくなり、困っていました。
 
-<a href="images/fix-sql-management-console-cant-open-1.png"><img src="images/fix-sql-management-console-cant-open-1.png" alt="" width="532" height="443" class="aligncenter size-full wp-image-5126" /></a>
+![](images/fix-sql-management-console-cant-open-1.png)
 
 システムは環境は、以下のとおりです。
 
@@ -31,10 +31,10 @@ SQL : SQL Server 2012 (64ビット)
 
 1. コマンドプロンプトを開き、以下のコマンドを実行する。
 `mofcomp "C:\Program Files (x86)\Microsoft SQL Server\110\Shared\sqlmgmproviderxpsp2up.mof"`
-<a href="images/fix-sql-management-console-cant-open-2.png"><img src="images/fix-sql-management-console-cant-open-2.png" alt="" width="671" height="219" class="aligncenter size-full wp-image-5127" /></a>
+![](images/fix-sql-management-console-cant-open-2.png)
 
 1. これで開くようになりました！
-<a href="images/fix-sql-management-console-cant-open-3.png"><img src="images/fix-sql-management-console-cant-open-3.png" alt="" width="1097" height="724" class="aligncenter size-full wp-image-5128" /></a>
+![](images/fix-sql-management-console-cant-open-3.png)
 
 ## あとがき
 前項で実行した`mofcomp`は、`MOFファイル(Managed Object Format)` (MOF) をコンパイルするコマンドのようです。

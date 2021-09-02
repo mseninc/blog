@@ -36,7 +36,7 @@ Microsoft Office Specialist資格は国籍や年齢を問わずに誰でも挑�
 
 [よくわかるマスター MOS 対策テキスト＆問題集（FOM出版）](http://www.fom.fujitsu.com/goods/officespecialist/fpt1617.html)
 
-<a href="images/mos-excel-specialist-1.jpg"><img src="images/mos-excel-specialist-1.jpg" alt="" width="384" height="512" class="alignnone size-full wp-image-5171" /></a>
+![](images/mos-excel-specialist-1.jpg)
 
 お勧めできる点は模擬試験が行えることです。添付CD-ROMには**本番さながらの模擬試験**を収録しています。これを完璧に解く事が出来れば、本番も難なく合格することができます。
 
@@ -72,7 +72,7 @@ Microsoft Office Specialist資格は国籍や年齢を問わずに誰でも挑�
 
 結果は合格、1問ミスなのが悔しかったです....
 
-<a href="images/mos-excel-specialist-2.jpg"><img src="images/mos-excel-specialist-2.jpg" alt="" width="390" height="519" class="alignnone size-full wp-image-5172" /></a>
+![](images/mos-excel-specialist-2.jpg)
 
 ## 感想
 

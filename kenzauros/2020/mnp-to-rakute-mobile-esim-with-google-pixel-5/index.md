@@ -40,7 +40,7 @@ tags: [Android, eSIM, その他]
 
 **スタートガイドの背表紙には開通用の QR コードが載っており、本人確認用に使用**します。
 
-<a href="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-1.jpg"><img src="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-1.jpg" alt="" width="640" height="480" class="aligncenter size-full wp-image-14720" /></a>
+![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-1.jpg)
 
 ※補足：私は MNP 転入後にスキャンしましたが、まず最初にこの QR コードを Google Lens などでスキャンして本人確認をしたほうがよいようです。
 
@@ -58,47 +58,47 @@ tags: [Android, eSIM, その他]
 
 **[my 楽天モバイル](https://portal.mobile.rakuten.co.jp/my-rakuten-mobile) にログイン**し、申込番号が表示されているリンクを選択します。なぜか出荷準備中からステータスが進んでいませんが、スタートガイドが届いていれば問題ありません。
 
-<a href="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-2.png"><img src="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-2.png" alt="" width="480" height="418" class="aligncenter size-full wp-image-14740" /></a>
+![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-2.png)
 
 **「転入を開始する」**ボタンをクリックします。
 
-<a href="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-3.png"><img src="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-3.png" alt="" width="480" height="417" class="aligncenter size-full wp-image-14741" /></a>
+![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-3.png)
 
 MNP 切替条件が表示されます。特に問題なければ**「転入を開始する」**ボタンをクリックします。
 
-<a href="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-4.png"><img src="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-4.png" alt="" width="480" height="663" class="aligncenter size-full wp-image-14716" /></a>
+![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-4.png)
 
 ステータスが**「有効化進行中」**になります。
 
-<a href="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-5.png"><img src="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-5.png" alt="" width="480" height="363" class="aligncenter size-full wp-image-14742" /></a>
+![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-5.png)
 
 私の場合、この時点で**旧回線が使用不可能**になりました。
 
-<a href="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-6.png"><img src="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-6.png" alt="" width="480" height="80" class="aligncenter size-full wp-image-14718" /></a>
+![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-6.png)
 
 メールで MNP 開通完了のお知らせが届きます。
 
-<a href="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-7.png"><img src="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-7.png" alt="" width="480" height="696" class="aligncenter size-full wp-image-14719" /></a>
+![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-7.png)
 
 (未実施の場合) 次に**スタートガイドにある QR コードを Google Lens や QR コードアプリで読み取り**、リンク先に飛びます。
 
-<a href="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-1.jpg"><img src="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-1.jpg" alt="" width="640" height="480" class="aligncenter size-full wp-image-14720" /></a>
+![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-1.jpg)
 
 **リンク先に飛ぶと自動的に本人確認が終了**し、完了メッセージが表示されます。
 
-<a href="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-8.png"><img src="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-8.png" alt="" width="480" height="821" class="aligncenter size-full wp-image-14721" /></a>
+![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-8.png)
 
 この状態で回線のステータスに戻ると**「開通手続きをする」**ボタンが表れるので、これを選択します。
 
-<a href="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-9.png"><img src="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-9.png" alt="" width="480" height="411" class="aligncenter size-full wp-image-14722" /></a>
+![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-9.png)
 
 開通手続きが完了すると**「SIM の初期設定」という QR コード**が表示されます。これが **eSIM のダウンロード用 QR コード**ですので、この後の手順で設定するスマホから読み取ります。
 
-<a href="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-10.png"><img src="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-10.png" alt="" width="480" height="711" class="aligncenter size-full wp-image-14744" /></a>
+![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-10.png)
 
 ここまでくると**楽天モバイルの回線ステータスは「開通済み」**となります。
 
-<a href="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-11.png"><img src="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-11.png" alt="" width="480" height="347" class="aligncenter size-full wp-image-14724" /></a>
+![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-11.png)
 
 
 ### eSIM のダウンロード
@@ -107,39 +107,39 @@ MNP 切替条件が表示されます。特に問題なければ**「転入を�
 
 設定から**「ネットワークとインターネット」**を選択します。
 
-<a href="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-12.png"><img src="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-12.png" alt="" width="480" height="316" class="aligncenter size-full wp-image-14725" /></a>
+![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-12.png)
 
 **「モバイルネットワーク」横の＋**を選択します。
 
-<a href="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-13.png"><img src="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-13.png" alt="" width="480" height="346" class="aligncenter size-full wp-image-14726" /></a>
+![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-13.png)
 
 「モバイルネットワークへの接続」画面で**「代わりに SIM をダウンロードしますか？ eSIM を使用して番号を追加」**を選択します。
 
-<a href="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-14.png"><img src="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-14.png" alt="" width="477" height="594" class="aligncenter size-full wp-image-14727" /></a>
+![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-14.png)
 
 Pixel 5 では **Dual SIM の場合、 4G になってしまう**旨の警告が表示されます (T_T)。仕方ないので「はい」を選択します。
 
-<a href="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-15.png"><img src="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-15.png" alt="" width="480" height="471" class="aligncenter size-full wp-image-14728" /></a>
+![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-15.png)
 
 **「SIM のダウンロード」**画面で「次へ」を選択します。
 
-<a href="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-16.png"><img src="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-16.png" alt="" width="480" height="680" class="aligncenter size-full wp-image-14729" /></a>
+![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-16.png)
 
 QR コードをスキャンする画面になるので、**楽天モバイルで表示されている eSIM のダウンロード用 QR コードをスキャン**します。
 
-<a href="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-17.png"><img src="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-17.png" alt="" width="480" height="698" class="aligncenter size-full wp-image-14730" /></a>
+![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-17.png)
 
 回線名を確認して**「有効化」**を選択します。
 
-<a href="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-18.png"><img src="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-18.png" alt="" width="480" height="331" class="aligncenter size-full wp-image-14731" /></a>
+![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-18.png)
 
 有効化しているところです。数十秒で終了しました。
 
-<a href="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-19.png"><img src="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-19.png" alt="" width="480" height="472" class="aligncenter size-full wp-image-14732" /></a>
+![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-19.png)
 
 **「Rakuten は有効です」**と表示されれば OK です。「完了」を選択します。
 
-<a href="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-20.png"><img src="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-20.png" alt="" width="480" height="236" class="aligncenter size-full wp-image-14733" /></a>
+![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-20.png)
 
 これで**端末に eSIM がダウンロードされ、利用可能**になりました。
 
@@ -147,33 +147,33 @@ QR コードをスキャンする画面になるので、**楽天モバイルで
 
 再度「ネットワークとインターネット」を開くと **Rakuten** が追加されています。デフォルトではデータ通信等が有効になっていないため、 Rakuten を選択して設定を開きます。
 
-<a href="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-21.png"><img src="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-21.png" alt="" width="480" height="312" class="aligncenter size-full wp-image-14734" /></a>
+![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-21.png)
 
 **Rakuten SIM でデータ通信を行うには「モバイルデータ」のスイッチを ON** にします。
 
-<a href="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-22.png"><img src="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-22.png" alt="" width="480" height="353" class="aligncenter size-full wp-image-14735" /></a>
+![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-22.png)
 
 確認が表示されるので、「Rakuten を使用」を選択します。
 
-<a href="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-23.png"><img src="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-23.png" alt="" width="480" height="228" class="aligncenter size-full wp-image-14736" /></a>
+![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-23.png)
 
 **「デフォルトのモバイルデータ」が Rakuten 側に移り**、データ通信にはこちらの回線が利用されるようになります。
 
-<a href="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-24.png"><img src="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-24.png" alt="" width="480" height="293" class="aligncenter size-full wp-image-14737" /></a>
+![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-24.png)
 
 ## スピードテスト
 
 最後にスピードテストをやってみました。夜間ではありますが 40 Mbps ほど出ているので無事楽天回線につながっているようです。（＠大阪市内）
 
-<a href="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-25.png"><img src="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-25.png" alt="" width="480" height="429" class="aligncenter size-full wp-image-14738" /></a>
+![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-25.png)
 
 こちらは 13 時ごろ。
 
-<a href="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-26.png"><img src="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-26.png" alt="" width="480" height="421" class="aligncenter size-full wp-image-14759" /></a>
+![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-26.png)
 
 一応 USEN のスピードテストも（夜間）。
 
-<a href="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-27.png"><img src="images/mnp-to-rakute-mobile-esim-with-google-pixel-5-27.png" alt="" width="480" height="373" class="aligncenter size-full wp-image-14739" /></a>
+![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-27.png)
 
 ## まとめ
 

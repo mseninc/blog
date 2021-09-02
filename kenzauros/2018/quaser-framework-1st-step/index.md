@@ -118,7 +118,7 @@ Enjoy! - Quasar Team
 
 ファイル群はこんな感じになります。 Vuex とかも含めて全部外形だけ作ってくれるので楽でいいですね。
 
-<img src="images/quaser-framework-1st-step-1.png" alt="Quasar インストール直後の状態" width="376" height="1041" class="aligncenter size-full wp-image-8405" />
+![Quasar インストール直後の状態](images/quaser-framework-1st-step-1.png)
 
 ## 開発環境の起動
 
@@ -137,7 +137,7 @@ $ quasar dev
 
 デフォルトでこんな感じになります。デフォルトで Material Design (mat) が有効になっているはずなのですが、なぜかちょっと哀愁を感じるヘッダーバーです。
 
-<img src="images/quaser-framework-1st-step-2.png" alt="quasar 開発環境を起動した状態" width="1055" height="639" class="aligncenter size-full wp-image-8406" />
+![quasar 開発環境を起動した状態](images/quaser-framework-1st-step-2.png)
 
 ## ビルド
 
@@ -220,7 +220,7 @@ Entrypoint app = js/runtime.ee6dc773.js js/vendor.1f6b3da5.js css/app.c2915530.c
       specify the "--history" parameter: "$ quasar serve --history"
 ```
 
-<img src="images/quaser-framework-1st-step-3.png" alt="Quasar build でビルドされたファイル群" width="231" height="374" class="aligncenter size-full wp-image-8410" />
+![Quasar build でビルドされたファイル群](images/quaser-framework-1st-step-3.png)
 
 生成後のファイルを確認すると html + js + css で 436KB でした。まだあまりコンポーネントを使っていないからかもしれませんが、初期状態では特別重いというファイルサイズではありませんでした。
 

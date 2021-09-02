@@ -17,7 +17,7 @@ Extended WPF Toolkit はライセンス的にも **[Microsoft Public License (MS
 
 ### やりたいこと
 
-<a href="images/localization-for-wpf-toolkit-propertygrid-1.png"><img src="images/localization-for-wpf-toolkit-propertygrid-1.png" alt="" width="671" height="257" class="aligncenter size-full wp-image-7947" /></a>
+![](images/localization-for-wpf-toolkit-propertygrid-1.png)
 
 左のように英語表記だったものを右のような日本語表記に変えたいのです。
 

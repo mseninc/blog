@@ -38,7 +38,7 @@ WPF の DataGrid には [DataGridCheckBoxColumn](https://msdn.microsoft.com/ja-j
 
 ミソは `UpdateSourceTrigger=PropertyChanged` です。これをしておかないとチェック ON/OFF してもバインド先が書き換わりませんので、ハマります。もちろん `Mode=TwoWay` もお忘れなく。
 
-<a href="images/usual-checkbox-column-on-wpf-datagrid-1.png"><img src="images/usual-checkbox-column-on-wpf-datagrid-1.png" alt="Usual CheckBox on WPF DataGrid" width="111" height="94" class="aligncenter size-full wp-image-628" /></a>
+![Usual CheckBox on WPF DataGrid](images/usual-checkbox-column-on-wpf-datagrid-1.png)
 
 ## でも長い
 

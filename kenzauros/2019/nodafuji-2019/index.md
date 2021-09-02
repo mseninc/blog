@@ -12,7 +12,7 @@ tags: [その他]
 
 ## 江戸時代には吉野の桜と並び称された「のだふじ」
 
-<a href="images/nodafuji-2019-1.jpg"><img src="images/nodafuji-2019-1.jpg" alt="満開の野田藤" width="720" height="540" class="aligncenter size-full wp-image-9697" /></a>
+![満開の野田藤](images/nodafuji-2019-1.jpg)
 
 江戸時代には「**吉野の桜　野田の藤　高尾の紅葉**」と謳われたほどだったといいます。
 
@@ -29,13 +29,13 @@ tags: [その他]
 
 **福島区の花**にもなっている「のだふじ」、実は 5 年後に発行される**新五千円札**の裏面に採用されることになりました。
 
-<a href="images/nodafuji-2019-2.png"><img src="images/nodafuji-2019-2.png" alt="新五千円札の裏面に野田藤" width="796" height="587" class="aligncenter size-full wp-image-9696" /></a>
+![新五千円札の裏面に野田藤](images/nodafuji-2019-2.png)
 
 大阪人、特に福島区に住む人間にとって、とても誇らしいことです。
 
 藤の独特な紫は、日本らしく、懐かしく、奥ゆかしい、なんとも言えない品がただよっています。
 
-<a href="images/nodafuji-2019-3.jpg"><img src="images/nodafuji-2019-3.jpg" alt="満開の野田藤" width="720" height="540" class="aligncenter size-full wp-image-9700" /></a>
+![満開の野田藤](images/nodafuji-2019-3.jpg)
 
 新元号である「**令和**」の「**美しく和やかに**」という意味合いにも、ふさわしい花ではないかと思います。
 
@@ -46,7 +46,7 @@ tags: [その他]
 
 余談ですが、**福島区役所でもらえる婚姻届には「のだふじ」バージョンがあります**。
 
-<a href="images/nodafuji-2019-4.jpg"><img src="images/nodafuji-2019-4.jpg" alt="福島区オリジナル婚姻届「のだふじ」" width="720" height="540" class="aligncenter size-full wp-image-9712" /></a>
+![福島区オリジナル婚姻届「のだふじ」](images/nodafuji-2019-4.jpg)
 
 ゼクシィの付録婚姻届もいいですが、福島区で結婚される方はせっかくなので地元オリジナルのものを使ってみてはいかがでしょうか。
 

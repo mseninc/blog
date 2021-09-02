@@ -10,11 +10,11 @@ tags: [その他]
 そして突然ですが、** MSEN なんと独自のパーカーを作成**いたしました！
 それがこちら！
 
-<img src="images/msen-hoodie-1.jpg" alt="" width="225" height="300" class="aligncenter size-medium wp-image-6705" />
+![](images/msen-hoodie-1.jpg)
 
 僕的にポイント高いのは、主張しすぎないMSENのロゴです。笑
 
-<img src="images/msen-hoodie-2.jpg" alt="" width="225" height="300" class="aligncenter size-medium wp-image-6699" />
+![](images/msen-hoodie-2.jpg)
 
 しかもこのパーカー、裏起毛で着心地抜群なんです。
 いつの間にか「MSENパーカー」と名付けられ、事務所に出るときはいつも愛用しています。

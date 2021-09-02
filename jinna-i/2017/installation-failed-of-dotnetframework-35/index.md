@@ -27,11 +27,11 @@ Windows Server 2012 R2(OS)のISOイメージをVMware上の仮想マシンにマ
 
 **Windows Server 2012 R2には.NET Framework 3.5機能のソースファイルは標準でインストールされない**ため、代替ソースパスにOSのインストールメディア内のサイドバイサイドストアフォルダ（例 `E:\sources\sxs`）を指定してあげる必要があります。
 
-<a href="images/installation-failed-of-dotnetframework-35-1.png"><img src="images/installation-failed-of-dotnetframework-35-1.png" alt="" width="647" height="498" class="alignnone size-full wp-image-5571" /></a>
+![](images/installation-failed-of-dotnetframework-35-1.png)
 
 しかしながらインストールを実行すると、以下のエラーがでてしまいます。
 
-<a href="images/installation-failed-of-dotnetframework-35-2.png"><img src="images/installation-failed-of-dotnetframework-35-2.png" alt="" width="798" height="567" class="alignnone size-full wp-image-5578" /></a>
+![](images/installation-failed-of-dotnetframework-35-2.png)
 
 > 1つ以上の役割、役割サービス、または機能のインストールに失敗しました。ソースファイルが見つかりませんでした。役割と機能の追加ウィザードの新しいセッションで役割、役割サービス、または機能のインストールを再実行し、ウィザードの[確認]ページで[代替ソースパスの指定]をクリックして、インストールに必要なソースファイルの有効な場所を指定してください。指定する場所は、インストール先サーバーのコンピューターアカウントによってアクセスできる必要があります。
 
@@ -49,7 +49,7 @@ Microsoftのサポートサイトによると、Dismコマンドを使用して�
 
 順調かと思えましたが「機能を有効にしています」が66.2%で止まってしまい、エラーがでました。
 
-<a href="images/installation-failed-of-dotnetframework-35-3.png"><img src="images/installation-failed-of-dotnetframework-35-3.png" alt="" width="673" height="491" class="alignnone size-full wp-image-5573" /></a>
+![](images/installation-failed-of-dotnetframework-35-3.png)
 
 エラーコード：0x800f081f
 
@@ -61,7 +61,7 @@ Microsoftのサポートサイトによると、Dismコマンドを使用して�
 
 コピーしていると**無効な MS-DOS ファンクションです**とダイアログが表示され、ファイルのコピーができません。
 
-<a href="images/installation-failed-of-dotnetframework-35-4.png"><img src="images/installation-failed-of-dotnetframework-35-4.png" alt="" width="464" height="266" class="alignnone size-full wp-image-5574" /></a>
+![](images/installation-failed-of-dotnetframework-35-4.png)
 
 今回に限った話かは不明ですが、**VMwareの機能でISOをマウントした場合、ファイル単位のコピーができないようです**。
 
@@ -77,16 +77,16 @@ Microsoftのサポートサイトによると、Dismコマンドを使用して�
 `E:\sources\sxs` → `C:\Users\ユーザー名\Desktop\sxs`
 
 役割と機能の追加ウィザードで、**.NET Framework 3.5 Features**を選択します。
-<a href="images/installation-failed-of-dotnetframework-35-5.png"><img src="images/installation-failed-of-dotnetframework-35-5.png" alt="" width="798" height="566" class="alignnone size-full wp-image-5597" /></a>
+![](images/installation-failed-of-dotnetframework-35-5.png)
 
 **代替ソース パスの指定**をクリックします。
-<a href="images/installation-failed-of-dotnetframework-35-6.png"><img src="images/installation-failed-of-dotnetframework-35-6.png" alt="" width="797" height="563" class="alignnone size-full wp-image-5598" /></a>
+![](images/installation-failed-of-dotnetframework-35-6.png)
 
 パスは先ほどコピーしてきたフォルダ `C:\Users\ユーザー名\Desktop\sxs` を指定します。
-<a href="images/installation-failed-of-dotnetframework-35-7.png"><img src="images/installation-failed-of-dotnetframework-35-7.png" alt="" width="648" height="495" class="alignnone size-full wp-image-5599" /></a>
+![](images/installation-failed-of-dotnetframework-35-7.png)
 
 あとはインストールが完了するのを待つだけです。
-<a href="images/installation-failed-of-dotnetframework-35-8.png"><img src="images/installation-failed-of-dotnetframework-35-8.png" alt="" width="799" height="565" class="alignnone size-full wp-image-5575" /></a>
+![](images/installation-failed-of-dotnetframework-35-8.png)
 
 インストールが完了したら、先ほどコピーしてきたsxsフォルダは削除しても問題ありません。
 

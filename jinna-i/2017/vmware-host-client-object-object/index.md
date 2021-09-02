@@ -9,7 +9,7 @@ tags: [VMware, ESXi, もくもく会, 仮想化技術]
 
 VMware Host Clientからポートフォワーディングで接続したESXiにログインしようとすると、**object Object** と表示されてログインできない現象が発生しました。
 
-<a href="images/vmware-host-client-object-object-1.png"><img src="images/vmware-host-client-object-object-1.png" alt="" width="888" height="581" class="alignnone size-full wp-image-6085" /></a>
+![](images/vmware-host-client-object-object-1.png)
 
 原因の究明はできてませんが、回避方法を紹介します。
 
@@ -41,7 +41,7 @@ VMware Host Clientからポートフォワーディングで接続したESXiに�
 
 これで正常にログインできるようになったはずです。
 
-<a href="images/vmware-host-client-object-object-2.png"><img src="images/vmware-host-client-object-object-2.png" alt="" width="1185" height="668" class="alignnone size-full wp-image-6096" /></a>
+![](images/vmware-host-client-object-object-2.png)
 
 原因をご存知のかたはコメントいただけると幸いです。
 

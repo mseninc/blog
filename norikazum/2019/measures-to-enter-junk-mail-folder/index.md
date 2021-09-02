@@ -11,7 +11,7 @@ tags: [Gmail, GSuite, その他, ライフハック]
 
 内容としては、 **以前迷惑メールと判断されたメールに酷似しています。** というものですがメールの内容も特に問題になるようなことはありませんでした。
 
-<a href="images/measures-to-enter-junk-mail-folder-1.png"><img src="images/measures-to-enter-junk-mail-folder-1.png" alt="" width="1457" height="141" class="alignnone size-full wp-image-11067" /></a>
+![](images/measures-to-enter-junk-mail-folder-1.png)
 
 10/21にGoogleに問い合わせをしたところ、
 
@@ -76,13 +76,13 @@ Google から提示された迷惑メール分類を防ぐ方法を下記に転�
 目視で気づけるように、 取り急ぎ **迷惑メールフォルダを左ペインの上の方に上げる** 対策を実施しました。
 
 1. 迷惑メールフォルダをドラッグします
-<a href="images/measures-to-enter-junk-mail-folder-2.png"><img src="images/measures-to-enter-junk-mail-folder-2.png" alt="" width="332" height="893" class="alignnone size-full wp-image-11076" /></a>
+![](images/measures-to-enter-junk-mail-folder-2.png)
 
 1. 受信トレイ付近にドロップします
-<a href="images/measures-to-enter-junk-mail-folder-3.png"><img src="images/measures-to-enter-junk-mail-folder-3.png" alt="" width="361" height="146" class="alignnone size-full wp-image-11077" /></a>
+![](images/measures-to-enter-junk-mail-folder-3.png)
 
 1. これで移動します。ただ、 **下書きフォルダの下までしか移動できない** 仕様のようです
-<a href="images/measures-to-enter-junk-mail-folder-4.png"><img src="images/measures-to-enter-junk-mail-folder-4.png" alt="" width="331" height="352" class="alignnone size-full wp-image-11078" /></a>
+![](images/measures-to-enter-junk-mail-folder-4.png)
 
 くれぐれも見落としにご注意ください・・・。
 他の有効な対策など、進展があれば記事を更新したいと思います。

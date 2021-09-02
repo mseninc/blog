@@ -9,7 +9,7 @@ tags: [イベントログ, Elasticsearch, Kibana, Windows]
 
 ## 構成
 
-<img src="images/visualize-windows-event-log-winlogbeat-elasticsearch-kibana-1.png" alt="Winlogbeat+Elasticsearch+Kibana構成図" width="977" height="527" class="aligncenter size-full wp-image-8332" />
+![Winlogbeat+Elasticsearch+Kibana構成図](images/visualize-windows-event-log-winlogbeat-elasticsearch-kibana-1.png)
 
 - イベントログの収集: [Winlogbeat](https://www.elastic.co/jp/products/beats/winlogbeat) 6.4.3
 - データストア・検索: [Elasticsearch](https://www.elastic.co/jp/products/elasticsearch) 6.4.3
@@ -94,7 +94,7 @@ Elasticsearch は **`http://localhost:9200/`** にアクセスして下記のよ
 
 Kibana は **`http://localhost:5601`** にアクセスすれば GUI が表示されるはずです。
 
-<img src="images/visualize-windows-event-log-winlogbeat-elasticsearch-kibana-2.png" alt="起動した Kibana" width="1318" height="681" class="aligncenter size-full wp-image-8307" />
+![起動した Kibana](images/visualize-windows-event-log-winlogbeat-elasticsearch-kibana-2.png)
 
 
 ## Winlogbeat のインストール
@@ -186,7 +186,7 @@ PS C:\winlogbeat> Start-Service winlogbeat
 
 これでサービスとして Winlogbeat が起動しているはずです。
 
-<img src="images/visualize-windows-event-log-winlogbeat-elasticsearch-kibana-3.png" alt="起動した Winlogbeat" width="1296" height="742" class="aligncenter size-full wp-image-8301" />
+![起動した Winlogbeat](images/visualize-windows-event-log-winlogbeat-elasticsearch-kibana-3.png)
 
 停止させるときは Stop に変えるだけです。
 
@@ -198,20 +198,20 @@ PS C:\winlogbeat> Stop-Service winlogbeat
 
 [Management] → [Index patterns] → [Create index pattern] で [Index pattern] に `winlogbeat-*` と入力し、 [Next step] をクリックします。
 
-<img src="images/visualize-windows-event-log-winlogbeat-elasticsearch-kibana-4.png" alt="Kibana Create Index Pattern" width="1198" height="830" class="aligncenter size-full wp-image-8313" />
+![Kibana Create Index Pattern](images/visualize-windows-event-log-winlogbeat-elasticsearch-kibana-4.png)
 
 [Time Filter field name] に `@timestamp` を指定し、 [Create Index pattern] をクリックすれば設定は完了です。
 
-<img src="images/visualize-windows-event-log-winlogbeat-elasticsearch-kibana-5.png" alt="Kibana Create Index Pattern" width="1198" height="830" class="aligncenter size-full wp-image-8314" />
+![Kibana Create Index Pattern](images/visualize-windows-event-log-winlogbeat-elasticsearch-kibana-5.png)
 
 [Discover] でログが確認できるようになるはずです。
 (インデックスされるまでしばらく時間がかかるかもしれません）
 
-<img src="images/visualize-windows-event-log-winlogbeat-elasticsearch-kibana-6.png" alt="Kibana ログイン・ログオフイベントの検索結果" width="1335" height="775" class="aligncenter size-full wp-image-8310" />
+![Kibana ログイン・ログオフイベントの検索結果](images/visualize-windows-event-log-winlogbeat-elasticsearch-kibana-6.png)
 
 [Visualize] で円グラフを作ってみました。ログイン (4624) の回数で集計しているので、誰が一番ログインしまくっているかがわかります。
 
-<img src="images/visualize-windows-event-log-winlogbeat-elasticsearch-kibana-7.png" alt="Kibana でログイン回数を円グラフで表してみた" width="1219" height="676" class="aligncenter size-full wp-image-8316" />
+![Kibana でログイン回数を円グラフで表してみた](images/visualize-windows-event-log-winlogbeat-elasticsearch-kibana-7.png)
 
 
 ## 参考サイト

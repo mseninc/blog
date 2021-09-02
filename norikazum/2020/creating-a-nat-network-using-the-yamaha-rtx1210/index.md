@@ -12,7 +12,7 @@ tags: [ネットワーク, YAMAHA, その他の技術]
 
 このようなネットワークイメージです。
 ※IPアドレスは架空のものです。
-<a href="images/creating-a-nat-network-using-the-yamaha-rtx1210-1.png"><img src="images/creating-a-nat-network-using-the-yamaha-rtx1210-1.png" alt="" width="1709" height="523" class="alignnone size-full wp-image-12421" /></a>
+![](images/creating-a-nat-network-using-the-yamaha-rtx1210-1.png)
 
 ## コンフィグファイル
 以下の設定でイメージ図とおりのネットワークが構築できます。

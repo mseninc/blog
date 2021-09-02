@@ -15,7 +15,7 @@ tags: [Webpack, Nuxt.js, Ant Design, Web]
 
 [Ant Design Vue](https://www.antdv.com/docs/vue/introduce/) は **Alibaba** が React 向けに作った [Ant Design](https://ant.design/) の Vue 向けバージョンです。割とほしくなるコンポーネントが揃っており、サイズ感も好みにあったので、試してみることにしました。
 
-<a href="images/nuxt-js-ant-design-vue-customize-css-with-less-1.png"><img src="images/nuxt-js-ant-design-vue-customize-css-with-less-1.png" alt="Ant Design Vue" width="400" height="173" class="aligncenter size-full wp-image-12218" /></a>
+![Ant Design Vue](images/nuxt-js-ant-design-vue-customize-css-with-less-1.png)
 
 Nuxt.js でも `create-nuxt-app` の UI フレームワークの選択肢に入っているので導入しやすいのも特徴です。
 

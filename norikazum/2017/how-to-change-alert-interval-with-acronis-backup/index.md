@@ -21,23 +21,23 @@ Acronis Backup 11.5で紹介しています。
 
 まずは、Acronisの管理コンソールを開きます。
 
-<a href="images/how-to-change-alert-interval-with-acronis-backup-1.png"><img src="images/how-to-change-alert-interval-with-acronis-backup-1.png" alt="" width="300" height="212" class="alignnone size-medium wp-image-3738" /></a>
+![](images/how-to-change-alert-interval-with-acronis-backup-1.png)
 
 アラートメニューを開き設定を開きます。
 
-<a href="images/how-to-change-alert-interval-with-acronis-backup-2.png"><img src="images/how-to-change-alert-interval-with-acronis-backup-2.png" alt="" width="300" height="213" class="alignnone size-medium wp-image-3740" /></a>
+![](images/how-to-change-alert-interval-with-acronis-backup-2.png)
 
 時間ベースのアラートを選択し、5 日以上という部分を変更します。
 以下の画面は標準設定状態です。
 
-<a href="images/how-to-change-alert-interval-with-acronis-backup-3.png"><img src="images/how-to-change-alert-interval-with-acronis-backup-3.png" alt="" width="300" height="237" class="alignnone size-medium wp-image-3741" /></a>
+![](images/how-to-change-alert-interval-with-acronis-backup-3.png)
 
 毎日バックアップを採取している環境のため、1日と設定すると正常にとれているのにも関わらず、アラートが飛ぶことが確認できました。
 
 そのため、少し長く**30時間と設定**しました。
 この機会にその他も併せて変更しました。
 
-<a href="images/how-to-change-alert-interval-with-acronis-backup-4.png"><img src="images/how-to-change-alert-interval-with-acronis-backup-4.png" alt="" width="300" height="232" class="alignnone size-medium wp-image-3745" /></a>
+![](images/how-to-change-alert-interval-with-acronis-backup-4.png)
 
 設定後は OK を押して完了です。
 

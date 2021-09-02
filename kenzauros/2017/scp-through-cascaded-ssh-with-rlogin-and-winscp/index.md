@@ -44,7 +44,7 @@ hogehoge と fumifumi を通して momimomi に SCP で接続します。
 
 WinSCP を起動してログイン画面で新しいサイトをクリックし、右側に最終的に SCP で接続したいホスト (C/momimomi) の情報を入力します。
 
-<a href="images/scp-through-cascaded-ssh-with-rlogin-and-winscp-1.png"><img src="images/scp-through-cascaded-ssh-with-rlogin-and-winscp-1.png" alt="" width="626" height="423" class="aligncenter size-full wp-image-4564" /></a>
+![](images/scp-through-cascaded-ssh-with-rlogin-and-winscp-1.png)
 
 * 転送プロトコル: SCP
 * ホスト名: **C のホスト名または IP アドレス** (ここでは `monimoni.sample.com`)
@@ -54,7 +54,7 @@ WinSCP を起動してログイン画面で新しいサイトをクリックし�
 
 入力が終わったら **設定...** ボタンを押します。高度なサイトの設定画面で、**接続 → プロキシ** を開きます。
 
-<a href="images/scp-through-cascaded-ssh-with-rlogin-and-winscp-2.png"><img src="images/scp-through-cascaded-ssh-with-rlogin-and-winscp-2.png" alt="" width="563" height="459" class="aligncenter size-full wp-image-4565" /></a>
+![](images/scp-through-cascaded-ssh-with-rlogin-and-winscp-2.png)
 
 * プロキシ形式: SOCKS5
 * プロキシホスト名: `localhost`
@@ -63,7 +63,7 @@ WinSCP を起動してログイン画面で新しいサイトをクリックし�
 
 次に **接続 → トンネル** を開きます。
 
-<a href="images/scp-through-cascaded-ssh-with-rlogin-and-winscp-3.png"><img src="images/scp-through-cascaded-ssh-with-rlogin-and-winscp-3.png" alt="" width="563" height="459" class="aligncenter size-full wp-image-4567" /></a>
+![](images/scp-through-cascaded-ssh-with-rlogin-and-winscp-3.png)
 
 * SSHトンネルを経由して接続する にチェック
 * ホスト名: **踏み台 2 (B) の  ホスト名または IP アドレス** (ここでは `fumifumi.sample.com`)

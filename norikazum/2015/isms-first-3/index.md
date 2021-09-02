@@ -12,7 +12,7 @@ MSENの桝田です。
  
 さて、先週の土曜ですがISMS取得講義の第３回が開催されました。
 
-<a href="images/isms-first-3-1.jpg"><img src="images/isms-first-3-1.jpg" alt="" width="169" height="300" class="alignnone size-medium wp-image-4090" /></a>
+![](images/isms-first-3-1.jpg)
 
 毎回同じような写真ですが・・・。
  

@@ -25,7 +25,7 @@ Windows Server 2008 のサポート期限も残すところ1年ほどとなり�
 
 ## 想定環境
 
-<a href="images/switching-domain-controllers-while-keeping-ip-address-and-host-name-1.png"><img src="images/switching-domain-controllers-while-keeping-ip-address-and-host-name-1.png" alt="" width="1121" height="708" class="alignnone size-full wp-image-8496" /></a>
+![](images/switching-domain-controllers-while-keeping-ip-address-and-host-name-1.png)
 
 ### 登場人物
 
@@ -57,7 +57,7 @@ IPアドレス | 192.168.1.1 | 192.168.1.2
 
 #### FSMOをDC2へ転送
 
-<a href="images/switching-domain-controllers-while-keeping-ip-address-and-host-name-2.png"><img src="images/switching-domain-controllers-while-keeping-ip-address-and-host-name-2.png" alt="" width="677" height="714" class="alignnone size-full wp-image-8500" /></a>
+![](images/switching-domain-controllers-while-keeping-ip-address-and-host-name-2.png)
 
 FSMO(操作マスタ)をDC2へ転送しDC1の降格準備をします。
 
@@ -73,7 +73,7 @@ FSMOは以下の5種類です。
 `netdom query fsmo`
 
 #### DC1を降格
-<a href="images/switching-domain-controllers-while-keeping-ip-address-and-host-name-3.png"><img src="images/switching-domain-controllers-while-keeping-ip-address-and-host-name-3.png" alt="" width="473" height="715" class="alignnone size-full wp-image-8505" /></a>
+![](images/switching-domain-controllers-while-keeping-ip-address-and-host-name-3.png)
 
 DC1でドメインコンローラーの降格を行い、ドメインから離脱します。その後、DC1をネットワーク的に遮断するかシャットダウンします。
 
@@ -81,7 +81,7 @@ DC1の離脱後、DNSやOU内にオブジェクトが存在する場合は削除
 
 #### 新DC1の構築
 
-<a href="images/switching-domain-controllers-while-keeping-ip-address-and-host-name-4.png"><img src="images/switching-domain-controllers-while-keeping-ip-address-and-host-name-4.png" alt="" width="1133" height="716" class="alignnone size-full wp-image-8506" /></a>
+![](images/switching-domain-controllers-while-keeping-ip-address-and-host-name-4.png)
 
 新DC1( Windows Server 2016 )を構築しドメイン参加します。
 
@@ -89,7 +89,7 @@ DC1の離脱後、DNSやOU内にオブジェクトが存在する場合は削除
 
 #### 新DC1を昇格
 
-<a href="images/switching-domain-controllers-while-keeping-ip-address-and-host-name-5.png"><img src="images/switching-domain-controllers-while-keeping-ip-address-and-host-name-5.png" alt="" width="1131" height="724" class="alignnone size-full wp-image-8508" /></a>
+![](images/switching-domain-controllers-while-keeping-ip-address-and-host-name-5.png)
 
 新DC1をドメインコントローラーへ昇格します。
 
@@ -99,27 +99,27 @@ DC1の離脱後、DNSやOU内にオブジェクトが存在する場合は削除
 
 #### FSMOを新DC1へ転送
 
-<a href="images/switching-domain-controllers-while-keeping-ip-address-and-host-name-6.png"><img src="images/switching-domain-controllers-while-keeping-ip-address-and-host-name-6.png" alt="" width="1127" height="717" class="alignnone size-full wp-image-8516" /></a>
+![](images/switching-domain-controllers-while-keeping-ip-address-and-host-name-6.png)
 
 FSMOを新DC1へ転送しDC2の降格準備をします。
 
 #### DC2を降格
 
-<a href="images/switching-domain-controllers-while-keeping-ip-address-and-host-name-7.png"><img src="images/switching-domain-controllers-while-keeping-ip-address-and-host-name-7.png" alt="" width="1131" height="719" class="alignnone size-full wp-image-8510" /></a>
+![](images/switching-domain-controllers-while-keeping-ip-address-and-host-name-7.png)
 
 DC2でドメインコンローラーの降格を行い、ドメインから離脱します。その後、DC2をネットワーク的に遮断するかシャットダウンします。
 
 DC2の離脱後、DNSやOU内にオブジェクトが存在する場合は削除しておきましょう。
 
 #### 新DC2の構築
-<a href="images/switching-domain-controllers-while-keeping-ip-address-and-host-name-8.png"><img src="images/switching-domain-controllers-while-keeping-ip-address-and-host-name-8.png" alt="" width="658" height="718" class="alignnone size-full wp-image-8511" /></a>
+![](images/switching-domain-controllers-while-keeping-ip-address-and-host-name-8.png)
 
 新DC2( Windows Server 2016 )を構築しドメイン参加します。
 
 このとき、IPアドレスやホスト名は旧DC2( Windows Server 2008 )の設定を引き継ぎます。
 
 #### 新DC2を昇格
-<a href="images/switching-domain-controllers-while-keeping-ip-address-and-host-name-9.png"><img src="images/switching-domain-controllers-while-keeping-ip-address-and-host-name-9.png" alt="" width="482" height="723" class="alignnone size-full wp-image-8512" /></a>
+![](images/switching-domain-controllers-while-keeping-ip-address-and-host-name-9.png)
 
 新DC1をドメインコントローラーへ昇格します。
 

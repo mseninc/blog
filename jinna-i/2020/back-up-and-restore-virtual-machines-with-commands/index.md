@@ -14,7 +14,7 @@ ESXi へ SSH ログインを実施しますので、事前に **`SSH`** と **`E
 
 ## 想定環境とシナリオ
 
-<a href="images/back-up-and-restore-virtual-machines-with-commands-1.png"><img src="images/back-up-and-restore-virtual-machines-with-commands-1.png" alt="" width="393" height="421" class="alignnone size-full wp-image-14034" /></a>
+![](images/back-up-and-restore-virtual-machines-with-commands-1.png)
 
 - 仮想化環境: VMware vSphere 6.7 u3
 - データストアは下記の2つをマウント
@@ -186,15 +186,15 @@ Get Snapshot:
 
 同じ名前で仮想マシンを登録する場合は、一度インベントリーから削除しておきましょう。
 
-<a href="images/back-up-and-restore-virtual-machines-with-commands-2.png"><img src="images/back-up-and-restore-virtual-machines-with-commands-2.png" alt="" width="413" height="817" class="alignnone size-full wp-image-14030" /></a>
+![](images/back-up-and-restore-virtual-machines-with-commands-2.png)
 
 データストアブラウザから仮想マシンを再登録します。
 
-<a href="images/back-up-and-restore-virtual-machines-with-commands-3.png"><img src="images/back-up-and-restore-virtual-machines-with-commands-3.png" alt="" width="1410" height="1039" class="alignnone size-full wp-image-14031" /></a>
+![](images/back-up-and-restore-virtual-machines-with-commands-3.png)
 
 仮想マシンを起動すると質問が聞かれますので、「コピーしました」を選択すれば OK です。
 
-<a href="images/back-up-and-restore-virtual-machines-with-commands-4.png"><img src="images/back-up-and-restore-virtual-machines-with-commands-4.png" alt="" width="862" height="367" class="alignnone size-full wp-image-14032" /></a>
+![](images/back-up-and-restore-virtual-machines-with-commands-4.png)
 
 以上でリストアは完了です。
 

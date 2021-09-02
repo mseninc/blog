@@ -18,35 +18,35 @@ tags: [Windows 10, Windows Server, Windows]
 
 今回のテーマは知らない人はいないくらい、いつもデスクトップの左上に鎮座している例のごみ箱です。
 
-<a href="images/how-to-clear-the-trash-using-the-clear-recyclebin-cmdlet-1.png"><img src="images/how-to-clear-the-trash-using-the-clear-recyclebin-cmdlet-1.png" alt="" width="74" height="78" class="alignnone size-full wp-image-13596" /></a>
+![](images/how-to-clear-the-trash-using-the-clear-recyclebin-cmdlet-1.png)
 
 ファイルを削除したり、ドラッグ&ドロップでごみ箱にファイルを投げ入れたりすると一時的に格納しておくことができる便利な**仮想ディレクトリ**です。
 
 ごみ箱をエクスプローラーで開いてみても、パスは [ごみ箱] となっているだけで実際はどこにあるのかわかりません。正確には知る必要がないと言った方がよいかもしれないです。
 
-<a href="images/how-to-clear-the-trash-using-the-clear-recyclebin-cmdlet-2.png"><img src="images/how-to-clear-the-trash-using-the-clear-recyclebin-cmdlet-2.png" alt="" width="698" height="436" class="alignnone size-full wp-image-13598" /></a>
+![](images/how-to-clear-the-trash-using-the-clear-recyclebin-cmdlet-2.png)
 
 ごみ箱の物理パスは `<drive>\$Recycle.Bin\<SID>` です。**ごみ箱はドライブごとに用意されており、そのドライブごとのごみ箱を結合したものがデスクトップの左上に鎮座している例のごみ箱となるわけです**。先に仮想ディレクトリと述べた理由がこれにあたります。
 
-<a href="images/how-to-clear-the-trash-using-the-clear-recyclebin-cmdlet-3.png"><img src="images/how-to-clear-the-trash-using-the-clear-recyclebin-cmdlet-3.png" alt="" width="793" height="473" class="alignnone size-full wp-image-13601" /></a>
+![](images/how-to-clear-the-trash-using-the-clear-recyclebin-cmdlet-3.png)
 
 ごみ箱の実体はデフォルトでは表示されないようになっているので、表示させたい場合は下記の手順を実施してください。
 
 エクスプローラーを起動し、フォルダーオプションから [保護されたオペレーティングシステムファイルを表示しない(推奨)] のチェックを外します。
 
-<a href="images/how-to-clear-the-trash-using-the-clear-recyclebin-cmdlet-4.png"><img src="images/how-to-clear-the-trash-using-the-clear-recyclebin-cmdlet-4.png" alt="" width="445" height="543" class="alignnone size-full wp-image-13603" /></a>
+![](images/how-to-clear-the-trash-using-the-clear-recyclebin-cmdlet-4.png)
 
 [表示] タブから [隠しファイル] のチェックを入れます。
 
-<a href="images/how-to-clear-the-trash-using-the-clear-recyclebin-cmdlet-5.png"><img src="images/how-to-clear-the-trash-using-the-clear-recyclebin-cmdlet-5.png" alt="" width="1128" height="154" class="alignnone size-full wp-image-13604" /></a>
+![](images/how-to-clear-the-trash-using-the-clear-recyclebin-cmdlet-5.png)
 
 C ドライブにアクセスするとごみ箱が表示されていること確認できます。
 
-<a href="images/how-to-clear-the-trash-using-the-clear-recyclebin-cmdlet-6.png"><img src="images/how-to-clear-the-trash-using-the-clear-recyclebin-cmdlet-6.png" alt="" width="773" height="191" class="alignnone size-full wp-image-13605" /></a>
+![](images/how-to-clear-the-trash-using-the-clear-recyclebin-cmdlet-6.png)
 
 `s-15-21-***` と始まるのが SID と呼ばれ、ここでは他のユーザーのごみ箱がそのように表示されています。基本的には他のユーザーのごみ箱にはアクセスできないようになっています。
 
-<a href="images/how-to-clear-the-trash-using-the-clear-recyclebin-cmdlet-7.png"><img src="images/how-to-clear-the-trash-using-the-clear-recyclebin-cmdlet-7.png" alt="" width="762" height="285" class="alignnone size-full wp-image-13606" /></a>
+![](images/how-to-clear-the-trash-using-the-clear-recyclebin-cmdlet-7.png)
 
 **ここで重要なのはごみ箱はユーザープロファイルに依存しないということです**。本来、ユーザー個人の領域は `C:\users\<ユーザー名>` 配下に格納されますが、ごみ箱に関してはドライブごとに保持されるため、ユーザープロファイルには依存しません。
 
@@ -103,7 +103,7 @@ Clear-RecycleBin -Force
 
 [PowerShell スクリプト] タブを選択し、作成したスクリプト `ClearRecycleBin.ps1` を追加します。
 
-<a href="images/how-to-clear-the-trash-using-the-clear-recyclebin-cmdlet-8.png"><img src="images/how-to-clear-the-trash-using-the-clear-recyclebin-cmdlet-8.png" alt="" width="469" height="520" class="alignnone size-full wp-image-13654" /></a>
+![](images/how-to-clear-the-trash-using-the-clear-recyclebin-cmdlet-8.png)
 
 これでユーザーがログオフしたときにごみ箱が削除される動作となります。
 

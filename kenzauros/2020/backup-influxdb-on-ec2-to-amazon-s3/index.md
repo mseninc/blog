@@ -36,69 +36,69 @@ Amazon EC2 インスタンスで **InfluxDB** をテスト運用しています�
 
 **IAM (Identity and Access Management) の [グループ設定](https://console.aws.amazon.com/iam/home#/groups)** から [新しいグループの作成] を選択します。
 
-<a href="images/backup-influxdb-on-ec2-to-amazon-s3-1.png"><img src="images/backup-influxdb-on-ec2-to-amazon-s3-1.png" alt="" width="1161" height="708" class="aligncenter size-full wp-image-13693" /></a>
+![](images/backup-influxdb-on-ec2-to-amazon-s3-1.png)
 
 グループ名を入力します。ここでは `S3Backup` としました。
 
-<a href="images/backup-influxdb-on-ec2-to-amazon-s3-2.png"><img src="images/backup-influxdb-on-ec2-to-amazon-s3-2.png" alt="" width="1161" height="344" class="aligncenter size-full wp-image-13694" /></a>
+![](images/backup-influxdb-on-ec2-to-amazon-s3-2.png)
 
 フィルターに `S3` を入力して `AmazonS3FullAccess` にチェックをいれます。
 
-<a href="images/backup-influxdb-on-ec2-to-amazon-s3-3.png"><img src="images/backup-influxdb-on-ec2-to-amazon-s3-3.png" alt="" width="1161" height="487" class="aligncenter size-full wp-image-13695" /></a>
+![](images/backup-influxdb-on-ec2-to-amazon-s3-3.png)
 
 確認画面で問題なければ、 [グループの作成] をクリックしてグループを作成します。
 
-<a href="images/backup-influxdb-on-ec2-to-amazon-s3-4.png"><img src="images/backup-influxdb-on-ec2-to-amazon-s3-4.png" alt="" width="1161" height="487" class="aligncenter size-full wp-image-13696" /></a>
+![](images/backup-influxdb-on-ec2-to-amazon-s3-4.png)
 
 ### IAM ユーザーの作成
 
 **IAM の [ユーザー設定](https://console.aws.amazon.com/iam/home#/users)** から [ユーザーを追加] を選択します。
 
-<a href="images/backup-influxdb-on-ec2-to-amazon-s3-5.png"><img src="images/backup-influxdb-on-ec2-to-amazon-s3-5.png" alt="" width="1161" height="487" class="aligncenter size-full wp-image-13697" /></a>
+![](images/backup-influxdb-on-ec2-to-amazon-s3-5.png)
 
 ユーザー名を入力します。ここでは `s3backup` としました。アクセスの種類は「プログラムによるアクセス」だけを選択します。
 
-<a href="images/backup-influxdb-on-ec2-to-amazon-s3-6.png"><img src="images/backup-influxdb-on-ec2-to-amazon-s3-6.png" alt="" width="1161" height="607" class="aligncenter size-full wp-image-13698" /></a>
+![](images/backup-influxdb-on-ec2-to-amazon-s3-6.png)
 
 アクセス許可の設定ではユーザーをグループに追加します。先に作成した `S3Backup` グループにチェックをいれます。
 
-<a href="images/backup-influxdb-on-ec2-to-amazon-s3-7.png"><img src="images/backup-influxdb-on-ec2-to-amazon-s3-7.png" alt="" width="1161" height="670" class="aligncenter size-full wp-image-13699" /></a>
+![](images/backup-influxdb-on-ec2-to-amazon-s3-7.png)
 
 タグの追加画面では特になにもせず、進みます。
 
-<a href="images/backup-influxdb-on-ec2-to-amazon-s3-8.png"><img src="images/backup-influxdb-on-ec2-to-amazon-s3-8.png" alt="" width="1161" height="517" class="aligncenter size-full wp-image-13700" /></a>
+![](images/backup-influxdb-on-ec2-to-amazon-s3-8.png)
 
 設定内容を確認して [ユーザーの作成] をクリックするとユーザーが作成されます。
 
-<a href="images/backup-influxdb-on-ec2-to-amazon-s3-9.png"><img src="images/backup-influxdb-on-ec2-to-amazon-s3-9.png" alt="" width="1161" height="615" class="aligncenter size-full wp-image-13702" /></a>
+![](images/backup-influxdb-on-ec2-to-amazon-s3-9.png)
 
 ユーザーの追加が成功したら、**「アクセスキー ID」と「シークレットアクセスキー」**をメモしておきます。このアクセスキーの流出にはくれぐれもご注意ください。
 
-<a href="images/backup-influxdb-on-ec2-to-amazon-s3-10.png"><img src="images/backup-influxdb-on-ec2-to-amazon-s3-10.png" alt="" width="1161" height="615" class="aligncenter size-full wp-image-13710" /></a>
+![](images/backup-influxdb-on-ec2-to-amazon-s3-10.png)
 
 ### S3 バケットの作成
 
 [S3 の管理コンソール](https://s3.console.aws.amazon.com/s3/home) を開き、 [バケットを作成する」を押下します。
 
-<a href="images/backup-influxdb-on-ec2-to-amazon-s3-11.png"><img src="images/backup-influxdb-on-ec2-to-amazon-s3-11.png" alt="" width="1161" height="615" class="aligncenter size-full wp-image-13711" /></a>
+![](images/backup-influxdb-on-ec2-to-amazon-s3-11.png)
 
 バケット名を設定します。ここでは `influxdb-backup-tmp` とします (すみません、画像は `influxdb-backup` になっています)。リージョンはお好きなところを選択してください。
 
 なお、バケット名は全ユーザーでユニークなもののため、 `influxdb-backup-tmp` はもう使用できないと思います ([参考](https://aws.amazon.com/jp/premiumsupport/knowledge-center/s3-error-bucket-already-exists/))。お好きなバケット名をつけてください。
 
-<a href="images/backup-influxdb-on-ec2-to-amazon-s3-12.png"><img src="images/backup-influxdb-on-ec2-to-amazon-s3-12.png" alt="" width="1161" height="666" class="aligncenter size-full wp-image-13712" /></a>
+![](images/backup-influxdb-on-ec2-to-amazon-s3-12.png)
 
 オプションとアクセス権限はとりあえずデフォルトのままでよいと思います。
 
-<a href="images/backup-influxdb-on-ec2-to-amazon-s3-13.png"><img src="images/backup-influxdb-on-ec2-to-amazon-s3-13.png" alt="" width="1161" height="905" class="aligncenter size-full wp-image-13720" /></a>
+![](images/backup-influxdb-on-ec2-to-amazon-s3-13.png)
 
 設定内容を確認して [バケットを作成] をクリックするとバケットが作成されます。
 
-<a href="images/backup-influxdb-on-ec2-to-amazon-s3-14.png"><img src="images/backup-influxdb-on-ec2-to-amazon-s3-14.png" alt="" width="1161" height="905" class="aligncenter size-full wp-image-13723" /></a>
+![](images/backup-influxdb-on-ec2-to-amazon-s3-14.png)
 
 新しいバケットが確認できれば S3 側の準備は完了です。
 
-<a href="images/backup-influxdb-on-ec2-to-amazon-s3-15.png"><img src="images/backup-influxdb-on-ec2-to-amazon-s3-15.png" alt="" width="1161" height="570" class="aligncenter size-full wp-image-13715" /></a>
+![](images/backup-influxdb-on-ec2-to-amazon-s3-15.png)
 
 ## EC2 側でバックアップを設定する
 

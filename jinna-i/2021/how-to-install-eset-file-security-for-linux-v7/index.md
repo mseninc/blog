@@ -62,7 +62,7 @@ To uninstall ESET File Security, use:
 
 製品認証キーはESET Endpoint Protection Standard ユーザーズサイトに記載されています。
 
-<a href="images/how-to-install-eset-file-security-for-linux-v7-1.png"><img src="images/how-to-install-eset-file-security-for-linux-v7-1.png" alt="" width="982" height="589" class="alignnone size-full wp-image-15569" /></a>
+![](images/how-to-install-eset-file-security-for-linux-v7-1.png)
 
 インターネットにアクセスできる環境であれば、下記のコマンドを実行するとアクティベーションされます。
 
@@ -74,7 +74,7 @@ To uninstall ESET File Security, use:
 
 [ESET License Administrator](https://ela.eset.com/) から、アクティベーションされたことを確認できました。
 
-<a href="images/how-to-install-eset-file-security-for-linux-v7-2.png"><img src="images/how-to-install-eset-file-security-for-linux-v7-2.png" alt="" width="1852" height="539" class="alignnone size-full wp-image-15570" /></a>
+![](images/how-to-install-eset-file-security-for-linux-v7-2.png)
 
 
 ## Web コンソールへのアクセス
@@ -95,11 +95,11 @@ Web ブラウザから `https://jinna-i:9443` にアクセスします。
 
 おぉー、なんかかっこいいですね。先ほどメモったアクセス情報でログインします。
 
-<a href="images/how-to-install-eset-file-security-for-linux-v7-3.jpg"><img src="images/how-to-install-eset-file-security-for-linux-v7-3.jpg" alt="" width="1460" height="1036" class="alignnone size-full wp-image-15572" /></a>
+![](images/how-to-install-eset-file-security-for-linux-v7-3.jpg)
 
 ログイン後の画面
 
-<a href="images/how-to-install-eset-file-security-for-linux-v7-4.png"><img src="images/how-to-install-eset-file-security-for-linux-v7-4.png" alt="" width="1460" height="1036" class="alignnone size-full wp-image-15573" /></a>
+![](images/how-to-install-eset-file-security-for-linux-v7-4.png)
 
 
 ### Secure Boot は無効に
@@ -108,16 +108,16 @@ Web ブラウザから `https://jinna-i:9443` にアクセスします。
 
 > Secure Boot はサポートされていません。BIOS/UEFI で無効にしてください。
 
-<a href="images/how-to-install-eset-file-security-for-linux-v7-5.png"><img src="images/how-to-install-eset-file-security-for-linux-v7-5.png" alt="" width="1460" height="1036" class="alignnone size-full wp-image-15574" /></a>
+![](images/how-to-install-eset-file-security-for-linux-v7-5.png)
 
 今回は VMware vSphere 環境でしたので、仮想マシンの設定から Secure Boot を無効化し再起動します。
 ※仮想マシンを停止した状態で設定を変更します。
 
-<a href="images/how-to-install-eset-file-security-for-linux-v7-6.png"><img src="images/how-to-install-eset-file-security-for-linux-v7-6.png" alt="" width="868" height="880" class="alignnone size-full wp-image-15575" /></a>
+![](images/how-to-install-eset-file-security-for-linux-v7-6.png)
 
 再度ログインするとエラー表示が消えました。
 
-<a href="images/how-to-install-eset-file-security-for-linux-v7-7.png"><img src="images/how-to-install-eset-file-security-for-linux-v7-7.png" alt="" width="1460" height="1036" class="alignnone size-full wp-image-15585" /></a>
+![](images/how-to-install-eset-file-security-for-linux-v7-7.png)
 
 ## リアルタイム保護のテスト
 
@@ -127,7 +127,7 @@ Web ブラウザから `https://jinna-i:9443` にアクセスします。
 
 ダウンロードされた瞬間に削除されました。
 
-<a href="images/how-to-install-eset-file-security-for-linux-v7-8.png"><img src="images/how-to-install-eset-file-security-for-linux-v7-8.png" alt="" width="1831" height="1036" class="alignnone size-full wp-image-15577" /></a>
+![](images/how-to-install-eset-file-security-for-linux-v7-8.png)
 
 ## v7 からウイルス検知時のメール通報機能が廃止
 
@@ -150,18 +150,18 @@ v7 からウイルス検知時のメール通報機能が廃止されたらし�
 
 実際の画面では下記になります。
 
-<a href="images/how-to-install-eset-file-security-for-linux-v7-9.png"><img src="images/how-to-install-eset-file-security-for-linux-v7-9.png" alt="" width="1597" height="1059" class="alignnone size-full wp-image-17632" /></a>
+![](images/how-to-install-eset-file-security-for-linux-v7-9.png)
 
 実際に届くメールはこんな感じです。
 
-<a href="images/how-to-install-eset-file-security-for-linux-v7-10.png"><img src="images/how-to-install-eset-file-security-for-linux-v7-10.png" alt="" width="664" height="343" class="alignnone size-full wp-image-17635" /></a>
+![](images/how-to-install-eset-file-security-for-linux-v7-10.png)
 
 **2. コマンドでウイルス検知時のログを出力する**
 ESET File Security for Linux がインストールされたマシンから下記のコマンドを実行することで、ウイルス検知時のログを csv 出力できます。
 
 `# /opt/eset/efs/bin/lslog -dc`　
 
-<a href="images/how-to-install-eset-file-security-for-linux-v7-11.png"><img src="images/how-to-install-eset-file-security-for-linux-v7-11.png" alt="" width="1011" height="113" class="alignnone size-full wp-image-17633" /></a>
+![](images/how-to-install-eset-file-security-for-linux-v7-11.png)
 
 ただし、こちらはあくまでログの出力のみなので、通報する仕組みは別途考えなければいけません。
 Zabbix などから監視する場合でもログファイルではないので、一旦コマンドでどこかのファイルに吐き出し、そのファイルを監視するなどといった工夫が必要です。

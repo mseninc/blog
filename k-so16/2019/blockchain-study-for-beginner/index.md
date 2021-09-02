@@ -47,14 +47,14 @@ tags: [ブロックチェーン, その他, 〇〇奮闘記]
 1. 条件を満たす乱数を見つけたマイナーは、新たにトランザクションのブロックを生成してチェーンに繋ぎ、コミュニティ全体に拡散する
 1. 新たに生成されたブロックを受け取ったユーザーは、ブロックの正当性をハッシュ値から検証する
 
-[caption id="attachment_9771" align="aligncenter" width="382"]<img src="images/blockchain-study-for-beginner-1.png" alt="" width="382" height="222" class="size-full wp-image-9771" />図1.3.1. マークル木の生成[/caption]
+![](images/blockchain-study-for-beginner-1.png)
 
-[caption id="attachment_9772" align="aligncenter" width="589"]<img src="images/blockchain-study-for-beginner-2.png" alt="" width="589" height="182" class="size-full wp-image-9772" />図1.3.2. ブロックチェーンの生成[/caption]
+![](images/blockchain-study-for-beginner-2.png)
 
 ### ブロックチェーン上の記録が書き換え不可能な理由
 ブロックチェーンでは、P2P[^p2p]ネットワークにおいて、トランザクションがコミュニティ全体に拡散されます。ここで、トランザクションの内容を書き換えると、トランザクションのハッシュ値が変わります。すると、図1.3.1で求めたマークルルートの値も異なったものとなり、整合性が取れなくなります。書き換えようとすると、再度マークルルートを求め、条件を満たす乱数を探さなければなりません。一般的に、ハッシュ関数の出力が同じになるような、異なる入力値を求めることは困難です。このことから、ブロックチェーン上のトランザクションの書き換えは不可能といえます。
 
-[caption id="attachment_9775" align="aligncenter" width="426"]<img src="images/blockchain-study-for-beginner-3.png" alt="" width="426" height="211" class="size-full wp-image-9775" /> コミュニティ全体にP2Pネットワークでトランザクションが共有される[/caption]
+![](images/blockchain-study-for-beginner-3.png)
 
 
 ## Blockchain 2.0

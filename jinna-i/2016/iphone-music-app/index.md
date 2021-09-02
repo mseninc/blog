@@ -31,14 +31,14 @@ tags: [iPhone, iTunes, その他, ライフハック]
 これはiPhone 4S(iOS 6) → iPhone 5S(iOS 7)のときにはまりました。
 
 iPhoneの設定から「ミュージック」をタップします。
-<img src="images/iphone-music-app-1.png" alt="j_iphone_002" width="254" height="450" class="alignnone size-medium wp-image-2769" />
+![j_iphone_002](images/iphone-music-app-1.png)
 
 設定画面が表示されるので「アルバムを並べ替え」をタップします。
-<img src="images/iphone-music-app-2.png" alt="j_iphone_003" width="254" height="450" class="alignnone size-medium wp-image-2774" />
+![j_iphone_003](images/iphone-music-app-2.png)
 
 タイトル順になっていることを確認します。
 アーティスト順になっている場合は、タイトル順に変更しましょう。
-<img src="images/iphone-music-app-3.png" alt="j_iphone_004" width="254" height="450" class="alignnone size-medium wp-image-2775" />
+![j_iphone_004](images/iphone-music-app-3.png)
 
 
 ## コンピレーションのチェックがはずれているか
@@ -47,11 +47,11 @@ iPhoneの設定から「ミュージック」をタップします。
 
 iPhoneに同期しているプレイリストを開きます。
 該当する楽曲を右クリックし「プロパティ」をクリックします。
-<img src="images/iphone-music-app-4.png" alt="j_iphone_0011" width="600" height="352" class="alignnone size-medium wp-image-2821" />
+![j_iphone_0011](images/iphone-music-app-4.png)
 
 「さまざまなアーティストの曲のコンピレーションアルバム」のチェックがはずれているか確認します。
 チェックが入っている場合は、はずしてOKボタンをクリックします。
-<img src="images/iphone-music-app-5.png" alt="j_iphone_012" width="536" height="600" class="alignnone size-medium wp-image-2823" />
+![j_iphone_012](images/iphone-music-app-5.png)
 
 なお、iTunesは複数楽曲のプロパティを同時に変更できますので、以下の小技を駆使してらくらく変更しちゃいましょう。
 **・任意の楽曲を選択**　

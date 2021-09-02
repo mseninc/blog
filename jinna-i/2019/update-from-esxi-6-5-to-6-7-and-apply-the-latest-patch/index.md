@@ -26,33 +26,33 @@ ESXi 6.7 Releasebuild-15018017
 
 [MyVMware](https://my.vmware.com/jp/web/vmware/login) へログインし、製品のダウンロードから **VMware vSphere Hypervisor (ESXi) Offline Bundle** をダウンロードしておきます。
 
-<a href="images/update-from-esxi-6-5-to-6-7-and-apply-the-latest-patch-1.png"><img src="images/update-from-esxi-6-5-to-6-7-and-apply-the-latest-patch-1.png" alt="" width="1650" height="1134" class="alignnone size-full wp-image-11510" /></a>
+![](images/update-from-esxi-6-5-to-6-7-and-apply-the-latest-patch-1.png)
 
 ダウンロードしたファイルは ESXi のデータストアへアップロードします。
 今回は **depot** というフォルダを作成し、その中にアップロードしました。
 ※ ESXi に SCP で直接アップロードしてもよいです。お好きな方で。
 
-<a href="images/update-from-esxi-6-5-to-6-7-and-apply-the-latest-patch-2.png"><img src="images/update-from-esxi-6-5-to-6-7-and-apply-the-latest-patch-2.png" alt="" width="952" height="518" class="alignnone size-full wp-image-11514" /></a>
+![](images/update-from-esxi-6-5-to-6-7-and-apply-the-latest-patch-2.png)
 
-<a href="images/update-from-esxi-6-5-to-6-7-and-apply-the-latest-patch-3.png"><img src="images/update-from-esxi-6-5-to-6-7-and-apply-the-latest-patch-3.png" alt="" width="952" height="512" class="alignnone size-full wp-image-11515" /></a>
+![](images/update-from-esxi-6-5-to-6-7-and-apply-the-latest-patch-3.png)
 
 アップデート対象の ESXi で稼働するすべての仮想マシンを停止します。
 そのあと、メンテナンスモードへと切り替えておきます。
 
-<a href="images/update-from-esxi-6-5-to-6-7-and-apply-the-latest-patch-4.png"><img src="images/update-from-esxi-6-5-to-6-7-and-apply-the-latest-patch-4.png" alt="" width="448" height="348" class="alignnone size-full wp-image-11513" /></a>
+![](images/update-from-esxi-6-5-to-6-7-and-apply-the-latest-patch-4.png)
 
-<a href="images/update-from-esxi-6-5-to-6-7-and-apply-the-latest-patch-5.png"><img src="images/update-from-esxi-6-5-to-6-7-and-apply-the-latest-patch-5.png" alt="" width="636" height="300" class="alignnone size-full wp-image-11517" /></a>
+![](images/update-from-esxi-6-5-to-6-7-and-apply-the-latest-patch-5.png)
 
 SSH 接続を行うので **SSH の有効化** と **コンソールシェルの有効化** をします。
 
-<a href="images/update-from-esxi-6-5-to-6-7-and-apply-the-latest-patch-6.png"><img src="images/update-from-esxi-6-5-to-6-7-and-apply-the-latest-patch-6.png" alt="" width="549" height="355" class="alignnone size-full wp-image-11519" /></a>
+![](images/update-from-esxi-6-5-to-6-7-and-apply-the-latest-patch-6.png)
 
 ### アップデート
 
 ESXi へ SSH 接続をします。ESXi はチャレンジレスポンス認証なので、お間違えのないように。
 TeraTerm では**キーボードインタラクティブ認証**にチェックをいれます。
 
-<a href="images/update-from-esxi-6-5-to-6-7-and-apply-the-latest-patch-7.png"><img src="images/update-from-esxi-6-5-to-6-7-and-apply-the-latest-patch-7.png" alt="" width="541" height="396" class="alignnone size-full wp-image-11520" /></a>
+![](images/update-from-esxi-6-5-to-6-7-and-apply-the-latest-patch-7.png)
 
 ESXi にログインできたらまずは現在のビルド番号などを確認しておきます。
 
@@ -122,7 +122,7 @@ Update Result
 
 [MyVMware Patch Downloads](https://my.vmware.com/group/vmware/patch#search) から製品を選びリストから最新のパッチをダウンロードします。
 
-<a href="images/update-from-esxi-6-5-to-6-7-and-apply-the-latest-patch-8.png"><img src="images/update-from-esxi-6-5-to-6-7-and-apply-the-latest-patch-8.png" alt="" width="1567" height="827" class="alignnone size-full wp-image-11526" /></a>
+![](images/update-from-esxi-6-5-to-6-7-and-apply-the-latest-patch-8.png)
 
 こちらも ESXi のデータストアへアップロードしておきましょう。
 

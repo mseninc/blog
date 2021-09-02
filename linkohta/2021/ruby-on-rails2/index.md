@@ -132,15 +132,15 @@ end
 
 `routes.rb` に `post 'index' => 'start#index'` の一文を加えるのも忘れないで下さい。
 
-![studyRails1](images/ruby-on-rails2-1.png)
+![studyRails1](https://mseeeen.msen.jp/wp-content/uploads/2021/04/2021-04-26_17h12_01-1.png)
 
 こんな画面が表示されるはずです。
 
-![studyRails2](images/ruby-on-rails2-2.png)
+![studyRails2](https://mseeeen.msen.jp/wp-content/uploads/2021/04/2021-04-26_17h12_16-1.png)
 
 試しに test と入力して input ボタンを押すと、
 
-![studyRails3](images/ruby-on-rails2-3.png)
+![studyRails3](https://mseeeen.msen.jp/wp-content/uploads/2021/04/2021-04-26_17h12_25-1.png)
 
 このように、 test と画面に表示されているのがわかります。
 

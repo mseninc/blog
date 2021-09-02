@@ -18,7 +18,7 @@ Infomation Secrurity Management System
 ひさしぶりに・・・座学で約３時間講義を受けると睡魔は襲ってきますね(笑)
 決して寝てはないですｗ
 
-<a href="images/isms-first-1-1.jpg"><img src="images/isms-first-1-1.jpg" alt="" width="300" height="169" class="alignnone size-medium wp-image-4081" /></a>
+![](images/isms-first-1-1.jpg)
 
 仕組み作り、資料整備など大変な要素が出てきていますが、メンバー５名でしっかり取り組んで行きたいと思います。
  

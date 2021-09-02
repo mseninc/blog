@@ -12,13 +12,13 @@ MSENの桝田です。
  
 同じ、土曜にISMS取得にむけての第２回講習がありました。
 
-<a href="images/isms-first-2-1.jpg"><img src="images/isms-first-2-1.jpg" alt="" width="300" height="169" class="alignnone size-medium wp-image-4085" /></a>
+![](images/isms-first-2-1.jpg)
 
 少しずつ具体化してきて、いよいよ宿題も出だしました。
  
 そのうちの１つ、ネットワーク環境を整備・整理するという重たい作業を先ほどまでかかってやりきりました。
 
-<a href="images/isms-first-2-2.jpg"><img src="images/isms-first-2-2.jpg" alt="" width="169" height="300" class="alignnone size-medium wp-image-4086" /></a>
+![](images/isms-first-2-2.jpg)
 
 さて、まだまだ・・・。
  

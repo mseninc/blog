@@ -15,7 +15,7 @@ tags: [WPF, C#, .NET]
 
 標準のフォントに入っていない人名漢字などをシステムで使用しなければならない場合に定義することがあります。基本的には「ペイント」のようにドットの集まりで文字の形を表現したものですので、↓の図でもわかるように、表示上は現代のフォントのようにきれいには表示されません。
 
-<img src="images/eudc-font-with-wpf-and-csharp-1.png" alt="外字の定義例" width="569" height="451" class="aligncenter size-full wp-image-7302" />
+![外字の定義例](images/eudc-font-with-wpf-and-csharp-1.png)
 
 古い機能ですが、需要は変わらないので、現在の Windows でもスタートメニューから「**外字エディター**」と入力すると作成画面を開くことができます。そういえば昔、父がもっていたカシオのワープロでいろいろ外字をつくって遊んでたころがありました。
 
@@ -29,7 +29,7 @@ tags: [WPF, C#, .NET]
 
 おまけに `Fonts` フォルダに入っていてもデフォルトの Windows の「フォント」一覧からは見ることができません。エクスプローラーのパス指定で `\\PC 名\C$\Windows\Fonts\` とでも入力して生のフォルダ構造を見てやると表示することができます。
 
-<img src="images/eudc-font-with-wpf-and-csharp-2.png" alt="外字フォントファイル EUDC.tte の見つけ方" width="814" height="697" class="aligncenter size-full wp-image-7306" />
+![外字フォントファイル EUDC.tte の見つけ方](images/eudc-font-with-wpf-and-csharp-2.png)
 
 ## 先人の知恵に与る
 

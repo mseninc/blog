@@ -14,7 +14,7 @@ tags: [PowerShell, Windows]
 
 ## サンプルのフォルダ構成
 
-<img src="images/how-to-get-list-of-files-in-folder-with-powershell-1.png" alt="" width="1223" height="476" class="alignleft size-full wp-image-8031" />
+![](images/how-to-get-list-of-files-in-folder-with-powershell-1.png)
 
 C直下のtmpフォルダに拡張子の異なるファイルとフォルダが格納されており、フォルダ：SAMPLEの中にCSVファイルが3つ格納されているといったフォルダ構成となります。
 
@@ -28,7 +28,7 @@ C直下のtmpフォルダに拡張子の異なるファイルとフォルダが�
 PS C:\tmp> Get-ChildItem
 ```
 
-<img src="images/how-to-get-list-of-files-in-folder-with-powershell-2.png" alt="" width="1223" height="476" class="alignleft size-full wp-image-8032" />
+![](images/how-to-get-list-of-files-in-folder-with-powershell-2.png)
 
 上記のようにカレントフォルダに格納されているファイルおよびフォルダの一覧が表示されます。
 
@@ -38,7 +38,7 @@ PS C:\tmp> Get-ChildItem
 PS C:\tmp> Get-ChildItem -File
 ```
 
-<img src="images/how-to-get-list-of-files-in-folder-with-powershell-3.png" alt="" width="1223" height="476" class="alignleft size-full wp-image-8033" />
+![](images/how-to-get-list-of-files-in-folder-with-powershell-3.png)
 
 **-File** オプションを付与することで、ファイルのみを取得するようになります。
 また、 **-Directory** オプションを付与した場合は、名のとおりディレクトリ（フォルダ）のみ取得するとなります。
@@ -49,7 +49,7 @@ PS C:\tmp> Get-ChildItem -File
 PS C:\tmp> Get-ChildItem -Recurse
 ```
 
-<img src="images/how-to-get-list-of-files-in-folder-with-powershell-4.png" alt="" width="1223" height="476" class="alignleft size-full wp-image-8034" />
+![](images/how-to-get-list-of-files-in-folder-with-powershell-4.png)
 
 **-Recurse** オプションを付与することで、サブフォルダ配下に対して再帰的に処理します。
 
@@ -59,7 +59,7 @@ PS C:\tmp> Get-ChildItem -Recurse
 PS C:\tmp> Get-ChildItem -Recurse -File -Include *.txt
 ```
 
-<img src="images/how-to-get-list-of-files-in-folder-with-powershell-5.png" alt="" width="1223" height="476" class="alignleft size-full wp-image-8036" />
+![](images/how-to-get-list-of-files-in-folder-with-powershell-5.png)
 
 **-Include** オプションでファイル名をワイルドカード(*)で指定し、拡張子の指定による絞り込みをします。
 **-Include** オプションは `-Include text*` といった記述をすると「**testから始まる**」という条件になりますので、ファイル名検索にも利用できます。

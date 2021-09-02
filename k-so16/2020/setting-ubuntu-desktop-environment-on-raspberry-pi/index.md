@@ -22,11 +22,11 @@ tags: [Raspberry Pi, Linux, Ubuntu, その他, 〇〇奮闘記]
 
 まず、 OS 設定画面で以下の画像のように **Ubuntu** を選択します。
 
-[caption id="attachment_13663" align="aligncenter" width="682"]<a href="images/setting-ubuntu-desktop-environment-on-raspberry-pi-1.png"><img src="images/setting-ubuntu-desktop-environment-on-raspberry-pi-1.png" alt="" width="682" height="452" class="size-full wp-image-13663" /></a> インストールする OS の選択画面[/caption]
+![](images/setting-ubuntu-desktop-environment-on-raspberry-pi-1.png)
 
 次に、 OS のバージョンを選択します。特にこだわりがなければ、最新のバージョンをインストールします。本記事執筆時点 (2020 年 8 月現在) では、 Ubuntu 20.04.1 が最新なので、こちらを選択します。 Raspberry Pi 3 以降では 64bit 版が利用できるので、 64bit 版を選択しました。
 
-[caption id="attachment_13664" align="aligncenter" width="682"]<a href="images/setting-ubuntu-desktop-environment-on-raspberry-pi-2.png"><img src="images/setting-ubuntu-desktop-environment-on-raspberry-pi-2.png" alt="" width="682" height="452" class="size-full wp-image-13664" /></a> OS のバージョン選択画面[/caption]
+![](images/setting-ubuntu-desktop-environment-on-raspberry-pi-2.png)
 
 ## Ubuntu の初期設定
 ### ログイン
@@ -86,21 +86,21 @@ sudo apt install xubuntu-desktop
 
 インストールが完了したら Raspberry Pi を再起動します。インストールに成功していれば、ログイン画面が表示されるはずです。
 
-[caption id="attachment_13669" align="aligncenter" width="800"]<a href="images/setting-ubuntu-desktop-environment-on-raspberry-pi-3.jpg"><img src="images/setting-ubuntu-desktop-environment-on-raspberry-pi-3.jpg" alt="" width="800" height="600" class="size-full wp-image-13669" /></a> 再起動後にログイン画面が表示される[/caption]
+![](images/setting-ubuntu-desktop-environment-on-raspberry-pi-3.jpg)
 
 ### デスクトップ環境の起動確認
 
 デフォルトでは、デスクトップ環境として **GNOME** が動くようなので、起動するデスクトップ環境を変更します。ログインユーザーを選択した後、画面右下に歯車マークが表示されるので、それをクリックすると以下の画面のような選択肢が表示されます。
 
-[caption id="attachment_13670" align="aligncenter" width="800"]<a href="images/setting-ubuntu-desktop-environment-on-raspberry-pi-4.png"><img src="images/setting-ubuntu-desktop-environment-on-raspberry-pi-4.png" alt="" width="800" height="600" class="size-full wp-image-13670" /></a> 右下の歯車マークを押して選択肢を表示[/caption]
+![](images/setting-ubuntu-desktop-environment-on-raspberry-pi-4.png)
 
 選択肢が表示されたら **Xubuntu Session** を選択します。
 
-<a href="images/setting-ubuntu-desktop-environment-on-raspberry-pi-5.png"><img src="images/setting-ubuntu-desktop-environment-on-raspberry-pi-5.png" alt="" width="800" height="600" class="aligncenter size-full wp-image-13671" /></a>
+![](images/setting-ubuntu-desktop-environment-on-raspberry-pi-5.png)
 
 デスクトップ環境を選択してログインすると、以下の画面のような Xfce のデスクトップ環境の GUI が立ち上がってきます。これで無事にデスクトップ環境が構築できたことが確認できました。軽量なデスクトップ環境として有名なだけあって、割とサクサク動きました。
 
-<a href="images/setting-ubuntu-desktop-environment-on-raspberry-pi-6.jpg"><img src="images/setting-ubuntu-desktop-environment-on-raspberry-pi-6.jpg" alt="" width="800" height="600" class="aligncenter size-full wp-image-13672" /></a>
+![](images/setting-ubuntu-desktop-environment-on-raspberry-pi-6.jpg)
 
 本記事を執筆する上で以下の記事を参考にしました。
 

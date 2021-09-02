@@ -10,7 +10,7 @@ tags: [CentOS, Docker, Linux]
 今回は、CentOS 7を利用して、Dockerを立ち上げ、その上にCentOS 7を動かしてみたいと思います。
 イメージ的にはこのような形です。
 
-<a href="images/activate-docker-and-start-centos7-1.png"><img src="images/activate-docker-and-start-centos7-1.png" alt="" width="347" height="258" class="aligncenter size-full wp-image-6812" /></a>
+![](images/activate-docker-and-start-centos7-1.png)
 
 
 ## 利用までのながれ

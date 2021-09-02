@@ -17,19 +17,19 @@ tags: [その他]
 
 ### パッケージ
 
-<a href="images/air-by-crazybaby-vs-apple-airpods-1.jpg"><img src="images/air-by-crazybaby-vs-apple-airpods-1.jpg" alt="" width="1000" height="751" class="aligncenter size-full wp-image-5038" /></a>
+![](images/air-by-crazybaby-vs-apple-airpods-1.jpg)
 
 外箱はでかいです。写真では見えにくいですが、箱の上面には **iPhone の箱と同じような製品の形のエンボス加工**が施されています。特徴のあるシルエットではないので大してカッコよくありませんが。あと側面には Air by crazybaby の文字が刻まれていますが、側面の紙質が悪く、全体的に外箱の質感がイマイチです。
 
 ともあれ、箱を開けてみます。箱の構造も**某 Apple 社のスマホとそっくり**です。
 
-<a href="images/air-by-crazybaby-vs-apple-airpods-2.jpg"><img src="images/air-by-crazybaby-vs-apple-airpods-2.jpg" alt="" width="1000" height="751" class="aligncenter size-full wp-image-5039" /></a>
+![](images/air-by-crazybaby-vs-apple-airpods-2.jpg)
 
 開けたところです。ぬーん、とケースが佇んでいます。**想像よりかなり大きい**。これは写真詐欺な気がしてきた。
 
 パッケージの付属品です。
 
-<a href="images/air-by-crazybaby-vs-apple-airpods-3.jpg"><img src="images/air-by-crazybaby-vs-apple-airpods-3.jpg" alt="" width="1000" height="751" class="aligncenter size-full wp-image-5051" /></a>
+![](images/air-by-crazybaby-vs-apple-airpods-3.jpg)
 
 黒いのが 3 サイズのイヤーフィットで、銀色の包みはイヤフォン本体を包み込むシリコーンの汗カバーです。ただしこのカバーを到着した状態では充電できないので、毎回外す必要があるようです。付属の充電ケーブルは **USB type C** です。コネクタに Micro USB でなく type C を採用したところはとてもいいですね。
 
@@ -41,17 +41,17 @@ tags: [その他]
 
 ケースの保護フィルムを剥がしたところです。 CRAZYBABY 社の (?) ロゴと思われるマークが下部にあって、上部にはケースを開けるために回転させるときの目印がついています。
 
-<a href="images/air-by-crazybaby-vs-apple-airpods-4.jpg"><img src="images/air-by-crazybaby-vs-apple-airpods-4.jpg" alt="" width="1000" height="751" class="aligncenter size-full wp-image-5040" /></a>
+![](images/air-by-crazybaby-vs-apple-airpods-4.jpg)
 
 ちなみにこの目印の線が白丸から黒丸に移動するように回すとケースが開く、という構造なのですが、実は白丸の位置でも開いてしまう上、白丸より左側にも回転しまうという謎設計です。まぁ実害はないのでご愛嬌ということにしておきます。
 
 開けるといよいよイヤフォン本体 (これを「Air」と呼ぶらしい) が 2 つ登場します。ケースとは各耳とも 2 つの金メッキ電極で接触して充電されているようです。
 
-<a href="images/air-by-crazybaby-vs-apple-airpods-5.jpg"><img src="images/air-by-crazybaby-vs-apple-airpods-5.jpg" alt="" width="1000" height="751" class="aligncenter size-full wp-image-5046" /></a>
+![](images/air-by-crazybaby-vs-apple-airpods-5.jpg)
 
 ここでケース (Air by crazybaby の場合、正確には「充電カプセル」と呼ぶ) を Apple AirPods と比較してみます。
 
-<a href="images/air-by-crazybaby-vs-apple-airpods-6.jpg"><img src="images/air-by-crazybaby-vs-apple-airpods-6.jpg" alt="" width="1000" height="751" class="aligncenter size-full wp-image-5041" /></a>
+![](images/air-by-crazybaby-vs-apple-airpods-6.jpg)
 
 やっぱりデカイ。っていうか、 AirPods ちっさ！ガムかなんかのケースぐらいに見える。
 
@@ -73,7 +73,7 @@ AirPods: **46 g**
 
 ケースから取り出した**イヤフォン本体**です。当たり前ですが、いずれもケーブルは一切ありません。
 
-<a href="images/air-by-crazybaby-vs-apple-airpods-7.jpg"><img src="images/air-by-crazybaby-vs-apple-airpods-7.jpg" alt="" width="1000" height="751" class="aligncenter size-full wp-image-5045" /></a>
+![](images/air-by-crazybaby-vs-apple-airpods-7.jpg)
 
 サイズは形状がまったく違いすぎて比較しにくいので、イヤフォンだけの重さ（両耳）を計ってみました。
 
@@ -88,7 +88,7 @@ AirPods: **8 g**
 
 ### 装用感
 
-<a href="images/air-by-crazybaby-vs-apple-airpods-8.jpg"><img src="images/air-by-crazybaby-vs-apple-airpods-8.jpg" alt="" width="360" height="282" class="aligncenter size-full wp-image-5043" /></a>
+![](images/air-by-crazybaby-vs-apple-airpods-8.jpg)
 
 大事な「つけ心地」は、個人差の大きいところだと思いますが、個人的には Air by crazybaby が好みです。
 
@@ -114,7 +114,7 @@ AirPods は「耳からうどん」とか「耳からチンアナゴ」とか言
 
 ### 接続性
 
-<a href="images/air-by-crazybaby-vs-apple-airpods-9.png"><img src="images/air-by-crazybaby-vs-apple-airpods-9.png" alt="" width="310" height="552" class="aligncenter size-full wp-image-5048" /></a>
+![](images/air-by-crazybaby-vs-apple-airpods-9.png)
 
 AirPods はペアリングも簡単ですが、**使うときも「ケースのフタを開けて取り出すだけ」**です。取り出した時点で ON になって iPhone に接続されるのでほとんどストレスがありません。
 

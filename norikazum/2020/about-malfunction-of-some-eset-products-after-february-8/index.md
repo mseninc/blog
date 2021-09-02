@@ -29,7 +29,7 @@ tags: [セキュリティ, 脆弱性, ESET, その他, ライフハック]
 ```
 
 私のPCにインストールされていたバージョンは `6.5.2107.1` ですが記事と同じ状態が確認できました。
-<a href="images/about-malfunction-of-some-eset-products-after-february-8-1.png"><img src="images/about-malfunction-of-some-eset-products-after-february-8-1.png" alt="" width="1125" height="775" class="alignnone size-full wp-image-12173" /></a>
+![](images/about-malfunction-of-some-eset-products-after-february-8-1.png)
 
 公式で紹介されている対応策を実施してみました。
 **手順は至って簡単** です。
@@ -37,19 +37,19 @@ tags: [セキュリティ, 脆弱性, ESET, その他, ライフハック]
 1. 対策ツールを任意の場所に[ダウンロード](https://download2.canon-its.jp/eset/tool/CertFix_6.5_all.zip)します
 1. 解凍した中にある `CertFix_6.5_all.exe` をC直下に移動します(C直下の指定は一例です)
 1. コマンドプロンプトを管理者で実行します
-<a href="images/about-malfunction-of-some-eset-products-after-february-8-2.png"><img src="images/about-malfunction-of-some-eset-products-after-february-8-2.png" alt="" width="1046" height="794" class="alignnone size-full wp-image-12174" /></a>
+![](images/about-malfunction-of-some-eset-products-after-february-8-2.png)
 1. コマンドプロンプトに `C:\CertFix_6.5_all.exe` とタイプしEnterで実行します
 `Successfully patched` とでていればOKです
-<a href="images/about-malfunction-of-some-eset-products-after-february-8-3.png"><img src="images/about-malfunction-of-some-eset-products-after-february-8-3.png" alt="" width="1223" height="639" class="alignnone size-full wp-image-12175" /></a>
+![](images/about-malfunction-of-some-eset-products-after-february-8-3.png)
 1. 再起動します
 1. 再起動直後はすぐにアップデートされないので手動で実行します
-<a href="images/about-malfunction-of-some-eset-products-after-february-8-4.png"><img src="images/about-malfunction-of-some-eset-products-after-february-8-4.png" alt="" width="1125" height="775" class="alignnone size-full wp-image-12177" /></a>
+![](images/about-malfunction-of-some-eset-products-after-february-8-4.png)
 ↓
 無事最新になりました
-<a href="images/about-malfunction-of-some-eset-products-after-february-8-5.png"><img src="images/about-malfunction-of-some-eset-products-after-february-8-5.png" alt="" width="1125" height="775" class="alignnone size-full wp-image-12178" /></a>
+![](images/about-malfunction-of-some-eset-products-after-february-8-5.png)
 
 この対応で正常に戻りました。
-<a href="images/about-malfunction-of-some-eset-products-after-february-8-6.png"><img src="images/about-malfunction-of-some-eset-products-after-february-8-6.png" alt="" width="1125" height="775" class="alignnone size-full wp-image-12179" /></a>
+![](images/about-malfunction-of-some-eset-products-after-february-8-6.png)
 
 **検出エンジンのアップデートが出来ない** という致命的なエラーが続きますので該当するかたは **1日でも早く対応** をお願いします。
 

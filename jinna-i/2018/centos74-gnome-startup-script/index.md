@@ -65,10 +65,10 @@ gsettings set org.gnome.desktop.interface clock-show-date 'true'
 
 
 clock-show-dateが**false**のとき↓　曜日が表示される
-<a href="images/centos74-gnome-startup-script-1.png"><img src="images/centos74-gnome-startup-script-1.png" alt="" width="266" height="27" class="alignnone size-full wp-image-6862" /></a>
+![](images/centos74-gnome-startup-script-1.png)
 
 clock-show-dateが**true**のとき↓　日付が表示される。
-<a href="images/centos74-gnome-startup-script-2.png"><img src="images/centos74-gnome-startup-script-2.png" alt="" width="312" height="28" class="alignnone size-full wp-image-6863" /></a>
+![](images/centos74-gnome-startup-script-2.png)
 
 
 SSHでコマンドラインからログインしたときに必要でないスクリプトは、上記の手順で分けて書いておきましょう。

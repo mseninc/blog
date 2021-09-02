@@ -7,7 +7,7 @@ tags: [ThinkPad, その他]
 
 最近、私の大事な **ThinkPad X1 Carbon (5th Gen.)** さんが魔の **Kernel-Power 41 病**に侵されています。
 
-<a href="images/kernel-power-41-with-thinkpad-x1-carbon-and-thunderbolt3-dock-1.png"><img src="images/kernel-power-41-with-thinkpad-x1-carbon-and-thunderbolt3-dock-1.png" alt="" width="471" height="195" class="aligncenter size-full wp-image-5615" /></a>
+![](images/kernel-power-41-with-thinkpad-x1-carbon-and-thunderbolt3-dock-1.png)
 
 Windows からも度々**重大**な病だと宣告されております。
 
@@ -55,7 +55,7 @@ Fixed:
 
 「ThinkPad Thunderbold 3 ファームウェア」をクリックしてファームウェアのインストーラーをダウンロードします。
 
-<a href="images/kernel-power-41-with-thinkpad-x1-carbon-and-thunderbolt3-dock-2.png"><img src="images/kernel-power-41-with-thinkpad-x1-carbon-and-thunderbolt3-dock-2.png" alt="" width="716" height="170" class="aligncenter size-full wp-image-5613" /></a>
+![](images/kernel-power-41-with-thinkpad-x1-carbon-and-thunderbolt3-dock-2.png)
 
 2017/11/09 時点でのバージョンは 3.12.003 でした。
 
@@ -63,7 +63,7 @@ Fixed:
 
 ダウンロードした `thunderbolt3dock_fw.zip` を展開すると `UpdateTool_TBT3_Ver3.12.003.exe` が現れます。
 
-<a href="images/kernel-power-41-with-thinkpad-x1-carbon-and-thunderbolt3-dock-3.png"><img src="images/kernel-power-41-with-thinkpad-x1-carbon-and-thunderbolt3-dock-3.png" alt="" width="81" height="104" class="aligncenter size-full wp-image-5614" /></a>
+![](images/kernel-power-41-with-thinkpad-x1-carbon-and-thunderbolt3-dock-3.png)
 
 当たり前ですが **PC をドックにつないだ状態で、この exe ファイルを実行**します。
 

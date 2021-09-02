@@ -23,15 +23,15 @@ tags: [その他, 〇〇奮闘記]
 
 16Fへ上がります。
 
-<a href="images/application-for-employment-insurance-1.jpg"><img src="images/application-for-employment-insurance-1.jpg" alt="DSC_0164" width="540" height="960" class="alignnone size-full wp-image-2193" /></a>
+![DSC_0164](images/application-for-employment-insurance-1.jpg)
 
 該当部署は**適用係**で13番に向かいます。
 
-<a href="images/application-for-employment-insurance-2.jpg"><img src="images/application-for-employment-insurance-2.jpg" alt="DSC_0165" width="540" height="960" class="alignnone size-full wp-image-2194" /></a>
+![DSC_0165](images/application-for-employment-insurance-2.jpg)
 
 到着！
 
-<a href="images/application-for-employment-insurance-3.jpg"><img src="images/application-for-employment-insurance-3.jpg" alt="DSC_0166" width="960" height="540" class="alignnone size-full wp-image-2195" /></a>
+![DSC_0166](images/application-for-employment-insurance-3.jpg)
 
 ## 適用事業所設置届の手続き
 適用事業所設置届は、単独では手続きできません。会社にとって**雇用保険の対象となる最初の従業員の資格取得と同時に申請**します。
@@ -54,7 +54,7 @@ tags: [その他, 〇〇奮闘記]
 
 担当者の方が上記資料をチェックし、必要な資料はコピーされます。そして、同日に適用事業所設置届が発行されます。
 
-<a href="images/application-for-employment-insurance-4.jpg"><img src="images/application-for-employment-insurance-4.jpg" alt="DSC_0174" width="540" height="960" class="alignnone size-full wp-image-2197" /></a>
+![DSC_0174](images/application-for-employment-insurance-4.jpg)
 
 ## あとがき
 労働保険は**労災保険（労働者災害補償保険）**と**雇用保険** の総称です。

@@ -19,7 +19,7 @@ tags: [その他]
 
 こういう状態です。
 
-<a href="images/what-to-do-if-google-calendar-does-not-proceed-1.png"><img src="images/what-to-do-if-google-calendar-does-not-proceed-1.png" alt="" width="606" height="291" class="aligncenter size-full wp-image-5444" /></a>
+![](images/what-to-do-if-google-calendar-does-not-proceed-1.png)
 
 [ググってみる](https://www.google.co.jp/search?q=chrome+%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%81%BF+%E7%B5%82%E3%82%8F%E3%82%89%E3%81%AA%E3%81%84&oq=Chrome+%E8%AA%AD%E3%81%BF%E3%81%93%E3%81%BF&aqs=chrome.2.69i57j0l5.6802j0j7&sourceid=chrome&ie=UTF-8)と、色々な方が類似現象に悩まされているようでした。
 
@@ -37,7 +37,7 @@ tags: [その他]
 全てダメ！
 
 余談ですが、切り分けでIEではどうかなと実施してみるとメールアドレスを入れて次を押したところでｗ
-<a href="images/what-to-do-if-google-calendar-does-not-proceed-2.png"><img src="images/what-to-do-if-google-calendar-does-not-proceed-2.png" alt="" width="442" height="209" class="aligncenter size-full wp-image-5446" /></a>
+![](images/what-to-do-if-google-calendar-does-not-proceed-2.png)
 
 Edgeではいけましたｗ
 この違いは一体・・・。
@@ -48,7 +48,7 @@ Edgeではいけましたｗ
 
 Chromeでは、対象のタブを選択し、**Ctrl+F5**これでスーパーリロードになります。
 
-<a href="images/what-to-do-if-google-calendar-does-not-proceed-3.png"><img src="images/what-to-do-if-google-calendar-does-not-proceed-3.png" alt="" width="498" height="227" class="aligncenter size-full wp-image-5447" /></a>
+![](images/what-to-do-if-google-calendar-does-not-proceed-3.png)
 
 そして、**Ctrl+F5** →　解決！！
 

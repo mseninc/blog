@@ -14,38 +14,38 @@ tags: [Slack, GitHub, Jenkins, Linux]
 ## 前提状況
 
 1. SlackにAPPsからJenkins CIがインストールされていること
-<a href="images/link-jenkins-and-slack-1.png"><img src="images/link-jenkins-and-slack-1.png" alt="" width="300" height="204" class="alignnone size-medium wp-image-4310" /></a>
+![](images/link-jenkins-and-slack-1.png)
 1. Jenkinsにプラグインマネージャーから**Slack Notification Plugin**がインストールされていること
-<a href="images/link-jenkins-and-slack-2.png"><img src="images/link-jenkins-and-slack-2.png" alt="" width="300" height="204" class="alignnone size-medium wp-image-4309" /></a>
+![](images/link-jenkins-and-slack-2.png)
 
 ## Slack側
 
 1. ブラウザからチームにログインし、左上のチーム名をクリックしメニューを出します。メニューから**Apps & integrations** を選択します。
-<a href="images/link-jenkins-and-slack-3.png"><img src="images/link-jenkins-and-slack-3.png" alt="" width="300" height="182" class="alignnone size-medium wp-image-4307" /></a>
+![](images/link-jenkins-and-slack-3.png)
 
 1. **Manage** を選択します。
-<a href="images/link-jenkins-and-slack-4.png"><img src="images/link-jenkins-and-slack-4.png" alt="" width="300" height="182" class="alignnone size-medium wp-image-4308" /></a>
+![](images/link-jenkins-and-slack-4.png)
 
 1. Apps から**Jenkins CI**を選択します。
-<a href="images/link-jenkins-and-slack-5.png"><img src="images/link-jenkins-and-slack-5.png" alt="" width="300" height="204" class="alignnone size-medium wp-image-4311" /></a>
+![](images/link-jenkins-and-slack-5.png)
 
 1. **Add Configuration**から連携するチャンネルを選択し**Add Jenkins CI integration**を選択します。次の画面ではスクロースした先の**Save Setings**を選択します。
-<a href="images/link-jenkins-and-slack-6.png"><img src="images/link-jenkins-and-slack-6.png" alt="" width="300" height="204" class="alignnone size-medium wp-image-4312" /></a>
+![](images/link-jenkins-and-slack-6.png)
 ↓
-<a href="images/link-jenkins-and-slack-7.png"><img src="images/link-jenkins-and-slack-7.png" alt="" width="300" height="204" class="alignnone size-medium wp-image-4313" /></a>
+![](images/link-jenkins-and-slack-7.png)
 
 1. 次の画面で表示された中から、**Token**をコピーします。
-<a href="images/link-jenkins-and-slack-8.png"><img src="images/link-jenkins-and-slack-8.png" alt="" width="300" height="204" class="alignnone size-medium wp-image-4314" /></a>
+![](images/link-jenkins-and-slack-8.png)
 
 Slack側は以上で完了です。
 
 ## Jenkins側
 
 1. 管理ユーザーでログインし、**Jenkinsの管理**を選択します。
-<a href="images/link-jenkins-and-slack-9.png"><img src="images/link-jenkins-and-slack-9.png" alt="" width="300" height="201" class="alignnone size-medium wp-image-4267" /></a>
+![](images/link-jenkins-and-slack-9.png)
 
 1. 続けて**システムの設定**へ進みます。
-<a href="images/link-jenkins-and-slack-10.png"><img src="images/link-jenkins-and-slack-10.png" alt="" width="300" height="201" class="alignnone size-medium wp-image-4268" /></a>
+![](images/link-jenkins-and-slack-10.png)
 
 1. スクロールし最下行付近に**Global Slack Notifier Settings**があります。各項目を入力します。
  ```
@@ -55,9 +55,9 @@ Channel=投稿するチャンネルを # から指定します
  ```
 Channel部分に指定するチャンネルは、Token作成時に指定したチャンネル以外でも可能です。
 入力後、**Test Connection**を押して連携を確認します。
-<a href="images/link-jenkins-and-slack-11.png"><img src="images/link-jenkins-and-slack-11.png" alt="" width="300" height="204" class="alignnone size-medium wp-image-4324" /></a>
+![](images/link-jenkins-and-slack-11.png)
 届いていることを確認します。
-<a href="images/link-jenkins-and-slack-12.png"><img src="images/link-jenkins-and-slack-12.png" alt="" width="300" height="49" class="alignnone size-medium wp-image-4325" /></a>
+![](images/link-jenkins-and-slack-12.png)
 
 最後に保存します。
 Jenkins側の基本設定は完了です。
@@ -95,7 +95,7 @@ git version 2.12.2
 Slackの連携は、Jenkinsのジョブを作成しビルド後の処理で設定することができます。
 ビルド結果を指定したSlackのチャンネルに通知してくれる流れです。
 
-<a href="images/link-jenkins-and-slack-13.png"><img src="images/link-jenkins-and-slack-13.png" alt="" width="233" height="300" class="alignnone size-medium wp-image-4329" /></a>
+![](images/link-jenkins-and-slack-13.png)
 
 それぞれ設定の参考になれば幸いです。
 それでは、次回の記事でお会いしましょう。

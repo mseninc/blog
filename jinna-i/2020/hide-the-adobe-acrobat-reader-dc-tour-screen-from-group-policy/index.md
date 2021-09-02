@@ -11,7 +11,7 @@ PDF ファイルの閲覧に [Adobe Acrobat Reader](https://get.adobe.com/jp/rea
 
 Adobe Acrobat Reader DC では、初回の起動時に `Acrobat Reader DC にようこそ` というツアー画面が表示されます。
 
-<a href="images/hide-the-adobe-acrobat-reader-dc-tour-screen-from-group-policy-1.png"><img src="images/hide-the-adobe-acrobat-reader-dc-tour-screen-from-group-policy-1.png" alt="" width="802" height="459" class="alignnone size-full wp-image-13265" /></a>
+![](images/hide-the-adobe-acrobat-reader-dc-tour-screen-from-group-policy-1.png)
 
 通常使われている PC では、一度ツアーを開始すると次回以降は表示されませんが、**シンクライアントで固定プロファイル使っている場合や復元環境の端末ではプロファイルが初期化されてしまうためにこのツアー画面が毎回表示されてしまうことがあります**。
 
@@ -50,15 +50,15 @@ Adobe Acrobat Reader DC では、初回の起動時に `Acrobat Reader DC によ
 - 値の種類: REG_DWORD
 - 値のデータ: a
 
-<a href="images/hide-the-adobe-acrobat-reader-dc-tour-screen-from-group-policy-2.png"><img src="images/hide-the-adobe-acrobat-reader-dc-tour-screen-from-group-policy-2.png" alt="" width="467" height="520" class="alignnone size-full wp-image-13271" /></a>
+![](images/hide-the-adobe-acrobat-reader-dc-tour-screen-from-group-policy-2.png)
 
 同様に `iLastCardShown` も作成します。
 
-<a href="images/hide-the-adobe-acrobat-reader-dc-tour-screen-from-group-policy-3.png"><img src="images/hide-the-adobe-acrobat-reader-dc-tour-screen-from-group-policy-3.png" alt="" width="467" height="522" class="alignnone size-full wp-image-13273" /></a>
+![](images/hide-the-adobe-acrobat-reader-dc-tour-screen-from-group-policy-3.png)
 
 グループポリシーを設定後、対象のユーザーでログオンすると、先ほど設定したレジストリが作成されていました。また、この状態で PDF ファイルを開くとツアー画面が表示されないことも確認しました。
 
-<a href="images/hide-the-adobe-acrobat-reader-dc-tour-screen-from-group-policy-4.png"><img src="images/hide-the-adobe-acrobat-reader-dc-tour-screen-from-group-policy-4.png" alt="" width="728" height="385" class="alignnone size-full wp-image-13276" /></a>
+![](images/hide-the-adobe-acrobat-reader-dc-tour-screen-from-group-policy-4.png)
 
 プロファイルのカスタマイズが必要になった場合も、このように設定項目さえ分かればグループポリシーから設定することも可能です。
 

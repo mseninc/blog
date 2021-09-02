@@ -29,21 +29,21 @@ syslogサーバーにてsyslogが受信可能であることを前提としま�
 
 このアカウントはvCenter Server Applianceを構築したときのアカウントです。vSphere Clientで使用するものと異なりますので注意してください。
 
-<a href="images/how-to-transfer-syslog-of-vcenter-server-appliance67-1.png"><img src="images/how-to-transfer-syslog-of-vcenter-server-appliance67-1.png" alt="" width="1489" height="825" class="alignnone size-full wp-image-8424" /></a>
+![](images/how-to-transfer-syslog-of-vcenter-server-appliance67-1.png)
 
 左ペインから[syslog] ＞ [設定] の順にクリックします。
-<a href="images/how-to-transfer-syslog-of-vcenter-server-appliance67-2.png"><img src="images/how-to-transfer-syslog-of-vcenter-server-appliance67-2.png" alt="" width="1489" height="825" class="alignnone size-full wp-image-8425" /></a>
+![](images/how-to-transfer-syslog-of-vcenter-server-appliance67-2.png)
 
 syslogサーバーのアドレス、プロトコル、ポート番号を指定して保存します。
-<a href="images/how-to-transfer-syslog-of-vcenter-server-appliance67-3.png"><img src="images/how-to-transfer-syslog-of-vcenter-server-appliance67-3.png" alt="" width="1489" height="825" class="alignnone size-full wp-image-8426" /></a>
+![](images/how-to-transfer-syslog-of-vcenter-server-appliance67-3.png)
 
 転送設定が反映されたことを確認し「テストメッセージの送信」をクリックします。
-<a href="images/how-to-transfer-syslog-of-vcenter-server-appliance67-4.png"><img src="images/how-to-transfer-syslog-of-vcenter-server-appliance67-4.png" alt="" width="1489" height="825" class="alignnone size-full wp-image-8431" /></a>
+![](images/how-to-transfer-syslog-of-vcenter-server-appliance67-4.png)
 
 テストメッセージを送信し、正常に送信されたことを確認します。
-<a href="images/how-to-transfer-syslog-of-vcenter-server-appliance67-5.png"><img src="images/how-to-transfer-syslog-of-vcenter-server-appliance67-5.png" alt="" width="1489" height="825" class="alignnone size-full wp-image-8432" /></a>
+![](images/how-to-transfer-syslog-of-vcenter-server-appliance67-5.png)
 
-<a href="images/how-to-transfer-syslog-of-vcenter-server-appliance67-6.png"><img src="images/how-to-transfer-syslog-of-vcenter-server-appliance67-6.png" alt="" width="1489" height="825" class="alignnone size-full wp-image-8433" /></a>
+![](images/how-to-transfer-syslog-of-vcenter-server-appliance67-6.png)
 
 syslogサーバーでちゃんと受信できているか見てみましょう。
 

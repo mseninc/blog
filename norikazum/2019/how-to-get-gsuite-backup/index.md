@@ -18,34 +18,34 @@ tags: [Google, その他, ライフハック]
 
 1. **バックアップを取りたいサービスにチェックを入れ、次のステップへ** 進みます。
 **GMailやGoogleドライブだけではなく、ハングアウトなど様々なサービス** が選択できます。
-<a href="images/how-to-get-gsuite-backup-1.png"><img src="images/how-to-get-gsuite-backup-1.png" alt="" width="1809" height="1480" class="alignnone size-full wp-image-11004" /></a>
-<a href="images/how-to-get-gsuite-backup-2.png"><img src="images/how-to-get-gsuite-backup-2.png" alt="" width="872" height="309" class="alignnone size-full wp-image-11005" /></a>
+![](images/how-to-get-gsuite-backup-1.png)
+![](images/how-to-get-gsuite-backup-2.png)
 
 1. **アーカイブ形式を選択し、アーカイブを作成をクリックするとバックアップが開始** されます。
-<a href="images/how-to-get-gsuite-backup-3.png"><img src="images/how-to-get-gsuite-backup-3.png" alt="" width="864" height="1025" class="alignnone size-full wp-image-11006" /></a>
+![](images/how-to-get-gsuite-backup-3.png)
 **配信方法も複数選択肢が準備** されています。素晴らしい。
-<a href="images/how-to-get-gsuite-backup-4.png"><img src="images/how-to-get-gsuite-backup-4.png" alt="" width="422" height="308" class="alignnone size-full wp-image-11007" /></a>
+![](images/how-to-get-gsuite-backup-4.png)
 
 **開始すると、以下のようなメール** が来ます。
-<a href="images/how-to-get-gsuite-backup-5.png"><img src="images/how-to-get-gsuite-backup-5.png" alt="" width="1437" height="1133" class="alignnone size-full wp-image-11008" /></a>
+![](images/how-to-get-gsuite-backup-5.png)
 
 **完了すると、以下のようなメール** が来ます。
-<a href="images/how-to-get-gsuite-backup-6.png"><img src="images/how-to-get-gsuite-backup-6.png" alt="" width="1413" height="1303" class="alignnone size-full wp-image-11009" /></a>
+![](images/how-to-get-gsuite-backup-6.png)
 
 **ダウンロードに進むと、指定したサイズで分割されておりそれぞれダウンロード** します。
 タイミングの問題だったのか、1.9GB程度のサイズでも30分ほどかかった感じでした。
-<a href="images/how-to-get-gsuite-backup-7.png"><img src="images/how-to-get-gsuite-backup-7.png" alt="" width="447" height="697" class="alignnone size-full wp-image-11010" /></a>
+![](images/how-to-get-gsuite-backup-7.png)
 
 あとは、解凍して適宜復元という感じです。
 
 ## あとがき
 私は、解凍ソフトに昔から **Lhaplus** を利用しているのですが、ダウンロードしたバックアップデータをLhaplusで解凍すると **文字化け** します。
 
-<a href="images/how-to-get-gsuite-backup-8.png"><img src="images/how-to-get-gsuite-backup-8.png" alt="" width="133" height="100" class="alignnone size-full wp-image-11486" /></a>
+![](images/how-to-get-gsuite-backup-8.png)
 
 ↓
 
-<a href="images/how-to-get-gsuite-backup-9.png"><img src="images/how-to-get-gsuite-backup-9.png" alt="" width="657" height="655" class="alignnone size-full wp-image-11487" /></a>
+![](images/how-to-get-gsuite-backup-9.png)
 
 **涙**
 
@@ -56,7 +56,7 @@ Googleもまだまだだな、と思っていたら、これは **Lhaplusが悪�
 
 ↓
 
-<a href="images/how-to-get-gsuite-backup-10.png"><img src="images/how-to-get-gsuite-backup-10.png" alt="" width="686" height="640" class="alignnone size-full wp-image-11489" /></a>
+![](images/how-to-get-gsuite-backup-10.png)
 
 慣れ親しんだ解凍ソフトウェアを変えようかと悩む出来事でした。。
 

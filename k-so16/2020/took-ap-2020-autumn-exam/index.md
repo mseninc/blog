@@ -38,7 +38,7 @@ tags: [その他, 〇〇奮闘記]
 
 問 1 で対数の問題が出題されたのですが、対数の計算がすぐにできず、出鼻をくじかれました。一通り問題を解き終わってから着手し直したのですが、 log<sub>10</sub>2 の概算ができず、 0 &lt; log<sub>10</sub>2 &lt; 1 より詳細な値が試験時間内で分からなかったので、いくつかの値で計算を試して、消去法で選ぶことにしました。ちなみに、 **対数の底の置き換えを行えば概算が可能** です。
 
-[caption id="attachment_14518" align="aligncenter" width="565"]<a href="images/took-ap-2020-autumn-exam-1.png"><img src="images/took-ap-2020-autumn-exam-1.png" alt="" width="565" height="800" class="size-full wp-image-14518" /></a> 問 1 の回答例[/caption]
+![](images/took-ap-2020-autumn-exam-1.png)
 
 ### 午後試験
 
@@ -50,7 +50,7 @@ tags: [その他, 〇〇奮闘記]
 
 最初のセキュリティの設問は順調に 20 分程度で解き終わったのですが、プログラミングのアルゴリズムの概要と挙動を把握するために計算して時間がかかったのと、 `for` 文でカウントアップされる変数を使えばいいことに気が付かず、計算式でどう表現するか悩んでしまったので、不完全燃焼のまま 40 分使ってしまい、システムアーキテクチャ、ネットワーク、データベースを解いている際も少し気持ちを引きずってしまっていました。結果的に少し早めに解いてプログラミングの設問に戻り、終了間際で気づけたので結果オーライでしょうか。 (正解しているかはわかりませんが...)
 
-[caption id="attachment_14517" align="aligncenter" width="800"]<a href="images/took-ap-2020-autumn-exam-2.jpg"><img src="images/took-ap-2020-autumn-exam-2.jpg" alt="" width="800" height="600" class="size-full wp-image-14517" /></a> 試験会場の様子[/caption]
+![](images/took-ap-2020-autumn-exam-2.jpg)
 
 ## 所感
 

@@ -15,7 +15,7 @@ tags: [CentOS, VMware, Linux]
 - OS：CentOS 7.9.2009 ( ファイルシステムは **xfs** )
 
 以下のようなパーティションを作成しました。
-<a href="images/extend-disk-size-of-standard-partition-in-centos-on-vmware-1.jpg"><img src="images/extend-disk-size-of-standard-partition-in-centos-on-vmware-1.jpg" alt="" width="1160" height="867" class="alignnone size-full wp-image-15934" /></a>
+![](images/extend-disk-size-of-standard-partition-in-centos-on-vmware-1.jpg)
 
 拡張前のCentOSのディスク情報はこのようになっています。
 
@@ -63,13 +63,13 @@ Disk label type: dos
 **評価では OS を停止せず** 行いました。
 
 - 変更前
-<a href="images/extend-disk-size-of-standard-partition-in-centos-on-vmware-2.jpg"><img src="images/extend-disk-size-of-standard-partition-in-centos-on-vmware-2.jpg" alt="" width="1077" height="866" class="alignnone size-full wp-image-15936" /></a>
+![](images/extend-disk-size-of-standard-partition-in-centos-on-vmware-2.jpg)
 
 - 変更後
-<a href="images/extend-disk-size-of-standard-partition-in-centos-on-vmware-3.jpg"><img src="images/extend-disk-size-of-standard-partition-in-centos-on-vmware-3.jpg" alt="" width="1077" height="870" class="alignnone size-full wp-image-15937" /></a>
+![](images/extend-disk-size-of-standard-partition-in-centos-on-vmware-3.jpg)
 
 変更後は **サイズを増やすと減らすことができなくなるので注意** です。
-<a href="images/extend-disk-size-of-standard-partition-in-centos-on-vmware-4.jpg"><img src="images/extend-disk-size-of-standard-partition-in-centos-on-vmware-4.jpg" alt="" width="684" height="60" class="alignnone size-full wp-image-15938" /></a>
+![](images/extend-disk-size-of-standard-partition-in-centos-on-vmware-4.jpg)
 
 変更後に **OSを再起動** します。
 **再起動後、再度ディスクの状態を確認** してみます。
@@ -199,7 +199,7 @@ the next reboot or after you run partprobe(8) or kpartx(8)
 **OS を再起動** します。
 SSHでつながりました。ひと安心。
 
-<a href="images/extend-disk-size-of-standard-partition-in-centos-on-vmware-5.jpg"><img src="images/extend-disk-size-of-standard-partition-in-centos-on-vmware-5.jpg" alt="" width="822" height="607" class="alignnone size-full wp-image-15940" /></a>
+![](images/extend-disk-size-of-standard-partition-in-centos-on-vmware-5.jpg)
 
 **df** してみます。
 

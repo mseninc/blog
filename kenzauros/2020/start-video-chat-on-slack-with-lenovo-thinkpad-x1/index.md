@@ -33,23 +33,23 @@ tags: [Slack, その他の技術]
 
 スタートボタンをクリックし、 `Store` と入力して Microsoft Store を開きます。
 
-<a href="images/start-video-chat-on-slack-with-lenovo-thinkpad-x1-1.png"><img src="images/start-video-chat-on-slack-with-lenovo-thinkpad-x1-1.png" alt="" width="781" height="638" class="aligncenter size-full wp-image-12457" /></a>
+![](images/start-video-chat-on-slack-with-lenovo-thinkpad-x1-1.png)
 
 [検索] で `Slack` を検索して開き、 [入手] を選択します。
 
-<a href="images/start-video-chat-on-slack-with-lenovo-thinkpad-x1-2.png"><img src="images/start-video-chat-on-slack-with-lenovo-thinkpad-x1-2.png" alt="" width="1008" height="739" class="aligncenter size-full wp-image-12458" /></a>
+![](images/start-video-chat-on-slack-with-lenovo-thinkpad-x1-2.png)
 
 Microsoft アカウントでサインインしていない場合、サインインを促されますが、 [必要ありません] を選べばそのままインストールが選べます。
 
-<a href="images/start-video-chat-on-slack-with-lenovo-thinkpad-x1-3.png"><img src="images/start-video-chat-on-slack-with-lenovo-thinkpad-x1-3.png" alt="" width="1008" height="739" class="aligncenter size-full wp-image-12459" /></a>
+![](images/start-video-chat-on-slack-with-lenovo-thinkpad-x1-3.png)
 
 ダウンロード → インストール中です。
 
-<a href="images/start-video-chat-on-slack-with-lenovo-thinkpad-x1-4.png"><img src="images/start-video-chat-on-slack-with-lenovo-thinkpad-x1-4.png" alt="" width="1008" height="739" class="aligncenter size-full wp-image-12460" /></a>
+![](images/start-video-chat-on-slack-with-lenovo-thinkpad-x1-4.png)
 
 インストールが完了したら [起動] をクリックして、 Slack を起動します。
 
-<a href="images/start-video-chat-on-slack-with-lenovo-thinkpad-x1-5.png"><img src="images/start-video-chat-on-slack-with-lenovo-thinkpad-x1-5.png" alt="" width="1008" height="739" class="aligncenter size-full wp-image-12461" /></a>
+![](images/start-video-chat-on-slack-with-lenovo-thinkpad-x1-5.png)
 
 ちなみに Store アプリ版 Slack の見た目はデスクトップアプリとほとんど (まったく？) 変わりません。
 
@@ -63,17 +63,17 @@ Microsoft アカウントでサインインしていない場合、サインイ�
 
 デバイス → デバイス設定 → オーディオ から **[マイクロホン]** が **ON** になっていることを確認します。
 
-<a href="images/start-video-chat-on-slack-with-lenovo-thinkpad-x1-6.png"><img src="images/start-video-chat-on-slack-with-lenovo-thinkpad-x1-6.png" alt="Lenovo VANTAGE でのマイク設定" width="1355" height="1275" class="aligncenter size-full wp-image-12451" /></a>
+![Lenovo VANTAGE でのマイク設定](images/start-video-chat-on-slack-with-lenovo-thinkpad-x1-6.png)
 
 ### カメラ設定
 
 デバイス → デバイス設定 → ディスプレイとカメラ から **[カメラ・プライバシー・モード]** が **OFF** になっていることを確認します。
 
-<a href="images/start-video-chat-on-slack-with-lenovo-thinkpad-x1-7.png"><img src="images/start-video-chat-on-slack-with-lenovo-thinkpad-x1-7.png" alt="Lenovo VANTAGE でのカメラ設定" width="1355" height="1523" class="aligncenter size-full wp-image-12452" /></a>
+![Lenovo VANTAGE でのカメラ設定](images/start-video-chat-on-slack-with-lenovo-thinkpad-x1-7.png)
 
 ちなみに 2018 年モデル以降の X1 Carbon には **ThinkShutter** と呼ばれる物理カメラシャッターがついていますので、映らないときはこちらも開けましょう。
 
-![](images/start-video-chat-on-slack-with-lenovo-thinkpad-x1-13.jpg)
+![](https://static.lenovo.com/ww/campaigns/2018/thinkshield/images/lenovo-thinkshield-security-1.jpg)
 
 > [Lenovo - ThinkShutter | Facebook](https://www.facebook.com/lenovo/videos/thinkshutter/10155713535374635/)
 
@@ -83,11 +83,11 @@ Microsoft アカウントでサインインしていない場合、サインイ�
 
 **Slack でビデオチャットを開始する**にはチャンネルや DM (ダイレクト・メッセージ) を開いた状態で右上の**受話器アイコンをクリック**するだけです。
 
-<a href="images/start-video-chat-on-slack-with-lenovo-thinkpad-x1-8.png"><img src="images/start-video-chat-on-slack-with-lenovo-thinkpad-x1-8.png" alt="Slack ビデオチャットの開始" width="1035" height="738" class="aligncenter size-full wp-image-12453" /></a>
+![Slack ビデオチャットの開始](images/start-video-chat-on-slack-with-lenovo-thinkpad-x1-8.png)
 
 下記のような通話画面が開き、誰かが応答してくれると会話ができるようになります。
 
-<a href="images/start-video-chat-on-slack-with-lenovo-thinkpad-x1-9.png"><img src="images/start-video-chat-on-slack-with-lenovo-thinkpad-x1-9.png" alt="Slack ビデオチャット画面" width="1026" height="608" class="aligncenter size-full wp-image-12454" /></a>
+![Slack ビデオチャット画面](images/start-video-chat-on-slack-with-lenovo-thinkpad-x1-9.png)
 
 Slack らしく「**リアクション**」なんかもできるので、楽しいですね！画面共有もワンボタンでできるので手軽です。
 
@@ -97,7 +97,7 @@ Slack らしく「**リアクション**」なんかもできるので、楽し�
 
 ちなみにギヤのアイコン (設定) をクリックすると**オーディオやビデオ (カメラ) の設定**ができます。
 
-<a href="images/start-video-chat-on-slack-with-lenovo-thinkpad-x1-10.png"><img src="images/start-video-chat-on-slack-with-lenovo-thinkpad-x1-10.png" alt="" width="331" height="413" class="aligncenter size-full wp-image-12468" /></a>
+![](images/start-video-chat-on-slack-with-lenovo-thinkpad-x1-10.png)
 
 ThinkPad X1 の本体のマイク・カメラで通話する場合、下記の設定にします。ヘッドセットなどを使う場合は、適宜それらの名称を選択します。
 
@@ -111,7 +111,7 @@ ThinkPad X1 の本体のマイク・カメラで通話する場合、下記の�
 
 [メンバー追加] ボタンを押すか、他のメンバーが参加してくることで、複数人での会話ができます。
 
-<a href="images/start-video-chat-on-slack-with-lenovo-thinkpad-x1-11.png"><img src="images/start-video-chat-on-slack-with-lenovo-thinkpad-x1-11.png" alt="" width="1026" height="608" class="aligncenter size-full wp-image-12467" /></a>
+![](images/start-video-chat-on-slack-with-lenovo-thinkpad-x1-11.png)
 
 ビデオは**今話している人が自動的にアクティブ**になり大きく表示されます。
 
@@ -121,7 +121,7 @@ ThinkPad X1 の本体のマイク・カメラで通話する場合、下記の�
 
 通話が終了してもタイムライン上に下記のような通話記録が残りますので、別途記録せずに済み、効率的です。
 
-<a href="images/start-video-chat-on-slack-with-lenovo-thinkpad-x1-12.png"><img src="images/start-video-chat-on-slack-with-lenovo-thinkpad-x1-12.png" alt="Slack ビデオ通話記録" width="418" height="158" class="aligncenter size-full wp-image-12455" /></a>
+![Slack ビデオ通話記録](images/start-video-chat-on-slack-with-lenovo-thinkpad-x1-12.png)
 
 ### 通話品質
 

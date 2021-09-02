@@ -27,7 +27,7 @@ tags: [JavaScript, Node.js, Slack, AWS, EC2, RDS, Lambda, API Gateway]
 
 私の願いは、ただそれだけです。
 
-<img src="images/aws-ec2-rds-instance-control-via-slack-slash-command-1-1.png" alt="" width="641" height="323" class="aligncenter size-full wp-image-7908" />
+![](images/aws-ec2-rds-instance-control-via-slack-slash-command-1-1.png)
 
 
 ## Slash Command とは
@@ -71,7 +71,7 @@ Slash Command のコマンド名は **`/hoge-staging`** にします。
 
 今回使用するロール `LambdaEC2RDSControl` は下記のようなポリシーになっています。
 
-<a href="images/aws-ec2-rds-instance-control-via-slack-slash-command-1-2.png"><img src="images/aws-ec2-rds-instance-control-via-slack-slash-command-1-2.png" alt="" width="1207" height="922" class="aligncenter size-full wp-image-7911" /></a>
+![](images/aws-ec2-rds-instance-control-via-slack-slash-command-1-2.png)
 
 IAM ロールの作成に関しては割愛しますが、下記の 3 権限があれば OK です。
 

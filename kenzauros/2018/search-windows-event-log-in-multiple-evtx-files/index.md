@@ -9,17 +9,17 @@ tags: [Windows, Windows Server, イベントログ]
 
 今回は下記のようにアーカイブされたり抽出したりして**複数に分かれたイベントログファイル (evtx) をまとめて一つの条件で検索する方法**を紹介します。
 
-<img src="images/search-windows-event-log-in-multiple-evtx-files-1.png" alt="イベントログファイル evtx" width="638" height="139" class="aligncenter size-full wp-image-7039" />
+![イベントログファイル evtx](images/search-windows-event-log-in-multiple-evtx-files-1.png)
 
 ## カスタム検索の仕組み
 
 単純に一つの evtx ファイルを検索するのであれば、 **evtx をダブルクリックするだけで Windows 標準のイベントビューアーが開きます**ので、これで内容を確認できます。
 
-[caption id="attachment_7040" align="aligncenter" width="1094"]<img src="images/search-windows-event-log-in-multiple-evtx-files-2.png" alt="" width="1094" height="828" class="size-full wp-image-7040" /> イベントビューアで evtx ファイルを開いた状態[/caption]
+![](images/search-windows-event-log-in-multiple-evtx-files-2.png)
 
 この状態で (1) **[現在のログをフィルター...]** をクリックし、(2) **[XML] タブ**を開くと単一の evtx ファイルの検索用クエリが XML で表示されますので、どんな構造か確認することができます。
 
-[caption id="attachment_7042" align="aligncenter" width="1157"]<img src="images/search-windows-event-log-in-multiple-evtx-files-3.png" alt="" width="1157" height="830" class="size-full wp-image-7042" /> evtx ファイルの検索クエリが確認できる[/caption]
+![](images/search-windows-event-log-in-multiple-evtx-files-3.png)
 
 これを見ると基本構造は下記のようになっていることがわかります。
 
@@ -35,7 +35,7 @@ tags: [Windows, Windows Server, イベントログ]
 
 ちなみにこの `<Query>` タグ側の `Path` はなくても動くため、**実質的には `<Select>` タグ内の `Path` だけにフルパスを記載すれば問題ありません**。
 
-[caption id="attachment_7043" align="aligncenter" width="543"]<img src="images/search-windows-event-log-in-multiple-evtx-files-4.png" alt="" width="543" height="551" class="size-full wp-image-7043" /> 手動でクエリを編集する[/caption]
+![](images/search-windows-event-log-in-multiple-evtx-files-4.png)
 
 試しに **[手動でクエリを編集する]** をチェックしてクエリを編集してみます (警告メッセージが表示されますが、 [はい] を押してかまいません)。
 
@@ -51,23 +51,23 @@ tags: [Windows, Windows Server, イベントログ]
 
 右クリックメニューから **[カスタムビューの作成]** を選びます。
 
-[caption id="attachment_7044" align="aligncenter" width="277"]<img src="images/search-windows-event-log-in-multiple-evtx-files-5.png" alt="カスタムビューの作成" width="277" height="134" class="size-full wp-image-7044" /> カスタムビューの作成[/caption]
+![カスタムビューの作成](images/search-windows-event-log-in-multiple-evtx-files-5.png)
 
 **[XML] タブ**を開き、 **[手動でクエリを編集する]** をチェックします。警告メッセージが表示されますが、 [はい] を押します。
 
-[caption id="attachment_7045" align="aligncenter" width="542"]<img src="images/search-windows-event-log-in-multiple-evtx-files-6.png" alt="カスタムビューの作成 (クエリの編集)" width="542" height="550" class="size-full wp-image-7045" /> カスタムビューの作成 (クエリの編集)[/caption]
+![カスタムビューの作成 (クエリの編集)](images/search-windows-event-log-in-multiple-evtx-files-6.png)
 
 **作成した `<QueryList>` XML をペースト**します。この中でも編集できますが、かなり不便なので別のテキストエディターで編集して貼り付けることをおすすめします。
 
-[caption id="attachment_7046" align="aligncenter" width="543"]<img src="images/search-windows-event-log-in-multiple-evtx-files-7.png" alt="カスタムビューの作成 (クエリの編集)" width="543" height="551" class="size-full wp-image-7046" /> カスタムビューの作成 (クエリの編集)[/caption]
+![カスタムビューの作成 (クエリの編集)](images/search-windows-event-log-in-multiple-evtx-files-7.png)
 
 [OK] を押し、適当な名前をつけて [OK] を押すとカスタムビューが作成されます。既に存在する名前を指定して、上書きすることもできます。
 
-[caption id="attachment_7047" align="aligncenter" width="393"]<img src="images/search-windows-event-log-in-multiple-evtx-files-8.png" alt="カスタムビューの作成" width="393" height="336" class="size-full wp-image-7047" /> カスタムビューの作成[/caption]
+![カスタムビューの作成](images/search-windows-event-log-in-multiple-evtx-files-8.png)
 
 これでカスタムビューが作成されました。
 
-[caption id="attachment_7048" align="aligncenter" width="258"]<img src="images/search-windows-event-log-in-multiple-evtx-files-9.png" alt="カスタムビューの作成完了" width="258" height="107" class="size-full wp-image-7048" /> カスタムビューの作成完了[/caption]
+![カスタムビューの作成完了](images/search-windows-event-log-in-multiple-evtx-files-9.png)
 
 ## 複数のイベントログファイルを検索するには
 

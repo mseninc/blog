@@ -16,57 +16,57 @@ tags: [セキュリティ, その他の技術]
 
 前提を満たした上で、[ここ](https://github.com/zaproxy/zaproxy/wiki/Downloads) から OWASP ZAP をダウンロードします。
 
-<a href="images/owasp-zap-1.png"><img src="images/owasp-zap-1.png" alt="2016-09-17_00h37_30" width="725" height="438" class="alignnone size-full wp-image-2738" /></a>
+![2016-09-17_00h37_30](images/owasp-zap-1.png)
 
 その後は以下の流れでインストールします。
 
-<a href="images/owasp-zap-2.png"><img src="images/owasp-zap-2.png" alt="2016-09-17_00h36_25" width="509" height="398" class="alignnone size-full wp-image-2739" /></a>
+![2016-09-17_00h36_25](images/owasp-zap-2.png)
 
-<a href="images/owasp-zap-3.png"><img src="images/owasp-zap-3.png" alt="2016-09-17_00h36_49" width="511" height="395" class="alignnone size-full wp-image-2740" /></a>
+![2016-09-17_00h36_49](images/owasp-zap-3.png)
 
-<a href="images/owasp-zap-4.png"><img src="images/owasp-zap-4.png" alt="2016-09-17_00h36_56" width="511" height="395" class="alignnone size-full wp-image-2741" /></a>
+![2016-09-17_00h36_56](images/owasp-zap-4.png)
 
-<a href="images/owasp-zap-5.png"><img src="images/owasp-zap-5.png" alt="2016-09-17_00h37_04" width="512" height="398" class="alignnone size-full wp-image-2742" /></a>
+![2016-09-17_00h37_04](images/owasp-zap-5.png)
 
-<a href="images/owasp-zap-6.png"><img src="images/owasp-zap-6.png" alt="2016-09-17_00h37_10" width="509" height="395" class="alignnone size-full wp-image-2743" /></a>
+![2016-09-17_00h37_10](images/owasp-zap-6.png)
 
-<a href="images/owasp-zap-7.png"><img src="images/owasp-zap-7.png" alt="2016-09-17_00h37_17" width="512" height="403" class="alignnone size-full wp-image-2744" /></a>
+![2016-09-17_00h37_17](images/owasp-zap-7.png)
 
-<a href="images/owasp-zap-8.png"><img src="images/owasp-zap-8.png" alt="2016-09-17_00h37_46" width="509" height="395" class="alignnone size-full wp-image-2745" /></a>
+![2016-09-17_00h37_46](images/owasp-zap-8.png)
 
 インストールが完了すると、デスクトップ上に以下のアイコンが作成されます。
 
-<a href="images/owasp-zap-9.png"><img src="images/owasp-zap-9.png" alt="2016-09-17_00h37_54" width="87" height="97" class="alignnone size-full wp-image-2746" /></a>
+![2016-09-17_00h37_54](images/owasp-zap-9.png)
 
 ## 使ってみる
 
 デスクトップに作成されたアイコンをダブルクリックします。
 
-<a href="images/owasp-zap-9.png"><img src="images/owasp-zap-9.png" alt="2016-09-17_00h37_54" width="87" height="97" class="alignnone size-full wp-image-2746" /></a>
+![2016-09-17_00h37_54](images/owasp-zap-9.png)
 
 利用許諾を同意(Accept)します。
 
-<a href="images/owasp-zap-10.png"><img src="images/owasp-zap-10.png" alt="2016-09-17_00h50_20" width="798" height="596" class="alignnone size-full wp-image-2749" /></a>
+![2016-09-17_00h50_20](images/owasp-zap-10.png)
 
 起動中。
 
-<a href="images/owasp-zap-11.png"><img src="images/owasp-zap-11.png" alt="2016-09-17_00h51_16" width="427" height="457" class="alignnone size-full wp-image-2750" /></a>
+![2016-09-17_00h51_16](images/owasp-zap-11.png)
 
 初回の問い合わせは以下のように設定してOKをクリックします。
 
-<a href="images/owasp-zap-12.png"><img src="images/owasp-zap-12.png" alt="2016-09-17_00h51_39" width="401" height="231" class="alignnone size-full wp-image-2751" /></a>
+![2016-09-17_00h51_39](images/owasp-zap-12.png)
 
 弊社Blogに対して、攻撃をしてみます。（みなさんはマネしないでくださいね！）
 
-<a href="images/owasp-zap-13.png"><img src="images/owasp-zap-13.png" alt="2016-09-17_00h53_16" width="1094" height="598" class="alignnone size-full wp-image-2752" /></a>
+![2016-09-17_00h53_16](images/owasp-zap-13.png)
 
 進行します。（ちょっとどきどき）
 
-<a href="images/owasp-zap-14.png"><img src="images/owasp-zap-14.png" alt="2016-09-17_00h54_41" width="1090" height="276" class="alignnone size-full wp-image-2753" /></a>
+![2016-09-17_00h54_41](images/owasp-zap-14.png)
 
 完了すると、アラートの部分で確認できます。説明も日本語で非常にわかり易いです。
 
-<a href="images/owasp-zap-15.png"><img src="images/owasp-zap-15.png" alt="2016-09-17_00h59_01" width="902" height="359" class="alignnone size-full wp-image-2755" /></a>
+![2016-09-17_00h59_01](images/owasp-zap-15.png)
 
 ## あとがき
 
@@ -80,6 +80,6 @@ tags: [セキュリティ, その他の技術]
 
 注意点は、これらは攻撃と同じようにチェックするため ZAP を起動してすぐの注意書きにもありますが、チェック対象にするサイトへは必ず同意の上実施してください。
 
-<a href="images/owasp-zap-16.png"><img src="images/owasp-zap-16.png" alt="2016-09-17_01h03_11" width="690" height="53" class="alignnone size-full wp-image-2756" /></a>
+![2016-09-17_01h03_11](images/owasp-zap-16.png)
 
 それではまた次回お会いしましょう。

@@ -14,24 +14,24 @@ tags: [VMware, 仮想化技術]
 
 ## 選択できる解像度が低い
 - 起動した状態で、 **選択出来る解像度が 1360 x 768 まで** しかありませんでした
-<img src="images/how-to-increase-the-resolution-of-a-virtual-machine-1.jpg" alt="" width="876" height="510" class="alignnone size-full wp-image-15092" />
+![](images/how-to-increase-the-resolution-of-a-virtual-machine-1.jpg)
 
 早速 **仮想マシンの VRAM 設定を変更** してみます。
 
 デフォルトは 4MB でした。
-<img src="images/how-to-increase-the-resolution-of-a-virtual-machine-2.jpg" alt="" width="1074" height="982" class="alignnone size-full wp-image-15093" />
+![](images/how-to-increase-the-resolution-of-a-virtual-machine-2.jpg)
 
 ## 仮想マシンの設定を変更する
 
 1. 仮想マシンを停止します
 1. 仮想マシンの **設定の編集** から **ビデオカード設定のビデオメモリの合計を 256MB に変更** します
-<img src="images/how-to-increase-the-resolution-of-a-virtual-machine-3.jpg" alt="" width="1080" height="984" class="alignnone size-full wp-image-15094" />
+![](images/how-to-increase-the-resolution-of-a-virtual-machine-3.jpg)
 
 **256MB が最大値** のようです。
-<img src="images/how-to-increase-the-resolution-of-a-virtual-machine-4.jpg" alt="" width="686" height="153" class="alignnone size-full wp-image-15100" />
+![](images/how-to-increase-the-resolution-of-a-virtual-machine-4.jpg)
 
 **変更後に起動し確認すると、高解像度の選択が可能** になりました。
-<img src="images/how-to-increase-the-resolution-of-a-virtual-machine-5.jpg" alt="" width="320" height="771" class="alignnone size-full wp-image-15101" />
+![](images/how-to-increase-the-resolution-of-a-virtual-machine-5.jpg)
 
 ## VRAMの計算
 

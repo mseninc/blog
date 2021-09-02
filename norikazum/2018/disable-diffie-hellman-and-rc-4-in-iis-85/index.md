@@ -11,7 +11,7 @@ tags: [Windows Server, セキュリティ, SSL, IIS, Windows]
 
 前回の記事のチェック結果に、以下の2つがありました。
 
-<img src="images/disable-diffie-hellman-and-rc-4-in-iis-85-1.png" alt="" width="1195" height="115" class="alignnone size-full wp-image-8239" />
+![](images/disable-diffie-hellman-and-rc-4-in-iis-85-1.png)
 
 1つめは **Diffie-Hellmanアルゴリズムが有効** になってること、2つめは **RC4を利用した暗号化スイートが有効** になっていること、という指摘でした。
 
@@ -21,31 +21,31 @@ tags: [Windows Server, セキュリティ, SSL, IIS, Windows]
 
 レジストリエディターを開き、 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\KeyExchangeAlgorithms` へ移動します。
 
-<img src="images/disable-diffie-hellman-and-rc-4-in-iis-85-2.png" alt="" width="941" height="555" class="alignnone size-full wp-image-8240" />
+![](images/disable-diffie-hellman-and-rc-4-in-iis-85-2.png)
 
 **新規→キー** から **Diffie-Hellman** というキーを作成し、ここに、 **新規→DWORD** から **Enabled** を作成し、**値データは0** とします。
 
 これで完了です。
-<img src="images/disable-diffie-hellman-and-rc-4-in-iis-85-3.png" alt="" width="721" height="425" class="alignnone size-full wp-image-8244" />
+![](images/disable-diffie-hellman-and-rc-4-in-iis-85-3.png)
 
 ## RC4を利用した暗号化スイート無効化
 
 レジストリエディターを開き、 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers` へ移動します。
 
-<img src="images/disable-diffie-hellman-and-rc-4-in-iis-85-4.png" alt="" width="1196" height="846" class="alignnone size-full wp-image-8241" />
+![](images/disable-diffie-hellman-and-rc-4-in-iis-85-4.png)
 
 **新規→キー** から **RC4 128/128** というキーを作成し、ここに、 **新規→DWORD** から **Enabled** を作成し、**値データは0** とします。
 
-<img src="images/disable-diffie-hellman-and-rc-4-in-iis-85-5.png" alt="" width="754" height="349" class="alignnone size-full wp-image-8245" />
+![](images/disable-diffie-hellman-and-rc-4-in-iis-85-5.png)
 
 続けて、
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Hashes` へ移動します。
 
-<img src="images/disable-diffie-hellman-and-rc-4-in-iis-85-6.png" alt="" width="1189" height="844" class="alignnone size-full wp-image-8246" />
+![](images/disable-diffie-hellman-and-rc-4-in-iis-85-6.png)
 
 **新規→キー** から **MD5** というキーを作成し、ここに、 **新規→DWORD** から **Enabled** を作成し、**値データは0** とします。
 
-<img src="images/disable-diffie-hellman-and-rc-4-in-iis-85-7.png" alt="" width="773" height="335" class="alignnone size-full wp-image-8247" />
+![](images/disable-diffie-hellman-and-rc-4-in-iis-85-7.png)
 
 これで完了です。
 設定が完了したら、OSを再起動します。
@@ -62,7 +62,7 @@ tags: [Windows Server, セキュリティ, SSL, IIS, Windows]
 しばらくチェック完了まで待機します・・・
 
 おー、無事 **判定A** になりました。
-<img src="images/disable-diffie-hellman-and-rc-4-in-iis-85-8.png" alt="" width="1450" height="806" class="alignnone size-full wp-image-8249" />
+![](images/disable-diffie-hellman-and-rc-4-in-iis-85-8.png)
 
 前回の記事と合わせてご覧いただき、是非IISのセキュリティレベルを向上させてください。
 
@@ -72,4 +72,4 @@ tags: [Windows Server, セキュリティ, SSL, IIS, Windows]
 
 ## 2019/11/7 に追記
 コメントをいただきましたので、**評価Aになった後のHandshake Simulationの結果** を掲載します。
-<a href="images/disable-diffie-hellman-and-rc-4-in-iis-85-9.png"><img src="images/disable-diffie-hellman-and-rc-4-in-iis-85-9.png" alt="" width="1089" height="1677" class="alignnone size-full wp-image-11254" /></a>
+![](images/disable-diffie-hellman-and-rc-4-in-iis-85-9.png)

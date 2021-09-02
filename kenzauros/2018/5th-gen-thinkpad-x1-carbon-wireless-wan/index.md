@@ -27,7 +27,7 @@ X1 Carbon の **ワイヤレス WAN (WWAN)** のデバイスは **Sierra Wireles
 
 というわけで、このドライバーを更新します。 2018/7/31 時点での最新版は V.7.59.4828.0101 でした。
 
-<img src="images/5th-gen-thinkpad-x1-carbon-wireless-wan-1.png" alt="" width="931" height="695" class="aligncenter size-full wp-image-7629" />
+![](images/5th-gen-thinkpad-x1-carbon-wireless-wan-1.png)
 
 **Lenovo Vantage** から自動更新するのが簡単ですが、表示されないときは Lenovo のドライバーリストからダウンロードするといいでしょう。
 
@@ -35,13 +35,13 @@ X1 Carbon の **ワイヤレス WAN (WWAN)** のデバイスは **Sierra Wireles
 
 世代を選べば、ダウンロード可能なドライバーの一覧が表示されます。
 
-<img src="images/5th-gen-thinkpad-x1-carbon-wireless-wan-2.png" alt="" width="1150" height="754" class="aligncenter size-full wp-image-7630" />
+![](images/5th-gen-thinkpad-x1-carbon-wireless-wan-2.png)
 
 ### 再起動すると設定が走る
 
 再起動すると自動的に「モバイル ブロードバンド デバイスの設定」が画面の片隅で実行されます。終了するのを待ちます。
 
-<img src="images/5th-gen-thinkpad-x1-carbon-wireless-wan-3.png" alt="" width="518" height="182" class="aligncenter size-full wp-image-7623" />
+![](images/5th-gen-thinkpad-x1-carbon-wireless-wan-3.png)
 
 これが終了すると、ネットワークの一覧に WWAN が出現しますが、**キャリアが DOCOMO 以外の場合、 APN の設定をしないと接続できません**。
 
@@ -49,19 +49,19 @@ X1 Carbon の **ワイヤレス WAN (WWAN)** のデバイスは **Sierra Wireles
 
 タスクトレイのネットワークアイコンを右クリックし、「**ネットワークとインターネットの設定を開く**」をクリックします。
 
-<img src="images/5th-gen-thinkpad-x1-carbon-wireless-wan-4.png" alt="" width="301" height="119" class="aligncenter size-full wp-image-7633" />
+![](images/5th-gen-thinkpad-x1-carbon-wireless-wan-4.png)
 
 サイドメニューの「**携帯電話**」を開き、「**詳細オプション**」をクリックします。
 
-<img src="images/5th-gen-thinkpad-x1-carbon-wireless-wan-5.png" alt="" width="1167" height="793" class="aligncenter size-full wp-image-7635" />
+![](images/5th-gen-thinkpad-x1-carbon-wireless-wan-5.png)
 
 APN 設定の部分で、 [**APN を追加します**] をクリックします。
 
-<img src="images/5th-gen-thinkpad-x1-carbon-wireless-wan-6.png" alt="" width="1167" height="793" class="aligncenter size-full wp-image-7626" />
+![](images/5th-gen-thinkpad-x1-carbon-wireless-wan-6.png)
 
 使用するキャリアに合わせて、 APN 情報を入力します。 APN 情報は各キャリアのホームページのヘルプ等に記載されています。図は mineo (DoCoMo) の場合です。 (パスワードも mineo)
 
-<img src="images/5th-gen-thinkpad-x1-carbon-wireless-wan-7.png" alt="" width="1167" height="832" class="aligncenter size-full wp-image-7627" />
+![](images/5th-gen-thinkpad-x1-carbon-wireless-wan-7.png)
 
 この状態で APN を保存し、接続しようとしましたが、うまく接続できませんでした。
 
@@ -69,11 +69,11 @@ APN 設定の部分で、 [**APN を追加します**] をクリックします�
 
 <ins>※追記: 2020年10月現在の Windows 10 (1909) では LTE を有効にするには「**インターネットおよびアタッチ**」を選択する必要があります。</ins>
 
-<img src="images/5th-gen-thinkpad-x1-carbon-wireless-wan-8.png" alt="" width="374" height="172" class="aligncenter size-full wp-image-7632" />
+![](images/5th-gen-thinkpad-x1-carbon-wireless-wan-8.png)
 
 が、何度か APN 設定の画面を行き来している間に、もともと「NTT DOCOMO (**HSDPA**)」となっていたプロファイルが勝手に、「NTT DOCOMO (**LTE**)」に変わっていました。
 
-<img src="images/5th-gen-thinkpad-x1-carbon-wireless-wan-9.png" alt="" width="371" height="179" class="aligncenter size-full wp-image-7628" />
+![](images/5th-gen-thinkpad-x1-carbon-wireless-wan-9.png)
 
 この状態で APN を設定し直すと、無事接続されました。
 

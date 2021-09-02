@@ -20,7 +20,7 @@ Zabbixで監視しているDNSサーバーで nslookup を使って名前解決�
 1. 監視している「1」のサーバーで正常に名前解決が出来るのか確認したい
 ※1. は動作要件として必須ではありません。
 
-<a href="images/check-dns-server-can-resolve-names-with-zabbix-1.jpg"><img src="images/check-dns-server-can-resolve-names-with-zabbix-1.jpg" alt="" width="519" height="566" class="alignnone size-full wp-image-16944" /></a>
+![](images/check-dns-server-can-resolve-names-with-zabbix-1.jpg)
 
 ## 監視までの流れ
 1. Zabbixサーバーに監視用スクリプトを配置
@@ -65,7 +65,7 @@ fi
 ## Zabbixサーバーの設定
 1. アイテムの作成
 以下のようなアイテムを作成します。
-<a href="images/check-dns-server-can-resolve-names-with-zabbix-2.jpg"><img src="images/check-dns-server-can-resolve-names-with-zabbix-2.jpg" alt="" width="1095" height="1099" class="alignnone size-full wp-image-16945" /></a>
+![](images/check-dns-server-can-resolve-names-with-zabbix-2.jpg)
     - 名前：任意名
     - タイプ：外部チェック
     - キー：`check_nslookup.sh[www.google.co.jp,{HOST.IP}]`
@@ -77,7 +77,7 @@ fi
     - 有効：チェック
 1. トリガーの作成
 以下のようなトリガーを作成します。
-<a href="images/check-dns-server-can-resolve-names-with-zabbix-3.jpg"><img src="images/check-dns-server-can-resolve-names-with-zabbix-3.jpg" alt="" width="995" height="870" class="alignnone size-full wp-image-17021" /></a>
+![](images/check-dns-server-can-resolve-names-with-zabbix-3.jpg)
     - 名前：任意名
     - 深刻度：致命的な障害 ※適宜変更ください
     - 条件式：`{host1:check_nslookup.sh[www.google.co.jp,{HOST.IP}].last()}=0`
@@ -90,7 +90,7 @@ fi
 
 無事監視ができました。
 
-<a href="images/check-dns-server-can-resolve-names-with-zabbix-4.jpg"><img src="images/check-dns-server-can-resolve-names-with-zabbix-4.jpg" alt="" width="1576" height="470" class="alignnone size-full wp-image-16949" /></a>
+![](images/check-dns-server-can-resolve-names-with-zabbix-4.jpg)
 
 ## あとがき
 

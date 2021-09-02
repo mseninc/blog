@@ -30,7 +30,7 @@ Huawei Band 3 Pro は2年前としては珍しく GPS が内蔵されており�
 
 - [Xiaomi Mi Smart Band 6](https://www.mi-store.com.au/xiaomi-mi-smart-band-6)
 
-<a href="images/xiaomi-mi-band-6-1.jpg"><img src="images/xiaomi-mi-band-6-1.jpg" alt="" width="694" height="363" class="aligncenter size-full wp-image-16419" /></a>
+![](images/xiaomi-mi-band-6-1.jpg)
 
 ※リンクは Xiaomi オーストラリアのサイトです。
 
@@ -55,7 +55,7 @@ Huawei Band 3 Pro は2年前としては珍しく GPS が内蔵されており�
 
 中国語版は **AliExpress** でマシそうな店 (XiaomiRussian Store) から購入しました。 AliExpress 自体、万人にオススメはしませんが、日本で手に入らない中国やヨーロッパの商品がしかも安く入手できるので、たまに利用しています。
 
-<a href="images/xiaomi-mi-band-6-2.png"><img src="images/xiaomi-mi-band-6-2.png" alt="" width="457" height="640" class="aligncenter size-full wp-image-16417" /></a>
+![](images/xiaomi-mi-band-6-2.png)
 
 Mi Band 6 の場合、概ね 40 ドルちょっとの店なら大丈夫そうな気がします。今回は割引 -$1.50 で **$40.49 (4500円程度)** でした。**発注から約2週間程度で届きました**。
 
@@ -63,27 +63,27 @@ Mi Band 6 の場合、概ね 40 ドルちょっとの店なら大丈夫そうな
 
 **到着した Mi Band 6**。箱が若干ひしゃげているのが不安を誘います。いざ、開梱！
 
-<a href="images/xiaomi-mi-band-6-3.jpg"><img src="images/xiaomi-mi-band-6-3.jpg" alt="" width="540" height="720" class="aligncenter size-full wp-image-16404" /></a>
+![](images/xiaomi-mi-band-6-3.jpg)
 
 じゃーーーん。**本体・充電ケーブル・中国語の説明書**、というシンプルな構成です。いや、必要十分です。
 
-<a href="images/xiaomi-mi-band-6-4.jpg"><img src="images/xiaomi-mi-band-6-4.jpg" alt="" width="720" height="540" class="aligncenter size-full wp-image-16405" /></a>
+![](images/xiaomi-mi-band-6-4.jpg)
 
 本体に触れてみると...おぉ、光った。綺麗なディスプレイです。**ま、中国語ですがね。**
 
-<a href="images/xiaomi-mi-band-6-5.jpg"><img src="images/xiaomi-mi-band-6-5.jpg" alt="" width="720" height="540" class="aligncenter size-full wp-image-16406" /></a>
+![](images/xiaomi-mi-band-6-5.jpg)
 
 なんか接続してほしそうなアイコンは移ってますが、さっぱり不明。メニューもきっちり中国語です。
 
 もっと [ST lab](https://watayuki.xsrv.jp/ST_manual/index.html) やっとけばよかった！なんて思いつつ、一朝一夕には理解できそうにないので、 Google 翻訳アプリでリアルタイム翻訳しましたが、やっぱりよくわからん。
 
-<a href="images/xiaomi-mi-band-6-6.jpg"><img src="images/xiaomi-mi-band-6-6.jpg" alt="" width="1006" height="720" class="aligncenter size-full wp-image-16407" /></a>
+![](images/xiaomi-mi-band-6-6.jpg)
 
 ### Mi Fit アプリインストール
 
 ということでスマートバンド側はあきらめて**アプリ側から攻めます**。 **Xiaomi のフィットネス管理アプリは Mi Fit** と呼ばれるアプリなので、これをインストールします。 Wii Fit みたいですね。
 
-<a href="images/xiaomi-mi-band-6-7.png"><img src="images/xiaomi-mi-band-6-7.png" alt="" width="743" height="259" class="aligncenter size-full wp-image-16408" /></a>
+![](images/xiaomi-mi-band-6-7.png)
 
 - [Mi Fit - Google Play のアプリ](https://play.google.com/store/apps/details?id=com.xiaomi.hm.health&hl=ja&gl=US)
 - [‎「Mi Fit」をApp Storeで](https://apps.apple.com/jp/app/mi-fit/id938688461)
@@ -94,7 +94,7 @@ Mi Band 6 の場合、概ね 40 ドルちょっとの店なら大丈夫そうな
 
 これまで **Mi Fit を使っていなかった場合はアカウントを作成**します。
 
-<a href="images/xiaomi-mi-band-6-8.png"><img src="images/xiaomi-mi-band-6-8.png" alt="" width="1331" height="720" class="aligncenter size-full wp-image-16409" /></a>
+![](images/xiaomi-mi-band-6-8.png)
 
 1. 「今すぐアカウントを作成」、もしくは Google や Facebook ログインをタップします。私は Google アカウントで登録しました。
 2. 現在地として**「日本」**を選び、
@@ -108,7 +108,7 @@ Mi Band 6 の場合、概ね 40 ドルちょっとの店なら大丈夫そうな
 
 ### バンドの登録とアップデート
 
-<a href="images/xiaomi-mi-band-6-9.png"><img src="images/xiaomi-mi-band-6-9.png" alt="" width="1331" height="720" class="aligncenter size-full wp-image-16410" /></a>
+![](images/xiaomi-mi-band-6-9.png)
 
 1. デバイスの種類で**「バンド」**を選び
 2. 「同意」をタップします。
@@ -120,7 +120,7 @@ Mi Band 6 の場合、概ね 40 ドルちょっとの店なら大丈夫そうな
 
 アップデートが終わるとバンドが登録され、下記のように設定が確認できるようになります。ではバンド自体の言語設定を切り替えます。
 
-<a href="images/xiaomi-mi-band-6-10.png"><img src="images/xiaomi-mi-band-6-10.png" alt="" width="1331" height="720" class="aligncenter size-full wp-image-16411" /></a>
+![](images/xiaomi-mi-band-6-10.png)
 
 **「スマートバンド設定」から「言語」をタップし、「English」を選べば OK** です。画面が英語になってわかりやすくなりました！！
 
@@ -130,7 +130,7 @@ Mi Band 6 の場合、概ね 40 ドルちょっとの店なら大丈夫そうな
 
 **スナップホック式のストラップ**をつけるのに最初少しコツがいりましたが、すぐに慣れました。遊革もなく、バンドが余ることがないので、よいと思います。
 
-<a href="images/xiaomi-mi-band-6-11.jpg"><img src="images/xiaomi-mi-band-6-11.jpg" alt="" width="480" height="360" class="aligncenter size-full wp-image-16414" /></a>
+![](images/xiaomi-mi-band-6-11.jpg)
 
 装着時の重さもほぼ感じませんし、この記事をキーボードを打っていても気になることはありませんでした。
 
@@ -138,7 +138,7 @@ Mi Band 6 の場合、概ね 40 ドルちょっとの店なら大丈夫そうな
 
 ちょっとしたハイキングに出かけたので、 **Huawei Band 3 Pro を左手に Xiaomi Mi Band 6 を右手**にはめて、実験してみたところ、**3万歩歩いて、300歩（＝1％）以内**の差でした。
 
-<a href="images/xiaomi-mi-band-6-12.jpg"><img src="images/xiaomi-mi-band-6-12.jpg" alt="" width="720" height="720" class="aligncenter size-full wp-image-16413" /></a>
+![](images/xiaomi-mi-band-6-12.jpg)
 
 装着するタイミングが若干違ったので、ほぼ一致していると考えてよさそうです。標準器がないので、はっきり言えませんが、どちらも精度は優秀なようです。
 
@@ -146,7 +146,7 @@ Mi Band 6 の場合、概ね 40 ドルちょっとの店なら大丈夫そうな
 
 こちらも **Huawei Band 3 Pro (左) と Xiaomi Mi Band 6 (右)** で同時計測して比較しました。
 
-<a href="images/xiaomi-mi-band-6-13.png"><img src="images/xiaomi-mi-band-6-13.png" alt="" width="665" height="720" class="aligncenter size-full wp-image-16415" /></a>
+![](images/xiaomi-mi-band-6-13.png)
 
 **合計睡眠時間は1分差で、入眠や起床の時刻も数分の差**でしたので、概ねよく把握できているようです。
 

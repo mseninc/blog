@@ -15,7 +15,7 @@ tags: [Visio, その他, ライフハック]
 
 Visio では Word や Excel などと同様に「ホーム」リボンにフォント設定があるので、ここでフォントやフォントサイズが変更できます。
 
-<a href="images/how-to-change-default-font-in-microsoft-visio-1.png"><img src="images/how-to-change-default-font-in-microsoft-visio-1.png" alt="Microsoft Visio でデフォルトのフォントを変更する" width="1148" height="791" class="aligncenter size-full wp-image-12036" /></a>
+![Microsoft Visio でデフォルトのフォントを変更する](images/how-to-change-default-font-in-microsoft-visio-1.png)
 
 ただ、テキストツールでテキストボックスを配置したり、図形をダブルクリックして文字列を入力すると毎回**「ＭＳ Ｐゴシック」「12 pt」を強制**されます。（環境によって異なるかもしれません）
 
@@ -29,11 +29,11 @@ Visio では Word や Excel などと同様に「ホーム」リボンにフォ�
 
 表示されていなければ、 [ファイル] メニューから **[オプション]** を開きます。
 
-<a href="images/how-to-change-default-font-in-microsoft-visio-2.png"><img src="images/how-to-change-default-font-in-microsoft-visio-2.png" alt="Microsoft Visio でデフォルトのフォントを変更する" width="1146" height="789" class="aligncenter size-full wp-image-12037" /></a>
+![Microsoft Visio でデフォルトのフォントを変更する](images/how-to-change-default-font-in-microsoft-visio-2.png)
 
 オプションの [詳細設定] で **[開発モードで実行する]** にチェックを入れ [OK] を押します。
 
-<a href="images/how-to-change-default-font-in-microsoft-visio-3.png"><img src="images/how-to-change-default-font-in-microsoft-visio-3.png" alt="Microsoft Visio でデフォルトのフォントを変更する" width="936" height="678" class="aligncenter size-full wp-image-12038" /></a>
+![Microsoft Visio でデフォルトのフォントを変更する](images/how-to-change-default-font-in-microsoft-visio-3.png)
 
 ## ドローイングエクスプローラーからテーマを変更
 
@@ -41,11 +41,11 @@ Visio では Word や Excel などと同様に「ホーム」リボンにフォ�
 
 **[スタイル] → [標準] → [テーマ]** とたどり、 [テーマ] を右クリックして、 **[スタイルの定義...]** を選択します。
 
-<a href="images/how-to-change-default-font-in-microsoft-visio-4.png"><img src="images/how-to-change-default-font-in-microsoft-visio-4.png" alt="Microsoft Visio でデフォルトのフォントを変更する" width="1148" height="791" class="aligncenter size-full wp-image-12039" /></a>
+![Microsoft Visio でデフォルトのフォントを変更する](images/how-to-change-default-font-in-microsoft-visio-4.png)
 
 「スタイルの定義」ダイアログの [変更] にある **[テキスト...]** をクリックすると、見たことのあるような「テキスト」設定ダイアログが開きます。
 
-<a href="images/how-to-change-default-font-in-microsoft-visio-5.png"><img src="images/how-to-change-default-font-in-microsoft-visio-5.png" alt="Microsoft Visio でデフォルトのフォントを変更する" width="1148" height="791" class="aligncenter size-full wp-image-12040" /></a>
+![Microsoft Visio でデフォルトのフォントを変更する](images/how-to-change-default-font-in-microsoft-visio-5.png)
 
 ここで**フォントやサイズを変更して [OK]** をクリックします。
 

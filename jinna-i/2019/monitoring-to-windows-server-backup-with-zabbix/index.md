@@ -22,18 +22,18 @@ tags: [Windows, zabbix, その他の技術]
 ## テンプレートのダウンロードとインポート
 
 [ZABBIX SOLUTIONS: Backups](https://www.zabbix.com/integrations/backups) に Windows Server Backup をモニタリングするためのテンプレートが公開されています。
-<a href="images/monitoring-to-windows-server-backup-with-zabbix-1.png"><img src="images/monitoring-to-windows-server-backup-with-zabbix-1.png" alt="" width="1231" height="107" class="alignnone size-full wp-image-9651" /></a>
+![](images/monitoring-to-windows-server-backup-with-zabbix-1.png)
 
 リンクをクリックすると [GitHub のリポジトリ](https://github.com/brunogui0812/zabbix-windows-server-backup) に飛びますので、**Windows-Server-Backup.xml** をダウンロードします。
 
 設定 > テンプレート から **インポート** をクリックしダウンロードしたテンプレートをインポートします。
-<a href="images/monitoring-to-windows-server-backup-with-zabbix-2.png"><img src="images/monitoring-to-windows-server-backup-with-zabbix-2.png" alt="" width="1257" height="252" class="alignnone size-full wp-image-9656" /></a>
+![](images/monitoring-to-windows-server-backup-with-zabbix-2.png)
 
 インポートしたファイルは監視対象のホストに割り当てておいてください。
 
 余談ですが、テンプレートも一杯あるんだぁなと感心しました。ここまであると色々やってみたくなりますねー。
 
-<a href="images/monitoring-to-windows-server-backup-with-zabbix-3.jpg"><img src="images/monitoring-to-windows-server-backup-with-zabbix-3.jpg" alt="" width="619" height="1317" class="alignnone size-full wp-image-9670" /></a>
+![](images/monitoring-to-windows-server-backup-with-zabbix-3.jpg)
 
 ## このテンプレートでできること
 
@@ -75,7 +75,7 @@ tags: [Windows, zabbix, その他の技術]
 
 いい感じでメール通知されました。
 
-<a href="images/monitoring-to-windows-server-backup-with-zabbix-4.png"><img src="images/monitoring-to-windows-server-backup-with-zabbix-4.png" alt="" width="609" height="608" class="alignnone size-full wp-image-9663" /></a>
+![](images/monitoring-to-windows-server-backup-with-zabbix-4.png)
 
 タイトルとかは好みで編集してみてもいいかもしれないですね。
 

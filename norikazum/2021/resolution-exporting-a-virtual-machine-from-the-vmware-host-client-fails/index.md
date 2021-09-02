@@ -19,12 +19,12 @@ tags: [VMware, OVF, 仮想化技術]
 
 ## 失敗する現象
 - **VMware Host Client から エクスポートを実行** します
-<a href="images/resolution-exporting-a-virtual-machine-from-the-vmware-host-client-fails-1.jpg"><img src="images/resolution-exporting-a-virtual-machine-from-the-vmware-host-client-fails-1.jpg" alt="" width="393" height="565" class="alignnone size-full wp-image-15639" /></a>
+![](images/resolution-exporting-a-virtual-machine-from-the-vmware-host-client-fails-1.jpg)
 ↓
-<a href="images/resolution-exporting-a-virtual-machine-from-the-vmware-host-client-fails-2.jpg"><img src="images/resolution-exporting-a-virtual-machine-from-the-vmware-host-client-fails-2.jpg" alt="" width="498" height="327" class="alignnone size-full wp-image-15640" /></a>
+![](images/resolution-exporting-a-virtual-machine-from-the-vmware-host-client-fails-2.jpg)
 
 - **進捗が50％で止まり完了しません** 。一晩実行し続けても何度かやりなおしても同じでした。 **出力済みのファイルをみると nvram ファイルだけが出力されていないような状態** でした。
-<a href="images/resolution-exporting-a-virtual-machine-from-the-vmware-host-client-fails-3.jpg"><img src="images/resolution-exporting-a-virtual-machine-from-the-vmware-host-client-fails-3.jpg" alt="" width="955" height="40" class="alignnone size-full wp-image-15641" /></a>
+![](images/resolution-exporting-a-virtual-machine-from-the-vmware-host-client-fails-3.jpg)
 
 以下の記事を参考に、 OVF Tool を使ってやってみると解決しました。
 [技術メモメモ: OVF Toolを使って仮想マシンをエクスポート・インポートする](https://tech-mmmm.blogspot.com/2020/09/ovf-tool.html)
@@ -69,18 +69,18 @@ Completed successfully
 
 C:\srv05-ovf フォルダの下に、 srv05 フォルダが作成され、その下にエクスポートされます。
 
-<a href="images/resolution-exporting-a-virtual-machine-from-the-vmware-host-client-fails-4.jpg"><img src="images/resolution-exporting-a-virtual-machine-from-the-vmware-host-client-fails-4.jpg" alt="" width="728" height="561" class="alignnone size-full wp-image-15642" /></a>
+![](images/resolution-exporting-a-virtual-machine-from-the-vmware-host-client-fails-4.jpg)
 
 ## 別環境の ESXi にインポート成功
 エクスポートした OVF テンプレート一式を別環境の vCenter にインポートテストを行いました。
 
-<a href="images/resolution-exporting-a-virtual-machine-from-the-vmware-host-client-fails-5.jpg"><img src="images/resolution-exporting-a-virtual-machine-from-the-vmware-host-client-fails-5.jpg" alt="" width="331" height="175" class="alignnone size-full wp-image-15644" /></a>
+![](images/resolution-exporting-a-virtual-machine-from-the-vmware-host-client-fails-5.jpg)
 
 無事成功しました。
-<a href="images/resolution-exporting-a-virtual-machine-from-the-vmware-host-client-fails-6.jpg"><img src="images/resolution-exporting-a-virtual-machine-from-the-vmware-host-client-fails-6.jpg" alt="" width="1148" height="50" class="alignnone size-full wp-image-15651" /></a>
+![](images/resolution-exporting-a-virtual-machine-from-the-vmware-host-client-fails-6.jpg)
 
 動作も問題ありませんでした。
-<a href="images/resolution-exporting-a-virtual-machine-from-the-vmware-host-client-fails-7.jpg"><img src="images/resolution-exporting-a-virtual-machine-from-the-vmware-host-client-fails-7.jpg" alt="" width="521" height="251" class="alignnone size-full wp-image-15646" /></a>
+![](images/resolution-exporting-a-virtual-machine-from-the-vmware-host-client-fails-7.jpg)
 
 ## あとがき
 今回の対応では バージョン 4.3.0 を利用したのですが、当初 **誤って 3.5.0 の古いバージョンをインストール** していました。

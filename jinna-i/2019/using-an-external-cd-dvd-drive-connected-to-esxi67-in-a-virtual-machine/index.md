@@ -15,7 +15,7 @@ VMware ESXi 上の仮想マシンを展開する際、OS のインストール�
 
 - VMware vSphere 6.7 Update2
 
-<a href="images/using-an-external-cd-dvd-drive-connected-to-esxi67-in-a-virtual-machine-1.png"><img src="images/using-an-external-cd-dvd-drive-connected-to-esxi67-in-a-virtual-machine-1.png" alt="" width="1058" height="523" class="alignnone size-full wp-image-11602" /></a>
+![](images/using-an-external-cd-dvd-drive-connected-to-esxi67-in-a-virtual-machine-1.png)
 
 前提として、外付け CD/DVD ドライブが ESXi で認識されているものとします。
 もし認識していない場合は、以下を参考にドライバを組み込んだカスタム ISO イメージを作成してください。
@@ -39,13 +39,13 @@ CD/DVD ドライブ1 の項目を以下のように変更します。
 - **デバイスノード**: CD-ROM のエミュレート
 - **仮想デバイスノード**: SATA コントローラ0, SATA(0:0) CD/DVD ドライブ1
 
-<a href="images/using-an-external-cd-dvd-drive-connected-to-esxi67-in-a-virtual-machine-2.png"><img src="images/using-an-external-cd-dvd-drive-connected-to-esxi67-in-a-virtual-machine-2.png" alt="" width="829" height="196" class="alignnone size-full wp-image-11580" /></a>
+![](images/using-an-external-cd-dvd-drive-connected-to-esxi67-in-a-virtual-machine-2.png)
 
 ### デバイスモードを変更できない場合
 
 **パススルー CD-ROM** から変更できない場合がありますが、そんなときは思い切ってデバイスを削除し、新たに CD/DVD ドライブを追加しましょう。
 
-<a href="images/using-an-external-cd-dvd-drive-connected-to-esxi67-in-a-virtual-machine-3.png"><img src="images/using-an-external-cd-dvd-drive-connected-to-esxi67-in-a-virtual-machine-3.png" alt="" width="832" height="532" class="alignnone size-full wp-image-11608" /></a>
+![](images/using-an-external-cd-dvd-drive-connected-to-esxi67-in-a-virtual-machine-3.png)
 
 ### ブート順位の変更
 
@@ -53,21 +53,21 @@ CD/DVD ドライブから起動するよう BIOS のブート順位を変更し�
 
 「仮想マシン オプション」から「次回起動時に、強制的に BIOS セットアップ画面に入る」にチェックを入れ仮想マシンを起動します。
 
-<a href="images/using-an-external-cd-dvd-drive-connected-to-esxi67-in-a-virtual-machine-4.png"><img src="images/using-an-external-cd-dvd-drive-connected-to-esxi67-in-a-virtual-machine-4.png" alt="" width="812" height="566" class="alignnone size-full wp-image-11585" /></a>
+![](images/using-an-external-cd-dvd-drive-connected-to-esxi67-in-a-virtual-machine-4.png)
 
 仮想マシンが起動すると BIOS 画面となるので「CD-ROM Drive」を一番上にもっていき、変更を保存します。
 
-<a href="images/using-an-external-cd-dvd-drive-connected-to-esxi67-in-a-virtual-machine-5.png"><img src="images/using-an-external-cd-dvd-drive-connected-to-esxi67-in-a-virtual-machine-5.png" alt="" width="1532" height="1140" class="alignnone size-full wp-image-11586" /></a>
+![](images/using-an-external-cd-dvd-drive-connected-to-esxi67-in-a-virtual-machine-5.png)
 
 デバイスが認識され、Windows Server OS のインストーラが起動しました。
 
-<a href="images/using-an-external-cd-dvd-drive-connected-to-esxi67-in-a-virtual-machine-6.png"><img src="images/using-an-external-cd-dvd-drive-connected-to-esxi67-in-a-virtual-machine-6.png" alt="" width="1032" height="773" class="alignnone size-full wp-image-11587" /></a>
+![](images/using-an-external-cd-dvd-drive-connected-to-esxi67-in-a-virtual-machine-6.png)
 
 ## 認識しない場合は
 
 まれに上記手順を踏んでも認識してくれないときがあります。
 
-<a href="images/using-an-external-cd-dvd-drive-connected-to-esxi67-in-a-virtual-machine-7.png"><img src="images/using-an-external-cd-dvd-drive-connected-to-esxi67-in-a-virtual-machine-7.png" alt="" width="1377" height="306" class="alignnone size-full wp-image-11590" /></a>
+![](images/using-an-external-cd-dvd-drive-connected-to-esxi67-in-a-virtual-machine-7.png)
 ※こんな感じで PXE 画面で止まる。
 
 その時はもう一度以下の手順を実施してみてください。

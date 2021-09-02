@@ -13,7 +13,7 @@ tags: [.NET, Windows]
 
 プログラムと機能から確認するのが手っ取り早いのですが、**OSに組み込まれているバージョンはここに表示されません**。
 
-<a href="images/check-your-dotnetframework-version-1.png"><img src="images/check-your-dotnetframework-version-1.png" alt="" width="600" height="398" class="alignnone size-medium wp-image-3903" /></a>
+![](images/check-your-dotnetframework-version-1.png)
 
 そのようなときの確認方法として、今回はレジストリから確認する方法を紹介します。
 
@@ -24,10 +24,10 @@ tags: [.NET, Windows]
 ## バージョンの確認方法
 
 1. 画面左下のWindowsマークをクリックし、`regedit` と入力し、クリックで起動します。ユーザーアカウント制御の確認が出た場合は、はい をクリックして進みます。
-<a href="images/check-your-dotnetframework-version-2.png"><img src="images/check-your-dotnetframework-version-2.png" alt="" width="274" height="450" class="alignnone size-medium wp-image-3904" /></a>
+![](images/check-your-dotnetframework-version-2.png)
 
 1. `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full` のキーを開き、Releaseのデータを確認します。ここでは `394802` と確認できました。
-<a href="images/check-your-dotnetframework-version-3.png"><img src="images/check-your-dotnetframework-version-3.png" alt="" width="300" height="194" class="alignnone size-medium wp-image-3926" /></a>
+![](images/check-your-dotnetframework-version-3.png)
 
 1. [Microsoft Webサイト](https://msdn.microsoft.com/ja-jp/library/bb822049(v=vs.110).aspx)の表の**インストールされた .NET バージョンを確認するには** の列から、前項で調べたRelease番号に対応するバージョンを確認します。今回は、.NET Framework 4.6.2 がインストールされていることが分かりました。
 

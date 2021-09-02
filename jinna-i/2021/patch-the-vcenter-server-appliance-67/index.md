@@ -25,7 +25,7 @@ Web ブラウザから `https://<vCenter Server の FQDN>:5480/login` に接続�
 
 ログイン直後の画面に vCenter Servere Appliance の**バージョン情報**や**ビルド番号**が表示されています。
 
-<a href="images/patch-the-vcenter-server-appliance-67-1.png"><img src="images/patch-the-vcenter-server-appliance-67-1.png" alt="" width="1001" height="144" class="alignnone size-full wp-image-16568" /></a>
+![](images/patch-the-vcenter-server-appliance-67-1.png)
 
 現在のビルド番号がどの `UpdateXX` に該当するのかは下記の Web サイトと照らし合わせるとよいでしょう。
 
@@ -38,19 +38,19 @@ Web ブラウザから `https://<vCenter Server の FQDN>:5480/login` に接続�
 
 製品に **VC** を指定し、お使いのバージョンを選択してパッチを検索します。
 
-<a href="images/patch-the-vcenter-server-appliance-67-2.png"><img src="images/patch-the-vcenter-server-appliance-67-2.png" alt="" width="779" height="377" class="alignnone size-full wp-image-16570" /></a>
+![](images/patch-the-vcenter-server-appliance-67-2.png)
 
 目的のパッチをダウンロードします。今回は例として `VC-6.7.0U3n-Appliance-Patch` をダウンロードしています。このとき、**ビルド番号を控えておくとアップデート後の確認に役立ちます**。
 
-<a href="images/patch-the-vcenter-server-appliance-67-3.png"><img src="images/patch-the-vcenter-server-appliance-67-3.png" alt="" width="1166" height="217" class="alignnone size-full wp-image-16572" /></a>
+![](images/patch-the-vcenter-server-appliance-67-3.png)
 
 ダウンロードが完了したら、vSphere Client などで vCenter Server Appliance がアクセス可能なデータストアへパッチをアップロードします。アクセスできれば任意のパスで構いません。
 
-<a href="images/patch-the-vcenter-server-appliance-67-4.png"><img src="images/patch-the-vcenter-server-appliance-67-4.png" alt="" width="1234" height="495" class="alignnone size-full wp-image-16573" /></a>
+![](images/patch-the-vcenter-server-appliance-67-4.png)
 
 vCenter Server Appliance の仮想マシンの設定の編集からデータストアを参照し、前項でアップロードしたパッチをCD/DVDドライブにマウントします。
 
-<a href="images/patch-the-vcenter-server-appliance-67-5.png"><img src="images/patch-the-vcenter-server-appliance-67-5.png" alt="" width="880" height="816" class="alignnone size-full wp-image-16575" /></a>
+![](images/patch-the-vcenter-server-appliance-67-5.png)
 
 これで準備は完了です。
 
@@ -60,11 +60,11 @@ vCenter Server Appliance の仮想マシンの設定の編集からデータス�
 
 VMware Appliance Management コンソールにログインし、[アクセス] > [編集] の順にクリックします。
 
-<a href="images/patch-the-vcenter-server-appliance-67-6.png"><img src="images/patch-the-vcenter-server-appliance-67-6.png" alt="" width="1246" height="306" class="alignnone size-full wp-image-16576" /></a>
+![](images/patch-the-vcenter-server-appliance-67-6.png)
 
 **SSH ログインの有効化** と **BASH シェルの有効化** にチェックにチェックを入れて [OK] をクリックします。
 
-<a href="images/patch-the-vcenter-server-appliance-67-7.png"><img src="images/patch-the-vcenter-server-appliance-67-7.png" alt="" width="872" height="402" class="alignnone size-full wp-image-16577" /></a>
+![](images/patch-the-vcenter-server-appliance-67-7.png)
 
 TeraTerm などのターミナルソフトから vCenter Server Appliance へ SSH 接続します。ここからパッチを適用していきます。
 
@@ -124,11 +124,11 @@ Command> software-packages install --staged
 
 再起動が終わったら VMware Appliance Management コンソールから、バージョンとビルド番号がアップデート対象のものと一致していることを確認します。
 
-<a href="images/patch-the-vcenter-server-appliance-67-8.png"><img src="images/patch-the-vcenter-server-appliance-67-8.png" alt="" width="850" height="146" class="alignnone size-full wp-image-16584" /></a>
+![](images/patch-the-vcenter-server-appliance-67-8.png)
 
 後片付けとしてアップデート前に有効化した SSH と bash シェルを無効化し作業は完了です。
 
-<a href="images/patch-the-vcenter-server-appliance-67-9.png"><img src="images/patch-the-vcenter-server-appliance-67-9.png" alt="" width="870" height="402" class="alignnone size-full wp-image-16585" /></a>
+![](images/patch-the-vcenter-server-appliance-67-9.png)
 
 ではまた。
 

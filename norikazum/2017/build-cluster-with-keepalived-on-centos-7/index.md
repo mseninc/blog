@@ -25,7 +25,7 @@ VIP 192.168.10.199
 
 イメージとしては以下のような環境になります。
 
-<a href="images/build-cluster-with-keepalived-on-centos-7-1.png"><img src="images/build-cluster-with-keepalived-on-centos-7-1.png" alt="keepalive01" width="826" height="443" class="alignnone size-full wp-image-1672" /></a>
+![keepalive01](images/build-cluster-with-keepalived-on-centos-7-1.png)
 
 **以降の手順は root 権限で操作しています。**
 
@@ -210,7 +210,7 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/keepalived.serv
 ## 冗長テスト
 
 1. **keepalive01** を停止して VIP に Ping を実施。
-<a href="images/build-cluster-with-keepalived-on-centos-7-2.png"><img src="images/build-cluster-with-keepalived-on-centos-7-2.png" alt="2016-07-10_19h30_32" width="138" height="40" class="alignnone size-full wp-image-1688" /></a>
+![2016-07-10_19h30_32](images/build-cluster-with-keepalived-on-centos-7-2.png)
   ```
   >ping 192.168.10.199
 
@@ -228,7 +228,7 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/keepalived.serv
 Pingが問題なく飛ぶことが確認できました。
 
 1. **keepalive01** を起動し、 **keepalive02** を停止して、VIP に Ping を実施。
-<a href="images/build-cluster-with-keepalived-on-centos-7-3.png"><img src="images/build-cluster-with-keepalived-on-centos-7-3.png" alt="2016-07-10_19h33_03" width="144" height="43" class="alignnone size-full wp-image-1690" /></a>
+![2016-07-10_19h33_03](images/build-cluster-with-keepalived-on-centos-7-3.png)
   ```
   >ping 192.168.10.199
 

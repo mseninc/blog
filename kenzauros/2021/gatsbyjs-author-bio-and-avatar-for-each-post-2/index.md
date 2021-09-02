@@ -16,15 +16,15 @@ tags: [Node.js, Web, Gatsby.js]
 
 Gatsby の [gatsby-starter-blog](https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-blog) スターターでは著者が Kyle Mathews 固定になっています。
 
-<a href="images/gatsbyjs-author-bio-and-avatar-for-each-post-2-1.png"><img src="images/gatsbyjs-author-bio-and-avatar-for-each-post-2-1.png" alt="" width="650" height="258" class="aligncenter size-full wp-image-18146" /></a>
+![](images/gatsbyjs-author-bio-and-avatar-for-each-post-2-1.png)
 
 これを記事ごとの著者 (author) に合わせた著者情報とアバター画像が表示されるようにします。
 
-<a href="images/gatsbyjs-author-bio-and-avatar-for-each-post-2-2.png"><img src="images/gatsbyjs-author-bio-and-avatar-for-each-post-2-2.png" alt="" width="646" height="106" class="aligncenter size-full wp-image-18157" /></a>
+![](images/gatsbyjs-author-bio-and-avatar-for-each-post-2-2.png)
 
 前回はこんな感じで著者情報をアバター画像なしで表示するところまでをやりました👇
 
-<a href="images/gatsbyjs-author-bio-and-avatar-for-each-post-2-3.png"><img src="images/gatsbyjs-author-bio-and-avatar-for-each-post-2-3.png" alt="" width="649" height="111" class="aligncenter size-full wp-image-18150" /></a>
+![](images/gatsbyjs-author-bio-and-avatar-for-each-post-2-3.png)
 
 ## 前提条件
 
@@ -241,6 +241,6 @@ GatsbyImage の `image` には `IGatsbyImageData` 型を渡す必要がありま
 
 さて、これで下記のように表示されれば OK です😃
 
-<a href="images/gatsbyjs-author-bio-and-avatar-for-each-post-2-2.png"><img src="images/gatsbyjs-author-bio-and-avatar-for-each-post-2-2.png" alt="" width="646" height="106" class="aligncenter size-full wp-image-18157" /></a>
+![](images/gatsbyjs-author-bio-and-avatar-for-each-post-2-2.png)
 
 お疲れ様でした😅

@@ -36,7 +36,7 @@ tags: [Windows Server, VMware, ESXi, TeraStation, 仮想化技術]
 
 ディスクアクセスが落ち着いているときを見計らい、ベンチマークを測定しました。
 
-<a href="images/measured-the-benchmark-of-the-virtual-machine-with-terastation-ts5410dn-and-megaraid-9261-8i-1.png"><img src="images/measured-the-benchmark-of-the-virtual-machine-with-terastation-ts5410dn-and-megaraid-9261-8i-1.png" alt="" width="1049" height="524" class="alignnone size-full wp-image-10960" /></a>
+![](images/measured-the-benchmark-of-the-virtual-machine-with-terastation-ts5410dn-and-megaraid-9261-8i-1.png)
 
 左が、TeraStation 、右が MegaRAID です。
 

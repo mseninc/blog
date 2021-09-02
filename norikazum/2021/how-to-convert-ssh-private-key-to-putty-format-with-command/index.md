@@ -10,7 +10,7 @@ tags: [その他の技術]
 本記事は、[過去記事](https://mseeeen.msen.jp/convert-ssh-secret-key-from-rsa-to-putty/) の続編です。
 
 **WinSCPでサーバーに接続しよう** と、過去記事の方法で **WindowsからPuttyツールを利用して変換を試みた** のですが、以下のような **エラーに** 見舞われました。
-<a href="images/how-to-convert-ssh-private-key-to-putty-format-with-command-1.jpg"><img src="images/how-to-convert-ssh-private-key-to-putty-format-with-command-1.jpg" alt="" width="559" height="472" class="alignnone size-full wp-image-15364" /></a>
+![](images/how-to-convert-ssh-private-key-to-putty-format-with-command-1.jpg)
 
 原因追及まではしていないのですが、 CentOS 8 を利用してコマンドで変換してみましたのでメモを兼ねて記事にしました。
 
@@ -46,6 +46,6 @@ ssh.ppk
 
 変化後の秘密鍵を指定して、 **無事WinSCPでサーバーに入ることが出来ました** 。
 
-<a href="images/how-to-convert-ssh-private-key-to-putty-format-with-command-2.jpg"><img src="images/how-to-convert-ssh-private-key-to-putty-format-with-command-2.jpg" alt="" width="667" height="476" class="alignnone size-full wp-image-15366" /></a>
+![](images/how-to-convert-ssh-private-key-to-putty-format-with-command-2.jpg)
 
 以上、小ネタでしたが次回の記事でお会いしましょう。

@@ -23,17 +23,17 @@ tags: [Windows 10, ThinkPad, その他の技術]
 
 Windows 10 では、スタートボタンを右クリックして**イベントビューアー**をクリックするのが一番速いでしょう。余談ですが、[Windows の用語は 2008 年から長音表記が変更になりました](http://www.atmarkit.co.jp/news/200807/25/microsoft.html)ので、イベントビューアーは「イベントビューア」ではありません(笑)
 
-<a href="images/how-to-fix-kernel-power-41-in-windows-10-1.png"><img src="images/how-to-fix-kernel-power-41-in-windows-10-1.png" alt="イベントビューアーを開く" width="319" height="659" class="aligncenter size-full wp-image-1290" /></a>
+![イベントビューアーを開く](images/how-to-fix-kernel-power-41-in-windows-10-1.png)
 
 管理イベントの要約のところに **イベントの種類＝重大** というのが 1 件以上あれば + を押して開いてみます。
 
-<a href="images/how-to-fix-kernel-power-41-in-windows-10-2.png"><img src="images/how-to-fix-kernel-power-41-in-windows-10-2.png" alt="管理イベントの要約" width="1131" height="888" class="aligncenter size-full wp-image-1291" /></a>
+![管理イベントの要約](images/how-to-fix-kernel-power-41-in-windows-10-2.png)
 
 今回の問題が発生している場合は **イベント ID: 41, ソース: Kernel-Power** というのが存在しています。
 
 その行を選択して **このイベントのすべてのインスタンスを表示** をクリックします。するとこのイベント ID で発生したイベントログが一覧で表示されます。
 
-<a href="images/how-to-fix-kernel-power-41-in-windows-10-3.png"><img src="images/how-to-fix-kernel-power-41-in-windows-10-3.png" alt="Kernel-Power 41 のイベントログを表示" width="1131" height="888" class="aligncenter size-full wp-image-1295" /></a>
+![Kernel-Power 41 のイベントログを表示](images/how-to-fix-kernel-power-41-in-windows-10-3.png)
 
 今回の場合、8 回発生していることがわかります。手元に届いたのが 4 月 5 日なので一ヶ月程度は何事もなかったようです。その後も発生頻度はまばらなのでどのようなタイミングで起こっているのかは、はっきりしません。
 
@@ -76,19 +76,19 @@ Windows 10 では、スタートボタンを右クリックして**イベント�
 
 電源オプションから設定しますので、イベントビューアと同様にスタートボタンの右クリックから**電源オプション**を開きます。
 
-<a href="images/how-to-fix-kernel-power-41-in-windows-10-4.png"><img src="images/how-to-fix-kernel-power-41-in-windows-10-4.png" alt="電源オプションを開く" width="313" height="642" class="aligncenter size-full wp-image-1298" /></a>
+![電源オプションを開く](images/how-to-fix-kernel-power-41-in-windows-10-4.png)
 
 高速スタートアップの設定はなぜか電源ボタンの動作の設定に含まれていますので、 **電源ボタンの動作を選択する** をクリックします。
 
-<a href="images/how-to-fix-kernel-power-41-in-windows-10-5.png"><img src="images/how-to-fix-kernel-power-41-in-windows-10-5.png" alt="電源ボタンの動作を選択する をクリック" width="211" height="229" class="aligncenter size-full wp-image-1301" /></a>
+![電源ボタンの動作を選択する をクリック](images/how-to-fix-kernel-power-41-in-windows-10-5.png)
 
 電源ボタンの定義とパスワード保護の有効化というややこしい名前のページが開くので、これまたややこしい**現在利用可能ではない設定を変更します**というリンクをクリックします。
 
-<a href="images/how-to-fix-kernel-power-41-in-windows-10-6.png"><img src="images/how-to-fix-kernel-power-41-in-windows-10-6.png" alt="現在利用可能ではない設定を変更します をクリック" width="597" height="176" class="aligncenter size-full wp-image-1302" /></a>
+![現在利用可能ではない設定を変更します をクリック](images/how-to-fix-kernel-power-41-in-windows-10-6.png)
 
 これで画面下部のシャットダウン設定が操作できるようになるので、**高速スタートアップを有効にするチェックを外します**。
 
-<a href="images/how-to-fix-kernel-power-41-in-windows-10-7.png"><img src="images/how-to-fix-kernel-power-41-in-windows-10-7.png" alt="高速スタートアップを有効にする のチェックを外す" width="592" height="202" class="aligncenter size-full wp-image-1303" /></a>
+![高速スタートアップを有効にする のチェックを外す](images/how-to-fix-kernel-power-41-in-windows-10-7.png)
 
 これで**変更を保存して再起動**します。
 
@@ -110,7 +110,7 @@ Windows 10 では、スタートボタンを右クリックして**イベント�
 
 休止状態からの復帰に失敗していることは間違いなさそうなので、次は電源オプションから **スリープ - 次の時間が経過後休止状態にする を 0分 (なし)** にしてみました。
 
-<a href="images/how-to-fix-kernel-power-41-in-windows-10-8.png"><img src="images/how-to-fix-kernel-power-41-in-windows-10-8.png" alt="スリープ - 次の時間が経過後休止状態にする" width="406" height="450" class="aligncenter size-full wp-image-1385" /></a>
+![スリープ - 次の時間が経過後休止状態にする](images/how-to-fix-kernel-power-41-in-windows-10-8.png)
 
 これで再度様子を見てみます。 (2016/6/29)
 
@@ -120,7 +120,7 @@ Windows 10 では、スタートボタンを右クリックして**イベント�
 
 この記事を書き始めてから頻度が上がった気がします...orz
 
-<a href="images/how-to-fix-kernel-power-41-in-windows-10-9.png"><img src="images/how-to-fix-kernel-power-41-in-windows-10-9.png" alt="2016/7/1 いきなり Kernel-Power 41" width="597" height="226" class="aligncenter size-full wp-image-1464" /></a>
+![2016/7/1 いきなり Kernel-Power 41](images/how-to-fix-kernel-power-41-in-windows-10-9.png)
 
 さて、今回はイベントログを確認したところ今度は休止状態に入った形跡はありません。
 
@@ -128,7 +128,7 @@ Windows 10 では、スタートボタンを右クリックして**イベント�
 
 気を取り直して、再度 Kernel-Power 41 のログを見直してみます。詳細タブには BugcheckCode という KP41 が起こった原因を示す値が記録されています。ここ最近起きている KP41 ではこの数値が 159 になっていました。
 
-<a href="images/how-to-fix-kernel-power-41-in-windows-10-10.png"><img src="images/how-to-fix-kernel-power-41-in-windows-10-10.png" alt="KP41 BugcheckCode 159" width="607" height="682" class="aligncenter size-full wp-image-1465" /></a>
+![KP41 BugcheckCode 159](images/how-to-fix-kernel-power-41-in-windows-10-10.png)
 
 159 は 16 進数で 0x9F です。ん...？なんか見覚えがあるような。で、ググってみると案の定「ブルースクリーン」の文字が。そういえばそうです。**0x0000009F** といえば、なんかドライバーとがバグってブルースクリーンがでるときによくある DRIVER_POWER_STATE_FAILURE というアレです。
 
@@ -138,7 +138,7 @@ Windows 10 では、スタートボタンを右クリックして**イベント�
 
 さらに BugcheckCode の下の BugcheckParameter1 というのが 0x3 なのでこの部分を見てみると
 
-<a href="images/how-to-fix-kernel-power-41-in-windows-10-11.png"><img src="images/how-to-fix-kernel-power-41-in-windows-10-11.png" alt="KP41  BugcheckParameter1=0x3 " width="863" height="494" class="aligncenter size-full wp-image-1466" /></a>
+![KP41  BugcheckParameter1=0x3 ](images/how-to-fix-kernel-power-41-in-windows-10-11.png)
 
 > Cause: A device object has been blocking an IRP for too long a time.
 
@@ -148,7 +148,7 @@ Windows 10 では、スタートボタンを右クリックして**イベント�
 
 起動した画面がこちら。今までのクラッシュ時のダンプファイルが表示されています。
 
-<a href="images/how-to-fix-kernel-power-41-in-windows-10-12.png"><img src="images/how-to-fix-kernel-power-41-in-windows-10-12.png" alt="BlueScreenView" width="1344" height="646" class="aligncenter size-full wp-image-1472" /></a>
+![BlueScreenView](images/how-to-fix-kernel-power-41-in-windows-10-12.png)
 
 昨日発生しているものを見てみるとたしかにスリープにした時刻付近に発生しています。原因のドライバー (Caused By Driver) を見てみると ntoskrnl.exe とあります。
 

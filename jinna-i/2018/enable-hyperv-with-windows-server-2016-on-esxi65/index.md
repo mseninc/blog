@@ -13,7 +13,7 @@ tags: [Windows Server, VMware, Hyper-V, Windows]
 
 > Hyper-Vをインストールできません:必要な仮想化機能がプロセッサにありません。
 
-<a href="images/enable-hyperv-with-windows-server-2016-on-esxi65-1.png"><img src="images/enable-hyperv-with-windows-server-2016-on-esxi65-1.png" alt="" width="522" height="290" class="alignnone size-full wp-image-8373" /></a>
+![](images/enable-hyperv-with-windows-server-2016-on-esxi65-1.png)
 
 これを回避するには仮想マシンの構成ファイルを編集し、仮想化支援機能を有効にする必要があります。
 
@@ -30,7 +30,7 @@ OS: Windows Server 2016 (1607)
 
 vSphere Clientから仮想マシンファイルが格納されているデータストアを参照し、仮想マシンをファイルをダウンロードします。
 
-[caption id="attachment_8374" align="alignnone" width="1734"]<a href="images/enable-hyperv-with-windows-server-2016-on-esxi65-2.png"><img src="images/enable-hyperv-with-windows-server-2016-on-esxi65-2.png" alt="" width="1734" height="837" class="size-full wp-image-8374" /></a> 仮想マシンファイルは hogehoge.vmx 形式[/caption]
+![](images/enable-hyperv-with-windows-server-2016-on-esxi65-2.png)
 
 ダウンロードした仮想マシンファイルをテキストエディターで開き、以下を追記します。
 
@@ -38,11 +38,11 @@ vSphere Clientから仮想マシンファイルが格納されているデータ
 
 「ファイルのアップロード」から編集した仮想マシンファイルをアップロードします。
 
-<a href="images/enable-hyperv-with-windows-server-2016-on-esxi65-3.png"><img src="images/enable-hyperv-with-windows-server-2016-on-esxi65-3.png" alt="" width="1081" height="704" class="alignnone size-full wp-image-8390" /></a>
+![](images/enable-hyperv-with-windows-server-2016-on-esxi65-3.png)
 
 警告が出た場合は「はい」をクリックします。
 
-<a href="images/enable-hyperv-with-windows-server-2016-on-esxi65-4.png"><img src="images/enable-hyperv-with-windows-server-2016-on-esxi65-4.png" alt="" width="499" height="181" class="alignnone size-full wp-image-8392" /></a>
+![](images/enable-hyperv-with-windows-server-2016-on-esxi65-4.png)
 
 これで準備はOKです。仮想マシンをパワーオンしてHyper-Vをインストールしてみてください。
 
@@ -50,9 +50,9 @@ vSphere Clientから仮想マシンファイルが格納されているデータ
 
 仮想マシンの設定を開き **設定パラメータ ＞ 設定の編集** で仮想マシンファイル(vmxファイル)の編集ができます。
 
-<a href="images/enable-hyperv-with-windows-server-2016-on-esxi65-5.png"><img src="images/enable-hyperv-with-windows-server-2016-on-esxi65-5.png" alt="" width="863" height="754" class="alignnone size-full wp-image-8393" /></a>
+![](images/enable-hyperv-with-windows-server-2016-on-esxi65-5.png)
 
-<a href="images/enable-hyperv-with-windows-server-2016-on-esxi65-6.png"><img src="images/enable-hyperv-with-windows-server-2016-on-esxi65-6.png" alt="" width="863" height="491" class="alignnone size-full wp-image-8394" /></a>
+![](images/enable-hyperv-with-windows-server-2016-on-esxi65-6.png)
 
 「設定パラメータの追加」から先ほどの `vhv.enable = "TRUE"` を追加すればいいのですが、**何回やっても設定が無効になってしまいます**。
 

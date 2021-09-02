@@ -9,7 +9,7 @@ tags: [VMware, ESXi, TeraStation, 仮想化技術]
 
 [TeraStation TS5410DN](https://www.buffalo.jp/product/detail/ts5410dn1204.html) で共有フォルダを作成し、NFS で新規データストアとしてマウントしようとすると、下記のエラーでマウントできませんでした。
 
-<a href="images/cannot-mount-a-shared-folder-created-with-terastation-5410dn-as-a-datastore-with-nfs-1.png"><img src="images/cannot-mount-a-shared-folder-created-with-terastation-5410dn-as-a-datastore-with-nfs-1.png" alt="" width="1604" height="50" class="alignnone size-full wp-image-10939" /></a>
+![](images/cannot-mount-a-shared-folder-created-with-terastation-5410dn-as-a-datastore-with-nfs-1.png)
 
 > NFS データストア vmstr01 のマウントに失敗しました: NFS マウント 192.168.10.40: /​m​n​t​/​a​r​r​a​y​1​/​e​x​p​o​r​t エラー: マウント要求が NFS サーバによって拒否されました。エクスポートが存在すること、クライアントがマウントを許可されていることを確認してください。
 
@@ -36,11 +36,11 @@ ESXi 単体の Host Client からやっても、vCenter Server の vSphere Clien
 TeraStation の共有フォルダ設定で NFS のチェックを入れると、**NFS パス** が表示されます。今回の例では `/mnt/array1/export` です。
 このパスを使って ESXi からマウントするのですが、**絶対にコピペしてはいけません**。
 
-<a href="images/cannot-mount-a-shared-folder-created-with-terastation-5410dn-as-a-datastore-with-nfs-2.png"><img src="images/cannot-mount-a-shared-folder-created-with-terastation-5410dn-as-a-datastore-with-nfs-2.png" alt="" width="598" height="600" class="alignnone size-full wp-image-10944" /></a>
+![](images/cannot-mount-a-shared-folder-created-with-terastation-5410dn-as-a-datastore-with-nfs-2.png)
 
 階層が深くなると長ったらしくなり、間違えたら嫌なのでコピペする人がほとんどだと思いますが、**TeraStation の設定画面からコピーはせず、手打ちするようにしてください**。
 
-<a href="images/cannot-mount-a-shared-folder-created-with-terastation-5410dn-as-a-datastore-with-nfs-3.png"><img src="images/cannot-mount-a-shared-folder-created-with-terastation-5410dn-as-a-datastore-with-nfs-3.png" alt="" width="940" height="597" class="alignnone size-full wp-image-11019" /></a>
+![](images/cannot-mount-a-shared-folder-created-with-terastation-5410dn-as-a-datastore-with-nfs-3.png)
 
 TeraStation の NFS で引っかかっている人はこれで解消するはずです。
 
@@ -54,28 +54,28 @@ TeraStation の NFS で引っかかっている人はこれで解消するはず
 左が TeraStation の共有フォルダ設定から NFS パスをコピペしたもの。右がメモ帳に手打ちしたものです。
 一見、両者は同じ文字列に見えますよね。
 
-<a href="images/cannot-mount-a-shared-folder-created-with-terastation-5410dn-as-a-datastore-with-nfs-4.png"><img src="images/cannot-mount-a-shared-folder-created-with-terastation-5410dn-as-a-datastore-with-nfs-4.png" alt="" width="631" height="179" class="alignnone size-full wp-image-10950" /></a>
+![](images/cannot-mount-a-shared-folder-created-with-terastation-5410dn-as-a-datastore-with-nfs-4.png)
 
 次は、これらのファイルをテキストに保存し、Git Bash から `cat` してみます。
 上が TeraStation の共有フォルダ設定からコピペしたもの。下がメモ帳に手打ちしたものです。
 **コピペしたものには、何やら変な制御文字が含まれていることが分かります**。
 
-<a href="images/cannot-mount-a-shared-folder-created-with-terastation-5410dn-as-a-datastore-with-nfs-5.png"><img src="images/cannot-mount-a-shared-folder-created-with-terastation-5410dn-as-a-datastore-with-nfs-5.png" alt="" width="777" height="496" class="alignnone size-full wp-image-10969" /></a>
+![](images/cannot-mount-a-shared-folder-created-with-terastation-5410dn-as-a-datastore-with-nfs-5.png)
 
 `od -c` コマンドで何が含まれているのか見てみます。
 
-<a href="images/cannot-mount-a-shared-folder-created-with-terastation-5410dn-as-a-datastore-with-nfs-6.png"><img src="images/cannot-mount-a-shared-folder-created-with-terastation-5410dn-as-a-datastore-with-nfs-6.png" alt="" width="535" height="123" class="alignnone size-full wp-image-10974" /></a>
+![](images/cannot-mount-a-shared-folder-created-with-terastation-5410dn-as-a-datastore-with-nfs-6.png)
 
 少しわかりにくいですが、各文字の間に `\0 \v <スペース>` が含まれていることがわかります。
 さらに `x` オプションを追加して16進数でダンプしてみます。
 
-<a href="images/cannot-mount-a-shared-folder-created-with-terastation-5410dn-as-a-datastore-with-nfs-7.png"><img src="images/cannot-mount-a-shared-folder-created-with-terastation-5410dn-as-a-datastore-with-nfs-7.png" alt="" width="543" height="239" class="alignnone size-full wp-image-10977" /></a>
+![](images/cannot-mount-a-shared-folder-created-with-terastation-5410dn-as-a-datastore-with-nfs-7.png)
 
 
 16進数だと `\0 → 00`, `\v → 0b`, `<スペース> → 20` です。
 わかりにくいので `/mnt` の部分だけ表にしてみました。
 
-<a href="images/cannot-mount-a-shared-folder-created-with-terastation-5410dn-as-a-datastore-with-nfs-8.png"><img src="images/cannot-mount-a-shared-folder-created-with-terastation-5410dn-as-a-datastore-with-nfs-8.png" alt="" width="693" height="165" class="alignnone size-full wp-image-10975" /></a>
+![](images/cannot-mount-a-shared-folder-created-with-terastation-5410dn-as-a-datastore-with-nfs-8.png)
 
 余計わかりにくいですが、文字列と16進数の対応です。この対応が4バイトずつクロスになっており、このデータの並びをリトルエンディアンと呼ぶそうです。
 ※マルチバイト構成の文字列において、下位バイトから上位バイトに向かってデータを伝送・記録する方式。その逆をビッグエンディアンと呼ぶ。

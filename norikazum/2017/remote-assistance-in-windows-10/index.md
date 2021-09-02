@@ -24,32 +24,32 @@ tags: [Windows 10, その他, ライフハック]
 
 左下のWindowsマークをクリックし、 **msra** とタイプします。
 
-<a href="images/remote-assistance-in-windows-10-1.png"><img src="images/remote-assistance-in-windows-10-1.png" alt="" width="169" height="300" class="alignnone size-medium wp-image-3666" /></a>
+![](images/remote-assistance-in-windows-10-1.png)
 
 このような画面がでます。
 
-<a href="images/remote-assistance-in-windows-10-2.png"><img src="images/remote-assistance-in-windows-10-2.png" alt="" width="300" height="251" class="alignnone size-medium wp-image-3667" /></a>
+![](images/remote-assistance-in-windows-10-2.png)
 
 ### 招待する手続きを実施
 
-<a href="images/remote-assistance-in-windows-10-3.png"><img src="images/remote-assistance-in-windows-10-3.png" alt="" width="300" height="251" class="alignnone size-medium wp-image-3668" /></a>
+![](images/remote-assistance-in-windows-10-3.png)
 
 招待ファイルを添付で送付しようと思いますので、**この招待をファイルに保存する** を選択します。
 
-<a href="images/remote-assistance-in-windows-10-4.png"><img src="images/remote-assistance-in-windows-10-4.png" alt="" width="300" height="251" class="alignnone size-medium wp-image-3669" /></a>
+![](images/remote-assistance-in-windows-10-4.png)
 
 デスクトップ上に保存します。
 
 ### 保存されたファイルを**信頼できる支援者** に送付
 
-<a href="images/remote-assistance-in-windows-10-5.png"><img src="images/remote-assistance-in-windows-10-5.png" alt="" width="140" height="101" class="alignnone size-full wp-image-3670" /></a>
+![](images/remote-assistance-in-windows-10-5.png)
 
 ### 支援者からの接続待ち
 
 以下のウィンドウが画面上に現れます。
 接続用パスワードが記載されているので支援者に伝えます。
 
-<a href="images/remote-assistance-in-windows-10-6.png"><img src="images/remote-assistance-in-windows-10-6.png" alt="" width="300" height="87" class="alignnone size-medium wp-image-3687" /></a>
+![](images/remote-assistance-in-windows-10-6.png)
 
 ここまでが**操作される**側から支援者への依頼となります。
 
@@ -62,7 +62,7 @@ tags: [Windows 10, その他, ライフハック]
 
 続けて、依頼者より送られてきた（接続待ちの画面に表示されている）パスワードを入力し、OKをクリックします。
 
-<a href="images/remote-assistance-in-windows-10-7.png"><img src="images/remote-assistance-in-windows-10-7.png" alt="" width="300" height="226" class="alignnone size-medium wp-image-3675" /></a>
+![](images/remote-assistance-in-windows-10-7.png)
 
 
 ここまでが**操作する**側の手順となります。
@@ -73,16 +73,16 @@ tags: [Windows 10, その他, ライフハック]
 前項までの手順が完了すると、以下の画面が依頼者のPCに出ます。
 確認して、許可します。
 
-<a href="images/remote-assistance-in-windows-10-8.png"><img src="images/remote-assistance-in-windows-10-8.png" alt="" width="300" height="191" class="alignnone size-medium wp-image-3681" /></a>
+![](images/remote-assistance-in-windows-10-8.png)
 
 許可すると、依頼者側の待ち受け画面が以下のようになります。
 
-<a href="images/remote-assistance-in-windows-10-9.png"><img src="images/remote-assistance-in-windows-10-9.png" alt="" width="300" height="87" class="alignnone size-medium wp-image-3682" /></a>
+![](images/remote-assistance-in-windows-10-9.png)
 
 また、支援者側からデスクトップの操作を要求されると以下の画面になります。
 確認し、許可をしてください。
 
-<a href="images/remote-assistance-in-windows-10-10.png"><img src="images/remote-assistance-in-windows-10-10.png" alt="" width="300" height="110" class="alignnone size-medium wp-image-3683" /></a>
+![](images/remote-assistance-in-windows-10-10.png)
 
 許可後に、依頼者のデスクトップは支援者側で操作できます。
 
@@ -92,7 +92,7 @@ tags: [Windows 10, その他, ライフハック]
 
 先日、けんけんに支援してもらったとき、けんけん側では私の画面が以下のような表示になっていたようです。
 
-<a href="images/remote-assistance-in-windows-10-11.png"><img src="images/remote-assistance-in-windows-10-11.png" alt="" width="300" height="300" class="alignnone size-medium wp-image-3685" /></a>
+![](images/remote-assistance-in-windows-10-11.png)
 
 えらく伸びて見れる状態ではないですね(笑)
 

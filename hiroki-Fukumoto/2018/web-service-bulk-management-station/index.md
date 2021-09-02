@@ -15,20 +15,20 @@ tags: [Slack, その他, ライフハック]
 恐らく、ほとんどの方は常時使用するWebサービスをブラウザ上で起動していると思います。
 しかし、 気が付くとタブがこんな風になっていますよね？（笑）
 
-<img src="images/web-service-bulk-management-station-1.png" alt="" width="720" height="65" class="alignnone size-full wp-image-7219" />
+![](images/web-service-bulk-management-station-1.png)
 
 そこで**Station**です！
 [Station](https://getstation.com/)を使用すれば、Station上で様々なWebサービスを起動し、ワンクリックで切り替えることができます。
 
-<img src="images/web-service-bulk-management-station-2.png" alt="" width="720" height="405" class="alignnone size-full wp-image-7220" />
+![](images/web-service-bulk-management-station-2.png)
 
 下の画像は実際の画面なのですが、ここでは[Trello](https://trello.com/)を開いています。
 
-<img src="images/web-service-bulk-management-station-3.png" alt="" width="720" height="339" class="alignnone size-full wp-image-7227" />
+![](images/web-service-bulk-management-station-3.png)
 
 この状態でGoogleカレンダーを確認したい場合は、左サイドメニューからGoogleカレンダーのアイコンを選択するだけです！
 
-<img src="images/web-service-bulk-management-station-4.png" alt="" width="720" height="470" class="alignnone size-full wp-image-7228" />
+![](images/web-service-bulk-management-station-4.png)
 
 Webサービスを切り替えるときも、タイムラグはなくアイコンをクリックと同時に切り替わります！
 
@@ -39,14 +39,14 @@ Slack、WordPress、Trello、Evernote、GitHub、Outlook、Gmail、Dropboxなど
 
 Webサービスを追加するには、まず「＋」アイコンを押下してください。
 
-<img src="images/web-service-bulk-management-station-5.png" alt="" width="720" height="470" class="alignnone size-full wp-image-7229" />
+![](images/web-service-bulk-management-station-5.png)
 
 するとStationで使用可能なWebサービス一覧が表示されますので、あとは使用したいWebサービスの「＋」アイコンをクリックするだけです！
-<img src="images/web-service-bulk-management-station-6.png" alt="" width="720" height="470" class="alignnone size-full wp-image-7231" />
+![](images/web-service-bulk-management-station-6.png)
 
-<img src="images/web-service-bulk-management-station-7.png" alt="" width="720" height="470" class="alignnone size-full wp-image-7232" />
+![](images/web-service-bulk-management-station-7.png)
 
-<img src="images/web-service-bulk-management-station-8.png" alt="" width="720" height="470" class="alignnone size-full wp-image-7233" />
+![](images/web-service-bulk-management-station-8.png)
 
 
 みなさんもぜひ使用してみてください！！

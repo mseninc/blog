@@ -27,7 +27,7 @@ tags: [VMware, ESXi, 仮想化, 仮想化技術]
 
 ## 想定環境
 
-<a href="images/migration-to-another-data-store-with-thin-provisioning-1.png"><img src="images/migration-to-another-data-store-with-thin-provisioning-1.png" alt="" width="366" height="386" class="alignnone size-full wp-image-6557" /></a>
+![](images/migration-to-another-data-store-with-thin-provisioning-1.png)
 
 ESXiに**DataStore1**と**DataStore2**の2つのデータストアがマウントされているとします。
 
@@ -52,7 +52,7 @@ ESXiをコマンドラインで操作するためには、Tera Termなどのタ�
 
 [管理] > [サービス]の順にクリックし、**TSM(ESXi Shell)**と**TSM-SSH(SSH)**を起動します。
 
-<a href="images/migration-to-another-data-store-with-thin-provisioning-2.png"><img src="images/migration-to-another-data-store-with-thin-provisioning-2.png" alt="" width="1002" height="363" class="alignnone size-full wp-image-6558" /></a>
+![](images/migration-to-another-data-store-with-thin-provisioning-2.png)
 
 起動したらESXiにSSH接続してみましょう。
 

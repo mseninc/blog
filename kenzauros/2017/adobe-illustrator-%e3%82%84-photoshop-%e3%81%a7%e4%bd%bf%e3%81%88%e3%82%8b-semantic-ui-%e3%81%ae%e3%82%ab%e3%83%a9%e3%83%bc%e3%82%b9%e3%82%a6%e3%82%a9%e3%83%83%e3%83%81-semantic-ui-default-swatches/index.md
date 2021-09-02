@@ -9,7 +9,7 @@ tags: [Photoshop, Illustrator, その他の技術]
 
 Semantic UI 的デザインの際に **Photoshop や Illustrator で使えるスウォッチファイル**を作りましたので、よければご活用ください。
 
-<a href="images/adobe-illustrator-%e3%82%84-photoshop-%e3%81%a7%e4%bd%bf%e3%81%88%e3%82%8b-semantic-ui-%e3%81%ae%e3%82%ab%e3%83%a9%e3%83%bc%e3%82%b9%e3%82%a6%e3%82%a9%e3%83%83%e3%83%81-semantic-ui-default-swatches-1.png"><img src="images/adobe-illustrator-%e3%82%84-photoshop-%e3%81%a7%e4%bd%bf%e3%81%88%e3%82%8b-semantic-ui-%e3%81%ae%e3%82%ab%e3%83%a9%e3%83%bc%e3%82%b9%e3%82%a6%e3%82%a9%e3%83%83%e3%83%81-semantic-ui-default-swatches-1.png" alt="" width="421" height="304" class="aligncenter size-full wp-image-5718" /></a>
+![](images/adobe-illustrator-%e3%82%84-photoshop-%e3%81%a7%e4%bd%bf%e3%81%88%e3%82%8b-semantic-ui-%e3%81%ae%e3%82%ab%e3%83%a9%e3%83%bc%e3%82%b9%e3%82%a6%e3%82%a9%e3%83%83%e3%83%81-semantic-ui-default-swatches-1.png)
 
 ## ダウンロード
 

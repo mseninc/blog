@@ -14,7 +14,7 @@ tags: [Vue.js, その他, 〇〇奮闘記]
 ## meetupの概要
 v-kansaiでは、主に京都や大阪で、Vue.jsおよびNuxt.jsに関する勉強会です。初心者から尖った人まで、Vue.jsに興味を持つ人は誰でもWelcomeというスタンスのmeetupです。
 
-[caption id="attachment_9798" align="aligncenter" width="800"]<img src="images/v-kansai-meetup-5th-1.jpg" alt="" width="800" height="474" class="size-full wp-image-9798" /> v-kansaiについての紹介 (オープニングにて)[/caption]
+![](images/v-kansai-meetup-5th-1.jpg)
 
 今回のmeetupでは、次の内容の発表を聞きました。
 
@@ -29,7 +29,7 @@ v-kansaiでは、主に京都や大阪で、Vue.jsおよびNuxt.jsに関する�
 ## 懇親会
 登壇者の発表が終わった後、懇親会でピザやお寿司を食べながら、参加者の方々との親睦を深めました。外部のエンジニアの方々と話すことが出来て、非常に良い機会になりました。登壇者へのフィードバックや、普段使っているフレームワークについてなどの情報交換をしました。
 
-[caption id="attachment_9799" align="aligncenter" width="800"]<img src="images/v-kansai-meetup-5th-2.jpg" alt="" width="800" height="454" class="size-full wp-image-9799" /> 美味しくて楽しい懇親会[/caption]
+![](images/v-kansai-meetup-5th-2.jpg)
 
 参加者の方々とお話させていただいたところ、やはりLaravel と組み合わせて使用されている方が多くいらっしゃるように感じました。この点については、他の参加者も同じ感想をお持ちでした。因みに、私も個人的にLaravelとVue.jsを勉強しています。
 

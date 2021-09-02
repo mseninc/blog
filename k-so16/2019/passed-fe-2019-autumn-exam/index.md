@@ -14,7 +14,7 @@ tags: [その他, 〇〇奮闘記]
 
 成績照会の画面には午前試験、午後試験それぞれの得点と、午前試験の問題の分類 (ストラテジ系、マネジメント系、テクノロジ系) それぞれの得点が表示されます。午後試験は選択した問題の分野が表示されます。配点が公開されていないからかもしれませんが、午後試験の点数は表示されません。 **午後も問題ごとに点数を知りたかった** ので、少し残念でした。
 
-[caption id="attachment_11534" align="alignnone" width="514"]<img src="images/passed-fe-2019-autumn-exam-1.png" alt="" width="514" height="800" class="size-full wp-image-11534" /> 成績照会の画面[/caption]
+![](images/passed-fe-2019-autumn-exam-1.png)
 
 ## 所感
 合否だけで見れば、ひとまず合格できたので良かったのですが、点数を見ると **勉強不足** を改めて感じさせられます。 [以前の記事](https://mseeeen.msen.jp/took-fe-2019-autumn-exam/) にも記載しましたが、午前試験は直近の過去問を 3 回分、午後に関しては直近の過去問を 1 回分しか解いていなかったので、勉強量が足りなかったことをまざまざと実感する結果でした。私自身、大学で **ソフトウェア工学** を学んでいたので、多少の基礎知識は身についているつもりでしたが、出題範囲が広く、自身の知識量や理解がまだ十分ではないと実感しました。
@@ -32,10 +32,10 @@ tags: [その他, 〇〇奮闘記]
 ## おまけ
 平等院鳳凰堂の紅葉が非常に綺麗だったので、紅葉の様子を掲載します。秋は夕暮れ。
 
-<img src="images/passed-fe-2019-autumn-exam-2.jpg" alt="" width="800" height="600" class="alignnone size-full wp-image-11565" />
+![](images/passed-fe-2019-autumn-exam-2.jpg)
 
-<img src="images/passed-fe-2019-autumn-exam-3.jpg" alt="" width="800" height="600" class="alignnone size-full wp-image-11566" />
+![](images/passed-fe-2019-autumn-exam-3.jpg)
 
-<img src="images/passed-fe-2019-autumn-exam-4.jpg" alt="" width="800" height="600" class="alignnone size-full wp-image-11567" />
+![](images/passed-fe-2019-autumn-exam-4.jpg)
 
 シーズンということもあり、平等院鳳凰堂は夕方頃であるにも関わらず、観光客で賑わっていました。本来は昼頃に見に行く予定でしたが、出発が遅くなったので夕方ごろの到着になりました。非常に綺麗な夕暮れとモミジの紅さを見ることができたので、到着が後ろにずれたのはラッキーだったかもしれません（笑）

@@ -17,19 +17,19 @@ tags: [Slack, その他, ライフハック]
 
 多くのアプリの場合、詳細を開くと下記のように **Remove App** ボタンが表示されているのですが... 
 
-<img src="images/remove-asana-app-from-slack-1.png" alt="Remove app from Slack" width="1217" height="632" class="aligncenter size-full wp-image-7237" />
+![Remove app from Slack](images/remove-asana-app-from-slack-1.png)
 
 Asana アプリには存在しませんでした。 (下図)
 
-<img src="images/remove-asana-app-from-slack-2.png" alt="Remove Asan app from Slack" width="1217" height="632" class="aligncenter size-full wp-image-7242" />
+![Remove Asan app from Slack](images/remove-asana-app-from-slack-2.png)
 
 ということで削除するためにまず、 **Settings** ボタンを押して、設定画面を開きます。
 
-<img src="images/remove-asana-app-from-slack-3.png" alt="Remove Asan app from Slack" width="1217" height="649" class="aligncenter size-full wp-image-7239" />
+![Remove Asan app from Slack](images/remove-asana-app-from-slack-3.png)
 
 設定画面で **Workspace Access** を開き、 **Uninstall App** をクリックします。
 
-<img src="images/remove-asana-app-from-slack-4.png" alt="Remove Asan app from Slack" width="1217" height="649" class="aligncenter size-full wp-image-7240" />
+![Remove Asan app from Slack](images/remove-asana-app-from-slack-4.png)
 
 確認のチェックを入れ、 **Uninstall App** をクリックします。
 

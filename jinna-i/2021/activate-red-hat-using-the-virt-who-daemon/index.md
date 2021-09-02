@@ -147,19 +147,19 @@ virt-who サービスを起動し自動起動を有効化しておきます。
 
 前項の virt-who の設定が完了したタイミングで、ハイパーバイザが登録されていることを確認できます。このハイパーバイザにサブスクリプションを割り当てます。
 
-<a href="images/activate-red-hat-using-the-virt-who-daemon-1.png"><img src="images/activate-red-hat-using-the-virt-who-daemon-1.png" alt="" width="1192" height="726" class="alignnone size-full wp-image-15623" /></a>
+![](images/activate-red-hat-using-the-virt-who-daemon-1.png)
 
 ハイパーバイザを選択し、[サブスクリプション] > [サブスクリプションのアタッチ] をクリックします。
 
-<a href="images/activate-red-hat-using-the-virt-who-daemon-2.png"><img src="images/activate-red-hat-using-the-virt-who-daemon-2.png" alt="" width="1145" height="693" class="alignnone size-full wp-image-15626" /></a>
+![](images/activate-red-hat-using-the-virt-who-daemon-2.png)
 
 無制限ゲスト OS ライセンスを選択し、[サブスクリプションのアタッチ] をクリックします。
 
-<a href="images/activate-red-hat-using-the-virt-who-daemon-3.png"><img src="images/activate-red-hat-using-the-virt-who-daemon-3.png" alt="" width="1193" height="835" class="alignnone size-full wp-image-15627" /></a>
+![](images/activate-red-hat-using-the-virt-who-daemon-3.png)
 
 もう一度、サブスクリプションを確認すると正常に割り当てられていることを確認できます。ほかにもハイパーバイザが存在する場合は同様手順でサブスクリプションを割り当てます。
 
-<a href="images/activate-red-hat-using-the-virt-who-daemon-4.png"><img src="images/activate-red-hat-using-the-virt-who-daemon-4.png" alt="" width="1201" height="831" class="alignnone size-full wp-image-15628" /></a>
+![](images/activate-red-hat-using-the-virt-who-daemon-4.png)
 
 
 ## ゲスト OS のサブスクリプション登録
@@ -219,11 +219,11 @@ SKU:                      RH00000
 
 `subscription-manager attach --pool=<pool ID>`
 
-<a href="images/activate-red-hat-using-the-virt-who-daemon-5.png"><img src="images/activate-red-hat-using-the-virt-who-daemon-5.png" alt="" width="858" height="67" class="alignnone size-full wp-image-15630" /></a>
+![](images/activate-red-hat-using-the-virt-who-daemon-5.png)
 
 `subscription-manager status` を実行し、**システムの目的の状態が一致**していれば OK です。 
 
-<a href="images/activate-red-hat-using-the-virt-who-daemon-6.png"><img src="images/activate-red-hat-using-the-virt-who-daemon-6.png" alt="" width="396" height="136" class="alignnone size-full wp-image-15661" /></a>
+![](images/activate-red-hat-using-the-virt-who-daemon-6.png)
 
 すべてのゲストで以上の手順を繰り返します。
 

@@ -13,7 +13,7 @@ tags: [Slack, その他, ライフハック]
 
 ## 設定変更前
 
-<img src="images/slack-disable-automatic-formatting-1.png" alt="" width="704" height="97" class="aligncenter size-full wp-image-12323" />
+![](images/slack-disable-automatic-formatting-1.png)
 
 自動書式設定が有効な場合、書式設定ツールバーが表示されています。
 
@@ -25,23 +25,23 @@ tags: [Slack, その他, ライフハック]
 
 ### メニューを表示
 
-<img src="images/slack-disable-automatic-formatting-2.png" alt="" width="223" height="231" class="aligncenter size-full wp-image-12304" />
+![](images/slack-disable-automatic-formatting-2.png)
 画面左上にあるワークスペース名をクリックします。
 
 ### 環境設定を開く
 
-<img src="images/slack-disable-automatic-formatting-3.png" alt="" width="298" height="163" class="aligncenter size-full wp-image-12308" />
+![](images/slack-disable-automatic-formatting-3.png)
 メニューから環境設定を選択します。
 
 ### 詳細設定を開く
 
-<img src="images/slack-disable-automatic-formatting-4.png" alt="" width="411" height="262" class="aligncenter size-full wp-image-12313" />
+![](images/slack-disable-automatic-formatting-4.png)
 
 詳細設定を選択します。
 
 ### 「マークアップでメッセージを書式設定する」を有効にする
 
-<img src="images/slack-disable-automatic-formatting-5.png" alt="" width="919" height="316" class="aligncenter size-full wp-image-12315" />
+![](images/slack-disable-automatic-formatting-5.png)
 
 「入力オプション」 から、**「マークアップでメッセージを書式設定する」**の横にあるボックスにチェックを入れます。
 
@@ -49,7 +49,7 @@ tags: [Slack, その他, ライフハック]
 
 ## 設定変更後
 
-<img src="images/slack-disable-automatic-formatting-6.png" alt="" width="701" height="92" class="aligncenter size-full wp-image-12321" />
+![](images/slack-disable-automatic-formatting-6.png)
 
 書式設定ツールバーがなくなり、自動書式設定が無効になりました。
 

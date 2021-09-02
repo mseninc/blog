@@ -10,7 +10,7 @@ tags: [Windows, Windows Server]
 あるコンピューターだけ特定のユーザーからのリモートデスクトップ接続を許可したいと思う場面もあると思います。
 
 ワークグループ環境やローカルで個別に設定するのであれば、システムのプロパティ > リモートタブ > ユーザーの選択 からリモートデスクトップユーザーを追加することで可能になります。
-<a href="images/allow-remote-desktop-users-by-group-policy-1.png"><img src="images/allow-remote-desktop-users-by-group-policy-1.png" alt="" width="832" height="540" class="alignnone size-full wp-image-5281" /></a>
+![](images/allow-remote-desktop-users-by-group-policy-1.png)
 
 ドメイン環境で対象のコンピューターが複数ある場合においてはグループポリシーから設定するのが便利です。
 
@@ -36,20 +36,20 @@ tags: [Windows, Windows Server]
 このOUにリモートデスクトップを許可したいコンピューターを移動させることで、ポリシーがあたるようにします。
 
 今回は分かりやすいように、**RDP OK Computers** としました。
-<a href="images/allow-remote-desktop-users-by-group-policy-2.png"><img src="images/allow-remote-desktop-users-by-group-policy-2.png" alt="" width="884" height="661" class="alignnone size-full wp-image-5282" /></a>
+![](images/allow-remote-desktop-users-by-group-policy-2.png)
 
 ## ポリシーの作成
 
 本稿では便宜上ポリシーと表記していますが、実際には**グループポリシーオブジェクト（GPO：Group Policy Object）**と呼びます。
 
 左ペインのグループポリシーオブジェクトから新しいポリシー（GPO）を作成します。
-<a href="images/allow-remote-desktop-users-by-group-policy-3.png"><img src="images/allow-remote-desktop-users-by-group-policy-3.png" alt="" width="811" height="404" class="alignnone size-full wp-image-5301" /></a>
+![](images/allow-remote-desktop-users-by-group-policy-3.png)
 
 ポリシーの名前は**Allow RDP** としました。このポリシーを**RDP OK Computers** にリンクします。
-<a href="images/allow-remote-desktop-users-by-group-policy-4.png"><img src="images/allow-remote-desktop-users-by-group-policy-4.png" alt="" width="365" height="411" class="alignnone size-full wp-image-5283" /></a>
+![](images/allow-remote-desktop-users-by-group-policy-4.png)
 
 対象はデフォルトで入っている**Authenticated Users**で構いません。
-<a href="images/allow-remote-desktop-users-by-group-policy-5.png"><img src="images/allow-remote-desktop-users-by-group-policy-5.png" alt="" width="591" height="460" class="alignnone size-full wp-image-5285" /></a>
+![](images/allow-remote-desktop-users-by-group-policy-5.png)
 
 Tech Netによると、Authenticated Usersについて以下のように記載されています。
 
@@ -71,7 +71,7 @@ Usersとありますが、コンピューターも含まれているようです
 かなり苦戦をした部分ですが、リモートを許可するにはローカルアカウントの**Remote Desktop Users**に所属している必要があるようです。
 
 デフォルトは何もないので、グループ追加で**Remote Desktop Users**を追加します。
-<a href="images/allow-remote-desktop-users-by-group-policy-6.png"><img src="images/allow-remote-desktop-users-by-group-policy-6.png" alt="" width="809" height="338" class="alignnone size-full wp-image-5286" /></a>
+![](images/allow-remote-desktop-users-by-group-policy-6.png)
  
 このとき、許可したいユーザーをグループに追加しておきましょう。
 
@@ -82,7 +82,7 @@ Usersとありますが、コンピューターも含まれているようです
 **Remote Desktop Service**を自動起動に設定します。
 
 **このポリシーの設定を定義する**にチェックを入れて、サービスのスタートアップモードを**自動**にします。
-<a href="images/allow-remote-desktop-users-by-group-policy-7.png"><img src="images/allow-remote-desktop-users-by-group-policy-7.png" alt="" width="846" height="695" class="alignnone size-full wp-image-5287" /></a>
+![](images/allow-remote-desktop-users-by-group-policy-7.png)
 
 ### ファイアウォールの許可
 
@@ -93,16 +93,16 @@ Usersとありますが、コンピューターも含まれているようです
 右クリックして新しい規則を追加します。
 
 事前定義で**リモートデスクトップ**を選択します。
-<a href="images/allow-remote-desktop-users-by-group-policy-8.png"><img src="images/allow-remote-desktop-users-by-group-policy-8.png" alt="" width="725" height="546" class="alignnone size-full wp-image-5294" /></a>
+![](images/allow-remote-desktop-users-by-group-policy-8.png)
 
 すべてにチェックが入っていることを確認します。
-<a href="images/allow-remote-desktop-users-by-group-policy-9.png"><img src="images/allow-remote-desktop-users-by-group-policy-9.png" alt="" width="723" height="544" class="alignnone size-full wp-image-5295" /></a>
+![](images/allow-remote-desktop-users-by-group-policy-9.png)
 
 **接続を許可する**が選択されていることを確認し、完了します。
-<a href="images/allow-remote-desktop-users-by-group-policy-10.png"><img src="images/allow-remote-desktop-users-by-group-policy-10.png" alt="" width="726" height="544" class="alignnone size-full wp-image-5296" /></a>
+![](images/allow-remote-desktop-users-by-group-policy-10.png)
 
 適用するプロファイルを変更する場合は、個別にプロパティを開いて変更してください。
-<a href="images/allow-remote-desktop-users-by-group-policy-11.png"><img src="images/allow-remote-desktop-users-by-group-policy-11.png" alt="" width="1194" height="667" class="alignnone size-full wp-image-5297" /></a>
+![](images/allow-remote-desktop-users-by-group-policy-11.png)
 
 ### リモート接続の許可
 
@@ -111,7 +111,7 @@ Usersとありますが、コンピューターも含まれているようです
 これをやっとかないとそもそもリモート接続ができないので、注意してください。
 
 **ユーザーがリモート デスクトップ サービスを使ってリモート接続することを許可する**を未構成から**有効**にします。
-<a href="images/allow-remote-desktop-users-by-group-policy-12.png"><img src="images/allow-remote-desktop-users-by-group-policy-12.png" alt="" width="700" height="641" class="alignnone size-full wp-image-5288" /></a>
+![](images/allow-remote-desktop-users-by-group-policy-12.png)
 
 「ネットワークレベル認証でセキュリティを向上したいわ」とお考えの方は以下の設定を実施してください。
 
@@ -120,7 +120,7 @@ Usersとありますが、コンピューターも含まれているようです
 * コンピューターの構成 > ポリシー > 管理用テンプレート > Windowsコンポーネント > リモートデスクトップサービス > リモートデスクトップセッションホスト > セキュリティ
 
 **リモート接続にネットワーク レベル認証を使用したユーザー認証を必要とする**を未構成から**有効**にします。
-<a href="images/allow-remote-desktop-users-by-group-policy-13.png"><img src="images/allow-remote-desktop-users-by-group-policy-13.png" alt="" width="700" height="645" class="alignnone size-full wp-image-5289" /></a>
+![](images/allow-remote-desktop-users-by-group-policy-13.png)
 
 ネットワークレベル認証については以下を参照してください。
 
@@ -133,7 +133,7 @@ Usersとありますが、コンピューターも含まれているようです
 **RDP OK Computers**のOUに対象のコンピューターを移動させることでポリシーを割当てることができます。
 
 デフォルトでは**Computers**に格納されているので、右クリック > 移動 から移動先のOUを指定します。
-<a href="images/allow-remote-desktop-users-by-group-policy-14.png"><img src="images/allow-remote-desktop-users-by-group-policy-14.png" alt="" width="886" height="549" class="alignnone size-full wp-image-5290" /></a>
+![](images/allow-remote-desktop-users-by-group-policy-14.png)
 
 これでポリシーの割り当ては完了です。
 
@@ -157,7 +157,7 @@ Usersとありますが、コンピューターも含まれているようです
 
 ` gpresult /r `
 
-<a href="images/allow-remote-desktop-users-by-group-policy-15.png"><img src="images/allow-remote-desktop-users-by-group-policy-15.png" alt="" width="603" height="249" class="alignnone size-full wp-image-5291" /></a>
+![](images/allow-remote-desktop-users-by-group-policy-15.png)
 
 無い場合は、グループポリシーが割り当たっていないので、これまでの手順を確認してみてください。
 

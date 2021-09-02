@@ -11,7 +11,7 @@ tags: [ポケモンGO, iPhone, その他, ライフハック]
 
 私も昼休憩にインストールして、さっそくスターターポケモンにピカチュウをゲットしてきました。
 
-<img src="images/pokemon-go-gps-error-1.jpg" alt="pokemongo01">
+![pokemongo01](images/pokemon-go-gps-error-1.jpg)
 
 意外とモンスターボール当てるの難しいですね～。
 5個くらい無駄にしちゃいました。
@@ -20,7 +20,7 @@ tags: [ポケモンGO, iPhone, その他, ライフハック]
 
 ## GPSの信号をさがしていますの解決方法
 
-<img src="images/pokemon-go-gps-error-2.jpg" alt="pokemongo02">
+![pokemongo02](images/pokemon-go-gps-error-2.jpg)
 
 この画面になってしまうと、GPS情報が取得できずにポケモンGO がプレイできなくなります。
 

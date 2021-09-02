@@ -16,7 +16,7 @@ tags: [GitHub, その他, ライフハック]
 
 まずは、何もしない状態での差分表示は下記ような感じになるかと思います。
 
-<a href="images/github-webui-ignore-whitespace-and-newline-character-differences-1.png"><img src="images/github-webui-ignore-whitespace-and-newline-character-differences-1.png" alt="" width="1279" height="972" class="aligncenter size-full wp-image-13181" /></a>
+![](images/github-webui-ignore-whitespace-and-newline-character-differences-1.png)
 
 差分内容を文章にしておりますので、大体の差分は理解いただけるかと思います。
 
@@ -34,7 +34,7 @@ URL に、とあるパラメータを追加すると幸せになるよという�
 `https://github.com/hoge/fuga-repos/pull/1/files?w=1`
 といった感じで URL の末尾にパラメータをつけてみました。その結果が下記のものです。
 
-<a href="images/github-webui-ignore-whitespace-and-newline-character-differences-2.png"><img src="images/github-webui-ignore-whitespace-and-newline-character-differences-2.png" alt="" width="1296" height="559" class="aligncenter size-full wp-image-13180" /></a>
+![](images/github-webui-ignore-whitespace-and-newline-character-differences-2.png)
 
 非常にスッキリしました！ただし、全角ブランクは無視されないようです。
 
@@ -44,23 +44,23 @@ URL に、とあるパラメータを追加すると幸せになるよという�
 
 毎回、 URL を編集するのもなんだし、どこか設定メニューで ON / OFF できたりしないものかと探してみると、それらしいものがありました！
 
-<a href="images/github-webui-ignore-whitespace-and-newline-character-differences-3.png"><img src="images/github-webui-ignore-whitespace-and-newline-character-differences-3.png" alt="" width="1297" height="564" class="aligncenter size-full wp-image-13183" /></a>
+![](images/github-webui-ignore-whitespace-and-newline-character-differences-3.png)
 
 `Hide whitespace changes` と書かれているではないですか。前述の確認時に URL パラメータを付与していたためか、既にチェックが入っておりました。
 
 試しにチェックを外してみると。。。
 
-<a href="images/github-webui-ignore-whitespace-and-newline-character-differences-1.png"><img src="images/github-webui-ignore-whitespace-and-newline-character-differences-1.png" alt="" width="1279" height="972" class="aligncenter size-full wp-image-13181" /></a>
+![](images/github-webui-ignore-whitespace-and-newline-character-differences-1.png)
 
-<img src="images/github-webui-ignore-whitespace-and-newline-character-differences-4.png" alt="" width="317" height="40" class="aligncenter size-full wp-image-13179" />
+![](images/github-webui-ignore-whitespace-and-newline-character-differences-4.png)
 
 最初の差分と同じ内容になりました。 URL パラメータに付与した `w=1` も消えてしまいました。
 
 再び、チェックをつけて再表示すると。。。
 
-<a href="images/github-webui-ignore-whitespace-and-newline-character-differences-2.png"><img src="images/github-webui-ignore-whitespace-and-newline-character-differences-2.png" alt="" width="1296" height="559" class="aligncenter size-full wp-image-13180" /></a>
+![](images/github-webui-ignore-whitespace-and-newline-character-differences-2.png)
 
-<img src="images/github-webui-ignore-whitespace-and-newline-character-differences-5.png" alt="" width="403" height="36" class="aligncenter size-full wp-image-13178" />
+![](images/github-webui-ignore-whitespace-and-newline-character-differences-5.png)
 
 スッキリしました！やはり、全角ブランクは無視されないようです。 URL をみると `w=1` のパラメータが付与されてました。ちなみにパラメータに含まれている `diff=split` は横分けに差分を表示するという値のようです。縦分けの差分で表示する場合は、 `diff=unified` になるとのこと。
 

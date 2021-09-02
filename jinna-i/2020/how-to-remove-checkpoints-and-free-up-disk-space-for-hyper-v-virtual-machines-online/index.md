@@ -9,7 +9,7 @@ tags: [Windows Server, Hyper-V, Windows]
 
 Windows Server 2016 で Hyper-V を有効にし仮想マシンを稼働させていたのですが、ある日 Hyper-V ホストのディスクが枯渇していることに気づきました。
 
-<a href="images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-1.png"><img src="images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-1.png" alt="" width="260" height="82" class="alignnone size-full wp-image-13736" /></a>
+![](images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-1.png)
 
 ディスク容量が増えている箇所を確認すると、Hyper-V の仮想マシンのチェックポイント (スナップショット) が肥大化していることが分かりました。
 
@@ -17,11 +17,11 @@ Windows Server 2016 で Hyper-V を有効にし仮想マシンを稼働させて
 
 `.vhdx` が仮想マシン本体の親ディスクであり、`.avhdx` が仮想マシンチェックポイントの差分ディスクです。
 
-<a href="images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-2.png"><img src="images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-2.png" alt="" width="855" height="343" class="alignnone size-full wp-image-13777" /></a>
+![](images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-2.png)
 
 Hyper-V マネージャーから仮想マシンのチェックポイントを確認すると、3つほどチェックポイントがあることが分かりました。しかも1年以上も経過しています・・・
 
-<a href="images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-3.png"><img src="images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-3.png" alt="" width="614" height="127" class="alignnone size-full wp-image-13738" /></a>
+![](images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-3.png)
 
 このチェックポイントを削除すればディスク枯渇は解消されるのですが、ここで一点 **問題** があります。
 
@@ -50,7 +50,7 @@ Hyper-V のチェックポイントを削除した際には差分ディスク(�
 
 PowerShell から `get-smbconnection` を実行すると共有フォルダの SMB のバージョンを確認できます。
 
-<a href="images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-4.png"><img src="images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-4.png" alt="" width="450" height="92" class="alignnone size-full wp-image-13745" /></a>
+![](images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-4.png)
 
 詳しくは下記を参照してください
 
@@ -66,31 +66,31 @@ PowerShell から `get-smbconnection` を実行すると共有フォルダの SM
 
 Hyper-V マネージャーを起動し、仮想マシン右クリック > [移動] をクリックします。
 
-<a href="images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-5.png"><img src="images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-5.png" alt="" width="371" height="406" class="alignnone size-full wp-image-13748" /></a>
+![](images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-5.png)
 
 [次へ] をクリックします。
  
-<a href="images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-6.png"><img src="images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-6.png" alt="" width="709" height="498" class="alignnone size-full wp-image-13749" /></a>
+![](images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-6.png)
 
 [仮想マシンの記憶域を移動する] を選択し [次へ] をクリックします。
 
-<a href="images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-7.png"><img src="images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-7.png" alt="" width="706" height="500" class="alignnone size-full wp-image-13754" /></a>
+![](images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-7.png)
 
 [仮想マシンの仮想ハードディスクを移動する] を選択し [次へ] をクリックします。
 
-<a href="images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-8.png"><img src="images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-8.png" alt="" width="709" height="497" class="alignnone size-full wp-image-13755" /></a>
+![](images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-8.png)
 
 [次へ] をクリックします。
 
-<a href="images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-9.png"><img src="images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-9.png" alt="" width="707" height="499" class="alignnone size-full wp-image-13752" /></a>
+![](images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-9.png)
 
 移行先のパスを指定し [次へ] をクリックします。例として `E:\Hyper-V\` を指定しています。
 
-<a href="images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-10.png"><img src="images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-10.png" alt="" width="706" height="498" class="alignnone size-full wp-image-13757" /></a>
+![](images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-10.png)
 
 [完了] をクリックすると移行が開始します。ディスクサイズにもよりますが、数十分～数時間かかるので気長に待ちましょう。
 
-<a href="images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-11.png"><img src="images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-11.png" alt="" width="709" height="496" class="alignnone size-full wp-image-13758" /></a>
+![](images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-11.png)
 
 ### チェックポイントの削除と結合
 
@@ -100,7 +100,7 @@ Hyper-V マネージャーを起動し、仮想マシン右クリック > [移�
 
 この [チェックポイントのサブツリーを削除] はチェックポイントをすべて削除する動作となります。どうしても残しておきたいチェックポイントがある場合は [チェックポイントの削除] で個別に削除します。
 
-<a href="images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-12.png"><img src="images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-12.png" alt="" width="423" height="225" class="alignnone size-full wp-image-13759" /></a>
+![](images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-12.png)
 
 こちらも、ディスクサイズにより数十分～数時間かかるので気長に待ちましょう。
 
@@ -108,7 +108,7 @@ Hyper-V マネージャーを起動し、仮想マシン右クリック > [移�
 
 結合が完了したらあれだけあったファイルが無くなり、きれいになりました。
 
-<a href="images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-13.png"><img src="images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-13.png" alt="" width="857" height="226" class="alignnone size-full wp-image-13761" /></a>
+![](images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-13.png)
 
 ### 仮想ディスクの移行 (戻す)
 
@@ -118,7 +118,7 @@ Hyper-V マネージャーを起動し、仮想マシン右クリック > [移�
 
 C ドライブを確認すると枯渇が解消し平和が訪れていました。
 
-<a href="images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-14.png"><img src="images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-14.png" alt="" width="272" height="73" class="alignnone size-full wp-image-13764" /></a>
+![](images/how-to-remove-checkpoints-and-free-up-disk-space-for-hyper-v-virtual-machines-online-14.png)
 
 めでたしめでたし。
 

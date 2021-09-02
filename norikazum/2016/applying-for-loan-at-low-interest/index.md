@@ -23,14 +23,14 @@ tags: [その他, 〇〇奮闘記]
 
 もしかして、区民センターの中か？
 
-<img src="images/applying-for-loan-at-low-interest-1.jpg" alt="marukei01" width="1920" height="1080" class="alignnone size-full wp-image-839" />
+![marukei01](images/applying-for-loan-at-low-interest-1.jpg)
 
 区民センターに入り、係の方に聞くと**ここではありません** ・・・　このときすでに16時10分。
 続けて区民センターの方に場所を聞いて向かうとやっとたどり着きました・・・。
 
 って、
 
-<img src="images/applying-for-loan-at-low-interest-2.jpg" alt="marukei02" width="1920" height="1080" class="alignnone size-full wp-image-840" />
+![marukei02](images/applying-for-loan-at-low-interest-2.jpg)
 
 **福島産業会**ってなってるじゃないですか！
 
@@ -40,7 +40,7 @@ tags: [その他, 〇〇奮闘記]
 
 挨拶は早々に、早速面談が始まりました。
 
-<img src="images/applying-for-loan-at-low-interest-3.jpg" alt="marukei03" width="1390" height="640" class="alignnone size-full wp-image-841" />
+![marukei03](images/applying-for-loan-at-low-interest-3.jpg)
 
 政策金融公庫の方は、すごく若い。商工会の方はベテラン風。
 
@@ -50,7 +50,7 @@ tags: [その他, 〇〇奮闘記]
 
 帰り際に、再度Googleマップを・・・
 
-<img src="images/applying-for-loan-at-low-interest-4.jpg" alt="marukei04" width="573" height="435" class="alignnone size-full wp-image-842" />
+![marukei04](images/applying-for-loan-at-low-interest-4.jpg)
 
 ばっちり出ますね。。
 

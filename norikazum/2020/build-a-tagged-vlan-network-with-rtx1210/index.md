@@ -29,7 +29,7 @@ RTX1210固有の機能ではなく、他機種でも対応していれば同様�
 ## タグVLAN前のネットワーク
 
 このような感じです。(とてもシンプル！)
-<a href="images/build-a-tagged-vlan-network-with-rtx1210-1.png"><img src="images/build-a-tagged-vlan-network-with-rtx1210-1.png" alt="" width="522" height="253" class="alignnone size-full wp-image-14008" /></a>
+![](images/build-a-tagged-vlan-network-with-rtx1210-1.png)
 
 このときのコンフィグは以下のようになります。
 ```
@@ -39,7 +39,7 @@ ip lan1 address 192.168.10.254/24
 ## タグVLAN後のネットワーク
 
 このような感じに変更します。
-<a href="images/build-a-tagged-vlan-network-with-rtx1210-2.png"><img src="images/build-a-tagged-vlan-network-with-rtx1210-2.png" alt="" width="557" height="441" class="alignnone size-full wp-image-14009" /></a>
+![](images/build-a-tagged-vlan-network-with-rtx1210-2.png)
 
 このときのコンフィグは以下のようになります。
 ```

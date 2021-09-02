@@ -63,7 +63,7 @@ x86 と x64 は Windows に応じて選んでくださいね。
 
 後は、 `localhost:3000` にアクセスすれば、下にあるような画像が出てくるはずです。
 
-![スタート画面](images/ruby-on-rails1-1.png)
+![スタート画面](https://mseeeen.msen.jp/wp-content/uploads/2021/04/rails-300x281.png)
 
 ### Controller の生成
 

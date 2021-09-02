@@ -46,7 +46,7 @@ MSEN では PDF 生成関連の設定は、プロジェクトごとに多少異�
 
 ちなみにこの設定だとフッターは下記のように描画されます。
 
-[caption id="attachment_7143" align="aligncenter" width="996"]<img src="images/vscode-markdown-pdf-v1-header-footer-settings-1.png" alt="Markdown PDF フッター設定" width="996" height="203" class="size-full wp-image-7143" /> Markdown PDF フッター設定[/caption]
+![Markdown PDF フッター設定](images/vscode-markdown-pdf-v1-header-footer-settings-1.png)
 
 ## ちょっと詳しく説明
 

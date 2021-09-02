@@ -25,7 +25,7 @@ tags: [その他]
 
 上の動画を見てもらうのが一番早いですが、光っているのはここ　↓
 
-<a href="images/unknown-green-blinking-dot-on-google-pixel-5-1.jpg"><img src="images/unknown-green-blinking-dot-on-google-pixel-5-1.jpg" alt="" width="800" height="330" class="aligncenter size-full wp-image-14949" /></a>
+![](images/unknown-green-blinking-dot-on-google-pixel-5-1.jpg)
 
 このステータスバーの若干した気味、画面中央にそれはあります。
 
@@ -65,11 +65,11 @@ tags: [その他]
 
 ちなみによほど問い合わせが多いのか、ヘルプページ上部にも書いてあります。
 
-<a href="images/unknown-green-blinking-dot-on-google-pixel-5-2.png"><img src="images/unknown-green-blinking-dot-on-google-pixel-5-2.png" alt="" width="707" height="330" class="aligncenter size-full wp-image-14936" /></a>
+![](images/unknown-green-blinking-dot-on-google-pixel-5-2.png)
 
 念のためヘルプにもある「[Pixel 5 スマートフォンの図](https://support.google.com/pixelphone/answer/7157629)」を見てみると...
 
-<a href="images/unknown-green-blinking-dot-on-google-pixel-5-3.png"><img src="images/unknown-green-blinking-dot-on-google-pixel-5-3.png" alt="Pixel 5 の近接センサーが輝点に見える件" width="567" height="480" class="aligncenter size-full wp-image-14932" /></a>
+![Pixel 5 の近接センサーが輝点に見える件](images/unknown-green-blinking-dot-on-google-pixel-5-3.png)
 
 間違いなく、こやつですね。
 

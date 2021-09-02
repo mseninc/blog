@@ -7,7 +7,7 @@ tags: [PowerShell, Windows]
 
 タイトルの通り **PowerShell で exe や dll のバージョン番号を v1.0.0 のような形式で取得**する方法を紹介します。
 
-<a href="images/get-version-number-with-specified-format-in-powershell-1.png"><img src="images/get-version-number-with-specified-format-in-powershell-1.png" alt="" width="421" height="580" class="aligncenter size-full wp-image-11698" /></a>
+![](images/get-version-number-with-specified-format-in-powershell-1.png)
 
 バージョン番号を使って Git のタグづけをしたり、 `Compress-Archive` で Zip に固めたりするのに便利です。
 

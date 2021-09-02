@@ -23,11 +23,11 @@ APN 設定を行うと、モバイルネットワークには接続できるの�
 
 `NTT DOCOMO (UMTS)` となっています。少し調べたところ**いわゆる 3G 回線**ということだそうです。
 
-<a href="images/check-points-when-wireless-wan-does-not-become-lte-on-thinkpad-x1-carbon-1.png"><img src="images/check-points-when-wireless-wan-does-not-become-lte-on-thinkpad-x1-carbon-1.png" alt="" width="359" height="106" class="alignnone size-full wp-image-14339" /></a>
+![](images/check-points-when-wireless-wan-does-not-become-lte-on-thinkpad-x1-carbon-1.png)
 
 お使いの環境によっては `NTT DOCOMO (HSDPA)` となることがあると思いますが、大きくは同じで 3G 回線のようです。
 
-<a href="images/check-points-when-wireless-wan-does-not-become-lte-on-thinkpad-x1-carbon-2.png"><img src="images/check-points-when-wireless-wan-does-not-become-lte-on-thinkpad-x1-carbon-2.png" alt="" width="357" height="92" class="alignnone size-full wp-image-14340" /></a>
+![](images/check-points-when-wireless-wan-does-not-become-lte-on-thinkpad-x1-carbon-2.png)
 
 以前は 4G (LTE) 回線につながっていたのでずいぶんと快適だったのですが、3G 回線だと最近の Web ページを見るだけでももっさりしています。
 
@@ -45,7 +45,7 @@ APN 設定を行うと、モバイルネットワークには接続できるの�
 
 この「アタッチ」というのが 4G (LTE) をつかまえるためのプロファイルのようです。
 
-<a href="images/check-points-when-wireless-wan-does-not-become-lte-on-thinkpad-x1-carbon-3.png"><img src="images/check-points-when-wireless-wan-does-not-become-lte-on-thinkpad-x1-carbon-3.png" alt="" width="1200" height="932" class="alignnone size-full wp-image-14343" /></a>
+![](images/check-points-when-wireless-wan-does-not-become-lte-on-thinkpad-x1-carbon-3.png)
 
 参考までにその他の項目の設定値を載せておきます。
 
@@ -61,7 +61,7 @@ APN の種類 | インターネットおよびアタッチ |  
 
 これで、携帯ネットワークを ON/OFF すると 4G LTE 回線につながると思います。
 
-<a href="images/check-points-when-wireless-wan-does-not-become-lte-on-thinkpad-x1-carbon-4.png"><img src="images/check-points-when-wireless-wan-does-not-become-lte-on-thinkpad-x1-carbon-4.png" alt="" width="357" height="95" class="alignnone size-full wp-image-14347" /></a>
+![](images/check-points-when-wireless-wan-does-not-become-lte-on-thinkpad-x1-carbon-4.png)
 
 ## 3G 回線と 4G (LTE) 回線の比較
 
@@ -76,11 +76,11 @@ APN の種類 | インターネットおよびアタッチ |  
 
 **NTT DOCOMO (UMTS) の時の回線速度**
 
-<a href="images/check-points-when-wireless-wan-does-not-become-lte-on-thinkpad-x1-carbon-5.png"><img src="images/check-points-when-wireless-wan-does-not-become-lte-on-thinkpad-x1-carbon-5.png" alt="" width="1819" height="1311" class="alignnone size-full wp-image-14350" /></a>
+![](images/check-points-when-wireless-wan-does-not-become-lte-on-thinkpad-x1-carbon-5.png)
 
 **NTT DOCOMO (LTE) の時の回線速度**
 
-<a href="images/check-points-when-wireless-wan-does-not-become-lte-on-thinkpad-x1-carbon-6.png"><img src="images/check-points-when-wireless-wan-does-not-become-lte-on-thinkpad-x1-carbon-6.png" alt="" width="1819" height="1311" class="alignnone size-full wp-image-14352" /></a>
+![](images/check-points-when-wireless-wan-does-not-become-lte-on-thinkpad-x1-carbon-6.png)
 
 平日 13:30ごろでほぼ同じ時刻に測定しています。
 

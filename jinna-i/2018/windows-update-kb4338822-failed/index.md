@@ -21,7 +21,7 @@ tags: [Windows 10, Windows Update, Windows]
 ## 解決策
 KB4338822をスタンドアロンでインストールしようと思い[Microsoft Update カタログ](https://www.catalog.update.microsoft.com/Home.aspx)にアクセスすると、7月30日付で置き換えのパッチ[KB4346877](https://support.microsoft.com/ja-jp/help/4346877/windows-10-update-kb4346877)がでていました。
 
-<a href="images/windows-update-kb4338822-failed-1.png"><img src="images/windows-update-kb4338822-failed-1.png" alt="" width="740" height="560" class="alignnone size-full wp-image-7717" /></a>
+![](images/windows-update-kb4338822-failed-1.png)
 
 Microsoft Update カタログから[2018-07 x64 ベース システム用 Windows 10 Version 1607 の累積更新プログラム (KB4346877)](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4346877)をダウンロードし、スタンドアロンインストールを行います。
 

@@ -40,33 +40,33 @@ CentOS 8 を採用しているお客さまも多いことから Stream の移行
 [Index of /centos/8-stream/isos/x86_64](http://mirror.vodien.com/centos/8-stream/isos/x86_64/)
 
 - **ISOからブート** します
-<a href="images/trying-centos-stream-instead-of-centos8-1.jpg"><img src="images/trying-centos-stream-instead-of-centos8-1.jpg" alt="" width="870" height="654" class="alignnone size-full wp-image-15302" /></a>
+![](images/trying-centos-stream-instead-of-centos8-1.jpg)
 ↓
-<a href="images/trying-centos-stream-instead-of-centos8-2.jpg"><img src="images/trying-centos-stream-instead-of-centos8-2.jpg" alt="" width="875" height="656" class="alignnone size-full wp-image-15303" /></a>
+![](images/trying-centos-stream-instead-of-centos8-2.jpg)
 
 - **言語を選択** します
-<a href="images/trying-centos-stream-instead-of-centos8-3.jpg"><img src="images/trying-centos-stream-instead-of-centos8-3.jpg" alt="" width="873" height="657" class="alignnone size-full wp-image-15304" /></a>
+![](images/trying-centos-stream-instead-of-centos8-3.jpg)
 
 - **インストール概要を決定** します (今回は **全てデフォルト** でインストールしてみます)
-<a href="images/trying-centos-stream-instead-of-centos8-4.jpg"><img src="images/trying-centos-stream-instead-of-centos8-4.jpg" alt="" width="873" height="658" class="alignnone size-full wp-image-15305" /></a>
+![](images/trying-centos-stream-instead-of-centos8-4.jpg)
 ↓
-<a href="images/trying-centos-stream-instead-of-centos8-5.jpg"><img src="images/trying-centos-stream-instead-of-centos8-5.jpg" alt="" width="876" height="658" class="alignnone size-full wp-image-15306" /></a>
+![](images/trying-centos-stream-instead-of-centos8-5.jpg)
 ↓
-<a href="images/trying-centos-stream-instead-of-centos8-6.jpg"><img src="images/trying-centos-stream-instead-of-centos8-6.jpg" alt="" width="873" height="648" class="alignnone size-full wp-image-15307" /></a>
+![](images/trying-centos-stream-instead-of-centos8-6.jpg)
 
 - **インストールが進行** し、 **再起動** します
-<a href="images/trying-centos-stream-instead-of-centos8-7.jpg"><img src="images/trying-centos-stream-instead-of-centos8-7.jpg" alt="" width="871" height="653" class="alignnone size-full wp-image-15308" /></a>
+![](images/trying-centos-stream-instead-of-centos8-7.jpg)
 ↓
-<a href="images/trying-centos-stream-instead-of-centos8-8.jpg"><img src="images/trying-centos-stream-instead-of-centos8-8.jpg" alt="" width="870" height="655" class="alignnone size-full wp-image-15309" /></a>
+![](images/trying-centos-stream-instead-of-centos8-8.jpg)
 
 - **ライセンスに同意** します
-<a href="images/trying-centos-stream-instead-of-centos8-9.jpg"><img src="images/trying-centos-stream-instead-of-centos8-9.jpg" alt="" width="907" height="681" class="alignnone size-full wp-image-15310" /></a>
+![](images/trying-centos-stream-instead-of-centos8-9.jpg)
 ↓
-<a href="images/trying-centos-stream-instead-of-centos8-10.jpg"><img src="images/trying-centos-stream-instead-of-centos8-10.jpg" alt="" width="911" height="677" class="alignnone size-full wp-image-15311" /></a>
+![](images/trying-centos-stream-instead-of-centos8-10.jpg)
 ↓
-<a href="images/trying-centos-stream-instead-of-centos8-11.jpg"><img src="images/trying-centos-stream-instead-of-centos8-11.jpg" alt="" width="911" height="677" class="alignnone size-full wp-image-15312" /></a>
+![](images/trying-centos-stream-instead-of-centos8-11.jpg)
 ↓
-<a href="images/trying-centos-stream-instead-of-centos8-12.jpg"><img src="images/trying-centos-stream-instead-of-centos8-12.jpg" alt="" width="908" height="680" class="alignnone size-full wp-image-15314" /></a>
+![](images/trying-centos-stream-instead-of-centos8-12.jpg)
 
 ここまででインストールは完了です。
 **CentOS 8 となんら変わりはなく違和感なし** です。
@@ -74,27 +74,27 @@ CentOS 8 を採用しているお客さまも多いことから Stream の移行
 ## 初期セットアップ
 
 - Welcome 画面を **次へ** で進みます
-<a href="images/trying-centos-stream-instead-of-centos8-13.jpg"><img src="images/trying-centos-stream-instead-of-centos8-13.jpg" alt="" width="905" height="673" class="alignnone size-full wp-image-15317" /></a>
+![](images/trying-centos-stream-instead-of-centos8-13.jpg)
 
 - プライバシー の確認を **次へ** で進みます
-<a href="images/trying-centos-stream-instead-of-centos8-14.jpg"><img src="images/trying-centos-stream-instead-of-centos8-14.jpg" alt="" width="906" height="685" class="alignnone size-full wp-image-15318" /></a>
+![](images/trying-centos-stream-instead-of-centos8-14.jpg)
 
 - **オンラインアカンとへの接続はスキップ** します
-<a href="images/trying-centos-stream-instead-of-centos8-15.jpg"><img src="images/trying-centos-stream-instead-of-centos8-15.jpg" alt="" width="909" height="683" class="alignnone size-full wp-image-15319" /></a>
+![](images/trying-centos-stream-instead-of-centos8-15.jpg)
 
 - **ユーザーを作成** します 
-<a href="images/trying-centos-stream-instead-of-centos8-16.jpg"><img src="images/trying-centos-stream-instead-of-centos8-16.jpg" alt="" width="909" height="678" class="alignnone size-full wp-image-15320" /></a>
+![](images/trying-centos-stream-instead-of-centos8-16.jpg)
 ↓
-<a href="images/trying-centos-stream-instead-of-centos8-17.jpg"><img src="images/trying-centos-stream-instead-of-centos8-17.jpg" alt="" width="909" height="680" class="alignnone size-full wp-image-15321" /></a>
+![](images/trying-centos-stream-instead-of-centos8-17.jpg)
 
 - これで **初期セットアップが完了** します
-<a href="images/trying-centos-stream-instead-of-centos8-18.jpg"><img src="images/trying-centos-stream-instead-of-centos8-18.jpg" alt="" width="901" height="679" class="alignnone size-full wp-image-15322" /></a>
+![](images/trying-centos-stream-instead-of-centos8-18.jpg)
 ↓
-<a href="images/trying-centos-stream-instead-of-centos8-19.jpg"><img src="images/trying-centos-stream-instead-of-centos8-19.jpg" alt="" width="906" height="680" class="alignnone size-full wp-image-15323" /></a>
+![](images/trying-centos-stream-instead-of-centos8-19.jpg)
 
 メニューはこんな感じでした。
 
-<a href="images/trying-centos-stream-instead-of-centos8-20.jpg"><img src="images/trying-centos-stream-instead-of-centos8-20.jpg" alt="" width="906" height="681" class="alignnone size-full wp-image-15324" /></a>
+![](images/trying-centos-stream-instead-of-centos8-20.jpg)
 
 このあと、パッケージのインストールなども試してみましたが特に違和感を感じることはなく、触ってみた限りでは CentOS 8 と同様に使うことが出来な印象でした。
 

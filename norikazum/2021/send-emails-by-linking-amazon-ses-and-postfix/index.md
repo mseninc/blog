@@ -10,7 +10,7 @@ tags: [AWS, Postfix, メール, その他]
 今回は、AWS のサービスのひとつである [SES (Amazon Simple Email Service) ](https://aws.amazon.com/jp/ses/)と EC2で動作しているAmazon Linux2上のPostfixと連携させ、メール配送ができる仕組みを作ります。
 
 このようなイメージです。
-<a href="images/send-emails-by-linking-amazon-ses-and-postfix-1.png"><img src="images/send-emails-by-linking-amazon-ses-and-postfix-1.png" alt="" width="815" height="767" class="alignnone size-full wp-image-14259" /></a>
+![](images/send-emails-by-linking-amazon-ses-and-postfix-1.png)
 
 今回の記事では **送信することを目的** としています。
 
@@ -26,40 +26,40 @@ tags: [AWS, Postfix, メール, その他]
 
 ## SES設定
 1. AWSの管理コンソールにログインし、 **SESと検索しSES Homeに遷移** します
-<a href="images/send-emails-by-linking-amazon-ses-and-postfix-2.png"><img src="images/send-emails-by-linking-amazon-ses-and-postfix-2.png" alt="" width="1001" height="145" class="alignnone size-full wp-image-14216" /></a>
+![](images/send-emails-by-linking-amazon-ses-and-postfix-2.png)
 
 1. 左メニューから **Email Addresses** をクリックします
-<a href="images/send-emails-by-linking-amazon-ses-and-postfix-3.png"><img src="images/send-emails-by-linking-amazon-ses-and-postfix-3.png" alt="" width="282" height="745" class="alignnone size-full wp-image-14217" /></a>
+![](images/send-emails-by-linking-amazon-ses-and-postfix-3.png)
 
 1. **Verify a Email Address** をクリックし、別ウィンドウにメールアドレスを入力し、**Verify This Email Address** をクリックします
-<a href="images/send-emails-by-linking-amazon-ses-and-postfix-4.png"><img src="images/send-emails-by-linking-amazon-ses-and-postfix-4.png" alt="" width="1514" height="994" class="alignnone size-full wp-image-14218" /></a>
+![](images/send-emails-by-linking-amazon-ses-and-postfix-4.png)
 
 1. メールを送った旨のメッセージが出たあと、以下のように **pending verification** で追加されます
-<a href="images/send-emails-by-linking-amazon-ses-and-postfix-5.png"><img src="images/send-emails-by-linking-amazon-ses-and-postfix-5.png" alt="" width="1199" height="211" class="alignnone size-full wp-image-14219" /></a>
+![](images/send-emails-by-linking-amazon-ses-and-postfix-5.png)
 
 1. 指定したメールアドレスに **Amazon Web Services – Email Address Verification Request in region リージョン名** というタイトルのメールが到着するので、 **verification URL をクリック** します。
-<a href="images/send-emails-by-linking-amazon-ses-and-postfix-6.png"><img src="images/send-emails-by-linking-amazon-ses-and-postfix-6.png" alt="" width="1069" height="699" class="alignnone size-full wp-image-14264" /></a>
+![](images/send-emails-by-linking-amazon-ses-and-postfix-6.png)
 
 1. **verified** になりました
-<a href="images/send-emails-by-linking-amazon-ses-and-postfix-7.png"><img src="images/send-emails-by-linking-amazon-ses-and-postfix-7.png" alt="" width="1200" height="221" class="alignnone size-full wp-image-14224" /></a>
+![](images/send-emails-by-linking-amazon-ses-and-postfix-7.png)
 
 ## SES 設定の取得
 
 Postfixの設定に必要な情報を取得します。
 
 1. **SES Homeの左メニューから SMTP Settings** をクリックします
-<a href="images/send-emails-by-linking-amazon-ses-and-postfix-8.png"><img src="images/send-emails-by-linking-amazon-ses-and-postfix-8.png" alt="" width="1740" height="1125" class="alignnone size-full wp-image-14243" /></a>
+![](images/send-emails-by-linking-amazon-ses-and-postfix-8.png)
 
 1. **赤枠の情報をメモ** します `email-smtp.ap-northeast-1.amazonaws.com`
 続けて、 **Create My SMTP Credentials** をクリックします
-<a href="images/send-emails-by-linking-amazon-ses-and-postfix-9.png"><img src="images/send-emails-by-linking-amazon-ses-and-postfix-9.png" alt="" width="1740" height="1125" class="alignnone size-full wp-image-14249" /></a>
+![](images/send-emails-by-linking-amazon-ses-and-postfix-9.png)
 
 1. SES を利用するユーザーを作成します
 **IAM User Name に任意の名称を入力** し、 **作成** をクリックします
-<a href="images/send-emails-by-linking-amazon-ses-and-postfix-10.png"><img src="images/send-emails-by-linking-amazon-ses-and-postfix-10.png" alt="" width="1740" height="1125" class="alignnone size-full wp-image-14245" /></a>
+![](images/send-emails-by-linking-amazon-ses-and-postfix-10.png)
 
 1. 表示された **SMTPユーザー名** と **SMTPパスワードをメモ** します。もしくは右下の **認証情報のダウンロードをクリック** しCSVをダウンロードします。 この **画面を閉じると2度とこの情報は取得出来ません** ので注意してください。万が一閉じてしまった場合は、再度ユーザー作成する必要があります
-<a href="images/send-emails-by-linking-amazon-ses-and-postfix-11.png"><img src="images/send-emails-by-linking-amazon-ses-and-postfix-11.png" alt="" width="1740" height="1125" class="alignnone size-full wp-image-14247" /></a>
+![](images/send-emails-by-linking-amazon-ses-and-postfix-11.png)
 
 ## Amazon Linux2の準備
 
@@ -153,14 +153,14 @@ Oct  7 13:24:03 ip-172-16-1-230 postfix/qmgr[3569]: 5A30310C3D8: removed
 
 思いっきり迷惑メール扱いされていますが、**受信トレイでも確認** できました。
 
-<a href="images/send-emails-by-linking-amazon-ses-and-postfix-12.png"><img src="images/send-emails-by-linking-amazon-ses-and-postfix-12.png" alt="" width="1387" height="653" class="alignnone size-full wp-image-14251" /></a>
+![](images/send-emails-by-linking-amazon-ses-and-postfix-12.png)
 
 ## 送信制限を解除する
 
 SES はデフォルトでは一切外にでれないサンドボックス設定になっています。
 
 **SES Home から SendingStatistics を確認**すると **Production Access が Sandbox になっている** ことが確認できます
-<a href="images/send-emails-by-linking-amazon-ses-and-postfix-13.png"><img src="images/send-emails-by-linking-amazon-ses-and-postfix-13.png" alt="" width="1740" height="1125" class="alignnone size-full wp-image-14252" /></a>
+![](images/send-emails-by-linking-amazon-ses-and-postfix-13.png)
 
 **解除申請** をしていきます
 
@@ -169,18 +169,18 @@ SES はデフォルトでは一切外にでれないサンドボックス設定�
 
 以下ように入力して送信しました
 
-<a href="images/send-emails-by-linking-amazon-ses-and-postfix-14.png"><img src="images/send-emails-by-linking-amazon-ses-and-postfix-14.png" alt="" width="1653" height="1183" class="alignnone size-full wp-image-14254" /></a>
-<a href="images/send-emails-by-linking-amazon-ses-and-postfix-15.png"><img src="images/send-emails-by-linking-amazon-ses-and-postfix-15.png" alt="" width="1653" height="1183" class="alignnone size-full wp-image-14255" /></a>
-<a href="images/send-emails-by-linking-amazon-ses-and-postfix-16.png"><img src="images/send-emails-by-linking-amazon-ses-and-postfix-16.png" alt="" width="1643" height="592" class="alignnone size-full wp-image-14256" /></a>
+![](images/send-emails-by-linking-amazon-ses-and-postfix-14.png)
+![](images/send-emails-by-linking-amazon-ses-and-postfix-15.png)
+![](images/send-emails-by-linking-amazon-ses-and-postfix-16.png)
 
 サポートケースが作成されました
-<a href="images/send-emails-by-linking-amazon-ses-and-postfix-17.png"><img src="images/send-emails-by-linking-amazon-ses-and-postfix-17.png" alt="" width="1653" height="1357" class="alignnone size-full wp-image-14257" /></a>
+![](images/send-emails-by-linking-amazon-ses-and-postfix-17.png)
 
 ## 送信制限解除
 
 今回の場合、**6時間ほど** で以下の **メールがAmazonから送られて無事解除** されました。
 **1日当たり、50,000メッセージ** まで送れるようです。
-<a href="images/send-emails-by-linking-amazon-ses-and-postfix-18.png"><img src="images/send-emails-by-linking-amazon-ses-and-postfix-18.png" alt="" width="1471" height="1639" class="alignnone size-full wp-image-14281" /></a>
+![](images/send-emails-by-linking-amazon-ses-and-postfix-18.png)
 
 それでは、解除後のテストを実施してみましょう。
 
@@ -209,7 +209,7 @@ Oct  8 00:21:04 ip-172-16-1-230 postfix/qmgr[3569]: 9C60D10C3DC: removed
 **status=sent** となっています。
 
 前回のテストと異なるメールアドレスの **受信トレイでも確認** できました。
-<a href="images/send-emails-by-linking-amazon-ses-and-postfix-19.png"><img src="images/send-emails-by-linking-amazon-ses-and-postfix-19.png" alt="" width="1343" height="277" class="alignnone size-full wp-image-14275" /></a>
+![](images/send-emails-by-linking-amazon-ses-and-postfix-19.png)
 
 ## ドメインの認証
 
@@ -219,23 +219,23 @@ Oct  8 00:21:04 ip-172-16-1-230 postfix/qmgr[3569]: 9C60D10C3DC: removed
 **操作には送信するドメインを管理するDNSサーバーを操作する必要** がありますので事前にご確認ください。
 
 1. **SES Home から、Domains をクリック** し、**Verify a New Domain をクリック** します
-<a href="images/send-emails-by-linking-amazon-ses-and-postfix-20.png"><img src="images/send-emails-by-linking-amazon-ses-and-postfix-20.png" alt="" width="1624" height="1099" class="alignnone size-full wp-image-14276" /></a>
+![](images/send-emails-by-linking-amazon-ses-and-postfix-20.png)
 
 1. **verifiedされているメールアドレスのドメイン部** を入力し、**Verify This Domain をクリック** します
-<a href="images/send-emails-by-linking-amazon-ses-and-postfix-21.png"><img src="images/send-emails-by-linking-amazon-ses-and-postfix-21.png" alt="" width="971" height="400" class="alignnone size-full wp-image-14277" /></a>
+![](images/send-emails-by-linking-amazon-ses-and-postfix-21.png)
 
 1. **認証用のTXTレコードを自信のドメインを管理するDNSサーバーに登録** します
-<a href="images/send-emails-by-linking-amazon-ses-and-postfix-22.png"><img src="images/send-emails-by-linking-amazon-ses-and-postfix-22.png" alt="" width="1081" height="829" class="alignnone size-full wp-image-14278" /></a>
+![](images/send-emails-by-linking-amazon-ses-and-postfix-22.png)
 
 1. 登録してすぐに **verified** になりました
-<a href="images/send-emails-by-linking-amazon-ses-and-postfix-23.png"><img src="images/send-emails-by-linking-amazon-ses-and-postfix-23.png" alt="" width="1624" height="1099" class="alignnone size-full wp-image-14279" /></a>
+![](images/send-emails-by-linking-amazon-ses-and-postfix-23.png)
 
 認証されていない場合は以下のようになります。
-<a href="images/send-emails-by-linking-amazon-ses-and-postfix-24.png"><img src="images/send-emails-by-linking-amazon-ses-and-postfix-24.png" alt="" width="441" height="78" class="alignnone size-full wp-image-14282" /></a>
+![](images/send-emails-by-linking-amazon-ses-and-postfix-24.png)
 
 認証されたことを通知する **Domain Verification SUCCESS for msen.jp in region Asia Pacific (Tokyo)
 ** というタイトルのメールも届いていました
-<a href="images/send-emails-by-linking-amazon-ses-and-postfix-25.png"><img src="images/send-emails-by-linking-amazon-ses-and-postfix-25.png" alt="" width="1295" height="236" class="alignnone size-full wp-image-14294" /></a>
+![](images/send-emails-by-linking-amazon-ses-and-postfix-25.png)
 
 ドメインが **verified となった後、 **TXTレコードは削除してOKの模様** です。
 **評価時に削除して1週間ほど状況を確認しましたが、verified** のままでした。

@@ -15,7 +15,7 @@ RDSはタイトルでも記載したとおり、"Relational Database Service" �
 
 Amazonの[チュートリアル](http://docs.aws.amazon.com/ja_jp/AmazonRDS/latest/UserGuide/CHAP_Tutorials.WebServerDB.CreateVPC.html)を参考に、外部からアクセスできるWebサーバーのためのパブリックサブネットと、外部からアクセスできないDBサーバーのためのプライベートサブネットというケースで構築していきます。
 
-<a href="images/how-to-use-rds-from-ec-2-1.png"><img src="images/how-to-use-rds-from-ec-2-1.png" alt="" width="628" height="500" class="aligncenter size-full wp-image-5376" /></a>
+![](images/how-to-use-rds-from-ec-2-1.png)
 
 ## 環境
 
@@ -50,10 +50,10 @@ DBサーバー用：dbsrv1
 
 `TESTVPC` という名前で、`172.2.0.0/16` のVPCを作成します。
 
-<a href="images/how-to-use-rds-from-ec-2-2.png"><img src="images/how-to-use-rds-from-ec-2-2.png" alt="" width="1156" height="829" class="aligncenter size-full wp-image-5379" /></a>
+![](images/how-to-use-rds-from-ec-2-2.png)
 
 VPCができました。
-<a href="images/how-to-use-rds-from-ec-2-3.png"><img src="images/how-to-use-rds-from-ec-2-3.png" alt="" width="1563" height="42" class="aligncenter size-full wp-image-5380" /></a>
+![](images/how-to-use-rds-from-ec-2-3.png)
 
 ## VPC 上にサブネットを2つ作る
 
@@ -65,29 +65,29 @@ DBサーバー用：172.2.2.0/24  アベイラビリティーゾーン us-east-1
 
 それぞれ以下のように作成します。
 
-<a href="images/how-to-use-rds-from-ec-2-4.png"><img src="images/how-to-use-rds-from-ec-2-4.png" alt="" width="1396" height="895" class="aligncenter size-full wp-image-5382" /></a>
+![](images/how-to-use-rds-from-ec-2-4.png)
 
-<a href="images/how-to-use-rds-from-ec-2-5.png"><img src="images/how-to-use-rds-from-ec-2-5.png" alt="" width="1400" height="880" class="aligncenter size-full wp-image-5383" /></a>
+![](images/how-to-use-rds-from-ec-2-5.png)
 
 サブネットが2つできました。
-<a href="images/how-to-use-rds-from-ec-2-6.png"><img src="images/how-to-use-rds-from-ec-2-6.png" alt="" width="1583" height="111" class="aligncenter size-full wp-image-5384" /></a>
+![](images/how-to-use-rds-from-ec-2-6.png)
 
 ## セキュリティグループを2つ作る
 
 外部からWebサーバーにアクセスするためのセキュリティグループと、WebサーバーからDBサーバーに接続するセキュリティグループを作成します。
 
 まずは、Webサーバー用のセキュリティグループ　**appsrv1** を作成します。
-<a href="images/how-to-use-rds-from-ec-2-7.png"><img src="images/how-to-use-rds-from-ec-2-7.png" alt="" width="1131" height="926" class="aligncenter size-full wp-image-5385" /></a>
+![](images/how-to-use-rds-from-ec-2-7.png)
 
 セキュリティグループに対して、インバウンドの許可を追加します。ここではSSHのみを許可しています。
-<a href="images/how-to-use-rds-from-ec-2-8.png"><img src="images/how-to-use-rds-from-ec-2-8.png" alt="" width="1593" height="833" class="aligncenter size-full wp-image-5387" /></a>
+![](images/how-to-use-rds-from-ec-2-8.png)
 
 続けてDBサーバー用のセキュリティグループ **dbsrv1** を作成します。
-<a href="images/how-to-use-rds-from-ec-2-9.png"><img src="images/how-to-use-rds-from-ec-2-9.png" alt="" width="1144" height="923" class="aligncenter size-full wp-image-5389" /></a>
+![](images/how-to-use-rds-from-ec-2-9.png)
 
 セキュリティグループに対して、インバウンドの許可を追加します。
 Webサーバーからの接続を許可するために、直前に作成したWebサーバー用のセキュリティグループをソースに指定します。
-<a href="images/how-to-use-rds-from-ec-2-10.png"><img src="images/how-to-use-rds-from-ec-2-10.png" alt="" width="1247" height="927" class="aligncenter size-full wp-image-5390" /></a>
+![](images/how-to-use-rds-from-ec-2-10.png)
 
 ## DBサブネットグループを作る
 
@@ -95,10 +95,10 @@ Webサーバーからの接続を許可するために、直前に作成したWe
 管理コンソールのメニューからRDSに進みます。
 
 サブネットグループからDBサブネットグループの作成へ進みます。
-<a href="images/how-to-use-rds-from-ec-2-11.png"><img src="images/how-to-use-rds-from-ec-2-11.png" alt="" width="827" height="563" class="aligncenter size-full wp-image-5391" /></a>
+![](images/how-to-use-rds-from-ec-2-11.png)
 
 先ほど作成した2つのサブネットを指定して作成します。
-<a href="images/how-to-use-rds-from-ec-2-12.png"><img src="images/how-to-use-rds-from-ec-2-12.png" alt="" width="1367" height="778" class="aligncenter size-full wp-image-5392" /></a>
+![](images/how-to-use-rds-from-ec-2-12.png)
 
 ## DBインスタンスを作る
 
@@ -106,31 +106,31 @@ Webサーバーからの接続を許可するために、直前に作成したWe
 インスタンスのMySQLバージョンや、クラス(性能)等については構築するシステムに応じて決定します。
 
 同じRDSメニューから、インスタンス→DBインスタンスの起動と進みます。
-<a href="images/how-to-use-rds-from-ec-2-13.png"><img src="images/how-to-use-rds-from-ec-2-13.png" alt="" width="732" height="548" class="aligncenter size-full wp-image-5393" /></a>
+![](images/how-to-use-rds-from-ec-2-13.png)
 
 以下を参考にインスタンスを作成します。
 
-<a href="images/how-to-use-rds-from-ec-2-14.png"><img src="images/how-to-use-rds-from-ec-2-14.png" alt="" width="1107" height="947" class="aligncenter size-full wp-image-5395" /></a>
+![](images/how-to-use-rds-from-ec-2-14.png)
 
-<a href="images/how-to-use-rds-from-ec-2-15.png"><img src="images/how-to-use-rds-from-ec-2-15.png" alt="" width="1185" height="543" class="aligncenter size-full wp-image-5396" /></a>
+![](images/how-to-use-rds-from-ec-2-15.png)
 
-<a href="images/how-to-use-rds-from-ec-2-16.png"><img src="images/how-to-use-rds-from-ec-2-16.png" alt="" width="1345" height="1049" class="aligncenter size-full wp-image-5397" /></a>
+![](images/how-to-use-rds-from-ec-2-16.png)
 
-<a href="images/how-to-use-rds-from-ec-2-17.png"><img src="images/how-to-use-rds-from-ec-2-17.png" alt="" width="1288" height="1079" class="aligncenter size-full wp-image-5398" /></a>
+![](images/how-to-use-rds-from-ec-2-17.png)
 
-<a href="images/how-to-use-rds-from-ec-2-18.png"><img src="images/how-to-use-rds-from-ec-2-18.png" alt="" width="1225" height="475" class="aligncenter size-full wp-image-5399" /></a>
+![](images/how-to-use-rds-from-ec-2-18.png)
 
-<a href="images/how-to-use-rds-from-ec-2-19.png"><img src="images/how-to-use-rds-from-ec-2-19.png" alt="" width="1177" height="555" class="aligncenter size-full wp-image-5400" /></a>
+![](images/how-to-use-rds-from-ec-2-19.png)
 
 作成がはじまります。
 
 エンドポイントが表示されるまで待ちます。
 エンドポイントはWebサーバーからDBに接続するためのホスト名になります。
 
-<a href="images/how-to-use-rds-from-ec-2-20.png"><img src="images/how-to-use-rds-from-ec-2-20.png" alt="" width="1827" height="725" class="aligncenter size-full wp-image-5401" /></a>
+![](images/how-to-use-rds-from-ec-2-20.png)
 
 エンドポイントが表示されました。
-<a href="images/how-to-use-rds-from-ec-2-21.png"><img src="images/how-to-use-rds-from-ec-2-21.png" alt="" width="670" height="58" class="aligncenter size-full wp-image-5403" /></a>
+![](images/how-to-use-rds-from-ec-2-21.png)
 
 **このエンドポイントの値は後述の接続確認で利用します。**
 
@@ -140,9 +140,9 @@ EC2作成の手順は関連部分のみとしておりますが、管理コン�
 この記事ではAmazonLinuxを作成しています。
 
 前項までに作成したサブネット、セキュリティを適用しEC2インスタンスを作成します。
-<a href="images/how-to-use-rds-from-ec-2-22.png"><img src="images/how-to-use-rds-from-ec-2-22.png" alt="" width="1582" height="1067" class="aligncenter size-full wp-image-5404" /></a>
+![](images/how-to-use-rds-from-ec-2-22.png)
 
-<a href="images/how-to-use-rds-from-ec-2-23.png"><img src="images/how-to-use-rds-from-ec-2-23.png" alt="" width="1840" height="1065" class="aligncenter size-full wp-image-5405" /></a>
+![](images/how-to-use-rds-from-ec-2-23.png)
 
 外部からアクセスするために、ElasticIPの割り当ても忘れず行いましょう。
 
@@ -154,18 +154,18 @@ EC2作成の手順は関連部分のみとしておりますが、管理コン�
 
 VPCメニューから、インターネットゲートウェイを作成します。
 ここではTESTという名前で作成しています。
-<a href="images/how-to-use-rds-from-ec-2-24.png"><img src="images/how-to-use-rds-from-ec-2-24.png" alt="" width="1170" height="627" class="aligncenter size-full wp-image-5406" /></a>
+![](images/how-to-use-rds-from-ec-2-24.png)
 
 作成されたインターネットゲートウェイを右クリックし、VPCにアタッチします。
 
-<a href="images/how-to-use-rds-from-ec-2-25.png"><img src="images/how-to-use-rds-from-ec-2-25.png" alt="" width="556" height="213" class="aligncenter size-full wp-image-5407" /></a>
+![](images/how-to-use-rds-from-ec-2-25.png)
 
-<a href="images/how-to-use-rds-from-ec-2-26.png"><img src="images/how-to-use-rds-from-ec-2-26.png" alt="" width="876" height="297" class="aligncenter size-full wp-image-5408" /></a>
+![](images/how-to-use-rds-from-ec-2-26.png)
 
 ルートテーブルに移動し、TESTVPCに割り当てられているルートテーブルを編集し、作成したインターネットゲートウェイを追加します。
 送信先は、全てを示す**0.0.0.0/0**とします。
 
-<a href="images/how-to-use-rds-from-ec-2-27.png"><img src="images/how-to-use-rds-from-ec-2-27.png" alt="" width="1208" height="1139" class="aligncenter size-full wp-image-5409" /></a>
+![](images/how-to-use-rds-from-ec-2-27.png)
 
 これでEC2に接続する準備が整いました。
 

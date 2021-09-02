@@ -27,14 +27,14 @@ Redmine構築については、こちらの記事が参考になります。
 [AnsibleでAWS EC2インスタンス上のAmazon LinuxにRedmineを構築する](https://mseeeen.msen.jp/redmine-amazon-linux-ansible/)
 
 以下のような概念です。
-<a href="images/how-to-relay-from-postfix-to-gmail-1.png"><img src="images/how-to-relay-from-postfix-to-gmail-1.png" alt="" width="537" height="437" class="aligncenter size-full wp-image-5151" /></a>
+![](images/how-to-relay-from-postfix-to-gmail-1.png)
 
 ## Gmail関連の設定
 
 ### Gmailの設定で安全性の低いアプリを許可
 Postfixからのリレーを許可するために、Gmailアカウントでログインしたあと、以下にアクセスします。画像のように設定を変更してください。
 [https://myaccount.google.com/security](https://myaccount.google.com/security)
-<a href="images/how-to-relay-from-postfix-to-gmail-2.png"><img src="images/how-to-relay-from-postfix-to-gmail-2.png" alt="" width="1487" height="857" class="aligncenter size-full wp-image-5149" /></a>
+![](images/how-to-relay-from-postfix-to-gmail-2.png)
 
 ### postfixの設定
 最小構成のLinuxの場合、Gmailの認証をクリアするために `cyrus-sasl-plain` と `cyrus-sasl-md5` をインストールしてください。
@@ -175,7 +175,7 @@ chkconfig postfix on
 
 申請から、2時間後程度で完了メールがきました。
 
-<a href="images/how-to-relay-from-postfix-to-gmail-3.png"><img src="images/how-to-relay-from-postfix-to-gmail-3.png" alt="" width="1517" height="1589" class="aligncenter size-full wp-image-5156" /></a>
+![](images/how-to-relay-from-postfix-to-gmail-3.png)
 
 ## 受信したメールがSOFTFAILになる
 
@@ -186,16 +186,16 @@ chkconfig postfix on
 解決には以下のページを参考にさせていただきました。
 [GMailにメールするとSPFがsoftfailする -でじうぃき](http://onlineconsultant.jp/pukiwiki/?GMail%E3%81%AB%E3%83%A1%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B%E3%81%A8SPF%E3%81%8Csoftfail%E3%81%99%E3%82%8B)
 
-<a href="images/how-to-relay-from-postfix-to-gmail-4.png"><img src="images/how-to-relay-from-postfix-to-gmail-4.png" alt="" width="983" height="312" class="aligncenter size-full wp-image-5153" /></a>
+![](images/how-to-relay-from-postfix-to-gmail-4.png)
 
 このメールのヘッダーを確認すると、**SPF** が **SOFTFAIL** になっていました。
-<a href="images/how-to-relay-from-postfix-to-gmail-5.png"><img src="images/how-to-relay-from-postfix-to-gmail-5.png" alt="" width="611" height="548" class="aligncenter size-full wp-image-5154" /></a>
+![](images/how-to-relay-from-postfix-to-gmail-5.png)
 ↓
-<a href="images/how-to-relay-from-postfix-to-gmail-6.png"><img src="images/how-to-relay-from-postfix-to-gmail-6.png" alt="" width="1258" height="390" class="aligncenter size-full wp-image-5155" /></a>
+![](images/how-to-relay-from-postfix-to-gmail-6.png)
 
 **myhostname** , **mydomain** , **myorigin** の設定を実施したあとにリトライすると迷惑メール判定とならず、**SPS** チェックも **PASS** となりました。
 
-<a href="images/how-to-relay-from-postfix-to-gmail-7.png"><img src="images/how-to-relay-from-postfix-to-gmail-7.png" alt="" width="1000" height="400" class="aligncenter size-full wp-image-5157" /></a>
+![](images/how-to-relay-from-postfix-to-gmail-7.png)
 
 ## あとがき
 

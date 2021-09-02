@@ -15,21 +15,21 @@ tags: [Linux]
 Jenkinsは標準で**8080/TCP** で待ち受けるため、Azure上の設定を変更します。
 
 1. 仮想マシンの概要から**ネットワークインターフェース**を選択します。
-<a href="images/jenkins-on-centos7-on-microsoft-azure-1.png"><img src="images/jenkins-on-centos7-on-microsoft-azure-1.png" alt="" width="300" height="178" class="alignnone size-medium wp-image-4243" /></a>
+![](images/jenkins-on-centos7-on-microsoft-azure-1.png)
 
 1. セキュリティグループを選択します。
-<a href="images/jenkins-on-centos7-on-microsoft-azure-2.png"><img src="images/jenkins-on-centos7-on-microsoft-azure-2.png" alt="" width="300" height="178" class="alignnone size-medium wp-image-4244" /></a>
+![](images/jenkins-on-centos7-on-microsoft-azure-2.png)
 
 1. ネットワークセキュリティグループを選択します。
-<a href="images/jenkins-on-centos7-on-microsoft-azure-3.png"><img src="images/jenkins-on-centos7-on-microsoft-azure-3.png" alt="" width="300" height="178" class="alignnone size-medium wp-image-4245" /></a>
+![](images/jenkins-on-centos7-on-microsoft-azure-3.png)
 
 1. 受信設定を追加します。
-<a href="images/jenkins-on-centos7-on-microsoft-azure-4.png"><img src="images/jenkins-on-centos7-on-microsoft-azure-4.png" alt="" width="300" height="178" class="alignnone size-medium wp-image-4246" /></a>
+![](images/jenkins-on-centos7-on-microsoft-azure-4.png)
 ↓
-<a href="images/jenkins-on-centos7-on-microsoft-azure-5.png"><img src="images/jenkins-on-centos7-on-microsoft-azure-5.png" alt="" width="300" height="178" class="alignnone size-medium wp-image-4247" /></a>
+![](images/jenkins-on-centos7-on-microsoft-azure-5.png)
 
 1. 追加されたら事前準備完了です。
-<a href="images/jenkins-on-centos7-on-microsoft-azure-6.png"><img src="images/jenkins-on-centos7-on-microsoft-azure-6.png" alt="" width="300" height="178" class="alignnone size-medium wp-image-4248" /></a>
+![](images/jenkins-on-centos7-on-microsoft-azure-6.png)
 
 ## jenkins のインストール
 
@@ -90,23 +90,23 @@ firewall-cmd --reload
 ## Jenkinsの開始
 
 1. `http://IPアドレス:8080`　にアクセスします。
-<a href="images/jenkins-on-centos7-on-microsoft-azure-7.png"><img src="images/jenkins-on-centos7-on-microsoft-azure-7.png" alt="" width="300" height="201" class="alignnone size-medium wp-image-4254" /></a>
+![](images/jenkins-on-centos7-on-microsoft-azure-7.png)
 
 1. JenkinsをUnlockします。
 コンソール上から、`cat /var/lib/jenkins/secrets/initialAdminPassword`でUnlockパスワードを表示させ、Web画面にコピー＆ペーストします。
-<a href="images/jenkins-on-centos7-on-microsoft-azure-8.png"><img src="images/jenkins-on-centos7-on-microsoft-azure-8.png" alt="" width="258" height="300" class="alignnone size-medium wp-image-4255" /></a>
+![](images/jenkins-on-centos7-on-microsoft-azure-8.png)
 
 1. **Install suggested plugins** を選択します。
-<a href="images/jenkins-on-centos7-on-microsoft-azure-9.png"><img src="images/jenkins-on-centos7-on-microsoft-azure-9.png" alt="" width="300" height="201" class="alignnone size-medium wp-image-4256" /></a>
+![](images/jenkins-on-centos7-on-microsoft-azure-9.png)
 
 1. 必要項目を入力し、管理者アカウントを確定します。
-<a href="images/jenkins-on-centos7-on-microsoft-azure-10.png"><img src="images/jenkins-on-centos7-on-microsoft-azure-10.png" alt="" width="300" height="201" class="alignnone size-medium wp-image-4257" /></a>
+![](images/jenkins-on-centos7-on-microsoft-azure-10.png)
 
 1. Jenkinsを開始します。
-<a href="images/jenkins-on-centos7-on-microsoft-azure-11.png"><img src="images/jenkins-on-centos7-on-microsoft-azure-11.png" alt="" width="300" height="201" class="alignnone size-medium wp-image-4258" /></a>
+![](images/jenkins-on-centos7-on-microsoft-azure-11.png)
 
 1. ログインできました。
-<a href="images/jenkins-on-centos7-on-microsoft-azure-12.png"><img src="images/jenkins-on-centos7-on-microsoft-azure-12.png" alt="" width="300" height="201" class="alignnone size-medium wp-image-4259" /></a>
+![](images/jenkins-on-centos7-on-microsoft-azure-12.png)
 
 ## SSL化
 
@@ -181,17 +181,17 @@ server {
 `systemctl restart nginx`
 
 1. 管理ユーザーでログインし、**Jenkinsの管理**を選択します。
-<a href="images/jenkins-on-centos7-on-microsoft-azure-13.png"><img src="images/jenkins-on-centos7-on-microsoft-azure-13.png" alt="" width="300" height="201" class="alignnone size-medium wp-image-4267" /></a>
+![](images/jenkins-on-centos7-on-microsoft-azure-13.png)
 
 1. 続けて**システムの設定**へ進みます。
-<a href="images/jenkins-on-centos7-on-microsoft-azure-14.png"><img src="images/jenkins-on-centos7-on-microsoft-azure-14.png" alt="" width="300" height="201" class="alignnone size-medium wp-image-4268" /></a>
+![](images/jenkins-on-centos7-on-microsoft-azure-14.png)
 
 1. **Jenkinsの位置**の**Jenkins URLの設定**を`https://jenkins.example.com`に変更し、最後に保存します。
-<a href="images/jenkins-on-centos7-on-microsoft-azure-15.png"><img src="images/jenkins-on-centos7-on-microsoft-azure-15.png" alt="" width="300" height="182" class="alignnone size-medium wp-image-4301" /></a>
+![](images/jenkins-on-centos7-on-microsoft-azure-15.png)
 
 1. SELINUXの無効化
 上記までの設定で接続できるはずが・・・Bad Gatewayとなってしまいました。
-<a href="images/jenkins-on-centos7-on-microsoft-azure-16.png"><img src="images/jenkins-on-centos7-on-microsoft-azure-16.png" alt="" width="300" height="182" class="alignnone size-medium wp-image-4300" /></a>
+![](images/jenkins-on-centos7-on-microsoft-azure-16.png)
 `/var/log/nginx/jenkins_error.log`のエラーログを確認すると、`127.0.0.1:8080 failed (13: Permission denied) while connecting to upstream`というエラーが出ていました。
 事例を見ると、どうもSELINUXが有効の際に出るようで、設定を無効にして再起動します。
 今回はこの対処としましたが、SELINUXを無効にせず対処できる方法があれば是非教えてください。
@@ -210,7 +210,7 @@ reboot
 SELINUXは少しはまりました・・・。
 
 今回はセキュリティ向上を目的に、443/TCPのみで接続できる方法も併せて実施しましたので、SSLテストの判定結果は**A**でした。
-<a href="images/jenkins-on-centos7-on-microsoft-azure-17.png"><img src="images/jenkins-on-centos7-on-microsoft-azure-17.png" alt="" width="300" height="92" class="alignnone size-medium wp-image-4321" /></a>
+![](images/jenkins-on-centos7-on-microsoft-azure-17.png)
 [SSL Server TestでのSSLサイト評価](https://www.ssllabs.com/ssltest/)
 
 皆さまの参考になれば幸いです。

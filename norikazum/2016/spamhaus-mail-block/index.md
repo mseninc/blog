@@ -15,7 +15,7 @@ tags: [その他の技術]
    - [SPAMHAUSのBlock List検索ページへアクセス](http://www.spamhaus.org/)
    - 概要に記載した、host [xx.xx.xx.xx]に記載されているIPアドレスxx.xx.xx.xxを入力する。（これが税理士さんの利用しているメールが利用されているサーバのIPアドレスとなる。）
    - 結果、SBL(Spam Block List)に掲載されていることが分かる。
-<a href="images/spamhaus-mail-block-1.png"><img src="images/spamhaus-mail-block-1.png" alt="sbl-found" width="300" height="169" class="alignnone size-medium wp-image-339" /></a>
+![sbl-found](images/spamhaus-mail-block-1.png)
 
 ## まとめ
 - 弊社はMicrosoft Office365のメールを利用していますが、Office365がSPAMHAUSが提供するBlock List情報を参照してSPAM判定をしているようで、税理士さんが利用するメールサービスのメールサーバが知らないうちにSBLに登録されたことが原因と推測されます。

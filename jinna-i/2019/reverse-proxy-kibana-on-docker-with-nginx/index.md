@@ -26,13 +26,13 @@ docker ホストの IP アドレスは 192.168.10.122 とします。
 
 ## モデルケース
 
-<a href="images/reverse-proxy-kibana-on-docker-with-nginx-1.png"><img src="images/reverse-proxy-kibana-on-docker-with-nginx-1.png" alt="" width="644" height="587" class="alignnone size-full wp-image-9007" /></a>
+![](images/reverse-proxy-kibana-on-docker-with-nginx-1.png)
 
 nginx によるリバースプロキシを行う前は docker 起動時にホストの `5601` とコンテナの `5601` をポートフォワーディングしておけば `http://192.168.10.122:5601` でダイレクトに kibana へ接続できます。
 
 ただこれだと細かな制御がしにくいため、**リバースプロキシすることで `http://192.168.10.122/kibana` で接続できる**ようにします。名前解決ができる場合は `http://<hostname>/kibana` でいいでしょう。
 
-<a href="images/reverse-proxy-kibana-on-docker-with-nginx-2.png"><img src="images/reverse-proxy-kibana-on-docker-with-nginx-2.png" alt="" width="582" height="244" class="alignnone size-full wp-image-9011" /></a>
+![](images/reverse-proxy-kibana-on-docker-with-nginx-2.png)
 
 各設定ファイルはこんな感じで配置しています。この辺りはお使いの環境に合わせてください。
 

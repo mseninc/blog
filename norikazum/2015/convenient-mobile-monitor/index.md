@@ -9,7 +9,7 @@ MSENの桝田です。
  
 今回は、なかなか便利なモバイルモニタの紹介です。
 
-<a href="images/convenient-mobile-monitor-1.jpg"><img src="images/convenient-mobile-monitor-1.jpg" alt="" width="300" height="169" class="alignnone size-medium wp-image-4126" /></a>
+![](images/convenient-mobile-monitor-1.jpg)
 
 これは、GeChic (ゲシック）のOn-Lap 1502I/Jというモニタなのですが、プレゼンにも使えて、レビューの時のプロジェクター代わりにも使えて非常に便利です。
 
@@ -22,15 +22,15 @@ Youtubeの紹介などをくまなくチェックして決めたのですが、
  
 PCがタッチパネルに対応していなくても、モバイルモニタとPCをUSBで接続したら、モニタ側のタッチ操作が可能になります。
 
-<a href="images/convenient-mobile-monitor-2.jpg"><img src="images/convenient-mobile-monitor-2.jpg" alt="" width="300" height="169" class="alignnone size-medium wp-image-4127" /></a>
+![](images/convenient-mobile-monitor-2.jpg)
 
 こんな感じで、モバイルモニタ側の操作（写真右側）が可能になります。
 
-<a href="images/convenient-mobile-monitor-3.jpg"><img src="images/convenient-mobile-monitor-3.jpg" alt="" width="300" height="169" class="alignnone size-medium wp-image-4128" /></a>
+![](images/convenient-mobile-monitor-3.jpg)
 
 そして、この薄さ！
 
-<a href="images/convenient-mobile-monitor-4.jpg"><img src="images/convenient-mobile-monitor-4.jpg" alt="" width="169" height="300" class="alignnone size-medium wp-image-4129" /></a>
+![](images/convenient-mobile-monitor-4.jpg)
 
 サーバーの一時的な作業用モニタとしてもばっちりで対応でき早速、今週の作業で利用しました！
  

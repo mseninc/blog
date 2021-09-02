@@ -81,12 +81,12 @@ ssh -i ~/.ssh/my-private-key hoge@example.com:2222
 
 当日撮影した花火大会の写真を以下に掲載します。
 
-<img src="images/pub-key-encrypt-ssh-1.jpg" alt="" width="600" height="800" class="alignnone size-full wp-image-10466" />
+![](images/pub-key-encrypt-ssh-1.jpg)
 
-<img src="images/pub-key-encrypt-ssh-2.jpg" alt="" width="600" height="800" class="alignnone size-full wp-image-10467" />
+![](images/pub-key-encrypt-ssh-2.jpg)
 
-<img src="images/pub-key-encrypt-ssh-3.jpg" alt="" width="600" height="800" class="alignnone size-full wp-image-10468" />
+![](images/pub-key-encrypt-ssh-3.jpg)
 
-<img src="images/pub-key-encrypt-ssh-4.jpg" alt="" width="600" height="800" class="alignnone size-full wp-image-10469" />
+![](images/pub-key-encrypt-ssh-4.jpg)
 
 写真は Google Pixel 3 で、ナイトモードで撮影しました。やはり花火の撮影は難しいですね。

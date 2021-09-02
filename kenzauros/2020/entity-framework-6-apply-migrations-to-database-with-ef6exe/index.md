@@ -31,7 +31,7 @@ tags: [.NET Framework, Entity Framework 6, .NET]
 
 tools フォルダ配下は下記のような構成になっており、 .NET Framework 4.0 向けと .NET Framework 4.5 向け、さらに `any` ビルドと `x86` ビルドがあります。環境に応じたものを使用します。
 
-<a href="images/entity-framework-6-apply-migrations-to-database-with-ef6exe-1.png"><img src="images/entity-framework-6-apply-migrations-to-database-with-ef6exe-1.png" alt="" width="954" height="652" class="aligncenter size-full wp-image-15135" /></a>
+![](images/entity-framework-6-apply-migrations-to-database-with-ef6exe-1.png)
 
 ## ef6.exe の使い方
 

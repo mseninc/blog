@@ -83,7 +83,7 @@ Microsoftの公開情報にて **`DomainAuthenticated` が利用できない**�
 
 [Set-NetConnectionProfile](https://technet.microsoft.com/ja-jp/library/jj899565(v=wps.620).aspx)
 
-<a href="images/change-windows-network-location-by-powershell-1.png"><img src="images/change-windows-network-location-by-powershell-1.png" alt="" width="966" height="190" class="aligncenter size-full wp-image-5309" /></a>
+![](images/change-windows-network-location-by-powershell-1.png)
 
 >このコマンドレットを使用してDomainAuthenticatedタイプを設定することはできません。ネットワークがドメインコントローラに認証されると、サーバーは自動的にDomainAuthenticatedの値を設定します
 
@@ -97,7 +97,7 @@ Microsoftの公開情報にて **`DomainAuthenticated` が利用できない**�
 
 Windows ファイアウォールはこの「ネットワークの場所」単位で制御されますので、適切な「ネットワークの場所」が設定されないと予期せぬ通信不具合を招くことになります。
 
-<a href="images/change-windows-network-location-by-powershell-2.png"><img src="images/change-windows-network-location-by-powershell-2.png" alt="" width="1168" height="921" class="aligncenter size-full wp-image-5235" /></a>
+![](images/change-windows-network-location-by-powershell-2.png)
 
 たとえばドメイン参加しているサーバーが停電などでドメインコントローラーより先に起動してくると、ネットワークの場所がPublicに切り替わってしまい、 Windows ファイアウォールの設定が変わってしまい、トラブルになるケースがあります。
 

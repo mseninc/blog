@@ -49,19 +49,19 @@ Windows ではたぶん make は叩けないのでどこか適当な Linux で�
 
 これでうまくいけば **`chrome_aws_lambda.zip` が生成**されるはずです。中身がちゃんと `nodejs/node_modules` となっていれば OK です。これだけで 50MB 近くになりました。
 
-<a href="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-2-1.png"><img src="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-2-1.png" alt="" width="834" height="393" class="aligncenter size-full wp-image-15991" /></a>
+![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-2-1.png)
 
 さて、フォントのときと同様に Lambda のコンソールから**「レイヤー」**を開き、**「レイヤーの作成」**をクリックします。
 
-<a href="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-2-2.png"><img src="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-2-2.png" alt="" width="883" height="608" class="aligncenter size-full wp-image-15986" /></a>
+![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-2-2.png)
 
 適当な名前を入力し、**「アップロード」**ボタンを押してさきほど生成された `chrome_aws_lambda.zip` を選択します。必須ではないですが、「互換性のあるランタイム」で「Node.js」を選択しておけばいいでしょう。入力できたら**「作成」**をクリックします。
 
-<a href="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-2-3.png"><img src="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-2-3.png" alt="" width="1022" height="909" class="aligncenter size-full wp-image-15995" /></a>
+![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-2-3.png)
 
 レイヤーが作成できたら **ARN をコピー** しておきます。
 
-<a href="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-2-4.png"><img src="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-2-4.png" alt="" width="1022" height="530" class="aligncenter size-full wp-image-15993" /></a>
+![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-2-4.png)
 
 この **ARN をのちほど Lambda 関数側に設定**します。Puppeteer レイヤーの作成は以上です。
 

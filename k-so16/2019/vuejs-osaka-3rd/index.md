@@ -81,4 +81,4 @@ Vue3 の RFC の紹介は非常に面白かったです。 Vue3 の RFC のう�
 ## おまけ
 社内でのリハーサルの様子です。 [社長](https://mseeeen.msen.jp/category/articles-president-wrote/) に <del>盗撮されました</del> 撮影していただきました（笑）
 
-[caption id="attachment_11055" align="alignnone" width="800"]<img src="images/vuejs-osaka-3rd-1.jpg" alt="" width="800" height="450" class="size-full wp-image-11055" /> リハーサルの様子 (若干緊張気味?)[/caption]
+![](images/vuejs-osaka-3rd-1.jpg)

@@ -86,13 +86,13 @@ chmod +x /usr/local/bin/docker-compose
 ### 動作確認
 1. `docker ps -a` で確認します。
 おぉぉ、ちゃんと動いています。
-<a href="images/install-the-latest-owncloud-10-in-docker-on-centos-7-1.png"><img src="images/install-the-latest-owncloud-10-in-docker-on-centos-7-1.png" alt="" width="1642" height="85" class="aligncenter size-full wp-image-6945" /></a>
+![](images/install-the-latest-owncloud-10-in-docker-on-centos-7-1.png)
 
 1. 表示確認
 `http://IP/` に接続してみます。
 おぉぉ、表示されました。
 ずっと、9.xを利用していたのでなんかかっこいい。。
-<a href="images/install-the-latest-owncloud-10-in-docker-on-centos-7-2.png"><img src="images/install-the-latest-owncloud-10-in-docker-on-centos-7-2.png" alt="" width="1629" height="1012" class="aligncenter size-full wp-image-6944" /></a>
+![](images/install-the-latest-owncloud-10-in-docker-on-centos-7-2.png)
 
 初期設定はすでに完了しているため、 `.env` で指定したユーザー名とパスワードでログインが完了します。
 
@@ -139,7 +139,7 @@ docker-compose up -d
 >Error while trying to create admin user: An exeption occurred while executing 'SELECT COLUMN_NAME AS Field, COLUMN_TYPE AS Type, IS_NULLABLE AS `Null` , COLUMN_KEY AS `Key`, COLUMN_DEFALUT AS `Default`, EXTRA AS Extra, COLUMN_COMMENT AS Comment, CHARACTER_SET_NAME AS CharacterSet, COLLATION_NAME AS CharacterSet, COLLATION_NAME AS Collation FROM
 information_schema.COLUMNS WHERE TABLE_SCHEMA='owncloud' AND TABLE_NAME='oc_appconfig": SQLSTATE[HY000]: General error: 1036 Table '/tmp/#sql_ec_0.MAI' is read only
 
-<a href="images/install-the-latest-owncloud-10-in-docker-on-centos-7-3.png"><img src="images/install-the-latest-owncloud-10-in-docker-on-centos-7-3.png" alt="" width="337" height="428" class="aligncenter size-full wp-image-6934" /></a>
+![](images/install-the-latest-owncloud-10-in-docker-on-centos-7-3.png)
 
 ここで、以下の記事に行き着き解決しました。
 [Unable to install server (db tables not created) · Issue #46 · owncloud-docker/server](https://github.com/owncloud-docker/server/issues/46)

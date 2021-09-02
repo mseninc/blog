@@ -31,7 +31,7 @@ tags: [もくもく会, SQL, その他の技術]
 
 このテーブルの名前は**基本情報**とします。
 
-<img src="images/sql-first-step-1.png" alt="" class="aligncenter size-full wp-image-6140" />
+![](images/sql-first-step-1.png)
 
 - **列**に相当するのが**カラム**
 - **データそのもの**のことを指す**レコード**。

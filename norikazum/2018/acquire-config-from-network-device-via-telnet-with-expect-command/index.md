@@ -25,7 +25,7 @@ tags: [CentOS, ネットワーク, shell script, expect, Linux]
 
 イメージとしては以下の図の流れです。
 
-<img src="images/acquire-config-from-network-device-via-telnet-with-expect-command-1.png" alt="" width="586" height="260" class="aligncenter size-full wp-image-7556" />
+![](images/acquire-config-from-network-device-via-telnet-with-expect-command-1.png)
 
 さっそく、シェルスクリプトを書いていきましょう。
 
@@ -87,7 +87,7 @@ The login password is factory default setting. Please request an administrator t
 
 イメージとしては以下の図の流れ (**⑤～⑧を追加**) です。
 
-<img src="images/acquire-config-from-network-device-via-telnet-with-expect-command-2.png" alt="" width="586" height="596" class="aligncenter size-full wp-image-7559" />
+![](images/acquire-config-from-network-device-via-telnet-with-expect-command-2.png)
 
 ```sh
 #!/bin/sh

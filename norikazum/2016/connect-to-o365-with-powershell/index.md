@@ -23,7 +23,7 @@ SMTPリレーについては今後の投稿で掲載予定です。
 ・PowerShell を管理者として実行し、以下のコマンドを順次実行する。
 `Set-ExecutionPolicy RemoteSigned` を実行し、YESで応答する。
 `$UserCredential = Get-Credential` を実行し、別ウィンドウに出る認証ポップアップに対して接続するテナントのユーザ名パスワードを入力する。
-<img src="images/connect-to-o365-with-powershell-1.jpg" alt="powershell-userid" width="300" height="237" class="alignnone size-medium wp-image-301" />
+![powershell-userid](images/connect-to-o365-with-powershell-1.jpg)
 ```
 $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
 ```
@@ -38,5 +38,5 @@ $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri ht
 
 ## 全体のコマンドイメージ
  
-<a href="images/connect-to-o365-with-powershell-2.jpg"><img src="images/connect-to-o365-with-powershell-2.jpg" alt="powershell-connect1" width="300" height="218" class="alignnone size-medium wp-image-302" /></a>
-<a href="images/connect-to-o365-with-powershell-3.jpg"><img src="images/connect-to-o365-with-powershell-3.jpg" alt="powershell-connect2" width="300" height="89" class="alignnone size-medium wp-image-303" /></a>
+![powershell-connect1](images/connect-to-o365-with-powershell-2.jpg)
+![powershell-connect2](images/connect-to-o365-with-powershell-3.jpg)

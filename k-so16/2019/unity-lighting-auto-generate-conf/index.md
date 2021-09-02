@@ -9,7 +9,7 @@ tags: [Unity, その他の技術]
 
 個人的な興味で、最近 [Unity](https://unity.com/ja) を触り始めました。開発環境には [Macbook Pro](https://www.apple.com/jp/macbook-pro/) を利用しているのですが、 Terrain という要素を入れると、どうにもファンが急にうるさくなり、気になって仕方ありません。アクティビティモニタを確認すると、 Unity のプロセスが CPU を 200% 以上も食いつぶしていました。これでは MacBook Pro が心配すぎて私の心臓にも悪く、 Unity の勉強が捗りません。
 
-[caption id="attachment_10891" align="alignnone" width="800"]<img src="images/unity-lighting-auto-generate-conf-1.png" alt="" width="800" height="601" class="size-full wp-image-10891" /> Unity の CPU 使用率が 200% を超えている[/caption]
+![](images/unity-lighting-auto-generate-conf-1.png)
 
 本記事では、 Terrain を導入した際に CPU の使用率を食いつぶす時の対処法を紹介します。
 
@@ -33,11 +33,11 @@ tags: [Unity, その他の技術]
 
 1. メニューバーから Window > Rendering > Lighting Setting を選択
 
-    [caption id="attachment_10887" align="alignnone" width="656"]<img src="images/unity-lighting-auto-generate-conf-2.png" alt="" width="656" height="800" class="size-full wp-image-10887" /> Lighting Setting を選択[/caption]
+![](images/unity-lighting-auto-generate-conf-2.png)
 
 1. 設定画面から Scene タブを選択して Auto Generate を無効化
 
-    [caption id="attachment_10889" align="alignnone" width="552"]<img src="images/unity-lighting-auto-generate-conf-3.png" alt="" width="552" height="800" class="size-full wp-image-10889" /> Auto Generate のチェックを外す[/caption]
+![](images/unity-lighting-auto-generate-conf-3.png)
 
 私の環境では、 Auto Generate を無効にするだけで、 CPU の使用率が劇的に下がりました。この方法は、以下の書籍のコラムに掲載されていました。
 

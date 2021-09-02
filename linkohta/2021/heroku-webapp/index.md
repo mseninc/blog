@@ -31,10 +31,10 @@ Git のリモートリポジトリに Push するだけで勝手にデプロイ�
 ### ルート画面の設定
 
 Rails の Web アプリを起動して、 `localhost:3000` に接続するとデフォルトでは下の画像のような画面が出ます。
-![railsデフォルト](images/heroku-webapp-1.png)
+![railsデフォルト](https://mseeeen.msen.jp/wp-content/uploads/2021/04/rails.png)
 
 しかし、 Heroku でデプロイ後に出力される URL にそのまま接続すると下の画像のような画面になってしまいます。
-![herokuデフォルト](images/heroku-webapp-2.png)
+![herokuデフォルト](https://mseeeen.msen.jp/wp-content/uploads/2021/05/2021-05-13_11h00_59.png)
 
 そこでルートを設定して、デフォルトで表示される画面を変更してみましょう。
 
@@ -108,7 +108,7 @@ production:
 
 **Heroku CLI** のリンク先から Heroku CLI をダウンロードしてインストールします。
 
-![deploy](images/heroku-webapp-3.png)
+![deploy](https://mseeeen.msen.jp/wp-content/uploads/2021/05/2021-05-19_13h09_50-e1621397934822.png)
 
 Git Bash を起動して、 `heroku login` を入力します。 Heroku のログインが求められるのでログインします。
 
@@ -131,7 +131,7 @@ $ git push
 これで Heroku 側でデプロイが始まります。
 
 デプロイに失敗すると下の画像のような画面になり、 Git の Push にも失敗します。
-![failed](images/heroku-webapp-4.png)
+![failed](https://mseeeen.msen.jp/wp-content/uploads/2021/05/2021-05-13_14h22_12.png)
 
 こうなった場合、**赤文字で目立つところだけではなく、上の方のログをよく見て、エラーを発見しましょう。**
 

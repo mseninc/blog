@@ -43,7 +43,7 @@ Node.js では、 `process.env` のメンバーにシェルの環境変数を指
 
 一方、 `process.cwd()` は実行中のプロセスのワーキングディレクトリを取得します。 `process.env.PWD` とは異なり、ディレクトリを移動した後に `process.cwd()` を実行すると、 **移動先のディレクトリのパス** が返されます。
 
-[caption id="attachment_12587" align="aligncenter" width="772"]<img src="images/how-to-get-pwd-on-nodejs-1.png" alt="" width="772" height="211" class="size-full wp-image-12587" /> 実行元のプロセスと実行中のプロセスのワーキングディレクトリ[/caption]
+![](images/how-to-get-pwd-on-nodejs-1.png)
 
 実行元のワーキングディレクトリを取得したい場合、 `process.env.PWD` を利用するのがシンプルですが、後述のケースを想定する場合、プロセス内でディレクトリを移動する前に、 `process.cwd()` の返す文字列を別の変数に格納し、それを使い回すことも可能です。
 

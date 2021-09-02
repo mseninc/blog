@@ -42,11 +42,11 @@ HTML を以下のように記述し、Google Chrome で `video` タグを使っ�
 
 Chrome で PIP を使用する方法は2種類あります。1つは動画上で右クリック ⇒ 「ピクチャー イン ピクチャー」をクリックする方法です。
 
-<img src="images/disable-picuture-in-picture-with-video-1.png" alt="" width="700" height="487" class="alignnone size-full wp-image-15903" />
+![](images/disable-picuture-in-picture-with-video-1.png)
 
 もう1つの方法は、動画を再生したとき、アドレスバーの右に現れる音符のついたマークをクリック ⇒ 現れるボックスの左下の四角いマークをクリックする方法です。
 
-<img src="images/disable-picuture-in-picture-with-video-2.png" alt="" width="422" height="188" class="alignnone size-full wp-image-15901" />
+![](images/disable-picuture-in-picture-with-video-2.png)
 
 これらの無効化は、 `video` タグに `disablePictureInPicture` 属性を追加することでできます。
 ```
@@ -55,9 +55,9 @@ Chrome で PIP を使用する方法は2種類あります。1つは動画上で
 
 これだけで、以下のように PIP を使用できなくなりました。
 
-<img src="images/disable-picuture-in-picture-with-video-3.png" alt="" width="777" height="495" class="alignnone size-full wp-image-15904" />
+![](images/disable-picuture-in-picture-with-video-3.png)
 
-<img src="images/disable-picuture-in-picture-with-video-4.png" alt="" width="427" height="212" class="alignnone size-full wp-image-15906" />
+![](images/disable-picuture-in-picture-with-video-4.png)
 
 ### Firefox の場合
 残念ながら、 2021年3月現在 **Firefox で PIP を無効化する機能はありません**。 Firefox も PIP を使用する方法が2種類あり、1つは Chrome と同様に画面を右クリックし、「ピクチャー イン ピクチャー」をクリックする方法です。
@@ -66,7 +66,7 @@ Chrome で PIP を使用する方法は2種類あります。1つは動画上で
 
 厄介なのがもう1つの機能で、以下の画像のように、**カーソルを動画にホバーさせることで PIP を起動させるボタンが表示されます。これを無効化する機能はありません**。
 
-<img src="images/disable-picuture-in-picture-with-video-5.png" alt="" width="646" height="319" class="alignnone size-full wp-image-16048" />
+![](images/disable-picuture-in-picture-with-video-5.png)
 
 ただ、条件によっては可能な方法が1つあります。[Firefox の PIP サポートページ](https://support.mozilla.org/ja/kb/about-picture-picture-firefox) にこのような記述があります。
 

@@ -41,12 +41,12 @@ pause
 ## 実行
 
 利用方法はとても簡単でバッチファイルにドラッグ＆ドロップするだけです。
-<a href="images/batch-file-that-can-be-compressed-to-7z-by-drag-and-drop-1.jpg"><img src="images/batch-file-that-can-be-compressed-to-7z-by-drag-and-drop-1.jpg" alt="" width="749" height="572" class="alignnone size-full wp-image-15773" /></a>
+![](images/batch-file-that-can-be-compressed-to-7z-by-drag-and-drop-1.jpg)
 
 経過も表示され、完了するとpauseで止まります。
-<a href="images/batch-file-that-can-be-compressed-to-7z-by-drag-and-drop-2.jpg"><img src="images/batch-file-that-can-be-compressed-to-7z-by-drag-and-drop-2.jpg" alt="" width="679" height="366" class="alignnone size-full wp-image-15782" /></a>
+![](images/batch-file-that-can-be-compressed-to-7z-by-drag-and-drop-2.jpg)
 
-<a href="images/batch-file-that-can-be-compressed-to-7z-by-drag-and-drop-3.jpg"><img src="images/batch-file-that-can-be-compressed-to-7z-by-drag-and-drop-3.jpg" alt="" width="473" height="152" class="alignnone size-full wp-image-15780" /></a>
+![](images/batch-file-that-can-be-compressed-to-7z-by-drag-and-drop-3.jpg)
 
 誰かのお役に立てますように。
 それでは次回の記事でお会いしましょう。

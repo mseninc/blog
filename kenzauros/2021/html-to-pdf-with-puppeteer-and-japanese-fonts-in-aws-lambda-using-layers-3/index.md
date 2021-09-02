@@ -17,7 +17,7 @@ tags: [AWS, Lambda, PDF, Chrome, Puppeteer]
 
 ここで構成をおさらいしておきます。今回の構成では 2 つのレイヤーを使用するため、 Lambda 関数全体のイメージは下記のようになります。
 
-<a href="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-1.png"><img src="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-1.png" alt="" width="438" height="320" class="aligncenter size-full wp-image-16044" /></a>
+![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-1.png)
 
 これまでの 2 記事で図の上 2 つをレイヤーとして作成してきました。
 
@@ -35,25 +35,25 @@ tags: [AWS, Lambda, PDF, Chrome, Puppeteer]
 
 Lambda のコンソールから**「関数の作成」**をクリックします。
 
-<a href="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-2.png"><img src="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-2.png" alt="" width="1320" height="582" class="aligncenter size-full wp-image-16007" /></a>
+![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-2.png)
 
 **「一から作成」**で適当な関数名（ここでは `html-to-pdf` ）を設定し、ランタイムは Node.js にして**「関数の作成」**をクリックします。
 
-<a href="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-3.png"><img src="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-3.png" alt="" width="1320" height="974" class="aligncenter size-full wp-image-16009" /></a>
+![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-3.png)
 
 ### レイヤーの追加
 
 では**「レイヤーの追加」**をクリックしてさきほど作成した 日本語フォントと Puppeteer のレイヤーを追加していきます。
 
-<a href="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-4.png"><img src="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-4.png" alt="" width="1154" height="165" class="aligncenter size-full wp-image-16012" /></a>
+![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-4.png)
 
 **「ARN を指定」でレイヤーの ARN を指定**（レイヤー作成後に生成された ARN）して**「追加」**をクリックします。レイヤー分繰り返します。
 
-<a href="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-5.png"><img src="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-5.png" alt="" width="825" height="463" class="aligncenter size-full wp-image-16013" /></a>
+![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-5.png)
 
 下記のようになれば OK です。
 
-<a href="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-6.png"><img src="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-6.png" alt="" width="1148" height="198" class="aligncenter size-full wp-image-16014" /></a>
+![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-6.png)
 
 ### Lambda 関数の設定
 
@@ -65,34 +65,34 @@ Lambda のコンソールから**「関数の作成」**をクリックします
 
 **ロールに S3 への書き込み権限を与える**ため、画面下部のリンクから**「ロールを表示」**しましょう。
 
-<a href="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-7.png"><img src="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-7.png" alt="" width="821" height="727" class="aligncenter size-full wp-image-16015" /></a>
+![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-7.png)
 
 ### ロールの設定
 
 ロール設定で**「ポリシーをアタッチします」**をクリックします。
 
-<a href="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-8.png"><img src="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-8.png" alt="" width="894" height="638" class="aligncenter size-full wp-image-16016" /></a>
+![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-8.png)
 
 本来はちゃんと必要なバケットに対してのみ＆オブジェクト書き込みのみの権限を割り当てるべきですが、ここでは簡略化のため、 **`AmazonS3FullAcess` を割り当てます**。
 
-<a href="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-9.png"><img src="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-9.png" alt="" width="1011" height="466" class="aligncenter size-full wp-image-16017" /></a>
+![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-9.png)
 
 とりあえず下記のようになれば OK でしょう。
 
-<a href="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-10.png"><img src="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-10.png" alt="" width="884" height="251" class="aligncenter size-full wp-image-16018" /></a>
+![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-10.png)
 
 ### 環境変数の設定
 
 S3 のバケット名を環境変数経由で渡すため、**「設定」→「環境変数」** から下記のように `BUCKET_NAME` をキーとしてバケット名を設定します。
 （バケット名は先に作成したものを設定してください）
 
-<a href="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-11.png"><img src="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-11.png" alt="" width="823" height="498" class="aligncenter size-full wp-image-16019" /></a>
+![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-11.png)
 
 ### ハンドラ関数の設定
 
 関数のコードソースから **`index.js` を開き、とりあえず下記のソースをコピペして「Deploy」**します。
 
-<a href="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-12.png"><img src="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-12.png" alt="" width="1027" height="364" class="aligncenter size-full wp-image-16020" /></a>
+![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-12.png)
 
 ```
 const chromium = require('chrome-aws-lambda')
@@ -157,25 +157,25 @@ exports.handler = async (event) => {
 }
 ```
 
-<a href="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-13.png"><img src="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-13.png" alt="" width="795" height="438" class="aligncenter size-full wp-image-16023" /></a>
+![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-13.png)
 
 どきどきの実行中。。。
 
-<a href="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-14.png"><img src="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-14.png" alt="" width="1031" height="115" class="aligncenter size-full wp-image-16024" /></a>
+![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-14.png)
 
 **無事完了！**
 
-<a href="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-15.png"><img src="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-15.png" alt="" width="1029" height="702" class="aligncenter size-full wp-image-16025" /></a>
+![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-15.png)
 
 メモリが振り切ってます。弊社ブログの描画は 512 MB では足りなかったそうです。。。
 
 これで **S3 バケットに `test.pdf` が生成**されているはずです。
 
-<a href="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-16.png"><img src="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-16.png" alt="" width="845" height="83" class="aligncenter size-full wp-image-16026" /></a>
+![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-16.png)
 
 ダウンロードしてみると...
 
-<a href="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-17.png"><img src="images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-17.png" alt="" width="1196" height="737" class="aligncenter size-full wp-image-16027" /></a>
+![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-17.png)
 
 **おぉぉぉ、美しい。。。 No tofu。。。**
 

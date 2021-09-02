@@ -13,30 +13,30 @@ tags: [レク, その他]
 
 その前に近くのカフェで鯛のパスタを堪能。船の時間が迫っててカツカツでしたが、皆さん頑張って食べてくれました（感謝）
 
-<a href="images/2019-spring-recreation-day2-1.jpg"><img src="images/2019-spring-recreation-day2-1.jpg" alt="" width="647" height="485" class="alignnone size-full wp-image-9843" /></a>
+![](images/2019-spring-recreation-day2-1.jpg)
 
 朝は曇り空だったので心配でしたが、晴れてくれてよかったです。やっぱり船は気持ちいいですねー。
 
-<a href="images/2019-spring-recreation-day2-2.jpg"><img src="images/2019-spring-recreation-day2-2.jpg" alt="" width="730" height="548" class="alignnone size-full wp-image-9844" /></a>
+![](images/2019-spring-recreation-day2-2.jpg)
 
 砲台跡を回ったり
 
-<a href="images/2019-spring-recreation-day2-3.jpg"><img src="images/2019-spring-recreation-day2-3.jpg" alt="" width="807" height="605" class="alignnone size-full wp-image-9849" /></a>
+![](images/2019-spring-recreation-day2-3.jpg)
 
 
 
 まさにラピュタ感満載でした。
 
-<a href="images/2019-spring-recreation-day2-4.jpg"><img src="images/2019-spring-recreation-day2-4.jpg" alt="" width="807" height="605" class="alignnone size-full wp-image-9848" /></a>
+![](images/2019-spring-recreation-day2-4.jpg)
 
 地下にある真っ暗な弾薬庫(？)はワインの貯蔵庫かと思うぐらいひんやりしてました。ライトを消せば今にも出そうな感じ・・・
 
-<a href="images/2019-spring-recreation-day2-5.jpg"><img src="images/2019-spring-recreation-day2-5.jpg" alt="" width="807" height="605" class="alignnone size-full wp-image-9852" /></a>
+![](images/2019-spring-recreation-day2-5.jpg)
 
 モデルコース(約2.5h)をぐるっと周り、いい感じに疲れたところで帰港です。
 
 いっぱい歩いたあとのアイスはやっぱりうまい。
-<a href="images/2019-spring-recreation-day2-6.jpg"><img src="images/2019-spring-recreation-day2-6.jpg" alt="" width="548" height="730" class="size-full wp-image-9854" /></a>
+![](images/2019-spring-recreation-day2-6.jpg)
 
 みんな協力してくれて、思い出に残るいい旅になりました！
 

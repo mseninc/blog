@@ -33,7 +33,7 @@ tags: [その他, 〇〇奮闘記]
 1. 解答文に合致するワードをマーク
 1. 縦横斜めでビンゴになった個数を算出
 
-[caption id="attachment_9566" align="aligncenter" width="347"]<img src="images/new-employee-training-2019_sequel-1.png" alt="" width="347" height="800" class="size-full wp-image-9566" /> 2日目のグループワークの概要 (1回目の例)[/caption]
+![](images/new-employee-training-2019_sequel-1.png)
 
 1日目同様に2回行いました。1回目はさんずいの漢字、2回目は花の名前をグループで考えて25個書き出し、読み上げられる文章に含まれるものをマークし、どれだけビンゴになったかを競いました。さんずいの漢字はたくさんあれど、いざ言われるとすぐに出てこないと感じました。それでも、人数がいる分、誰かが発した漢字から芋づる式に連想したりできたので、チームワークが重要でした。2回目の花の名前については、想起すること自体がかなり大変でした。
 
@@ -58,8 +58,8 @@ tags: [その他, 〇〇奮闘記]
 ## おまけ
 誕生日に、MSENのみなさんから誕生日プレゼントを頂きました。なんと、Go Proの予備バッテリと充電器、リュックなどにGo Proを取り付けるためのアクセサリを頂きました。ちょうど欲しかったものでニッコリ(笑)
 
-[caption id="attachment_9600" align="alignnone" width="800"]<img src="images/new-employee-training-2019_sequel-2.jpg" alt="" width="800" height="600" class="size-full wp-image-9600" /> 開封の儀[/caption]
+![](images/new-employee-training-2019_sequel-2.jpg)
 
-[caption id="attachment_9601" align="alignnone" width="800"]<img src="images/new-employee-training-2019_sequel-3.jpg" alt="" width="800" height="600" class="size-full wp-image-9601" /> 嬉しさのあまりはしゃぐ25歳(笑)[/caption]
+![](images/new-employee-training-2019_sequel-3.jpg)
 
 非常に良い誕生日でした。MSENのみなさんに、再度この場を借りてお礼申し上げます。

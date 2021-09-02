@@ -25,6 +25,6 @@ tags: [その他, 〇〇奮闘記]
 ふと、会社名でエゴサーチしてみたところ、ほぼ1ページ目は弊社がヒットしました(笑)
 こんなところにも、6年経ったんだな、と身に染みましたので写真の代わりに掲載します。
 
-<a href="images/msen-7th-period-1.jpg"><img src="images/msen-7th-period-1.jpg" alt="" width="1624" height="989" class="alignnone size-full wp-image-15842" /></a>
+![](images/msen-7th-period-1.jpg)
 
 7期目も一同力を合わせて前進してまいりますので、本年も **株式会社MSEN** をよろしくお願いいたします。

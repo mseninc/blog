@@ -56,7 +56,7 @@ winlogbeat.event_logs:
 > ローカルコンピューターの Winlogbeatサービスを開始できません。
 > エラー 1053: そのサービスは指定時間内に開始要求または制御要求に応答しませんでした。
 
-<a href="images/send-specified-events-to-elasticsearch-via-winlogbeat-1.png"><img src="images/send-specified-events-to-elasticsearch-via-winlogbeat-1.png" alt="" width="479" height="189" class="alignnone size-full wp-image-8920" /></a>
+![](images/send-specified-events-to-elasticsearch-via-winlogbeat-1.png)
 
 
 
@@ -66,7 +66,7 @@ winlogbeat.event_logs:
 
 管理ツール > サービス から Winlogbeat のサービスを再起動します。
 
-<a href="images/send-specified-events-to-elasticsearch-via-winlogbeat-2.png"><img src="images/send-specified-events-to-elasticsearch-via-winlogbeat-2.png" alt="" width="613" height="200" class="alignnone size-full wp-image-8897" /></a>
+![](images/send-specified-events-to-elasticsearch-via-winlogbeat-2.png)
 
 Winlogbeat をサービスとして登録する方法は[こちら](https://mseeeen.msen.jp/visualize-windows-event-log-winlogbeat-elasticsearch-kibana/#Winlogbeat)を参照してください。
 

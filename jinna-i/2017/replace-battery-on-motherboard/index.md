@@ -45,7 +45,7 @@ PCに使われている電子部品は非常に繊細です。数kV以上にも�
 
 開け方が分からない場合は取扱説明書を参照してください。
 
-<a href="images/replace-battery-on-motherboard-1.jpg"><img src="images/replace-battery-on-motherboard-1.jpg" alt="" width="807" height="605" class="alignnone size-full wp-image-4709" /></a>
+![](images/replace-battery-on-motherboard-1.jpg)
 
 はい。ガラガラです。
 
@@ -59,23 +59,23 @@ CPUやメモリなどが載っている、**PCの中枢部分**です。
 
 拡大してみると、ボタン電池を発見しました。
 
-<a href="images/replace-battery-on-motherboard-2.jpg"><img src="images/replace-battery-on-motherboard-2.jpg" alt="" width="807" height="605" class="alignnone size-full wp-image-4710" /></a>
+![](images/replace-battery-on-motherboard-2.jpg)
 
 金属のレバーで押さえられているので、指で軽く引っ張ってボタン電池を引き抜きます。
 
-<a href="images/replace-battery-on-motherboard-3.jpg"><img src="images/replace-battery-on-motherboard-3.jpg" alt="" width="807" height="605" class="alignnone size-full wp-image-4711" /></a>
+![](images/replace-battery-on-motherboard-3.jpg)
 
 使われている電池はCR2032でした。ちなみに、今写っている面がプラス側です。
 
-<a href="images/replace-battery-on-motherboard-4.jpg"><img src="images/replace-battery-on-motherboard-4.jpg" alt="" width="807" height="605" class="alignnone size-full wp-image-4712" /></a>
+![](images/replace-battery-on-motherboard-4.jpg)
 
 こっちがマイナス側になります。
 
-<a href="images/replace-battery-on-motherboard-5.jpg"><img src="images/replace-battery-on-motherboard-5.jpg" alt="" width="807" height="605" class="alignnone size-full wp-image-4713" /></a>
+![](images/replace-battery-on-motherboard-5.jpg)
 
 ためしに、どこのご家庭にもあるテスターで電圧を測ってみると・・・**0.9V！**
 
-<a href="images/replace-battery-on-motherboard-6.jpg"><img src="images/replace-battery-on-motherboard-6.jpg" alt="" width="807" height="605" class="alignnone size-full wp-image-4714" /></a>
+![](images/replace-battery-on-motherboard-6.jpg)
 
 CR2032の公称電圧は3Vなので、だいぶ消耗していました。
 
@@ -85,7 +85,7 @@ CR2032の公称電圧は3Vなので、だいぶ消耗していました。
 
 今回はパナソニック製のものを採用しました。
 
-<a href="images/replace-battery-on-motherboard-7.jpg"><img src="images/replace-battery-on-motherboard-7.jpg" alt="" width="807" height="605" class="alignnone size-full wp-image-4717" /></a>
+![](images/replace-battery-on-motherboard-7.jpg)
 
 なぜパナ製にしたのかご興味がある方は以下のサイトをご覧ください。
 CR2032について、熱く語られています。筆者はこういう記事が大好きです。
@@ -94,11 +94,11 @@ CR2032について、熱く語られています。筆者はこういう記事�
 こちらも、どこのご家庭にもあるテスターで電圧を測ってみました。
 さすが新品、**3.23V**。
 
-<a href="images/replace-battery-on-motherboard-8.jpg"><img src="images/replace-battery-on-motherboard-8.jpg" alt="" width="807" height="605" class="alignnone size-full wp-image-4718" /></a>
+![](images/replace-battery-on-motherboard-8.jpg)
 
 あとは電池をセットし、元通りくみ上げていきます。
 
-<a href="images/replace-battery-on-motherboard-9.jpg"><img src="images/replace-battery-on-motherboard-9.jpg" alt="" width="807" height="605" class="alignnone size-full wp-image-4719" /></a>
+![](images/replace-battery-on-motherboard-9.jpg)
 
 この時、CPUク－ラーやファンにこびりついたホコリを取り除いておくと、なおいいです。
 

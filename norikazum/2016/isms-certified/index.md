@@ -12,7 +12,7 @@ MSENの桝田です。
  
 さて、最近の投稿はISMSネタばかりで、今回もISMSネタなのですが、無事2016年3月23日付けでISO認定を受けました！
 
-<a href="images/isms-certified-1.jpg"><img src="images/isms-certified-1.jpg" alt="" width="300" height="169" class="alignnone size-medium wp-image-4108" /></a>
+![](images/isms-certified-1.jpg)
 
 昨年2015年9月から始まったコンサルティング講習は、2月までで9回を数え、審査は2回に渡り合計3回。
  
@@ -22,7 +22,7 @@ MSENの桝田です。
 色々ありましたが、無事運用を始めるスタートラインに立てました。
 これからも良い運用が出来るように努めていきたいと思います。
 
-<a href="images/isms-certified-2.jpg"><img src="images/isms-certified-2.jpg" alt="" width="300" height="113" class="alignnone size-medium wp-image-4109" /></a>
+![](images/isms-certified-2.jpg)
 
 IS 643392 / ISO 27001
  

@@ -10,7 +10,7 @@ tags: [IIS, その他の技術]
 以前、公開しているWebサーバーの **ディレクトリ参照が有効** になっていると 脆弱性の指摘を受け修正したのでその手順を記事にしました。
 
 接続すると、以下のようにディレクトリが表示されてしあいます。
-<a href="images/how-to-disable-direct-lookup-in-iis-1.png"><img src="images/how-to-disable-direct-lookup-in-iis-1.png" alt="" width="805" height="281" class="alignnone size-full wp-image-12133" /></a>
+![](images/how-to-disable-direct-lookup-in-iis-1.png)
 
 ## 環境
 IIS 6.2 ビルド 9200
@@ -21,17 +21,17 @@ IIS 6.2 ビルド 9200
 
 1. **IISマネージャーを開き、Default Web Site** に進みます。
 1. **ディレクトリの参照** をダブルクリックします。
-<a href="images/how-to-disable-direct-lookup-in-iis-2.png"><img src="images/how-to-disable-direct-lookup-in-iis-2.png" alt="" width="1191" height="775" class="alignnone size-full wp-image-12137" /></a>
+![](images/how-to-disable-direct-lookup-in-iis-2.png)
 1. **右ペインの無効にする** をクリックします。
-<a href="images/how-to-disable-direct-lookup-in-iis-3.png"><img src="images/how-to-disable-direct-lookup-in-iis-3.png" alt="" width="1192" height="776" class="alignnone size-full wp-image-12138" /></a>
+![](images/how-to-disable-direct-lookup-in-iis-3.png)
 1. 無効になりました。
-<a href="images/how-to-disable-direct-lookup-in-iis-4.png"><img src="images/how-to-disable-direct-lookup-in-iis-4.png" alt="" width="213" height="333" class="alignnone size-full wp-image-12139" /></a>
+![](images/how-to-disable-direct-lookup-in-iis-4.png)
 
 **IISの再起動は不要** で、即時適用されました。
 
 ## 動作確認
 再度接続すると、以下のようにアクセスを拒否してくれました。
-<a href="images/how-to-disable-direct-lookup-in-iis-5.png"><img src="images/how-to-disable-direct-lookup-in-iis-5.png" alt="" width="1662" height="982" class="alignnone size-full wp-image-12140" /></a>
+![](images/how-to-disable-direct-lookup-in-iis-5.png)
 
 ## Apache や nginx の場合
 

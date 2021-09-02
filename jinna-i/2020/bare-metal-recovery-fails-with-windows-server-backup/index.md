@@ -16,7 +16,7 @@ Windows Server 2019 で Windows Server バックアップを構成していま�
 > 内部エラーが発生しました。エラーの解決に次の情報が役立つ可能性があります。:
 > システムに接続されたデバイスが機能していません。 (0x8007001F)
 
-<a href="images/bare-metal-recovery-fails-with-windows-server-backup-1.jpg"><img src="images/bare-metal-recovery-fails-with-windows-server-backup-1.jpg" alt="" width="932" height="248" class="alignnone size-full wp-image-13101" /></a>
+![](images/bare-metal-recovery-fails-with-windows-server-backup-1.jpg)
 
 ※ モアレがひどくて恐縮です。
 
@@ -36,13 +36,13 @@ Windows Server 2019 で Windows Server バックアップを構成していま�
 
 リストア中に以下の画面が表示されたら、**`<shift>キー + <F10>キー`** を押下してコマンドプロンプトを起動します。
 
-<a href="images/bare-metal-recovery-fails-with-windows-server-backup-2.png"><img src="images/bare-metal-recovery-fails-with-windows-server-backup-2.png" alt="" width="490" height="229" class="alignnone size-full wp-image-13210" /></a>
+![](images/bare-metal-recovery-fails-with-windows-server-backup-2.png)
 
 以下のコマンドで、接続されているネットワークインターフェースの **Idx 番号を確認**します。
 
 `netsh interface ipv4 show interface`
 
-<a href="images/bare-metal-recovery-fails-with-windows-server-backup-3.png"><img src="images/bare-metal-recovery-fails-with-windows-server-backup-3.png" alt="" width="591" height="128" class="alignnone size-full wp-image-13214" /></a>
+![](images/bare-metal-recovery-fails-with-windows-server-backup-3.png)
 
 Idx 番号を確認後、接続されているインターフェースに IP アドレスを割り当てます。
 
@@ -60,19 +60,19 @@ IP アドレスが正常に割り当てられたことを確認します。念�
 
 もういちど `net use` コマンドを実行し、共有フォルダーがマウントされていることを確認します。
 
-<a href="images/bare-metal-recovery-fails-with-windows-server-backup-4.png"><img src="images/bare-metal-recovery-fails-with-windows-server-backup-4.png" alt="" width="591" height="107" class="alignnone size-full wp-image-13217" /></a>
+![](images/bare-metal-recovery-fails-with-windows-server-backup-4.png)
 
 リストアするバックアップデータのバージョン情報を確認します。
 
 `wbadmin get versions -backupTarget:\\ファイルサーバーのIPアドレス\共有フォルダー名 -machine:[サーバー名]`
 
-<a href="images/bare-metal-recovery-fails-with-windows-server-backup-5.png"><img src="images/bare-metal-recovery-fails-with-windows-server-backup-5.png" alt="" width="591" height="128" class="alignnone size-full wp-image-13219" /></a>
+![](images/bare-metal-recovery-fails-with-windows-server-backup-5.png)
 
 バージョン識別子を指定し、リストアを実行します。[続行しますか?] には **y** 入力し応答します。
 
 `wbadmin start sysrecovery -version:[バージョン識別子] -backuptarget:\\ファイルサーバーのIPアドレス\共有フォルダー名 -machine:[サーバー名] -restoreAllVolumes`
 
-<a href="images/bare-metal-recovery-fails-with-windows-server-backup-6.png"><img src="images/bare-metal-recovery-fails-with-windows-server-backup-6.png" alt="" width="591" height="139" class="alignnone size-full wp-image-13221" /></a>
+![](images/bare-metal-recovery-fails-with-windows-server-backup-6.png)
 
 リストアが正常に完了したことを確認したら、`exit` を入力し、コマンド プロンプトを閉じます。
 

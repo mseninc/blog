@@ -32,7 +32,7 @@ tags: [ESP-WROOM-02, Arduino, その他の技術]
 
 - [ＥＳＰ－ＷＲＯＯＭ－０２開発ボード - 秋月電子通商](https://akizukidenshi.com/catalog/g/gK-12236/)
 
-<a href="images/esp-wroom-02-first-step-1.jpg"><img src="images/esp-wroom-02-first-step-1.jpg" alt="" width="720" height="540" class="aligncenter size-full wp-image-13906" /></a>
+![](images/esp-wroom-02-first-step-1.jpg)
 
 ## 開発環境のセットアップ
 
@@ -46,7 +46,7 @@ tags: [ESP-WROOM-02, Arduino, その他の技術]
 
 なお、本稿執筆時点のバージョンは 1.8.13 でした。
 
-<a href="images/esp-wroom-02-first-step-2.png"><img src="images/esp-wroom-02-first-step-2.png" alt="Arudino IDE 1.8.13" width="475" height="330" class="aligncenter size-full wp-image-13877" /></a>
+![Arudino IDE 1.8.13](images/esp-wroom-02-first-step-2.png)
 
 ### ESP8266 ボードの追加
 
@@ -62,15 +62,15 @@ http://arduino.esp8266.com/stable/package_esp8266com_index.json
 
 **[ツール] メニュー → [ボード:] → [ボードマネージャ]** から **esp8266** (by ESP8266 Community) を検索し、最新バージョンをインストールします。執筆時点では 2.7.4 が最新でした。
 
-<a href="images/esp-wroom-02-first-step-3.png"><img src="images/esp-wroom-02-first-step-3.png" alt="ESP8266 ライブラリのインストール" width="786" height="443" class="aligncenter size-full wp-image-13878" /></a>
+![ESP8266 ライブラリのインストール](images/esp-wroom-02-first-step-3.png)
 
 ダウンロード、パッケージの検証などが走るので、しばらくかかります。インストールが終わると、 **[ツール] メニュー → [ボード:]** で **[ESP8266 Boards] → [Generic ESP8266 Module]** が選べるようになるので、これを選択します。
 
-<a href="images/esp-wroom-02-first-step-4.png"><img src="images/esp-wroom-02-first-step-4.png" alt="Arduino IDE で ESP8266 ボードが選択できる" width="551" height="364" class="aligncenter size-full wp-image-13879" /></a>
+![Arduino IDE で ESP8266 ボードが選択できる](images/esp-wroom-02-first-step-4.png)
 
 ついでに書き込み設定をそれぞれメニューから選び、下記の内容に設定しておきます。
 
-<a href="images/esp-wroom-02-first-step-5.png"><img src="images/esp-wroom-02-first-step-5.png" alt="Arduino IDE ESP-WROOM-02 の書き込み設定" width="500" height="730" class="aligncenter size-full wp-image-13880" /></a>
+![Arduino IDE ESP-WROOM-02 の書き込み設定](images/esp-wroom-02-first-step-5.png)
 
 ## プログラムの書き込み
 
@@ -84,7 +84,7 @@ http://arduino.esp8266.com/stable/package_esp8266com_index.json
 
 確認したら、**開発ボードを接続して、 [ツール] メニュー → [シリアルポート]** に表示されるまでしばらく待ちます。初回接続時は少しかかるかもしれません。
 
-<a href="images/esp-wroom-02-first-step-6.png"><img src="images/esp-wroom-02-first-step-6.png" alt="今回の場合 COM6 が ESP-WROOM-02 ボードらしい" width="500" height="730" class="aligncenter size-full wp-image-13886" /></a>
+![今回の場合 COM6 が ESP-WROOM-02 ボードらしい](images/esp-wroom-02-first-step-6.png)
 
 今回は上図のように COM6 ポートでした。この増えた COM ポートを選択します。
 
@@ -120,7 +120,7 @@ void loop() {
 
 下記の手順で**開発ボードを書き込みモード**にします。
 
-<a href="images/esp-wroom-02-first-step-7.jpg"><img src="images/esp-wroom-02-first-step-7.jpg" alt="ESP-WROOM-02" width="720" height="540" class="aligncenter size-full wp-image-13907" /></a>
+![ESP-WROOM-02](images/esp-wroom-02-first-step-7.jpg)
 
 1. 開発ボードの RST スイッチと PGM スイッチを同時に押す
 2. RST スイッチを離す
@@ -132,6 +132,6 @@ void loop() {
 
 下記のように初期化のあと **Hello, world** が表示されれば OK です。
 
-<a href="images/esp-wroom-02-first-step-8.png"><img src="images/esp-wroom-02-first-step-8.png" alt="ESP-WROOM-02 で Hello, world" width="648" height="368" class="aligncenter size-full wp-image-13904" /></a>
+![ESP-WROOM-02 で Hello, world](images/esp-wroom-02-first-step-8.png)
 
 お疲れ様でした。次回は Wi-Fi に接続して Web サーバーとして動かしてみます。

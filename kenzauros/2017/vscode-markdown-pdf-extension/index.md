@@ -26,13 +26,13 @@ yzane さんが公開してくださっている vscode の拡張機能 **[Markd
 
 VSCode を開きます。
 
-<a href="images/vscode-markdown-pdf-extension-1.png"><img src="images/vscode-markdown-pdf-extension-1.png" alt="" width="350" height="308" class="aligncenter size-full wp-image-3756" /></a>
+![](images/vscode-markdown-pdf-extension-1.png)
 
 1. **アクティビティーバー**で**拡張機能**に切り替え
 2. 検索部分に `markdown-pdf` を入力
 3. **インストール**をクリック
 
-<a href="images/vscode-markdown-pdf-extension-2.png"><img src="images/vscode-markdown-pdf-extension-2.png" alt="" width="448" height="289" class="aligncenter size-full wp-image-3757" /></a>
+![](images/vscode-markdown-pdf-extension-2.png)
 
 1. **再度読み込む**をクリック
 2. **ウィンドウの再読み込み**をクリック
@@ -53,17 +53,17 @@ VSCode を開きます。
 
 `Ctrl+Shift+P` を押して**コマンドパレット**を開き、 `>convert m` ぐらいまで入力するとおそらく **Convert Markdown to PDF** が表示されるので、これを選択します。
 
-<a href="images/vscode-markdown-pdf-extension-3.png"><img src="images/vscode-markdown-pdf-extension-3.png" alt="" width="639" height="92" class="aligncenter size-full wp-image-3758" /></a>
+![](images/vscode-markdown-pdf-extension-3.png)
 
 変換が完了すると `OUTPUT: ファイルパス` のように表示されます。
 
-<a href="images/vscode-markdown-pdf-extension-4.png"><img src="images/vscode-markdown-pdf-extension-4.png" alt="" width="742" height="50" class="aligncenter size-full wp-image-3759" /></a>
+![](images/vscode-markdown-pdf-extension-4.png)
 
 これで同じフォルダに `test.pdf` が出力されているはずです。感動！！
 
 しかもデフォルトのスタイルでも普通に使えるレベルです。さすが日本人。
 
-<a href="images/vscode-markdown-pdf-extension-5.png"><img src="images/vscode-markdown-pdf-extension-5.png" alt="" class="aligncenter size-full wp-image-3766" /></a>
+![](images/vscode-markdown-pdf-extension-5.png)
 
 ## キーボードショートカットの割り当て
 
@@ -71,11 +71,11 @@ VSCode を開きます。
 
 **ファイル → 基本設定 → キーボード ショートカット** からキーバインドの設定ファイル (`keybindings.json`) を開きます。
 
-<a href="images/vscode-markdown-pdf-extension-6.png"><img src="images/vscode-markdown-pdf-extension-6.png" alt="" width="478" height="475" class="aligncenter size-full wp-image-3760" /></a>
+![](images/vscode-markdown-pdf-extension-6.png)
 
 **左ペインにデフォルトのキー設定** (Default Keybindings)、**右ペインにユーザー設定** (`keybindings.json`) が開きます。
 
-<a href="images/vscode-markdown-pdf-extension-7.png"><img src="images/vscode-markdown-pdf-extension-7.png" alt="" width="720" height="190" class="aligncenter size-full wp-image-3761" /></a>
+![](images/vscode-markdown-pdf-extension-7.png)
 
 この `keybindings.json` の配列 (`[` ～ `]`) 内に下記の記述を追加します。すでに他の設定がある場合は図にあるように `,` をつけるなど、 JSON の配列表記になるようにしてください。
 

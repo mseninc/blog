@@ -25,7 +25,7 @@ MSENの桝田です。
 ただ、コンサルティングに入って頂いている方が癒し系で、
 「一緒にやっていきましょう」と励まして頂けているのが救いです（笑）
 
-<a href="images/isms-first-5-1.jpg"><img src="images/isms-first-5-1.jpg" alt="" width="300" height="169" class="alignnone size-medium wp-image-4096" /></a>
+![](images/isms-first-5-1.jpg)
 
 以上、桝田がお届けしました。
 

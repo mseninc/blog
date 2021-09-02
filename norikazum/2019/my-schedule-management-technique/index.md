@@ -50,7 +50,7 @@ tags: [Google, Google Calendar, その他, ライフハック]
 これらを寝る前などにさっとみて「そうだそうだ」と思い返すようにしています。
 ふと思いついた時に、スマホ等で確認もしています。
 
-<a href="images/my-schedule-management-technique-1.png"><img src="images/my-schedule-management-technique-1.png" alt="" width="556" height="366" class="alignnone size-full wp-image-8880" /></a>
+![](images/my-schedule-management-technique-1.png)
 ※画面はPC版です。
 
 ## 管理術
@@ -69,14 +69,14 @@ tags: [Google, Google Calendar, その他, ライフハック]
 
 スマホにアカウントを連携し、プッシュ通知をONにしておくことで通知してくれるので、終わるまでこの通知を消さないようにしてスマホの通知を見る度に思い出せるようにもしています。
 
-<a href="images/my-schedule-management-technique-2.png"><img src="images/my-schedule-management-technique-2.png" alt="" width="540" height="1080" class="alignnone size-full wp-image-9201" /></a>
+![](images/my-schedule-management-technique-2.png)
 
 ## 注意点
 Googleカレンダーの仕様として、PC版のカレンダーは指定されているアカウントのカレンダーのみが表示されますが、**モバイル版の場合は登録しているアカウント全て** が表示できます。
-<a href="images/my-schedule-management-technique-3.png"><img src="images/my-schedule-management-technique-3.png" alt="" width="324" height="648" class="alignnone size-full wp-image-8888" /></a>
+![](images/my-schedule-management-technique-3.png)
 
 これは一概にどちらが便利とは言えませんが、モバイル版で入力する場合、この仕様を分かっていないと違うアカウントで入力してしまってPC版に戻ったときに「あれ？入力したはずなのに予定がない！」という自体が発生します。
-<a href="images/my-schedule-management-technique-4.png"><img src="images/my-schedule-management-technique-4.png" alt="" width="324" height="648" class="alignnone size-full wp-image-8889" /></a>
+![](images/my-schedule-management-technique-4.png)
 
 これが原因で予定やリマインダーが抜けてしまったとなっては致命的ですので、複数アカウントをモバイルで管理されている方は頭の片隅に意識をお願いします。
 

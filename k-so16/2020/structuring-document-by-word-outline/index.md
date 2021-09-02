@@ -32,17 +32,17 @@ Word の **アウトライン機能** を利用することで、章や節、段
 
 アウトライン機能を起動するためには、 **表示** メニューを選択し、 **アウトライン** を選択します。操作手順とアウトライン機能を起動した際の画面はそれぞれ以下のスクリーンショットのようになります。
 
-[caption id="attachment_13544" align="aligncenter" width="1012"]<a href="images/structuring-document-by-word-outline-1.png"><img src="images/structuring-document-by-word-outline-1.png" alt="" width="1012" height="800" class="size-full wp-image-13544" /></a> アウトライン機能の起動方法[/caption]
+![](images/structuring-document-by-word-outline-1.png)
 
-[caption id="attachment_13545" align="aligncenter" width="1012"]<a href="images/structuring-document-by-word-outline-2.png"><img src="images/structuring-document-by-word-outline-2.png" alt="" width="1012" height="800" class="size-full wp-image-13545" /></a> アウトライン機能の画面[/caption]
+![](images/structuring-document-by-word-outline-2.png)
 
 章や節、段落にそれぞれ分けるためには、アウトラインのレベルを設定します。それぞれの要素の行頭で Tab キーを押下すると 1 つ下のレベルに移行し、 Shift + Tab で 1 つ上のレベルに移行します。または、以下の画像のように、プルダウンメニューからレベルを選択することも可能です。
 
-[caption id="attachment_13553" align="aligncenter" width="1012"]<a href="images/structuring-document-by-word-outline-3.png"><img src="images/structuring-document-by-word-outline-3.png" alt="" width="1012" height="800" class="size-full wp-image-13553" /></a> 現在選択中のセクションのレベルを変更[/caption]
+![](images/structuring-document-by-word-outline-3.png)
 
 アウトライン機能の画面では、レベルに沿って自動的にインデントされるので、階層構造が見やすくなります。
 
-[caption id="attachment_13548" align="aligncenter" width="1012"]<a href="images/structuring-document-by-word-outline-4.png"><img src="images/structuring-document-by-word-outline-4.png" alt="" width="1012" height="800" class="size-full wp-image-13548" /></a> レベルに応じて階層構造で表示される[/caption]
+![](images/structuring-document-by-word-outline-4.png)
 
 ## レベルごとのレイアウトの調整
 
@@ -54,19 +54,19 @@ Word の **アウトライン機能** を利用することで、章や節、段
 
 リストの書式を変更するには、まず書式の変更対象とする箇所を選択します。選択したら、 **ホーム** を選択し、箇条書きのような見た目のアイコンに並ぶ **アウトライン** を選択します。アウトラインを選択するとリストの書式が表示されるので、利用したいものを選択します。
 
-[caption id="attachment_13551" align="aligncenter" width="1012"]<a href="images/structuring-document-by-word-outline-5.png"><img src="images/structuring-document-by-word-outline-5.png" alt="" width="1012" height="800" class="size-full wp-image-13551" /></a> リストの書式の設定手順[/caption]
+![](images/structuring-document-by-word-outline-5.png)
 
 メニューのいくつかはアイコンのみ表示されているので、何のメニューか少々分かりづらい場合があります。そのような場合、 **カーソルをアイコンの上に置いたままにすると、そのアイコンのメニュー名と説明が表示される** ので、何のメニューかが確認できます。
 
 リストの書式を選択すると、設定内容が表示に反映されます。以下の画像はインデントなしの、ドットつなぎの数字リストを選択した例です。
 
-[caption id="attachment_13554" align="aligncenter" width="1012"]<a href="images/structuring-document-by-word-outline-6.png"><img src="images/structuring-document-by-word-outline-6.png" alt="" width="1012" height="800" class="size-full wp-image-13554" /></a> 選択された項目に自動採番された[/caption]
+![](images/structuring-document-by-word-outline-6.png)
 
 アウトラインを閉じると、行頭に箇条書きの点がついていたり、数字の後ろに矢印が表示されることがありますが、実際に印刷する際にはこれらは印字されません。実際に印字されるものを確認するためには、印刷プレビューを確認すると良いでしょう。
 
-[caption id="attachment_13556" align="aligncenter" width="1012"]<a href="images/structuring-document-by-word-outline-7.png"><img src="images/structuring-document-by-word-outline-7.png" alt="" width="1012" height="800" class="size-full wp-image-13556" /></a> 標準の編集画面ではアウトラインに点や矢印が表示されている[/caption]
+![](images/structuring-document-by-word-outline-7.png)
 
-[caption id="attachment_13557" align="aligncenter" width="1012"]<a href="images/structuring-document-by-word-outline-8.png"><img src="images/structuring-document-by-word-outline-8.png" alt="" width="1012" height="800" class="size-full wp-image-13557" /></a> 印刷プレビューではアウトラインの点や矢印は表示されない[/caption]
+![](images/structuring-document-by-word-outline-8.png)
 
 ### レベルごとの書式設定
 
@@ -76,15 +76,15 @@ Word の **アウトライン機能** を利用することで、章や節、段
 
 画面の操作イメージは以下の図の通りです。
 
-[caption id="attachment_13561" align="aligncenter" width="1012"]<a href="images/structuring-document-by-word-outline-9.png"><img src="images/structuring-document-by-word-outline-9.png" alt="" width="1012" height="800" class="size-full wp-image-13561" /></a> レベルごとの書式設定手順[/caption]
+![](images/structuring-document-by-word-outline-9.png)
 
 見出しの変更を選択すると、書式設定メニューが表示されます。このメニューでフォントの種類やサイズなどのスタイルを変更できます。段落などの詳細な書式設定をしたい場合は、左下の **書式** ボタンから、変更したい設定項目を選択します。
 
 実際の書式設定画面と適用結果はそれぞれ以下の通りです。
 
-[caption id="attachment_13559" align="aligncenter" width="1012"]<a href="images/structuring-document-by-word-outline-10.png"><img src="images/structuring-document-by-word-outline-10.png" alt="" width="1012" height="800" class="size-full wp-image-13559" /></a> 書式設定画面[/caption]
+![](images/structuring-document-by-word-outline-10.png)
 
-[caption id="attachment_13560" align="aligncenter" width="1012"]<a href="images/structuring-document-by-word-outline-11.png"><img src="images/structuring-document-by-word-outline-11.png" alt="" width="1012" height="800" class="size-full wp-image-13560" /></a> 書式変更の適用結果[/caption]
+![](images/structuring-document-by-word-outline-11.png)
 
 レベル 2 以降や本文についても同様に編集することで、それぞれの文書の構成要素の見た目を統一することができます。
 

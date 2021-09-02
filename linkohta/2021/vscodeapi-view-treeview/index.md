@@ -86,7 +86,7 @@ class TreeDataProvider implements vscode.TreeDataProvider<vscode.TreeItem> {
 上述の例なら、 `vscode.window.registerTreeDataProvider('test', new TreeDataProvider())` という風になります。
 
 登録が成功すれば以下の画像のようにエクスプローラー上に `TEST` という項目とその中に `getChildren` で返ってくる `TreeItem[]` が表示されていると思います。
-![example](images/vscodeapi-view-treeview-1.png)
+![example](https://mseeeen.msen.jp/wp-content/uploads/2021/07/2021-07-29_17h12_37.png)
 
 ## TreeItem について
 

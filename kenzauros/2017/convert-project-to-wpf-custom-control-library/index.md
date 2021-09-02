@@ -11,11 +11,11 @@ Visual Studio で開発をしていると最初のプロジェクト作成のと
 
 ## プロジェクトタイプは気軽に変更できない
 
-<a href="images/convert-project-to-wpf-custom-control-library-1.png"><img src="images/convert-project-to-wpf-custom-control-library-1.png" alt="" width="941" height="653" class="aligncenter size-full wp-image-4942" /></a>
+![](images/convert-project-to-wpf-custom-control-library-1.png)
 
 WPF のカスタムコントロールを格納するライブラリを作るときは **Windows クラシックデスクトップ** から **WPF カスタム コントロール ライブラリ** を選択してプロジェクトを作成するのが正しいのですが、すでにあるプロジェクトの場合や誤って **クラス ライブラリ** で作成してしまった場合はちょっと困ったことになります。
 
-<a href="images/convert-project-to-wpf-custom-control-library-2.png"><img src="images/convert-project-to-wpf-custom-control-library-2.png" alt="" width="941" height="653" class="aligncenter size-full wp-image-4943" /></a>
+![](images/convert-project-to-wpf-custom-control-library-2.png)
 
 プロジェクトの種類によって **新しい項目の追加** で選べる項目が変化するため、たとえば今回の場合は **カスタム コントロール (WPF)** が選べない状態となります。
 
@@ -23,7 +23,7 @@ WPF のカスタムコントロールを格納するライブラリを作ると�
 
 ということでプロジェクトタイプを変更したいわけですが、この変更はプロジェクトのプロパティから気軽に行うことはできません。
 
-<a href="images/convert-project-to-wpf-custom-control-library-3.png"><img src="images/convert-project-to-wpf-custom-control-library-3.png" alt="" width="799" height="520" class="aligncenter size-full wp-image-4944" /></a>
+![](images/convert-project-to-wpf-custom-control-library-3.png)
 
 ## プロジェクトを WPF カスタム コントロール ライブラリ に変更する
 
@@ -44,7 +44,7 @@ Visual Studio の GUI からは設定できないので**プロジェクトの�
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
 ```
 
-<a href="images/convert-project-to-wpf-custom-control-library-4.png"><img src="images/convert-project-to-wpf-custom-control-library-4.png" alt="" width="1181" height="264" class="aligncenter size-full wp-image-4945" /></a>
+![](images/convert-project-to-wpf-custom-control-library-4.png)
 
 **`<ProjectTypeGuids>` はその名のとおりプロジェクトタイプを表す**もので、**この GUID を見て Visual Studio はプロジェクトタイプを判別している**らしいです。
 
@@ -58,7 +58,7 @@ Project Type GUID の詳細は下記のページにまとめられています�
 
 すると「新しい項目の追加」に **カスタム コントロール (WPF)** が表示されているはずです。
 
-<a href="images/convert-project-to-wpf-custom-control-library-5.png"><img src="images/convert-project-to-wpf-custom-control-library-5.png" alt="" width="941" height="653" class="aligncenter size-full wp-image-4946" /></a>
+![](images/convert-project-to-wpf-custom-control-library-5.png)
 
 ### テーマ情報の追加
 

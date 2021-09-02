@@ -12,10 +12,10 @@ tags: [その他, 〇〇奮闘記]
 
 [古賀稔彦 - Wikipedia](https://ja.wikipedia.org/wiki/%E5%8F%A4%E8%B3%80%E7%A8%94%E5%BD%A6)
 
-<a href="images/sekai-wo-totta-otoko-sono-ikikata-1.jpg"><img src="images/sekai-wo-totta-otoko-sono-ikikata-1.jpg" alt="" width="4032" height="3024" class="alignnone size-full wp-image-10862" /></a>
+![](images/sekai-wo-totta-otoko-sono-ikikata-1.jpg)
 
 場所はウェスティンホテル大阪、いいところです。
-<a href="images/sekai-wo-totta-otoko-sono-ikikata-2.jpg"><img src="images/sekai-wo-totta-otoko-sono-ikikata-2.jpg" alt="" width="293" height="172" class="alignnone size-full wp-image-10864" /></a>
+![](images/sekai-wo-totta-otoko-sono-ikikata-2.jpg)
 
 ## 序盤
 18:30開演でした。

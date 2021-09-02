@@ -18,7 +18,7 @@ WordPress のプラグイン→新規追加で
 プラグインで Post Snippets を有効化すると使用できるようになります。  
 その後、設定の Post Snippets をクリックするとスニペットの登録画面になります。
 
-<img src="images/wordpress-post-snippets-1.jpg">
+<img src="https://mseeeen.msen.jp/wp-content/uploads/2016/06/postsnippets.jpg">
 
 ## スニペットとは
 >スニペットとは、一般的には「切れ端」「断片」という意味の英語である。  
@@ -31,7 +31,7 @@ WordPress のプラグイン→新規追加で
 
 ## スニペットの登録方法
 
-<img src="images/wordpress-post-snippets-2.jpg">
+<img src="https://mseeeen.msen.jp/wp-content/uploads/2016/06/postsnippets3.jpg">
 
 **スニペット名**と**スニペットの内容**を入力して登録するだけで使うことが可能です。
 
@@ -41,11 +41,11 @@ WordPress のプラグイン→新規追加で
 
 投稿画面本文入力欄の上部メニューに、新しく **Post Snippets** ができているのでクリックしてください。
 
-<img src="images/wordpress-post-snippets-3.jpg">
+<img src="https://mseeeen.msen.jp/wp-content/uploads/2016/06/postsnippets4.jpg">
 
 すると別ウインドウが開きます。
 
-<img src="images/wordpress-post-snippets-4.jpg">
+<img src="https://mseeeen.msen.jp/wp-content/uploads/2016/06/postsnippets5.jpg">
 
 後は、登録したスニペット名を選び、 Insert ボタンをクリックすれば、本文中に登録したスニペットの内容が挿入されます。
 

@@ -19,9 +19,9 @@ tags: [その他, 〇〇奮闘記]
 
 その記事が12月号に掲載となりました！
 
-<a href="images/published-in-economic-newspaper-1.png"><img src="images/published-in-economic-newspaper-1.png" alt="" width="1230" height="287" class="aligncenter size-full wp-image-6098" /></a>
+![](images/published-in-economic-newspaper-1.png)
 
-<a href="images/published-in-economic-newspaper-2.png"><img src="images/published-in-economic-newspaper-2.png" alt="" width="598" height="424" class="aligncenter size-full wp-image-6099" /></a>
+![](images/published-in-economic-newspaper-2.png)
 ※取材のタイミングがまだ社名変更前だったため、MS Engineeringとなっております。
 
 取材していただくという普段はできない経験をさせていただき、またこのように新聞という紙面になると嬉しさが倍増です！

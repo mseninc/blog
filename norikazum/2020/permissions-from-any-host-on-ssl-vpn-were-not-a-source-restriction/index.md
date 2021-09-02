@@ -15,15 +15,15 @@ tags: [VPN, ネットワーク, Fortigate, その他の技術]
 ## 概要
 **SSL-VPN設定(VPN->SSL-VPN設定)** で アクセス元を制限する項目がありますが この部分は画像のとおり **任意のホストからアクセス許可** と **特定ホストへアクセス制限** の2択があります。
 
-<a href="images/permissions-from-any-host-on-ssl-vpn-were-not-a-source-restriction-1.png"><img src="images/permissions-from-any-host-on-ssl-vpn-were-not-a-source-restriction-1.png" alt="" width="1667" height="1030" class="alignnone size-full wp-image-14368" /></a>
+![](images/permissions-from-any-host-on-ssl-vpn-were-not-a-source-restriction-1.png)
 
 **インターネットからVPN接続するために任意のホストからアクセス許可** を選択するケースが多いと思います。
 
 **任意のホストからアクセス許可** を設定した上で、**ファイアウォールポリシーのSSL-VPN tunnel inteface設定で送信元を指定** することで **指定したグローバルIPからしか接続をさせないように** 設定できる と思っていたのですが　**これが勘違い** でした。
-<a href="images/permissions-from-any-host-on-ssl-vpn-were-not-a-source-restriction-2.png"><img src="images/permissions-from-any-host-on-ssl-vpn-were-not-a-source-restriction-2.png" alt="" width="1643" height="169" class="alignnone size-full wp-image-14369" /></a>
+![](images/permissions-from-any-host-on-ssl-vpn-were-not-a-source-restriction-2.png)
 
 この設定は、 **SSL-VPN接続後に払いだされるIPアドレスで制限が出来るというもの** で、 **接続元のグローバルIPアドレスを制限したければ**、大元の設定である **SSL-VPN設定で特定ホストへアクセス制限を選択するしか方法はない** ということでした。
-<a href="images/permissions-from-any-host-on-ssl-vpn-were-not-a-source-restriction-3.png"><img src="images/permissions-from-any-host-on-ssl-vpn-were-not-a-source-restriction-3.png" alt="" width="876" height="193" class="alignnone size-full wp-image-14370" /></a>
+![](images/permissions-from-any-host-on-ssl-vpn-were-not-a-source-restriction-3.png)
 
 ## サポートからの回答
 この調査時にサポートから回答を参考までに掲載します。

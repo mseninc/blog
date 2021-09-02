@@ -11,7 +11,7 @@ tags: [SQL Server, Windows]
 
 SQL Server 2012を利用する評価環境で、ダンプファイル(バックアップデータ)からデータベースの復元を試みると、**データベースは使用中なので、排他アクセスを獲得できませんでした。**　となることが稀に発生していました。
 
-<a href="images/sql-server-recovery-issue-1.png"><img src="images/sql-server-recovery-issue-1.png" alt="" width="608" height="169" class="aligncenter size-full wp-image-4819" /></a>
+![](images/sql-server-recovery-issue-1.png)
 
 >データベースooの復元に失敗しました。(Microsoft.SqlServer.Management.RelationalEngine.Tasks)
 >追加情報:
@@ -26,7 +26,7 @@ SQL Server 2012を利用する評価環境で、ダンプファイル(バック�
 
 1. SQL Serverがインストールされたサーバ上で、**Sql Server Configuration Manager** を開きます。
 2. 対象のインスタンスを確認し、**SQL Server (インスタンス名)** を再起動します。インスタンス名はインストール時に決定しますが、**MSSQLSERVER**はデフォルトのインスタンス名です。
-<a href="images/sql-server-recovery-issue-2.png"><img src="images/sql-server-recovery-issue-2.png" alt="" width="1099" height="507" class="aligncenter size-full wp-image-4820" /></a>
+![](images/sql-server-recovery-issue-2.png)
 3. インスタンス再起動完了後、**Microsoft SQL Server Management Studioの接続を一度閉じて再接続してから、**再度復元を実施すると、成功するはずです。
 
 ## あとがき
@@ -36,7 +36,7 @@ URLからダウンロードできます。
 
 * [ダウンロードリンク](https://docs.microsoft.com/ja-jp/sql/ssms/download-sql-server-management-studio-ssms)
 
-<a href="images/sql-server-recovery-issue-3.png"><img src="images/sql-server-recovery-issue-3.png" alt="" width="1618" height="1143" class="aligncenter size-full wp-image-4822" /></a>
+![](images/sql-server-recovery-issue-3.png)
 
 800MB程度の容量があるため、ダウンロード環境には注意してください。
 

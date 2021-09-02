@@ -20,5 +20,5 @@ tags: [その他, 〇〇奮闘記]
 
 6期目も全員で前進してまいりますので、本年も株式会社MSENをよろしくお願いいたします。
 
-<a href="images/msen-6th-period-1.jpg"><img src="images/msen-6th-period-1.jpg" alt="" width="1024" height="768" class="aligncenter size-full wp-image-12260" /></a>
+![](images/msen-6th-period-1.jpg)
 

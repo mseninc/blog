@@ -61,6 +61,6 @@ powershell -NoProfile -ExecutionPolicy Unrestricted .\LogRotater.ps1
 
 このあたりはお好みでどうぞ。
 
-[caption id="attachment_7385" align="alignnone" width="476"]<a href="images/log-rotation-using-compress-archive-1.png"><img src="images/log-rotation-using-compress-archive-1.png" alt="" width="476" height="526" class="size-full wp-image-7385" /></a> グループポリシーで指定する場合[スケジュール]から[ログオン時]を選ぶ[/caption]
+![](images/log-rotation-using-compress-archive-1.png)
 
 ではまた。

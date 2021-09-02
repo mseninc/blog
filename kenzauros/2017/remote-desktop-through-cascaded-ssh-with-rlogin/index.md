@@ -40,11 +40,11 @@ OS は Windows 10 Pro, [RLogin](http://nanno.dip.jp/softlib/man/rlogin/) のバ�
 
 RLogin を起動し Server Select から **新規** をクリックします。
 
-<a href="images/remote-desktop-through-cascaded-ssh-with-rlogin-1.png"><img src="images/remote-desktop-through-cascaded-ssh-with-rlogin-1.png" alt="" width="698" height="549" class="aligncenter size-full wp-image-4544" /></a>
+![](images/remote-desktop-through-cascaded-ssh-with-rlogin-1.png)
 
 Server New Entry 画面の **サーバー** 設定で踏み台 1 (A) の情報を入力します。
 
-<a href="images/remote-desktop-through-cascaded-ssh-with-rlogin-2.png"><img src="images/remote-desktop-through-cascaded-ssh-with-rlogin-2.png" alt="" width="597" height="500" class="aligncenter size-full wp-image-4545" /></a>
+![](images/remote-desktop-through-cascaded-ssh-with-rlogin-2.png)
 
 * エントリー名: 適当な名前
 * Server Address: 踏み台 1 (A) のホスト名か IP アドレス (ここでは hogehoge.sample.com)
@@ -55,11 +55,11 @@ Server New Entry 画面の **サーバー** 設定で踏み台 1 (A) の情報�
 
 **プロトコル** 設定を開き、 **ポートフォワード** をクリックします。
 
-<a href="images/remote-desktop-through-cascaded-ssh-with-rlogin-3.png"><img src="images/remote-desktop-through-cascaded-ssh-with-rlogin-3.png" alt="" width="597" height="500" class="aligncenter size-full wp-image-4546" /></a>
+![](images/remote-desktop-through-cascaded-ssh-with-rlogin-3.png)
 
 **SSH2 ポートフォワード** 画面で **新規** をクリックし、新しく開いた SSH2 ポートフォワード設定画面で、 **Local Socks** を選択し、 Host Name に **localhost**, Port に **`10022`** を入力します。
 
-<a href="images/remote-desktop-through-cascaded-ssh-with-rlogin-4.png"><img src="images/remote-desktop-through-cascaded-ssh-with-rlogin-4.png" alt="" width="542" height="443" class="aligncenter size-full wp-image-4547" /></a>
+![](images/remote-desktop-through-cascaded-ssh-with-rlogin-4.png)
 
 ポート番号はこのあとのプロキシを指定するときに同じ番号にすればいいだけなので `10022` 以外でも問題ありません。
 
@@ -69,7 +69,7 @@ Server New Entry 画面の **サーバー** 設定で踏み台 1 (A) の情報�
 
 もう一度 **新規** をクリックして Server New Entry 画面を開き、とりあえず **サーバー** 設定で A と同様に踏み台 2 (B) の接続情報を入力します。
 
-<a href="images/remote-desktop-through-cascaded-ssh-with-rlogin-5.png"><img src="images/remote-desktop-through-cascaded-ssh-with-rlogin-5.png" alt="" width="597" height="500" class="aligncenter size-full wp-image-4548" /></a>
+![](images/remote-desktop-through-cascaded-ssh-with-rlogin-5.png)
 
 * エントリー名: 適当な名前
 * Server Address: 踏み台 2 (B) のホスト名か IP アドレス (ここでは fumifumi.sample.com)
@@ -84,11 +84,11 @@ Server New Entry 画面の **サーバー** 設定で踏み台 1 (A) の情報�
 
 次に **Proxy Server の設定** をクリックし、 Proxy Server 画面を開きます。 Protocol に **SOCKS5** Server Address に `localhost`、 Socket Port に A のポートフォワードで設定したポート (ここでは `10022`) を指定します。
 
-<a href="images/remote-desktop-through-cascaded-ssh-with-rlogin-6.png"><img src="images/remote-desktop-through-cascaded-ssh-with-rlogin-6.png" alt="" width="867" height="543" class="aligncenter size-full wp-image-4549" /></a>
+![](images/remote-desktop-through-cascaded-ssh-with-rlogin-6.png)
 
 次に A のときと同様に B のプロトコル→ポートフォワード設定を開き、リモートデスクトップの接続先へのポートフォワードを設定します。
 
-<a href="images/remote-desktop-through-cascaded-ssh-with-rlogin-7.png"><img src="images/remote-desktop-through-cascaded-ssh-with-rlogin-7.png" alt="" width="361" height="278" class="aligncenter size-full wp-image-4550" /></a>
+![](images/remote-desktop-through-cascaded-ssh-with-rlogin-7.png)
 
 * Listened:  Local, Host Name = `localhost`, Port = `13389` (任意)
 * Connect: Host Name = C のホスト名もしくは IP アドレス, Port = `3389`

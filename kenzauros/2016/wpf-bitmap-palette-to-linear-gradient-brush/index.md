@@ -154,7 +154,7 @@ View 側にリストボックスを配置します。
 
 以上でこういうリストボックスが表示されるはずです。
 
-<a href="images/wpf-bitmap-palette-to-linear-gradient-brush-1.png"><img src="images/wpf-bitmap-palette-to-linear-gradient-brush-1.png" alt="カラーパレット選択用リストボックス" width="286" height="293" class="aligncenter size-full wp-image-1156" /></a>
+![カラーパレット選択用リストボックス](images/wpf-bitmap-palette-to-linear-gradient-brush-1.png)
 
 ## あとがき
 

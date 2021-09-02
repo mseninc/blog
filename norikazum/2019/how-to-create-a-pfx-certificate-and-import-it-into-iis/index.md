@@ -28,21 +28,21 @@ Verifying - Enter Export Password:
 ### IISへのインポート手順
 1. 前項で作成した、 **pfxファイルをインストールするIISサーバーに転送** します
 1. **IISマネージャーから、サーバー証明書** を開きます
-<a href="images/how-to-create-a-pfx-certificate-and-import-it-into-iis-1.png"><img src="images/how-to-create-a-pfx-certificate-and-import-it-into-iis-1.png" alt="" width="1200" height="846" class="alignnone size-full wp-image-10297" /></a>
+![](images/how-to-create-a-pfx-certificate-and-import-it-into-iis-1.png)
 1. **インポート** を開き、 **作成したpfxファイルを指定** し、 **インポートを完了** します
-<a href="images/how-to-create-a-pfx-certificate-and-import-it-into-iis-2.png"><img src="images/how-to-create-a-pfx-certificate-and-import-it-into-iis-2.png" alt="" width="1192" height="842" class="alignnone size-full wp-image-10305" /></a>
+![](images/how-to-create-a-pfx-certificate-and-import-it-into-iis-2.png)
 ↓　pfxファイルを指定し、作成じに設定したパスワードを入力します
-<a href="images/how-to-create-a-pfx-certificate-and-import-it-into-iis-3.png"><img src="images/how-to-create-a-pfx-certificate-and-import-it-into-iis-3.png" alt="" width="369" height="325" class="alignnone size-full wp-image-10309" /></a>
+![](images/how-to-create-a-pfx-certificate-and-import-it-into-iis-3.png)
 ↓　インポートされたことを確認し閉じます
-<a href="images/how-to-create-a-pfx-certificate-and-import-it-into-iis-4.png"><img src="images/how-to-create-a-pfx-certificate-and-import-it-into-iis-4.png" alt="" width="659" height="384" class="alignnone size-full wp-image-10307" /></a>
+![](images/how-to-create-a-pfx-certificate-and-import-it-into-iis-4.png)
 ↓　一覧に表示されたことを確認します
-<a href="images/how-to-create-a-pfx-certificate-and-import-it-into-iis-5.png"><img src="images/how-to-create-a-pfx-certificate-and-import-it-into-iis-5.png" alt="" width="686" height="161" class="alignnone size-full wp-image-10298" /></a>
+![](images/how-to-create-a-pfx-certificate-and-import-it-into-iis-5.png)
 1. **証明書を適用するサイトを選択しバインド** します
-<a href="images/how-to-create-a-pfx-certificate-and-import-it-into-iis-6.png"><img src="images/how-to-create-a-pfx-certificate-and-import-it-into-iis-6.png" alt="" width="1196" height="847" class="alignnone size-full wp-image-10299" /></a>
+![](images/how-to-create-a-pfx-certificate-and-import-it-into-iis-6.png)
 ↓　各項目設定します
-<a href="images/how-to-create-a-pfx-certificate-and-import-it-into-iis-7.png"><img src="images/how-to-create-a-pfx-certificate-and-import-it-into-iis-7.png" alt="" width="538" height="315" class="alignnone size-full wp-image-10300" /></a>
+![](images/how-to-create-a-pfx-certificate-and-import-it-into-iis-7.png)
 ↓　設定されていることを確認し画面を閉じます
-<a href="images/how-to-create-a-pfx-certificate-and-import-it-into-iis-8.png"><img src="images/how-to-create-a-pfx-certificate-and-import-it-into-iis-8.png" alt="" width="659" height="384" class="alignnone size-full wp-image-10301" /></a>
+![](images/how-to-create-a-pfx-certificate-and-import-it-into-iis-8.png)
 
 以上で設定は完了です。
 

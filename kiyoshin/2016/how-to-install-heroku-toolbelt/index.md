@@ -13,24 +13,24 @@ Heroku Toolbeltのページはこちら
  
 今回はHeroku ToolbeltのWindows用のツールをダウンロードします。赤枠の部分を選択しクリックしてください。
 
-<img src="images/how-to-install-heroku-toolbelt-1.png" alt="heroku_toolbelt" width="1342" height="477" class="aligncenter size-full wp-image-705" />
+![heroku_toolbelt](images/how-to-install-heroku-toolbelt-1.png)
 
 ツールがダウンロードされたら、そのファイルをクリックして起動してください。  
 次に下記の様なウインドウが開くので、開いたら[Next]をクリックします。
 
-<img src="images/how-to-install-heroku-toolbelt-2.png" alt="installguide" width="497" height="385" class="aligncenter size-full wp-image-708" />
+![installguide](images/how-to-install-heroku-toolbelt-2.png)
 
-<img src="images/how-to-install-heroku-toolbelt-3.png" alt="heroku_toolbelt_guide" width="498" height="386" class="aligncenter size-full wp-image-710" />
+![heroku_toolbelt_guide](images/how-to-install-heroku-toolbelt-3.png)
 
-<img src="images/how-to-install-heroku-toolbelt-4.png" alt="heroku_toolebelt_Fullinstall" width="498" height="383" class="aligncenter size-full wp-image-712" />
+![heroku_toolebelt_Fullinstall](images/how-to-install-heroku-toolbelt-4.png)
 
 次に、[Install]をクリックしてください。
 
-<img src="images/how-to-install-heroku-toolbelt-5.png" alt="heroku.install_ready" width="496" height="385" class="aligncenter size-full wp-image-713" />
+![heroku.install_ready](images/how-to-install-heroku-toolbelt-5.png)
 
 最後に[Finish]を押すと、インストール完了です。
 
-<img src="images/how-to-install-heroku-toolbelt-6.png" alt="install_finish" width="497" height="386" class="aligncenter size-full wp-image-715" />
+![install_finish](images/how-to-install-heroku-toolbelt-6.png)
 
 これでHeroku Toolbeltはインストール完了しているので、Herokuを利用されている方は、試しにコマンドを使ってみましょう。
 

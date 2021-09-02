@@ -39,7 +39,7 @@ tags: [セキュリティ, zabbix, ESET, その他の技術]
 
 ログローテーションは ESET 側で行い、OS 側では行いません。ESET のログ設定は `設定 > ツール > ログファイル` から可能です。
 
-<a href="images/monitor-eset-file-security-virus-detection-from-zabbix-1.png"><img src="images/monitor-eset-file-security-virus-detection-from-zabbix-1.png" alt="" width="1578" height="385" class="alignnone size-full wp-image-17983" /></a>
+![](images/monitor-eset-file-security-virus-detection-from-zabbix-1.png)
 
 ## OS 側の設定
 
@@ -61,7 +61,7 @@ cron (`/var/spool/cron/root`) を設定し、10分毎に検出イベントをロ
 
 ESET 監視用のテンプレートを作成します。名前は `ESET Security Check` としました。このテンプレートにアイテムとトリガーを作成します。
 
-<a href="images/monitor-eset-file-security-virus-detection-from-zabbix-2.png"><img src="images/monitor-eset-file-security-virus-detection-from-zabbix-2.png" alt="" width="912" height="47" class="alignnone size-full wp-image-17984" /></a>
+![](images/monitor-eset-file-security-virus-detection-from-zabbix-2.png)
 
 ### アイテム
 アイテムは以下の2つを作成します。
@@ -69,7 +69,7 @@ ESET 監視用のテンプレートを作成します。名前は `ESET Security
 - **ESET Detection Logs**
 - **ESET Detection Count** (トリガーあり)
 
-<a href="images/monitor-eset-file-security-virus-detection-from-zabbix-3.png"><img src="images/monitor-eset-file-security-virus-detection-from-zabbix-3.png" alt="" width="1698" height="99" class="alignnone size-full wp-image-17985" /></a>
+![](images/monitor-eset-file-security-virus-detection-from-zabbix-3.png)
 
 **ESET Detection Logs**
 
@@ -81,7 +81,7 @@ ESET 監視用のテンプレートを作成します。名前は `ESET Security
 - データ型: ログ
 - ヒストリの保存期間: 365d
 
-<a href="images/monitor-eset-file-security-virus-detection-from-zabbix-4.png"><img src="images/monitor-eset-file-security-virus-detection-from-zabbix-4.png" alt="" width="713" height="739" class="alignnone size-full wp-image-17986" /></a>
+![](images/monitor-eset-file-security-virus-detection-from-zabbix-4.png)
 
 **ESET Detection Count**
 
@@ -94,7 +94,7 @@ ESET 監視用のテンプレートを作成します。名前は `ESET Security
 - ヒストリの保存期間: 90d ※デフォルト
 - トレンドの保存期間: 365d ※デフォルト
 
-<a href="images/monitor-eset-file-security-virus-detection-from-zabbix-5.png"><img src="images/monitor-eset-file-security-virus-detection-from-zabbix-5.png" alt="" width="834" height="796" class="alignnone size-full wp-image-17988" /></a>
+![](images/monitor-eset-file-security-virus-detection-from-zabbix-5.png)
 
 ### トリガー
 
@@ -106,7 +106,7 @@ ESET 監視用のテンプレートを作成します。名前は `ESET Security
 - 正常イベントの生成: なし
 - 手動クローズを許可: チェック
 
-<a href="images/monitor-eset-file-security-virus-detection-from-zabbix-6.png"><img src="images/monitor-eset-file-security-virus-detection-from-zabbix-6.png" alt="" width="659" height="542" class="alignnone size-full wp-image-17990" /></a>
+![](images/monitor-eset-file-security-virus-detection-from-zabbix-6.png)
 
 ここまで完成したら、テンプレートを監視対象サーバに割り当てます。
 
@@ -184,21 +184,21 @@ wget www.eicar.org/download/eicar.com.txt
 
 cron が実行されると、検出イベントがログファイルに反映されます。それを Zabbix が検知し障害情報として登録されます。
 
-<a href="images/monitor-eset-file-security-virus-detection-from-zabbix-7.png"><img src="images/monitor-eset-file-security-virus-detection-from-zabbix-7.png" alt="" width="1420" height="97" class="alignnone size-full wp-image-17993" /></a>
+![](images/monitor-eset-file-security-virus-detection-from-zabbix-7.png)
 
 アクション設定をすれば下記のようにメール通報を行うこともできます。
 
-<a href="images/monitor-eset-file-security-virus-detection-from-zabbix-8.png"><img src="images/monitor-eset-file-security-virus-detection-from-zabbix-8.png" alt="" width="489" height="280" class="alignnone size-full wp-image-17994" /></a>
+![](images/monitor-eset-file-security-virus-detection-from-zabbix-8.png)
 
 [監視データ] > [最新データ] から ESET Detection Logs のヒストリを参照することで、検出イベントのログを確認することができます。
 
-<a href="images/monitor-eset-file-security-virus-detection-from-zabbix-9.png"><img src="images/monitor-eset-file-security-virus-detection-from-zabbix-9.png" alt="" width="1532" height="568" class="alignnone size-full wp-image-17995" /></a>
+![](images/monitor-eset-file-security-virus-detection-from-zabbix-9.png)
 
-<a href="images/monitor-eset-file-security-virus-detection-from-zabbix-10.png"><img src="images/monitor-eset-file-security-virus-detection-from-zabbix-10.png" alt="" width="1623" height="349" class="alignnone size-full wp-image-17996" /></a>
+![](images/monitor-eset-file-security-virus-detection-from-zabbix-10.png)
 
 障害情報をクローズするには、障害情報をクリックし `障害確認` と `障害のクローズ`　にチェックを入れて更新すれば OK です。
 
-<a href="images/monitor-eset-file-security-virus-detection-from-zabbix-11.png"><img src="images/monitor-eset-file-security-virus-detection-from-zabbix-11.png" alt="" width="1364" height="555" class="alignnone size-full wp-image-17997" /></a> 
+![](images/monitor-eset-file-security-virus-detection-from-zabbix-11.png)
 
 ではまた。
 

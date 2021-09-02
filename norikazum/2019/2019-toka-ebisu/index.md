@@ -16,16 +16,16 @@ tags: [その他, 〇〇奮闘記]
 今年も朝から参拝しました。
 混雑はしていませんでしたが、今日の仕事はじめで社員一同揃って来られている方も多く見かけました。
 
-<img src="images/2019-toka-ebisu-1.jpg" alt="" width="1188" height="890" class="alignnone size-full wp-image-8560" />
+![](images/2019-toka-ebisu-1.jpg)
 
 返納した去年の福笹です。
 1年間ありがとうございました。
 
-<img src="images/2019-toka-ebisu-2.jpg" alt="" width="648" height="1152" class="alignnone size-full wp-image-8561" />
+![](images/2019-toka-ebisu-2.jpg)
 
 そして、今年の福笹です。
 
-<img src="images/2019-toka-ebisu-3.jpg" alt="" width="907" height="1210" class="alignnone size-full wp-image-8562" />
+![](images/2019-toka-ebisu-3.jpg)
 
 毎年この時期は期末となっていて、次の期に向けて飾りを1つずつ増やしています。
 
@@ -52,7 +52,7 @@ tags: [その他, 〇〇奮闘記]
 ## あとがき
 
 個人的に恒例のベビーカステラも今年は全く並ぶことなく購入できました。
-<img src="images/2019-toka-ebisu-4.jpg" alt="" width="907" height="1210" class="alignnone size-full wp-image-8563" />
+![](images/2019-toka-ebisu-4.jpg)
 
 福笹は **1月9日から11日まで終夜** いただけるようです。
 
@@ -60,4 +60,4 @@ tags: [その他, 〇〇奮闘記]
 
 2019年もスタッフ一同頑張って参りますのでどうぞよろしくお願いいたします！
 
-<img src="images/2019-toka-ebisu-5.jpg" alt="" width="1188" height="890" class="alignnone size-full wp-image-8564" />
+![](images/2019-toka-ebisu-5.jpg)

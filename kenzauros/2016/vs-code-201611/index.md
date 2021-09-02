@@ -65,7 +65,7 @@ Ctrl+K➔Z と押すことで Zen モードに突入し、エディタ以外の�
 
 ただ、4K モニターでやると下記のように大変寂しい画面になるのでおすすめしません。
 
-<a href="images/vs-code-201611-1.png"><img src="images/vs-code-201611-1.png" alt="" width="1280" height="720" class="aligncenter size-full wp-image-3357" /></a>
+![](images/vs-code-201611-1.png)
 
 なお、**解除するときは Esc キーを 2 回**押します。最初解除できなくて焦りました(笑)
 
@@ -102,7 +102,7 @@ VS Code の機能増加にともなって、設定の数も増え続けている
 2. 設定のグループ
 3. **クイック編集**
 
-<a href="images/vs-code-201611-2.png"><img src="images/vs-code-201611-2.png" alt="" width="1153" height="328" class="aligncenter size-full wp-image-3353" /></a>
+![](images/vs-code-201611-2.png)
 
 まぁ 1 は今までなかったのが不思議なぐらいですが、 3 は秀逸。
 
@@ -134,7 +134,7 @@ Vim が 176K ダウンロードでずば抜けています。使いませんけ�
 
 選択範囲メニュー が追加されました。なんかフォトショみたいですね。
 
-<a href="images/vs-code-201611-3.png"><img src="images/vs-code-201611-3.png" alt="" width="444" height="379" class="aligncenter size-full wp-image-3354" /></a>
+![](images/vs-code-201611-3.png)
 
 このあたりはショートカットキーで慣れておくと便利ですが、そのリファレンスとしても使えるのでこのメニューはありがたいです。
 

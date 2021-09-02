@@ -42,17 +42,17 @@ tags: [Laravel, Web]
 ### ブラウザ側の確認
 
 #### Cookie 設定前
-<img src="images/laravel5-delete-cookie-1.png" alt="" width="1399" height="202" class="alignleft size-full wp-image-7579" />
+![](images/laravel5-delete-cookie-1.png)
 
 laravel のセッションは存在しますが、指定の Cookie は設定前なので存在していないですね。
 
 #### Cookie 設定後
-<img src="images/laravel5-delete-cookie-2.png" alt="" width="1418" height="161" class="alignleft size-full wp-image-7582" />
+![](images/laravel5-delete-cookie-2.png)
 
 設定された Cookie が追加されていることが確認できました。
 
 #### Cookie の削除確認
-<img src="images/laravel5-delete-cookie-3.png" alt="" width="1415" height="150" class="alignleft size-full wp-image-7592" />
+![](images/laravel5-delete-cookie-3.png)
 
 Cookie の有効期限が過去の日時に設定されていますが、 残念ながら Cookie は残ってました。
 
@@ -88,12 +88,12 @@ PHP の **setcookie**メソッドを使用する場合、第二引数に値を `
 ```
 
 #### Cookie 設定後
-<img src="images/laravel5-delete-cookie-4.png" alt="" width="1283" height="137" class="alignleft size-full wp-image-7598" />
+![](images/laravel5-delete-cookie-4.png)
 
 暗号化されていない Cookie が追加されてますね。
 
 #### Cookie の削除確認
-<img src="images/laravel5-delete-cookie-5.png" alt="" width="1287" height="144" class="alignleft size-full wp-image-7599" />
+![](images/laravel5-delete-cookie-5.png)
 
 期待通り、指定の Cookie が削除されました！
 
@@ -128,10 +128,10 @@ Cookie の暗号化は有効にしたまま、 Cookie の削除は Cookie ファ
 ```
 
 #### Cookie 設定後
-<img src="images/laravel5-delete-cookie-6.png" alt="" width="1248" height="141" class="alignleft size-full wp-image-7595" />
+![](images/laravel5-delete-cookie-6.png)
 
 #### Cookie の削除確認
-<img src="images/laravel5-delete-cookie-7.png" alt="" width="1275" height="145" class="alignleft size-full wp-image-7596" />
+![](images/laravel5-delete-cookie-7.png)
 
 無事、暗号化をしたまま Cookie を削除することができました。
 

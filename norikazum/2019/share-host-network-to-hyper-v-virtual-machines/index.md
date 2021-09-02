@@ -16,25 +16,25 @@ Zabbixサーバー側 **10051/tcp** と Zabbixクライアント側　**10050/tc
 
 **イメージ図** は以下のような感じです。
 
-<a href="images/share-host-network-to-hyper-v-virtual-machines-1.png"><img src="images/share-host-network-to-hyper-v-virtual-machines-1.png" alt="" width="1643" height="532" class="alignnone size-full wp-image-9477" /></a>
+![](images/share-host-network-to-hyper-v-virtual-machines-1.png)
 
 ## ホストマシン側
 1. PowerShellを管理者権限で起動し、以下のコマンドを実行し **仮想スイッチを作成** します
     `New-VMSwitch -SwitchName "NAT" -SwitchType Internal`
-    <a href="images/share-host-network-to-hyper-v-virtual-machines-2.png"><img src="images/share-host-network-to-hyper-v-virtual-machines-2.png" alt="" width="993" height="274" class="alignnone size-full wp-image-9423" /></a>
+![](images/share-host-network-to-hyper-v-virtual-machines-2.png)
     
     上記のコマンドにより、 **NAT** という名前の仮想スイッチ(内部)が作成されます。
-    <a href="images/share-host-network-to-hyper-v-virtual-machines-3.png"><img src="images/share-host-network-to-hyper-v-virtual-machines-3.png" alt="" width="736" height="643" class="alignnone size-full wp-image-9479" /></a>
+![](images/share-host-network-to-hyper-v-virtual-machines-3.png)
 
 2. 物理インターフェース **(イメージ図 NIC1)** のプロパティから以下の流れで **共有設定** をします。
-    <a href="images/share-host-network-to-hyper-v-virtual-machines-4.png"><img src="images/share-host-network-to-hyper-v-virtual-machines-4.png" alt="" width="489" height="385" class="alignnone size-full wp-image-9438" /></a>
+![](images/share-host-network-to-hyper-v-virtual-machines-4.png)
     
-    <a href="images/share-host-network-to-hyper-v-virtual-machines-5.png"><img src="images/share-host-network-to-hyper-v-virtual-machines-5.png" alt="" width="432" height="538" class="alignnone size-full wp-image-9439" /></a>
+![](images/share-host-network-to-hyper-v-virtual-machines-5.png)
     
-    <a href="images/share-host-network-to-hyper-v-virtual-machines-6.png"><img src="images/share-host-network-to-hyper-v-virtual-machines-6.png" alt="" width="497" height="225" class="alignnone size-full wp-image-9440" /></a>
+![](images/share-host-network-to-hyper-v-virtual-machines-6.png)
 
 3. 仮想ネットワーク **(イメージ図中 vEthernet(NAT))** にIPアドレスが割り当てられます
-    <a href="images/share-host-network-to-hyper-v-virtual-machines-7.png"><img src="images/share-host-network-to-hyper-v-virtual-machines-7.png" alt="" width="474" height="520" class="alignnone size-full wp-image-9441" /></a>
+![](images/share-host-network-to-hyper-v-virtual-machines-7.png)
 
 ## 仮想マシン側
 1. 仮想マシンを作成し、CentOS7をセットアップします。
@@ -70,7 +70,7 @@ Zabbixサーバー側 **10051/tcp** と Zabbixクライアント側　**10050/tc
 
 ## 準備完了
 あとは、仮想マシン側のファイアウォール(firewalld)の設定で 10051/tcp が通るように設定し、監視対象の準備を行えばOKです。
-<a href="images/share-host-network-to-hyper-v-virtual-machines-8.png"><img src="images/share-host-network-to-hyper-v-virtual-machines-8.png" alt="" width="948" height="465" class="alignnone size-full wp-image-9442" /></a>
+![](images/share-host-network-to-hyper-v-virtual-machines-8.png)
 
 **ホストマシン側のWindowsファイアウォールの設定は不要** でした。
 

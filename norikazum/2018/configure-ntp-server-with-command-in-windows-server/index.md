@@ -51,10 +51,10 @@ Windows Timeサービスの状態を確認します。
 
 スタートアップの種類が **手動** で、状態が　**開始** されていない状態であれば設定を変更します。
 以下の画像は、手動で開始されていない状態です。
-<img src="images/configure-ntp-server-with-command-in-windows-server-1.png" alt="" width="1150" height="754" class="alignnone size-full wp-image-8099" />
+![](images/configure-ntp-server-with-command-in-windows-server-1.png)
 
 以下のように設定を **自動(遅延開始)** に設定し、実行中にします。
-<img src="images/configure-ntp-server-with-command-in-windows-server-2.png" alt="" width="478" height="531" class="alignnone size-full wp-image-8100" />
+![](images/configure-ntp-server-with-command-in-windows-server-2.png)
 
 サービスが開始していない状態で、例えば `w32tm /query /status` を実行すると、
 `次のエラーが発生しました。 そのサービスを開始できませんでした。 (0x80070426)` となります。

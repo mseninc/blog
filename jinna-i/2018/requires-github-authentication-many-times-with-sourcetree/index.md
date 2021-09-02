@@ -11,7 +11,7 @@ tags: [Git, SourceTree, GitHub, その他, ライフハック]
 
 **正しいユーザー名とパスワードを入れているのにもかかわらず**、GitHub Login 画面が連発します。
 
-<a href="images/requires-github-authentication-many-times-with-sourcetree-1.png"><img src="images/requires-github-authentication-many-times-with-sourcetree-1.png" alt="" width="404" height="413" class="alignnone size-full wp-image-7393" /></a>
+![](images/requires-github-authentication-many-times-with-sourcetree-1.png)
 
 フェッチや新しいリポジトリのクローンもできませんでした。
 
@@ -38,7 +38,7 @@ SourceTreeのプロファイルは以下に格納されています。
 
 コントロールパネルのプログラムと機能からアンインストールが可能です。
 
-<a href="images/requires-github-authentication-many-times-with-sourcetree-2.png"><img src="images/requires-github-authentication-many-times-with-sourcetree-2.png" alt="" width="933" height="611" class="alignnone size-full wp-image-7394" /></a>
+![](images/requires-github-authentication-many-times-with-sourcetree-2.png)
 
 [Git - Downloading Package](https://git-scm.com/download/win)からGitのパッケージをダウントードして再度インストールします。
 
@@ -48,7 +48,7 @@ SourceTreeを起動して[ツール] > [オプション]から[認証]タブを�
 
 このとき、GitHubの2段階認証を利用している場合はパスワードの代わりにトークンを入力します。
 
-<a href="images/requires-github-authentication-many-times-with-sourcetree-3.png"><img src="images/requires-github-authentication-many-times-with-sourcetree-3.png" alt="" width="681" height="657" class="alignnone size-full wp-image-7395" /></a>
+![](images/requires-github-authentication-many-times-with-sourcetree-3.png)
 
 トークンの発行どないするねんって方は以下を参考にしてください。
 

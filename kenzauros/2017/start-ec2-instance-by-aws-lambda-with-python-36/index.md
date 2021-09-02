@@ -21,23 +21,23 @@ EC2 のインスタンスはすでにできているものとします。この�
 
 AWS コンソールから好きなリージョンに切り替えたあと (今回はなんとなくオハイオリージョン)、 Lambda をクリックして **Lambda のダッシュボード**を開きます。略してラムダッシュです。
 
-<a href="images/start-ec2-instance-by-aws-lambda-with-python-36-1.png"><img src="images/start-ec2-instance-by-aws-lambda-with-python-36-1.png" alt="AWS コンソールから Lambda をクリック" width="791" height="401" class="aligncenter size-full wp-image-5461" /></a>
+![AWS コンソールから Lambda をクリック](images/start-ec2-instance-by-aws-lambda-with-python-36-1.png)
 
 ちなみに EC2 インスタンスのリージョンと Lambda のリージョンは異なっていてもかまいません。
 
 なにも関数がない状態だと下記のように「ようこそ」的な画面が表示されます。なにはともあれ「**関数の作成**」をクリックして関数の作成を開始します。
 
-<a href="images/start-ec2-instance-by-aws-lambda-with-python-36-2.png"><img src="images/start-ec2-instance-by-aws-lambda-with-python-36-2.png" alt="関数の作成をクリック" width="1109" height="810" class="aligncenter size-full wp-image-5462" /></a>
+![関数の作成をクリック](images/start-ec2-instance-by-aws-lambda-with-python-36-2.png)
 
 「設計図」の選択では、使えそうなものがないので「**一から作成**」をクリックします。
 
-<a href="images/start-ec2-instance-by-aws-lambda-with-python-36-3.png"><img src="images/start-ec2-instance-by-aws-lambda-with-python-36-3.png" alt="設計図で「一から作成」をクリック" width="1109" height="534" class="aligncenter size-full wp-image-5463" /></a>
+![設計図で「一から作成」をクリック](images/start-ec2-instance-by-aws-lambda-with-python-36-3.png)
 
 「**名前**」には適当に関数の名前を入力します。ちなみに**この関数名は二度と変更できません**ので、命名規約を決めるなどして、慎重に命名してください。今回は `StartTestEC2Instance` とします。
 
 次にロールから「**カスタムロールの作成**」をクリックすると新しいウィンドウで **IAM Management Console** が開きます。
 
-<a href="images/start-ec2-instance-by-aws-lambda-with-python-36-4.png"><img src="images/start-ec2-instance-by-aws-lambda-with-python-36-4.png" alt="関数の基本的な情報を入力" width="1109" height="607" class="aligncenter size-full wp-image-5464" /></a>
+![関数の基本的な情報を入力](images/start-ec2-instance-by-aws-lambda-with-python-36-4.png)
 
 ### IAM ロールの作成
 
@@ -47,7 +47,7 @@ AWS コンソールから好きなリージョンに切り替えたあと (今�
 
 IAM Management Console の新しいロールを作る画面が開いたら、 (1) ロール名を入力し (ここでは `LambdaEC2Control`) ポリシードキュメントを表示して (2) 編集を押したあと、(3) テキストエリアに下記の JSON をペーストして「許可」を押します。
 
-<a href="images/start-ec2-instance-by-aws-lambda-with-python-36-5.png"><img src="images/start-ec2-instance-by-aws-lambda-with-python-36-5.png" alt="IAM ロールの作成" width="1109" height="772" class="aligncenter size-full wp-image-5475" /></a>
+![IAM ロールの作成](images/start-ec2-instance-by-aws-lambda-with-python-36-5.png)
 
 ちなみに**ポリシードキュメント**は IAM ロールの権限ポリシーを記述した JSON を言います。ここでは `"ec2:Start*"`, `"ec2:Stop*"` を指定して、 EC2 の起動・終了の権限を追加しています。
 
@@ -82,11 +82,11 @@ IAM ロールの「許可」を押すと自動的に関数の作成画面に戻�
 
 もう一度名前とロールを確認して「**関数の作成**」ボタンを押しましょう。
 
-<a href="images/start-ec2-instance-by-aws-lambda-with-python-36-6.png"><img src="images/start-ec2-instance-by-aws-lambda-with-python-36-6.png" alt="ロールを確認して関数の作成をクリック" width="1109" height="610" class="aligncenter size-full wp-image-5465" /></a>
+![ロールを確認して関数の作成をクリック](images/start-ec2-instance-by-aws-lambda-with-python-36-6.png)
 
 関数が作成されると詳細画面になるので、「関数コード」の「ランタイム」に **Python 3.6** を指定します。もちろん書きやすい言語でけっこうですが、いまから書くのであればあえて Python 2.7 にする必要はないでしょう。
 
-<a href="images/start-ec2-instance-by-aws-lambda-with-python-36-7.png"><img src="images/start-ec2-instance-by-aws-lambda-with-python-36-7.png" alt="Lambda 関数コードを編集" width="1109" height="771" class="aligncenter size-full wp-image-5466" /></a>
+![Lambda 関数コードを編集](images/start-ec2-instance-by-aws-lambda-with-python-36-7.png)
 
 関数コードのテキストエリア (index.py と書かれているところ) に下記のソースコードをペーストします。
 
@@ -108,27 +108,27 @@ def handler(event, context):
 
 さらに基本設定の「**タイムアウト**」がデフォルトは3秒になっているので、6秒にしておきます。通常は3秒あれば十分だと思いますが、最初はこれが原因でエラーになっても面倒なので少し余裕をみておきます。あとで必要に応じて縮めましょう。
 
-<a href="images/start-ec2-instance-by-aws-lambda-with-python-36-8.png"><img src="images/start-ec2-instance-by-aws-lambda-with-python-36-8.png" alt="環境変数とタイムアウトを設定" width="1109" height="879" class="aligncenter size-full wp-image-5467" /></a>
+![環境変数とタイムアウトを設定](images/start-ec2-instance-by-aws-lambda-with-python-36-8.png)
 
 ここまで完了したら一番上に戻って、「**保存してテスト**」をクリックします。当たり前ですが、動作確認のために操作対象の EC2 インスタンスは停止させて stopped にしておきましょう。
 
 まだテストイベントがない場合、**テストイベントの設定**画面が開くので、イベントテンプレートを **Hello World** にし、イベント名に適当な名前をつけて、「**作成**」をクリックします。ここは動作確認だけなので、あまり考えなくても OK です。
 
-<a href="images/start-ec2-instance-by-aws-lambda-with-python-36-9.png"><img src="images/start-ec2-instance-by-aws-lambda-with-python-36-9.png" alt="テストイベントの設定" width="834" height="913" class="aligncenter size-full wp-image-5468" /></a>
+![テストイベントの設定](images/start-ec2-instance-by-aws-lambda-with-python-36-9.png)
 
 あとは「**テスト**」ボタンをクリックすれば、やっとこさ関数が実行されます。
 
-<a href="images/start-ec2-instance-by-aws-lambda-with-python-36-10.png"><img src="images/start-ec2-instance-by-aws-lambda-with-python-36-10.png" alt="「テスト」ボタンで関数を手動実行してみる" width="1109" height="161" class="aligncenter size-full wp-image-5469" /></a>
+![「テスト」ボタンで関数を手動実行してみる](images/start-ec2-instance-by-aws-lambda-with-python-36-10.png)
 
 実行が成功すると下記のように成功と表示されるはずです。
 
-<a href="images/start-ec2-instance-by-aws-lambda-with-python-36-11.png"><img src="images/start-ec2-instance-by-aws-lambda-with-python-36-11.png" alt="Lambda 関数の実行結果" width="915" height="839" class="aligncenter size-full wp-image-5470" /></a>
+![Lambda 関数の実行結果](images/start-ec2-instance-by-aws-lambda-with-python-36-11.png)
 
 当たり前ですが、エラーのときはここが赤くなって、エラー内容が表示されます。普通にデバッグログが表示されるので、がんばって直しましょう(笑)
 
 EC2 を確認するとちゃんと running になっていることが確認できました。すばらしい！
 
-<a href="images/start-ec2-instance-by-aws-lambda-with-python-36-12.png"><img src="images/start-ec2-instance-by-aws-lambda-with-python-36-12.png" alt="Lambda から起動された EC2 インスタンス" width="1035" height="166" class="aligncenter size-full wp-image-5471" /></a>
+![Lambda から起動された EC2 インスタンス](images/start-ec2-instance-by-aws-lambda-with-python-36-12.png)
 
 ### トラブルシューティング
 
@@ -136,7 +136,7 @@ EC2 を確認するとちゃんと running になっていることが確認で�
 
 1. **ハンドラの不一致**  
 関数コードの「ハンドラ」には、メインルーチンのファイル名 (今回は `index.py`) とコードのエントリポイントとなる関数名 (今回は `handler`) をつないだものを指定します。これが異なっていると当然ながらエラーになります。
-<a href="images/start-ec2-instance-by-aws-lambda-with-python-36-13.png"><img src="images/start-ec2-instance-by-aws-lambda-with-python-36-13.png" alt="Lambda 関数のハンドラ設定" width="873" height="328" class="aligncenter size-full wp-image-5472" /></a>
+![Lambda 関数のハンドラ設定](images/start-ec2-instance-by-aws-lambda-with-python-36-13.png)
 2. **タイムアウト**  
 あとあと経過時間を見てみると2秒ほどだったのですが、初期設定の3秒だとタイムアウトがでてエラーになっていました。とりあえず動くまでは長めでいきましょう。
 3. **IAM ロールの権限不足 (UnauthorizedOperation)**  

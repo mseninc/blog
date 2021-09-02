@@ -58,20 +58,20 @@ composer require laravel/socialite
 ### GitHub の OAuth 設定
 1. GitHub のメニューから、 Settings を選択します。
 
-    [caption id="attachment_10124" align="alignnone" width="800"]<img src="images/laravel-socialite-1.png" alt="" width="219" height="452" class="size-full wp-image-10124" /> 右上のユーザのアイコンをクリックしてメニューを表示[/caption]
+![](images/laravel-socialite-1.png)
 
 1. Developer settings を選択します。
 
-    [caption id="attachment_10123" align="alignnone" width="800"]<img src="images/laravel-socialite-2.png" alt="" width="245" height="581" class="size-full wp-image-10123" /> 左側のメニューから Developer settings をクリック[/caption]
+![](images/laravel-socialite-2.png)
 
 1. OAuth Apps を選択し、 New OAuth App をクリックします。
 
-    [caption id="attachment_10126" align="alignnone" width="800"]<img src="images/laravel-socialite-3.png" alt="" width="800" height="186" class="size-full wp-image-10126" /> OAuth Apps をクリックして New OAuth App をクリック[/caption]
+![](images/laravel-socialite-3.png)
 
 1. Application name, Homepage URL, Authorization callback URL を入力します。
     - Authorization callback URL は Laravel に返すためのパスを設定します。
 
-    [caption id="attachment_10125" align="alignnone" width="800"]<img src="images/laravel-socialite-4.png" alt="" width="550" height="548" class="size-full wp-image-10125" /> 入力事項を埋める (* の項目は必須)[/caption]
+![](images/laravel-socialite-4.png)
 
     本記事では、例として以下のように入力します。
     |項目名|入力する内容|
@@ -84,7 +84,7 @@ composer require laravel/socialite
 1. Client ID と Client Secret を Laravel 側に反映させます。
 
     入力が完了すると、 Client ID と Client Secret が発行されます。それぞれの値を Laravel に設定します。
-    [caption id="attachment_10132" align="alignnone" width="791"]<img src="images/laravel-socialite-5.png" alt="" width="791" height="426" class="size-full wp-image-10132" /> Client ID と Client Secret が発行される[/caption]
+![](images/laravel-socialite-5.png)
 
 
     - `.env` に環境変数を作り、 Client ID と Client Secret を代入します。
@@ -236,15 +236,15 @@ GitHub アカウントと連携してログインができることを確認し�
 
 1. `http://localhost/login` にアクセスして "Login with GitHub" をクリックします。
 
-    [caption id="attachment_10151" align="alignnone" width="800"]<img src="images/laravel-socialite-6.png" alt="" width="732" height="330" class="size-full wp-image-10151" /> ログインページに作成したリンクをクリック[/caption]
+![](images/laravel-socialite-6.png)
 
 1. GitHub との連携を認証します。
 
-    [caption id="attachment_10152" align="alignnone" width="800"]<img src="images/laravel-socialite-7.png" alt="" width="518" height="506" class="size-full wp-image-10152" /> Authorize (ユーザー名) をクリック[/caption]
+![](images/laravel-socialite-7.png)
 
 1. ログインが完了しました。
 
-    [caption id="attachment_10153" align="alignnone" width="800"]<img src="images/laravel-socialite-8.png" alt="" width="800" height="188" class="size-full wp-image-10153" /> GitHubのアカウント名でログインが完了[/caption]
+![](images/laravel-socialite-8.png)
 
 
 ## 総括

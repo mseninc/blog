@@ -24,37 +24,37 @@ Heroku で使われている PostgreSQL を自分の開発環境で使いたい�
 PostgreSQL のインストーラーを[こちら](https://www.postgresql.org/)からダウンロードしてください。
 
 インストールするコンポーネントはデフォルトのまま進めます。
-![postgre0](images/rails-postgresql-1.png)
+![postgre0](https://mseeeen.msen.jp/wp-content/uploads/2021/06/2021-06-09_16h08_56.png)
 
 パスワードを設定します。
-![postgre1](images/rails-postgresql-2.png)
+![postgre1](https://mseeeen.msen.jp/wp-content/uploads/2021/06/2021-06-09_16h10_08.png)
 
 ポートと Locale の設定もデフォルトのままで大丈夫です。
-![postgre2](images/rails-postgresql-3.png)
+![postgre2](https://mseeeen.msen.jp/wp-content/uploads/2021/06/2021-06-09_16h10_12.png)
 
-![postgre3](images/rails-postgresql-4.png)
+![postgre3](https://mseeeen.msen.jp/wp-content/uploads/2021/06/2021-06-09_16h10_16.png)
 
 インストールが完了したら、**完了後の画面のチェックを外して終了させてください。 Stack Builder は使いません。**
 
-![postgre4](images/rails-postgresql-5.png)
+![postgre4](https://mseeeen.msen.jp/wp-content/uploads/2021/06/2021-06-10_09h44_59.png)
 
 ## PATH の設定
 
 スタートボタンから`設定`を開いて、`システム → 詳細情報 → システムの詳細設定`と辿って行ってください。
 
-![path1](images/rails-postgresql-6.png)
+![path1](https://mseeeen.msen.jp/wp-content/uploads/2021/06/2021-06-11_10h07_30.png)
 
-![path2](images/rails-postgresql-7.png)
+![path2](https://mseeeen.msen.jp/wp-content/uploads/2021/06/2021-06-11_10h07_41.png)
 
-![path3](images/rails-postgresql-8.png)
+![path3](https://mseeeen.msen.jp/wp-content/uploads/2021/06/2021-06-11_10h08_10.png)
 
 `環境変数`で`システム環境変数`の`PATH`を選択して編集します。
 
-![path4](images/rails-postgresql-9.png)
+![path4](https://mseeeen.msen.jp/wp-content/uploads/2021/06/2021-06-11_11h06_26.png)
 
 `新規`を押して、先ほどインストールした PostgreSQL のフォルダにある bin フォルダのパスを入力しましょう。
 
-![path5](images/rails-postgresql-10.png)
+![path5](https://mseeeen.msen.jp/wp-content/uploads/2021/06/2021-06-11_10h09_10.png)
 
 恐らく `C:\Program Files\PostgreSQL\13\bin` のようなパスになるはずです。
 

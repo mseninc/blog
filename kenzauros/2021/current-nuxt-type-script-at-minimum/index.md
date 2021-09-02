@@ -29,7 +29,7 @@ tags: [Vue.js, Nuxt.js, TypeScript, Web]
 
 TypeScript で Vue コンポーネントの script を記述する際、[公式リファレンス](https://typescript.nuxtjs.org/ja/cookbook/components#script)にもあるように3種類の API が選べます。
 
-<a href="images/current-nuxt-type-script-at-minimum-1.png"><img src="images/current-nuxt-type-script-at-minimum-1.png" alt="" width="415" height="128" class="aligncenter size-full wp-image-16433" /></a>
+![](images/current-nuxt-type-script-at-minimum-1.png)
 
 - **Options API**: `Vue.extend` するやり方
 - **Composition API**: `defineComponent` を使うやり方  
@@ -230,7 +230,7 @@ export default Vue.extend({
 
 ここまできて、 VSCode などを使っているとおそらくコンポーネントとページの `User` で型の警告が出ているでしょう。 (今回の環境では拡張機能 Vetur を使用しています)
 
-<a href="images/current-nuxt-type-script-at-minimum-2.png"><img src="images/current-nuxt-type-script-at-minimum-2.png" alt="" width="354" height="115" class="aligncenter size-full wp-image-16430" /></a>
+![](images/current-nuxt-type-script-at-minimum-2.png)
 
 当然ながら `User` を定義していないので、 TypeScript 的に「そんな型は知らん！」というわけですね。
 
@@ -252,7 +252,7 @@ import { User } from '@/types/user'
 
 これでエディター上のエラーが消えるはずです。
 
-<a href="images/current-nuxt-type-script-at-minimum-3.png"><img src="images/current-nuxt-type-script-at-minimum-3.png" alt="" width="212" height="73" class="aligncenter size-full wp-image-16431" /></a>
+![](images/current-nuxt-type-script-at-minimum-3.png)
 
 もし消えなければエディターを再起動するかファイルパスを確認しましょう。
 
@@ -266,7 +266,7 @@ $ yarn dev
 
 `http://localhost:3000/` にアクセスして下記のように表示されれば OK です。
 
-<a href="images/current-nuxt-type-script-at-minimum-4.png"><img src="images/current-nuxt-type-script-at-minimum-4.png" alt="" width="595" height="55" class="aligncenter size-full wp-image-16432" /></a>
+![](images/current-nuxt-type-script-at-minimum-4.png)
 
 ## まとめ
 

@@ -41,14 +41,14 @@ public function test($input)
 試しに `if` と入力して `Ctrl + space` をしてみてください。
 ※Visual Studio Codeの初期設定では `Ctrl + space` が補完候補を表示するショートカットキーとなっています。
 
-<img src="images/vscode-snippet-1.png" alt="" width="546" height="258" class="alignnone size-full wp-image-6788" />
+![](images/vscode-snippet-1.png)
 
 このようにいくつかの入力候補が表示されます。
 例えば上から5番目の候補を選択してみると、以下のようにif文のフォーマットが自動的に生成されます。
 
-<img src="images/vscode-snippet-2.png" alt="" width="530" height="280" class="alignnone size-full wp-image-6791" />
+![](images/vscode-snippet-2.png)
 
-<img src="images/vscode-snippet-3.png" alt="" width="276" height="154" class="alignnone size-full wp-image-6792" />
+![](images/vscode-snippet-3.png)
 
 では、実際に独自スニペットを登録してみましょう。
 ```
@@ -56,7 +56,7 @@ public function test($input)
 ```
 と進んでください。
 
-<img src="images/vscode-snippet-4.png" alt="" width="720" height="572" class="alignnone size-full wp-image-6796" />
+![](images/vscode-snippet-4.png)
 
 すると検索ウインドウが開きますので `php.json` を選択してください。
 独自スニペットはこの `php.json` に登録していきます。
@@ -93,7 +93,7 @@ public function index($arg)
 動的に変動する文字は `${index}` のようにします。
 このようにしておけば、上の例だと `index` のメソッド名を入力後に `Tabキー` で `arg` にカーソルが移動するようになります。
 
-<img src="images/vscode-snippet-5.png" alt="" width="342" height="131" class="alignnone size-full wp-image-6811" />
+![](images/vscode-snippet-5.png)
 
 ※コーディング規約を設定してあるので、エラー表示が出ています。
 

@@ -22,7 +22,7 @@ tags: [Linux, bash]
 
 以下の図のように、 **screen** がそれぞれ **window 1**, **window 2**, **window 3** の 3 つのスクリーンを管理していると想定します。 User 1 は **Terminal 1** を経由して **window 3** に、 User 2 は **Terminal 2** を経由して **window 1** にアクセスするように、ユーザーは端末を経由してそれぞれのスクリーンにアクセスできます。 Terminal 1 経由でアクセスするウィンドウを window 3 から window 1 に切り替えるように、それぞれの端末でアクセスするウィンドウを切り替えることも可能です。
 
-[caption id="attachment_13629" align="aligncenter" width="432"]<a href="images/bash-screen-command-1.png"><img src="images/bash-screen-command-1.png" alt="" width="432" height="599" class="size-full wp-image-13629" /></a> スクリーンコマンドの概念図[/caption]
+![](images/bash-screen-command-1.png)
 
 ウィンドウを明示的に閉じない限り、 **端末からスクリーンへのアクセスを切断してもウィンドウ自体が閉じられることはありません。** スクリーンのウィンドウ上で処理中のプロセスがある場合、 **プロセスの実行を継続したままアクセスを切断できます。** さらに、 **切断したスクリーンに再度接続することも可能** です。
 

@@ -12,7 +12,7 @@ tags: [Vue.js, その他, 〇〇奮闘記]
 ## 概要
 VueJS Osaka は 今年の5月から始まった、Vue.js に関する、新しい勉強会グループです。先日参加した [v-kansai](https://vuekansai.connpass.com/) 同様、初心者も Welcome なスタンスの勉強会です。
 
-[caption id="attachment_10413" align="alignnone" width="800"]<img src="images/vuejs-osaka-2-1.jpg" alt="" width="800" height="600" class="size-full wp-image-10413" /> VueJS Osaka #2 の様子[/caption]
+![](images/vuejs-osaka-2-1.jpg)
 
 今回は以下の内容を聴講しました。
 

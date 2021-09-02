@@ -12,7 +12,7 @@ MSENの桝田です。
  
 さて、先週土曜(11/7)のことですが、ISMS講習の4回目を行いました。
 
-<a href="images/isms-first-4-1.jpg"><img src="images/isms-first-4-1.jpg" alt="" width="300" height="169" class="alignnone size-medium wp-image-4093" /></a>
+![](images/isms-first-4-1.jpg)
 
 第４回の中心は、ベースライン分析、というものでした。
 簡単に言うと、ISMSで定められたセキュリティ基準をクリア出来ているか？

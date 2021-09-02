@@ -16,11 +16,11 @@ tags: [Git, Windows]
 
 ダウンロードしたファイルをクリックして下さい。クリックすると以下の画像のようなウインドウが立ち上がってくると思います。NEXTをクリックして下さい。
 
-<img src="images/git-how-to-install-1.png" alt="2016-06-28_13h07_32" width="499" height="387" class="aligncenter size-full wp-image-1322" />
+![2016-06-28_13h07_32](images/git-how-to-install-1.png)
 
 ### Gitアイコン・コンテキストメニューの追加、エディタ設定
 
-<img src="images/git-how-to-install-2.png" alt="2016-06-28_13h08_06" width="499" height="387" class="aligncenter size-full wp-image-1323" />
+![2016-06-28_13h08_06](images/git-how-to-install-2.png)
 
 * Additional Icons :「On the Desktop」にチェックを入れると、Gitのアイコンをデスクトップに追加する。
 * Windows Explorer Integration : チェックを入れた項目をコンテキストメニュー（右クリックすると出てくるメニュー）に表示する。
@@ -34,7 +34,7 @@ tags: [Git, Windows]
 
 ### Gitコマンドの適用範囲の設定
 
-<img src="images/git-how-to-install-3.png" alt="2016-06-28_13h08_44" width="499" height="387" class="aligncenter size-full wp-image-1324" />
+![2016-06-28_13h08_44](images/git-how-to-install-3.png)
 
 * Use Git from Git Bash only : BashからのみGitコマンドを利用する。
 * Use Git from the Windows Command Prompt: GitのコマンドをWindowsのコマンドプロンプトから使えるようになります。これをおすすめします。
@@ -44,7 +44,7 @@ tags: [Git, Windows]
 
 ### チェックアウト時のコードの変換設定
 
-<img src="images/git-how-to-install-4.png" alt="2016-06-28_13h09_28" width="499" height="387" class="aligncenter size-full wp-image-1325" />
+![2016-06-28_13h09_28](images/git-how-to-install-4.png)
 
 * Checkout Windows-style, commit Unix-style line endings: チェックアウト時に改行コードを[LF]から[CRLF]に変換し、コミットするときに[CRLF]を[LF]に変換します。これはWindows推奨設定です。
 * Checkout as-is, commit Unix-style endings : チェックアウト時に、そのままチェックアウトし、コミット時にCRLFをLFに変換します。これは、Unix上での推奨設定です。
@@ -56,7 +56,7 @@ tags: [Git, Windows]
 
 ### Git Bashを使うときのエミュレーターの選択
 
-<img src="images/git-how-to-install-5.png" alt="2016-06-28_13h10_01" width="499" height="387" class="aligncenter size-full wp-image-1326" />
+![2016-06-28_13h10_01](images/git-how-to-install-5.png)
 
 * Use MinTTY : MinTTYのコンソールを使用します。GitBashは、端末エミュレータとしてMinTTYを使用します。対話式のPythonのようなWindowsコンソールプログラムをMinTTYで動作させるにはwinptyを介して起動する必要があります。
 * Use Window's defoult console window : ウインドウズの通常のコンソールウインドウを使用します。PythonやNode.jsでもWin32コンソールプログラムでうまく動作しますが、ウインドウ幅が変更できない、フォントを選べないといった非常に制限されたデフォルトのコンソールウインドウを使用することになります。
@@ -66,13 +66,13 @@ UseMinTTy（the default terminal of MSys2)を選択し、Nextを押して下さ�
 ### 設定のオプション
 基本的にはチェックがある場合はチェックを外し、Installをクリックして下さい。
 
-<img src="images/git-how-to-install-6.png" alt="2016-06-28_13h25_51" width="499" height="387" class="aligncenter size-full wp-image-1334" />
+![2016-06-28_13h25_51](images/git-how-to-install-6.png)
 
 * Enable file system caching : メモリリソースを使い、gitの処理向上をします。メモリに余裕がある場合は、チェックを入れても構いません。
 * Enable Git Credential Manager : Gitのリモートリポジトリにアクセスする際の認証情報をWindowsの資格情報マネージャに保存する。一度入力して保存すると、次からはパスワードを入力せずに利用できます。
 
 インストールが完了したら以下の画面が表示されます。
 
-<img src="images/git-how-to-install-7.png" alt="gitfinish" width="497" height="385" class="aligncenter size-full wp-image-1214" />
+![gitfinish](images/git-how-to-install-7.png)
 
 Finishをクリックして完了してください。これでインストールは完了です。
