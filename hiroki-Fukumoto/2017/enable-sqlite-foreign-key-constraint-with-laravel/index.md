@@ -14,7 +14,7 @@ tags: [PHP, Laravel, SQLite, Web]
 ※**SQLiteでは、SQLite3から外部キーの設定が可能になりました**。
 
 また、DBの作成はマイグレーションで行います。
-マイグレーションについての説明は過去記事の<a href="/laravel-53-eloquent-orm-2/">Laravel 5.3 Eloquent ORM 入門 2 (マイグレーション)</a>をご確認ください。
+マイグレーションについての説明は過去記事の[Laravel 5.3 Eloquent ORM 入門 2 (マイグレーション)](/laravel-53-eloquent-orm-2/)をご確認ください。
 
 
 ※以下に記載する内容は **Laravel 5.5.3** を前提としております。
@@ -93,7 +93,7 @@ public function down(){
 しかし、どうやらこれだけではSQLiteの外部キー制約は有効にならないようです。
 なぜ有効にならないのか？
 
-<a href="https://sqlite.org/foreignkeys.html">SQLiteの公式サイト</a>を見てみると、
+[SQLiteの公式サイト](https://sqlite.org/foreignkeys.html)を見てみると、
 
 >Foreign key constraints are disabled by default (for backwards compatibility), so must be enabled separately for each database connection.
 >**後方互換のため外部キー制約はデフォルトで無効になっていますので、データベース接続ごとに有効にする必要があります。**
@@ -103,7 +103,7 @@ SQLiteの外部キー制約を有効にするには`PRAGMA foreign_keys = ON;`�
 しかし、今回はSQLiteのコマンドを叩くのではなく、Laravel上でソースコードを書いて外部キー制約を有効したい。
 どうすれば。。。。
 
-その答えは、<a href="https://laravel.com/docs/5.5/migrations">Laravel公式サイト（ページ下部）</a>にありました！！！
+その答えは、[Laravel公式サイト（ページ下部）](https://laravel.com/docs/5.5/migrations)にありました！！！
 
 ![](images/enable-sqlite-foreign-key-constraint-with-laravel-1.png)
 
@@ -153,7 +153,7 @@ class AppServiceProvider extends ServiceProvider {
 `php artisan:migrate`
 
 そして、SQLiteの中を見てみると、、、、
-（私は<a href="http://sqlitebrowser.org/">DB Browser for SQLite</a>でSQLiteの中身を確認しています。）
+（私は[DB Browser for SQLite](http://sqlitebrowser.org/)でSQLiteの中身を確認しています。）
 
 ![](images/enable-sqlite-foreign-key-constraint-with-laravel-2.png)
 

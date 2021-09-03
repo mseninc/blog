@@ -33,7 +33,7 @@ GLICODE（グリコード）
 <li>お菓子を置くための白いシート（クッキングペーパー等）
 白い無地のものの上に置かないとアプリで読み込めない場合がある様です。</li>
 <li>スマホアプリ
-<a href="https://play.google.com/store/apps/details?id=jp.glico.cp.GLICODE">Android版</a>
+[Android版](https://play.google.com/store/apps/details?id=jp.glico.cp.GLICODE)
 iPhone版（8月末公開予定）</li>
 </ul>
 

@@ -15,7 +15,7 @@ tags: [レク, その他]
 
 ### 食材調達
 
-当日の朝、「<a href="http://www.saisai-mimasaka.jp/">**彩菜みまさか**</a>」という八百屋で皆と合流し野菜を調達。
+当日の朝、「[**彩菜みまさか**](http://www.saisai-mimasaka.jp/)」という八百屋で皆と合流し野菜を調達。
 調達した野菜は晩御飯で輝くことになります。
 
 ### 昼食
@@ -32,7 +32,7 @@ tags: [レク, その他]
 
 ### お宿と琵琶湖
 
-無事宿に到着。宿名「<a href="http://www.shikitei.info/">**四季亭**</a>」
+無事宿に到着。宿名「[**四季亭**](http://www.shikitei.info/)」
 
 ![四季亭](images/2017-summer-recreation-in-biwako-1-2.jpg)
 ![四季亭(内観)](images/2017-summer-recreation-in-biwako-1-3.jpg)
@@ -50,7 +50,7 @@ tags: [レク, その他]
 
 ![](images/2017-summer-recreation-in-biwako-1-6.jpg)
 
-その間、きよしんさんとじんじんさんと僕とで竹生島の造り酒屋の「<a href="http://chikubu-sakura.com/">**吉田酒造**</a>」にて地酒を購入。
+その間、きよしんさんとじんじんさんと僕とで竹生島の造り酒屋の「[**吉田酒造**](http://chikubu-sakura.com/)」にて地酒を購入。
 
 ![吉田酒造](images/2017-summer-recreation-in-biwako-1-7.jpg)
 
