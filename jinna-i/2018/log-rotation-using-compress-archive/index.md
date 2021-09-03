@@ -42,7 +42,7 @@ Get-ChildItem D:\ -Filter *.zip | Where-Object {$_.CreationTime -lt (Get-Date).A
 
 PowerShellは実行ポリシーやら何やらありますが、今回は単純にバッチファイルからキックしてみます。
 
-``` dos
+```
 @echo off
 powershell -NoProfile -ExecutionPolicy Unrestricted .\LogRotater.ps1
 ```

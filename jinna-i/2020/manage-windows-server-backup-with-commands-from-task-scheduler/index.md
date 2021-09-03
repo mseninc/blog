@@ -27,7 +27,7 @@ tags: [Windows Server, Windows Server バックアップ, Windows]
 
 まずは `wbadmin get versions` で現在保持されているバックアップを確認します。
 
-```cmd
+```
 C:\Users\Administrator>wbadmin get versions
 wbadmin 1.0 - バックアップ コマンド ライン ツール
 (C) Copyright 2013 Microsoft Corporation. All rights reserved.
@@ -55,7 +55,7 @@ wbadmin 1.0 - バックアップ コマンド ライン ツール
 
 一覧で表示されて非常に見にくいので `find /i "バックアップ時間"` で抽出して `/c` で数をカウントします。
 
-```cmd
+```
 C:\Users\Administrator>wbadmin get versions | find /i "バックアップ時間"
 バックアップ時間: 2020/03/11 5:00
 バックアップ時間: 2020/03/12 5:00
@@ -97,7 +97,7 @@ C:\Users\Administrator>wbadmin get versions | find /i "バックアップ時間"
 
 どのようなコマンドが使えるのかヘルプを見てみます。今回の場合だと `-keepVersions` が使えそうです。
 
-```cmd
+```
 C:\Users\Administrator>wbadmin delete backup -?
 wbadmin 1.0 - バックアップ コマンド ライン ツール
 (C) Copyright 2013 Microsoft Corporation. All rights reserved.
@@ -153,7 +153,7 @@ WBADMIN DELETE BACKUP -backupTarget:f: -deleteOldest
 
 試しに1つ削除して 26 にしてみましょう。
 
-```cmd
+```
 C:\Users\Administrator>wbadmin delete backup -keepVersions:26
 wbadmin 1.0 - バックアップ コマンド ライン ツール
 (C) Copyright 2013 Microsoft Corporation. All rights reserved.
@@ -175,7 +175,7 @@ C:\Users\Administrator>wbadmin get versions | find /i "バックアップ時間"
 対話形式となるので、タスクから実行する場合は `-quiet` オプションを追加した方がよいです。
 `-quiet` オプションを追加して 25 にしてみます。
 
-```cmd
+```
 C:\Users\Administrator>wbadmin delete backup -quiet -keepVersions:25
 wbadmin 1.0 - バックアップ コマンド ライン ツール
 (C) Copyright 2013 Microsoft Corporation. All rights reserved.
@@ -193,7 +193,7 @@ C:\Users\Administrator>wbadmin get versions | find /i "バックアップ時間"
 
 よさそうな感じです。保持世代数を下回っている場合はどうなるのか。気になるところなのでもう一度 26 で実行してみます。
 
-```cmd
+```
 C:\Users\Administrator>wbadmin delete backup -quiet -keepVersions:26
 wbadmin 1.0 - バックアップ コマンド ライン ツール
 (C) Copyright 2013 Microsoft Corporation. All rights reserved.
@@ -223,7 +223,7 @@ wbadmin コマンドのヘルプに注意書きがありましたが、**タス�
 
 タスク実行後、世代数が 21 となっていることを確認しました。
 
-```cmd
+```
 C:\Users\Administrator>wbadmin get versions | find /i "バックアップ時間" /c
 21
 ```

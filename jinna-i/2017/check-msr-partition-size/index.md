@@ -43,13 +43,13 @@ Microsoftでは以下のように掲載されています。
 
 コマンドプロンプトを開き、**diskpart** と入力します。
 
-``` dos
+```
 c:\>diskpart
 ```
 
 まずは、ディスク情報を確認するため **list disk** と入力します。
 
-``` dos
+```
 DISKPART> list disk
 
   ディスク      状態           サイズ   空き   ダイナ GPT
@@ -60,7 +60,7 @@ DISKPART> list disk
 
 確認したいディスクを選択します。今回はディスク0を選択するので **select disk 0** と入力します。
 
-``` dos
+```
 DISKPART> select disk 0
 
 ディスク 0 が選択されました。
@@ -68,7 +68,7 @@ DISKPART> select disk 0
 
 パーティション情報の確認には **list partition** と入力します。
 
-``` dos
+```
 DISKPART> list partition
 
   Partition ###  Type                Size     Offset
@@ -83,7 +83,7 @@ DISKPART> list partition
 
 終了する場合は、 **exit** と入力します。
 
-``` dos
+```
 DISKPART> exit
 ```
 

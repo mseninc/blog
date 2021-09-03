@@ -91,7 +91,7 @@ Performing the operation "Clear-RecycleBin" on target "All of the contents of th
 
 - ClearRecycleBin.ps1
 
-```cmd
+```
 Clear-RecycleBin -Force
 ```
 

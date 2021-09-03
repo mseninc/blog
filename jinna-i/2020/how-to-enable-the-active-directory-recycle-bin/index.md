@@ -105,7 +105,7 @@ Active Directory ユーザーとコンピューターに戻ると、先ほど復
 
 まずは削除されたオブジェクトを確認します。ドメイン名は `jinna-i.local` になりますので、適宜読み替えてください。
 
-```cmd
+```
 PS C:\Users\Administrator> Get-ADObject -LDAPFilter "(Name=*)" -SearchBase "cn=Deleted　Objects,DC=jinna-i,DC=local" -Includ
 eDeletedObjects
 
@@ -119,7 +119,7 @@ ObjectGUID        : 11c89078-8402-45ff-87e6-4f5917b36f4f
 
 ユーザー名 `jinna-i` を指定して復元します。
 
-```cmd
+```
 PS C:\Users\Administrator> Get-ADObject -Filter {displayName -eq "jinna-i"} -IncludeDeletedObjects | Restore-ADObject
 ```
 

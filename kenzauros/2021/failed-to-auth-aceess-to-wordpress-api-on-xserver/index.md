@@ -21,7 +21,7 @@ tags: [WordPress, XServer, Web, Apache]
 
 はい。**WordPress の設置されているディレクトリの `.htaccess` の先頭に下記を追記**してください。
 
-```apache
+```
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteCond %{HTTP:Authorization} .
@@ -131,7 +131,7 @@ XSERVER の Apache でヘッダーが削除されているのかしら？
 具体的には `.htaccess` の冒頭に下記のように追記します。
 内容としては **`Authorization` ヘッダーがついていれば、環境変数 `HTTP_AUTHORIZATION` にヘッダーの内容を設定する** というものです。
 
-```apache
+```
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteCond %{HTTP:Authorization} .
@@ -143,7 +143,7 @@ WordPress のディレクトリだと `# BEGIN WordPress` という記述があ�
 
 追加後の `.htaccess` のイメージはこちら
 
-```apache
+```
 # Set authorization to environmental variable
 <IfModule mod_rewrite.c>
 RewriteEngine On

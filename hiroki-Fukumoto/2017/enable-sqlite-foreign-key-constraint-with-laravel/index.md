@@ -42,7 +42,7 @@ DB_PASSWORD=/*SQLiteに接続するためのパスワード*/
 今回は、サンプルとして`groups_table`と`users_table`を用意します。
 ディレクトリ構成はこんな感じです！
 
-```directory
+```
 database
   └ migrations
      ├2017_11_10_000001_create_groups_table.php
@@ -120,7 +120,7 @@ SQLiteの外部キー制約を有効にするには`PRAGMA foreign_keys = ON;`�
 
 今回はマイグレーション以外でも有効にしたいので`AppServiceProvider.php`に書きました。
 
-```directory
+```
 app
   └ Providers
      └AppServiceProvider.php

@@ -21,7 +21,7 @@ tags: [バッチ, その他, ライフハック]
 
 できたファイルを右クリックして「編集」などからエディタを開き、下記のソースをコピペして保存します。
 
-```bat
+```
 @ECHO OFF
 ECHO %~1
 netsh interface show interface "%~1" | findstr "有効">%TEMP%\dock_interface_status.txt

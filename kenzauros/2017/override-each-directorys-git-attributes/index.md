@@ -35,7 +35,7 @@ tags: [Git, Git LFS, その他の技術]
 
 ルートの `.gitattributes` に前項の設定がされており、 `LARGE/LARGE.sql` が巨大なファイル、 `small/small.sql` が比較的小さな SQL ファイルだと仮定します。
 
-```directory
+```
 /
     .gitattributes
     LARGE/
@@ -48,7 +48,7 @@ tags: [Git, Git LFS, その他の技術]
 
 これを解消するには**下層の `small/` ディレクトリにも `.gitattributes` ファイルを配置**します。
 
-```directory
+```
 /
     .gitattributes
     LARGE/
@@ -100,7 +100,7 @@ Git における改行コード関連は `core.autocrlf` や `core.eol` を含�
 
 リファレンスでもサンプルとして上がっている下記の設定が参考になります。
 
-```.gitattributes
+```
 *               text=auto
 *.txt		text
 *.vcproj	text eol=crlf
