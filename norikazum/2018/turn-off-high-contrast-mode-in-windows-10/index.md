@@ -2,7 +2,7 @@
 title: "[Windows 10] 急に画面が変に！ ハイコントラストモードをOFFにする"
 date: 2018-07-16
 author: norikazum
-tags: [Windows, Windows 10, その他, ライフハック]
+tags: [Windows, Windows 10]
 ---
 
 こんにちは。

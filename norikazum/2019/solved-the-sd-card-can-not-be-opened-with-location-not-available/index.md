@@ -2,7 +2,7 @@
 title: 解決！SDカードが「場所が利用できません」となって開けない件
 date: 2019-05-31
 author: norikazum
-tags: [Windows 10, SDカード, その他, ライフハック]
+tags: [Windows 10, SDカード]
 ---
 
 こんにちは。

@@ -2,7 +2,7 @@
 title: "[Google] 他のメールアカウントをGmailで送受信する方法"
 date: 2019-11-27
 author: norikazum
-tags: [Gmail, その他, ライフハック]
+tags: [Gmail]
 ---
 
 こんにちは。

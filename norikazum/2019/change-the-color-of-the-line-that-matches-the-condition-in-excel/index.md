@@ -2,7 +2,7 @@
 title: "[Excel] 解決：条件に一致した行全体の色を変える方法"
 date: 2019-04-10
 author: norikazum
-tags: [Excel, その他, ライフハック]
+tags: [Excel]
 ---
 
 こんにちは。

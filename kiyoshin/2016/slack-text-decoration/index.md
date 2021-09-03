@@ -2,7 +2,7 @@
 title: Slackの文字を装飾しちゃおう! 太字/斜体/引用/コード
 date: 2016-07-28
 author: kiyoshin
-tags: [Slack, その他, ライフハック]
+tags: [Slack]
 ---
 
 最近ポケモンGO の記事を連発していたので、今日は Slack の記事です。

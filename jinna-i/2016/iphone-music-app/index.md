@@ -2,7 +2,7 @@
 title: iPhoneのミュージックアプリでアーティストが表示されない時に確認したい2つのこと
 date: 2016-10-04
 author: jinna-i
-tags: [iPhone, iTunes, その他, ライフハック]
+tags: [iPhone, iTunes]
 ---
 
 こんにちは、じんないです。

@@ -2,7 +2,7 @@
 title: "[Android] PCでSMSを送受信する方法"
 date: 2019-02-11
 author: norikazum
-tags: [Android, SMS, その他, ライフハック]
+tags: [Android, SMS]
 ---
 
 こんにちは。

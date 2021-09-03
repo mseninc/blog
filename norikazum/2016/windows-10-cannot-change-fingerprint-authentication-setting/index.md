@@ -2,7 +2,7 @@
 title: Windows 10で指紋認証Helloがグレーアウトして設定できないを解決
 date: 2016-11-15
 author: norikazum
-tags: [Windows 10, その他, ライフハック]
+tags: [Windows 10]
 ---
 
 こんにちは。

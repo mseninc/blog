@@ -2,7 +2,7 @@
 title: Windows 7 で Windows Update が進まない件の対応
 date: 2016-12-13
 author: jinna-i
-tags: [Windows, Windows 7, Windows Update, その他, ライフハック]
+tags: [Windows, Windows 7, Windows Update]
 ---
 
 こんにちは、じんないです。

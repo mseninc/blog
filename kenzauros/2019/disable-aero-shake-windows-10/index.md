@@ -2,7 +2,7 @@
 title: Windows 10 でウィンドウを振ると他のウィンドウが最小化されるアレを止める (Aero Shake)
 date: 2019-12-27
 author: kenzauros
-tags: [Windows 10, その他, ライフハック]
+tags: [Windows 10]
 ---
 
 Windows 10 を使っていて、ストレスを感じることナンバー15、 **Aero Shake (エアロシェイク)** の無効化方法です。

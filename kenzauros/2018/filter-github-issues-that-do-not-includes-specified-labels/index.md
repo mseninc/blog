@@ -2,7 +2,7 @@
 title: GitHub の Issue 検索で特定のラベルを「含まない」 Issue を抽出するには
 date: 2018-06-01
 author: kenzauros
-tags: [GitHub, その他, ライフハック]
+tags: [GitHub]
 ---
 
 **GitHub** も **Issue** が増えてくると必要なものを確認するのが面倒になってきます。

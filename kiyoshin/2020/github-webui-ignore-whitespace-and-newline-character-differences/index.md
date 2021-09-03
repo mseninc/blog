@@ -2,7 +2,7 @@
 title: "[GitHub] WebUI で空白や改行の差分を無視する"
 date: 2020-07-13
 author: kiyoshin
-tags: [GitHub, その他, ライフハック]
+tags: [GitHub]
 ---
 
 **インデント**や**改行コード**の**修正**が入ると **GitHub** の **WebUI** 上で **commit** や **Pull Request** の**差分確認**がしづらいと感じている方は多いかと思います。

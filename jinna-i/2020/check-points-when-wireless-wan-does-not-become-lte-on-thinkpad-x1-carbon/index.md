@@ -2,7 +2,7 @@
 title: ThinkPad X1 Carbon (8Gen) でワイヤレス WAN (SIM) が HSDPA や UMTS となり回線速度が遅い (LTE にならない) 場合の確認点
 date: 2020-10-16
 author: jinna-i
-tags: [ThinkPad, mineo, その他, ライフハック]
+tags: [ThinkPad, mineo]
 ---
 
 こんにちは、じんないです。

@@ -2,7 +2,7 @@
 title: "[Gmail] 迷惑メール誤判別が急増した問題と対策"
 date: 2019-10-22
 author: norikazum
-tags: [Gmail, GSuite, その他, ライフハック]
+tags: [Gmail, GSuite]
 ---
 
 こんにちは。

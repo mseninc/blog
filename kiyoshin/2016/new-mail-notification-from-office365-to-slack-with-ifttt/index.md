@@ -2,7 +2,7 @@
 title: IFTTTでOffice365の新着メールをSlackに通知する方法
 date: 2016-06-17
 author: kiyoshin
-tags: [Slack, Office365, IFTTT, その他, ライフハック]
+tags: [Slack, Office365, IFTTT]
 ---
 
 ## IFTTT（イフト)とは

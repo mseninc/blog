@@ -2,7 +2,7 @@
 title: VSCode markdown-pdf でヘッダーやフッターをいい感じに設定する
 date: 2018-05-18
 author: kenzauros
-tags: [Visual Studio Code, その他, ライフハック]
+tags: [Visual Studio Code]
 ---
 
 以前、記事でも紹介した **Markdown から PDF を生成できる Visual Studio Code の拡張機能 [markdown-pdf](https://github.com/yzane/vscode-markdown-pdf/)** 、業務でとても便利に使わせていただいています。

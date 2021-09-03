@@ -2,7 +2,7 @@
 title: "[Google] GSuiteのバックアップを取得する方法"
 date: 2019-11-29
 author: norikazum
-tags: [Google, その他, ライフハック]
+tags: [Google]
 ---
 
 こんにちは。

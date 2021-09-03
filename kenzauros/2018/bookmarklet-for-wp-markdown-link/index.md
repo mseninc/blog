@@ -2,7 +2,7 @@
 title: WordPress の編集画面で自己リンク用の Markdown リンクを取得するブックマークレット WPLink
 date: 2018-04-13
 author: kenzauros
-tags: [WordPress, Markdown, Bookmarklet, その他, ライフハック]
+tags: [WordPress, Markdown, Bookmarklet]
 ---
 
 昔々、下記の記事を投稿しました。

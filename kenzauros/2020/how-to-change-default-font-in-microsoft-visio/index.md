@@ -2,7 +2,7 @@
 title: Microsoft Visio で図面既定のフォントとフォントサイズを変更する
 date: 2020-01-29
 author: kenzauros
-tags: [Visio, その他, ライフハック]
+tags: [Visio]
 ---
 
 **Microsoft Visio** はちょっとした図を書くのに、ちょっとだけ便利なツールですが、 Microsoft らしくイマイチなところも多いのが玉にキズです。

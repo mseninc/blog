@@ -2,7 +2,7 @@
 title: SourceTree で GitHub Login 画面が連発する
 date: 2018-07-12
 author: jinna-i
-tags: [Git, SourceTree, GitHub, その他, ライフハック]
+tags: [Git, SourceTree, GitHub]
 ---
 
 こんにちは、じんないです。

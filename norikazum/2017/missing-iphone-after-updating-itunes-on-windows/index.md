@@ -2,7 +2,7 @@
 title: iTunesをアップデートしたらiPhoneが認識されなくなる
 date: 2017-05-26
 author: norikazum
-tags: [iPhone, iTunes, その他, ライフハック]
+tags: [iPhone, iTunes]
 ---
 
 こんにちは。

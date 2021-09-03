@@ -2,7 +2,7 @@
 title: Alexa Skills Kit を使って Amazon Alexa スキル を作成する - 実装編
 date: 2018-01-04
 author: hiroki-Fukumoto
-tags: [AWS, Lambda, Amazon Alexa, その他, ライフハック]
+tags: [AWS, Lambda, Amazon Alexa]
 ---
 
 あけましておめでとうございます！ふっくんです！

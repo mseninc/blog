@@ -2,7 +2,7 @@
 title: Markdown 記法のリンクを取得するブックマークレット MDLink
 date: 2016-05-31
 author: kenzauros
-tags: [Markdown, Bookmarklet, その他, ライフハック]
+tags: [Markdown, Bookmarklet]
 ---
 
 Markdown でこういった記事を書いていると、参考サイトなどのリンクを貼ることがよくあります。

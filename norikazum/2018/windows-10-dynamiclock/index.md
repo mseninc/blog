@@ -2,7 +2,7 @@
 title: 離席時にWindows 10を自動的にロックするダイナミックロック (Dynamic Lock) 機能を使う
 date: 2018-01-13
 author: norikazum
-tags: [Windows 10, その他, ライフハック]
+tags: [Windows 10]
 ---
 
 こんにちは。

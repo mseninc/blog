@@ -2,7 +2,7 @@
 title: "[Excel] 拡大縮小とレイアウトの設定が印刷に影響していた件"
 date: 2019-02-18
 author: kiyoshin
-tags: [Excel, Microsoft Print to PDF, その他, ライフハック]
+tags: [Excel, Microsoft Print to PDF]
 ---
 
 **Excel** で作成された帳票を **Microsoft Print to PDF** で **PDF出力** した際、印刷設定に変更は加えていないのに、私が出力したものと別の方が出力したもので微妙にレイアウトが異なっていることに気づき、原因を調べてみた結果を記載しておきます。

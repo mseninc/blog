@@ -2,7 +2,7 @@
 title: "[ThinkPad X1 Carbon 5th] Detection error on Storage Device (M.2) エラーが出て OS が起動しない"
 date: 2019-10-01
 author: jinna-i
-tags: [ThinkPad, その他, ライフハック]
+tags: [ThinkPad]
 ---
 
 こんにちは、じんないです。

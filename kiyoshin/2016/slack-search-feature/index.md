@@ -2,7 +2,7 @@
 title: Slackの柔軟な検索を使いこなそう！日付/チャンネル/自分宛
 date: 2016-07-03
 author: kiyoshin
-tags: [Slack, その他, ライフハック]
+tags: [Slack]
 ---
 
 MSEN では、社内コミュニケーションに Slack を導入しています。

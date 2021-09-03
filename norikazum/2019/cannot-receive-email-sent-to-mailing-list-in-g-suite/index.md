@@ -2,7 +2,7 @@
 title: "[G Suite] メーリングリストに送付したメールが届かない"
 date: 2019-04-17
 author: norikazum
-tags: [GSuite, スパムメール, その他, ライフハック]
+tags: [GSuite, スパムメール]
 ---
 
 こんにちは。

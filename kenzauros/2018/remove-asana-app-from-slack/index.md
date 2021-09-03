@@ -2,7 +2,7 @@
 title: Slack から簡単に削除できない Asana の連携アプリを削除するには
 date: 2018-05-30
 author: kenzauros
-tags: [Slack, その他, ライフハック]
+tags: [Slack]
 ---
 
 **Slack** はさまざまな別のサービスと連携できるのが利点の一つです。

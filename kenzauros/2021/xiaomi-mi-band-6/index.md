@@ -2,7 +2,7 @@
 title: スマートバンド Xiaomi Mi Band 6 実機レポ
 date: 2021-05-05
 author: kenzauros
-tags: [スマートバンド, その他, ライフハック]
+tags: [スマートバンド]
 ---
 
 日々の健康管理のためスマートバンドを愛用しています。 2年ほど **[Huawei Band 3 Pro](https://consumer.huawei.com/jp/wearables/band3-pro/specs/) を使ってきました**が、スマホが Huawei でなくなり、アドバンテージがなくなったため、発売されたばかりの **Xiaomi Mi Band 6** に乗り換えました。

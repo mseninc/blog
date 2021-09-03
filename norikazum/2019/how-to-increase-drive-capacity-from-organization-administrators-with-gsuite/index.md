@@ -2,7 +2,7 @@
 title: GSuiteで組織管理者からドライブの容量を増やす方法
 date: 2019-03-25
 author: norikazum
-tags: [Google, GSuite, その他, ライフハック]
+tags: [Google, GSuite]
 ---
 
 こんにちは。

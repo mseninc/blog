@@ -2,7 +2,7 @@
 title: iPhoneポケモンGO「GPSの信号をさがしています」の解決方法
 date: 2016-07-22
 author: kiyoshin
-tags: [ポケモンGO, iPhone, その他, ライフハック]
+tags: [ポケモンGO, iPhone]
 ---
 
 いよいよ配信が始まりましたね！

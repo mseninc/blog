@@ -2,7 +2,7 @@
 title: HUAWEI P20 Pro のロック画面をマガジンロック (ランダム) に戻す方法
 date: 2020-05-02
 author: jinna-i
-tags: [HUAWEI, スマホ, その他, ライフハック]
+tags: [HUAWEI, スマホ]
 ---
 
 こんにちは、じんないです。

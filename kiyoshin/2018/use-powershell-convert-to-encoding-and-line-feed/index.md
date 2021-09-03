@@ -2,7 +2,7 @@
 title: PowerShellを使ってファイルの文字コードと改行コードを変換する
 date: 2018-09-18
 author: kiyoshin
-tags: [PowerShell, その他, ライフハック, Windows]
+tags: [PowerShell, Windows]
 ---
 
 **Windows PowerShell** を使ってファイルの文字コードと改行コードを変換する方法について紹介します。

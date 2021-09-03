@@ -2,7 +2,7 @@
 title: HUAWEI P20 ProにドコモのDOME GLASSを貼ってみた感想
 date: 2018-10-15
 author: jinna-i
-tags: [HUAWEI, スマホ, その他, ライフハック]
+tags: [HUAWEI, スマホ, ライフハック]
 ---
 
 こんにちは。

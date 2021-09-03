@@ -2,7 +2,7 @@
 title: 複数シートのExcelをPDF印刷すると別々のファイルになる
 date: 2018-02-24
 author: norikazum
-tags: [Excel, PDF, その他, ライフハック]
+tags: [Excel, PDF]
 ---
 
 こんにちは。

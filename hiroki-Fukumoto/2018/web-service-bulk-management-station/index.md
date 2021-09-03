@@ -2,7 +2,7 @@
 title: Webサービス一括管理サービス「Station」が便利すぎる
 date: 2018-05-28
 author: hiroki-Fukumoto
-tags: [Slack, その他, ライフハック]
+tags: [Slack, ライフハック]
 ---
 
 こんにちは。ふっくんです。

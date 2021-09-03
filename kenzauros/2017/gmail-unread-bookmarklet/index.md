@@ -2,7 +2,7 @@
 title: Gmail で未読メールを一覧表示するブックマークレット
 date: 2017-11-14
 author: kenzauros
-tags: [JavaScript, Bookmarklet, Gmail, その他, ライフハック]
+tags: [JavaScript, Bookmarklet, Gmail]
 ---
 
 Gmail は便利ですが、簡単に「**未読メールをまとめて読む**」機能がありません。

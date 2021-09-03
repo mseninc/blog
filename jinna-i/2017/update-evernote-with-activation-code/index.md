@@ -2,7 +2,7 @@
 title: アクティベーションコードを使ってEvernoteプレミアムを更新する
 date: 2017-12-24
 author: jinna-i
-tags: [Evernote, その他, ライフハック]
+tags: [Evernote]
 ---
 
 **すべてを記憶する** のキャッチフレーズでおなじみの[Evernote](https://evernote.com/intl/jp)。

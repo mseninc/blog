@@ -2,7 +2,7 @@
 title: 遠隔操作でHELP！Windows 10 でリモートアシスタント機能を利用する
 date: 2017-02-10
 author: norikazum
-tags: [Windows 10, その他, ライフハック]
+tags: [Windows 10]
 ---
 
 こんにちは。

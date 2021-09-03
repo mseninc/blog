@@ -2,7 +2,7 @@
 title: Excelで空白セルを参照をすると結果が0になるのを防ぐ
 date: 2016-10-14
 author: norikazum
-tags: [Excel, その他, ライフハック]
+tags: [Excel]
 ---
 
 こんにちは。

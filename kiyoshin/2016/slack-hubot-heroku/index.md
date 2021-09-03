@@ -2,7 +2,7 @@
 title: "SlackでHUBOTさんに働いてもらう方法  [Windows]"
 date: 2016-08-18
 author: kiyoshin
-tags: [Slack, Hubot, Heroku, その他, ライフハック]
+tags: [Slack, Hubot, Heroku]
 ---
 
 以前からSlackのチームの中にHUBOTさんはいたのですが、ずっと寝ていただけだったので、たまには働いてもらおうかと思いHerokuを使いHUBOTさんに働いてもらいました。「乳酸菌」と打つと、お勧めの「乳酸菌飲料」を言ってくれるHUBOTさんです。

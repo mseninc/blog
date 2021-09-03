@@ -2,7 +2,7 @@
 title: iPad Pro を Windows 10 の外部ディスプレイにする方法
 date: 2019-03-18
 author: norikazum
-tags: [Windows 10, iPad, その他, ライフハック]
+tags: [Windows 10, iPad]
 ---
 
 こんにちは。

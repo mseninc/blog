@@ -2,7 +2,7 @@
 title: ThinkPad X1 Carbon (2017) から LG モニター 32UD59-B に 4K 60Hz で出力できない
 date: 2018-10-22
 author: jinna-i
-tags: [ThinkPad, 4K, その他, ライフハック]
+tags: [ThinkPad, 4K]
 ---
 
 こんにちは、じんないです。

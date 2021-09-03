@@ -2,7 +2,7 @@
 title: Windows の電源設定で無効にしても勝手にスリープになる現象を回避するには
 date: 2016-06-18
 author: kenzauros
-tags: [Windows, その他, ライフハック]
+tags: [Windows]
 ---
 
 ThinkPad X1 Yoga に OneLink+ ドックをつないで使っていますが、なぜか数分するとパソコンがスリープになる現象があって、トイレにいっている間にスリープになるのでけっこうストレスでした。

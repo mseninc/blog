@@ -2,7 +2,7 @@
 title: 私のスケジュール管理術
 date: 2019-04-01
 author: norikazum
-tags: [Google, Google Calendar, その他, ライフハック]
+tags: [Google, Google Calendar]
 ---
 
 こんにちは。
