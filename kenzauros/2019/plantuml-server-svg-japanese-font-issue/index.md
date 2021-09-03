@@ -2,7 +2,7 @@
 title: PlantUML Server で生成した SVG が中華フォントになるときの日本語フォント指定
 date: 2019-09-02
 author: kenzauros
-tags: [Markdown, PlantUML, SVG, その他の技術]
+tags: [Markdown, PlantUML, SVG]
 ---
 
 **テキストで UML が記述できる [PlantUML](http://plantuml.com/ja)** は同じくテキストでドキュメントが作成できる Markdown と非常に相性がいいです。

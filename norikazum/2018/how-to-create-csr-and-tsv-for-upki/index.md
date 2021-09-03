@@ -2,7 +2,7 @@
 title: "[サーバー証明書] UPKI向けCSRとTSVの作成方法"
 date: 2018-11-16
 author: norikazum
-tags: [セキュリティ, サーバー, NII, SSL, 証明書, その他の技術]
+tags: [セキュリティ, サーバー, NII, SSL, 証明書]
 ---
 
 こんにちは。

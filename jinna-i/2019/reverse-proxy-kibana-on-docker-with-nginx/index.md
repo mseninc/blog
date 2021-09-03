@@ -2,7 +2,7 @@
 title: nginx で docker 上の kibana をリバースプロキシする
 date: 2019-03-22
 author: jinna-i
-tags: [Kibana, Elastic Stack, nginx, その他の技術]
+tags: [Kibana, Elastic Stack, nginx]
 ---
 
 こんにちは、じんないです。

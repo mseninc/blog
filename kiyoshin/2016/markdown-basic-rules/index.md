@@ -2,7 +2,7 @@
 title: ブログの下書きにはMarkdown(マークダウン記法)がオススメ!
 date: 2016-06-12
 author: kiyoshin
-tags: [WordPress, Markdown, その他の技術]
+tags: [WordPress, Markdown]
 ---
 
 「ブログの下書きって何に書いてますか？」

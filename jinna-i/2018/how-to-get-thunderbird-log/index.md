@@ -2,7 +2,7 @@
 title: Thunderbird のメールアカウント設定がうまくいかないのでログをとってみる
 date: 2018-06-18
 author: jinna-i
-tags: [Thunderbird, その他の技術]
+tags: [Thunderbird]
 ---
 
 先日Thunderbirdを使う機会があり、メールアカウント設定の際にうまくいかなかったのでログの取り方をメモしておきます。

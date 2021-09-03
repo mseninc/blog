@@ -2,7 +2,7 @@
 title: "[Citrix Virtual Apps] Receiver for HTML5 で HTTPS 接続を有効化する"
 date: 2020-05-21
 author: jinna-i
-tags: [Citrix, シンクライアント, XenApp, その他の技術]
+tags: [Citrix, シンクライアント, XenApp]
 ---
 
 こんにちは、じんないです。

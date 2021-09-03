@@ -2,7 +2,7 @@
 title: "[SSL] Rapid-SSLの証明書更新方法が変更されたのでやってみた"
 date: 2020-10-19
 author: norikazum
-tags: [SSL, 証明書, その他の技術]
+tags: [SSL, 証明書]
 ---
 
 こんにちは。

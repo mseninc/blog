@@ -2,7 +2,7 @@
 title: Rust で serde を使った JSON シリアライズ時にフィールドの値を変換する
 date: 2020-07-31
 author: kenzauros
-tags: [Rust, その他の技術]
+tags: [Rust]
 ---
 
 **Rust でオブジェクトから JSON にシリアライズするときは serde と serde_json を使う**のが一般的です。

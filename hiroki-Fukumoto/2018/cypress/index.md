@@ -2,7 +2,7 @@
 title: Cypress を使用して自動テストをしてみた
 date: 2018-08-31
 author: hiroki-Fukumoto
-tags: [JavaScript, その他の技術]
+tags: [JavaScript]
 ---
 
 こんにちは。ふっくんです。

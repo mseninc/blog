@@ -2,7 +2,7 @@
 title: Acronisのアラートがバックアップ失敗から5日経過しないと来ない件
 date: 2017-03-14
 author: norikazum
-tags: [Acronis, その他の技術]
+tags: [Acronis]
 ---
 
 こんにちは。

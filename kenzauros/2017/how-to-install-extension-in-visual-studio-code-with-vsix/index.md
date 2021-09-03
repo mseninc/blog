@@ -2,7 +2,7 @@
 title: Visual Studio Code の拡張機能を VSIX ファイルからインストールする
 date: 2017-06-06
 author: kenzauros
-tags: [Visual Studio Code, その他の技術]
+tags: [Visual Studio Code]
 ---
 
 **Visual Studio Code (VSCode)** ではすでに Marketplace で多くの拡張機能が公開されているため、大抵のことは Marketplace からインストールすることができます。

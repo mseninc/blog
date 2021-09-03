@@ -2,7 +2,7 @@
 title: 仮想アプライアンス vSphere Management Assistant (vMA) 6.0 の構築メモ
 date: 2017-07-25
 author: jinna-i
-tags: [VMware, ESXi, 仮想化, vMA, 仮想化技術]
+tags: [VMware, ESXi, vMA, 仮想化技術]
 ---
 
 こんにちは、じんないです。

@@ -2,7 +2,7 @@
 title: Zabbixで名前解決ができているかチェックする
 date: 2021-06-11
 author: norikazum
-tags: [zabbix, その他の技術]
+tags: [zabbix]
 ---
 
 こんにちは。

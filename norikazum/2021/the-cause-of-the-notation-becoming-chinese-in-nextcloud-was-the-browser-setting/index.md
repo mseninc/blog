@@ -2,7 +2,7 @@
 title: "[解決] Nextcloud で中国語になってしまう原因はブラウザーの設定だった"
 date: 2021-01-28
 author: norikazum
-tags: [Nextcloud, Chrome, その他の技術]
+tags: [Nextcloud, Chrome]
 ---
 
 こんにちは。

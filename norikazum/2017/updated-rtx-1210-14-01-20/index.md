@@ -2,7 +2,7 @@
 title: YAMAHA RTX1210 のファームウェアを14.01.20にネットワークアップデートしてみた
 date: 2017-11-24
 author: norikazum
-tags: [その他の技術]
+tags: [YAMAHA RTX]
 ---
 
 こんにちは。

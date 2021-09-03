@@ -2,7 +2,7 @@
 title: Web アプリケーション脆弱性診断ツールOWASP ZAPを使ってみた
 date: 2016-09-27
 author: norikazum
-tags: [セキュリティ, その他の技術]
+tags: [セキュリティ]
 ---
 
 こんにちは。

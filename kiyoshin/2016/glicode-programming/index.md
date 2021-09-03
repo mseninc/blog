@@ -2,7 +2,7 @@
 title: ポッキーを並べてプログラミング!? GLICODE(グリコード)
 date: 2016-08-17
 author: kiyoshin
-tags: [子どもたちのプログラミング教育]
+tags: [GLICODE]
 ---
 
 グリコが面白い事を始めましたね。

@@ -2,7 +2,7 @@
 title: "[ネットワーク] Fortigateにオンライン更新のCRLを登録する"
 date: 2020-06-01
 author: norikazum
-tags: [ネットワーク, 証明書, Fortigate, その他の技術]
+tags: [ネットワーク, 証明書, Fortigate]
 ---
 
 こんにちは。

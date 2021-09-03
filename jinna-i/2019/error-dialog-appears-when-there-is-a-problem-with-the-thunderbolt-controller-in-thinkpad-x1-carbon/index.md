@@ -2,7 +2,7 @@
 title: ThinkPad X1 Carbon (5th) で Thunderbolt コントローラーに問題があるとエラーダイアログが出る
 date: 2019-08-29
 author: jinna-i
-tags: [ThinkPad, Thunderbolt, その他の技術]
+tags: [ThinkPad, Thunderbolt]
 ---
 
 こんにちは、じんないです。

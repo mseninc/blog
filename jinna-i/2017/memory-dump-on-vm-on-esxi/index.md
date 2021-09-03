@@ -2,7 +2,7 @@
 title: ESXiホスト上で稼動している仮想マシンのメモリダンプを取得する
 date: 2017-05-19
 author: jinna-i
-tags: [Windows Server, VMware, ESXi, 仮想化, 仮想化技術]
+tags: [Windows Server, VMware, ESXi, 仮想化技術]
 ---
 
 こんにちは、じんないです。

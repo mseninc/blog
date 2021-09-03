@@ -2,7 +2,7 @@
 title: Wi-Fi モジュール ESP-WROOM-02 で Wi-Fi 接続＋Web サーバーもどき
 date: 2020-10-01
 author: kenzauros
-tags: [ESP-WROOM-02, Arduino, その他の技術]
+tags: [ESP-WROOM-02, Arduino]
 ---
 
 前記事で **WSP-WROOM-02** の Hello, world をやりましたので、次は **Wi-Fi に接続し、 Web サーバーとして待機してレスポンスを返せるように**してみます。

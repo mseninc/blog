@@ -2,7 +2,7 @@
 title: 便利なモバイルモニタ GeChic On-Lap 1502I/J
 date: 2015-09-16
 author: norikazum
-tags: [移行記事, その他の技術]
+tags: [移行記事]
 ---
 
 MSENの桝田です。

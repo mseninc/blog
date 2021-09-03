@@ -2,7 +2,7 @@
 title: Vimの標準プラグインNetrwについて調べてみた
 date: 2021-01-26
 author: kohei-iwamoto-wa
-tags: [Vim, その他の技術]
+tags: [Vim]
 ---
 
 ## はじめに

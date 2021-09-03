@@ -2,7 +2,7 @@
 title: Visual Studio Code ソースコードはスニペットと「Ctrl + space」で書いちゃいなよ
 date: 2018-06-13
 author: hiroki-Fukumoto
-tags: [PHP, Visual Studio Code, その他の技術]
+tags: [PHP, Visual Studio Code]
 ---
 
 こんにちは。ふっくんです。

@@ -2,7 +2,7 @@
 title: "[Fortigate]  SSL-VPN の「任意のホストからアクセス許可」は「接続元の制限」ではなかった"
 date: 2020-11-25
 author: norikazum
-tags: [VPN, ネットワーク, Fortigate, その他の技術]
+tags: [VPN, ネットワーク, Fortigate]
 ---
 
 こんにちは。

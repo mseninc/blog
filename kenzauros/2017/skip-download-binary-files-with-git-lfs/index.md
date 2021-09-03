@@ -2,7 +2,7 @@
 title: Git LFS でうまく clone や pull ができないときにバイナリファイルのダウンロードをスキップする
 date: 2017-01-17
 author: kenzauros
-tags: [Git, GitLab, Git LFS, SourceTree, その他の技術]
+tags: [Git, GitLab, Git LFS, SourceTree]
 ---
 
 **Git LFS** は Git で大容量ファイルを扱えるようにするものですが、不具合というか結構クセが強くて、正常に pull できなかったり、 push できなかったりすることがあります。

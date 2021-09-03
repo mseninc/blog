@@ -2,7 +2,7 @@
 title: "[Unity] Terrain が激しく CPU 使用率を食いつぶす時の対処法"
 date: 2019-10-07
 author: k-so16
-tags: [Unity, その他の技術]
+tags: [Unity]
 ---
 
 こんにちは。最近、久々に [バッティングセンター](https://www.daitoyo.co.jp/business/amusement/batting/) に行ってきた k-so16 です。 1 ゲーム 20 球で、各ゲームの間に休憩を挟みながら 3 ゲーム打ってきたら、翌日筋肉痛になりました（笑）

@@ -2,7 +2,7 @@
 title: Value-domain で取得したドメインでダイナミックDNS環境を構築する
 date: 2018-09-06
 author: norikazum
-tags: [DNS, ネットワーク, その他の技術]
+tags: [DNS, ネットワーク]
 ---
 
 こんにちは。

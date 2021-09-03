@@ -2,7 +2,7 @@
 title: ビデオキャプチャー GV-USB3/HD で BIOS や POST 画面のスクリーンショットを取得する
 date: 2019-07-31
 author: jinna-i
-tags: [サーバー, その他の技術]
+tags: [サーバー]
 ---
 
 こんにちは、じんないです。

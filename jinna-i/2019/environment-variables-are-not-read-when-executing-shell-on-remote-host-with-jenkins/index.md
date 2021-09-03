@@ -2,7 +2,7 @@
 title: jenkins で「リモートホストでシェルを実行」したときに環境変数が読み込まれない件
 date: 2019-08-05
 author: jinna-i
-tags: [Jenkins, XServer, その他の技術]
+tags: [Jenkins, XServer]
 ---
 
 こんにちは、じんないです。

@@ -2,7 +2,7 @@
 title: 事務所が docomo の基地局に
 date: 2015-10-16
 author: norikazum
-tags: [移行記事, その他の技術]
+tags: [移行記事]
 ---
 
 MSENの桝田です。

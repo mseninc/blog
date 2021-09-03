@@ -2,7 +2,7 @@
 title: Raspberry Pi で Gmail のメールサーバーを利用してメールを送信する (exim4)
 date: 2021-02-15
 author: kenzauros
-tags: [Raspberry Pi, その他の技術]
+tags: [Raspberry Pi]
 ---
 
 **Raspberry Pi からメールアラートを飛ばしたかったので、 mail コマンドでメールが送信できるよう設定**を行いました。

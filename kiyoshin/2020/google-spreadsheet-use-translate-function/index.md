@@ -2,7 +2,7 @@
 title: Google スプレッドシートの翻訳関数を使ってみた
 date: 2020-08-21
 author: kiyoshin
-tags: [Google Spreadsheet, その他の技術]
+tags: [Google Spreadsheet]
 ---
 
 **Microsoft Excel** にはない **Google スプレッドシート** 独自の関数を調べていた中で、セルに入力されている文字列を指定の言語に翻訳してくれる関数を見つけたので、紹介したいと思います。

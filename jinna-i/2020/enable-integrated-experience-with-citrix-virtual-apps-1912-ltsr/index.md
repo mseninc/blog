@@ -2,7 +2,7 @@
 title: "[Citrix Virtual Apps] 1912 LTSR で統合エクスペリエンスが有効化できない"
 date: 2020-06-18
 author: jinna-i
-tags: [Citrix, その他の技術]
+tags: [Citrix]
 ---
 
 こんにちは、じんないです。

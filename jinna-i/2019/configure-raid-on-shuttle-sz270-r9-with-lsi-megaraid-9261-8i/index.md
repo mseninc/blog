@@ -2,7 +2,7 @@
 title: Shuttle SZ270 R9 に LSI MegaRAID 9261-8i で RAID を構成してみた
 date: 2019-05-07
 author: jinna-i
-tags: [VMware, ESXi, その他の技術]
+tags: [VMware, ESXi]
 ---
 
 こんにちは、じんないです。

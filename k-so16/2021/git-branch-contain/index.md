@@ -2,7 +2,7 @@
 title: "[Git] 特定のコミットを含むブランチを検索する方法"
 date: 2021-03-22
 author: k-so16
-tags: [Git, その他の技術]
+tags: [Git]
 ---
 
 こんにちは。最近、 [Netflix](https://www.netflix.com/jp/) を利用し始めた k-so16 です。以前から興味があった [フルハウス](https://www.netflix.com/jp/title/70155617) を楽しく視聴しています(笑)

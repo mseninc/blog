@@ -2,7 +2,7 @@
 title: ownCloud 10 を ActiveDirectory 認証にする
 date: 2018-04-17
 author: norikazum
-tags: [CentOS, ownCloud, ActiveDirectory, その他の技術]
+tags: [CentOS, ownCloud, ActiveDirectory]
 ---
 
 こんにちは。

@@ -2,7 +2,7 @@
 title: Lenovo ThinkPad X1 で Slack のビデオ通話をはじめる
 date: 2020-03-31
 author: kenzauros
-tags: [Slack, その他の技術]
+tags: [Slack]
 ---
 
 コロナウイルスの影響により、リモートワークが急激に増加しています。弊社も多分にもれず原則リモートワークとなりました。

@@ -2,7 +2,7 @@
 title: "[ネットワーク ] RTX1210でタグVLANのネットワークを構築する"
 date: 2020-11-06
 author: norikazum
-tags: [ネットワーク, vlan, YAMAHA, その他の技術]
+tags: [ネットワーク, vlan, YAMAHA]
 ---
 
 こんにちは。

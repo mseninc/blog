@@ -2,7 +2,7 @@
 title: Adobe Illustrator や Photoshop で使える Semantic UI のカラースウォッチ Semantic-UI-Default-Swatches
 date: 2017-11-19
 author: kenzauros
-tags: [Photoshop, Illustrator, その他の技術]
+tags: [Photoshop, Illustrator]
 ---
 
 **[Semantic UI](https://semantic-ui.com/)** の色合いが割と好きです。その名の通り、「セマンティック」にスタイルを定義できるところも気に入っています。

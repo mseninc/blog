@@ -2,7 +2,7 @@
 title: Herokuをクレジットカードを使わず無料で登録する方法
 date: 2016-06-04
 author: kiyoshin
-tags: [Heroku, PaaS, その他の技術]
+tags: [Heroku, PaaS]
 ---
 
 ## Heroku（ヘロク）とは

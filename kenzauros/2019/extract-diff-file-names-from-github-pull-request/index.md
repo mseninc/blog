@@ -2,7 +2,7 @@
 title: GitHub の Pull Request の差分から変更されたファイル名一覧を抜き出す
 date: 2019-03-27
 author: kenzauros
-tags: [JavaScript, Git, GitHub, その他の技術]
+tags: [JavaScript, Git, GitHub]
 ---
 
 資料をまとめたりするときに使えるかもしれない、ちょっとした小ネタです。

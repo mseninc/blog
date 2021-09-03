@@ -2,7 +2,7 @@
 title: PostfixからGmailへリレーする方法と受信したメールがSOFTFAILになる対策
 date: 2017-12-12
 author: norikazum
-tags: [Linux, AWS, Gmail, もくもく会, その他の技術]
+tags: [Linux, AWS, Gmail, もくもく会]
 ---
 
 こんにちは。

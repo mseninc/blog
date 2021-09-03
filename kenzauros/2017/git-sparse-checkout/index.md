@@ -2,7 +2,7 @@
 title: git sparse checkout で clone せずに一部のサブディレクトリだけを pull/checkout する
 date: 2017-01-24
 author: kenzauros
-tags: [Git, その他の技術]
+tags: [Git]
 ---
 
 Git は大変便利なのですが、 clone では基本的にすべてのディレクトリが同期されます。

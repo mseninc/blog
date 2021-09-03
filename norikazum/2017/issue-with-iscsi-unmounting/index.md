@@ -2,7 +2,7 @@
 title: iSCSIが切断できない！ドライブにアクセスしているプロセスを特定しアンマウントする
 date: 2017-02-24
 author: norikazum
-tags: [その他の技術]
+tags: [iSCSI]
 ---
 
 こんにちは。

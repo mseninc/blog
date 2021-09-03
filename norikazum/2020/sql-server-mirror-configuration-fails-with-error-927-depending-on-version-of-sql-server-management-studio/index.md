@@ -2,7 +2,7 @@
 title: "[SQL Server] SQL Server Manegement Studio のバージョンによってミラー設定がエラー 927で失敗する"
 date: 2020-05-06
 author: norikazum
-tags: [SQL Server, データベースミラーリング, その他の技術]
+tags: [SQL Server, データベースミラーリング]
 ---
 
 こんにちは。

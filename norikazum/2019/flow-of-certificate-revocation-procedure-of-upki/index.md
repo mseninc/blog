@@ -2,7 +2,7 @@
 title: "[サーバー証明書] UPKI向け証明書失効手続きの流れ"
 date: 2019-03-08
 author: norikazum
-tags: [セキュリティ, サーバー, NII, SSL, CRL, その他の技術]
+tags: [セキュリティ, サーバー, NII, SSL, CRL]
 ---
 
 こんにちは。

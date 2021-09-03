@@ -2,7 +2,7 @@
 title: Atlassian SourceTree と Git LFS の実行ファイル
 date: 2017-01-20
 author: kenzauros
-tags: [Git, Git LFS, SourceTree, その他の技術]
+tags: [Git, Git LFS, SourceTree]
 ---
 
 Git の GUI ツールである [SourceTree が Git LFS (Large File Storage) に対応してから 1 年ほどが経過](http://japan.blogs.atlassian.com/2016/02/sourcetree-update-atlassian-account-git-lfs-support-ui-refresh-and-more/)します。

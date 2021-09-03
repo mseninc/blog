@@ -2,7 +2,7 @@
 title: "[Git] 外部のリポジトリをサブモジュールとして取り込む"
 date: 2019-06-12
 author: k-so16
-tags: [Git, その他の技術]
+tags: [Git]
 ---
 
 こんにちは。最近、 [Vim Tシャツ](https://suzuri.jp/kmdsbng/539/t-shirt/s/heatherblack) を購入した k-so16 です。

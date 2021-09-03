@@ -2,7 +2,7 @@
 title: Winlogbeat から Windows の特定のイベントを Elasticsearch へ送信する
 date: 2019-02-25
 author: jinna-i
-tags: [Elasticsearch, Kibana, Winlogbeat, Elastic Stack, その他の技術]
+tags: [Elasticsearch, Kibana, Winlogbeat, Elastic Stack]
 ---
 
 こんにちは、じんないです。

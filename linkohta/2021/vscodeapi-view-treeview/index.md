@@ -2,7 +2,7 @@
 title: 【VS Code API 備忘録】VS Code 拡張機能で TreeView を表示させる
 date: 2021-08-11
 author: linkohta
-tags: [その他の技術, VS Code, VS Code 拡張機能]
+tags: [VS Code, VS Code 拡張機能]
 ---
 
 link です。

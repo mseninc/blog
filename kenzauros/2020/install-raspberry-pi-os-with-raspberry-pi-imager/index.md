@@ -2,7 +2,7 @@
 title: Raspberry Pi Imager を使って Raspberry Pi OS をインストールする (ヘッドレスインストール対応 2020年6月版)
 date: 2020-07-01
 author: kenzauros
-tags: [Raspberry Pi, その他の技術]
+tags: [Raspberry Pi]
 ---
 
 **Raspberry Pi** に OS をインストールするときは Micro SD カードをフォーマットしてイメージをダウンロードしてイメージライティングツールで書き込んで...という流れが面倒でした。

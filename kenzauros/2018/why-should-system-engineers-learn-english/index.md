@@ -2,7 +2,7 @@
 title: MSEN がシステムエンジニアに英語力を望む理由
 date: 2018-07-26
 author: kenzauros
-tags: [資格, 英語, その他, ライフハック]
+tags: [資格, 英語, ライフハック]
 ---
 
 先日、[英検](http://www.eiken.or.jp/eiken/) 2 級に合格しました。

@@ -2,7 +2,7 @@
 title: SSH秘密鍵をPutty形式にコマンドで変換する方法
 date: 2021-01-14
 author: norikazum
-tags: [その他の技術]
+tags: [SSH, PuTTY]
 ---
 
 こんにちは。

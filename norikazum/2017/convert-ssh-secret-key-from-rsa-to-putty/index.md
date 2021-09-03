@@ -2,7 +2,7 @@
 title: SSH秘密鍵をPutty形式に変換する方法
 date: 2017-01-27
 author: norikazum
-tags: [その他の技術]
+tags: [SSH, PuTTY]
 ---
 
 こんにちは。
@@ -21,7 +21,7 @@ RSA形式も読み込めるのですが、毎回ファイル種別を変更し�
 
 ## puttygen で変換
 
-以下より変換ツール `puttygen`  を入手します。
+以下より変換ツール `puttygen` を入手します。
 
 [http://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html](http://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 

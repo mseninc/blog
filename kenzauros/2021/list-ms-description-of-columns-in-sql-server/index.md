@@ -2,7 +2,7 @@
 title: SQL Server でカラムに設定された MS_Description を列挙する
 date: 2021-07-30
 author: kenzauros
-tags: [SQL Server, SQL, その他の技術]
+tags: [SQL Server, SQL]
 ---
 
 SQL Server でオブジェクトに説明を追加するときに使う拡張プロパティといえば **`MS_Description`** ですね。

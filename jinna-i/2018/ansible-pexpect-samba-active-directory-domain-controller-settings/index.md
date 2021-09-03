@@ -2,7 +2,7 @@
 title: Ansible+pexpect+samba4 で Active Directory Domain Controller 設定時にハマった話
 date: 2018-08-17
 author: jinna-i
-tags: [CentOS, Ansible, ActiveDirectory, samba, その他の技術]
+tags: [CentOS, Ansible, ActiveDirectory, samba]
 ---
 
 こんにちは、じんないです。

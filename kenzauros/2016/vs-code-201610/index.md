@@ -2,7 +2,7 @@
 title: Visual Studio Code でエディターの水平分割やソースコード整形が可能に (2016/10 version 1.7)
 date: 2016-11-11
 author: kenzauros
-tags: [Visual Studio Code, その他の技術]
+tags: [Visual Studio Code]
 ---
 
 **Visual Studio Code** の 2016年10月度アップデート Version 1.7 が提供されていますので、私が気になった部分を紹介します。

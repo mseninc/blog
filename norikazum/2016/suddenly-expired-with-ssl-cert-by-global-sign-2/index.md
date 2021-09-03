@@ -2,7 +2,7 @@
 title: 【解決】GlobalSignの証明書を利用したSSLサイトで「この組織の証明書は失効しています。」となる
 date: 2016-10-21
 author: norikazum
-tags: [その他の技術]
+tags: [SSL]
 ---
 
 こんにちは。

@@ -2,7 +2,7 @@
 title: 無償の仮想化基盤 VMware vSphere Hypervisor 6.0 (vSphere ESXi) を使ってみる。【 仮想マシン作成編 】
 date: 2017-02-03
 author: jinna-i
-tags: [VMware, ESXi, 仮想化, 仮想化技術]
+tags: [VMware, ESXi, 仮想化技術]
 ---
 
 こんにちは、じんないです。

@@ -2,7 +2,7 @@
 title: Acronis で復元を実施すると Segmentation fault になる
 date: 2019-12-19
 author: norikazum
-tags: [Acronis, その他の技術]
+tags: [Acronis]
 ---
 
 こんにちは。

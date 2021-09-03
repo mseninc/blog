@@ -2,7 +2,7 @@
 title: コマンドでシンプロビジョニングの仮想マシンを別のデータストアへ移行する
 date: 2018-02-12
 author: jinna-i
-tags: [VMware, ESXi, 仮想化, 仮想化技術]
+tags: [VMware, ESXi, 仮想化技術]
 ---
 
 こんにちは、じんないです。

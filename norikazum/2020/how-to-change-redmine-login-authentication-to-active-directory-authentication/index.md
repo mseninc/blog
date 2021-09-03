@@ -2,7 +2,7 @@
 title: Redmine のログイン認証を ActiveDirectory 認証に変更する方法
 date: 2020-11-11
 author: norikazum
-tags: [Redmine, ActiveDirectory, その他の技術]
+tags: [Redmine, ActiveDirectory]
 ---
 
 <span style="color:;">こんにちは。

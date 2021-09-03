@@ -2,7 +2,7 @@
 title: "[SQL Server] 連番データを格納したテーブルを作成してデータを一括生成する"
 date: 2019-01-17
 author: kenzauros
-tags: [SQL Server, SQL, その他の技術]
+tags: [SQL Server, SQL]
 ---
 
 今回は **SQL Server** で**連番データを格納したテーブルを作成**する Tips を紹介します。

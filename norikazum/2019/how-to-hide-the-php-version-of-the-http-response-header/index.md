@@ -2,7 +2,7 @@
 title: HTTP応答ヘッダーのPHPバージョンを非表示にする方法
 date: 2019-02-15
 author: norikazum
-tags: [PHP, 脆弱性, その他の技術]
+tags: [PHP, 脆弱性]
 ---
 
 こんにちは。

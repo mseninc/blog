@@ -2,7 +2,7 @@
 title: .gitattributes で Git LFS の適用をディレクトリごとに変更する
 date: 2017-12-01
 author: kenzauros
-tags: [Git, Git LFS, その他の技術]
+tags: [Git, Git LFS]
 ---
 
 **Git LFS で巨大ファイルとして管理したいファイル**は `git lfs track` で管理対象として指定すればいいのですが、今回は**同じリポジトリ内でフォルダによって LFS の適用を切り替えたくなった**ので、その方法をメモしておきます。

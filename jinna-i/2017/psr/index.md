@@ -2,7 +2,7 @@
 title: ステップ記録ツール(psr.exe)はキャプチャ取得ツールとして使えるのか
 date: 2017-05-08
 author: jinna-i
-tags: [Windows, Windows Server, その他の技術]
+tags: [Windows, Windows Server]
 ---
 
 こんにちは、じんないです。

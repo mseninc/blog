@@ -2,7 +2,7 @@
 title: Why!?プログラミングが勉強になる スクラッチ/NHK/TV番組
 date: 2016-08-05
 author: kiyoshin
-tags: [Scratch, 子どもたちのプログラミング教育]
+tags: [Scratch]
 ---
 
 休みの日に子供と TV を見ていると NHK でプログラミングの番組 **Why!?プログラミング** が放送されていてビックリしました。

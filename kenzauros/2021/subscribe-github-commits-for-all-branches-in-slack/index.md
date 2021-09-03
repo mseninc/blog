@@ -2,7 +2,7 @@
 title: Slack の新しい GitHub 連携で全ブランチのコミット通知を含めて購読する
 date: 2021-06-08
 author: kenzauros
-tags: [Slack, GitHub, その他の技術]
+tags: [Slack, GitHub]
 ---
 
 弊社では GitHub で起こったアクションはそれぞれ紐付いた Slack のチャンネルに通知がくるようにしています。

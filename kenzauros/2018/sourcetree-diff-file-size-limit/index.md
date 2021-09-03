@@ -2,7 +2,7 @@
 title: SourceTree でサイズの大きいソースコードの差分 (diff) が見えない問題
 date: 2018-12-17
 author: kenzauros
-tags: [Git, SourceTree, その他の技術]
+tags: [Git, SourceTree]
 ---
 
 **SourceTree** を使っていて、一部のソースコードの diff が確認できなくて困ったのでメモです。

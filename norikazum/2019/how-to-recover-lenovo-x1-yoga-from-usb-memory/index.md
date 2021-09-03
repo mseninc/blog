@@ -2,7 +2,7 @@
 title: Lenovo X1 Yoga をUSBメモリからリカバリする方法
 date: 2019-01-31
 author: norikazum
-tags: [Lenovo, その他の技術]
+tags: [Lenovo]
 ---
 
 こんにちは。

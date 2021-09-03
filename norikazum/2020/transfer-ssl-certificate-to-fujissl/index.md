@@ -2,7 +2,7 @@
 title: "[SSL証明書] FUJISSLに乗り換えを行う"
 date: 2020-04-16
 author: norikazum
-tags: [SSL, 証明書, その他の技術]
+tags: [SSL, 証明書]
 ---
 
 こんにちは。

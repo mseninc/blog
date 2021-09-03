@@ -2,7 +2,7 @@
 title: Shuttle SZ270R9 にvSphere ESXi 6.5を構築する
 date: 2018-01-29
 author: jinna-i
-tags: [VMware, ESXi, 仮想化, 仮想化技術]
+tags: [VMware, ESXi, 仮想化技術]
 ---
 
 こんにちは、じんないです。

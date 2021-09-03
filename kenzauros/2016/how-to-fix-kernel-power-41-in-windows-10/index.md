@@ -2,7 +2,7 @@
 title: スリープで強制シャットダウンされる Kernel Power 41 闘病記 (Windows 10)
 date: 2016-07-01
 author: kenzauros
-tags: [Windows 10, ThinkPad, その他の技術]
+tags: [Windows 10, ThinkPad]
 ---
 
 4 月に **ThinkPad X1 Yoga** を購入し、メインマシンとして使っていますが、いくつか不具合というか困ったこともあります。

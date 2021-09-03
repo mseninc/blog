@@ -2,7 +2,7 @@
 title: "[zabbix 4.0] アクティブチェックが失敗するときの確認点"
 date: 2019-04-25
 author: jinna-i
-tags: [zabbix, その他の技術]
+tags: [zabbix]
 ---
 
 こんにちは、じんないです。

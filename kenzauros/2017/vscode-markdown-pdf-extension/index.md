@@ -2,7 +2,7 @@
 title: Visual Studio Code で Markdown から PDF を一発生成する拡張機能 markdown-pdf
 date: 2017-02-21
 author: kenzauros
-tags: [Markdown, Visual Studio Code, その他の技術]
+tags: [Markdown, Visual Studio Code]
 ---
 
 今回は **Visual Studio Code** (以下 VSCode) で **Markdown → PDF が一発で変換できるようになる拡張機能** をご紹介します。

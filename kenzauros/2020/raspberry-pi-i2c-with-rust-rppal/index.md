@@ -2,7 +2,7 @@
 title: Rust + rppal で Raspberry Pi の I2C を操作する
 date: 2020-07-17
 author: kenzauros
-tags: [Raspberry Pi, Rust, その他の技術]
+tags: [Raspberry Pi, Rust]
 ---
 
 今回は **Rust を使って Raspberry Pi の I2C 通信**をしてみます。

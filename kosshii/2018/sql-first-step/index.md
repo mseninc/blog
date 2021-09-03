@@ -2,7 +2,7 @@
 title: 「SQLってなに？おいしいの？」な人に送るSQLの第一歩
 date: 2018-01-08
 author: kosshii
-tags: [もくもく会, SQL, その他の技術]
+tags: [もくもく会, SQL]
 ---
 
 こんにちは！こっしーです。

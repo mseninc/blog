@@ -2,7 +2,7 @@
 title: git grep でリポジトリ内の検索をして作業効率を上げる
 date: 2020-11-27
 author: junya-gera
-tags: [Git, その他の技術]
+tags: [Git]
 ---
 
 こんにちは、じゅんじゅんです。私の最初の記事（[業務未経験者が思う入社前にやっておけばよかったこと](/inexperienced-people-should-done/)）にも記載したとおり、コマンドでの git 操作を勉強しています。

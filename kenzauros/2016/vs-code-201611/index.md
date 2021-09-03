@@ -2,7 +2,7 @@
 title: Visual Studio Code 月次リリースレポート (2016/11 version 1.8)
 date: 2016-12-20
 author: kenzauros
-tags: [Visual Studio Code, その他の技術]
+tags: [Visual Studio Code]
 ---
 
 **Visual Studio Code** の 2016年11月度アップデート Version 1.8 が提供されていますので、**今回も私が気になった部分だけを紹介**します。

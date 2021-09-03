@@ -2,7 +2,7 @@
 title: "[Linux] KVM管理コンソールにリモートから接続する方法"
 date: 2020-02-19
 author: norikazum
-tags: [Linux, 仮想化, KVM]
+tags: [Linux, KVM]
 ---
 
 こんにちは。

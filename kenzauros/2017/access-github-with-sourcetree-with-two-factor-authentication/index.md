@@ -2,7 +2,7 @@
 title: GitHub の 2段階認証が有効なアカウントに SourceTree から Personal access token を使ってアクセスする
 date: 2017-03-31
 author: kenzauros
-tags: [SourceTree, GitHub, その他の技術]
+tags: [SourceTree, GitHub]
 ---
 
 **GitHub では Google Authenticator を使った 2 段階認証** を利用できます。特に業務で使用している場合、有効にしておくほうがよいと思いますが、セキュリティーと引き換えにめんどくさくなることもあります。

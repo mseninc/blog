@@ -2,7 +2,7 @@
 title: Office 365 の多段階認証に Google Authenticator を使用する
 date: 2017-08-15
 author: kenzauros
-tags: [Office365, その他の技術]
+tags: [Office365]
 ---
 
 昨今、弊社もセキュリティインシデントに悩まされておりますが、 Office 365 のような統合アカウントのセキュリティは非常に重要なものです。

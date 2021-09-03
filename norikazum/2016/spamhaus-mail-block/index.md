@@ -2,7 +2,7 @@
 title: SPAM Block List に載りメールが送信できない
 date: 2016-06-11
 author: norikazum
-tags: [その他の技術]
+tags: [メール]
 ---
 
 ## 概要

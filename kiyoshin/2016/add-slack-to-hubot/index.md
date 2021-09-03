@@ -2,7 +2,7 @@
 title: SlackのメンバーにHubotを追加する方法
 date: 2016-07-26
 author: kiyoshin
-tags: [Slack, Hubot, その他の技術]
+tags: [Slack, Hubot]
 ---
 
 HubotさんはBot界では有名なBotでGitHub社が開発しNode.jsで作り動かすためのフレームワークです。

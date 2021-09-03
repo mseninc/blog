@@ -2,7 +2,7 @@
 title: "[IIS] ディレクトリの参照を無効にする方法"
 date: 2020-06-04
 author: norikazum
-tags: [IIS, その他の技術]
+tags: [IIS]
 ---
 
 こんにちは。

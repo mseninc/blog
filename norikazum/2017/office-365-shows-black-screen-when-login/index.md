@@ -2,7 +2,7 @@
 title: Office365ログイン時に真っ白画面で無限ループになったときの解決方法
 date: 2017-02-17
 author: norikazum
-tags: [Office365, その他の技術]
+tags: [Office365]
 ---
 
 こんにちは。

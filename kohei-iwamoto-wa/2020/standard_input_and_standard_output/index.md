@@ -2,7 +2,7 @@
 title: 標準入力と標準出力とリダイレクト
 date: 2020-11-30
 author: kohei-iwamoto-wa
-tags: [その他の技術]
+tags: [shell script, CentOS]
 ---
 
 ## はじめに

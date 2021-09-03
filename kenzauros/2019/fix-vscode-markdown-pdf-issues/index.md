@@ -2,7 +2,7 @@
 title: "[VSCode] markdown-pdf で相対パスの CSS が読み込めない問題を解決した分家バージョンを作りました"
 date: 2019-08-31
 author: kenzauros
-tags: [Markdown, Visual Studio Code, PlantUML, その他の技術]
+tags: [Markdown, Visual Studio Code, PlantUML]
 ---
 
 VSCode の拡張機能 **[yzane/vscode-markdown-pdf](https://github.com/yzane/vscode-markdown-pdf)** はこれまでも何度か本ブログでも取り上げていますが、 **VSCode で markdown を PDF に変換するのに最適なツール**です。

@@ -2,7 +2,7 @@
 title: JenkinsのジョブでJenkinsをバックアップして結果をSlackに通知する
 date: 2017-05-16
 author: norikazum
-tags: [Slack, Jenkins, その他の技術]
+tags: [Slack, Jenkins]
 ---
 
 こんにちは。

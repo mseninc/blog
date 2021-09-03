@@ -2,7 +2,7 @@
 title: "[Bash / C 言語] main 関数の return 0; の意味"
 date: 2019-09-11
 author: k-so16
-tags: [bash, C言語, その他の技術]
+tags: [bash, C言語]
 ---
 
 こんにちは。先日、久々に大学時代の友人と会って、[十三の餃子酒場](https://tabelog.com/osaka/A2701/A270302/27096294/)で晩御飯を食べに行った k-so16 です。楽しく美味しい時間を過ごせて非常に満足でした。

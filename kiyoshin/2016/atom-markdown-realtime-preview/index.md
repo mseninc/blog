@@ -2,7 +2,7 @@
 title: MarkdownはAtomで見よう!プレビューをリアルタイムで見る方法
 date: 2016-06-16
 author: kiyoshin
-tags: [Markdown, Atom, その他の技術]
+tags: [Markdown, Atom]
 ---
 
 前回の記事で Markdown を紹介しました。

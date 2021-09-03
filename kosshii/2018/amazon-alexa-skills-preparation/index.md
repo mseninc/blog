@@ -2,7 +2,7 @@
 title: Alexa Skills Kit を使って Amazon Alexa スキル を作成する - 準備編
 date: 2018-01-02
 author: kosshii
-tags: [AWS, Amazon Alexa, その他の技術]
+tags: [AWS, Amazon Alexa]
 ---
 
 あけましておめでとうございます！こっしーです！

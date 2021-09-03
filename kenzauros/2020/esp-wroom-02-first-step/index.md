@@ -2,7 +2,7 @@
 title: Wi-Fi モジュール ESP-WROOM-02 ことはじめ (Arduino IDE を使った開発環境の構築と Hello, world)
 date: 2020-09-28
 author: kenzauros
-tags: [ESP-WROOM-02, Arduino, その他の技術]
+tags: [ESP-WROOM-02, Arduino]
 ---
 
 切手サイズのモジュールなのに Wi-Fi に接続できてマイコンとしても使えてしまう **ESP-WROOM-02** を使ってみました。

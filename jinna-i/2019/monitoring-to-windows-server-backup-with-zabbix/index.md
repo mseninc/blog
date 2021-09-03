@@ -2,7 +2,7 @@
 title: Zabbix 4.0 で Windows Server  Backup を監視する
 date: 2019-05-01
 author: jinna-i
-tags: [Windows, zabbix, その他の技術]
+tags: [Windows, zabbix]
 ---
 
 こんにちは、じんないです。

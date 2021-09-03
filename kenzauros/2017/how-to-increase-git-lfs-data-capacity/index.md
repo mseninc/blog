@@ -2,7 +2,7 @@
 title: GitHub の Git LFS で使用しているストレージ容量と転送量を増やす
 date: 2017-02-07
 author: kenzauros
-tags: [Git, Git LFS, GitHub, その他の技術]
+tags: [Git, Git LFS, GitHub]
 ---
 
 GitHub の有料プランで [Git LFS (Large File Storage)](https://git-lfs.github.com/) の使用容量と転送量の確認の仕方をご紹介します。

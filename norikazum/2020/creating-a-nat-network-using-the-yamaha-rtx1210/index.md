@@ -2,7 +2,7 @@
 title: "[ネットワーク] YAMAHA RTX1210を使ってNATネットワークを作る"
 date: 2020-04-13
 author: norikazum
-tags: [ネットワーク, YAMAHA, その他の技術]
+tags: [ネットワーク, YAMAHA]
 ---
 
 こんにちは。

@@ -2,7 +2,7 @@
 title: "[証明書] Rapid-SSL で取得した証明書を更新する"
 date: 2019-09-13
 author: norikazum
-tags: [SSL, 証明書, その他の技術]
+tags: [SSL, 証明書]
 ---
 
 こんにちは。

@@ -2,7 +2,7 @@
 title: SQLを使用した集計 ～CASE式編～
 date: 2020-11-09
 author: kohei-iwamoto-wa
-tags: [SQL, その他の技術]
+tags: [SQL]
 ---
 
 ## はじめに

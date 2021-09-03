@@ -2,7 +2,7 @@
 title: OCNからOffice365のメールが届かない
 date: 2015-09-14
 author: norikazum
-tags: [Office365, 移行記事, その他の技術]
+tags: [Office365, 移行記事]
 ---
 
 MSENの桝田です。

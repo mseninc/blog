@@ -2,7 +2,7 @@
 title: Zabbix から ESET File Security for Linux v7.2 のウイルス検出を監視する
 date: 2021-08-25
 author: jinna-i
-tags: [セキュリティ, zabbix, ESET, その他の技術]
+tags: [セキュリティ, zabbix, ESET]
 ---
 
 こんにちは、じんないです。

@@ -2,7 +2,7 @@
 title: Visual Studio Code でファイルアイコンを表示する
 date: 2016-09-16
 author: kenzauros
-tags: [Visual Studio Code, その他の技術]
+tags: [Visual Studio Code]
 ---
 
 こんにちは！みなさん、エディターはなにをお使いですか？私は、去年は Atom 派でしたが今年は **Visual Studio Code** 派です。

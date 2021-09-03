@@ -2,7 +2,7 @@
 title: git sparse-checkout を無効にするには
 date: 2020-05-04
 author: kenzauros
-tags: [Git, その他の技術]
+tags: [Git]
 ---
 
 **git で一部のディレクトリ・ファイルのみを同期するとき `sparse-checkout` という機能**を使います。有効にする方法は過去の記事を参照ください。
