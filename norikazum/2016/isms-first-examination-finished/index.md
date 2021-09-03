@@ -2,7 +2,7 @@
 title: 【社長奮闘記】ISMS審査終了
 date: 2016-03-08
 author: norikazum
-tags: [情報セキュリティマネジメントシステム (ISMS), 移行記事, その他, 〇〇奮闘記]
+tags: [ISMS, 移行記事, その他, 〇〇奮闘記]
 ---
 
 MSENの桝田です。

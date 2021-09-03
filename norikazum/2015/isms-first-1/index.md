@@ -2,7 +2,7 @@
 title: 【社長奮闘記】ISO27001(ISMS) 取得への道1
 date: 2015-09-20
 author: norikazum
-tags: [情報セキュリティマネジメントシステム (ISMS), 移行記事, その他, 〇〇奮闘記]
+tags: [ISMS, 移行記事, その他, 〇〇奮闘記]
 ---
 
 MSENの桝田です。
