@@ -59,7 +59,7 @@ Console.WriteLine(hash);
 
 詳細は過去記事を参照してください。
 
-- [\[C# 6\] SHA256 や MD5 の 16 進ハッシュ文字列を得る](https://mseeeen.msen.jp/compute-hash-with-csharp-6-or-later/)
+- [\[C# 6\] SHA256 や MD5 の 16 進ハッシュ文字列を得る](/compute-hash-with-csharp-6-or-later/)
 
 ### ファイルを開くときのモード
 
@@ -67,7 +67,7 @@ Console.WriteLine(hash);
 
 詳細は過去記事に委ねますが、今回の用途では**他のアプリがファイルを開いているときでも、ハッシュ計算を行いたかった**ため、読み取り書き込みロックがかかっているファイルが開ける `FileShare.ReadWrite` を指定しています。
 
-- [\[C#.NET\] 書き込みモードで開かれたファイルを読み取る ReadLines メソッド](https://mseeeen.msen.jp/csharp-read-lines-from-a-file-locked-by-other-process/)
+- [\[C#.NET\] 書き込みモードで開かれたファイルを読み取る ReadLines メソッド](/csharp-read-lines-from-a-file-locked-by-other-process/)
 
 ## 動作速度
 

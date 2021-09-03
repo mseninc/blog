@@ -53,6 +53,6 @@ const total = fruits.reduce((p, x) => p + x.price, 0)
 非常に便利な関数ですので、ぜひ使用してみてください。
 他にもjavaScriptの便利な関数を紹介していますので、ぜひご覧ください！
 
-- [JavaScript 屋さんのための C# LINQ 入門 (4) reduce / Aggregate](https://mseeeen.msen.jp/linq-basic-for-javascript-programmers-4/)
-- [JavaScript map関数を使用して必要な要素のみで配列を生成する](https://mseeeen.msen.jp/javascript-map-function/)
-- [JavaScript filter関数を使用して条件に一致する要素で配列を生成する](https://mseeeen.msen.jp/javascript-filter-function/)
+- [JavaScript 屋さんのための C# LINQ 入門 (4) reduce / Aggregate](/linq-basic-for-javascript-programmers-4/)
+- [JavaScript map関数を使用して必要な要素のみで配列を生成する](/javascript-map-function/)
+- [JavaScript filter関数を使用して条件に一致する要素で配列を生成する](/javascript-filter-function/)

@@ -11,8 +11,8 @@ tags: [KVM, 仮想化技術]
 
 KVM構築の記事は以下を参考にしてください。
 
-* [CentOS 7にKVMでコマンドラインのみで仮想マシンを構築する](https://mseeeen.msen.jp/make-virtual-machine-with-kvm-in-centos-7/)
-* [KVMの仮想イメージをバックアップ・リストアする方法](https://mseeeen.msen.jp/backup-and-restore-virtual-image-for-kvm/)
+* [CentOS 7にKVMでコマンドラインのみで仮想マシンを構築する](/make-virtual-machine-with-kvm-in-centos-7/)
+* [KVMの仮想イメージをバックアップ・リストアする方法](/backup-and-restore-virtual-image-for-kvm/)
 
 
 ## 単純に名前を変更すると動かなくなる

@@ -6,7 +6,7 @@ tags: [.NET Core, ASP.NET Core, Blazor, .NET]
 ---
 
 > .NET Core 3.0 の正式リリースに伴い、本記事を書き直しましたので、新記事をお読みください。
-> [\[ASP.NET Core\] Blazor Server 入門 (セットアップ編)](https://mseeeen.msen.jp/asp-dotnet-core-blazor-install/)
+> [\[ASP.NET Core\] Blazor Server 入門 (セットアップ編)](/asp-dotnet-core-blazor-install/)
 
 
 今回 ASP.NET Core で**Blazor** を利用してみたくなって調べていたところ、 Preview 9 になっていて、正式リリースまでに大きな仕様変更もないようなので、使ってみることにしました。
@@ -292,7 +292,7 @@ VSCode でプロジェクトフォルダーを開き、 **F5 (デバッグの開
 
 次回は Entity Framework Core を使って SQL Server に接続してみます。
 
-- [[ASP.NET Core] Blazor Preview 9 入門 (EF Core + SQL Server 編)](https://mseeeen.msen.jp/asp-dotnet-core-blazor-preview9-ef-core-sqlserver)
+- [[ASP.NET Core] Blazor Preview 9 入門 (EF Core + SQL Server 編)](/asp-dotnet-core-blazor-preview9-ef-core-sqlserver)
 
 ## 参考
 

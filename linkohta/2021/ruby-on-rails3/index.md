@@ -7,7 +7,7 @@ tags: [Bootstrap, Ruby on Rails, Web]
 
 link です。だんだん暖かくなってきましたね。ここから暑くなってくるまであっという間だと思いますが。
 
-この記事は、前回[Ruby on Rails 6 入門 Part 2](https://mseeeen.msen.jp/ruby-on-rails2/)の続きです。
+この記事は、前回[Ruby on Rails 6 入門 Part 2](/ruby-on-rails2/)の続きです。
 
 今回は ERB テンプレートに Bootstrap を適用する方法と ERB テンプレートを使って、 Controller 共通のレイアウトを設定する方法、今までの内容に +α してメッセージ投稿機能を作ってみたいと思います。
 
@@ -22,10 +22,10 @@ Bootstrap を使うことで Web デザインの知識がなくとも、整っ�
 適用方法はとても簡単です。
 
 [Bootstrap の公式サイト](https://getbootstrap.com/docs/5.0/getting-started/introduction/)に行き、 Get started ボタンを押します。
-![bootstrap1](https://mseeeen.msen.jp/wp-content/uploads/2021/05/2021-05-19_16h26_34.png)
+![](images/ruby-on-rails3-1.png)
 
 遷移先のページの **CSS** という項目の HTML コードをコピーします。 `Copy` ボタンを押せばクリップボードにコピーしてくれます。
-![bootstrap2](https://mseeeen.msen.jp/wp-content/uploads/2021/05/2021-05-19_16h26_40.png)
+![](images/ruby-on-rails3-2.png)
 
 `app/views/start/index.html.erb` を開いて、 `<head>` と `</head>` の間に先ほどコピーした CSS のコードをペーストしましょう。
 
@@ -42,7 +42,7 @@ Bootstrap を使うことで Web デザインの知識がなくとも、整っ�
 と書き換えます。
 
 画像のようになっていれば適用が成功しています。
-![成功例](https://mseeeen.msen.jp/wp-content/uploads/2021/05/2021-05-07_10h55_48.png)
+![](images/ruby-on-rails3-3.png)
 
 `class:...` となっている個所が Bootstrap のデザインを適用する箇所というわけですね。
 
@@ -125,7 +125,7 @@ end
 と書き換えましょう。
 
 画像のように出ていれば成功です。
-![成功例2](https://mseeeen.msen.jp/wp-content/uploads/2021/05/2021-05-07_15h01_11.png)
+![](images/ruby-on-rails3-4.png)
 
 ## メッセージ投稿機能を作ってみる
 
@@ -239,13 +239,13 @@ end
 `attr_accessor` はインスタンス変数の setter/getter の両方を定義してくれるメソッドです。 getter のみの `attr_reader` 、 setter のみの `attr_writer` も存在します。
 
 最後に、忘れずに `config/route.rb` に `post 'msgboard/index'` を付け足しましょう。 `localhost:3000/msgboard/index` にアクセスして、下のような画面が出ていれば成功です。
-![msgboard1](https://mseeeen.msen.jp/wp-content/uploads/2021/05/2021-05-11_15h42_22.png)
+![](images/ruby-on-rails3-5.png)
 
 フォームに何かを入力して、 `Send` ボタンを押すと、
-![msgboard2](https://mseeeen.msen.jp/wp-content/uploads/2021/05/2021-05-11_15h43_10.png)
+![](images/ruby-on-rails3-6.png)
 
 下のような画面になるはずです。
-![msgboard3](https://mseeeen.msen.jp/wp-content/uploads/2021/05/2021-05-11_15h44_02.png)
+![](images/ruby-on-rails3-7.png)
 
 これでメッセージ投稿機能が出来ました。
 

@@ -13,7 +13,7 @@ tags: [C#, .NET Framework, SSH, .NET]
 
 SSH.NET の使い方については前記事をご覧ください。
 
-> [SSH.NET を使って C# で多段 SSH 経由のリモートデスクトップ接続を可能にする](https://mseeeen.msen.jp/connect-remote-desktop-via-multihop-ssh-with-csharp-sshnet)
+> [SSH.NET を使って C# で多段 SSH 経由のリモートデスクトップ接続を可能にする](/connect-remote-desktop-via-multihop-ssh-with-csharp-sshnet)
 
 ## 公式の例
 
@@ -126,5 +126,5 @@ internal static class FingerPrintUtil
 
 ## 関連記事
 
-- [SSH.NET を使って C# で多段 SSH 経由のリモートデスクトップ接続を可能にする](https://mseeeen.msen.jp/connect-remote-desktop-via-multihop-ssh-with-csharp-sshnet)
+- [SSH.NET を使って C# で多段 SSH 経由のリモートデスクトップ接続を可能にする](/connect-remote-desktop-via-multihop-ssh-with-csharp-sshnet)
 - [sshnet/SSH.NET: SSH.NET is a Secure Shell (SSH) library for .NET, optimized for parallelism.](https://github.com/sshnet/SSH.NET)

@@ -86,4 +86,4 @@ tags: [レク, その他]
 
 ![](images/summer-recreation-in-okinawa-prequel-15.jpg)
 
-[後編](https://mseeeen.msen.jp/summer-recreation-in-okinawa-sequel)へつづく
+[後編](/summer-recreation-in-okinawa-sequel)へつづく

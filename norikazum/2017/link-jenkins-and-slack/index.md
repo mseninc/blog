@@ -9,7 +9,7 @@ tags: [Slack, GitHub, Jenkins, Linux]
 
 今回はJenkinsとSlackを連携する方法を紹介します。
 
-* 関連する記事：[Azure上のCentOS7にJenkinsを構築](https://mseeeen.msen.jp/jenkins-on-centos7-on-microsoft-azure)
+* 関連する記事：[Azure上のCentOS7にJenkinsを構築](/jenkins-on-centos7-on-microsoft-azure)
 
 ## 前提状況
 

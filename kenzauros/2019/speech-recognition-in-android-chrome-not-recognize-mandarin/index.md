@@ -73,7 +73,7 @@ recognizer.abort();
 
 「音声認識」ではなく、**「音声合成 (Speech Synthesis)」で利用できる言語タグの一覧は過去記事でも紹介したとおり、 `window.speechSynthesis.getVoices()` を使うことで簡単に取得できます**。
 
-> - [Web Speech Synthesis API (音声合成) で利用可能な音声の一覧を手軽に取得する](https://mseeeen.msen.jp/list-voices-with-web-speech-synthesis-api/)
+> - [Web Speech Synthesis API (音声合成) で利用可能な音声の一覧を手軽に取得する](/list-voices-with-web-speech-synthesis-api/)
 
 ただし、これで得られた `lang` の値が音声認識でそのまま使えないことがあります。
 

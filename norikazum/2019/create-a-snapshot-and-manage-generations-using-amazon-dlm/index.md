@@ -9,7 +9,7 @@ tags: [AWS, EBS, SnapShot, DLM]
 
 先日、以下の記事でコマンドを使ってスナップショットを作成する方法をご紹介しました。
 
-[\[AWS\] EBSボリュームのスナップショットをコマンドで取得する方法](https://mseeeen.msen.jp/how-to-get-a-snapshot-of-ebs-volume-on-aws-by-command)
+[\[AWS\] EBSボリュームのスナップショットをコマンドで取得する方法](/how-to-get-a-snapshot-of-ebs-volume-on-aws-by-command)
 
 ローテーションを考えないといけないな、と思って調べていると、ちょっと複雑な手順が多いな・・・と手が止まっていたのですが以下の記事を発見！
 

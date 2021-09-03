@@ -21,7 +21,7 @@ tags: [Raspberry Pi, その他の技術]
 
 下記の過去記事の手順でインストールした状態です。
 
-- [Raspberry Pi Imager を使って Raspberry Pi OS をインストールする (ヘッドレスインストール対応 2020年6月版)](https://mseeeen.msen.jp/install-raspberry-pi-os-with-raspberry-pi-imager/)
+- [Raspberry Pi Imager を使って Raspberry Pi OS をインストールする (ヘッドレスインストール対応 2020年6月版)](/install-raspberry-pi-os-with-raspberry-pi-imager/)
 
 **メールサーバーは Gmail** を利用します。**Google (Gmail) アカウントは2段階認証設定済み**を前提とします。
 

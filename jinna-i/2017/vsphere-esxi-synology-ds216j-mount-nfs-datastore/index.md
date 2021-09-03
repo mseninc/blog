@@ -15,7 +15,7 @@ NASをデータストアにマウントすることで、仮想マシンイメ�
 ※利用可能なライセンスは[こちら](http://www.vmware.com/jp/products/vsphere.html#compare)を参照してください。
 
 環境は前回つくったものを使用するので、以下を参考にしてみてください。
-[無償の仮想化基盤 VMware vSphere Hypervisor 6.0 (vSphere ESXi) を使ってみる。【 導入編 】](https://mseeeen.msen.jp/vmware-vsphere-hypervisor-6-esxi-intro/)
+[無償の仮想化基盤 VMware vSphere Hypervisor 6.0 (vSphere ESXi) を使ってみる。【 導入編 】](/vmware-vsphere-hypervisor-6-esxi-intro/)
 
 クライアントインターフェースはVMware Host Clientを使用してESXiに接続します。
 

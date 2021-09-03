@@ -9,7 +9,7 @@ tags: [WordPress, XServer, Web, Apache]
 
 しかもこの API は WordPress の普通のページと同様に公開されているため、特に認証なしでアクセスすることができます。たとえば、「このブログの新着記事情報」は次のような URL で確認することができます。
 
-[https://mseeeen.msen.jp/wp-json/wp/v2/posts?context=embed](https://mseeeen.msen.jp/wp-json/wp/v2/posts?context=embed)
+[/wp-json/wp/v2/posts?context=embed](/wp-json/wp/v2/posts?context=embed)
 
 ただ、たとえば下書き状態の記事を取り出したり、記事を更新したりしたい場合は、当然ながら投稿者ユーザーで認証する必要があります。
 
@@ -62,11 +62,11 @@ WordPress の API については公式が一番まとまっています。
 
 ### 例
 
-前述のとおり、たとえばこのブログの記事一覧を取得したいときは https://mseeeen.msen.jp/wp-json/wp/v2/posts?context=embed を呼び出します。
+前述のとおり、たとえばこのブログの記事一覧を取得したいときは /wp-json/wp/v2/posts?context=embed を呼び出します。
 
 ブラウザのアドレスバーにでも貼り付けて開くと MSeeeeN の「公開済みの記事」の一覧が取得できます。
 
-ここで「下書きの記事」を取得したい場合、リクエストは `status=draft` をつけて https://mseeeen.msen.jp/wp-json/wp/v2/posts?context=embed&status=draft とします。
+ここで「下書きの記事」を取得したい場合、リクエストは `status=draft` をつけて /wp-json/wp/v2/posts?context=embed&status=draft とします。
 
 さて、これを開くとどうなるか。おそらくブラウザで開くと読めないですが、内容は下記のようになっています。
 

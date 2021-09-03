@@ -9,7 +9,7 @@ tags: [CentOS, ネットワーク, shell script, expect, Linux]
 
 先日、**expect コマンドを使って対話式に対応したユーザー作成**用のシェルスクリプトを作りました。
 
-> [\[CentOS7\] expect を使って対話式に対応したユーザー作成用のシェルスクリプトを作る](https://mseeeen.msen.jp/dealing-with-interactive-command-with-shell-script-using-by-expect/)
+> [\[CentOS7\] expect を使って対話式に対応したユーザー作成用のシェルスクリプトを作る](/dealing-with-interactive-command-with-shell-script-using-by-expect/)
 
 今回は、これを応用して、**NW機器にTelnet接続し、コンフィグ(コマンドの実行結果)を取得**してみようと思います。
 

@@ -5,7 +5,7 @@ author: jinna-i
 tags: [レク, その他]
 ---
 
-[春レク in 熊野 ～BBQ・友ヶ島散策～(1日目)](https://mseeeen.msen.jp/2019-spring-recreation-day1)のつづき。
+[春レク in 熊野 ～BBQ・友ヶ島散策～(1日目)](/2019-spring-recreation-day1)のつづき。
 
 ## 2日目
 

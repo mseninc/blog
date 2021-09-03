@@ -93,7 +93,7 @@ Catalyst側の準備ができたので、次はCentOS7の準備を進めます�
 ## 冗長テスト
 
 実際に片系を抜いて、チーミングが機能しているか確認します。
-[video width="1920" height="1080" mp4="https://mseeeen.msen.jp/wp-content/uploads/2019/12/VID_20191205_130744.mp4"][/video]
+[video width="1920" height="1080" mp4="/wp-content/uploads/2019/12/VID_20191205_130744.mp4"][/video]
 
 少し再形成に時間がかかりましたが、無事Pingが再度届いたことが確認できました。
 

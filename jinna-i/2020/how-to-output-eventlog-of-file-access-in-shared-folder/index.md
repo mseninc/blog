@@ -102,7 +102,7 @@ tags: [Windows Server, セキュリティ, Windows]
 
 生ログはサイズも大きいので、下記の記事を参考に圧縮しておくことをおすすめします。
 
-[\[PowerShell\] Windows のイベントログを7zで圧縮してローテーションする方法](https://mseeeen.msen.jp/how-to-rotate-windows-event-log/)
+[\[PowerShell\] Windows のイベントログを7zで圧縮してローテーションする方法](/how-to-rotate-windows-event-log/)
 
 ## 監査ログの参照
 

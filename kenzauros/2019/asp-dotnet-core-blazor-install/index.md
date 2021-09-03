@@ -5,7 +5,7 @@ author: kenzauros
 tags: [.NET Core, ASP.NET Core, Blazor, .NET]
 ---
 
-今回 **.NET Core 3.0 が正式リリース**になり、 **Blazor** も Server 版のみながら Preview が外れたようなので、 [Preview 9 の記事](https://mseeeen.msen.jp/asp-dotnet-core-blazor-preview9-install) をリライトしました。結論から言って Preview 9 と同じ手順で大丈夫でした。
+今回 **.NET Core 3.0 が正式リリース**になり、 **Blazor** も Server 版のみながら Preview が外れたようなので、 [Preview 9 の記事](/asp-dotnet-core-blazor-preview9-install) をリライトしました。結論から言って Preview 9 と同じ手順で大丈夫でした。
 
 ただし Blazor のテンプレートパッケージ自体は執筆時点 (2019/10/4) では、まだ `v3.0.0-preview9.19462.2` となっており、 Preview が外れていません。 Blazor 以外の .NET Core パッケージはすべて正式リリースになったようなので問題なさそうです。
 
@@ -278,7 +278,7 @@ VSCode でプロジェクトフォルダーを開き、 **F5 (デバッグの開
 
 次回は Entity Framework Core を使って SQL Server に接続してみます。
 
-- [[ASP.NET Core] Blazor Server 入門 (EF Core + SQL Server 編)](https://mseeeen.msen.jp/asp-dotnet-core-blazor-ef-core-sqlserver)
+- [[ASP.NET Core] Blazor Server 入門 (EF Core + SQL Server 編)](/asp-dotnet-core-blazor-ef-core-sqlserver)
 
 ## 参考
 

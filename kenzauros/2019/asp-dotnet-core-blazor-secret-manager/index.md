@@ -5,7 +5,7 @@ author: kenzauros
 tags: [Entity Framework Core, .NET Core, ASP.NET Core, Blazor, .NET]
 ---
 
-[前回](https://mseeeen.msen.jp/asp-dotnet-core-blazor-preview9-ef-core-sqlserver/) で EF Core を使い、 Blazor からデータベースへアクセスできることを確認しました。
+[前回](/asp-dotnet-core-blazor-preview9-ef-core-sqlserver/) で EF Core を使い、 Blazor からデータベースへアクセスできることを確認しました。
 
 今回は**開発時にパスワードなどの秘密情報を開発者ごとに保存しておく Secret Manager** を使用してみます。
 
@@ -27,7 +27,7 @@ tags: [Entity Framework Core, .NET Core, ASP.NET Core, Blazor, .NET]
 
 ### 環境
 
-[前々回](https://mseeeen.msen.jp/asp-dotnet-core-blazor-preview9-install/), [前回](https://mseeeen.msen.jp/asp-dotnet-core-blazor-preview9-ef-core-sqlserver/)の続きを想定します。
+[前々回](/asp-dotnet-core-blazor-preview9-install/), [前回](/asp-dotnet-core-blazor-preview9-ef-core-sqlserver/)の続きを想定します。
 
 - Visual Studio Code 1.38.1
     - 拡張機能 [C#](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) 1.21.2

@@ -5,7 +5,7 @@ author: junya-gera
 tags: [Vue.js, Nuxt.js, Ant Design Vue, Web]
 ---
 
-こんにちは。じゅんじゅんです。前回（[Ant Design Vue でバリデーションを設定してフォームの入力チェックを行う方法](https://mseeeen.msen.jp/set-form-validation-in-ant-design-vue/)）に引き続き **[Ant Design Vue](https://www.antdv.com/docs/vue/introduce/)** のお話です。 Ant Design Vue のコンポーネントの 1つに `Table` というものがあります。これはデータベースから取得したデータを表形式で一覧表示するためのコンポーネントです。
+こんにちは。じゅんじゅんです。前回（[Ant Design Vue でバリデーションを設定してフォームの入力チェックを行う方法](/set-form-validation-in-ant-design-vue/)）に引き続き **[Ant Design Vue](https://www.antdv.com/docs/vue/introduce/)** のお話です。 Ant Design Vue のコンポーネントの 1つに `Table` というものがあります。これはデータベースから取得したデータを表形式で一覧表示するためのコンポーネントです。
 
 この `Table` にもたくさんのオプションやイベントが備わっているのですが、その中でも**表示された一覧表の中で特定の行に `class` 属性を設定する**方法についてご紹介していきます。
 

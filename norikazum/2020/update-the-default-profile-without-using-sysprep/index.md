@@ -70,7 +70,7 @@ tags: [Windows, Windows 10, Windows プロファイル]
 
 ## Edgeが動かない対策
 前項で作成した、Defaultプロファイルでログインすると、 **Edgeを起動するとすぐに落ちてしまう現象** が発生しました。
-[video width="1280" height="1024" mp4="https://mseeeen.msen.jp/wp-content/uploads/2020/06/2020-06-08_09h57_02.mp4"][/video]
+[video width="1280" height="1024" mp4="/wp-content/uploads/2020/06/2020-06-08_09h57_02.mp4"][/video]
 
 **C:\Users\Default\AppData\Local\Packages\Microsoft.MicrosoftEdge_8wekyb3d8bbwe** を削除すると回避できました。
 

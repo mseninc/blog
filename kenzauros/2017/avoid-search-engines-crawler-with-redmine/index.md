@@ -23,7 +23,7 @@ Redmine で運用しているサイトを検索エンジンに表示させたく
 
 Redmine は以前に紹介した Ansible でインストールしています。
 
-* 参考記事: [redmine-centos-ansible で Redmine 3.2 のインストールが失敗する (CentOS 7.1)](https://mseeeen.msen.jp/failed-to-install-redmine-with-ansible-on-centos7/)
+* 参考記事: [redmine-centos-ansible で Redmine 3.2 のインストールが失敗する (CentOS 7.1)](/failed-to-install-redmine-with-ansible-on-centos7/)
 
 ## robots.txt の配置
 

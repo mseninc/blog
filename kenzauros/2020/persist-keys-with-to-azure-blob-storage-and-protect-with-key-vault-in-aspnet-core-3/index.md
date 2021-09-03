@@ -9,9 +9,9 @@ tags: [Microsoft Azure, ASP.NET Core, .NET]
 
 本記事は連載です。概要、これまでの手順については先行記事を参照ください。
 
-- [概要編](https://mseeeen.msen.jp/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-1)
-- [Azure Blob ストレージ設定編](https://mseeeen.msen.jp/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-2)
-- [Azure Key Vault 設定編](https://mseeeen.msen.jp/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3) ← いまここ
+- [概要編](/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-1)
+- [Azure Blob ストレージ設定編](/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-2)
+- [Azure Key Vault 設定編](/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3) ← いまここ
 
 **データ保護キーの永続化と暗号化に必要となる URI やシークレットなどの値を取得するため、 Azure ポータルからサービスを設定**しています。
 
@@ -116,7 +116,7 @@ Key Vault 認証用に**クライアント シークレット**を発行しま�
 
 ## 実装
 
-これで Blob ストレージが用意できたので、**ASP.NET Core のデータ保護キーを暗号化してストレージに格納**してみます。プログラム側の実装については [概要編](https://mseeeen.msen.jp/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-1) を参照してください。
+これで Blob ストレージが用意できたので、**ASP.NET Core のデータ保護キーを暗号化してストレージに格納**してみます。プログラム側の実装については [概要編](/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-1) を参照してください。
 
 `Startup.ConfigureServices` で `PersistKeysToAzureBlobStorage` に加え、 **`ProtectKeysWithAzureKeyVault` を呼び出し、キー識別子、クライアント ID、クライアントシークレットを渡します**。
 

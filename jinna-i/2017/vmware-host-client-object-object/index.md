@@ -15,7 +15,7 @@ VMware Host Clientからポートフォワーディングで接続したESXiに�
 
 ポートフォワーディングを使ってESXiに接続する方法は以下の記事を参照してください。
 
-[vSphere Client 6.0 からポートフォワードでESXiに接続する](https://mseeeen.msen.jp/connect-to-esxi-with-port-forwarding/)
+[vSphere Client 6.0 からポートフォワードでESXiに接続する](/connect-to-esxi-with-port-forwarding/)
 
 ## 想定環境
 

@@ -46,11 +46,11 @@ vscode.window.withProgress({location: vscode.ProgressLocation, title: string}, a
   - `vscode.ProgressLocation.Notification` が指定されている場合のみ有効
 - `location: vscode.ProgressLocation` : プログレスの表示位置を指定
   - `vscode.ProgressLocation.Notification` : 下から別ウィンドウとして表示
-  ![notification](https://mseeeen.msen.jp/wp-content/uploads/2021/08/2021-08-23_15h27_32.gif)
+![](images/vscodeapi-view-progress-1.gif)
   - `vscode.ProgressLocation.SourceControl` : ソース管理のビューレット上に進行状況を表示
-  ![sourcecontrol](https://mseeeen.msen.jp/wp-content/uploads/2021/08/2021-08-23_15h32_36.gif)
+![](images/vscodeapi-view-progress-2.gif)
   - `vscode.ProgressLocation.Window` : エディターのステータスバー（左下の紫の枠の中）に表示
-  ![window](https://mseeeen.msen.jp/wp-content/uploads/2021/08/2021-08-23_15h33_49.gif)
+![](images/vscodeapi-view-progress-3.gif)
 
 ### task
 
@@ -68,9 +68,9 @@ vscode.window.withProgress({location: vscode.ProgressLocation, title: string}, a
   - `message: string` : 表示するメッセージを指定
   - `increment?: number` : ゲージを増加させる数値を指定
 - `increment` を指定しない場合
-![message](https://mseeeen.msen.jp/wp-content/uploads/2021/08/2021-08-23_15h27_32.gif)
+![](images/vscodeapi-view-progress-1.gif)
 - `increment` を指定している場合、進行状況の最大値を 100 として、指定した数値分ゲージが増加
-![increment](https://mseeeen.msen.jp/wp-content/uploads/2021/08/2021-08-23_15h44_32.gif)
+![](images/vscodeapi-view-progress-4.gif)
   - 数値が指定されていれば 0 でも不定ではないゲージに
 
 #### vscode.CancellationToken

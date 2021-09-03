@@ -19,7 +19,7 @@ VMware ESXi 上の仮想マシンを展開する際、OS のインストール�
 
 前提として、外付け CD/DVD ドライブが ESXi で認識されているものとします。
 もし認識していない場合は、以下を参考にドライバを組み込んだカスタム ISO イメージを作成してください。
-[VMware ESXi のカスタムインストールディスクの作成方法](https://mseeeen.msen.jp/how-to-make-vmware-esxi-install-disc/)
+[VMware ESXi のカスタムインストールディスクの作成方法](/how-to-make-vmware-esxi-install-disc/)
 
 
 ## 事前準備

@@ -7,7 +7,7 @@ tags: [Ruby on Rails, Web]
 
 社会人になって睡眠時間が減って、平日はお眠気味な link です。
 
-この記事は前回、[Ruby on Rails 6 入門 Part 1](https://mseeeen.msen.jp/ruby-on-rails1/)の続きです。
+この記事は前回、[Ruby on Rails 6 入門 Part 1](/ruby-on-rails1/)の続きです。
 
 前回は Ruby on Rails を使う環境を整え、 Hello World! するところまでをやりました。
 
@@ -132,15 +132,15 @@ end
 
 `routes.rb` に `post 'index' => 'start#index'` の一文を加えるのも忘れないで下さい。
 
-![studyRails1](https://mseeeen.msen.jp/wp-content/uploads/2021/04/2021-04-26_17h12_01-1.png)
+![](images/ruby-on-rails2-1.png)
 
 こんな画面が表示されるはずです。
 
-![studyRails2](https://mseeeen.msen.jp/wp-content/uploads/2021/04/2021-04-26_17h12_16-1.png)
+![](images/ruby-on-rails2-2.png)
 
 試しに test と入力して input ボタンを押すと、
 
-![studyRails3](https://mseeeen.msen.jp/wp-content/uploads/2021/04/2021-04-26_17h12_25-1.png)
+![](images/ruby-on-rails2-3.png)
 
 このように、 test と画面に表示されているのがわかります。
 

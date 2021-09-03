@@ -15,7 +15,7 @@ Semantic UI 的デザインの際に **Photoshop や Illustrator で使えるス
 
 いきなりですが、ダウンロードはこちらからどうぞ。
 
-<a style="display:block;font-size:120%;text-align:center;border:1px solid #ccc;padding:0.2em;margin:1em;border-radius:3px;background:#f1f1f1" href="https://mseeeen.msen.jp/wp-content/uploads/2017/11/Semantic-UI-Default.zip">Semantic-UI-Default-Swatches のダウンロード<br>Press to download Semantic-UI-Default-Swatches</a>
+<a style="display:block;font-size:120%;text-align:center;border:1px solid #ccc;padding:0.2em;margin:1em;border-radius:3px;background:#f1f1f1" href="/wp-content/uploads/2017/11/Semantic-UI-Default.zip">Semantic-UI-Default-Swatches のダウンロード<br>Press to download Semantic-UI-Default-Swatches</a>
 
 展開すると `Semantic-UI-Default.ase` ファイルがありますので、それを Photoshop や Illustrator で読み込ませてください。
 

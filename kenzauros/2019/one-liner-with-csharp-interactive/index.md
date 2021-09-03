@@ -49,4 +49,4 @@ Console.WriteLine(string.Join("", new System.Security.Cryptography.SHA256CryptoS
 4c716d4cf211c7b7d2f3233c941771ad0507ea5bacf93b492766aa41ae9f720d
 ```
 
-> [[C# 6] SHA256 や MD5 の 16 進ハッシュ文字列を得る](https://mseeeen.msen.jp/compute-hash-with-csharp-6-or-later)
+> [[C# 6] SHA256 や MD5 の 16 進ハッシュ文字列を得る](/compute-hash-with-csharp-6-or-later)

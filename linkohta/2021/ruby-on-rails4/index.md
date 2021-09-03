@@ -9,7 +9,7 @@ link です。炭水化物の取りすぎには気を付けましょう。
 
 今回は Rails での Model とデータベースの使い方を解説します。
 
-この記事は[Ruby on Rails 6 入門 Part 3](https://mseeeen.msen.jp/ruby-on-rails3/)の続きです。
+この記事は[Ruby on Rails 6 入門 Part 3](/ruby-on-rails3/)の続きです。
 
 ## 前提条件
 
@@ -106,10 +106,10 @@ end
 </table>
 ```
 
-因みに**上の erb コードは Bootstrap のスタイルを適用していない**ので、適用したい場合は[前回の記事](https://mseeeen.msen.jp/ruby-on-rails3/)を参考にしてやってみてください。
+因みに**上の erb コードは Bootstrap のスタイルを適用していない**ので、適用したい場合は[前回の記事](/ruby-on-rails3/)を参考にしてやってみてください。
 
 `rails s` で起動して、下のような画面になっていれば OK です。**下の画面は Bootstrap を適用しています。**
-![model](https://mseeeen.msen.jp/wp-content/uploads/2021/06/2021-06-02_15h31_21.png)
+![](images/ruby-on-rails4-1.png)
 
 ## まとめ
 

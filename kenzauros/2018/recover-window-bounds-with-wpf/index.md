@@ -165,4 +165,4 @@ void RecoverWindowBounds()
 
 このあたりの話　(`SystemParameters` 系のプロパティ等) については下記の過去記事をご参照ください。
 
-- [WPF でマルチモニターの領域サイズやプライマリモニターの解像度を取得する](https://mseeeen.msen.jp/get-screen-bounds-with-multiple-monitors-in-wpf/)
+- [WPF でマルチモニターの領域サイズやプライマリモニターの解像度を取得する](/get-screen-bounds-with-multiple-monitors-in-wpf/)

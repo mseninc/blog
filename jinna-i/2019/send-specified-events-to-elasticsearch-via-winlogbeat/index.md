@@ -7,7 +7,7 @@ tags: [Elasticsearch, Kibana, Winlogbeat, Elastic Stack, その他の技術]
 
 こんにちは、じんないです。
 
-以前に[Windows のイベントログを Winlogbeat+Elasticsearch+Kibana で可視化する](https://mseeeen.msen.jp/visualize-windows-event-log-winlogbeat-elasticsearch-kibana/)方法をご紹介しました。
+以前に[Windows のイベントログを Winlogbeat+Elasticsearch+Kibana で可視化する](/visualize-windows-event-log-winlogbeat-elasticsearch-kibana/)方法をご紹介しました。
 
 今回はその構成を元に、**特定のイベントのみ Elasticsearch へ送信**してみます。
 
@@ -68,7 +68,7 @@ winlogbeat.event_logs:
 
 ![](images/send-specified-events-to-elasticsearch-via-winlogbeat-2.png)
 
-Winlogbeat をサービスとして登録する方法は[こちら](https://mseeeen.msen.jp/visualize-windows-event-log-winlogbeat-elasticsearch-kibana/#Winlogbeat)を参照してください。
+Winlogbeat をサービスとして登録する方法は[こちら](/visualize-windows-event-log-winlogbeat-elasticsearch-kibana/#Winlogbeat)を参照してください。
 
 これでログオンとログオフのイベントのみ Elasticsearch へ送信することが可能です。
 

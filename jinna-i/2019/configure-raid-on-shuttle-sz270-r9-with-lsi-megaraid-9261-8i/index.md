@@ -71,6 +71,6 @@ vCenter Server に接続し、ストレージデバイスを確認すると、�
 
 任意のドライバを組み込んだカスタムイメージの作成方法は以下の記事を参考にしてみてください。
 
-[VMware ESXi のカスタムインストールディスクの作成方法](https://mseeeen.msen.jp/how-to-make-vmware-esxi-install-disc/)
+[VMware ESXi のカスタムインストールディスクの作成方法](/how-to-make-vmware-esxi-install-disc/)
 
 ではまた。

@@ -53,6 +53,6 @@ JavaScript の `map` ＝ C# (LINQ) の `Select` !!
 
 ### 連載
 
-- [(1) filter / Where (条件を満たす要素を絞り込む)](https://mseeeen.msen.jp/linq-basic-for-javascript-programmers-1)
-- [(2) map / Select (各要素を変換する)](https://mseeeen.msen.jp/linq-basic-for-javascript-programmers-2) ← いまここ
-- [(3) every / All と some / Any (条件に一致しているかを調べる)](https://mseeeen.msen.jp/linq-basic-for-javascript-programmers-3)
+- [(1) filter / Where (条件を満たす要素を絞り込む)](/linq-basic-for-javascript-programmers-1)
+- [(2) map / Select (各要素を変換する)](/linq-basic-for-javascript-programmers-2) ← いまここ
+- [(3) every / All と some / Any (条件に一致しているかを調べる)](/linq-basic-for-javascript-programmers-3)

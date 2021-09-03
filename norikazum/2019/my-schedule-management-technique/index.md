@@ -56,10 +56,10 @@ tags: [Google, Google Calendar, その他, ライフハック]
 ## 管理術
 
 **参加型の予定** は **予定** 機能を使います。
-[video width="1480" height="886" mp4="https://mseeeen.msen.jp/wp-content/uploads/2019/02/2019-02-03_22h50_20.mp4"][/video]
+[video width="1480" height="886" mp4="/wp-content/uploads/2019/02/2019-02-03_22h50_20.mp4"][/video]
 
 そして、 **実践型の予定** **リマインダー** 機能を使います。
-[video width="1484" height="886" mp4="https://mseeeen.msen.jp/wp-content/uploads/2019/02/2019-02-03_22h57_45.mp4"][/video]
+[video width="1484" height="886" mp4="/wp-content/uploads/2019/02/2019-02-03_22h57_45.mp4"][/video]
 
 **予定** と **リマインダー** を前項に記載した意識のとおり、とにかく発生したタイミングや思いついたタイミングで入れておきます。
 

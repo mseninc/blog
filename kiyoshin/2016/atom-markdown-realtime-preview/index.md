@@ -8,7 +8,7 @@ tags: [Markdown, Atom, その他の技術]
 前回の記事で Markdown を紹介しました。
 
 ブログの下書きにはMarkdown(マークダウン記法)がオススメ!
-[https://mseeeen.msen.jp/markdown-basic-rules/](https://mseeeen.msen.jp/markdown-basic-rules/)
+[/markdown-basic-rules/](/markdown-basic-rules/)
 
 今回は、その Markdown を Atom で書いたり見たりする方法を記載します。
 
@@ -42,21 +42,21 @@ Atom にはインストールした時から、Markdown に対応しています
 まずは Markdown で何か文章を書きましょう。Markdown の書き方は以下の記事を参考にしてください。
 
 ブログの下書きにはMarkdown(マークダウン記法)がオススメ!
-[https://mseeeen.msen.jp/markdown-basic-rules/](https://mseeeen.msen.jp/markdown-basic-rules/)
+[/markdown-basic-rules/](/markdown-basic-rules/)
 
 例として Markdown で適当に書いてみました。
 
-![](images/atom-markdown-realtime-preview-1.jpg)
+![Markdown1](images/atom-markdown-realtime-preview-1.jpg)
 
 Markdown で文章が書けたら Atom で開いて、キーボードの **Ctrl + Shift + M** を同時に押してみてください。
 
-![](images/atom-markdown-realtime-preview-2.jpg)
+![Markdown3](images/atom-markdown-realtime-preview-2.jpg)
 
 右側にプレビューが!
 
 なお、**リアルタイムでプレビューしてくれる**ので、Markdown を書きながらでも大丈夫です。
 
-![](images/atom-markdown-realtime-preview-3.jpg)
+![Markdown2](images/atom-markdown-realtime-preview-3.jpg)
 
 Atom すごいね！
 
@@ -66,7 +66,7 @@ Atom すごいね！
 
 Markdown の**プレビュー画面を右クリックする**とメニューが出てきます。
 
-![](images/atom-markdown-realtime-preview-4.jpg)
+![Markdown4](images/atom-markdown-realtime-preview-4.jpg)
 
 **Copy As HTML** を選ぶと、クリップボードに HTMLタグがコピーされます。後はテキストエディタ等に貼り付けして使用してください。
 

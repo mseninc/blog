@@ -9,7 +9,7 @@ tags: [CentOS, ownCloud, ActiveDirectory, その他の技術]
 
 先日、以下の記事でownCloud 10を構築したので、Active Directory認証に対応させる方法を紹介します。
 
-[CentOS 7上のDockerに最新のownCloud 10をインストールする](https://mseeeen.msen.jp/install-the-latest-owncloud-10-in-docker-on-centos-7)
+[CentOS 7上のDockerに最新のownCloud 10をインストールする](/install-the-latest-owncloud-10-in-docker-on-centos-7)
 
 ## 有効化
 1. 管理権限でログインします。
@@ -27,7 +27,7 @@ tags: [CentOS, ownCloud, ActiveDirectory, その他の技術]
 ## 設定手順
 設定手順は、 ownCloud 9 で紹介した以下の記事の **手順6** から実施してください。
 
-[ownCloudをActiveDirectory認証にする](https://mseeeen.msen.jp/owncloud-active-directory-authentication/)
+[ownCloudをActiveDirectory認証にする](/owncloud-active-directory-authentication/)
 
 **ownCloud 9では設定後に条件に一致したユーザーが自動で作成** されていましたが、**ownCloud 10ではユーザーがログインした時に作成** されることを確認しました。
 

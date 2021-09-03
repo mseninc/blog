@@ -40,7 +40,7 @@ https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuNA0ip8oKr8LqlBpIvBoAxYu4fDBye
 
 のような URL で下記のような UML 画像に変換できます。
 
-<a href="http://www.plantuml.com/plantuml/svg/SoWkIImgAStDuNA0ip8oKr8LqlBpIvBoAxYu4fDByeiK7ZTsFLstwDdo6Gg9nGh59QKfgNabKAad-vkUJbu84Yz9JKpEI2tYue8gKD2rWuafM2ayRbxrk6dzuwOLZvjsFcxkuE9oICrB0TiCeG40" target="_blank" rel="noopener"><img src="http://www.plantuml.com/plantuml/svg/SoWkIImgAStDuNA0ip8oKr8LqlBpIvBoAxYu4fDByeiK7ZTsFLstwDdo6Gg9nGh59QKfgNabKAad-vkUJbu84Yz9JKpEI2tYue8gKD2rWuafM2ayRbxrk6dzuwOLZvjsFcxkuE9oICrB0TiCeG40" class="aligncenter size-full" /></a>
+![](images/plantuml-server-svg-japanese-font-issue-1.SoWkIImgAStDuNA0ip8oKr8LqlBpIvBoAxYu4fDByeiK7ZTsFLstwDdo6Gg9nGh59QKfgNabKAad-vkUJbu84Yz9JKpEI2tYue8gKD2rWuafM2ayRbxrk6dzuwOLZvjsFcxkuE9oICrB0TiCeG40)
 
 この**パラメーターには PlantUML の記述が圧縮・エンコードされている**ので、復元も可能です。
 
@@ -78,7 +78,7 @@ listfonts お客様からのリクエスト
 
 実際に PlantUML Server で `listfonts` を表示したものが下記です (リアルタイムです)
 
-<a href="https://www.plantuml.com/plantuml/png/SoWkIImgAStDuNA0it8oYqlIylDAYXKUDtOzNRVesV8PZnkx7pTrFcvSzxXvrUEczO-RLZnkslcukOFB8JKl1QmRGWC0" target="_blank" rel="noopener"><img src="https://www.plantuml.com/plantuml/png/SoWkIImgAStDuNA0it8oYqlIylDAYXKUDtOzNRVesV8PZnkx7pTrFcvSzxXvrUEczO-RLZnkslcukOFB8JKl1QmRGWC0" width="274" height="878" class="aligncenter size-full" /></a>
+![](images/plantuml-server-svg-japanese-font-issue-2.SoWkIImgAStDuNA0it8oYqlIylDAYXKUDtOzNRVesV8PZnkx7pTrFcvSzxXvrUEczO-RLZnkslcukOFB8JKl1QmRGWC0)
 
 前述の例では下記のようになります。 `VL PGothic` が利用できるようなので指定してみましょう。
 
@@ -98,7 +98,7 @@ student -> teacher : リクエスト
 
 下記のようになります。
 
-<a href="http://www.plantuml.com/plantuml/png/SoWkIImgAStDuU8gpixCAqWiIinLI4bDIopDAN7BpolnIynDLGZpKGXmpo_9o4pcoiXCILL8oyylISgluE9AJ2x9Br9utDZrTDsYPyjdA2GMAnINbAQavfL0fPxiRtewUI58l2GrCJaZjOYB2wf0GTSE9gPWfV2uUTNZflMFcrOyRjhvkBc3YyiXDIy5w2e0" target="_blank" rel="noopener"><img src="http://www.plantuml.com/plantuml/png/SoWkIImgAStDuU8gpixCAqWiIinLI4bDIopDAN7BpolnIynDLGZpKGXmpo_9o4pcoiXCILL8oyylISgluE9AJ2x9Br9utDZrTDsYPyjdA2GMAnINbAQavfL0fPxiRtewUI58l2GrCJaZjOYB2wf0GTSE9gPWfV2uUTNZflMFcrOyRjhvkBc3YyiXDIy5w2e0" class="aligncenter size-full" /></a>
+![](images/plantuml-server-svg-japanese-font-issue-3.SoWkIImgAStDuU8gpixCAqWiIinLI4bDIopDAN7BpolnIynDLGZpKGXmpo_9o4pcoiXCILL8oyylISgluE9AJ2x9Br9utDZrTDsYPyjdA2GMAnINbAQavfL0fPxiRtewUI58l2GrCJaZjOYB2wf0GTSE9gPWfV2uUTNZflMFcrOyRjhvkBc3YyiXDIy5w2e0)
 
 たしかに VL PGothic が適用されています。
 

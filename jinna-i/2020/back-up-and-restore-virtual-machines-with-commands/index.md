@@ -102,7 +102,7 @@ ESXi へ SSH 接続し、デプロイ直後の仮想マシンファイルを確�
 `vmkfstools -i /vmfs/volumes/ds1/centos8/centos8.vmdk -d thin /vmfs/volumes/ds2/centos8/centos8.vmdk`
 
 詳しい内容は下記の記事をご参照ください
-[コマンドでシンプロビジョニングの仮想マシンを別のデータストアへ移行する](https://mseeeen.msen.jp/migration-to-another-data-store-with-thin-provisioning/)
+[コマンドでシンプロビジョニングの仮想マシンを別のデータストアへ移行する](/migration-to-another-data-store-with-thin-provisioning/)
 
 バックアップが完了したらスナップショットは不要になるので、スナップショットを削除し、仮想ディスクを統合します。
 

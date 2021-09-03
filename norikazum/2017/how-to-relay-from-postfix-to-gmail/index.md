@@ -24,7 +24,7 @@ tags: [Linux, AWS, Gmail, もくもく会, その他の技術]
 メールサーバーを自分自身に指定し、Redmine側の準備は完了していることを前提としています。今回の紹介ではRedmine構築手順を割愛しています。
 
 Redmine構築については、こちらの記事が参考になります。
-[AnsibleでAWS EC2インスタンス上のAmazon LinuxにRedmineを構築する](https://mseeeen.msen.jp/redmine-amazon-linux-ansible/)
+[AnsibleでAWS EC2インスタンス上のAmazon LinuxにRedmineを構築する](/redmine-amazon-linux-ansible/)
 
 以下のような概念です。
 ![](images/how-to-relay-from-postfix-to-gmail-1.png)

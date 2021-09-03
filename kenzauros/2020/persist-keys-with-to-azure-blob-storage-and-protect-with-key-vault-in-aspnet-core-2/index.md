@@ -9,9 +9,9 @@ tags: [Microsoft Azure, ASP.NET Core, .NET]
 
 本記事は連載です。概要については先行記事を参照ください。
 
-- [概要編](https://mseeeen.msen.jp/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-1)
-- [Azure Blob ストレージ設定編](https://mseeeen.msen.jp/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-2) ← いまここ
-- [Azure Key Vault 設定編](https://mseeeen.msen.jp/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3)
+- [概要編](/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-1)
+- [Azure Blob ストレージ設定編](/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-2) ← いまここ
+- [Azure Key Vault 設定編](/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3)
 
 **データ保護キーの永続化と暗号化に必要となる URI やシークレットなどの値を取得するため、 Azure ポータルからサービスを設定**していきます。
 
@@ -131,7 +131,7 @@ https://hogehogeapp.blob.core.windows.net/key-container/keys.xml?sv=2019-02-02&s
 
 ## 実装
 
-これで Blob ストレージが用意できたので、一旦 **ASP.NET Core のデータ保護キーを暗号化せずにストレージに格納**してみます。プログラム側の実装については [概要編](https://mseeeen.msen.jp/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-1) を参照してください。
+これで Blob ストレージが用意できたので、一旦 **ASP.NET Core のデータ保護キーを暗号化せずにストレージに格納**してみます。プログラム側の実装については [概要編](/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-1) を参照してください。
 
 `Startup.ConfigureServices` で `PersistKeysToAzureBlobStorage` を呼び出し、さきほど生成した SAS トークンつきの URL を指定します。
 
@@ -192,4 +192,4 @@ hrrBFUsActc0w3z8LxfrY+ZrRuxR2983KuLB6xHHQpaBAryZdjnEwDk6324TUVAmsCh90aD1iA9GlXPo
 
 次回は Azure Key Vault の設定をして、ようやく暗号化されたデータ保護キーを保存していきます。
 
-- [\[ASP.NET Core\] データ保護キーを Azure Blob ストレージに永続化して Azure Key Vault で暗号化する (Azure Key Vault 設定編)](https://mseeeen.msen.jp/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3)
+- [\[ASP.NET Core\] データ保護キーを Azure Blob ストレージに永続化して Azure Key Vault で暗号化する (Azure Key Vault 設定編)](/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3)

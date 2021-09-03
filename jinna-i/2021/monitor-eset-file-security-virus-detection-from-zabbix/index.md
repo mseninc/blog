@@ -7,12 +7,12 @@ tags: [セキュリティ, zabbix, ESET, その他の技術]
 
 こんにちは、じんないです。
 
-[以前の記事](https://mseeeen.msen.jp/how-to-install-eset-file-security-for-linux-v7/)でもご紹介しましたが、ESET File Security for Linux v7.2 では**管理プログラムを使用しないとマルウェア検出などのセキュリティアラートが発生した場合にメール通報を行うことができません**。
+[以前の記事](/how-to-install-eset-file-security-for-linux-v7/)でもご紹介しましたが、ESET File Security for Linux v7.2 では**管理プログラムを使用しないとマルウェア検出などのセキュリティアラートが発生した場合にメール通報を行うことができません**。
 
 今回は管理プログラムは使用せずに **Zabbix から ESET File Security for Linux v7.2 のウイルス検出を監視する方法**をご紹介します。
 
 管理プログラムを使った方法もご紹介していますのであわせてご参照いただければと思います。
-[ESET Security Management Center (ESET PROTECT) でマルウェア検出時にメール通報を行う方法](https://mseeeen.msen.jp/how-to-send-an-email-when-malware-is-detected-from-eset-security-management-center/)
+[ESET Security Management Center (ESET PROTECT) でマルウェア検出時にメール通報を行う方法](/how-to-send-an-email-when-malware-is-detected-from-eset-security-management-center/)
 
 
 ## 想定環境

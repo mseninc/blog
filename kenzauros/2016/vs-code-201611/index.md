@@ -11,7 +11,7 @@ tags: [Visual Studio Code, その他の技術]
 
 更新項目が多いため、私のあまり使わない機能やよくわからない機能は紹介しませんので、あしからずご了承ください。
 
-先月分はこちら➔ [Visual Studio Code でエディターの水平分割やソースコード整形が可能に (2016/10 version 1.7)](https://mseeeen.msen.jp/vs-code-201610/)
+先月分はこちら➔ [Visual Studio Code でエディターの水平分割やソースコード整形が可能に (2016/10 version 1.7)](/vs-code-201610/)
 
 ## ワークベンチ
 

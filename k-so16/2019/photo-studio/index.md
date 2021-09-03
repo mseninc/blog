@@ -42,7 +42,7 @@ tags: [その他]
 
 ## 写真の確認
 写真を受け取った後は、オフィスに戻り、選んだ2枚のうち、どちらを名刺に使用するかの確認をしました。
-名刺のデザインは [kenzauros](https://mseeeen.msen.jp/category/articles-kenken-wrote/) さんが作成し、みんなでそれぞれの名刺の出来上がりのイメージを確認しました。
+名刺のデザインは [kenzauros](/category/articles-kenken-wrote/) さんが作成し、みんなでそれぞれの名刺の出来上がりのイメージを確認しました。
 
 ## 夕食
 写真の確認と業務を終えて、全員で「[和牛焼肉 布上](http://nunogami.jp/)」で夕食をとりました。
@@ -67,6 +67,6 @@ MSENでの業務を通じて、頼られる人材に成長したいと考えて�
 ---
 
 ## おまけ
-撮影スタジオの待合室に、お風呂のアヒルが置いてあったので、[じんない](https://mseeeen.msen.jp/category/articles-jinnai-wrote/) さんが手に乗せて1枚パチリ。
+撮影スタジオの待合室に、お風呂のアヒルが置いてあったので、[じんない](/category/articles-jinnai-wrote/) さんが手に乗せて1枚パチリ。
 
 ![](images/photo-studio-6.jpg)

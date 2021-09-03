@@ -7,7 +7,7 @@ tags: [JavaScript, Node.js, Koa.js, ES2015(ES6), ES2017, Web]
 
 最近 Express.js から [Koa.js](https://github.com/koajs/koa) に乗り換えました。
 
-前回の記事 ([Koa.js v2 入門 1 (async/await を使ったNode.jsの新しいWeb開発)](https://mseeeen.msen.jp/koa-js-v2-beginning)) では Koa v2 の思想と最初のステップを見てきました。
+前回の記事 ([Koa.js v2 入門 1 (async/await を使ったNode.jsの新しいWeb開発)](/koa-js-v2-beginning)) では Koa v2 の思想と最初のステップを見てきました。
 
 今回は middleware のうち、たいていのアプリに不可欠なルーティング機能です。
 

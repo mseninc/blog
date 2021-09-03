@@ -7,7 +7,7 @@ tags: [その他の技術]
 
 こんにちは。
 
-本記事は、[過去記事](https://mseeeen.msen.jp/convert-ssh-secret-key-from-rsa-to-putty/) の続編です。
+本記事は、[過去記事](/convert-ssh-secret-key-from-rsa-to-putty/) の続編です。
 
 **WinSCPでサーバーに接続しよう** と、過去記事の方法で **WindowsからPuttyツールを利用して変換を試みた** のですが、以下のような **エラーに** 見舞われました。
 ![](images/how-to-convert-ssh-private-key-to-putty-format-with-command-1.jpg)

@@ -5,7 +5,7 @@ author: kiyoshin
 tags: [PowerShell, CSV, もくもく会, Windows]
 ---
 
-以前、[PowerShellを使用したCSVファイルの読み込み方法](https://mseeeen.msen.jp/powershell-import-csv-commandlet/)について紹介しましたが、今回はCSVファイルを出力する方法について紹介したいと思います。
+以前、[PowerShellを使用したCSVファイルの読み込み方法](/powershell-import-csv-commandlet/)について紹介しましたが、今回はCSVファイルを出力する方法について紹介したいと思います。
 
 ## CSVファイルを出力する
 

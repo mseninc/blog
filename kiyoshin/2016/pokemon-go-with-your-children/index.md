@@ -9,7 +9,7 @@ tags: [ポケモンGO, その他, ライフハック]
 
 私は自分のスマホで、娘は嫁のスマホでプレイ中です。
 
-![](images/pokemon-go-with-your-children-1.jpg)
+![pokemongowith](images/pokemon-go-with-your-children-1.jpg)
 
 公園とかポケモンGOプレイしてる人だらけですね～。
 

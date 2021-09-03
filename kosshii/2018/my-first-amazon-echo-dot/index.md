@@ -62,14 +62,14 @@ Amazon Echo Dot を購入したら壁掛けにしたい！！
 
 実際に Amazon Echo を使ってみた記事はこちらからどうぞ。
 
-> [Amazon Echoで好きな音楽を聴きたいときのAlexaとの接し方](https://mseeeen.msen.jp/wp-admin/post.php?post=6023&action=edit)
+> [Amazon Echoで好きな音楽を聴きたいときのAlexaとの接し方](/wp-admin/post.php?post=6023&action=edit)
 
 音楽を聴くだけでなく、自作のスキルをこれから作っていこうと思っています！
 
 スキルを制作の環境構築はこちらからどうぞ。
 
-- [Alexa Skills Kit を使って Amazon Alexa スキル を作成する – 準備編](https://mseeeen.msen.jp/amazon-alexa-skills-preparation/)
-- [Alexa Skills Kit を使って Amazon Alexa スキル を作成する – 実装編](https://mseeeen.msen.jp/amazon-alexa-skills-implementation/)
+- [Alexa Skills Kit を使って Amazon Alexa スキル を作成する – 準備編](/amazon-alexa-skills-preparation/)
+- [Alexa Skills Kit を使って Amazon Alexa スキル を作成する – 実装編](/amazon-alexa-skills-implementation/)
 
 Amazon Echo を購入しようか検討中の方、ぜひ1台購入してみてはいかがでしょうか。
 

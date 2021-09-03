@@ -8,7 +8,7 @@ tags: [Linux]
 こんにちは。
 
 今回は、以前紹介した**Microsoft Azure上のCentOS7にJenkins**を構築します。
-[前回の記事はこちら](https://mseeeen.msen.jp/centos7-on-microsoft-azure/)です。
+[前回の記事はこちら](/centos7-on-microsoft-azure/)です。
 
 ## 事前準備
 

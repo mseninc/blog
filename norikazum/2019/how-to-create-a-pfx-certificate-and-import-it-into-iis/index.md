@@ -10,7 +10,7 @@ tags: [証明書, IIS, Windows]
 今回は、Microsoft IISへインストールするための証明書 **PKCS#12(pfx) 形式への変換する方法** と **IISへのインポート方法** を紹介します。
 
 以下の記事で証明書を作成し、手元には **秘密鍵のファイル(本手順では test.key)** と **証明書のファイル(本手順では test.cer)** が別々にあり、それを元に **pfx形式に変換** した際の手順です。
-[\[サーバー証明書\] UPKI向けCSRとTSVの作成方法](https://mseeeen.msen.jp/how-to-create-csr-and-tsv-for-upki/)
+[\[サーバー証明書\] UPKI向けCSRとTSVの作成方法](/how-to-create-csr-and-tsv-for-upki/)
 
 ## pfx形式への変換手順
 

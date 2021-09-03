@@ -29,7 +29,7 @@ tags: [レク, その他]
 ![](images/2019-spring-recreation-day1-3.jpg)
 
 ここから10分ほど走ったところが本日のお宿。**[熊野　四季亭](http://kumano.shikitei.info/)**です。
-実はここ、[2年前の夏レク](https://mseeeen.msen.jp/2017-summer-recreation-in-biwako-1/)でお邪魔させてもらったところの姉妹店だそうです。
+実はここ、[2年前の夏レク](/2017-summer-recreation-in-biwako-1/)でお邪魔させてもらったところの姉妹店だそうです。
 
 ![](images/2019-spring-recreation-day1-4.jpg)
 
@@ -53,4 +53,4 @@ tags: [レク, その他]
 そんなこんなで時間を忘れて、いろんなことを語り合い、夜は更けていったのでした。
 
 ## 2日目
-[春レク in 熊野 ～BBQ・友ヶ島散策～(2日目)](https://mseeeen.msen.jp/2019-spring-recreation-day2)へ続く
+[春レク in 熊野 ～BBQ・友ヶ島散策～(2日目)](/2019-spring-recreation-day2)へ続く

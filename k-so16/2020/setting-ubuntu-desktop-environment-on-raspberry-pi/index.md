@@ -18,7 +18,7 @@ tags: [Raspberry Pi, Linux, Ubuntu, その他, 〇〇奮闘記]
 
 ## Ubuntu のインストール
 
-**Raspberry Pi Imager** を利用すると、簡単に Ubuntu を micro SD カードに書き込むことができます。 OS のインストール作業の詳細は [kenzauros](https://github.com/kenzauros) さんの記事 「[Raspberry Pi Imager を使って Raspberry Pi OS をインストールする (ヘッドレスインストール対応 2020年6月版)](https://mseeeen.msen.jp/install-raspberry-pi-os-with-raspberry-pi-imager/)」をご参照ください。
+**Raspberry Pi Imager** を利用すると、簡単に Ubuntu を micro SD カードに書き込むことができます。 OS のインストール作業の詳細は [kenzauros](https://github.com/kenzauros) さんの記事 「[Raspberry Pi Imager を使って Raspberry Pi OS をインストールする (ヘッドレスインストール対応 2020年6月版)](/install-raspberry-pi-os-with-raspberry-pi-imager/)」をご参照ください。
 
 まず、 OS 設定画面で以下の画像のように **Ubuntu** を選択します。
 

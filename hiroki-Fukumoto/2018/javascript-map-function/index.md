@@ -94,7 +94,7 @@ console.log(kinds)
 だから `push` とかをする必要がないんですねー。
 
 過去の記事でC#での書き方も記載しておりますので、こちらもぜひご確認ください！
-[JavaScript 屋さんのための C# LINQ 入門 (2) map / Select](https://mseeeen.msen.jp/linq-basic-for-javascript-programmers-2/)
+[JavaScript 屋さんのための C# LINQ 入門 (2) map / Select](/linq-basic-for-javascript-programmers-2/)
 
 ## 補足情報
 

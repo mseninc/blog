@@ -7,7 +7,7 @@ tags: [Vue.js, その他, 〇〇奮闘記]
 
 こんにちは。最近、[サーキット場でのカートの運転](https://sportskart.com/maishima.html)に興味がある k-so16 です。
 
-[Vue.jsのmeetupに参加してきました](https://mseeeen.msen.jp/v-kansai-meetup-5th/) の記事では、登壇を宣言しました。本記事では、[[Monaca UG 共催] v-kansai Vue.js/Nuxt.js meetup #6](https://vuekansai.connpass.com/event/126754/)で登壇してきた様子を紹介します。
+[Vue.jsのmeetupに参加してきました](/v-kansai-meetup-5th/) の記事では、登壇を宣言しました。本記事では、[[Monaca UG 共催] v-kansai Vue.js/Nuxt.js meetup #6](https://vuekansai.connpass.com/event/126754/)で登壇してきた様子を紹介します。
 
 
 ## 発表内容
@@ -68,9 +68,9 @@ tags: [Vue.js, その他, 〇〇奮闘記]
 
 
 ## おまけ
-実は、[きよしん](https://mseeeen.msen.jp/category/articles-kiyoshin-wrote/) さんも、一般参加枠で今回のmeetupに参加していました。
+実は、[きよしん](/category/articles-kiyoshin-wrote/) さんも、一般参加枠で今回のmeetupに参加していました。
 
-今回のmeetupは、先に [きよしん](https://mseeeen.msen.jp/category/articles-kiyoshin-wrote/) さんが聴講者として応募して、その後に私が登壇者として応募しました。4月のmeetupに参加するまで、5月のmeetupで登壇枠で参加する予定はありませんでした。4月のmeetupに参加した後、登壇できるネタがあることを思い出し、思い立ったが吉日の精神で、余っていた5月のmeetupの登壇枠に応募しました。
+今回のmeetupは、先に [きよしん](/category/articles-kiyoshin-wrote/) さんが聴講者として応募して、その後に私が登壇者として応募しました。4月のmeetupに参加するまで、5月のmeetupで登壇枠で参加する予定はありませんでした。4月のmeetupに参加した後、登壇できるネタがあることを思い出し、思い立ったが吉日の精神で、余っていた5月のmeetupの登壇枠に応募しました。
 
 社内でも、登壇するということで、応援もいただけました。これからもコンスタントにアウトプットをして、「登壇はいいぞ」と社内、外部問わず <strike>布教</strike> 啓発していけたらいいなと思います。
 

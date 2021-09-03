@@ -15,11 +15,11 @@ tags: [レク, その他]
 
 一日目は岐阜県の鷲ヶ岳スキー場で滑走。一部ガリガリのところもありましたが、概ねいい雪を堪能できました。
 
-このときはまだ元気な [じんない](https://mseeeen.msen.jp/category/articles-jinnai-wrote/) さん。
+このときはまだ元気な [じんない](/category/articles-jinnai-wrote/) さん。
 
 ![](images/2019-winter-recreation-2.jpg)
 
-[こっしー](https://mseeeen.msen.jp/category/articles-kosshii-wrote/) (左) は今回のレクでめちゃくちゃ上達しました！さすが若い！
+[こっしー](/category/articles-kosshii-wrote/) (左) は今回のレクでめちゃくちゃ上達しました！さすが若い！
 
 ![](images/2019-winter-recreation-3.jpg)
 
@@ -41,11 +41,11 @@ tags: [レク, その他]
 
 ![](images/2019-winter-recreation-7.jpg)
 
-[きよしん](https://mseeeen.msen.jp/category/articles-kiyoshin-wrote/) も大興奮。
+[きよしん](/category/articles-kiyoshin-wrote/) も大興奮。
 
 ![](images/2019-winter-recreation-8.jpg)
 
-ちなみに [しゃちょー](https://mseeeen.msen.jp/category/articles-president-wrote/) はソリのプロフェッショナルです。
+ちなみに [しゃちょー](/category/articles-president-wrote/) はソリのプロフェッショナルです。
 
 ![](images/2019-winter-recreation-9.jpg)
 

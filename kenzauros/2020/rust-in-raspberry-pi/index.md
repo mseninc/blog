@@ -7,7 +7,7 @@ tags: [Raspberry Pi, Rust, その他の技術]
 
 ## 前提条件
 
-先行記事 ([Raspberry Pi Imager を使って Raspberry Pi OS をインストールする](https://mseeeen.msen.jp/install-raspberry-pi-os-with-raspberry-pi-imager)) でインストールを終えた状態を想定します。
+先行記事 ([Raspberry Pi Imager を使って Raspberry Pi OS をインストールする](/install-raspberry-pi-os-with-raspberry-pi-imager)) でインストールを終えた状態を想定します。
 
 - Raspberry Pi 3 Model B V1.2
 - [Raspberry Pi OS (32-bit) Lite (2020-05-27-raspios-buster-lite-armhf)](https://www.raspberrypi.org/downloads/raspberry-pi-os/)

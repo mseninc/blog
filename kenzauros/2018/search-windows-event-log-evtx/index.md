@@ -21,7 +21,7 @@ NirSoft の **FullEventLogView** を使わせていただきます。このツ�
 
 ちなみに [NirSoft](https://www.nirsoft.net/) さんには下記の記事でもお世話になっております。
 
-> - [スリープで強制シャットダウンされる Kernel Power 41 闘病記 (Windows 10)](https://mseeeen.msen.jp/how-to-fix-kernel-power-41-in-windows-10/)
+> - [スリープで強制シャットダウンされる Kernel Power 41 闘病記 (Windows 10)](/how-to-fix-kernel-power-41-in-windows-10/)
 > - [BlueScreenView](https://www.nirsoft.net/utils/blue_screen_view.html) 
 
 ## 使用方法

@@ -7,7 +7,7 @@ tags: [AWS, RDS, Amazon Aurora]
 
 こんにちは。
 
-[以前のRDS関連の記事](https://mseeeen.msen.jp/how-to-use-rds-from-ec-2/)で、RDSインスタンスを MySQLエンジンで起動し、EC2から接続しました。
+[以前のRDS関連の記事](/how-to-use-rds-from-ec-2/)で、RDSインスタンスを MySQLエンジンで起動し、EC2から接続しました。
 
 記事中にVPCにサブネットを2つ作成して→DBサブネットグループを作成したVPCサブネット2つを指定して作成する、という手順がありますが、これと同じ状態でRDSのエンジンに**Amazon Aurora**を指定すると、エラーになることが分かりました。
 

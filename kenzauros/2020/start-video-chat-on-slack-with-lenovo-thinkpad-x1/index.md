@@ -73,7 +73,7 @@ Microsoft アカウントでサインインしていない場合、サインイ�
 
 ちなみに 2018 年モデル以降の X1 Carbon には **ThinkShutter** と呼ばれる物理カメラシャッターがついていますので、映らないときはこちらも開けましょう。
 
-![](https://static.lenovo.com/ww/campaigns/2018/thinkshield/images/lenovo-thinkshield-security-1.jpg)
+![](images/start-video-chat-on-slack-with-lenovo-thinkpad-x1-13.jpg)
 
 > [Lenovo - ThinkShutter | Facebook](https://www.facebook.com/lenovo/videos/thinkshutter/10155713535374635/)
 

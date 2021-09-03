@@ -8,7 +8,7 @@ tags: [その他, 〇〇奮闘記]
 こんにちは。
 
 2016年6月26日の記事で、マル経融資の調整を開始していることを以下の記事で紹介しました。
-[https://mseeeen.msen.jp/applying-for-loan-at-low-interest/](https://mseeeen.msen.jp/applying-for-loan-at-low-interest/)
+[/applying-for-loan-at-low-interest/](/applying-for-loan-at-low-interest/)
 
 このたび、2016年12月21日付で無事融資決定しました！
 詳細は以下より紹介します。

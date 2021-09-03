@@ -7,7 +7,7 @@ tags: [Raspberry Pi, その他, 〇〇奮闘記]
 
 こんにちは。最近、 [GitHub Actions](https://docs.github.com/en/actions) を触ってみた k-so16 です。これを機に CI/CD についてもしっかり勉強したいと思います。
 
-以前、 [Raspberry Pi 4 に Xfce でデスクトップ環境を構築](https://mseeeen.msen.jp/setting-ubuntu-desktop-environment-on-raspberry-pi/) したのですが、 4K モニターにデスクトップを表示すると、解像度がフル HD (1920 × 1080) になっており、設定からも 1920 × 1080 以外に選択肢が表示されませんでした。せっかく 4K モニターに繋いでいるので、画面出力の解像度も 4K に対応させたいところです。
+以前、 [Raspberry Pi 4 に Xfce でデスクトップ環境を構築](/setting-ubuntu-desktop-environment-on-raspberry-pi/) したのですが、 4K モニターにデスクトップを表示すると、解像度がフル HD (1920 × 1080) になっており、設定からも 1920 × 1080 以外に選択肢が表示されませんでした。せっかく 4K モニターに繋いでいるので、画面出力の解像度も 4K に対応させたいところです。
 
 本記事では、 Raspberry Pi で解像度を 4K に対応させる方法を紹介します。
 

@@ -58,7 +58,7 @@ markdownで記述することで、変更点が容易に判断でき改訂管理
 事務所と社員の各家に災害用品の備蓄と配備を行いました。今年はこの災害用品使い方や実際の災害を想定した訓練を行うことも検討しています。
 
 詳細は以下の記事を参照してください。
-[2018年 社内向け災害対策用品を整備しました (物品リストあり)](https://mseeeen.msen.jp/emergency-packing/)
+[2018年 社内向け災害対策用品を整備しました (物品リストあり)](/emergency-packing/)
 
 ![災害対策用品](images/completed-isms-recertification-audit-6.jpg)
 

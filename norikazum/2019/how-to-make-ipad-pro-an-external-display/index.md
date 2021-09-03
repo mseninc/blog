@@ -106,7 +106,7 @@ PCとiPadを接続すると信頼確認とパスコードを求められるの�
 1. iPadがPC側の外部ディスプレイとして表示される
 
 **Apple Pencilも普通に使えます** 、**が、** OneNoteを使ってみたところお絵かきは実用に耐えませんでした。
-[video width="1920" height="1080" mp4="https://mseeeen.msen.jp/wp-content/uploads/2019/03/VID_20190303_175136.mp4"][/video]
+[video width="1920" height="1080" mp4="/wp-content/uploads/2019/03/VID_20190303_175136.mp4"][/video]
 
 キャプチャを取り忘れましたが、はじめにApple Pencilでタッチしたときにさらに上位グレードがあるような広告画面が出ていましたのでそちらを使えばいいのかもしれません。
 

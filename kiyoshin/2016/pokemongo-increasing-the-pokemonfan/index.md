@@ -33,7 +33,7 @@ tags: [その他, ライフハック]
 
 ポケモンGOでは、現状ジムバトルしかできませんが、そのバトルシステムが**ひたすら連打して技を繰り出す**というよくわからないものです。
 
-![](images/pokemongo-increasing-the-pokemonfan-1.jpg)
+![pokemongobattle](images/pokemongo-increasing-the-pokemonfan-1.jpg)
 
 厳密に言うと色々とテクニックは色々ありますが、結局連打ゲーです。
 
@@ -71,9 +71,9 @@ tags: [その他, ライフハック]
 
 せっかくポケモンに触れてもらえたのだから、そういう人たちとポケモンGO を使ってカジュアルに対戦したい！
 
-![](images/pokemongo-increasing-the-pokemonfan-2.jpg)
+![pokemongo20](images/pokemongo-increasing-the-pokemonfan-2.jpg)
 
-![](images/pokemongo-increasing-the-pokemonfan-3.jpg)
+![pokemongo21](images/pokemongo-increasing-the-pokemonfan-3.jpg)
 
 バトルバランスの調整と、個人戦実装のアップデートをお願いします！
 

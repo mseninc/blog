@@ -7,7 +7,7 @@ tags: [その他の技術]
 
 こんにちは。
 
-先日、[こちらの記事](https://mseeeen.msen.jp/suddenly-expired-with-ssl-cert-by-global-sign/)で突如「この組織の証明書は失効しています。」となる現象を紹介しました。
+先日、[こちらの記事](/suddenly-expired-with-ssl-cert-by-global-sign/)で突如「この組織の証明書は失効しています。」となる現象を紹介しました。
 
 また、GlobalSignが公開している[障害情報](https://jp.globalsign.com/info/detail.php?no=1476381069)を実施しても改善しなかったと紹介しました。
 

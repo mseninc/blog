@@ -7,7 +7,7 @@ tags: [Windows, Windows プロファイル, Windows10]
 
 こんにちは。
 
-[前回の記事](https://mseeeen.msen.jp/update-the-default-profile-without-using-sysprep/)で、**sysprepを使わずデフォルトプロファイルをカスタムする** を公開しましたが、
+[前回の記事](/update-the-default-profile-without-using-sysprep/)で、**sysprepを使わずデフォルトプロファイルをカスタムする** を公開しましたが、
 このとき、 プロファイルのカスタムでは **既定のアプリ設定が引き継げない問題が発生** しました。
 
 ![](images/how-to-customize-established-app-settings-1.png)
@@ -17,7 +17,7 @@ tags: [Windows, Windows プロファイル, Windows10]
 以下の記事を参考にさせていただきました。
 [「既定のアプリの選択」をグループポリシーで制御する方法【Windows】│Soy Pocket](https://soypocket.com/it/windows-server/grouppolicy-default-program-change/)
 
-本記事は、[前回記事](https://mseeeen.msen.jp/update-the-default-profile-without-using-sysprep/)の延長として記載させていただきます。
+本記事は、[前回記事](/update-the-default-profile-without-using-sysprep/)の延長として記載させていただきます。
 
 ## 既定のアプリ設定を出力
 ※profile ユーザーでPDFの既定設定などを事前に済ませておきます

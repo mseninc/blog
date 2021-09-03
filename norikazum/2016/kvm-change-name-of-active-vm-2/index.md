@@ -49,7 +49,7 @@ jv-proxy　→　CentOS7.0 に変更する。
 
 先日、じんないも書いていましたが、ハイパーバイザー型としてはVMwareのESXi、MicrosoftのHyper-V、OSSのKVMこれらがほとんどのシェアを占めていると思います。
 
-[無償の仮想化基盤 VMware vSphere Hypervisor 6.0 (vSphere ESXi) を使ってみる。【 導入編 】](https://mseeeen.msen.jp/vmware-vsphere-hypervisor-6-esxi-intro/)
+[無償の仮想化基盤 VMware vSphere Hypervisor 6.0 (vSphere ESXi) を使ってみる。【 導入編 】](/vmware-vsphere-hypervisor-6-esxi-intro/)
 
 当方の関与する案件では、ここ最近VMwareよりHyper-Vのほうが優勢と感じています。
 その中で、予算削減を要望されるお客さまはOSSのKVMを選択されることが多いです。

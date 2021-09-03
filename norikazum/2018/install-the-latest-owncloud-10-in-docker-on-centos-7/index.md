@@ -11,7 +11,7 @@ ownCloudはGoogle DriveやDropboxのようなオンラインストレージで�
 
 過去に、ownCloudの認証をActiveDirectory認証にする記事を公開しましたが、
 今回は、執筆時の最新バージョンをCentOS7上のDockerにインストールしよう！という記事です。
-[ownCloudをActiveDirectory認証にする](https://mseeeen.msen.jp/owncloud-active-directory-authentication/)
+[ownCloudをActiveDirectory認証にする](/owncloud-active-directory-authentication/)
 
 執筆時の最新バージョンは、 **ownCloud 10.0.7 Server** でした。
 

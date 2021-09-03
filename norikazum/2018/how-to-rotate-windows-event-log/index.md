@@ -57,7 +57,7 @@ IPAが紹介している資料にも、高位影響レベルのシステムが�
 
 PowerShellを使って、ログローテションするスクリプトを作成します。
 動作させるための準備を行います。
-※[あとがき](https://mseeeen.msen.jp/how-to-rotate-windows-event-log/#i-6) に**一瞬でインストールできるように展開ファイルをダウンロードできるように** しています。
+※[あとがき](/how-to-rotate-windows-event-log/#i-6) に**一瞬でインストールできるように展開ファイルをダウンロードできるように** しています。
 
 1. C:\batch フォルダを作成する
 2. C:\batch\log フォルダ作成する
@@ -222,7 +222,7 @@ PowerShellウィンドウが現れ、処理が終了すると消えます。
 
 以下をダウンロードいただき、C:直下にコピーしてください。
 
-<a href="https://mseeeen.msen.jp/wp-content/uploads/2018/09/logrotate_install.zip">logrotate_install</a>
+<a href="/wp-content/uploads/2018/09/logrotate_install.zip">logrotate_install</a>
 
 本番環境に適用する際には十分評価を行った上で実施してください。
 

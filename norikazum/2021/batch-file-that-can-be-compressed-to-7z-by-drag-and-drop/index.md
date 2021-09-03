@@ -36,7 +36,7 @@ pause
 ```
 
 バッチファイルも以下にアップロードしておきました。
-<a href="https://mseeeen.msen.jp/wp-content/uploads/2021/02/7z.zip">バッチファイル</a>
+<a href="/wp-content/uploads/2021/02/7z.zip">バッチファイル</a>
 
 ## 実行
 

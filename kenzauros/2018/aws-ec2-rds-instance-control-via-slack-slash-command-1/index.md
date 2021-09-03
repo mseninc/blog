@@ -13,13 +13,13 @@ tags: [JavaScript, Node.js, Slack, AWS, EC2, RDS, Lambda, API Gateway]
 
 この**起動や停止が面倒だと評価自体が後回しになったり、結局停止させなかったりして、意味がなくなってしまう**可能性があります。
 
-これまでは社内の Jenkins から実行させていた ([過去記事](https://mseeeen.msen.jp/start-ec2-instance-by-aws-lambda-through-api-gateway)) のですが、 Jenkins へのログインすら面倒になってきたので(笑)、 Slack からお手軽に起動・停止ができるよう設定してみました。
+これまでは社内の Jenkins から実行させていた ([過去記事](/start-ec2-instance-by-aws-lambda-through-api-gateway)) のですが、 Jenkins へのログインすら面倒になってきたので(笑)、 Slack からお手軽に起動・停止ができるよう設定してみました。
 
 本記事は連載です。後の記事は下記のリンクから参照ください。
 
 - (1) 導入 ← 本記事
-- [(2) Lambda 関数と API の準備](https://mseeeen.msen.jp/aws-ec2-rds-instance-control-via-slack-slash-command-2)
-- [(3) Slash Command の作成とテスト](https://mseeeen.msen.jp/aws-ec2-rds-instance-control-via-slack-slash-command-3)
+- [(2) Lambda 関数と API の準備](/aws-ec2-rds-instance-control-via-slack-slash-command-2)
+- [(3) Slash Command の作成とテスト](/aws-ec2-rds-instance-control-via-slack-slash-command-3)
 
 ## やりたいこと
 
@@ -83,9 +83,9 @@ IAM ロールの作成に関しては割愛しますが、下記の 3 権限が�
 
 次は Slash Command から呼び出す Lambda 関数と API を準備していきます。
 
-[次の記事: (2) Lambda 関数と API の準備 へ](https://mseeeen.msen.jp/aws-ec2-rds-instance-control-via-slack-slash-command-2/)
+[次の記事: (2) Lambda 関数と API の準備 へ](/aws-ec2-rds-instance-control-via-slack-slash-command-2/)
 
 ## 関連記事
 
-- [AWS API Gateway から Lambda 関数を使って EC2 インスタンスを起動・終了する](https://mseeeen.msen.jp/start-ec2-instance-by-aws-lambda-through-api-gateway)
-- [AWS Lambda 関数で EC2 インスタンスを起動・終了する (Python 3.6)](https://mseeeen.msen.jp/start-ec2-instance-by-aws-lambda-with-python-36)
+- [AWS API Gateway から Lambda 関数を使って EC2 インスタンスを起動・終了する](/start-ec2-instance-by-aws-lambda-through-api-gateway)
+- [AWS Lambda 関数で EC2 インスタンスを起動・終了する (Python 3.6)](/start-ec2-instance-by-aws-lambda-with-python-36)

@@ -12,7 +12,7 @@ tags: [Kibana, Elastic Stack, nginx, その他の技術]
 ちょっとハマってしまいましたのでメモしておきます。
 
 kibana や elasticsearch の構築方法は過去の記事を参考にしてみてください。
-[Windows のイベントログを Winlogbeat+Elasticsearch+Kibana で可視化する](https://mseeeen.msen.jp/visualize-windows-event-log-winlogbeat-elasticsearch-kibana/)
+[Windows のイベントログを Winlogbeat+Elasticsearch+Kibana で可視化する](/visualize-windows-event-log-winlogbeat-elasticsearch-kibana/)
 
 ## 想定環境
 - CentOS 7 (dockerホスト)

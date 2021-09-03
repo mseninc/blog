@@ -56,7 +56,7 @@ docker exec -it TEST /bin/bash
 利用しているターミナルソフトは `Tera Term` です。
 
 ※50秒の動画です。
-[video width="824" height="608" mp4="https://mseeeen.msen.jp/wp-content/uploads/2018/03/2018-03-10_21h31_20.mp4"][/video]
+[video width="824" height="608" mp4="/wp-content/uploads/2018/03/2018-03-10_21h31_20.mp4"][/video]
 
 ## コマンドの付録
 

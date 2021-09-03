@@ -7,7 +7,7 @@ tags: [Visual Studio Code, その他, ライフハック]
 
 以前、記事でも紹介した **Markdown から PDF を生成できる Visual Studio Code の拡張機能 [markdown-pdf](https://github.com/yzane/vscode-markdown-pdf/)** 、業務でとても便利に使わせていただいています。
 
-- [Visual Studio Code で Markdown から PDF を一発生成する拡張機能 markdown-pdf](https://mseeeen.msen.jp/vscode-markdown-pdf-extension/)
+- [Visual Studio Code で Markdown から PDF を一発生成する拡張機能 markdown-pdf](/vscode-markdown-pdf-extension/)
 
 今年 4 月、バージョン 1 になったときに内部で使われている PDF 変換器が変更になりました。
 

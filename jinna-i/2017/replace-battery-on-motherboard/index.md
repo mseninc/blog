@@ -113,7 +113,7 @@ PCの電源をオンにし、インターネット時刻をOFF→ONすると時�
 このとき、「サービスを開始できません」と表示された場合は、Windows Time サービスを「開始」してください。
 
 ※NTPの設定方法は以下で紹介しています。
-[コマンドでWindows ServerのNTPサーバーを設定する](https://mseeeen.msen.jp/set-ntp-server-with-command-in-windows-server/)
+[コマンドでWindows ServerのNTPサーバーを設定する](/set-ntp-server-with-command-in-windows-server/)
 
 ## あとがき
 

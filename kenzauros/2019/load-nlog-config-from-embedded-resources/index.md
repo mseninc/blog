@@ -11,7 +11,7 @@ tags: [C#, .NET]
 
 ほとんど姉妹記事 log4net と同じですが、 XmlReader を使うあたりなど少し変わっています。
 
-> [log4net の config ファイルを 埋め込みリソース から読み込む](https://mseeeen.msen.jp/load-log4net-config-from-embedded-resources)
+> [log4net の config ファイルを 埋め込みリソース から読み込む](/load-log4net-config-from-embedded-resources)
 
 ## はじめに
 

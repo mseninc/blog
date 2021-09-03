@@ -12,7 +12,7 @@ tags: [Node.js, Web, Gatsby.js]
 なお、記事が長くなってしまったので、二本立てでお送りいたします。
 
 1. 各記事に著者情報を表示する 👈いまここ
-2. [著者情報にアバター画像を表示する](https://mseeeen.msen.jp/gatsbyjs-author-bio-and-avatar-for-each-post-2)
+2. [著者情報にアバター画像を表示する](/gatsbyjs-author-bio-and-avatar-for-each-post-2)
 
 ## 概要
 
@@ -227,4 +227,4 @@ export default Bio
 
 アバター画像がないので少し寂しい感じですが、無事記事ごと著者が表示できました🙌
 
-[後半](https://mseeeen.msen.jp/gatsbyjs-author-bio-and-avatar-for-each-post-2)へ続きます👉
+[後半](/gatsbyjs-author-bio-and-avatar-for-each-post-2)へ続きます👉

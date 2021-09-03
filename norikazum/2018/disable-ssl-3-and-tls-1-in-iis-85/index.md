@@ -55,7 +55,7 @@ IIS 8.5でWebシステムを構築した際、インストールした直後にS
 
 上記のレジストリをダブルクリックで反映できる regファイルを載せておきます。
 **※評価環境で適用されることは確認しておりますが、お使いの場合はテストしてからご利用ください**
-<a href="https://mseeeen.msen.jp/wp-content/uploads/2018/10/Disable-SSL-3.0andTLS1.0_reg.zip">download>>Disable-SSL 3.0andTLS1.0_reg.zip</a>
+<a href="/wp-content/uploads/2018/10/Disable-SSL-3.0andTLS1.0_reg.zip">download>>Disable-SSL 3.0andTLS1.0_reg.zip</a>
 
 ここまで設定したら再起動します。
 

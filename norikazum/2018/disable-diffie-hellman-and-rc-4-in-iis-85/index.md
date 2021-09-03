@@ -7,7 +7,7 @@ tags: [Windows Server, セキュリティ, SSL, IIS, Windows]
 
 こんにちは。
 
-[前回の記事](https://mseeeen.msen.jp/disable-ssl-3-and-tls-1-in-iis-85) で、**IIS8.5のSSL3.0とTLS1.0を無効にしてSSLチェックを判定Bに引き上げましたが、まだ足りないので今回は 判定A を目指します**。
+[前回の記事](/disable-ssl-3-and-tls-1-in-iis-85) で、**IIS8.5のSSL3.0とTLS1.0を無効にしてSSLチェックを判定Bに引き上げましたが、まだ足りないので今回は 判定A を目指します**。
 
 前回の記事のチェック結果に、以下の2つがありました。
 
@@ -52,7 +52,7 @@ tags: [Windows Server, セキュリティ, SSL, IIS, Windows]
 
 上記のレジストリをダブルクリックで反映できる regファイルを載せておきます。
 **※評価環境で適用されることは確認しておりますが、お使いの場合はテストしてからご利用ください**
-<a href="https://mseeeen.msen.jp/wp-content/uploads/2018/10/Disable-Diffie-HellmanandoRC4.zip">download>>Disable-Diffie-HellmanandoRC4.zip</a>
+<a href="/wp-content/uploads/2018/10/Disable-Diffie-HellmanandoRC4.zip">download>>Disable-Diffie-HellmanandoRC4.zip</a>
 
 ## SSLチェックを実施
 
@@ -66,7 +66,7 @@ tags: [Windows Server, セキュリティ, SSL, IIS, Windows]
 
 前回の記事と合わせてご覧いただき、是非IISのセキュリティレベルを向上させてください。
 
->[[Windows Server] IIS 8.5 でSSL 3.0とTLS 1.0を無効にする](https://mseeeen.msen.jp/disable-ssl-3-and-tls-1-in-iis-85)
+>[[Windows Server] IIS 8.5 でSSL 3.0とTLS 1.0を無効にする](/disable-ssl-3-and-tls-1-in-iis-85)
 
 それでは次回の記事でお会いしましょう。
 

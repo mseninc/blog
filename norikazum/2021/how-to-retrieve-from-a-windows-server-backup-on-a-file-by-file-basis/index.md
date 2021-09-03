@@ -48,7 +48,7 @@ tags: [Windows Server, バックアップ, Windows Server バックアップ, Wi
 その場合は必要に応じてプロパティから権限を付与してください。
 
 ## あとがき
-その他 [Windows Server バックアップ](https://mseeeen.msen.jp/tag/windows-server-%e3%83%90%e3%83%83%e3%82%af%e3%82%a2%e3%83%83%e3%83%97/) に関連した記事も是非ご覧下さい。
+その他 [Windows Server バックアップ](/tag/windows-server-%e3%83%90%e3%83%83%e3%82%af%e3%82%a2%e3%83%83%e3%83%97/) に関連した記事も是非ご覧下さい。
 
 それでは次回の記事でお会いしましょう。
 

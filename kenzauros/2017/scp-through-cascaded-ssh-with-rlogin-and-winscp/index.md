@@ -5,7 +5,7 @@ author: kenzauros
 tags: [SSH, scp, Linux]
 ---
 
-先日、[ターミナルソフト RLogin を使って多段 SSH 経由でリモートデスクトップで Windows サーバーに接続する](https://mseeeen.msen.jp/remote-desktop-through-cascaded-ssh-with-rlogin) という記事を書いたので、次に **[RLogin](http://nanno.dip.jp/softlib/man/rlogin/) と [WinSCP](https://winscp.net/eng/docs/lang:jp) を使って 2 段の SSH 経由でリモートサーバーのファイルを操作する**方法を紹介します。
+先日、[ターミナルソフト RLogin を使って多段 SSH 経由でリモートデスクトップで Windows サーバーに接続する](/remote-desktop-through-cascaded-ssh-with-rlogin) という記事を書いたので、次に **[RLogin](http://nanno.dip.jp/softlib/man/rlogin/) と [WinSCP](https://winscp.net/eng/docs/lang:jp) を使って 2 段の SSH 経由でリモートサーバーのファイルを操作する**方法を紹介します。
 
 ## 概要
 
@@ -36,7 +36,7 @@ hogehoge と fumifumi を通して momimomi に SCP で接続します。
 
 前回の記事で作った A の接続がある場合はこの手順は不要です。
 
-まだ A の接続がない場合は、[前回の記事]((https://mseeeen.msen.jp/remote-desktop-through-cascaded-ssh-with-rlogin#A_SSH_localhost10022))を参照して作成してください。
+まだ A の接続がない場合は、[前回の記事]((/remote-desktop-through-cascaded-ssh-with-rlogin#A_SSH_localhost10022))を参照して作成してください。
 
 ## WinSCP 側の設定
 

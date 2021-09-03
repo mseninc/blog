@@ -88,8 +88,8 @@ PS C:\tmp> Get-ChildItem -Recurse -File -Include *.xlsx | ForEach-Object { Move-
 
 本ブログにも **Get-ChildItem** を利用した一括処理の記事がいくつかあるので、参考にしてください。
 
-- [PowerShellを使ってファイルの文字コードと改行コードを変換する](https://mseeeen.msen.jp/use-powershell-convert-to-encoding-and-line-feed/)
-- [\[PowerShell\] Windows のイベントログを7zで圧縮してローテーションする方法](https://mseeeen.msen.jp/how-to-rotate-windows-event-log/)
+- [PowerShellを使ってファイルの文字コードと改行コードを変換する](/use-powershell-convert-to-encoding-and-line-feed/)
+- [\[PowerShell\] Windows のイベントログを7zで圧縮してローテーションする方法](/how-to-rotate-windows-event-log/)
 
 それでは、また。
 

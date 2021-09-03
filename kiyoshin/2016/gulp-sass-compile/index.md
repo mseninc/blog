@@ -134,7 +134,7 @@ gulp.task('default', ['scss:watch']);
 
 これで、さきほど記述した gulpfile.js が実行され、scss:watch のタスクによる、Sass ファイルへの監視が始まります。
 
-![](images/gulp-sass-compile-1.png)
+![gulpwatch](images/gulp-sass-compile-1.png)
 
 この監視状態は キーボードで ctrl + c を押すまで続きます。
 

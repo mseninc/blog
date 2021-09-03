@@ -8,7 +8,7 @@ tags: [Windows Server, Windows]
 こんにちは。
 
 ずいぶん過去の記事(↓)で、コマンドでNTPサーバーを設定する方法を掲載していました。
-[コマンドでWindows ServerのNTPサーバーを設定する](https://mseeeen.msen.jp/set-ntp-server-with-command-in-windows-server/)
+[コマンドでWindows ServerのNTPサーバーを設定する](/set-ntp-server-with-command-in-windows-server/)
 
 Windows Server 2016のサーバーを構築する機会があったので、この記事のとおりにやってみたところ、正常に同期されませんでした。
 

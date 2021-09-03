@@ -190,7 +190,7 @@ user1     ALL=(ALL)       NOPASSWD: ALL
 
 ログオンスクリプトのキック方法は以下の記事で紹介していますので、参考にしてください。
 
-[\[CentOS 7.4\] GNOME環境にログインした時だけ実行されるスタートアップスクリプトを書く](https://mseeeen.msen.jp/centos74-gnome-startup-script/)
+[\[CentOS 7.4\] GNOME環境にログインした時だけ実行されるスタートアップスクリプトを書く](/centos74-gnome-startup-script/)
 
 ではまた。
 

@@ -8,7 +8,7 @@ tags: [HTML, WordPress, WordPressプラグイン, Web]
 前回、WordPress で定型文を簡単に登録する方法を書きました。
 
 ワードプレスでスニペット(定型文)を簡単に登録して使用する方法
-[https://mseeeen.msen.jp/wordpress-post-snippets/](https://mseeeen.msen.jp/wordpress-post-snippets/)
+[/wordpress-post-snippets/](/wordpress-post-snippets/)
 
 今回は、WordPress の投稿画面でHTMLタグを追加したり非表示にしたりカスタマイズする方法を記載します。
 
@@ -78,7 +78,7 @@ WordPressの投稿画面には最初からHTMLタグが登録されています�
 
 ## まとめ
 
-当ブログでは投稿画面に、今回紹介した AddQuicktag と、[前回紹介した Post Snippets](https://mseeeen.msen.jp/wordpress-post-snippets/) がインストールされています。
+当ブログでは投稿画面に、今回紹介した AddQuicktag と、[前回紹介した Post Snippets](/wordpress-post-snippets/) がインストールされています。
 
 AddQuicktag はHTMLタグを、Post Snippets はマークダウン記法の入力補助として使用しています。
 
@@ -86,7 +86,7 @@ AddQuicktag はHTMLタグを、Post Snippets はマークダウン記法の入�
 
 ### あゆとの雑談部屋
 
-先週、あるスタッフの誕生日だったので、[社長](https://mseeeen.msen.jp/category/articles-president-wrote/)がビールとマカロンをごちそうしてくれました。
+先週、あるスタッフの誕生日だったので、[社長](/category/articles-president-wrote/)がビールとマカロンをごちそうしてくれました。
 
 **ザ・プレミアム・モルツ マスターズドリーム 醸造家の夢**
 

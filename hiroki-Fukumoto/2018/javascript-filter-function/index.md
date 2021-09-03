@@ -8,7 +8,7 @@ tags: [JavaScript, ES2015(ES6), Web]
 こんにちは。ふっくんです。
 
 前回は、 `javascript` の `map` 関数をご紹介しました。
-[JavaScript map関数を使用して必要な要素のみで配列を生成する](https://mseeeen.msen.jp/javascript-map-function/)
+[JavaScript map関数を使用して必要な要素のみで配列を生成する](/javascript-map-function/)
 
 今回は、 `javascript` の `filter` 関数をご紹介します。
 `map` 関数と `filter` 関数を使えば、javascriptで配列を扱う時にかなり楽になると思います。
@@ -65,7 +65,7 @@ console.log(fruits)
 `map` 関数と `filter` 関数、ぜひ使いこなしてみてください！
 
 過去の記事でC#での書き方も記載しておりますので、こちらもぜひご確認ください！
-[JavaScript 屋さんのための C# LINQ 入門 (1) filter / Where](https://mseeeen.msen.jp/linq-basic-for-javascript-programmers-1/)
+[JavaScript 屋さんのための C# LINQ 入門 (1) filter / Where](/linq-basic-for-javascript-programmers-1/)
 
 ## 補足情報
 

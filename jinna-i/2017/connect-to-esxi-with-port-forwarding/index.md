@@ -22,7 +22,7 @@ VPN環境が整っている場合は、VPN接続を行えばあたかも同一�
 さっそく手順を紹介していきましょう。
 
 ※リモートデスクトップで複数セッションを有効化する方法は以下で紹介しています。
-[リモートデスクトップで2セッション有効にする方法 – Windows Server 2012 R2](https://mseeeen.msen.jp/enable-multiple-session-in-windows-server-2012-r2/)
+[リモートデスクトップで2セッション有効にする方法 – Windows Server 2012 R2](/enable-multiple-session-in-windows-server-2012-r2/)
 
 
 ## 前提

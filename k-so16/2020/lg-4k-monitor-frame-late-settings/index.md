@@ -7,7 +7,7 @@ tags: [4K, その他, ライフハック]
 
 こんにちは。最近、 高校の科目の復習を始めた k-so16 です。現在、苦手科目の 1 つである数学を復習していますが、受験関係なく興味本位で勉強する分には面白いですね（笑）
 
-普段、業務で LG の 32UD59-B のモニターを利用しているのですが、解像度を 4K に設定すると、フレームレートを 60Hz に設定できず、どうしたら解決するか悩んでいました。過去に [じんない](https://mseeeen.msen.jp/category/articles-jinnai-wrote/) さんが執筆した 「 **[ThinkPad X1 Carbon (2017) から LG モニター 32UD59-B に 4K 60Hz で出力できない](https://mseeeen.msen.jp/can-not-output-4k-60hz-with-32ud59/)** 」 という記事を参考に設定を行ったのですが、同じモニターを利用しているにも関わらず、なぜか解決しませんでした。
+普段、業務で LG の 32UD59-B のモニターを利用しているのですが、解像度を 4K に設定すると、フレームレートを 60Hz に設定できず、どうしたら解決するか悩んでいました。過去に [じんない](/category/articles-jinnai-wrote/) さんが執筆した 「 **[ThinkPad X1 Carbon (2017) から LG モニター 32UD59-B に 4K 60Hz で出力できない](/can-not-output-4k-60hz-with-32ud59/)** 」 という記事を参考に設定を行ったのですが、同じモニターを利用しているにも関わらず、なぜか解決しませんでした。
 
 ![](images/lg-4k-monitor-frame-late-settings-1.png)
 

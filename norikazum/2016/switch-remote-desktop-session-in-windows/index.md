@@ -15,7 +15,7 @@ Windows Server は標準の状態では1セッションしかログインでき�
 
 その方法は下記の記事で紹介しています。
 
-[リモートデスクトップで2セッション有効にする方法 – Windows Server 2012 R2](https://mseeeen.msen.jp/enable-multiple-session-in-windows-server-2012-r2/)
+[リモートデスクトップで2セッション有効にする方法 – Windows Server 2012 R2](/enable-multiple-session-in-windows-server-2012-r2/)
 
 サーバー構築やメンテナンスの際、複数人で作業をしていると誰かに奪ったり奪われたり、ということが発生しますが、書きかけのメモや作業中のコンソールがある場合など、もう一度その環境に戻りたいことがあります。
 

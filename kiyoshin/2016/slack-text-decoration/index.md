@@ -21,7 +21,7 @@ Slackでの入力例： `これで *太字* になるよ`
 
 Markdown では ** で囲みます。
 ### 実際に Slack で表示される形
-![](images/slack-text-decoration-1.png)
+![太字](images/slack-text-decoration-1.png)
 
 ## 斜体
 ### 書き方
@@ -33,7 +33,7 @@ Slackでの入力例 ： `これで _斜体_ になるよ`
 
 Markdown でも同じですね。
 ### 実際に Slack で表示される形
-![](images/slack-text-decoration-2.png)
+![斜体](images/slack-text-decoration-2.png)
 
 ## 取り消し線
 ### 書き方
@@ -45,7 +45,7 @@ Slackでの入力例： `これで ~取り消し線~ になるよ`
 
 Markdown では、~~ で囲みます。
 ### 実際に Slack で表示される形
-![](images/slack-text-decoration-3.png)
+![取り消し線](images/slack-text-decoration-3.png)
 
 ## 引用（一行）
 ### 書き方
@@ -58,7 +58,7 @@ Slackでの入力例：
 
 Markdown でも同じですね。
 ### 実際に Slack で表示される形
-![](images/slack-text-decoration-4.png)
+![一行引用](images/slack-text-decoration-4.png)
 
 ## 引用（複数行）
 ### 書き方
@@ -73,7 +73,7 @@ Slackでの入力例：
 この引用をすると後の文字が全て引用として扱われます。
 
 ### 実際に Slack で表示される形
-![](images/slack-text-decoration-5.png)
+![複数行引用](images/slack-text-decoration-5.png)
 
 ## コード（一行）
 ### 書き方
@@ -87,7 +87,7 @@ Slackでの入力例： `` `インラインのコード表記に使える` ``
 
 Markdown でも同じですね。
 ### 実際に Slack で表示される形
-![](images/slack-text-decoration-6.png)
+![インラインコード](images/slack-text-decoration-6.png)
 
 ## コード（複数行）
 ### 書き方
@@ -107,12 +107,12 @@ Slackでの入力例：
 
 Markdown でも同じですね。
 ### 実際に Slack で表示される形
-![](images/slack-text-decoration-7.png)
+![インラインコード](images/slack-text-decoration-7.png)
 
 ## あとがき
 Markdown っぽい書き方ができますが、少し違うので、よく使うものや使いたいものは、覚えておくと良いと思います。
 
-[card url="https://mseeeen.msen.jp/markdown-basic-rules/"]
+[card url="/markdown-basic-rules/"]
 
 おまけで `#ff0000` 等のカラーコード表記にすると、色見本が表示されたりしますが、文字の色がそのカラーコードの色になるわけでもないので、あまり使いドコロがありません…
 

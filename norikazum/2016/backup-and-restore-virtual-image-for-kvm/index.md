@@ -8,7 +8,7 @@ tags: [仮想化技術]
 こんにちは。
 
 今回はKVMで運用している仮想イメージをバックアップし、別のPCで動かしてみたいと思います。
-KVMの構築は以前 [こちら](https://mseeeen.msen.jp/make-virtual-mac…-kvm-in-centos-7/) で紹介しました。
+KVMの構築は以前 [こちら](/make-virtual-mac…-kvm-in-centos-7/) で紹介しました。
 
 * ドメイン名(仮想マシン名)：centos7
 * イメージ名：centos7.img

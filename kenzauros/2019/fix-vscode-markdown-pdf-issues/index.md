@@ -7,8 +7,8 @@ tags: [Markdown, Visual Studio Code, PlantUML, その他の技術]
 
 VSCode の拡張機能 **[yzane/vscode-markdown-pdf](https://github.com/yzane/vscode-markdown-pdf)** はこれまでも何度か本ブログでも取り上げていますが、 **VSCode で markdown を PDF に変換するのに最適なツール**です。
 
-- [Visual Studio Code で Markdown から PDF を一発生成する拡張機能 markdown-pdf](https://mseeeen.msen.jp/vscode-markdown-pdf-extension/)
-- [VSCode markdown-pdf でヘッダーやフッターをいい感じに設定する](https://mseeeen.msen.jp/vscode-markdown-pdf-v1-header-footer-settings/)
+- [Visual Studio Code で Markdown から PDF を一発生成する拡張機能 markdown-pdf](/vscode-markdown-pdf-extension/)
+- [VSCode markdown-pdf でヘッダーやフッターをいい感じに設定する](/vscode-markdown-pdf-v1-header-footer-settings/)
 
 ただ、**VSCode 側のバージョンアップによる仕様変更のせいで、現行バージョンの 1.2.0 は不具合がでています**。
 
@@ -31,7 +31,7 @@ v1.2.1 として改良版をリリースしました。
 
 上記リリースから zip ファイルで **VSIX (拡張機能パッケージ) ファイル**がダウンロードできます。 VSIX のインストール方法は過去記事を参照してください。
 
-- [Visual Studio Code の拡張機能を VSIX ファイルからインストールする](https://mseeeen.msen.jp/how-to-install-extension-in-visual-studio-code-with-vsix/)
+- [Visual Studio Code の拡張機能を VSIX ファイルからインストールする](/how-to-install-extension-in-visual-studio-code-with-vsix/)
 
 ## 改善点
 

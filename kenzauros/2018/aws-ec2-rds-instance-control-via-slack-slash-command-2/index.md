@@ -5,11 +5,11 @@ author: kenzauros
 tags: [JavaScript, Node.js, Slack, AWS, EC2, RDS, Lambda, API Gateway]
 ---
 
-本記事は [Slack の Slash Command で AWS の EC2 と RDS の起動と停止を実現してみた (1) 導入](https://mseeeen.msen.jp/aws-ec2-rds-instance-control-via-slack-slash-command-1) の続きです。やりたいことや前提条件は前回の記事を参照してください。
+本記事は [Slack の Slash Command で AWS の EC2 と RDS の起動と停止を実現してみた (1) 導入](/aws-ec2-rds-instance-control-via-slack-slash-command-1) の続きです。やりたいことや前提条件は前回の記事を参照してください。
 
-- [(1) 導入](https://mseeeen.msen.jp/aws-ec2-rds-instance-control-via-slack-slash-command-1)
+- [(1) 導入](/aws-ec2-rds-instance-control-via-slack-slash-command-1)
 - (2) Lambda 関数と API の準備 ← 本記事
-- [(3) Slash Command の作成とテスト](https://mseeeen.msen.jp/aws-ec2-rds-instance-control-via-slack-slash-command-3)
+- [(3) Slash Command の作成とテスト](/aws-ec2-rds-instance-control-via-slack-slash-command-3)
 
 ## Lambda 関数の準備
 
@@ -20,7 +20,7 @@ tags: [JavaScript, Node.js, Slack, AWS, EC2, RDS, Lambda, API Gateway]
 
 希望のリージョンで **AWS Lambda** の関数ページを開き、 [関数の作成] ボタンを押します。
 
-**[一から作成]** で必要事項を入力します。 IAM ロールには [前述](https://mseeeen.msen.jp/aws-ec2-rds-instance-control-via-slack-slash-command-1) のとおり EC2 と RDS の制御権限をもつロールを指定します。
+**[一から作成]** で必要事項を入力します。 IAM ロールには [前述](/aws-ec2-rds-instance-control-via-slack-slash-command-1) のとおり EC2 と RDS の制御権限をもつロールを指定します。
 
 ![](images/aws-ec2-rds-instance-control-via-slack-slash-command-2-1.png)
 
@@ -144,7 +144,7 @@ URL を発行するため、 **API をデプロイ**します。
 
 いよいよ Slack 側で Slash Command を作成していきます。
 
-[次の記事: (3) Slash Command の作成とテスト へ](https://mseeeen.msen.jp/aws-ec2-rds-instance-control-via-slack-slash-command-3/)
+[次の記事: (3) Slash Command の作成とテスト へ](/aws-ec2-rds-instance-control-via-slack-slash-command-3/)
 
 ## 参考リンク
 

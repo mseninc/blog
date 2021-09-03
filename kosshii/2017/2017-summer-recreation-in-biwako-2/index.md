@@ -9,7 +9,7 @@ tags: [レク, その他]
 
 6月24日から25日にかけて行ってきた琵琶湖バーベキューの2日目の様子をお届けします！
 
-[1日目の記事はこちら](https://mseeeen.msen.jp/2017-summer-recreation-in-biwako-1/)
+[1日目の記事はこちら](/2017-summer-recreation-in-biwako-1/)
 
 ## 2日目
 

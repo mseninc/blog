@@ -10,8 +10,8 @@ tags: [AWS, Lambda, PDF, Chrome, Puppeteer]
 少し画像が多く、説明が長くなってしまったため、三部作でお送りします。
 
 1. 概要・日本語フォントの準備 ← この記事
-2. [Puppeteer の準備](https://mseeeen.msen.jp/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-2)
-3. [Lambda 関数の作成](https://mseeeen.msen.jp/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3)
+2. [Puppeteer の準備](/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-2)
+3. [Lambda 関数の作成](/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3)
 
 ## 概要
 
@@ -110,5 +110,5 @@ Lambda のコンソールから**「レイヤー」**を開き、**「レイヤ�
 フォントレイヤーの作成は以上です。続きは下記のリンクからご覧ください。
 
 1. 概要・日本語フォントの準備 ← この記事
-2. [Puppeteer の準備](https://mseeeen.msen.jp/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-2)
-3. [Lambda 関数の作成](https://mseeeen.msen.jp/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3)
+2. [Puppeteer の準備](/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-2)
+3. [Lambda 関数の作成](/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3)

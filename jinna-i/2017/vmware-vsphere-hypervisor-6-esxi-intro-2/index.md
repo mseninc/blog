@@ -7,7 +7,7 @@ tags: [VMware, ESXi, 仮想化, 仮想化技術]
 
 こんにちは、じんないです。
 
-[導入編の執筆](https://mseeeen.msen.jp/vmware-vsphere-hypervisor-6-esxi-intro/)からずいぶんと経ってしまいましたが、続編としてvSphere Hypervisor 6.0上に仮想マシンを作成する方法を紹介します。
+[導入編の執筆](/vmware-vsphere-hypervisor-6-esxi-intro/)からずいぶんと経ってしまいましたが、続編としてvSphere Hypervisor 6.0上に仮想マシンを作成する方法を紹介します。
 
 ## 前提
 

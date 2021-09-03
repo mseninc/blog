@@ -11,8 +11,8 @@ Jenkins記事が続いておりますｗ
 
 今回は、JenkinsのバックアップをJenkinsのプロジェクトでバックアップをとり、その結果をSlackに通知する方法を紹介したいと思います。
 
-関連する記事：[Azure上のCentOS7にJenkinsを構築](https://mseeeen.msen.jp/jenkins-on-centos7-on-microsoft-azure)
-関連する記事：[JenkinsとSlackを連携する＋GitHub連携準備](https://mseeeen.msen.jp/jenkins-on-centos7-on-microsoft-azure)
+関連する記事：[Azure上のCentOS7にJenkinsを構築](/jenkins-on-centos7-on-microsoft-azure)
+関連する記事：[JenkinsとSlackを連携する＋GitHub連携準備](/jenkins-on-centos7-on-microsoft-azure)
 
 ## 前提状況
 1. Slack連携ができていること。

@@ -8,7 +8,7 @@ tags: [JavaScript, Web]
 こんにちは。ふっくんです。
 
 前回はjavascriptのreduce関数を使用して、合計値を求める方法を紹介しました。
-[JavaScript reduce関数を使用して合計を求める](https://mseeeen.msen.jp/javascript-reduce-function/)
+[JavaScript reduce関数を使用して合計を求める](/javascript-reduce-function/)
 
 今回は、reduce関数を使用して配列から重複なしの一覧を作成する方法をご紹介します。
 
@@ -85,7 +85,7 @@ const list = animals.reduce((p, x) => (p.indexOf(x.kind) !== -1) ? p : [ ...p, x
 
 他にもjavaScriptの便利な関数を紹介していますので、ぜひご覧ください！
 
-- [JavaScript reduce関数を使用して合計を求める](https://mseeeen.msen.jp/javascript-reduce-function/)
-- [JavaScript map関数を使用して必要な要素のみで配列を生成する](https://mseeeen.msen.jp/javascript-map-function/)
-- [JavaScript filter関数を使用して条件に一致する要素で配列を生成する](https://mseeeen.msen.jp/javascript-filter-function/)
+- [JavaScript reduce関数を使用して合計を求める](/javascript-reduce-function/)
+- [JavaScript map関数を使用して必要な要素のみで配列を生成する](/javascript-map-function/)
+- [JavaScript filter関数を使用して条件に一致する要素で配列を生成する](/javascript-filter-function/)
 

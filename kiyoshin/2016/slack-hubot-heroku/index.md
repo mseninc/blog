@@ -12,16 +12,16 @@ node.jsのインストール(長期サポートのある安定版のLTSを推奨
 [https://nodejs.org/en/](https://nodejs.org/en/)
 
 Herokuの登録
-[card url="https://mseeeen.msen.jp/get-heroku-account-for-free/"]
+[card url="/get-heroku-account-for-free/"]
 
 git(Windows)のインストール
-[card url="https://mseeeen.msen.jp/git-how-to-install/"]
+[card url="/git-how-to-install/"]
 
 スラックへのチーム登録 
-[card url="https://mseeeen.msen.jp/slack-registration/"]
+[card url="/slack-registration/"]
 
 SlackチームのメンバーへHUBOTを追加
-[card url="https://mseeeen.msen.jp/add-slack-to-hubot/"]
+[card url="/add-slack-to-hubot/"]
 
 ## HUBOT(ヒューボット）さんを作成
 HUBOTさんがSlackで働けるように、Slack用HUBOTさんのひな型を作ったり、言語を追加したりします。
@@ -52,14 +52,14 @@ HUBOTさんの中身を入れる箱を作ります。コマンドプロントで
 
 コマンドを実行すると、以下の様なロボットの絵が出てきます。順番に入力を求められるので、以下を参考に入力してください。
 
-![](images/slack-hubot-heroku-1.jpg)
+![hubotslack_adapter](images/slack-hubot-heroku-1.jpg)
 
 Owner：HUBOTの雇い主(主に自分の名前等）
 Bot name：HUBOTの名前（フォルダ名が分かりやすいかも）
 Description：どんな役割をするBotなのかの説明文（なくても大丈夫）
 Bot adapter：使用するツール名(今回は<span style="color:red;">**slack**</span>と入力)
 
-![](images/slack-hubot-heroku-2.png)
+![hubot_slack_adapter](images/slack-hubot-heroku-2.png)
 
 成功すると上記の様な表示が出ます。次にGit Bashを開き下記コマンドを実行してください。
 
@@ -69,7 +69,7 @@ Bot adapter：使用するツール名(今回は<span style="color:red;">**slack
 
 しばらくすると、以下の様な表示がされますので、表示が止まったらエンターを押してください。
 
-![](images/slack-hubot-heroku-3.jpg)
+![bin/hubot](images/slack-hubot-heroku-3.jpg)
 
 ```hubot>```と表示されたと思います。表示されたら、何回かエンター押すと入力画面になるので```hubot>hubot ping```と打ってエンターを押してください。
 
@@ -101,13 +101,13 @@ module.exports = (robot) ->
 ```
 res.sendの後にres.randomを入れると、ランダムで[]に入れた単語をHUBOTさんが発言してくれます。乳酸菌飲料が書かれている部分を編集すると発言する内容が変わります。
 
-![](images/slack-hubot-heroku-4.jpg)
+![nyusankin](images/slack-hubot-heroku-4.jpg)
 
 書き終えたら保存してください。
 ## Herokuの環境づくり
-[Heroku](https://mseeeen.msen.jp/get-heroku-account-for-free/)にHUBOTさんがどこで働けばいいのかSlackまでの道のりを設定します。ここではHerokuを登録している必要があるので、まだ登録していない方は以下のリンクから登録してください。
+[Heroku](/get-heroku-account-for-free/)にHUBOTさんがどこで働けばいいのかSlackまでの道のりを設定します。ここではHerokuを登録している必要があるので、まだ登録していない方は以下のリンクから登録してください。
 
-[card url="https://mseeeen.msen.jp/get-heroku-account-for-free/"]
+[card url="/get-heroku-account-for-free/"]
 
 登録が完了している方は、次の<span style="red:;">C:\Users\FHN\hubot></span>　のディレクトリ内にいることを確認し以下のコマンドを実行してください。
 
@@ -131,7 +131,7 @@ Heroku内にHUBOTさんのスクリプトなどを乗せる場所を作り構築
 
 実行すると、ブラウザで以下の様なページが立ち上がったかと思います。
 
-![](images/slack-hubot-heroku-5.png)
+![Heroku Open](images/slack-hubot-heroku-5.png)
 
 **これによってブラウザでページが開くと思います。そのページのURL（赤枠で囲っている部分)はHerokuとSlackを繋げるために設定するときに必要ですので、URLをメモなどにコピー&ペーストして保存するか開いたページを保管しておいてください。**
 
@@ -150,13 +150,13 @@ Heroku内にHUBOTさんのスクリプトなどを乗せる場所を作り構築
 
 ### HUBOT_SLACK_TOKENの場所
 HUBOT_SLACK_TOKENを取得するにはHUBOTを追加している必要があります。HUBOTをまだ追加していない方は以下のリンクから追加してください。
-[card url="https://mseeeen.msen.jp/add-slack-to-hubot/"]
+[card url="/add-slack-to-hubot/"]
 
 ※HUBOT_SLACK_TOKENはSlackにHUBOTを追加し、HUBOTのコンフィグを見ると表示されています。※見られない場合は権限がないので管理者等に聞いてみてください。
 
-![](images/slack-hubot-heroku-6.png)
+![slack_hubot](images/slack-hubot-heroku-6.png)
 
-![](images/slack-hubot-heroku-7.png)
+![slack×hubot_API](images/slack-hubot-heroku-7.png)
 
 ### コマンドで設定する場合
 ```
@@ -168,7 +168,7 @@ heroku config:add HUBOT_SLACK_TOKEN=HUBOTのtokenを入力
 ### Herokuのページで登録する場合
 Herokuのサイト上で登録する場合、Herokuにログインし、Personal appsを押しSettingsをクリックすると、画面が変わりConfig Variablesが出てきます。クリックすると以下の画像のような項目が出てくるので、画像のように入力してください。
 
-![](images/slack-hubot-heroku-8.png)
+![Config_Variables](images/slack-hubot-heroku-8.png)
 
 ## HUBOTさんをHerokuに連れてきて働いてもらいます
 最後に、Herokuにpushして スクリプトを動作させます。
@@ -179,7 +179,7 @@ Herokuのサイト上で登録する場合、Herokuにログインし、Personal
 
 試しにchannelにHUBOTさんをinvite(招待）して、「乳酸菌」と打ってみてください。なにか乳酸菌飲料の名前を返してくれると思います。
 
-![](images/slack-hubot-heroku-4.jpg)
+![nyusankin](images/slack-hubot-heroku-4.jpg)
 
 うわあああ 倒れるぅぅう
 　　　　 ＿_∩
@@ -189,10 +189,10 @@ Herokuのサイト上で登録する場合、Herokuにログインし、Personal
 
 だけで腹筋ワンダーコア～♪と背筋と乳酸菌～♪
 
-　　( ･ω･`)
-　 ／ >- ､-ヽ
-　/丶ﾉ､_｡ﾉ_｡)
-　＼ Ｙ 土 (ﾄ〉
+　　( ・ω・`)
+　 ／ >- 、-ヽ
+　/丶ノ、_。ノ_。)
+　＼ Ｙ 土 (ト〉
 
 もし、git push heroku masterの部分でうまくいかない場合は、```C:\Users\FHN\hubot>```のディレクトリ内にいることを確認し以下のコマンドを実行。
 ```

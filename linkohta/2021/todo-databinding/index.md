@@ -36,11 +36,11 @@ WPF は、 Microsoft が提供しているデスクトップ クライアント 
 
 Visual Studio を起動して、`新しいプロジェクトの作成 → WPF アプリケーション` を選択します。
 
-![project](https://mseeeen.msen.jp/wp-content/uploads/2021/06/project-480x318.png)
+![](images/todo-databinding-1.png)
 
 これで、 WPF アプリケーションのプロジェクトが作成されます。
 
-![初期画面](https://mseeeen.msen.jp/wp-content/uploads/2021/06/shoki.png)
+![](images/todo-databinding-2.png)
 
 まずはデータバインディングに使用するクラスを作成します。 `TodoElement.cs` を作成して中身を
 ```cs
@@ -153,19 +153,19 @@ namespace TodoList
 ### アプリ起動
 
 最初の画面は以下の画像の通り。
-![first](https://mseeeen.msen.jp/wp-content/uploads/2021/06/1.png)
+![](images/todo-databinding-3.png)
 
 文字を入力して Add ボタンを押すと、
-![second](https://mseeeen.msen.jp/wp-content/uploads/2021/06/2.png)
+![](images/todo-databinding-4.png)
 
 リストに追加されました。
-![third](https://mseeeen.msen.jp/wp-content/uploads/2021/06/2021-06-17_13h14_58.png)
+![](images/todo-databinding-5.png)
 
 チェックを押して、 Delete ボタンを押すと、
-![fourth](https://mseeeen.msen.jp/wp-content/uploads/2021/06/2021-06-17_13h15_19.png)
+![](images/todo-databinding-6.png)
 
 ちゃんと削除されました。
-![fifth](https://mseeeen.msen.jp/wp-content/uploads/2021/06/2021-06-17_13h15_27.png)
+![](images/todo-databinding-7.png)
 
 ## まとめ
 

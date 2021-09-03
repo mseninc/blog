@@ -9,9 +9,9 @@ tags: [Microsoft Azure, ASP.NET Core, .NET]
 
 本記事は連載です。後続の記事については下記を参照ください。
 
-- [概要編](https://mseeeen.msen.jp/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-1) ← いまここ
-- [Azure Blob ストレージ設定編](https://mseeeen.msen.jp/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-2)
-- [Azure Key Vault 設定編](https://mseeeen.msen.jp/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3)
+- [概要編](/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-1) ← いまここ
+- [Azure Blob ストレージ設定編](/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-2)
+- [Azure Key Vault 設定編](/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-3)
 
 ## 背景
 
@@ -86,7 +86,7 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-(通常、この設定は本番環境でのみ行うと思いますので、 [前記事](https://mseeeen.msen.jp/configure-environmental-services-in-asp-net-core/) を参考にして Production のときのみ設定されるようにしてください)
+(通常、この設定は本番環境でのみ行うと思いますので、 [前記事](/configure-environmental-services-in-asp-net-core/) を参考にして Production のときのみ設定されるようにしてください)
 
 ここで問題となるのが、それぞれのメソッドの引数に何を指定すればよいのかということです。「分かっている人は分かっている」んだと思いますが、これについて説明してくれている情報がほぼ皆無です。具体的には下記のような値が必要です。
 
@@ -122,4 +122,4 @@ public void ConfigureServices(IServiceCollection services)
 
 概要だけで長くなったので、今回はここまでにします。次回は、それぞれの値を取得するために Azure ポータルからサービスを設定していきます。
 
-- [\[ASP.NET Core\] データ保護キーを Azure Blob ストレージに永続化して Azure Key Vault で暗号化する (Azure Blob ストレージ設定編)](https://mseeeen.msen.jp/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-2)
+- [\[ASP.NET Core\] データ保護キーを Azure Blob ストレージに永続化して Azure Key Vault で暗号化する (Azure Blob ストレージ設定編)](/persist-keys-with-to-azure-blob-storage-and-protect-with-key-vault-in-aspnet-core-2)

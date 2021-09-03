@@ -15,7 +15,7 @@ Windows からも度々**重大**な病だと宣告されております。
 
 ## 経緯
 
-これまでの経験 ([スリープで強制シャットダウンされる Kernel Power 41 闘病記 (Windows 10)](https://mseeeen.msen.jp/how-to-fix-kernel-power-41-in-windows-10/)) から、ドライバーのアップデートは Lenovo Companion で万全に当てていましたが、症状は改善されませんでした。
+これまでの経験 ([スリープで強制シャットダウンされる Kernel Power 41 闘病記 (Windows 10)](/how-to-fix-kernel-power-41-in-windows-10/)) から、ドライバーのアップデートは Lenovo Companion で万全に当てていましたが、症状は改善されませんでした。
 
 頻発しだしてからしばらく経ったのでなんとなく傾向がわかりはじめました。
 

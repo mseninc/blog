@@ -52,7 +52,7 @@ SourceTreeを起動して[ツール] > [オプション]から[認証]タブを�
 
 トークンの発行どないするねんって方は以下を参考にしてください。
 
-[GitHub の 2段階認証が有効なアカウントに SourceTree から Personal access token を使ってアクセスする](https://mseeeen.msen.jp/access-github-with-sourcetree-with-two-factor-authentication/)
+[GitHub の 2段階認証が有効なアカウントに SourceTree から Personal access token を使ってアクセスする](/access-github-with-sourcetree-with-two-factor-authentication/)
 
 **認証に成功** と表示されたらデフォルト設定にして終了します。
 

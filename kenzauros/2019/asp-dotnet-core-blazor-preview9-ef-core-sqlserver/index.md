@@ -6,9 +6,9 @@ tags: [Entity Framework Core, .NET Core, ASP.NET Core, Blazor, .NET]
 ---
 
 > .NET Core 3.0 の正式リリースに伴い、本記事を書き直しましたので、新記事をお読みください。
-> [[ASP.NET Core] Blazor Server 入門 (EF Core + SQL Server 編)](https://mseeeen.msen.jp/asp-dotnet-core-blazor-ef-core-sqlserver)
+> [[ASP.NET Core] Blazor Server 入門 (EF Core + SQL Server 編)](/asp-dotnet-core-blazor-ef-core-sqlserver)
 
-[前回](https://mseeeen.msen.jp/asp-dotnet-core-blazor-preview9-install/) はインストールとセットアップを行ったので、**今回は Entity Framework Core (EFCore) を使って SQL Server に接続**してみます。
+[前回](/asp-dotnet-core-blazor-preview9-install/) はインストールとセットアップを行ったので、**今回は Entity Framework Core (EFCore) を使って SQL Server に接続**してみます。
 
 SQLite で始める例も多いですが、今回はより実践的になるよう、**既存のデータベース (SQL Server) に接続**することを想定します。
 
@@ -16,7 +16,7 @@ SQLite で始める例も多いですが、今回はより実践的になるよ�
 
 ### 環境
 
-[前回](https://mseeeen.msen.jp/asp-dotnet-core-blazor-preview9-install/)の続きを想定します。
+[前回](/asp-dotnet-core-blazor-preview9-install/)の続きを想定します。
 
 - Visual Studio Code 1.38.1
     - 拡張機能 [C#](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) 1.21.2
@@ -303,4 +303,4 @@ else
 
 次回は**パスワードなどの秘密情報をリポジトリ外に保存する Secret Manager** を使ってみます。
 
-- [[ASP.NET Core] Blazor 入門 (Secret Manager 編)](https://mseeeen.msen.jp/asp-dotnet-core-blazor-secret-manager)
+- [[ASP.NET Core] Blazor 入門 (Secret Manager 編)](/asp-dotnet-core-blazor-secret-manager)

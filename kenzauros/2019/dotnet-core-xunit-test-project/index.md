@@ -14,7 +14,7 @@ VS Code で **xUnit を使ったテストプロジェクトを追加して、テ
 - Visual Studio Code 1.39.1
 - .NET Core 3.0 (SDK 3.0.100)
 
-ソリューションは [Blazor Server 入門記事](https://mseeeen.msen.jp/asp-dotnet-core-blazor-install) で Blazor アプリのプロジェクトを src フォルダ以下に作成した状態とします。
+ソリューションは [Blazor Server 入門記事](/asp-dotnet-core-blazor-install) で Blazor アプリのプロジェクトを src フォルダ以下に作成した状態とします。
 
 Blazor でなくとも .NET Core アプリのプロジェクトであればなんでもかまいません。
 

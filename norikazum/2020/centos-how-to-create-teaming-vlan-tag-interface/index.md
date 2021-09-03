@@ -10,7 +10,7 @@ tags: [ネットワーク, vlan, 801.1q, Linux]
 今回は **CentOS7** で **チーミング+VLANタグ** のインターフェースを作成してみます。
 
 過去記事もご参考ください。
-[\[CentOS7\] Catalyst3750とCentOS7でチーミング(LACP)する](https://mseeeen.msen.jp/teaming-lacp-with-catalyst3750-and-centos7/)
+[\[CentOS7\] Catalyst3750とCentOS7でチーミング(LACP)する](/teaming-lacp-with-catalyst3750-and-centos7/)
 
 過去記事では、 `nmcli` ベースで設定しましたが今回は設定ファイルを編集する方法で実施しています。
 

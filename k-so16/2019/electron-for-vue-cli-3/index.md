@@ -7,7 +7,7 @@ tags: [Vue.js, Electron, Web]
 
 こんにちは。最近、 [Beat Saber](http://beatsaber.com/) というVRゲームに興味がある[^VR] k-so16 です。
 
-[以前登壇した v-kansai meetup](https://mseeeen.msen.jp/v-kansai-meetup-6th/) では、[electron-vue](https://github.com/simulatedgreg/electron-vue) を利用したアプリケーションの作成について発表しました。作成当時はVue CLIのバージョンは2.x系で、 Vue CLI 3 が出る前でした。
+[以前登壇した v-kansai meetup](/v-kansai-meetup-6th/) では、[electron-vue](https://github.com/simulatedgreg/electron-vue) を利用したアプリケーションの作成について発表しました。作成当時はVue CLIのバージョンは2.x系で、 Vue CLI 3 が出る前でした。
 
 久々に electron-vue で何か作ろうかなぁと思い、 Vue CLI 3 がインストールされている私の個人用の開発環境[^my-computer]で electron-vue の環境構築をしようとしたところ、環境構築が出来ませんでした。
 

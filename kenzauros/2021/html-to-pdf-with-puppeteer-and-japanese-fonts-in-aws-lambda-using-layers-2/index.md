@@ -7,11 +7,11 @@ tags: [AWS, Lambda, PDF, Chrome, Puppeteer]
 
 **AWS Lambdaを使ってサーバーレスで HTML を PDF に変換する**ため、三部構成で実現方法をご紹介しています。
 
-1. [概要・日本語フォントの準備](https://mseeeen.msen.jp/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-1)
+1. [概要・日本語フォントの準備](/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-1)
 2. Puppeteer の準備 ← この記事
-3. [Lambda 関数の作成](https://mseeeen.msen.jp/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3)
+3. [Lambda 関数の作成](/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3)
 
-[前回](https://mseeeen.msen.jp/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-1) で日本語フォント用の Lambda レイヤーを用意したので、次に **PDF 変換を実際に行うライブラリとなる Puppeteer のレイヤーを準備**します。
+[前回](/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-1) で日本語フォント用の Lambda レイヤーを用意したので、次に **PDF 変換を実際に行うライブラリとなる Puppeteer のレイヤーを準備**します。
 
 ## 自動化ツールの選定
 
@@ -67,6 +67,6 @@ Windows ではたぶん make は叩けないのでどこか適当な Linux で�
 
 Puppeteer レイヤーの作成は以上です。続きは下記のリンクからご覧ください。
 
-1. [概要・日本語フォントの準備](https://mseeeen.msen.jp/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-1)
+1. [概要・日本語フォントの準備](/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-1)
 2. Puppeteer の準備 ← この記事
-3. [Lambda 関数の作成](https://mseeeen.msen.jp/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3)
+3. [Lambda 関数の作成](/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3)

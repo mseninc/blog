@@ -5,7 +5,7 @@ author: kenzauros
 tags: [TechCrunch Tokyo, その他, 〇〇奮闘記]
 ---
 
-[1日目](https://mseeeen.msen.jp/techcrunch-tokyo-2019-day-1/) に引き続き、 **TechCrunch Tokyo 2019** の参加レポートです。
+[1日目](/techcrunch-tokyo-2019-day-1/) に引き続き、 **TechCrunch Tokyo 2019** の参加レポートです。
 
 2日目もとてもエキサイティングな発表が続きました。
 

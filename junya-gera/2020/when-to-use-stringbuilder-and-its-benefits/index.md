@@ -5,7 +5,7 @@ author: junya-gera
 tags: [VB.NET, .NET]
 ---
 
-こんにちは、じゅんじゅんです。先日、業務の中で .NET Framework(Visual Basic) での改修を行っているとき、 SQL 文の生成を [String](https://docs.microsoft.com/ja-jp/dotnet/api/system.string?view=net-5.0) で行っている部分と [StringBuilder](https://docs.microsoft.com/ja-jp/dotnet/api/system.text.stringbuilder?view=net-5.0) で行っている部分があることが気になったので、 [kenzauros](https://mseeeen.msen.jp/category/articles-kenken-wrote/)さんに 2つの違いを教えていただきました。
+こんにちは、じゅんじゅんです。先日、業務の中で .NET Framework(Visual Basic) での改修を行っているとき、 SQL 文の生成を [String](https://docs.microsoft.com/ja-jp/dotnet/api/system.string?view=net-5.0) で行っている部分と [StringBuilder](https://docs.microsoft.com/ja-jp/dotnet/api/system.text.stringbuilder?view=net-5.0) で行っている部分があることが気になったので、 [kenzauros](/category/articles-kenken-wrote/)さんに 2つの違いを教えていただきました。
 
 ということで今回は **String と StringBuilder の違い**、**どういうときに StringBuilder を使うのか**についてお話します。
 

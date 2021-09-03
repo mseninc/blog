@@ -7,7 +7,7 @@ tags: [レク, その他]
 
 こんにちは、じんないです。
 
-[前編](https://mseeeen.msen.jp/summer-recreation-in-okinawa-prequel)のつづき。
+[前編](/summer-recreation-in-okinawa-prequel)のつづき。
 
 ## 3日目 真栄田岬・万座毛・オリオンビール工場見学
 

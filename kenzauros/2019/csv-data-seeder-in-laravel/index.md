@@ -218,7 +218,7 @@ id	last_name	first_name	age
 
 おそらく文字コードの問題かと思いますが、 `setlocale(LC_ALL, 'ja_JP.UTF-8');` とやってみても変化はありませんでした。また分割される前の問題なので、 `mb_convert_encoding` で文字コードを変換してみることもできません。
 
-実はこのことは弊社も過去に経験していて、なぜか SJIS のファイルを SJIS のまま開くと直るということもありました。 (参照: [LaravelでSplFileObjectを使ってCSVファイルの値を取得する](https://mseeeen.msen.jp/laravel-import-csv-file-content-with-spl-file-object/#SplFileObject_CSV))
+実はこのことは弊社も過去に経験していて、なぜか SJIS のファイルを SJIS のまま開くと直るということもありました。 (参照: [LaravelでSplFileObjectを使ってCSVファイルの値を取得する](/laravel-import-csv-file-content-with-spl-file-object/#SplFileObject_CSV))
 
 しかし当然 UTF-8 のファイルはそのまま開きたいので、今回は「**`SplFileObject` から行単位で読み込んで `explode` でセルの値に分解する**」という手法にしました。
 

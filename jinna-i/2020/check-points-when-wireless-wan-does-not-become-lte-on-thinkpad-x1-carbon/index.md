@@ -35,7 +35,7 @@ APN 設定を行うと、モバイルネットワークには接続できるの�
 
 第5世代 ThinkPad X1 Carbon と同じように mineo の APN 設定を行っていたのですが、どうも設定を一部変える必要があったみたいです。
 ※ mineo の APN 設定はこちらを参照
-[第5世代 ThinkPad X1 Carbon でワイヤレス WAN 接続 (mineo LTE SIM の APN 設定)](https://mseeeen.msen.jp/5th-gen-thinkpad-x1-carbon-wireless-wan/)
+[第5世代 ThinkPad X1 Carbon でワイヤレス WAN 接続 (mineo LTE SIM の APN 設定)](/5th-gen-thinkpad-x1-carbon-wireless-wan/)
 
 [Windows の設定] > [ネットワークとインターネット] > [携帯電話] > [詳細オプション] から APN を削除し、新しく作り直します。
 ※あとから変更できないパラメータのようです。

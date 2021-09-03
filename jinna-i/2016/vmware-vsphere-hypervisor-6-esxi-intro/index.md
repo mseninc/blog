@@ -24,7 +24,7 @@ ESXiはハードウェア上で直接動作するハイパーバイザーで、�
  * VMwareのVMware Player
 
 KVMについては、社長が紹介していますのでご覧ください。
-[CentOS 7にKVMでコマンドラインのみで仮想マシンを構築する](https://mseeeen.msen.jp/make-virtual-machine-with-kvm-in-centos-7/)
+[CentOS 7にKVMでコマンドラインのみで仮想マシンを構築する](/make-virtual-machine-with-kvm-in-centos-7/)
 
 では、早速ESXiを使ってみましょう。
 
@@ -108,6 +108,6 @@ vSphere Web Clientによく似たUIです。
 ![j-esxi-intro_001e](images/vmware-vsphere-hypervisor-6-esxi-intro-14.png)
 
 次は仮想マシンを作っていきましょう。
-[無償の仮想化基盤 VMware vSphere Hypervisor 6.0 (vSphere ESXi) を使ってみる。【 仮想マシン作成編 】](https://mseeeen.msen.jp/vmware-vsphere-hypervisor-6-esxi-intro-2/)
+[無償の仮想化基盤 VMware vSphere Hypervisor 6.0 (vSphere ESXi) を使ってみる。【 仮想マシン作成編 】](/vmware-vsphere-hypervisor-6-esxi-intro-2/)
 
 ではまた。

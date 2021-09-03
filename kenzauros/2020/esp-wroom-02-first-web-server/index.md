@@ -9,7 +9,7 @@ tags: [ESP-WROOM-02, Arduino, その他の技術]
 
 開発環境のセットアップや Hello, world については前記事をご参照ください。
 
-- [Arduino IDE で開発できる Wi-Fi モジュール ESP-WROOM-02 ことはじめ](https://mseeeen.msen.jp/esp-wroom-02-first-step)
+- [Arduino IDE で開発できる Wi-Fi モジュール ESP-WROOM-02 ことはじめ](/esp-wroom-02-first-step)
 
 ## 概要
 

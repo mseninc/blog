@@ -19,7 +19,7 @@ WPF の DataGrid はまぁそれなりの見栄えにはなるのですが、い
 
 かくいう私自身も同じ内容で記事を書いたことがあります（すっかり忘れていて Google 先生に教えてもらいましたが・笑）。
 
-* [WPF の DataGrid で直感的に使えるチェックボックス列を作る](https://mseeeen.msen.jp/usual-checkbox-column-on-wpf-datagrid/)
+* [WPF の DataGrid で直感的に使えるチェックボックス列を作る](/usual-checkbox-column-on-wpf-datagrid/)
 
 そのときのコードはこんな感じでした。
 

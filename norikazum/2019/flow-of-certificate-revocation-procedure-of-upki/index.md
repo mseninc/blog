@@ -8,7 +8,7 @@ tags: [セキュリティ, サーバー, NII, SSL, CRL, その他の技術]
 こんにちは。
 
 以前、以下の記事で **UPKI向けサーバー証明書の作成方法** について紹介しました。
-[\[サーバー証明書\] UPKI向けCSRとTSVの作成方法](https://mseeeen.msen.jp/how-to-create-csr-and-tsv-for-upki/)
+[\[サーバー証明書\] UPKI向けCSRとTSVの作成方法](/how-to-create-csr-and-tsv-for-upki/)
 
 今回は、 **有効期限よりも前に利用しなくなった証明書** を **失効するための手続き** について紹介します。
 文中の表現は前回の記事と同じようになるように意識しましたので併せて参考にしてください。

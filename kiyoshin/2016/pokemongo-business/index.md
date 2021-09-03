@@ -15,7 +15,7 @@ tags: [ポケモンGO, その他, ライフハック]
 
 ### 携帯電話（スマホ）
 
-![](images/pokemongo-business-1.jpg)
+![携帯電話](images/pokemongo-business-1.jpg)
 
 ポケモンGO をプレイするには、そこそこの性能が必要なので、買い替え需要があるハズです。
 
@@ -29,7 +29,7 @@ tags: [ポケモンGO, その他, ライフハック]
 
 ### スマホアクセサリー
 
-![](images/pokemongo-business-2.jpg)
+![スマホアクセサリー](images/pokemongo-business-2.jpg)
 
 ポケモンGO はゲームの性質上、常にアプリを開いておかないといけません。このせいで電池の消費がマッハです。
 
@@ -38,13 +38,13 @@ tags: [ポケモンGO, その他, ライフハック]
 今は大容量でも安くなってきているので、めちゃくちゃ売れると思います。
 
 後は、プレイ中のスマホ落下対策の為に、**ホルスター**や**ポーチ**。防水性があるものも多いので雨の日も安心。
-![](images/pokemongo-business-3.jpg)
+![pochi](images/pokemongo-business-3.jpg)
 
 子供も大人も使える**ネックストラップ**。
-![](images/pokemongo-business-4.jpg)
+![pokemongowith](images/pokemongo-business-4.jpg)
 
 ちょっとオシャレに持ちたい方は**ホールドリング**。
-![](images/pokemongo-business-5.png)
+![bunkerring](images/pokemongo-business-5.png)
 
 このあたりが売れそうです。
 
@@ -54,7 +54,7 @@ tags: [ポケモンGO, その他, ライフハック]
 
 ### 靴屋
 
-![](images/pokemongo-business-6.jpg)
+![靴屋](images/pokemongo-business-6.jpg)
 
 ポケモンGO は位置ゲーなのでとにかく歩きます。
 
@@ -69,7 +69,7 @@ tags: [ポケモンGO, その他, ライフハック]
 
 ### 自転車屋
 
-![](images/pokemongo-business-7.jpg)
+![自転車](images/pokemongo-business-7.jpg)
 
 ポケモンGO は自転車との相性が良く、歩くよりも効率が良くなります。
 
@@ -79,7 +79,7 @@ tags: [ポケモンGO, その他, ライフハック]
 
 ### 自転車用アクセサリー
 ポケモンGO を自転車で走行しながらプレイするとなると、かなり危ない（というか最近だと最悪捕まる）ので**バイクホルダー**が売れます。
-![](images/pokemongo-business-8.png)
+![bikeholder](images/pokemongo-business-8.png)
 
 ポケモン出現時のバイブが鳴った時にいちいちポケットから出してると、そのうちスマホ落下による画面パリーン事案や故障になりかねないので、自転車でポケモンGO をプレイする人は、何かしらのホルダーを買っておきましょう。
 
@@ -92,7 +92,7 @@ tags: [ポケモンGO, その他, ライフハック]
 
 ポケモンGO にはルアーモジュールという課金アイテムがあり、これを使うと30分間その周辺にポケモンが大量に出現するようになります。この効果は他のプレイヤー全員に効果があるので、客寄せにはピッタリです。
 
-![](images/pokemongo-business-9.png)
+![luremodule](images/pokemongo-business-9.png)
 
 ルアーモジュールを使うと上の画像の様にマップ上に花が咲くので、宣伝費をかけずとも勝手に人が寄ってきてくれます。
 
@@ -110,7 +110,7 @@ wi-fi完備して、充電もできるようにしたら、ポケモンGO プレ
 
 ポケモンラテアートとかやると女の子もいっぱい来そうですね～。
 
-![](images/pokemongo-business-10.jpg)
+![latteart](images/pokemongo-business-10.jpg)
 
 すでに商店街でもポケモンGO を利用しての集客が始まっているみたいです。
 [card url="http://www.asahi.com/articles/ASJ7Y6V9ZJ7YPTIL01Z.html"]

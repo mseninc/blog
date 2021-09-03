@@ -5,7 +5,7 @@ author: kiyoshin
 tags: [PowerShell, もくもく会, Windows]
 ---
 
-前回[シートの操作方法](https://mseeeen.msen.jp/sheets-operation-of-excel-with-powershell/)について紹介しましたが、今回はセルに値を設定する方法を紹介していきたいと思います。
+前回[シートの操作方法](/sheets-operation-of-excel-with-powershell/)について紹介しましたが、今回はセルに値を設定する方法を紹介していきたいと思います。
 
 ## 使用環境
 

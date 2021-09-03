@@ -24,7 +24,7 @@ tags: [SQL Server, データベースミラーリング, その他の技術]
 ![](images/sql-server-mirror-configuration-fails-with-error-927-depending-on-version-of-sql-server-management-studio-1.png)
 
 **手順は、過去に じんない が書いてくれた記事を参考** にしているので間違いはありません。
-[SQL Server 2014 でデータベースミラーリングを構成する](https://mseeeen.msen.jp/sqlserver-database-mirroring/)
+[SQL Server 2014 でデータベースミラーリングを構成する](/sqlserver-database-mirroring/)
 
 ## 解決
 何日かはまりましたが、**この記事のお陰で解決** しました！

@@ -10,7 +10,7 @@ tags: [Markdown, Visual Studio Code, その他の技術]
 >2018/5/18 追記
 >本記事で紹介している markdown-pdf が v1 になってヘッダーやフッターの指定の仕方が変わっていますので、新しい記事と併せてご覧ください。
 >
->- [VSCode markdown-pdf でヘッダーやフッターをいい感じに設定する](https://mseeeen.msen.jp/vscode-markdown-pdf-v1-header-footer-settings/)
+>- [VSCode markdown-pdf でヘッダーやフッターをいい感じに設定する](/vscode-markdown-pdf-v1-header-footer-settings/)
 
 ## 拡張機能 markdown-pdf
 

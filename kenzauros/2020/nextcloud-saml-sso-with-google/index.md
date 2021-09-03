@@ -24,7 +24,7 @@ AWS EC2 上に構築した **Nextcloud に Google アカウントでシングル
 
 Nextcloud の構築については下記の記事を参照してください。
 
-- [Amazon Linux 2 に Nextcloud 20 を構築する](https://mseeeen.msen.jp/build-nextcloud-20-on-amazon-linux2)
+- [Amazon Linux 2 に Nextcloud 20 を構築する](/build-nextcloud-20-on-amazon-linux2)
 
 ## Google 側の設定
 

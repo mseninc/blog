@@ -13,7 +13,7 @@ tags: [CentOS, KVM, ネットワーク, vlan, 仮想化技術]
 ![](images/how-to-assign-tagged-vlan-interface-to-virtual-machine-1.png)
 
 ベース記事は以下になります。
-[\[CentOS7\] CentOS7でコマンドラインを利用してVLANタグインターフェースを作成する](https://mseeeen.msen.jp/create-vlan-tag-interface-using-command-line-in-centos7)
+[\[CentOS7\] CentOS7でコマンドラインを利用してVLANタグインターフェースを作成する](/create-vlan-tag-interface-using-command-line-in-centos7)
 
 ## ブリッジインターフェースを作成する
 **KVMで利用するためにブリッジインターフェースを新規作成** します。

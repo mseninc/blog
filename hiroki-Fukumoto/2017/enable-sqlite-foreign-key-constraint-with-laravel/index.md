@@ -14,7 +14,7 @@ tags: [PHP, Laravel, SQLite, Web]
 ※**SQLiteでは、SQLite3から外部キーの設定が可能になりました**。
 
 また、DBの作成はマイグレーションで行います。
-マイグレーションについての説明は過去記事の<a href="https://mseeeen.msen.jp/laravel-53-eloquent-orm-2/">Laravel 5.3 Eloquent ORM 入門 2 (マイグレーション)</a>をご確認ください。
+マイグレーションについての説明は過去記事の<a href="/laravel-53-eloquent-orm-2/">Laravel 5.3 Eloquent ORM 入門 2 (マイグレーション)</a>をご確認ください。
 
 
 ※以下に記載する内容は **Laravel 5.5.3** を前提としております。

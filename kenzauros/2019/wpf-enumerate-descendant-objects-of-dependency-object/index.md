@@ -59,7 +59,7 @@ private static IEnumerable<T> EnumerateDescendantObjects<T>(DependencyObject obj
 
 このあたりは昔の記事にあるので、参考にしてください。
 
-> [C# の yield return で再帰呼び出しを行うには - MSeeeeN](https://mseeeen.msen.jp/cs-recursive-call-with-yield-return/)
+> [C# の yield return で再帰呼び出しを行うには - MSeeeeN](/cs-recursive-call-with-yield-return/)
 
 ## 使い方
 

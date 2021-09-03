@@ -7,12 +7,12 @@ tags: [Node.js, Web, Gatsby.js]
 
 **Gatsbyjs で記事ごとの著者のアバター画像を表示する**方法について、二本立てでお送りしております。
 
-1. [各記事に著者情報を表示する](https://mseeeen.msen.jp/gatsbyjs-author-bio-and-avatar-for-each-post-1)
+1. [各記事に著者情報を表示する](/gatsbyjs-author-bio-and-avatar-for-each-post-1)
 2. 著者情報にアバター画像を表示する 👈いまここ
 
 ## 概要
 
-[前回](https://mseeeen.msen.jp/gatsbyjs-author-bio-and-avatar-for-each-post-1)のおさらいです。
+[前回](/gatsbyjs-author-bio-and-avatar-for-each-post-1)のおさらいです。
 
 Gatsby の [gatsby-starter-blog](https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-blog) スターターでは著者が Kyle Mathews 固定になっています。
 

@@ -20,7 +20,7 @@ Android のバージョンは 11 です。
 
 なお、楽天モバイル eSIM の設定に関する記録は前記事をご覧ください。
 
-- [Google Pixel 5 を Dual SIM で使うために楽天モバイル (eSIM) に MNP してみた](https://mseeeen.msen.jp/mnp-to-rakute-mobile-esim-with-google-pixel-5/)
+- [Google Pixel 5 を Dual SIM で使うために楽天モバイル (eSIM) に MNP してみた](/mnp-to-rakute-mobile-esim-with-google-pixel-5/)
 
 ## 連絡先ごとに設定する
 

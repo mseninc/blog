@@ -7,7 +7,7 @@ tags: [WordPress, Markdown, Bookmarklet, その他, ライフハック]
 
 昔々、下記の記事を投稿しました。
 
-- [Markdown 記法のリンクを取得するブックマークレット MDLink](https://mseeeen.msen.jp/bookmarklet-for-markdown-link/)
+- [Markdown 記法のリンクを取得するブックマークレット MDLink](/bookmarklet-for-markdown-link/)
 
 このブックマークレットは我ながら便利なツールとして使っているのですが、当然ながら公開されたページにしか使えません。
 

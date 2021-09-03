@@ -7,7 +7,7 @@ tags: [Git, その他の技術]
 
 **git で一部のディレクトリ・ファイルのみを同期するとき `sparse-checkout` という機能**を使います。有効にする方法は過去の記事を参照ください。
 
-- [git sparse checkout で clone せずに一部のサブディレクトリだけを pull/checkout する](https://mseeeen.msen.jp/git-sparse-checkout/)
+- [git sparse checkout で clone せずに一部のサブディレクトリだけを pull/checkout する](/git-sparse-checkout/)
 
 今回は `sparse-checkout` を無効にしてすべてのオブジェクトをチェックアウトしたいときの方法を紹介します。
 

@@ -7,11 +7,11 @@ tags: [AWS, Lambda, PDF, Chrome, Puppeteer]
 
 **AWS Lambdaを使ってサーバーレスで HTML を PDF に変換する** ということで三部構成でお送りしております。
 
-1. [概要・日本語フォントの準備](https://mseeeen.msen.jp/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-1)
-2. [Puppeteer の準備](https://mseeeen.msen.jp/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-2)
+1. [概要・日本語フォントの準備](/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-1)
+2. [Puppeteer の準備](/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-2)
 3. Lambda 関数の作成 ← この記事
 
-[前回](https://mseeeen.msen.jp/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-2) までで日本語フォントと Puppeteer のレイヤーを準備できたので、ようやく**実際に PDF を出力する Lambda 関数を作成**します。
+[前回](/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-2) までで日本語フォントと Puppeteer のレイヤーを準備できたので、ようやく**実際に PDF を出力する Lambda 関数を作成**します。
 
 ## 構成のおさらい
 
@@ -153,7 +153,7 @@ exports.handler = async (event) => {
 
 ```
 {
-  "url": "https://mseeeen.msen.jp/windows-terminal-with-ubuntu/"
+  "url": "/windows-terminal-with-ubuntu/"
 }
 ```
 
@@ -235,9 +235,9 @@ h1 {
 
 ちょっと長くなりましたが、 **AWS Lambda を使ってサーバーレスで HTML を PDF に変換する方法**をご紹介しました。
 
-1. [概要・日本語フォントの準備](https://mseeeen.msen.jp/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-1)
-2. [Puppeteer の準備](https://mseeeen.msen.jp/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-2)
-3. [Lambda 関数の作成](https://mseeeen.msen.jp/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3)
+1. [概要・日本語フォントの準備](/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-1)
+2. [Puppeteer の準備](/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-2)
+3. [Lambda 関数の作成](/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3)
 
 あとは前段で URL やコンテンツを受け付ける関数や、後段で S3 に置かれたファイルを処理する関数などを用意して Step Functions でつなぐなどしてやれば PDF 変換サービスが出来上がるかもしれません。
 

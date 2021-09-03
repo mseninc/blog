@@ -7,7 +7,7 @@ tags: [VMware, 仮想化技術]
 
 こんにちは。
 
-業務で利用しようとした **ある仮想マシン** の解像度がすごく低くて困っていて、「**仮想マシンのVRAM設定を変更することで可能**ですよ」、という [じんない](https://mseeeen.msen.jp/category/articles-jinnai-wrote/) の一声で解決したので紹介します。
+業務で利用しようとした **ある仮想マシン** の解像度がすごく低くて困っていて、「**仮想マシンのVRAM設定を変更することで可能**ですよ」、という [じんない](/category/articles-jinnai-wrote/) の一声で解決したので紹介します。
 
 ## 環境
 - VMware ESXi, 6.7.0, 15160138
@@ -35,7 +35,7 @@ tags: [VMware, 仮想化技術]
 
 ## VRAMの計算
 
-[kenzauros](https://mseeeen.msen.jp/category/articles-kenken-wrote/) にも教えてもらい、**必要なVRAMサイズの計算は以下の式で算出** できるようです。
+[kenzauros](/category/articles-kenken-wrote/) にも教えてもらい、**必要なVRAMサイズの計算は以下の式で算出** できるようです。
 
 **VRAM (Byte) = 横ドット数 × 縦ドット数 × 色数（ビット） / 8**
 

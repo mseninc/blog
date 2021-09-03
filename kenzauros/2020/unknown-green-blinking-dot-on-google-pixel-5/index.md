@@ -7,7 +7,7 @@ tags: [その他]
 
 先日、下記の記事でも紹介したように **Google Pixel 5** を購入しました。
 
-- [Google Pixel 5 を Dual SIM で使うために楽天モバイル (eSIM) に MNP してみた](https://mseeeen.msen.jp/mnp-to-rakute-mobile-esim-with-google-pixel-5/)
+- [Google Pixel 5 を Dual SIM で使うために楽天モバイル (eSIM) に MNP してみた](/mnp-to-rakute-mobile-esim-with-google-pixel-5/)
 
 概ね気に入って使っているのですが、残念だったことが一つ...**画面にチカチカするピクセルが**。。。
 
@@ -19,7 +19,7 @@ tags: [その他]
 
 ## 症状
 
-[video width="480" height="480" mp4="https://mseeeen.msen.jp/wp-content/uploads/2020/11/pixel5_blinking_dot.mp4"][/video]
+[video width="480" height="480" mp4="/wp-content/uploads/2020/11/pixel5_blinking_dot.mp4"][/video]
 
 <br>
 

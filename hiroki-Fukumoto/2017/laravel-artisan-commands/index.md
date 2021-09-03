@@ -44,7 +44,7 @@ Visual Studio Codeを立ち上げて、 `表示` → `統合ターミナル` を
 
 ※私はデータベース回りを担当していますので、マイグレーションのArtisanコマンドが中心になります。
 マイグレーションについては、過去のこちらの記事をご確認ください。
-[Laravel 5.3 Eloquent ORM 入門 2 (マイグレーション)](https://mseeeen.msen.jp/laravel-53-eloquent-orm-2/)
+[Laravel 5.3 Eloquent ORM 入門 2 (マイグレーション)](/laravel-53-eloquent-orm-2/)
 
 ### 使用可能な全Artisanコマンドを確認 ###
 ```bash
