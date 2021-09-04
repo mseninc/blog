@@ -33,7 +33,7 @@ jobs:
       run: npm ci
 
     - name: Build
-      run: node_modules/.bin/gatsby build --verbose
+      run: node_modules/.bin/gatsby public --verbose
 
     - name: Deploy
       env:
