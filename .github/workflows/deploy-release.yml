@@ -7,8 +7,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      CONTENT_PATH: ${GITHUB_WORKSPACE}/content
     steps:
 
     - name: Checkout
@@ -21,6 +19,8 @@ jobs:
       with:
         path: content
 
+    - run: echo "CONTENT_PATH=${GITHUB_WORKSPACE}/content" >> $GITHUB_ENV
+    
     - run: ls -la
 
     - name: Node
