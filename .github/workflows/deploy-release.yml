@@ -8,6 +8,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     
+    env:
+      AWS_DEFAULT_REGION: ap-northeast-1
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      CONTENT_PATH: ${{ github.workspace }}/content
+      GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES: true
+    
     steps:
 
     - name: Checkout
@@ -30,8 +37,6 @@ jobs:
         key: ${{ runner.os }}-gatsby-build
         restore-keys: |
           ${{ runner.os }}-gatsby-build
-          
-    - run: echo "CONTENT_PATH=${GITHUB_WORKSPACE}/content" >> $GITHUB_ENV
     
     - run: ls -la
 
@@ -46,17 +51,9 @@ jobs:
 
     - name: Build
       run: node_modules/.bin/gatsby build --verbose
-      env:
-        GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES: true
 
     - name: Deploy post files
-      env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      run: aws s3 sync public s3://msen-blog-release --exclude '*' --include '*.html' --include '*/app-data.json' --include '*/page-data.json' --delete --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
+      run: aws s3 sync public s3://msen-blog-release --exclude '*' --include '*.html' --include '*/app-data.json' --include '*/page-data.json' --delete
 
     - name: Deploy other files
-      env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      run: aws s3 sync public s3://msen-blog-release --size-only --exclude '*.html' --exclude '*/app-data.json' --exclude '*/page-data.json' --delete --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
+      run: aws s3 sync public s3://msen-blog-release --size-only --exclude '*.html' --exclude '*/app-data.json' --exclude '*/page-data.json' --delete
