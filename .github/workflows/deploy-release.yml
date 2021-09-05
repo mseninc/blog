@@ -29,7 +29,7 @@ jobs:
           .cache
         key: ${{ runner.os }}-gatsby-build
         restore-keys: |
-          ${{ runner.os }}-gatsby-build-
+          ${{ runner.os }}-gatsby-build
           
     - run: echo "CONTENT_PATH=${GITHUB_WORKSPACE}/content" >> $GITHUB_ENV
     
@@ -49,8 +49,14 @@ jobs:
       env:
         GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES: true
 
-    - name: Deploy
+    - name: Deploy post files
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      run: aws s3 sync public s3://msen-blog-release --delete --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers --region ap-northeast-1
+      run: aws s3 sync public s3://msen-blog-release --exclude '*' --include '*.html' --include '*/app-data.json' --include '*/page-data.json' --delete --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
+
+    - name: Deploy other files
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      run: aws s3 sync public s3://msen-blog-release --size-only --exclude '*.html' --exclude '*/app-data.json' --exclude '*/page-data.json' --delete --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
