@@ -76,8 +76,6 @@ jobs:
         git -c core.quotepath=false diff origin/release origin/${BRANCH_NAME} --name-only >> .git/info/sparse-checkout
         cat .git/info/sparse-checkout
         git checkout origin/${BRANCH_NAME}
-        PREVIEW=`git -c core.quotepath=false diff origin/release origin/${BRANCH_NAME} --name-only | grep .md | head -n 1 | sed -E "s/.*\/([^/]+)\/[^./]+\.md$/\1/"`
-        echo "PREVIEW=${PREVIEW}" >> $GITHUB_ENV
 
     - name: Caching Gatsby
       id: gatsby-cache-build
