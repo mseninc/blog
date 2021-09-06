@@ -14,7 +14,8 @@ jobs:
     - name: ''
       run: |
         git --version
-        PREVIEW=`git -c core.quotepath=false diff release HEAD --name-only | grep .md | head -n 1 | sed -E "s/.*\/([^/]+)\/[^./]+\.md$/\1/"`
+        git branch -a
+        PREVIEW=`git -c core.quotepath=false diff origin/release HEAD --name-only | grep .md | head -n 1 | sed -E "s/.*\/([^/]+)\/[^./]+\.md$/\1/"`
         echo ::set-output name=preview::${PREVIEW}
         echo "PREVIEW=${PREVIEW}" >> $GITHUB_ENV
         BRANCH_NAME=${GITHUB_REF#refs/heads/}
