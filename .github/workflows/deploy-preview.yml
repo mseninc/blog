@@ -10,29 +10,26 @@ jobs:
     runs-on: ubuntu-latest
     
     outputs:
-      preview: ${{ steps.setEnv.outputs.preview }}
+      preview: ${{ steps.setPreview.outputs.preview }}
 
     steps:
 
-    - name: Checkout
-      uses: actions/checkout@v2
-      with:
-        repository: mseninc/blog-gatsby
-
-    - name: Checkout
-      uses: actions/checkout@v2
-      with:
-        path: content
-        fetch-depth: 0
-
-    - id: setEnv
-      name: Prepare env
-      working-directory: content
+    - name: Git fetch
       run: |
+        git init
+        git remote add origin https://github.com/mseninc/blog.git
+        git fetch --depth 1
         git branch -a
+
+    - name: Prepare env PREVIEW
+      id: setPreview
+      run: |
         PREVIEW=`git -c core.quotepath=false diff origin/release HEAD --name-only | grep .md | head -n 1 | sed -E "s/.*\/([^/]+)\/[^./]+\.md$/\1/"`
         echo ::set-output name=preview::${PREVIEW}
         echo "PREVIEW=${PREVIEW}" >> $GITHUB_ENV
+
+    - name: Prepare env others
+      run: |
         BRANCH_NAME=${GITHUB_REF#refs/heads/}
         echo "BRANCH_NAME=${BRANCH_NAME}" >> $GITHUB_ENV
         echo "PATH_PREFIX=/${BRANCH_NAME}" >> $GITHUB_ENV
@@ -53,7 +50,17 @@ jobs:
       GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES: true
     
     steps:
-        
+
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        repository: mseninc/blog-gatsby
+
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        path: content
+
     - name: Caching Gatsby
       id: gatsby-cache-build
       uses: actions/cache@v2
