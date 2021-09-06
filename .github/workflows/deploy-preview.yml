@@ -21,24 +21,12 @@ jobs:
         git fetch --depth 1
         git branch -a
 
-    - name: Prepare env BRANCH_NAME
-      run: echo "BRANCH_NAME=${GITHUB_REF#refs/heads/}" >> $GITHUB_ENV
-
     - name: Prepare env PREVIEW
       id: setPreview
       run: |
+        BRANCH_NAME=${GITHUB_REF#refs/heads/}
         PREVIEW=`git -c core.quotepath=false diff origin/release origin/${BRANCH_NAME} --name-only | grep .md | head -n 1 | sed -E "s/.*\/([^/]+)\/[^./]+\.md$/\1/"`
         echo ::set-output name=preview::${PREVIEW}
-        echo "PREVIEW=${PREVIEW}" >> $GITHUB_ENV
-
-    - name: Prepare env PATH_PREFIX
-      run: echo "PATH_PREFIX=/${BRANCH_NAME}" >> $GITHUB_ENV
-        
-    - name: Prepare env BRANCH_NAME
-      run: echo "url=https://preview.msen.blog/${BRANCH_NAME}/${PREVIEW}" >> $GITHUB_ENV
-
-    - name: Show env
-      run: cat $GITHUB_ENV
 
   build:
     needs: preBuild
@@ -54,6 +42,18 @@ jobs:
       GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES: true
     
     steps:
+    
+    - name: Prepare env PREVIEW
+      run: echo "PREVIEW=${{ needs.preBuild.outputs.preview }}" >> $GITHUB_ENV
+
+    - name: Prepare env BRANCH_NAME
+      run: echo "BRANCH_NAME=${GITHUB_REF#refs/heads/}" >> $GITHUB_ENV
+
+    - name: Prepare env PATH_PREFIX
+      run: echo "PATH_PREFIX=/${BRANCH_NAME}" >> $GITHUB_ENV
+        
+    - name: Prepare env url
+      run: echo "url=https://preview.msen.blog/${BRANCH_NAME}/${PREVIEW}" >> $GITHUB_ENV
 
     - name: Checkout
       uses: actions/checkout@v2
