@@ -21,21 +21,25 @@ jobs:
         git fetch --depth 1
         git branch -a
 
+    - name: Prepare env BRANCH_NAME
+      run: echo "BRANCH_NAME=${GITHUB_REF#refs/heads/}" >> $GITHUB_ENV
+
     - name: Prepare env PREVIEW
       id: setPreview
       run: |
-        PREVIEW=`git -c core.quotepath=false diff origin/release HEAD --name-only | grep .md | head -n 1 | sed -E "s/.*\/([^/]+)\/[^./]+\.md$/\1/"`
+        PREVIEW=`git -c core.quotepath=false diff origin/release origin/${BRANCH_NAME} --name-only | grep .md | head -n 1 | sed -E "s/.*\/([^/]+)\/[^./]+\.md$/\1/"`
         echo ::set-output name=preview::${PREVIEW}
         echo "PREVIEW=${PREVIEW}" >> $GITHUB_ENV
 
-    - name: Prepare env others
-      run: |
-        BRANCH_NAME=${GITHUB_REF#refs/heads/}
-        echo "BRANCH_NAME=${BRANCH_NAME}" >> $GITHUB_ENV
-        echo "PATH_PREFIX=/${BRANCH_NAME}" >> $GITHUB_ENV
-        echo "url=https://preview.msen.blog/${BRANCH_NAME}/${PREVIEW}" >> $GITHUB_ENV
-        cat $GITHUB_ENV
+    - name: Prepare env PATH_PREFIX
+      run: echo "PATH_PREFIX=/${BRANCH_NAME}" >> $GITHUB_ENV
         
+    - name: Prepare env BRANCH_NAME
+      run: echo "url=https://preview.msen.blog/${BRANCH_NAME}/${PREVIEW}" >> $GITHUB_ENV
+
+    - name: Show env
+      run: cat $GITHUB_ENV
+
   build:
     needs: preBuild
     if: ${{ needs.preBuild.outputs.preview != '' }}
