@@ -24,7 +24,7 @@ jobs:
         
   build:
     needs: preBuild
-    if: ${{ env.PREVIEW != '' }}
+    if: "${{ env.PREVIEW != '' }}"
     
     runs-on: ubuntu-latest
     
