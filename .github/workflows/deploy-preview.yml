@@ -61,10 +61,10 @@ jobs:
 #       with:
 #         path: content
 
-    - name: Checkout contents
-    - run: mkdir -p content
+    - name: Make content dir
+      run: mkdir -p content
     
-    - name: Checkout contents
+    - name: Checkout content
       working-directory: content
       run: |
         BRANCH_NAME=${GITHUB_REF#refs/heads/}
