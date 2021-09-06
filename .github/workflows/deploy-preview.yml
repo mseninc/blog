@@ -78,6 +78,10 @@ jobs:
     - name: Build
       run: node_modules/.bin/gatsby build --verbose --prefix-paths
 
+    - run: ls -la
+
+    - run: ls public
+
     - name: Deploy post files
       run: "aws s3 sync public s3://msen-blog-preview/${BRANCH_KEY} --exclude '*' --include '*.html' --include '*/app-data.json' --include '*/page-data.json'"
 
