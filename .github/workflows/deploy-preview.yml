@@ -51,7 +51,7 @@ jobs:
 #     - name: Prepare env PATH_PREFIX
 #       run: echo "PATH_PREFIX=/${BRANCH_KEY}" >> $GITHUB_ENV
 
-    - name: Checkout
+    - name: Checkout generator
       uses: actions/checkout@v2
       with:
         repository: mseninc/blog-gatsby
@@ -61,7 +61,10 @@ jobs:
 #       with:
 #         path: content
 
-    - name: Git fetch
+    - name: Checkout contents
+    - run: mkdir -p content
+    
+    - name: Checkout contents
       working-directory: content
       run: |
         BRANCH_NAME=${GITHUB_REF#refs/heads/}
