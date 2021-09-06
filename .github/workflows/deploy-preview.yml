@@ -6,31 +6,7 @@ on:
       - 'post/**'
 
 jobs:
-#   preBuild:
-#     runs-on: ubuntu-latest
-    
-#     outputs:
-#       preview: ${{ steps.setPreview.outputs.preview }}
-
-#     steps:
-
-#     - name: Git fetch
-#       run: |
-#         git init
-#         git remote add origin https://github.com/mseninc/blog.git
-#         git fetch --depth 1
-
-#     - name: Prepare env PREVIEW
-#       id: setPreview
-#       run: |
-#         BRANCH_NAME=${GITHUB_REF#refs/heads/}
-#         PREVIEW=`git -c core.quotepath=false diff origin/release origin/${BRANCH_NAME} --name-only | grep .md | head -n 1 | sed -E "s/.*\/([^/]+)\/[^./]+\.md$/\1/"`
-#         echo ::set-output name=preview::${PREVIEW}
-
   build:
-#     needs: preBuild
-#     if: ${{ needs.preBuild.outputs.preview != '' }}
-    
     runs-on: ubuntu-latest
     
     env:
@@ -41,32 +17,19 @@ jobs:
       GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES: true
     
     steps:
-    
-#     - name: Prepare env PREVIEW
-#       run: echo "PREVIEW=${{ needs.preBuild.outputs.preview }}" >> $GITHUB_ENV
 
     - name: Prepare env BRANCH_KEY
       run: echo "BRANCH_KEY=${GITHUB_REF#refs/heads/post/}" >> $GITHUB_ENV
-
-#     - name: Prepare env PATH_PREFIX
-#       run: echo "PATH_PREFIX=/${BRANCH_KEY}" >> $GITHUB_ENV
 
     - name: Checkout generator
       uses: actions/checkout@v2
       with:
         repository: mseninc/blog-gatsby
-
-#     - name: Checkout
-#       uses: actions/checkout@v2
-#       with:
-#         path: content
-
-    - name: Make content dir
-      run: mkdir -p content
     
     - name: Checkout content
-      working-directory: content
       run: |
+        mkdir -p content
+        cd content
         BRANCH_NAME=${GITHUB_REF#refs/heads/}
         git init
         git remote add origin https://github.com/mseninc/blog.git
