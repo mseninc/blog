@@ -55,14 +55,15 @@ jobs:
     #       ${{ runner.os }}-blog-preview-${BRANCH_KEY}
 
     - name: Caching Gatsby
-      id: gatsby-cache-build
+      id: cache-node-modules
+      if: env.NO_CACHE != 'true'
       uses: actions/cache@v2
       with:
         path: |
           node_modules
-        key: ${{ runner.os }}-blog-preview-node_modules-${BRANCH_KEY}
+        key: ${{ runner.os }}-blog-preview-node_modules-${{ hashFiles('package-lock.json') }}
         restore-keys: |
-          ${{ runner.os }}-blog-preview-node_modules-${BRANCH_KEY}
+          ${{ runner.os }}-blog-preview-node_modules-${{ hashFiles('package-lock.json') }}
     
     - run: ls -la
 
@@ -73,7 +74,8 @@ jobs:
         cache: npm
 
     - name: Install dependencies
-      run: npm install
+      if: steps.cache-node-modules.outputs.cache-hit != 'true' # https://github.com/actions/cache#Skipping-steps-based-on-cache-hit
+      run: npm ci
 
     - name: Build
       run: node_modules/.bin/gatsby build --verbose --prefix-paths
