@@ -8,6 +8,9 @@ on:
 jobs:
   preBuild:
     runs-on: ubuntu-latest
+    
+    outputs:
+      preview: ${{ steps.setEnv.outputs.preview }}
 
     steps:
 
@@ -22,7 +25,8 @@ jobs:
         path: content
         fetch-depth: 0
 
-    - name: ''
+    - id: setEnv
+      name: Prepare env
       working-directory: content
       run: |
         git branch -a
