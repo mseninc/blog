@@ -10,10 +10,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    
+
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        repository: mseninc/blog-gatsby
+
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        path: content
+
     - name: ''
+      working-directory: content
       run: |
-        git --version
         git branch -a
         PREVIEW=`git -c core.quotepath=false diff origin/release HEAD --name-only | grep .md | head -n 1 | sed -E "s/.*\/([^/]+)\/[^./]+\.md$/\1/"`
         echo ::set-output name=preview::${PREVIEW}
@@ -38,16 +48,6 @@ jobs:
       GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES: true
     
     steps:
-
-    - name: Checkout
-      uses: actions/checkout@v2
-      with:
-        repository: mseninc/blog-gatsby
-
-    - name: Checkout
-      uses: actions/checkout@v2
-      with:
-        path: content
         
     - name: Caching Gatsby
       id: gatsby-cache-build
