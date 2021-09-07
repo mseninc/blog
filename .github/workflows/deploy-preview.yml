@@ -8,6 +8,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    environment:
+      name: Preview
     
     env:
       AWS_DEFAULT_REGION: ap-northeast-1
