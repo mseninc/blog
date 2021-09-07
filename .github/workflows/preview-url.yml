@@ -1,0 +1,27 @@
+name: Comment URL to Pull request
+
+on:
+  pull_request:
+    branches:
+      - release
+    types: [opened, reopened]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    if: contains(github.head_ref, 'post/')
+
+    environment:
+      name: Preview
+    
+    env:
+      BASE_URL: https://preview.msen.blog/
+
+    steps:
+
+    - name: Comment PR
+      uses: thollander/actions-comment-pull-request@master
+      with:
+        message: ${BASE_URL}${GITHUB_REF#refs/heads/post/}
+        # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
