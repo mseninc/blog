@@ -21,7 +21,7 @@ jobs:
     steps:
 
     - name: Comment PR
-      uses: thollander/actions-comment-pull-request@master
+      uses: thollander/actions-comment-pull-request
       with:
         message: ${BASE_URL}${GITHUB_REF#refs/heads/post/}
         # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
