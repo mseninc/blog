@@ -39,9 +39,7 @@ jobs:
         path: |
           public
           .cache
-        key: ${{ runner.os }}-blog-release-gatsby-${{ hashFiles('package-lock.json') }
-        restore-keys: |
-          ${{ runner.os }}-blog-release-gatsby-
+        key: ${{ runner.os }}-blog-release-gatsby
     
     - run: ls -la
 
