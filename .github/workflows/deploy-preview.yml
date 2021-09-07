@@ -24,9 +24,6 @@ jobs:
     - name: Prepare env BRANCH_KEY
       run: echo "BRANCH_KEY=${GITHUB_REF#refs/heads/post/}" >> $GITHUB_ENV
 
-    # - name: Prepare env PATH_PREFIX
-    #   run: echo "PATH_PREFIX=/${BRANCH_KEY}" >> $GITHUB_ENV
-
     - name: Checkout generator
       uses: actions/checkout@v2
       with:
@@ -45,17 +42,6 @@ jobs:
         git -c core.quotepath=false diff origin/release origin/${BRANCH_NAME} --name-only >> .git/info/sparse-checkout
         cat .git/info/sparse-checkout
         git checkout origin/${BRANCH_NAME}
-
-    # - name: Caching Gatsby
-    #   id: gatsby-cache-build
-    #   uses: actions/cache@v2
-    #   with:
-    #     path: |
-    #       public
-    #       .cache
-    #     key: ${{ runner.os }}-blog-preview-${BRANCH_KEY}
-    #     restore-keys: |
-    #       ${{ runner.os }}-blog-preview-${BRANCH_KEY}
 
     - name: Caching node_modules
       id: cache-node-modules
