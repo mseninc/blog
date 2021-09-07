@@ -86,3 +86,10 @@ jobs:
 
     - name: Deploy other files
       run: "aws s3 sync public s3://msen-blog-preview --size-only --exclude '*.html' --exclude '*/app-data.json' --exclude '*/page-data.json'"
+
+    - name: Invalidate CloudFront
+      uses: chetan/invalidate-cloudfront-action@master
+      env:
+        AWS_REGION: ${{ env.AWS_DEFAULT_REGION }}
+        DISTRIBUTION: ${{ secrets.CLOUDFRONT_DISTRIBUTION }}
+        PATHS: '/*'
