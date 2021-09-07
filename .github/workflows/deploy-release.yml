@@ -4,17 +4,22 @@ on:
   push:
     branches:
       - release
+
 jobs:
   build:
     runs-on: ubuntu-latest
     
+    environment:
+      name: Release
+
     env:
       AWS_DEFAULT_REGION: ap-northeast-1
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       CONTENT_PATH: ${{ github.workspace }}/content
       GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES: true
-    
+      NO_CACHE: ${{ secrets.NO_CACHE }}
+
     steps:
 
     - name: Checkout
@@ -34,9 +39,9 @@ jobs:
         path: |
           public
           .cache
-        key: ${{ runner.os }}-gatsby-build
+        key: ${{ runner.os }}-blog-release-gatsby-${{ hashFiles('package-lock.json') }
         restore-keys: |
-          ${{ runner.os }}-gatsby-build
+          ${{ runner.os }}-blog-release-gatsby-
     
     - run: ls -la
 
@@ -57,3 +62,10 @@ jobs:
 
     - name: Deploy other files
       run: aws s3 sync public s3://msen-blog-release --size-only --exclude '*.html' --exclude '*/app-data.json' --exclude '*/page-data.json' --delete
+
+    - name: Invalidate CloudFront
+      uses: chetan/invalidate-cloudfront-action@master
+      env:
+        AWS_REGION: ${{ env.AWS_DEFAULT_REGION }}
+        DISTRIBUTION: ${{ secrets.CLOUDFRONT_DISTRIBUTION }}
+        PATHS: '/*'
