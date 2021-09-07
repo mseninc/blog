@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    if: contains(github.head_ref, 'post/')
+    if: github.event_name == 'pull_request' && contains(github.head_ref, 'post/')
 
     environment:
       name: Preview
@@ -20,8 +20,14 @@ jobs:
 
     steps:
 
+    - name: Make preview url
+      run: echo "PREVIEW_URL=${BASE_URL}${GITHUB_REF#refs/heads/post/}" >> $GITHUB_ENV
+
     - name: Comment PR
-      uses: thollander/actions-comment-pull-request@main
+      uses: actions/github-script@0.3.0
+      if: 
       with:
-        message: ${BASE_URL}${GITHUB_REF#refs/heads/post/}
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          const { issue: { number: issue_number }, repo: { owner, repo }  } = context;
+          github.issues.createComment({ issue_number, owner, repo, body: '${{ env.PREVIEW_URL }}' });
