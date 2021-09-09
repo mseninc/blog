@@ -32,9 +32,9 @@ jobs:
         git checkout $HEAD_REF
         chmod +x .github/scripts/list-preview-url.sh
         .github/scripts/list-preview-url.sh $BASE_URL $HEAD_REF | tr '\n' ',' > url_list
-        cat url_list
         URL_LIST=`cat url_list`
-        echo 'URL_LIST=${URL_LIST}' >> $GITHUB_ENV
+        cat URL_LIST
+        echo URL_LIST=${URL_LIST} >> $GITHUB_ENV
 
     - name: Comment to PR
       uses: actions/github-script@0.3.0
