@@ -41,6 +41,6 @@ jobs:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
           const { issue: { number: issue_number }, repo: { owner, repo } } = context;
-          const urlList = '${{ env.URL_LIST }}'.split(',').map(x => `- ${x}`).join('\n');
+          const urlList = '${{ env.URL_LIST }}'.split(',').filter(n => n).map(x => `- ${x}`).join('\n');
           github.issues.createComment({ issue_number, owner, repo, body: `Preview URL:\n${urlList}` });
 
