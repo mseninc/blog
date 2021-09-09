@@ -35,14 +35,14 @@ jobs:
         mkdir -p content
         cd content
         BRANCH_NAME=${GITHUB_REF#refs/heads/}
-        git init
+        git init -q
         git remote add origin https://github.com/mseninc/blog.git
         git fetch --depth 1
         git config core.sparsecheckout true
         echo author.yaml >> .git/info/sparse-checkout
         git -c core.quotepath=false diff origin/release origin/${BRANCH_NAME} --name-only >> .git/info/sparse-checkout
         cat .git/info/sparse-checkout
-        git checkout origin/${BRANCH_NAME}
+        git checkout -q origin/${BRANCH_NAME}
 
     - name: Caching node_modules
       id: cache-node-modules
