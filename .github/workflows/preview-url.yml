@@ -31,7 +31,9 @@ jobs:
         echo .github/ >> .git/info/sparse-checkout
         git checkout $HEAD_REF
         chmod +x .github/scripts/list-preview-url.sh
-        URL_LIST=`echo .github/scripts/list-preview-url.sh $BASE_URL $HEAD_REF | tr '\n' ','`
+        echo .github/scripts/list-preview-url.sh $BASE_URL $HEAD_REF | tr '\n' ',' > url_list
+        cat url_list
+        URL_LIST=`cat url_list`
         echo 'URL_LIST=${URL_LIST}' >> $GITHUB_ENV
 
     - name: Comment to PR
