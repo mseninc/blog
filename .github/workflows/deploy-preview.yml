@@ -3,7 +3,7 @@ name: Deploy preview
 on:
   push:
     branches:
-      - 'post-invalid/**'
+      - 'post/**'
 
 jobs:
   build:
