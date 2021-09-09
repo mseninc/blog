@@ -1,0 +1,84 @@
+name: Deploy preview
+
+on:
+  push:
+    branches:
+      - 'post/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    environment:
+      name: Preview
+    
+    env:
+      AWS_DEFAULT_REGION: ap-northeast-1
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      CONTENT_PATH: ${{ github.workspace }}/content
+      NO_CACHE: ${{ secrets.NO_CACHE }}
+    
+    steps:
+
+    - name: Prepare env BRANCH_KEY
+      run: echo "BRANCH_KEY=${GITHUB_REF#refs/heads/post/}" >> $GITHUB_ENV
+
+    - name: Checkout generator
+      uses: actions/checkout@v2
+      with:
+        repository: mseninc/blog-gatsby
+    
+    - name: Checkout content
+      run: |
+        mkdir -p content
+        cd content
+        BRANCH_NAME=${GITHUB_REF#refs/heads/}
+        git init
+        git remote add origin https://github.com/mseninc/blog.git
+        git fetch --depth 1
+        git config core.sparsecheckout true
+        echo author.yaml >> .git/info/sparse-checkout
+        git -c core.quotepath=false diff origin/release origin/${BRANCH_NAME} --name-only >> .git/info/sparse-checkout
+        cat .git/info/sparse-checkout
+        git checkout origin/${BRANCH_NAME}
+
+    - name: Caching node_modules
+      id: cache-node-modules
+      if: env.NO_CACHE != 'true'
+      uses: actions/cache@v2
+      with:
+        path: node_modules
+        key: ${{ runner.os }}-blog-preview-node_modules-${{ hashFiles('package-lock.json') }}
+    
+    - run: ls -la
+
+    - name: Node
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+        cache: npm
+
+    - name: Install dependencies
+      if: steps.cache-node-modules.outputs.cache-hit != 'true' # https://github.com/actions/cache#Skipping-steps-based-on-cache-hit
+      run: npm ci
+
+    - name: Build
+      run: node_modules/.bin/gatsby build --verbose
+
+    - run: ls -la
+
+    - run: ls public
+
+    - name: Deploy post files
+      run: "aws s3 sync public s3://msen-blog-preview --exclude '*' --include '*.html' --include '*/app-data.json' --include '*/page-data.json'"
+
+    - name: Deploy other files
+      run: "aws s3 sync public s3://msen-blog-preview --size-only --exclude '*.html' --exclude '*/app-data.json' --exclude '*/page-data.json'"
+
+    - name: Invalidate CloudFront
+      uses: chetan/invalidate-cloudfront-action@master
+      env:
+        AWS_REGION: ${{ env.AWS_DEFAULT_REGION }}
+        DISTRIBUTION: ${{ secrets.CLOUDFRONT_DISTRIBUTION }}
+        PATHS: '/*'
