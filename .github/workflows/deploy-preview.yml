@@ -3,7 +3,7 @@ name: Deploy preview
 on:
   push:
     branches:
-      - 'post/**'
+      - 'post__/**'
 
 jobs:
   build:

@@ -31,15 +31,17 @@ jobs:
         echo .github/ >> .git/info/sparse-checkout
         git checkout $HEAD_REF
         chmod +x .github/scripts/list-preview-url.sh
-        echo "URL_LIST<<EOF" >> $GITHUB_ENV
-        .github/scripts/list-preview-url.sh $BASE_URL $HEAD_REF | tee -a $GITHUB_ENV
-        echo "EOF" >> $GITHUB_ENV
+        URL_LIST = `.github/scripts/list-preview-url.sh $BASE_URL $HEAD_REF`
+        echo $URL_LIST | tr '\n' ','
 
     - name: Comment to PR
       uses: actions/github-script@0.3.0
+      env:
+        URL_LIST: ${{ toJson(steps.list-url.outputs.result) }}
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
           const { issue: { number: issue_number }, repo: { owner, repo } } = context;
-          github.issues.createComment({ issue_number, owner, repo, body: 'Preview URL:\n${{ env.URL_LIST }}' });
+          const urlList = '${{ env.URL_LIST }}'.split(',').map(x => `- ${x}`).join('\n');
+          github.issues.createComment({ issue_number, owner, repo, body: `Preview URL:\n${urlList}` });
 
