@@ -5,6 +5,9 @@ on:
     branches:
       - release
     types: [opened, reopened]
+  push:
+    branches:
+      - 'post/**'
 
 jobs:
   build:
@@ -27,6 +30,9 @@ jobs:
         git init
         git remote add origin https://github.com/mseninc/blog.git
         git fetch --depth 1
+        git config core.sparsecheckout true
+        echo .github/ >> .git/info/sparse-checkout
+        git checkout $HEAD_REF
         chmod +x .github/scripts/list-preview-url.sh
         echo "URL_LIST<<EOF" >> $GITHUB_ENV
         .github/scripts/list-preview-url.sh $BASE_URL $HEAD_REF | tee -a $GITHUB_ENV
