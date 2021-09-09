@@ -27,6 +27,7 @@ jobs:
     - name: Checkout generator
       uses: actions/checkout@v2
       with:
+        ref: ${{ secrets.GENERATOR_BRANCH }}
         repository: mseninc/blog-gatsby
     
     - name: Checkout content
