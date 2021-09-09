@@ -31,13 +31,11 @@ jobs:
         echo .github/ >> .git/info/sparse-checkout
         git checkout $HEAD_REF
         chmod +x .github/scripts/list-preview-url.sh
-        URL_LIST=`.github/scripts/list-preview-url.sh $BASE_URL $HEAD_REF`
-        echo $URL_LIST | tr '\n' ','
+        URL_LIST=`echo .github/scripts/list-preview-url.sh $BASE_URL $HEAD_REF | tr '\n' ','`
+        echo 'URL_LIST=${URL_LIST}' >> $GITHUB_ENV
 
     - name: Comment to PR
       uses: actions/github-script@0.3.0
-      env:
-        URL_LIST: ${{ toJson(steps.list-url.outputs.result) }}
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
