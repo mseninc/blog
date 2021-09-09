@@ -19,6 +19,7 @@ jobs:
       CONTENT_PATH: ${{ github.workspace }}/content
       GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES: true
       NO_CACHE: ${{ secrets.NO_CACHE }}
+      GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
 
     steps:
 
