@@ -1,0 +1,70 @@
+name: Scheduled merge
+
+on:
+  workflow_dispatch:
+  schedule:
+    # JST 月,水,金 11:45 (UTC のため -9h)
+    - cron:  '45 2 * * 1,3,5'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: List pull requests
+      uses: actions/github-script@v4
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          const { issue: { number: issue_number }, repo: { owner, repo } } = context;
+          const query = `query listPulls($owner: String!, $name: String!) {
+            repository(owner: $owner, name: $name) {
+              pullRequests(states: OPEN, first: 1, orderBy: {field: CREATED_AT, direction: DESC}, baseRefName: "release") {
+                totalCount
+                nodes {
+                  number
+                  title
+                  createdAt
+                  baseRefName
+                  headRefName
+                  url
+                  state
+                  isDraft
+                  merged
+                  mergeable
+                  mergeStateStatus
+                }
+              }
+            }
+          }
+          `
+          const variables = {
+            owner,
+            name: repo,
+            mediaType: {
+              previews: ["merge-info-preview"]
+            }
+          }
+          const data = await github.graphql(query, variables)
+          const { repository: { pullRequests: { nodes } } } = data
+          const pulls = nodes || []
+          console.debug(JSON.stringify(pulls, null, 2)
+          const candidates = pulls
+            .filter(pull => pull.headRefName.startsWith('post/'))
+            .filter(pull => {
+              const { number, url, headRefName, isDraft, mergeable, mergeStateStatus } = pull
+              const isCandidate = !isDraft && mergeable === 'MERGEABLE' && mergeStateStatus === 'CLEAN'
+              console.log(`#${number} ${url} ${headRefName}: ${isCandidate} (isDraft: ${isDraft}, mergeable: ${mergeable}, mergeStateStatus: ${mergeStateStatus})`)
+              return isCandidate
+            })
+          if (candidates.length > 0) {
+            const { number, url } = candidates[0]
+            console.log(`Merging #${number}...`)
+            await github.pulls.merge({
+              owner,
+              repo,
+              pull_number: number
+            })
+            console.log(`Merged #${number} (${url})`)
+          }
