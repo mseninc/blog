@@ -25,7 +25,7 @@ jobs:
       id: make-summary
       run: |
         chmod +x .github/scripts/term-summary.sh
-        TEXT=$(.github/scripts/term-summary.sh | grep -v '^#' | awk '{printf "*"$1"* "$2"\\n"}')
+        TEXT=$(.github/scripts/term-summary.sh | grep -v '^#' | awk '{printf "*"$1"*: `"$2"`\;"}')
         echo "::set-output name=summary::$TEXT"
 
     - name: Report to slack
@@ -41,7 +41,7 @@ jobs:
             attachments: [
               {
                 color: 'good',
-                text: `${process.env.SUMMARY.replace(/\\n/g, '\n')}`,
+                text: `${process.env.SUMMARY.replace(/;/g, '\n')}`,
               }
             ]
           }
