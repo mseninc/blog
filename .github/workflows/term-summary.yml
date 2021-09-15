@@ -25,12 +25,16 @@ jobs:
       id: make-summary
       run: |
         chmod +x .github/scripts/term-summary.sh
-        TEXT=$(.github/scripts/term-summary.sh | grep -v '^#' | awk '{printf $1":"$2";"}')
-        echo "::set-output name=summary::$TEXT"
+        OUTPUT=$(.github/scripts/term-summary.sh)
+        TERM=$(echo ${OUTPUT} | head -n 1')
+        SUMMARY=$(echo ${OUTPUT} | tail -n +3 | awk '{printf $1":"$2";"}')
+        echo "::set-output name=term::$TERM"
+        echo "::set-output name=summary::$SUMMARY"
 
     - name: Report to slack
       uses: 8398a7/action-slack@v3
       env:
+        TERM: ${{ steps.make-summary.outputs.term }}
         SUMMARY: ${{ steps.make-summary.outputs.summary }}
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
       with:
@@ -38,27 +42,17 @@ jobs:
         custom_payload: |
           {
             text: 'ブログの執筆状況を報告するよ :rola-ok:',
-            blocks: [
-              {
-                'type': 'section',
-                'text': {
-                  'type': 'mrkdwn',
-                  'text': `${process.env.SUMMARY.replace(/;/g, '\n')}`
-                }
-              },
-            ],
             attachments: [
               {
                 color: 'good',
-                text: `hogehoge`,
+                text: process.env.TERM,
                 fields: process.env.SUMMARY.split(';')
                   .map(x => x.split(':'))
                   .map(x => ({
                       'title': x[0],
                       'value': x[1],
-                      'short': false,
+                      'short': true,
                   })),
               },
-              
             ]
           }
