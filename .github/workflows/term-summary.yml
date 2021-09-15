@@ -46,12 +46,13 @@ jobs:
               {
                 color: 'good',
                 text: process.env.TERM,
-                fields: process.env.SUMMARY.split(';')
+                fields: process.env.SUMMARY
+                  .split(';')
                   .map(x => x.split(':'))
                   .map(x => ({
                       'title': x[0],
                       'value': x[1],
-                      'short': true,
+                      'short': false,
                   })),
               },
             ]
