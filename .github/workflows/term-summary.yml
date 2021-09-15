@@ -45,7 +45,7 @@ jobs:
             attachments: [
               {
                 color: 'good',
-                text: process.env.PERIOD.replace(/-/g, '/').replace('~', '～'),
+                title: process.env.PERIOD.replace(/-/g, '/').replace('~', '～'),
                 fields: process.env.SUMMARY
                   .split(';')
                   .map(x => x.split(':'))
