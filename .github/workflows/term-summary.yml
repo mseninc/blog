@@ -5,9 +5,6 @@ on:
   schedule:
     # JST 月 9:00 (UTC のため -9h)
     - cron: '0 0 * * 1'
-  push:
-    branches:
-      - term-summary
 
 jobs:
   build:
