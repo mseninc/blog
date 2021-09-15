@@ -25,7 +25,7 @@ jobs:
       id: make-summary
       run: |
         chmod +x .github/scripts/term-summary.sh
-        TEXT=$(.github/scripts/term-summary.sh | grep -v '^#' | awk '{printf "*"$1"*: `"$2"`\;"}')
+        TEXT=$(.github/scripts/term-summary.sh | grep -v '^#' | awk '{printf $1":"$2";"}')
         echo "::set-output name=summary::$TEXT"
 
     - name: Report to slack
@@ -38,10 +38,27 @@ jobs:
         custom_payload: |
           {
             text: 'ブログの執筆状況を報告するよ :rola-ok:',
+            blocks: [
+              {
+                'type': 'section',
+                'text': {
+                  'type': 'mrkdwn',
+                  'text': `${process.env.SUMMARY.replace(/;/g, '\n')}`
+                }
+              },
+            ]
             attachments: [
               {
                 color: 'good',
-                text: `${process.env.SUMMARY.replace(/;/g, '\n')}`,
-              }
+                text: `hogehoge`,
+                fields: process.env.SUMMARY.split(';')
+                  .map(x => x.split(':'))
+                  .map(x => ({
+                      'title': x[0],
+                      'value': x[1],
+                      'short': false,
+                  })),
+              },
+              
             ]
           }

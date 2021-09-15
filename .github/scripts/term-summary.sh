@@ -6,8 +6,6 @@ else
   dt=`TZ=JST-9 date '+%Y-%m-%d'`
 fi
 
-echo '# date: '${dt}
-
 dt=`date --date "-1 day ${dt}" '+%Y-%m-%d'`
 year=`date --date "1 month ${dt}" '+%Y'`
 
@@ -17,7 +15,7 @@ month=$(((`date --date "${dt}" '+%-m'`/6*6+1)%12))
 first_day=`date --date "-1 month ${year}-${month}-02" '+%Y-%m-%d'`
 last_day=`date --date "5 month ${year}-${month}-01" '+%Y-%m-%d'`
 
-echo '# term: '${first_day} '~' ${last_day}
+echo ${first_day} '~' ${last_day}
 
 grep -rEI '^date: ?[0-9\-]+$' --exclude-dir=.draft . | \
   sed -r 's/\W*\/([^\/]+).+(20[0-9]{2}-[0-9]{2}-[0-9]{2})$/\2 \1/' | \
