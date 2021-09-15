@@ -1,0 +1,49 @@
+name: Report term summary
+
+on:
+  workflow_dispatch:
+  schedule:
+    # JST 月 9:00 (UTC のため -9h)
+    - cron: '0 0 * * 1'
+  push:
+    branches:
+      - term-summary
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    environment:
+      name: Release
+
+    env:
+
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Make summary
+      id: make-summary
+      run: |
+        chmod +x .github/scripts/term-summary.sh
+        TEXT=$(.github/scripts/term-summary.sh | grep -v '^#' | awk '{printf "*"$1"* "$2"\\n"}')
+        echo "::set-output name=summary::$TEXT"
+
+    - name: Report to slack
+      uses: 8398a7/action-slack@v3
+      env:
+        SUMMARY: ${{ steps.make-summary.outputs.summary }}
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      with:
+        status: custom
+        custom_payload: |
+          {
+            text: 'ブログの執筆状況を報告するよ :rola-ok:'
+            attachments: [
+              {
+                color: 'good',
+                text: `${process.env.SUMMARY}`,
+              }
+            ]
+          }
