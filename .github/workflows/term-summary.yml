@@ -16,8 +16,6 @@ jobs:
     environment:
       name: Release
 
-    env:
-
     steps:
 
     - name: Checkout
