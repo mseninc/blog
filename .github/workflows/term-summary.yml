@@ -5,9 +5,6 @@ on:
   schedule:
     # JST 月 9:00 (UTC のため -9h)
     - cron: '0 0 * * 1'
-  push:
-    branches:
-      - term-summary
 
 jobs:
   build:
@@ -21,7 +18,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
-    - name: Make summary
+    - name: Make summary (Current term)
       id: make-summary-1
       run: |
         chmod +x .github/scripts/term-summary.sh
@@ -31,7 +28,7 @@ jobs:
         echo "::set-output name=period::$PERIOD"
         echo "::set-output name=summary::$SUMMARY"
 
-    - name: Make summary
+    - name: Make summary (Previous term)
       id: make-summary-2
       run: |
         chmod +x .github/scripts/term-summary.sh
