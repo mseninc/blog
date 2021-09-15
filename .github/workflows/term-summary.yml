@@ -26,15 +26,15 @@ jobs:
       run: |
         chmod +x .github/scripts/term-summary.sh
         OUTPUT=$(.github/scripts/term-summary.sh)
-        TERM=$(echo ${OUTPUT} | head -n 1)
-        SUMMARY=$(echo ${OUTPUT} | tail -n +3 | awk '{printf $1":"$2";"}')
-        echo "::set-output name=term::$TERM"
+        PERIOD=$(echo "${OUTPUT}" | head -n 1)
+        SUMMARY=$(echo "${OUTPUT}" | tail -n +3 | awk '{printf $1":"$2";"}')
+        echo "::set-output name=period::$PERIOD"
         echo "::set-output name=summary::$SUMMARY"
 
     - name: Report to slack
       uses: 8398a7/action-slack@v3
       env:
-        TERM: ${{ steps.make-summary.outputs.term }}
+        PERIOD: ${{ steps.make-summary.outputs.period }}
         SUMMARY: ${{ steps.make-summary.outputs.summary }}
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
       with:
@@ -45,14 +45,14 @@ jobs:
             attachments: [
               {
                 color: 'good',
-                text: process.env.TERM,
+                text: process.env.PERIOD.replace('~', '～'),
                 fields: process.env.SUMMARY
                   .split(';')
                   .map(x => x.split(':'))
                   .map(x => ({
                       'title': x[0],
                       'value': x[1],
-                      'short': false,
+                      'short': true,
                   })),
               },
             ]
