@@ -37,7 +37,7 @@ jobs:
         status: custom
         custom_payload: |
           {
-            text: 'ブログの執筆状況を報告するよ :rola-ok:'
+            text: 'ブログの執筆状況を報告するよ :rola-ok:',
             attachments: [
               {
                 color: 'good',
