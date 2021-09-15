@@ -46,7 +46,7 @@ jobs:
                   'text': `${process.env.SUMMARY.replace(/;/g, '\n')}`
                 }
               },
-            ]
+            ],
             attachments: [
               {
                 color: 'good',
