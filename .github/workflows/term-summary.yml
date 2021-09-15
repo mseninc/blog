@@ -41,7 +41,7 @@ jobs:
             attachments: [
               {
                 color: 'good',
-                text: `${process.env.SUMMARY.replace('\\n', '\n')}`,
+                text: `${process.env.SUMMARY.replace(/\\n/g, '\n')}`,
               }
             ]
           }
