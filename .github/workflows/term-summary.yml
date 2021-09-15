@@ -26,7 +26,7 @@ jobs:
       run: |
         chmod +x .github/scripts/term-summary.sh
         OUTPUT=$(.github/scripts/term-summary.sh)
-        TERM=$(echo ${OUTPUT} | head -n 1')
+        TERM=$(echo ${OUTPUT} | head -n 1)
         SUMMARY=$(echo ${OUTPUT} | tail -n +3 | awk '{printf $1":"$2";"}')
         echo "::set-output name=term::$TERM"
         echo "::set-output name=summary::$SUMMARY"
