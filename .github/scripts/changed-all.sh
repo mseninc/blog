@@ -1,8 +1,14 @@
 #!/bin/bash
 
-if [ $# -ne 1 ]; then
-  echo "Bransh name must be specified" 1>&2
+
+if [ $# -eq 1 ]; then
+  BRANCH=$1
+else
+  BRANCH=`git rev-parse --abbrev-ref HEAD`
+fi
+
+if [ -z BRANCH ]; then
   exit 1
 fi
 
-git -c core.quotepath=false diff origin/release origin/$1 --name-only | grep -v ^.draft
+git -c core.quotepath=false diff origin/release $BRANCH --name-only | grep -v ^.draft | grep -rEI '\.md$' -
