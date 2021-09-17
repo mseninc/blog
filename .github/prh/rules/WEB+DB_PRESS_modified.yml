@@ -471,8 +471,6 @@ rules:
       - 暫く
       - 暫らく
     expected: しばらく
-  - pattern: いたします
-    expected: します
   - pattern: 所詮
     expected: しょせん
   - pattern:
@@ -787,8 +785,8 @@ rules:
     expected: よ$1
   - pattern: 僅か
     expected: わずか
-  - pattern: いい
-    expected: よい
+  - pattern: とゆう
+    expected: という
   - pattern: 心地よ
     expected: 心地良
   - pattern: /判([らりるれろっ])/
@@ -1619,39 +1617,6 @@ rules:
     expected: 邪魔
   - pattern: ひんぱん
     expected: 頻繁
-  - expected: (株)
-    pattern:  /株式会社/
-  - expected: (有)
-    pattern:  /有限会社/
-  - expected: (社)
-    pattern:  /社団法人/
-  - expected: (合)
-    pattern:  /合名会社/
-  - expected: (特)
-    pattern:  /特殊法人/
-  - expected: (財)
-    pattern:  /財団法人/
-  - expected: (学)
-    pattern:  /学校法人/
-  - expected: (監)
-    pattern:  /監査法人/
-  - expected: (資)
-    pattern:  /合資会社/
-  - expected: (協)
-    pattern:  /協力会社/
-  - expected: (同)
-    pattern:  /合同会社/
-  - expected: (独)
-    pattern:  /独立行政法人/
-  - expected: (医)
-    pattern:  /医療法人/
-  - expected: (宗)
-    pattern:  /宗教法人/
-  - expected: オーバー$1
-    pattern:  /オーバ([^ー])/
-    specs:
-      - from: オーバ気味
-        to:   オーバー気味
   - expected: スーパー$1
     pattern:  /スーパ([^ー])/
   - expected: ハイパー$1

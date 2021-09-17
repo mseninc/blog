@@ -28,7 +28,19 @@ Linux で bash が使える環境のみですが `start.sh` を利用して記�
 
 使い方は `start.sh` を実行し、著者 (番号) と slug を入力するだけです。著者は [author.yaml](author.yaml) から読み込まれます。
 
-実行例
+```sh
+$ ./start.sh
+```
+
+### セットアップ
+
+初回のみ事前に実行権限を与えてください。
+
+```sh
+$ chmod +x ./start.sh
+```
+
+### 実行例
 
 ```sh
 $ ./start.sh 
@@ -45,8 +57,39 @@ Will make
 OK? [y/N] > y
 ```
 
-初回のみ事前に実行権限を与えてください。
+## 文章校正 (textlint)
+
+Pull Request で文章校正が自動で行われますが、事前にローカルで実行し、修正してください。
+
+下記のシェルスクリプトで現在のブランチで変更している Markdown に textlint を実行できます。
 
 ```sh
-chmod +x ./start.sh
+$ ./textlint-changed-all.sh
+```
+
+個別の Markdown を指定して文章校正を行う場合は下記のようにします。
+
+```sh
+$ npx textlint <ファイル名>
+```
+
+### セットアップ
+
+初回のみ事前に実行権限を与えてください。また textlint の利用のため `npm ci` を実行してください。
+
+```sh
+$ chmod +x ./textlint-changed-all.sh
+$ npm ci
+```
+
+### 実行例
+
+```sh
+$ ./textlint-changed-all.sh
+
+/home/yamada/blog/sample.md
+   10:1    error    Line 10 sentence length(154) exceeds the maximum sentence length of 100.
+Over 54 characters   ja-technical-writing/sentence-length
+   10:33   ✓ error  ユーティリティ => ユーティリティー                                         prh
+  118:30   warning  一文に二回以上利用されている助詞 "は" がみつかりました。                   ja-technical-writing/no-doubled-joshi
 ```
