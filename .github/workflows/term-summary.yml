@@ -1,0 +1,80 @@
+name: Report term summary
+
+on:
+  workflow_dispatch:
+  schedule:
+    # JST 月 9:00 (UTC のため -9h)
+    - cron: '0 0 * * 1'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    environment:
+      name: Release
+
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Make summary (Current term)
+      id: make-summary-1
+      run: |
+        chmod +x .github/scripts/term-summary.sh
+        OUTPUT=$(.github/scripts/term-summary.sh)
+        PERIOD=$(echo "${OUTPUT}" | head -n 1)
+        SUMMARY=$(echo "${OUTPUT}" | tail -n +3 | awk '{printf $1":"$2";"}')
+        echo "::set-output name=period::$PERIOD"
+        echo "::set-output name=summary::$SUMMARY"
+
+    - name: Make summary (Previous term)
+      id: make-summary-2
+      run: |
+        chmod +x .github/scripts/term-summary.sh
+        OUTPUT=$(.github/scripts/term-summary.sh $(date --date '-6 months' +%Y-%m-%d))
+        PERIOD=$(echo "${OUTPUT}" | head -n 1)
+        SUMMARY=$(echo "${OUTPUT}" | tail -n +3 | awk '{printf $1":"$2";"}')
+        echo "::set-output name=period::$PERIOD"
+        echo "::set-output name=summary::$SUMMARY"
+
+    - name: Report to slack
+      uses: 8398a7/action-slack@v3
+      env:
+        PERIOD1: ${{ steps.make-summary-1.outputs.period }}
+        SUMMARY1: ${{ steps.make-summary-1.outputs.summary }}
+        PERIOD2: ${{ steps.make-summary-2.outputs.period }}
+        SUMMARY2: ${{ steps.make-summary-2.outputs.summary }}
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      with:
+        status: custom
+        custom_payload: |
+          {
+            text: 'ブログの執筆状況を報告するよ :rola-ok:',
+            attachments: [
+              {
+                color: '#1e90ff',
+                title: process.env.PERIOD2.replace(/-/g, '/').replace('~', '～'),
+                fields: process.env.SUMMARY2
+                  .split(';')
+                  .map(x => x.split(':'))
+                  .map(x => ({
+                      'title': x[0],
+                      'value': x[1],
+                      'short': true,
+                  })),
+              },
+              {
+                color: 'good',
+                title: process.env.PERIOD1.replace(/-/g, '/').replace('~', '～'),
+                fields: process.env.SUMMARY1
+                  .split(';')
+                  .map(x => x.split(':'))
+                  .map(x => ({
+                      'title': x[0],
+                      'value': x[1],
+                      'short': true,
+                  })),
+              },
+            ]
+          }
