@@ -17,7 +17,7 @@ tags: [その他]
 
 本記事の想定読者層は以下の通りです。
 
-- 高校数学の数学 B の知識を有している [^math]
+- 高校数学の数学 B の知識を有している [^1]
 
 ## 前提条件
 
@@ -74,4 +74,4 @@ a を 1 回足したものは a, 1 を a 回足したものは a になるので
 
 何気なく、当たり前の常識として知っている法則を証明してみるのも面白いので、読者のみなさんも何か身近な法則で証明を試みてはいかがでしょうか。
 
-[^math]: 学習指導要領は平成 21 年の [高等学校学習指導要領解説 数学編](https://www.mext.go.jp/component/a_menu/education/micro_detail/__icsFiles/afieldfile/2012/06/06/1282000_5.pdf) に準ずる
+[^1]: 学習指導要領は平成 21 年の [高等学校学習指導要領解説 数学編](https://www.mext.go.jp/component/a_menu/education/micro_detail/__icsFiles/afieldfile/2012/06/06/1282000_5.pdf) に準ずる

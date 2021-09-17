@@ -5,11 +5,11 @@ author: k-so16
 tags: [Vue.js, Electron, Web]
 ---
 
-こんにちは。最近、 [Beat Saber](http://beatsaber.com/) というVRゲームに興味がある[^VR] k-so16 です。
+こんにちは。最近、 [Beat Saber](http://beatsaber.com/) というVRゲームに興味がある[^1] k-so16 です。
 
 [以前登壇した v-kansai meetup](/v-kansai-meetup-6th/) では、[electron-vue](https://github.com/simulatedgreg/electron-vue) を利用したアプリケーションの作成について発表しました。作成当時はVue CLIのバージョンは2.x系で、 Vue CLI 3 が出る前でした。
 
-久々に electron-vue で何か作ろうかなぁと思い、 Vue CLI 3 がインストールされている私の個人用の開発環境[^my-computer]で electron-vue の環境構築をしようとしたところ、環境構築が出来ませんでした。
+久々に electron-vue で何か作ろうかなぁと思い、 Vue CLI 3 がインストールされている私の個人用の開発環境[^2]で electron-vue の環境構築をしようとしたところ、環境構築が出来ませんでした。
 
 そこで、Vue CLI 3 で electron-vue の環境構築をする方法を調べてみました。本記事では、Vue CLI 3で electron-vue の環境を構築する方法を紹介します。
 
@@ -96,5 +96,5 @@ npm install
 Vue CLI 3 に `@vue/cli-init` をインストールした後と全く同じ手順ですね。楽勝です（笑）
 
 
-[^VR]: そもそもVRゴーグルすら持っていないが...
-[^my-computer]: macOS か Ubuntu のどちらかだが、忘れた
+[^1]: そもそもVRゴーグルすら持っていないが...
+[^2]: macOS か Ubuntu のどちらかだが、忘れた

@@ -71,6 +71,3 @@ HAAR Like 特徴と CASCADE 分類を用いた方法は、 3 つの手法の中�
 後編では個人の顔認識や、エッジコンピューティングとしての顔認識と MQTT について紹介します。お楽しみに。
 
 以上、 k-so16 でした。
-
-
-[^svm]: SVM: Support Vector Machine

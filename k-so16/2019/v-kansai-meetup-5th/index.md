@@ -9,7 +9,7 @@ tags: [Vue.js, その他, 〇〇奮闘記]
 
 2019/4/25に開催された[v-kansai Vue.js/Nuxt.js meetup #5](https://vuekansai.connpass.com/event/122664/)に参加してまいりました。本記事ではそのmeetupについて紹介します。
 
-人生初めてのmeetupへの参加で、さらにVue.jsもまだかじった程度[^skill]なので、本記事では、初心者目線から見たmeetupの紹介となっております。
+人生初めてのmeetupへの参加で、さらにVue.jsもまだかじった程度[^1]なので、本記事では、初心者目線から見たmeetupの紹介となっております。
 
 ## meetupの概要
 v-kansaiでは、主に京都や大阪で、Vue.jsおよびNuxt.jsに関する勉強会です。初心者から尖った人まで、Vue.jsに興味を持つ人は誰でもWelcomeというスタンスのmeetupです。
@@ -38,4 +38,4 @@ v-kansaiでは、主に京都や大阪で、Vue.jsおよびNuxt.jsに関する�
 
 今回のmeetupでは、Vue.js初心者の方も登壇されていたので、私も積極的に登壇したいと一層強く思うようになりました。ということで、意を決して、5/22開催の[[Monaca UG 共催] v-kansai Vue.js/Nuxt.js meetup #6](https://vuekansai.connpass.com/event/126754/)に登壇します。学生時代に作成した、Vue.jsとElectronを利用したデスクトップアプリケーションについて話す予定です。参加者の方々は、当日よろしくお願い致しますm(_ _)m
 
-[^skill]: 参考書を買ってからおよそ6ヶ月程度だが、本格的に書いたのは1ヶ月程度
+[^1]: 参考書を買ってからおよそ6ヶ月程度だが、本格的に書いたのは1ヶ月程度

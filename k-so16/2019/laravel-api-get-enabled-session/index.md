@@ -5,7 +5,7 @@ author: k-so16
 tags: [Laravel, Web]
 ---
 
-こんにちは。最近、[Steam](https://store.steampowered.com/) で [Portal](https://store.steampowered.com/app/400/Portal/?l=japanese) と [Portal 2](https://store.steampowered.com/app/620/Portal_2/) がセールでそれぞれ 60円 (90%オフ)になっていて両方買ってしまった[^steam] k-so16 です。
+こんにちは。最近、[Steam](https://store.steampowered.com/) で [Portal](https://store.steampowered.com/app/400/Portal/?l=japanese) と [Portal 2](https://store.steampowered.com/app/620/Portal_2/) がセールでそれぞれ 60円 (90%オフ)になっていて両方買ってしまった[^1] k-so16 です。
 
 Laravel でログイン中のユーザー情報をAPI経由で取得しようとすると、 `Auth::check()` で認証されていないと判定され、ユーザーの情報が得られないという現象に見舞われました。
 
@@ -55,4 +55,4 @@ API に対してセッションを有効化する方法について、以下の�
 
 以上、 k-so16 でした。 Laravel について、また1つ詳しくなった気分になりました（笑）
 
-[^steam]: 最近はデスクトップで [Ubuntu](https://ubuntu.com/) か [FreeBSD](https://www.freebsd.org/) しか動かさなくなったのでプレイ出来るか不安だったが、意外と Ubuntu にも対応していて驚いた
+[^1]: 最近はデスクトップで [Ubuntu](https://ubuntu.com/) か [FreeBSD](https://www.freebsd.org/) しか動かさなくなったのでプレイ出来るか不安だったが、意外と Ubuntu にも対応していて驚いた

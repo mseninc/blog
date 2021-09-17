@@ -119,7 +119,7 @@ private T _X = new T();
 public T X { get { return _X; } }
 ```
 
-`{ get; }` によるプロパティの定義では、値を保持するための変数[^:backing-field] が **暗黙的に** 生成され、プロパティにアクセスされた際には、その変数が返されます。上記のコード例で言えば、 `_X` が暗黙的に生成される変数です。明示的に `_X` の参照先が変更されなければ、 **同じインスタンス** にアクセスされます。
+`{ get; }` によるプロパティの定義では、値を保持するための変数[^1] が **暗黙的に** 生成され、プロパティにアクセスされた際には、その変数が返されます。上記のコード例で言えば、 `_X` が暗黙的に生成される変数です。明示的に `_X` の参照先が変更されなければ、 **同じインスタンス** にアクセスされます。
 
 ### `=>` と等価な構文
 
@@ -169,4 +169,4 @@ public T X => _X ?? (_X = new T());
 
 以上、 k-so16 でした。 C# の世界は奥が深いですね(笑)
 
-[^:backing-field]: このような変数を **[backing fields](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/properties#properties-with-backing-fields)** と呼ぶようです。
+[^1]: このような変数を **[backing fields](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/properties#properties-with-backing-fields)** と呼ぶようです。

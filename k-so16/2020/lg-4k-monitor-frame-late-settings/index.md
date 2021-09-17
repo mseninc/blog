@@ -32,11 +32,11 @@ tags: [4K]
 設定手順は以下の通りです。
 
 1. モニターの設定を開き、 **画質** &gt; **画像調整** を選択する
-![](images/lg-4k-monitor-frame-late-settings-2.jpg)
+    ![](images/lg-4k-monitor-frame-late-settings-2.jpg)
 1. **HDMI ULTRA HD Deep Color** を選択する
-![](images/lg-4k-monitor-frame-late-settings-3.jpg)
+    ![](images/lg-4k-monitor-frame-late-settings-3.jpg)
 1. HDMI ULTRA HD Deep Color を **オン** に設定する
-![](images/lg-4k-monitor-frame-late-settings-4.jpg)
+    ![](images/lg-4k-monitor-frame-late-settings-4.jpg)
 
 一度画面が暗転した後、再度画面が表示されたら、 Windows 側で画面のリフレッシュレートの設定から 60 Hz が選択できるようになります。
 

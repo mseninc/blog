@@ -33,11 +33,11 @@ tags: [Unity]
 
 1. メニューバーから Window > Rendering > Lighting Setting を選択
 
-![](images/unity-lighting-auto-generate-conf-2.png)
+    ![](images/unity-lighting-auto-generate-conf-2.png)
 
 1. 設定画面から Scene タブを選択して Auto Generate を無効化
 
-![](images/unity-lighting-auto-generate-conf-3.png)
+    ![](images/unity-lighting-auto-generate-conf-3.png)
 
 私の環境では、 Auto Generate を無効にするだけで、 CPU の使用率が劇的に下がりました。この方法は、以下の書籍のコラムに掲載されていました。
 

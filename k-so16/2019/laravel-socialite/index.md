@@ -58,28 +58,28 @@ composer require laravel/socialite
 ### GitHub の OAuth 設定
 1. GitHub のメニューから、 Settings を選択します。
 
-![](images/laravel-socialite-1.png)
+  ![](images/laravel-socialite-1.png)
 
 1. Developer settings を選択します。
 
-![](images/laravel-socialite-2.png)
+  ![](images/laravel-socialite-2.png)
 
 1. OAuth Apps を選択し、 New OAuth App をクリックします。
 
-![](images/laravel-socialite-3.png)
+  ![](images/laravel-socialite-3.png)
 
 1. Application name, Homepage URL, Authorization callback URL を入力します。
     - Authorization callback URL は Laravel に返すためのパスを設定します。
 
-![](images/laravel-socialite-4.png)
+  ![](images/laravel-socialite-4.png)
 
     本記事では、例として以下のように入力します。
+
     |項目名|入力する内容|
     |:--|:--|
     |Application name|hogehoge|
     |Homepage URL|`http://localhost`|
     |Authorization callback URL|`http://localhost/login/github/callback`|
-
 
 1. Client ID と Client Secret を Laravel 側に反映させます。
 
@@ -121,7 +121,6 @@ GitHub の OAuth の設定が完了したので、実際に簡単なログイン
     ```bash
     php artisan migrate
     ```
-
 
 1. Auth でログインフォームを生成します。
 
@@ -236,15 +235,15 @@ GitHub アカウントと連携してログインができることを確認し�
 
 1. `http://localhost/login` にアクセスして "Login with GitHub" をクリックします。
 
-![](images/laravel-socialite-6.png)
+  ![](images/laravel-socialite-6.png)
 
 1. GitHub との連携を認証します。
 
-![](images/laravel-socialite-7.png)
+  ![](images/laravel-socialite-7.png)
 
 1. ログインが完了しました。
 
-![](images/laravel-socialite-8.png)
+  ![](images/laravel-socialite-8.png)
 
 
 ## 総括

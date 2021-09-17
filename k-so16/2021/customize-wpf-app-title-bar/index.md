@@ -124,7 +124,7 @@ WindowChrome を利用するには、 XAML に以下の設定を追加します�
 
     - 画面例
 
-![](images/customize-wpf-app-title-bar-2.png)
+        ![](images/customize-wpf-app-title-bar-2.png)
 
     - 実装例
 
@@ -162,7 +162,7 @@ WindowChrome を利用するには、 XAML に以下の設定を追加します�
 
     - 画面例
 
-![](images/customize-wpf-app-title-bar-3.png)
+        ![](images/customize-wpf-app-title-bar-3.png)
 
     - 実装例
 
