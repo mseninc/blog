@@ -13,7 +13,7 @@ jobs:
 
       - name: Checkout content
         run: |
-          BRANCH_NAME=${GITHUB_REF#refs/heads/}
+          BRANCH_NAME=${GITHUB_HEAD_REF#refs/heads/}
           git init -q
           git remote add origin https://github.com/${GITHUB_REPOSITORY}.git
           git fetch --depth 1
