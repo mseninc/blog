@@ -17,7 +17,8 @@ last_day=`date --date "5 month ${year}-${month}-01" '+%Y-%m-%d'`
 
 echo ${first_day} '~' ${last_day}
 
-grep -rEI '^date: ?[0-9\-]+$' --exclude-dir=.draft . | \
+find . -name '*.md' -type f -not -path './.draft/*' |\
+  xargs grep -E '^date: ?[0-9\-]+$' | \
   sed -r 's/\W*\/([^\/]+).+(20[0-9]{2}-[0-9]{2}-[0-9]{2})$/\2 \1/' | \
   awk -v first="${first_day}" -v last="${last_day}" '$1 >= first && $1 <= last' | \
   awk '{print $2}' | sort | uniq -c | sort | awk '{print $2" "$1}'
