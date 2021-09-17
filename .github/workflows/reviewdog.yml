@@ -19,6 +19,7 @@ jobs:
           git remote add origin https://github.com/${GITHUB_REPOSITORY}.git
           git fetch --depth 1
           git config core.sparsecheckout true
+          echo .github >> .git/info/sparse-checkout
           echo .textlintrc >> .git/info/sparse-checkout
           echo package.json >> .git/info/sparse-checkout
           echo package-lock.json >> .git/info/sparse-checkout
@@ -32,7 +33,7 @@ jobs:
           node-version: '14'
           cache: npm
 
-      - name: NPM install
+      - name: npm install
         run: npm ci
 
       - name: Setup reviewdog
