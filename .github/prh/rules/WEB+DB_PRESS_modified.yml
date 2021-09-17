@@ -670,8 +670,6 @@ rules:
     expected: なんとなく
   - pattern: /に当た([っらりるれろ])/
     expected: にあた$1
-  - pattern: /難([いく])/
-    expected: にく$1
   - pattern: /の様([なにだで])/
     expected: のよう$1
   - pattern: /育([まみむめもん])/
@@ -1087,7 +1085,7 @@ rules:
     expected: 汚$1
   - pattern: /果([さしすせそ])/
     expected: 果た$1
-  - pattern: /([^排人])他([^ァ-ヶ社者人方])/
+  - pattern: /([^排人の])他([^ァ-ヶの社者人方])/
     expected: $1ほか$2
   - pattern: 後ほど
     expected: のちほど
