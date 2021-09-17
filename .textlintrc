@@ -1,6 +1,7 @@
 {
   "rules": {
     "preset-ja-technical-writing": {
+      "ja-no-weak-phrase": false,
       "no-exclamation-question-mark": false,
       "no-mix-dearu-desumasu": {
         "preferInHeader": "",
@@ -10,12 +11,13 @@
       },
       "ja-no-mixed-period": {
         "periodMark": "。",
-        "allowPeriodMarks": [],
+        "allowPeriodMarks": ["👍"],
         "allowEmojiAtEnd": true,
         "forceAppendPeriod": false
       },
       "no-doubled-joshi": {
-        "severity" : "warning"
+        "severity" : "warning",
+        "allow": ["も", "としても", "にも"]
       }
     },
     "prh": {

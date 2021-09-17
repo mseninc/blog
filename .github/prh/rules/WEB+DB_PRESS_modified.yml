@@ -233,9 +233,9 @@ rules:
     expected: 二重
   - pattern: 3重
     expected: 三重
-  - pattern: /([何数\\d一二三四五六七八九十０-９])箇所/
+  - pattern: /([\\d一二三四五六七八九十０-９])箇所/
     expected: $1ヵ所
-  - pattern: /([何数\\d一二三四五六七八九十０-９])個所/
+  - pattern: /([\\d一二三四五六七八九十０-９])個所/
     expected: $1ヵ所
   - pattern: ヶ
     expected: ヵ
@@ -575,7 +575,7 @@ rules:
     expected: づら$1
   - pattern: んで([たなるろよ])
     expected: んでい$1
-  - pattern: /ってな(?!く)/
+  - pattern: /ってな(?![くに])/
     expected: っていな
     specs:
       - from: わかってない
@@ -714,8 +714,6 @@ rules:
     expected: ふせん
   - pattern: 殆ど
     expected: ほとんど
-  - pattern: 正に
-    expected: まさに
   - pattern:
       - 益々
       - 増々
@@ -1079,8 +1077,6 @@ rules:
     expected: あり方
   - pattern: かたち
     expected: 形
-  - pattern: かた
-    expected: 方
   - pattern: 済まな
     expected: すまな
   - pattern: 済みません
@@ -1432,11 +1428,10 @@ rules:
   - pattern: /うめ([たつて])/
     expected: 埋め$1
   - pattern:
-      - おすすめ
       - お薦め
       - お奨め
-      - オススメ
-    expected: お勧め
+      - お勧め
+    expected: おすすめ
   - pattern:
       - てがけ
       - 手掛け
@@ -1461,8 +1456,6 @@ rules:
     expected: 必要
   - pattern: /あたえ([たつてらりるれろっ])/
     expected: 与え$1
-  - pattern: /すす([まみむめもん])/
-    expected: 進$1
   - pattern: 焦点をあて
     expected: 焦点を当て
   - pattern: /おも([いうえおわっ])/
