@@ -42,4 +42,4 @@ jobs:
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           npx textlint -f checkstyle . \
-            | reviewdog -f=checkstyle -name="textlint" -diff="git diff ${{ github.event.pull_request.base.ref }}" -reporter=github-pr-review"
+            | reviewdog -f=checkstyle -name="textlint" -diff="git diff ${{ github.event.pull_request.base.ref }}" -reporter=github-pr-review
