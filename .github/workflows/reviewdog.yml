@@ -32,6 +32,9 @@ jobs:
           node-version: '14'
           cache: npm
 
+      - name: NPM install
+        run: npm ci
+
       - name: Setup reviewdog
         uses: reviewdog/action-setup@v1
 
