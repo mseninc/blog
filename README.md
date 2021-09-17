@@ -67,7 +67,7 @@ Pull Request で文章校正が自動で行われますが、事前にローカ�
 $ ./textlint-changed-all.sh
 ```
 
-個別の Markdown を指定して文章校正を行う場合は下記のようにします。
+個別の Markdown を指定して校正する場合は下記のようにします。
 
 ```sh
 $ npx textlint <ファイル名>
