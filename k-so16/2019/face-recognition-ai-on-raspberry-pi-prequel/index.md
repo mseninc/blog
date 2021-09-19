@@ -24,7 +24,7 @@ CNN を利用して顔を検知する手順は以下の通りです。
 1. 2~4の手順を層の数だけ繰り返す
 1. 5 で得られた解が顔の画像に近いかを判定する
 
-![](images/face-recognition-ai-on-raspberry-pi_prequel-1.png)
+![](images/face-recognition-ai-on-raspberry-pi-prequel-1.png)
 
 正解の値は人工知能の作成者が任意に設定できます。学習させる際に正解の画像と不正解の画像を用意し、正解の画像が人工知能の作成者が設定した値に近づくように重みの値を決定します。
 
@@ -35,22 +35,22 @@ CNN を利用して顔を検知する手順は以下の通りです。
 ### HOG 特徴量 + SVM 分類
 深層学習では、膨大な量のデータを用いて学習させましたが、 **HOG特徴量** (Histograms of Oriented Gradients) を用いることで、顔の特徴に着目して学習させることができます。特徴量を **明暗の勾配の大きさと向き** を求め、ある範囲について明暗の角度と大きさの **ヒストグラム** を求めます。
 
-![](images/face-recognition-ai-on-raspberry-pi_prequel-2.png)
+![](images/face-recognition-ai-on-raspberry-pi-prequel-2.png)
 
-![](images/face-recognition-ai-on-raspberry-pi_prequel-3.png)
+![](images/face-recognition-ai-on-raspberry-pi-prequel-3.png)
 
 得られた HOG 特徴量が顔であるか判定するために、 **SVM 分類** (Support Vector Machine：サポートベクトルマシン) を利用します。SVM 分類では、 n 次元の線形式の解を求め、その値が正になるか負になるかを判定することで分類します。例えば、正の値になれば顔であり、負の値であればそれ以外として分類されます。
 
 学習させる際には、正解の画像と不正解の画像を用意し、正解の画像を入力した際に n 次元の線形式の値が 0 になるように、各係数を調整します。例えば特徴量が 2 次元で表される時、 ax<sub>1</sub>+bx<sub>2</sub>+c=0 が成り立つように係数 a, b, c を調整します。
 
-![](images/face-recognition-ai-on-raspberry-pi_prequel-4.png)
+![](images/face-recognition-ai-on-raspberry-pi-prequel-4.png)
 
 ### HAAR Like 特徴 + CASCADE 分類
 HAAR Like 特徴では、白黒の矩形をフィルタとして、フィルタに合致する部分が画像内にあるか判定します。フィルタは複数の組み合わせから構成されます。
 
 フィルタを用いる例として、眉毛を検出するフィルタを考えます。眉毛は暗く、眉毛の上は明るいので、眉毛の位置に黒いフィルタを、その上に白いフィルタを左右に 1 つずつ置き、画像内に合致する箇所があるか調べます。目を検出するフィルタは中心が黒で両脇が白のフィルタが左右に 1 つずつ、口を検出するフィルタは黒いフィルタの下に白いフィルタといった具合に、顔の特徴に基づいて複数のフィルタを設置します。
 
-![](images/face-recognition-ai-on-raspberry-pi_prequel-5.png)
+![](images/face-recognition-ai-on-raspberry-pi-prequel-5.png)
 
 顔認識の判定を高速化するために、 **CASCADE 分類** を用いて特徴の判定を複数の段階に分けて行います。特徴に合致するかの判定を複数に分けることで、 **顔の特徴からかけ離れた画像を早い段階で排除** できます。顔でない部分の判定を早い段階で排除することで、高速に顔認識が実現できます。
 
