@@ -3,7 +3,7 @@ name: Optimize images
 on:
   pull_request:
     branches:
-      - demo
+      - image-optimization
     types: [closed]
 
 jobs:
