@@ -16,7 +16,7 @@ jobs:
       - name: Checkout content
         run: |
           BRANCH_NAME=${GITHUB_BASE_REF#refs/heads/}
-          echo BRANCH_NAME: ${BRANCH_NAME} GITHUB_SHA: ${GITHUB_SHA}"
+          echo "BRANCH_NAME: ${BRANCH_NAME} GITHUB_SHA: ${GITHUB_SHA}"
           git init -q
           git remote add origin https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git
           git fetch --depth 1
