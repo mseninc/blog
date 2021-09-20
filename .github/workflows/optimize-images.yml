@@ -26,7 +26,7 @@ jobs:
           echo .github >> .git/info/sparse-checkout
           echo package.json >> .git/info/sparse-checkout
           echo package-lock.json >> .git/info/sparse-checkout
-          git -c core.quotepath=false diff origin/${BASE_BRANCH}^ origin/${BASE_BRANCH} --name-only | grep -rEI '\.(jpg|png|gif|svg)$' - >> .git/info/sparse-checkout
+          git -c core.quotepath=false diff ${GITHUB_SHA}^ ${GITHUB_SHA} --name-only | grep -rEI '\.(jpg|png|gif|svg)$' - >> .git/info/sparse-checkout
           cat .git/info/sparse-checkout
           git checkout -q ${BASE_BRANCH}
 
