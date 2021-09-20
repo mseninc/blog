@@ -167,13 +167,10 @@ async function writeFiles(resultSummary) {
 
 function reportAll(reports) {
   const sizeText = (size) => `${Math.round(size / 1024).toLocaleString()}KB`
-  let totalReducedSize = 0
   for (const { source, minimum, reducedSize, percent, status } of reports) {
     const percentText = `${Math.round(percent * 100)}%`
     console.log(`"${source.path}" [${status}] ${percentText} (${sizeText(source.size)} -> ${sizeText(minimum.size)}; -${sizeText(reducedSize)})`)
-    totalReducedSize += reducedSize
   }
-  console.log(`reduced: ${sizeText(totalReducedSize)}`)
 }
 
 commander
@@ -190,8 +187,6 @@ commander
 const options = commander.opts()
 
 async function main() {
-  console.time('elapsed');
-
   const MAX_WIDTH = process.env.MAX_WIDTH || 1200
   const MAX_HEIGHT = process.env.MAX_HEIGHT || 1200
   const maxResolution = { width: MAX_WIDTH, height: MAX_HEIGHT }
@@ -252,10 +247,8 @@ async function main() {
   if (!options.keepTemporaryFiles) {
     await bulkRmdir([resizedDirPath, optimizedDirPath, resizedOptimizedDirPath])
   }
-  console.timeEnd('elapsed');
 }
 
-  
 if (process.argv.length < 2) {
   console.error('No dicrecotry specified')
   process.exit(1)
