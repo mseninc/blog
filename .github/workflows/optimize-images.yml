@@ -19,13 +19,13 @@ jobs:
           echo "BRANCH_NAME: ${BRANCH_NAME} GITHUB_SHA: ${GITHUB_SHA}"
           git init -q
           git remote add origin https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git
-          git fetch --depth 1
+          git fetch --depth 2
           git config core.sparsecheckout true
           echo .gitignore >> .git/info/sparse-checkout
           echo .github >> .git/info/sparse-checkout
           echo package.json >> .git/info/sparse-checkout
           echo package-lock.json >> .git/info/sparse-checkout
-          git -c core.quotepath=false diff origin/${BRANCH_NAME} ${GITHUB_SHA} --name-only | grep -rEI '\.(jpg|png|gif|svg)$' - >> .git/info/sparse-checkout
+          git -c core.quotepath=false diff ${GITHUB_SHA}^ ${GITHUB_SHA} --name-only | grep -rEI '\.(jpg|png|gif|svg)$' - >> .git/info/sparse-checkout
           cat .git/info/sparse-checkout
           git checkout -q ${BRANCH_NAME}
 
