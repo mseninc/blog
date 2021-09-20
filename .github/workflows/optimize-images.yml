@@ -15,8 +15,9 @@ jobs:
 
       - name: Checkout content
         run: |
-          BRANCH_NAME=${GITHUB_BASE_REF#refs/heads/}
-          echo ${BRANCH_NAME}
+          BASE_BRANCH=${GITHUB_BASE_REF#refs/heads/}
+          HEAD_BRANCH=${GITHUB_HEAD_REF#refs/heads/}
+          echo HEAD: ${HEAD_BRANCH} -> BASE_BRANCH: ${BASE_BRANCH}
           git init -q
           git remote add origin https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git
           git fetch --depth 1
@@ -25,9 +26,9 @@ jobs:
           echo .github >> .git/info/sparse-checkout
           echo package.json >> .git/info/sparse-checkout
           echo package-lock.json >> .git/info/sparse-checkout
-          git -c core.quotepath=false diff origin/release origin/${BRANCH_NAME} --name-only | grep -rEI '\.(jpg|png|gif|svg)$' - >> .git/info/sparse-checkout
+          git -c core.quotepath=false diff origin/${BASE_BRANCH} origin/${HEAD_BRANCH} --name-only | grep -rEI '\.(jpg|png|gif|svg)$' - >> .git/info/sparse-checkout
           cat .git/info/sparse-checkout
-          git checkout -q origin/${BRANCH_NAME}
+          git checkout -q origin/${HEAD_BRANCH}
 
       - name: Node
         uses: actions/setup-node@v2
@@ -39,7 +40,7 @@ jobs:
         run: npm ci
 
       - name: Execute optimization
-        run: node .github/scripts/optimize-images.js -k -B .
+        run: node .github/scripts/optimize-images.js . -k -B
 
       - name: Commit & push
         run: |
