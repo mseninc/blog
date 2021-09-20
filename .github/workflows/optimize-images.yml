@@ -15,9 +15,8 @@ jobs:
 
       - name: Checkout content
         run: |
-          BASE_BRANCH=${GITHUB_BASE_REF#refs/heads/}
-          HEAD_BRANCH=${GITHUB_REF#refs/heads/}
-          echo HEAD: ${HEAD_BRANCH} -> BASE_BRANCH: ${BASE_BRANCH}; GITHUB_SHA: ${GITHUB_SHA}
+          BRANCH_NAME=${GITHUB_BASE_REF#refs/heads/}
+          echo BRANCH_NAME: ${BRANCH_NAME} GITHUB_SHA: ${GITHUB_SHA}"
           git init -q
           git remote add origin https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git
           git fetch --depth 1
@@ -28,7 +27,7 @@ jobs:
           echo package-lock.json >> .git/info/sparse-checkout
           git -c core.quotepath=false diff ${GITHUB_SHA}^ ${GITHUB_SHA} --name-only | grep -rEI '\.(jpg|png|gif|svg)$' - >> .git/info/sparse-checkout
           cat .git/info/sparse-checkout
-          git checkout -q ${BASE_BRANCH}
+          git checkout -q ${BRANCH_NAME}
 
       - name: Node
         uses: actions/setup-node@v2
