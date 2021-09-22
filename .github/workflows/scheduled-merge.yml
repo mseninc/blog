@@ -17,10 +17,10 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
-          const { issue: { number: issue_number }, repo: { owner, repo } } = context;
+          const { repo: { owner, repo } } = context;
           const query = `query listPulls($owner: String!, $name: String!) {
             repository(owner: $owner, name: $name) {
-              pullRequests(states: OPEN, first: 1, orderBy: {field: CREATED_AT, direction: DESC}, baseRefName: "release") {
+              pullRequests(states: OPEN, first: 1, orderBy: {field: CREATED_AT, direction: ASC}, baseRefName: "release") {
                 totalCount
                 nodes {
                   number
