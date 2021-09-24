@@ -49,7 +49,7 @@ jobs:
           const data = await github.graphql(query, variables)
           const { repository: { pullRequests: { nodes } } } = data
           const pulls = nodes || []
-          console.debug(JSON.stringify(pulls, null, 2)
+          console.debug(JSON.stringify(pulls, null, 2))
           const candidates = pulls
             .filter(pull => pull.headRefName.startsWith('post/'))
             .filter(pull => {
