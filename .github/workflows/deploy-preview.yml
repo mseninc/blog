@@ -20,12 +20,10 @@ jobs:
       CONTENT_PATH: ${{ github.workspace }}/content
       NO_CACHE: ${{ secrets.NO_CACHE }}
       S3_BUCKET_NAME: ${{ secrets.S3_BUCKET_NAME }}
+      S3_REGION: ${{ secrets.S3_REGION }}
       S3_REMOVE_NONEXISTENT_OBJECTS: false
     
     steps:
-
-    - name: Prepare env BRANCH_KEY
-      run: echo "BRANCH_KEY=${GITHUB_REF#refs/heads/post/}" >> $GITHUB_ENV
 
     - name: Checkout generator
       uses: actions/checkout@v2
