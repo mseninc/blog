@@ -20,7 +20,7 @@ jobs:
           const { repo: { owner, repo } } = context;
           const query = `query listPulls($owner: String!, $name: String!) {
             repository(owner: $owner, name: $name) {
-              pullRequests(states: OPEN, first: 1, orderBy: {field: CREATED_AT, direction: ASC}, baseRefName: "release") {
+              pullRequests(states: OPEN, first: 10, orderBy: {field: CREATED_AT, direction: ASC}, baseRefName: "release") {
                 totalCount
                 nodes {
                   number
@@ -67,4 +67,6 @@ jobs:
               pull_number: number
             })
             console.log(`Merged #${number} (${url})`)
+          } else {
+            console.log(`No pull request to be merged`)
           }
