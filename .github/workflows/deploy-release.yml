@@ -21,6 +21,7 @@ jobs:
       NO_CACHE: ${{ secrets.NO_CACHE }}
       GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
       S3_BUCKET_NAME: ${{ secrets.S3_BUCKET_NAME }}
+      S3_REGION: ${{ secrets.S3_REGION }}
       S3_REMOVE_NONEXISTENT_OBJECTS: true
 
     steps:
