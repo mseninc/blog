@@ -20,6 +20,8 @@ jobs:
       GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES: true
       NO_CACHE: ${{ secrets.NO_CACHE }}
       GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
+      S3_BUCKET_NAME: ${{ secrets.S3_BUCKET_NAME }}
+      S3_REMOVE_NONEXISTENT_OBJECTS: true
 
     steps:
 
@@ -57,11 +59,8 @@ jobs:
     - name: Build
       run: node_modules/.bin/gatsby build --verbose
 
-    - name: Deploy post files
-      run: aws s3 sync public s3://msen-blog-release --exclude '*' --include '*.html' --include '*/app-data.json' --include '*/page-data.json' --delete
-
-    - name: Deploy other files
-      run: aws s3 sync public s3://msen-blog-release --size-only --exclude '*.html' --exclude '*/app-data.json' --exclude '*/page-data.json' --delete
+    - name: Deploy
+      run: node_modules/.bin/gatsby-plugin-s3 deploy
 
     - name: Invalidate CloudFront
       uses: chetan/invalidate-cloudfront-action@master
