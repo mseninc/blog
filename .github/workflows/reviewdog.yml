@@ -8,9 +8,11 @@ on:
       - opened
       - reopened
       - synchronize
+      - labeled
 
 jobs:
   textlint:
+    if: contains(github.event.pull_request.labels.*.name, 'textlint')
     runs-on: ubuntu-latest
 
     steps:
