@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - 'post/**'
-      - '036-fix-s3-sync-method'
 
 jobs:
   build:
