@@ -63,7 +63,7 @@ Entity Framework Core 3.0 (以下 EF Core 3.0 と表記) で **派生クラス�
 
 `LectureBase` を基底クラスとして、 `Attendance` は `LectureBase` を派生することで講義情報に学生と出欠の情報を加えます。詳細な出欠情報を取得するために `StudentAttendance` は `Attendance` を派生して追加するプロパティを定義します。
 
-![](images/efcore3-model-extension-1.png)
+![](images/efcore3-model-extension-1.png "モデルの継承関係を表すクラス図")
 
 ```CSharp
 /// <summary>
@@ -193,7 +193,7 @@ public class Attendance : AttendanceBase
 
 これらの変更に基づいて修正したクラス図は以下の通りです。
 
-![](images/efcore3-model-extension-2.png)
+![](images/efcore3-model-extension-2.png "抽象クラスを導入したクラス図")
 
 ### DbContext の修正
 モデルの定義を修正したら、 `DbContext` の `OnModelCreating()` の定義を変更します。

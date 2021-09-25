@@ -35,7 +35,7 @@ tags: [Vue.js, その他, 〇〇奮闘記]
 
 因みに、私の発表順序はまさかのトップバッターでした（笑）どうやら、会場に到着した人から、何番目に発表したいかを決められたようです。私は到着が遅かったので、自動的に発表順が最初になりました。
 
-![](images/v-kansai-meetup-6th-1.jpg)
+![](images/v-kansai-meetup-6th-1.jpg "登壇時の様子")
 
 写真は [Atsushi  🇯🇵 @DevRelCon SF 2019](https://twitter.com/goofmint/status/1131142166351208448) 様より許可を得て転載させて頂きました。この場を借りて御礼申し上げます。
 

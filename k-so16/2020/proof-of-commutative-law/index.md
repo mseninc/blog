@@ -34,25 +34,25 @@ tags: [その他]
 
 ab は a を b 回加算したもの、 ba は b を a 回加算したものなので、それぞれ (1), (2) のように表されます。
 
-![](images/proof-of-commutative-law-1.png)
+![](images/proof-of-commutative-law-1.png "掛け算は総和記号で置き換えられる")
 
 (1) と (2) が等価であることを示せれば、 ab = ba が示されます。
 
 Ⅰ) b = 1 の時、 それぞれ (1), (2) に代入すると以下のようになります。
 
-![](images/proof-of-commutative-law-2.png)
+![](images/proof-of-commutative-law-2.png "(1) と (2) にそれぞれ b = 1 を代入した場合の式")
 
 a を 1 回足したものは a, 1 を a 回足したものは a になるので、 b = 1 の時、 (1) と (2) は等価であることが示されました。
 
 Ⅱ) b = n の時、 それぞれ (1), (2) に代入すると以下のようになります。
 
-![](images/proof-of-commutative-law-3.png)
+![](images/proof-of-commutative-law-3.png "(1) と (2) にそれぞれ b = n を代入した場合の式")
 
 上記の 2 式が等価と仮定します。
 
 Ⅲ) b = n + 1 の時、それぞれ (1), (2) に代入すると以下のようになります。
 
-![](images/proof-of-commutative-law-4.png)
+![](images/proof-of-commutative-law-4.png "(1) と (2) にそれぞれ b = n + 1 を代入した場合の式")
 
 Ⅱ) の結果から、 b = n + 1 の時、 (1) と (2) が等価であることが示されました。
 

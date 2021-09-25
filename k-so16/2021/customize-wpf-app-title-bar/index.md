@@ -106,7 +106,7 @@ WindowChrome を利用するには、 XAML に以下の設定を追加します�
 
 実際の画面は以下のように表示されます。
 
-![](images/customize-wpf-app-title-bar-1.png)
+![](images/customize-wpf-app-title-bar-1.png "タイトルバーをカスタムしたサンプルコードの画面例")
 
 `Grid` の領域を縦に 2 分割し、タイトルバーとアプリケーション領域としてそれぞれ UI を定義することでカスタムタイトルバーを生成します。 `Grid.RowDefinitions` の 1 つ目の `RowDefinition` の `Height` プロパティを `Auto` と指定することで、タイトルバーの高さがコンテンツの高さに合わせて自動的に計算されます。また、 `Height` に値を指定してタイトルバーの高さを固定することも可能です。
 
@@ -124,7 +124,7 @@ WindowChrome を利用するには、 XAML に以下の設定を追加します�
 
     - 画面例
 
-        ![](images/customize-wpf-app-title-bar-2.png)
+        ![](images/customize-wpf-app-title-bar-2.png "タイトルバーにメニューを実装")
 
     - 実装例
 
@@ -162,7 +162,7 @@ WindowChrome を利用するには、 XAML に以下の設定を追加します�
 
     - 画面例
 
-        ![](images/customize-wpf-app-title-bar-3.png)
+        ![](images/customize-wpf-app-title-bar-3.png "タイトルバーにアプリケーションアイコンを追加")
 
     - 実装例
 

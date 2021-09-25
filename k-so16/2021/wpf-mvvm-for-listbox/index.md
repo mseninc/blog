@@ -32,11 +32,11 @@ Collection への要素の追加を監視して `ListBox` などの UI コンポ
 
 作成するサンプルプログラムとして、 `Check in` ボタンが押されたら、チェックイン時刻を `ListBox` に記録として追加するようなプログラムの作成を考えます。動作のイメージは以下の GIF アニメーションの通りです。
 
-![](images/wpf-mvvm-for-listbox-1.gif)
+![](images/wpf-mvvm-for-listbox-1.gif "動作イメージ")
 
 実装方針としては、 `ObservableCollection<T>`, `ReactiveCollection<T>` ともにチェックイン履歴は文字列の Collection として保持し、 `Check in` ボタンを押したらこの Collection に記録の文字列が追加されることを想定します。 Collection に要素が追加されたら、 MVVM のように変更を検知して、 `ListBox` に追加された内容が反映させます。
 
-![](images/wpf-mvvm-for-listbox-2.png)
+![](images/wpf-mvvm-for-listbox-2.png "Collection と ListBox の変更検知のモデル")
 
 ### `ObservableCollection<T>` を利用する方法
 

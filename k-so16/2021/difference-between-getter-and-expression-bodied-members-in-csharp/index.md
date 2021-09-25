@@ -78,7 +78,7 @@ public class ViewModel
 
 この `CurrentTime` プロパティをビューにバインドすることで、現在時刻を画面上が表示されることを想定していました。しかし、なぜかプログラムを起動した際に、時刻が画面上に表示されるまでに少し遅延がありました。
 
-![](images/difference-between-getter-and-expression-bodied-members-in-csharp-1.gif)
+![](images/difference-between-getter-and-expression-bodied-members-in-csharp-1.gif "時計の表示が遅延した実行例")
 
 原因が分からず、試しに以下のように `{ get; }` を用いて書き換えたところ、プログラムを起動すると即座に時刻が画面上に表示されました。
 
@@ -96,7 +96,7 @@ public class ViewModel
 }
 ```
 
-![](images/difference-between-getter-and-expression-bodied-members-in-csharp-2.gif)
+![](images/difference-between-getter-and-expression-bodied-members-in-csharp-2.gif "時計が遅延なく表示された実行例")
 
 ## `{ get; }` と `=>` の構文の違い
 
@@ -154,7 +154,7 @@ public T X => _X ?? (_X = new T());
 
 `{ get; }` を用いることで、 XAML と ViewModel のコンストラクタ内で参照するインスタンスが **同一** となり、 XAML で参照される `CurrentTime.Value` が初期化され、実行時に時刻が正しく表示されました。
 
-![](images/difference-between-getter-and-expression-bodied-members-in-csharp-3.png)
+![](images/difference-between-getter-and-expression-bodied-members-in-csharp-3.png "`=>` と `{ get; }` の挙動の違いのイメージ")
 本記事を執筆する上で以下の記事を参考にしました。
 
 > - [c# 6.0 - What is the => assignment in C# in a property signature - Stack Overflow](https://stackoverflow.com/a/38999936)

@@ -60,7 +60,7 @@ array_reduce(explode(".", $ip), function($carry, $octet) {
 
 例として、 `192.168.1.1` を数値に変換します。図1は、上記の手法の挙動を図示したものです。
 
-![](images/php-ip2long-1.png)
+![](images/php-ip2long-1.png "図1. array_reduce() によるIPの数値化方法")
 
 #### Collectionによる実装 (Laravel版)
 [kenzauros](https://github.com/kenzauros)さんに、ナウでいかしたプログラマ風の実装として、Collectionを利用する方法についても教えてもらいました。
@@ -80,7 +80,7 @@ collect(explode(".", $ip))->map(function ($octet, $index) {
 
 `array_reduce()` と同様に `192.168.1.1` をCollectionを用いて数値に変換する挙動を図2に示します。
 
-![](images/php-ip2long-2.png)
+![](images/php-ip2long-2.png "図2. Collectionを用いたIPの数値化方法")
 
 
 ## 誰かライブラリ化してないのか
