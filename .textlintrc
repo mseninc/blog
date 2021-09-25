@@ -1,0 +1,29 @@
+{
+  "rules": {
+    "preset-ja-technical-writing": {
+      "ja-no-weak-phrase": false,
+      "no-exclamation-question-mark": false,
+      "no-mix-dearu-desumasu": {
+        "preferInHeader": "",
+        "preferInBody": "ですます",
+        "preferInList": "",
+        "strict": false
+      },
+      "ja-no-mixed-period": {
+        "periodMark": "。",
+        "allowPeriodMarks": ["👍"],
+        "allowEmojiAtEnd": true,
+        "forceAppendPeriod": false
+      },
+      "no-doubled-joshi": {
+        "severity" : "warning",
+        "allow": ["も", "としても", "にも"]
+      }
+    },
+    "prh": {
+      "rulePaths": [
+        ".github/prh/rules/WEB+DB_PRESS_modified.yml"
+      ]
+    }
+  }
+}
