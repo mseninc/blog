@@ -1,0 +1,84 @@
+name: Optimize images
+
+on:
+  pull_request:
+    branches:
+      - release
+    types: [closed]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
+
+    steps:
+
+      - name: Checkout content
+        run: |
+          BRANCH_NAME=${GITHUB_BASE_REF#refs/heads/}
+          echo "BRANCH_NAME: ${BRANCH_NAME} GITHUB_SHA: ${GITHUB_SHA}"
+          git init -q
+          git remote add origin https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git
+          git fetch --depth 2
+          git config core.sparsecheckout true
+          echo .gitignore >> .git/info/sparse-checkout
+          echo .github >> .git/info/sparse-checkout
+          echo package.json >> .git/info/sparse-checkout
+          echo package-lock.json >> .git/info/sparse-checkout
+          git -c core.quotepath=false diff ${GITHUB_SHA}^ ${GITHUB_SHA} --name-only | grep -rEI '\.(jpg|png|gif|svg)$' - >> .git/info/sparse-checkout
+          cat .git/info/sparse-checkout
+          git checkout -q ${BRANCH_NAME}
+
+      - name: Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+          cache: npm
+
+      - name: npm install
+        run: npm ci
+
+      - name: Execute optimization
+        id: optimization
+        run: |
+          SECONDS=0
+          RESULT=$(node .github/scripts/optimize-images.js . --no-backup)
+          echo ${RESULT}
+          RESULT="${RESULT//$'\n'/\\n}"
+          echo "::set-output name=result::$RESULT"
+          echo "::set-output name=elapsed::$SECONDS"
+
+      - name: Commit & push
+        id: commit
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add -u
+          git commit -m "Optimized images"
+          git push origin ${GITHUB_BASE_REF#refs/heads/}
+          COMMIT_HASH=$(git rev-parse HEAD)
+          echo "::set-output name=hash::$COMMIT_HASH"
+
+      - name: Comment to PR
+        uses: actions/github-script@0.3.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { issue: { number: issue_number }, repo: { owner, repo } } = context
+            const commitHash = '${{ steps.commit.outputs.hash }}'
+            const elapsed = '${{ steps.optimization.outputs.elapsed }}s'
+            const result = '${{ steps.optimization.outputs.result }}'.trim()
+            if (result) {
+              const resultText = result
+                .split('\\n')
+                .join('\n')
+                .replace(/^/gm, '- ')
+                .replace(/"([^"]+)"/g, (_, p1) => {
+                  const baseUrl = `https://github.com/${owner}/${repo}/blob/${commitHash}/`
+                  const relPath = encodeURI(p1.replace(/^(\.\/|)/, ''))
+                  const fileName = p1.match(/[^/]+$/, '$@')
+                  return `[${fileName}](${baseUrl}${relPath})`
+                })
+              const body = `### Image optimization\ncommit: ${commitHash} elapsed: ${elapsed}\n${resultText}`
+              github.issues.createComment({ issue_number, owner, repo, body })
+            }
