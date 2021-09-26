@@ -1047,8 +1047,6 @@ rules:
       - 元々
       - 本々
     expected: もともと
-  - pattern: /基([^数準盤板底礎本])/
-    expected: もと$1
   - pattern: /([^追])及び/
     expected: $1および
   - pattern: した上
