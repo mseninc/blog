@@ -1,6 +1,6 @@
 ---
 title: 【2021年から Ruby on Rails をはじめる人向け】 Ruby on Rails 6 入門 Part 7 ～ Rails でバリデーションチェックを自動で行う方法～
-date:
+date: 
 author: linkohta
 tags: [Ruby on Rails, Web]
 ---
@@ -221,7 +221,7 @@ Active Record では、バリデーションが失敗するたびに、オブジ
 def add
   @msg = "add new data."
   @person = Person.new
-  @errors = Array.new
+  @errors = Hash.new
 end
 
 def create
@@ -230,7 +230,7 @@ def create
     if person.valid? then
       redirect_to '/people/index'
     else
-      @errorMessages = person.errors.messages
+      @errorMessages = person.errors
       render 'add'
     end
   end
@@ -241,10 +241,8 @@ end
 ```html
 <h1 class="display-4 text-primary">People#add</h1>
 <p><%= @msg %></p>
-<% @errorMessages.each do |error| %>
-  <% error[1].each do |mes| %>
-    <p><%= mes %></p>
-  <% end %>
+<% @errorMessages.values.each do |error| %>
+  <p><%= error %></p>
 <% end %>
 <%= form_with model: @person, url: people_add_path do |form| %>
   <div class="form-group">
@@ -273,14 +271,12 @@ end
 以下のような画面になれば成功です。
 ![valid2](images/2021-09-14_15h51_34.png)
 
-上述の `add.html.erb` では `<% error[1].each do |mes| %>` となっています。
-
-これは `errorMessages.messages` に保存されるエラーメッセージが以下のような配列になっているからです。
+`errorMessages` に保存されるエラーメッセージは以下のような連想配列になっています。
 
 ```rb
 {
-  ["name", ["Name が入力されていません"]],
-  ["age", ["Age が入力されていません", "数値ではありません"]]
+  :name => ["Name が入力されていません"],
+  :age => ["Age が入力されていません", "数値ではありません"]
 }
 ```
 
