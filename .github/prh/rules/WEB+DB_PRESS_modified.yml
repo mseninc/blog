@@ -627,7 +627,7 @@ rules:
     expected: どこ
   - pattern: 途端
     expected: とたん
-  - pattern: /(ピン)?留([まめ])/
+  - pattern: /(ピン|書き)?留([まめ])/
     regexpMustEmpty: $1
     expected: とど$2
     specs:
