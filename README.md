@@ -54,10 +54,18 @@ $ chmod +x ./*.sh
 
 ```sh
 $ cd ~/blog
-$ docker run -d --name blog-gatsby -v $PWD:/content -p 8000:8000 ghcr.io/mseninc/blog-gatsby
+$ docker run -d --name blog-gatsby -v $PWD:/content -p 8000:8000 ghcr.io/mseninc/blog-gatsby:main
 ```
 
 docker イメージのダウンロード・起動が終わると http://localhost:8000 でプレビューが可能です。記事を保存するとブラウザー側も自動で更新されます。
+
+#### コンテナーの操作
+
+```sh
+$ docker stop blog-gatsby 👈 コンテナー停止
+$ docker stop blog-gatsby 👈 コンテナー削除
+$ docker images -a | grep "blog-gatsby" | awk '{print $3}' | xargs docker rmi 👈イメージ削除
+```
 
 ### 記事テンプレートの作成
 
