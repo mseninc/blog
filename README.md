@@ -62,6 +62,7 @@ docker イメージのダウンロード・起動が終わると http://localhos
 #### コンテナーの操作
 
 ```sh
+$ docker start blog-gatsby 👈 コンテナー起動
 $ docker stop blog-gatsby 👈 コンテナー停止
 $ docker rm blog-gatsby 👈 コンテナー削除
 $ docker images -a | grep "blog-gatsby" | awk '{print $3}' | xargs docker rmi 👈イメージ削除
