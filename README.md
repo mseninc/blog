@@ -235,19 +235,34 @@ frontmatter | 説明
     ```
     ```js
     ```
+    ![](.github/readme/images/code-block-sample-01.png)
 - タイトル指定
     ```
-    ```js:title=hogehoge.js
+    ```:title=hogehoge.js
     ```
+    ![](.github/readme/images/code-block-sample-02.png)
 - 行番号表示
     ```
-    ```js{numberLines:1}
+    ```{numberLines:1}
     ```
-- 強調行指定
+    ![](.github/readme/images/code-block-sample-03.png)
+- 強調行指定 (単一行指定)
     ```
-    ```js{14}
+    ```{7}
     ```
+    ![](.github/readme/images/code-block-sample-04.png)
+- 強調行指定 (範囲行指定)
+    ```
+    ```{7-9}
+    ```
+    ![](.github/readme/images/code-block-sample-05.png)
+- 強調行指定 (複数行指定)
+    ```
+    ```{2,7}
+    ```
+    ![](.github/readme/images/code-block-sample-06.png)
 - まとめて指定
     ```
-    ```js{14}{numberLines:1}:title=hogehoge.js
+    ```js{numberLines:1}{2,7-9}:title=hogehoge.js
     ```
+    ![](.github/readme/images/code-block-sample-07.png)
