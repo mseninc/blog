@@ -1,6 +1,6 @@
 ---
 title: 【2021年から Ruby on Rails をはじめる人向け】 Ruby on Rails 6 入門 Part 7 ～ Rails でバリデーションチェックを自動で行う方法～
-date: 2021-08-23
+date: 
 author: linkohta
 tags: [Ruby on Rails, Web]
 ---
@@ -19,9 +19,9 @@ link です。
 
 ## バリデーションチェック
 
-前回紹介した ActiveRecord にはバリデーション機能が備わっています。
+前回紹介した Active Record にはバリデーション機能が備わっています。
 
-この機能を使って、オブジェクトがデータベースに保存される前にオブジェクトの状態を検証する方法を勉強していきましょう。
+この機能を使って、オブジェクトが保存される前にオブジェクトの状態を検証する方法を勉強していきましょう。
 
 `app/model/Person.rb` を開いて、以下のように書き換えます。
 ```rb
@@ -30,9 +30,9 @@ class Person < ApplicationRecord
 end
 ```
 
-これは、モデルのオブジェクトをデータベースに保存するときにバリデーションを行うプロパティを指定しています。
+これは、モデルのオブジェクトを保存するときにバリデーションを行うプロパティーを指定しています。
 
-上述の例では、 `Person` モデルの `name` プロパティを指定しています。
+上述の例では、 `Person` モデルの `name` プロパティーを指定しています。
 
 続けて、 `app/controller/people_controller.rb` の `create` メソッドを以下のように書き換えます。
 ```rb
@@ -51,27 +51,37 @@ end
 いつものように `rails s` で Web アプリを起動させたうえで `localhost:3000/people/add` にアクセスして、何も入力せずに Save ボタンを押しましょう。
 
 以下のような画像になっていれば成功です。
-![valid1](images/2021-09-14_14h50_45.png)
+![](images/2021-09-14_14h50_45.png)
 
 ボタンが `Create Person` から `Save` に変わっていますが、動作に問題はありません。
 
-どうしても気になる場合は `app/views/people/add.html.erb` の `<%= form.submit class:"btn btn-primary" %>` を `<%= form.submit "作成", class:"btn btn-primary" %>` に書き換えましょう。
+どうしても気になる場合は `app/views/people/add.html.erb` を書き換えましょう。
+
+以下の文を書き換えます。
+```rb
+<%= form.submit class:"btn btn-primary" %>
+```
+
+これで常時、 `作成` ボタンが表示されます。
+```rb
+<%= form.submit "作成", class:"btn btn-primary" %>
+```
 
 上述の例を用いて解説していきます。
 
 `Person.create` を実行すると、モデル内に記述された `validetes` の内容に基づいて、データベースにオブジェクトを保存するかを決定します。
 
-オブジェクトが保存されたか否かは `valid?` プロパティで取得できます。
+オブジェクトが保存されたか否かは `valid?` プロパティーで取得できます。
 
-`valid?` プロパティが `true` なら、オブジェクトを保存後、`people/index` に画面を遷移します。
+`valid?` プロパティーが `true` なら、オブジェクトを保存後、`people/index` に画面を遷移します。
 
 `false` なら、オブジェクトを保存せず、 `@msg` にエラーメッセージを表示させています。
 
 ## バリデーションヘルパー
 
-ActiveRecord には、モデル内で直接使える定義済みのバリデーションヘルパーが多数用意されています。
+Active Record には、モデル内で直接使える定義済みのバリデーションヘルパーが多数用意されています。
 
-その中からいくつかご紹介します。
+その中からいくつか紹介します。
 
 ### acceptance
 
@@ -95,7 +105,7 @@ View テンプレートで生成されたチェックボックスのオプショ
 
 2 つのテキストフィールドで受け取る内容が完全に一致する必要がある場合に使います。
 
-例えば、 `name` を確認したい場合はモデルのバリデーションに `confirmation` を設定したうえで、View テンプレートに `_confirmation` がついた項目を用意します。
+たとえば、 `name` を確認したい場合はモデルのバリデーションに `confirmation` を設定したうえで、View テンプレートに `_confirmation` がついた項目を用意します。
 
 ```rb
 class Person < ApplicationRecord
@@ -114,7 +124,7 @@ end
 
 ### length
 
-入力値の長さに基づいてバリデーションチェックを行うヘルパーです。
+入力値の長さに基づいて、バリデーションチェックを行うヘルパーです。
 
 ```rb
 class Person < ApplicationRecord
@@ -202,7 +212,7 @@ end
 
 ## バリデーションエラー
 
-ActiveRecord では、バリデーションが失敗するたびに、オブジェクトの `errors` コレクションにエラーメッセージが追加されます。
+Active Record では、バリデーションが失敗するたびに、オブジェクトの `errors` コレクションにエラーメッセージが追加されます。
 
 試しに直打ちのエラーメッセージではなく、 `errors` コレクションのエラーメッセージを表示させてみましょう。
 
@@ -211,7 +221,7 @@ ActiveRecord では、バリデーションが失敗するたびに、オブジ�
 def add
   @msg = "add new data."
   @person = Person.new
-  @errors = Array.new
+  @errors = Hash.new
 end
 
 def create
@@ -220,7 +230,7 @@ def create
     if person.valid? then
       redirect_to '/people/index'
     else
-      @errorMessages = person.errors.messages
+      @errorMessages = person.errors
       render 'add'
     end
   end
@@ -231,10 +241,8 @@ end
 ```html
 <h1 class="display-4 text-primary">People#add</h1>
 <p><%= @msg %></p>
-<% @errorMessages.each do |error| %>
-  <% error[1].each do |mes| %>
-    <p><%= mes %></p>
-  <% end %>
+<% @errorMessages.values.each do |error| %>
+  <p><%= error %></p>
 <% end %>
 <%= form_with model: @person, url: people_add_path do |form| %>
   <div class="form-group">
@@ -261,16 +269,14 @@ end
 `localhost:3000/people/add` で何も入力せずに Save ボタンを押しましょう。
 
 以下のような画面になれば成功です。
-![valid2](images/2021-09-14_15h51_34.png)
+![](images/2021-09-14_15h51_34.png)
 
-上述の `add.html.erb` では `<% error[1].each do |mes| %>` となっています。
-
-これは `errors.messages` に保存されるエラーメッセージが以下のような連想配列になっているからです。
+`errorMessages` に保存されるエラーメッセージは以下のような連想配列になっています。
 
 ```rb
 {
-  :name=>["Name が入力されていません"],
-  :age=>["Age が入力されていません", "数値ではありません"]
+  :name => ["Name が入力されていません"],
+  :age => ["Age が入力されていません", "数値ではありません"]
 }
 ```
 
@@ -292,7 +298,7 @@ end
 
 ## まとめ
 
-今回は ActiveRecord バリデーションを使って Rails 上でバリデーションチェックを行う方法を勉強しました。
+今回は Active Record バリデーションを使って Rails 上でバリデーションチェックを行う方法を勉強しました。
 
 次回は Rails のモデル連携（アソシエーション）について勉強します。
 
