@@ -1,14 +1,21 @@
-name: Deploy release
+# release ブランチを本番環境にデプロイ
+name: Release Deploy
 
 on:
-  push:
-    branches:
-      - release
+  # 手動実行時
+  workflow_dispatch:
+
+  # デプロイ前処理の実行後
+  workflow_run:
+    workflows:
+      - Release Pre-process
+    types: [completed]
 
 jobs:
-  build:
+
+  deploy:
     runs-on: ubuntu-latest
-    
+
     environment:
       name: Release
 

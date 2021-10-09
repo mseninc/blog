@@ -1,7 +1,9 @@
-name: Scheduled merge
+# 定期リリース
+name: Release Scheduled merge
 
 on:
   workflow_dispatch:
+
   schedule:
     # JST 月,水,金 11:45 (UTC のため -9h)
     - cron:  '45 2 * * 1,3,5'
@@ -10,12 +12,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    environment:
+      name: Release
+
     steps:
 
     - name: List pull requests
       uses: actions/github-script@v4
       with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+        github-token: ${{ secrets.CI_GITHUB_TOKEN }}
         script: |
           const { repo: { owner, repo } } = context;
           const query = `query listPulls($owner: String!, $name: String!) {
@@ -68,5 +73,6 @@ jobs:
             })
             console.log(`Merged #${number} (${url})`)
           } else {
-            console.log(`No pull request to be merged`)
+            // set failed when no pull request merged
+            core.setFailed(`No pull request to be merged`);
           }
