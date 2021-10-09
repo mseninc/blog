@@ -24,7 +24,7 @@ jobs:
         chmod +x .github/scripts/term-summary.sh
         OUTPUT=$(.github/scripts/term-summary.sh)
         PERIOD=$(echo "${OUTPUT}" | head -n 1)
-        SUMMARY=$(echo "${OUTPUT}" | tail -n +3 | awk '{printf $1":"$2";"}')
+        SUMMARY=$(echo "${OUTPUT}" | tail -n +2 | awk '{printf $1":"$2";"}')
         echo "::set-output name=period::$PERIOD"
         echo "::set-output name=summary::$SUMMARY"
 
@@ -34,7 +34,7 @@ jobs:
         chmod +x .github/scripts/term-summary.sh
         OUTPUT=$(.github/scripts/term-summary.sh $(date --date '-6 months' +%Y-%m-%d))
         PERIOD=$(echo "${OUTPUT}" | head -n 1)
-        SUMMARY=$(echo "${OUTPUT}" | tail -n +3 | awk '{printf $1":"$2";"}')
+        SUMMARY=$(echo "${OUTPUT}" | tail -n +2 | awk '{printf $1":"$2";"}')
         echo "::set-output name=period::$PERIOD"
         echo "::set-output name=summary::$SUMMARY"
 
