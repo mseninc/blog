@@ -32,7 +32,7 @@ jobs:
           echo "BRANCH_NAME: ${BRANCH_NAME} GITHUB_SHA: ${GITHUB_SHA}"
           git init -q
           git remote add origin https://${{secrets.CI_GITHUB_USER}}:${{secrets.CI_GITHUB_TOKEN}}@github.com/${{github.repository}}.git
-          git fetch --depth 2
+          git fetch --depth 5
           git config core.sparsecheckout true
           echo .gitignore >> .git/info/sparse-checkout
           echo .github >> .git/info/sparse-checkout
