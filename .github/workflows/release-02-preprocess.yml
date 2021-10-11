@@ -107,7 +107,7 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const { issue: { number: }, repo: { owner, repo } } = context
+            const { issue: { number }, repo: { owner, repo } } = context
             const commitHash = '${{ steps.commit.outputs.hash }}'
             const elapsed = '${{ steps.optimization.outputs.elapsed }}s'
             const result = '${{ steps.optimization.outputs.result }}'.trim()
