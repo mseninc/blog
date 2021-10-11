@@ -37,7 +37,7 @@ else
 ## 想定するインタフェースと実装クラス
 車両を表すインタフェースを `IVehicle` とし、実装クラスをそれぞれ `Car`, `Train` とします。
 
-![](images/csharp-list-polymorphism-1.png)
+![](images/csharp-list-polymorphism-1.png "インタフェースと実装クラスの関係")
 
 **インタフェースのポリモーフィズム** で `Car` または `Train` のインスタンスを `IVehicle` 型として扱うように、 `List<Car>` または `List<Train>` 型のリストを `List<IVehicle>` 型のリストのように扱うことを考えます。
 

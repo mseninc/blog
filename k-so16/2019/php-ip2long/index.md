@@ -7,7 +7,7 @@ tags: [PHP, Web]
 
 こんにちは。k-so16です。
 
-現在、社内のネットワークで利用されているIPアドレス[^ip]の情報を管理するツールを作成しています。そのツールを作成するにあたって、IPアドレスを10進ドット表記と、それを数値に変換したものをデータとして持っておくと、計算処理の際に便利ではないかということで、10進ドット表記から数値に変換する方法を考えてみました。
+現在、社内のネットワークで利用されているIPアドレス[^1]の情報を管理するツールを作成しています。そのツールを作成するにあたって、IPアドレスを10進ドット表記と、それを数値に変換したものをデータとして持っておくと、計算処理の際に便利ではないかということで、10進ドット表記から数値に変換する方法を考えてみました。
 
 本記事では、10進ドット表記から数値に変換する方法を紹介していきます。諸事情でIPアドレスから数値に変換しなければいけない方々の参考になればと思います。
 
@@ -60,7 +60,7 @@ array_reduce(explode(".", $ip), function($carry, $octet) {
 
 例として、 `192.168.1.1` を数値に変換します。図1は、上記の手法の挙動を図示したものです。
 
-![](images/php-ip2long-1.png)
+![](images/php-ip2long-1.png "図1. array_reduce() によるIPの数値化方法")
 
 #### Collectionによる実装 (Laravel版)
 [kenzauros](https://github.com/kenzauros)さんに、ナウでいかしたプログラマ風の実装として、Collectionを利用する方法についても教えてもらいました。
@@ -80,15 +80,15 @@ collect(explode(".", $ip))->map(function ($octet, $index) {
 
 `array_reduce()` と同様に `192.168.1.1` をCollectionを用いて数値に変換する挙動を図2に示します。
 
-![](images/php-ip2long-2.png)
+![](images/php-ip2long-2.png "図2. Collectionを用いたIPの数値化方法")
 
 
 ## 誰かライブラリ化してないのか
 頑張って10進ドット表記から数値に変換する方法を考えましたが...
 
-なんと、すでにPHPの標準ライブラリで [`ip2long()`](https://www.php.net/manual/ja/function.ip2long.php)[^ip2long]という関数が準備されていることを、[きよしん](/category/articles-kiyoshin-wrote/)さんに教えてもらいました... (トホホ)
+なんと、すでにPHPの標準ライブラリで [`ip2long()`](https://www.php.net/manual/ja/function.ip2long.php)[^2]という関数が準備されていることを、[きよしん](/category/articles-kiyoshin-wrote/)さんに教えてもらいました... (トホホ)
 
 わざわざPHPで実装したくない方は、 `ip2long()` を利用しましょう(笑)
 
-[^ip]: 本記事でのIPアドレスは、IPv4のみを扱うものとする
-[^ip2long]: IPアドレスとして不正確でも動作するので、ちゃんとバリデートしたい場合は避けたほうが無難 (詳細は[ドキュメント](http://publibn.boulder.ibm.com/doc_link/en_US/a_doc_lib/libs/commtrf2/inet_addr.htm)を参考のこと)
+[^1]: 本記事でのIPアドレスは、IPv4のみを扱うものとする
+[^2]: IPアドレスとして不正確でも動作するので、ちゃんとバリデートしたい場合は避けたほうが無難 (詳細は[ドキュメント](http://publibn.boulder.ibm.com/doc_link/en_US/a_doc_lib/libs/commtrf2/inet_addr.htm)を参考のこと)

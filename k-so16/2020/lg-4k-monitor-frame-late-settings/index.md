@@ -9,7 +9,7 @@ tags: [4K]
 
 普段、業務で LG の 32UD59-B のモニターを利用しているのですが、解像度を 4K に設定すると、フレームレートを 60Hz に設定できず、どうしたら解決するか悩んでいました。過去に [じんない](/category/articles-jinnai-wrote/) さんが執筆した 「 **[ThinkPad X1 Carbon (2017) から LG モニター 32UD59-B に 4K 60Hz で出力できない](/can-not-output-4k-60hz-with-32ud59/)** 」 という記事を参考に設定を行ったのですが、同じモニターを利用しているにも関わらず、なぜか解決しませんでした。
 
-![](images/lg-4k-monitor-frame-late-settings-1.png)
+![](images/lg-4k-monitor-frame-late-settings-1.png "リフレッシュレートの選択肢が 30Hz までしか表示されない")
 
 色々と検索した結果、ファームウェアやモニターのドライバーの問題ではなく、 **モニター自体の設定の問題** だということが明らかになりました。
 
@@ -32,16 +32,16 @@ tags: [4K]
 設定手順は以下の通りです。
 
 1. モニターの設定を開き、 **画質** &gt; **画像調整** を選択する
-![](images/lg-4k-monitor-frame-late-settings-2.jpg)
+    ![](images/lg-4k-monitor-frame-late-settings-2.jpg)
 1. **HDMI ULTRA HD Deep Color** を選択する
-![](images/lg-4k-monitor-frame-late-settings-3.jpg)
+    ![](images/lg-4k-monitor-frame-late-settings-3.jpg)
 1. HDMI ULTRA HD Deep Color を **オン** に設定する
-![](images/lg-4k-monitor-frame-late-settings-4.jpg)
+    ![](images/lg-4k-monitor-frame-late-settings-4.jpg)
 
 一度画面が暗転した後、再度画面が表示されたら、 Windows 側で画面のリフレッシュレートの設定から 60 Hz が選択できるようになります。
 
 
-![](images/lg-4k-monitor-frame-late-settings-5.png)
+![](images/lg-4k-monitor-frame-late-settings-5.png "変更後のリフレッシュレートの選択肢")
 
 モニターのフレームレートの設定をする上で、以下の Reddit のスレッドを参考にしました。
 

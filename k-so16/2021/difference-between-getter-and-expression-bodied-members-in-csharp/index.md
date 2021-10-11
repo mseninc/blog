@@ -78,7 +78,7 @@ public class ViewModel
 
 この `CurrentTime` プロパティをビューにバインドすることで、現在時刻を画面上が表示されることを想定していました。しかし、なぜかプログラムを起動した際に、時刻が画面上に表示されるまでに少し遅延がありました。
 
-![](images/difference-between-getter-and-expression-bodied-members-in-csharp-1.gif)
+![](images/difference-between-getter-and-expression-bodied-members-in-csharp-1.gif "時計の表示が遅延した実行例")
 
 原因が分からず、試しに以下のように `{ get; }` を用いて書き換えたところ、プログラムを起動すると即座に時刻が画面上に表示されました。
 
@@ -96,7 +96,7 @@ public class ViewModel
 }
 ```
 
-![](images/difference-between-getter-and-expression-bodied-members-in-csharp-2.gif)
+![](images/difference-between-getter-and-expression-bodied-members-in-csharp-2.gif "時計が遅延なく表示された実行例")
 
 ## `{ get; }` と `=>` の構文の違い
 
@@ -119,7 +119,7 @@ private T _X = new T();
 public T X { get { return _X; } }
 ```
 
-`{ get; }` によるプロパティの定義では、値を保持するための変数[^:backing-field] が **暗黙的に** 生成され、プロパティにアクセスされた際には、その変数が返されます。上記のコード例で言えば、 `_X` が暗黙的に生成される変数です。明示的に `_X` の参照先が変更されなければ、 **同じインスタンス** にアクセスされます。
+`{ get; }` によるプロパティの定義では、値を保持するための変数[^1] が **暗黙的に** 生成され、プロパティにアクセスされた際には、その変数が返されます。上記のコード例で言えば、 `_X` が暗黙的に生成される変数です。明示的に `_X` の参照先が変更されなければ、 **同じインスタンス** にアクセスされます。
 
 ### `=>` と等価な構文
 
@@ -154,7 +154,7 @@ public T X => _X ?? (_X = new T());
 
 `{ get; }` を用いることで、 XAML と ViewModel のコンストラクタ内で参照するインスタンスが **同一** となり、 XAML で参照される `CurrentTime.Value` が初期化され、実行時に時刻が正しく表示されました。
 
-![](images/difference-between-getter-and-expression-bodied-members-in-csharp-3.png)
+![](images/difference-between-getter-and-expression-bodied-members-in-csharp-3.png "`=>` と `{ get; }` の挙動の違いのイメージ")
 本記事を執筆する上で以下の記事を参考にしました。
 
 > - [c# 6.0 - What is the => assignment in C# in a property signature - Stack Overflow](https://stackoverflow.com/a/38999936)
@@ -169,4 +169,4 @@ public T X => _X ?? (_X = new T());
 
 以上、 k-so16 でした。 C# の世界は奥が深いですね(笑)
 
-[^:backing-field]: このような変数を **[backing fields](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/properties#properties-with-backing-fields)** と呼ぶようです。
+[^1]: このような変数を **[backing fields](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/properties#properties-with-backing-fields)** と呼ぶようです。

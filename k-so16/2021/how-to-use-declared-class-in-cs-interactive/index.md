@@ -20,15 +20,15 @@ Visual Studio には C# の式や文をインタプリタ上で実行できる *
 
 C# Interactive は与えられた C# の式や文を **インタプリタ上で実行** する機能です。 C# Interactive は Visual Studio の **表示** → **その他のウィンドウ** → **C# インタラクティブ** を選択すると起動します。
 
-![](images/how-to-use-declared-class-in-cs-interactive-1.png)
+![](images/how-to-use-declared-class-in-cs-interactive-1.png "C# Interactive の起動手順")
 
 C# Interactive に式を与えると、`Console.WriteLine()` などの出力メソッドを利用しなくても評価結果が出力されます。
 
-![](images/how-to-use-declared-class-in-cs-interactive-2.png)
+![](images/how-to-use-declared-class-in-cs-interactive-2.png "C# Interactive の実行例")
 
 C# Interactive でメソッドの実行結果の動作を確認する際には少し注意が必要です。メソッドの末尾にセミコロン (`;`) をうっかり付けてしまうと、文として評価され、 **C# Interactive 上に評価結果が表示されません。** C# Interactive では文も実行できますが、その際には出力したい評価式を `Console.WriteLine()` などの出力用メソッドの引数に渡す必要があります。
 
-![](images/how-to-use-declared-class-in-cs-interactive-3.png)
+![](images/how-to-use-declared-class-in-cs-interactive-3.png "文として評価されて出力されない例")
 
 ## C# Interactive で自作クラスを読み込む方法
 
@@ -37,11 +37,11 @@ C# Interactive でメソッドの実行結果の動作を確認する際には�
 1. ソリューションエクスプローラー上でプロジェクトを右クリック
 1. **プロジェクトでインタラクティブを初期化** をクリック
 
-![](images/how-to-use-declared-class-in-cs-interactive-4.png)
+![](images/how-to-use-declared-class-in-cs-interactive-4.png "C# インタラクティブにプロジェクトを読み込ませる手順")
 
 C# Interactive が起動したら、自作クラスのメソッドなどが利用できるようになっているはずです。以下は自作の Person クラスの `CalcBmi()` を C# Interactive で起動した例です。
 
-![](images/how-to-use-declared-class-in-cs-interactive-5.png)
+![](images/how-to-use-declared-class-in-cs-interactive-5.png "自作の Person クラスの `CalcBmi()` を C# Interactive で実行")
 
 
 ### 注意点

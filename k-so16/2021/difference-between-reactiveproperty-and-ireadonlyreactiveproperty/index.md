@@ -29,7 +29,7 @@ ReactiveProperty を利用して MVVM な WPF アプリケーションの開発�
 
 **`ReactiveProperty<T>`** はビューやモデルから、 **監視対象とするデータの値が直接変更される場合** に利用します。例えば、 WPF の `TextBox` の入力データを監視するような場合は、ビューから値が変更されることが考えられるので、 `ReactiveProperty<T>` を用いた監視が適切です。
 
-![](images/difference-between-reactiveproperty-and-ireadonlyreactiveproperty-1.png)
+![](images/difference-between-reactiveproperty-and-ireadonlyreactiveproperty-1.png "ReactiveProperty<T> の動作イメージ")
 
 `ReactiveProperty<T>` で値を変更するには `Value` プロパティを変更します。ビューやモデルから `Value` プロパティを書き換えることで監視対象のデータの値が書き換わり、変更が検知されます。
 
@@ -50,7 +50,7 @@ class ViewModel
 
 身長と体重から BMI を求めるように、 **あるデータに基づいて値が計算されるようなデータを監視** する場合、その値は **直接変更されるべきではない** ので、 **`ReadOnlyReactiveProperty<T>`** を利用します。 `ReactiveProperty<T>` で監視しているデータに基づいて値を自動計算させる場合、 `ReactiveProperty<T>` のインスタンスの　**`Select()`** メソッドで変換処理をしたのち、 **`ToReadOnlyReactiveProperty<T>()`** メソッドを起動します。
 
-![](images/difference-between-reactiveproperty-and-ireadonlyreactiveproperty-2.png)
+![](images/difference-between-reactiveproperty-and-ireadonlyreactiveproperty-2.png "ReadOnlyReactiveProperty<T> の動作イメージ")
 
 以下は `InputValue` の値の文字列を `ToLowerCase()` で小文字に変換して `OutputValue` で監視するコード例です。入力フォームの値の変更と同期して小文字に変換した文字列をラベルなどに出力するような場合に利用できます。
 
