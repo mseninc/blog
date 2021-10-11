@@ -15,6 +15,10 @@ on:
         description: 'Input commit depth to fetch'
         required: true
         default: '2'
+      issue_number:
+        description: 'Input PR #'
+        required: false
+        default: '2'
 
   # release ブランチへのプルリクエストが閉じられたときに実行
   # ※ PR にコメントするため PR 起点とする
@@ -103,10 +107,11 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const { issue: { number: issue_number }, repo: { owner, repo } } = context
+            const { issue: { number: }, repo: { owner, repo } } = context
             const commitHash = '${{ steps.commit.outputs.hash }}'
             const elapsed = '${{ steps.optimization.outputs.elapsed }}s'
             const result = '${{ steps.optimization.outputs.result }}'.trim()
+            const issue_number = number || '${{ github.event.inputs.issue_number }}'
             if (result) {
               const resultText = result
                 .split('\\n')
