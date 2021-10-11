@@ -73,7 +73,6 @@ jobs:
       - name: Commit & push
         id: commit
         run: |
-          git remote set-url origin https://me:${CI_GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add -u
