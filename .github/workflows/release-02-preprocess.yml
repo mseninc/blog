@@ -31,6 +31,7 @@ jobs:
       name: Release
       
     env:
+      GIT_BRANCH: release
       COMMIT_SHA: ${{ github.event.inputs.commit_sha || github.sha }}
 
     steps:
@@ -50,7 +51,7 @@ jobs:
           echo package-lock.json >> .git/info/sparse-checkout
           git -c core.quotepath=false diff ${COMMIT_SHA}^ ${COMMIT_SHA} --name-only >> .git/info/sparse-checkout
           cat .git/info/sparse-checkout
-          git checkout -q ${COMMIT_SHA}
+          git checkout -q ${GIT_BRANCH}
 
       # リリース日の設定
       - name: Set release date
@@ -86,8 +87,8 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add -u
-          git commit -m "Optimized images"
-          git push origin ${GITHUB_BASE_REF#refs/heads/}
+          git commit -m "Release pre-process"
+          git push origin ${GIT_BRANCH}
           COMMIT_HASH=$(git rev-parse HEAD)
           echo "::set-output name=hash::$COMMIT_HASH"
 
