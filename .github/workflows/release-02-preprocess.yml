@@ -11,6 +11,10 @@ on:
         description: 'Input SHA of the target commit'
         required: true
         default: ''
+      fetch_depth:
+        description: 'Input commit depth to fetch'
+        required: true
+        default: '2'
 
   # release ブランチへのプルリクエストが閉じられたときに実行
   # ※ PR にコメントするため PR 起点とする
@@ -33,6 +37,7 @@ jobs:
     env:
       GIT_BRANCH: release
       COMMIT_SHA: ${{ github.event.inputs.commit_sha || github.sha }}
+      FETCH_DEPTH: ${{ github.event.inputs.fetch_depth || '2' }}
 
     steps:
 
@@ -43,7 +48,7 @@ jobs:
           echo "COMMIT_SHA: ${COMMIT_SHA}"
           git init -q
           git remote add origin https://${{secrets.CI_GITHUB_USER}}:${{secrets.CI_GITHUB_TOKEN}}@github.com/${{github.repository}}.git
-          git fetch --depth 5
+          git fetch --depth ${FETCH_DEPTH}
           git config core.sparsecheckout true
           echo .gitignore >> .git/info/sparse-checkout
           echo .github >> .git/info/sparse-checkout
