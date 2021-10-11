@@ -4,6 +4,14 @@
 name: Release Pre-process
 
 on:
+  # 手動実行時
+  workflow_dispatch:
+    inputs:
+      commit_sha:
+        description: 'Input SHA of the target commit'
+        required: true
+        default: ''
+
   # release ブランチへのプルリクエストが閉じられたときに実行
   # ※ PR にコメントするため PR 起点とする
   # ※ 別のワークフローからマージする場合は Actions の GITHUB_TOKEN では後続のワークフローが実行されないため、別途発行した Personal Access Token で実行すること
@@ -17,10 +25,13 @@ jobs:
 
   process:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true
+    if: github.event.pull_request.merged == true || github.event.inputs.commit_sha
 
     environment:
       name: Release
+      
+    env:
+      COMMIT_SHA: ${{ github.event.inputs.commit_sha || github.sha }}
 
     steps:
 
@@ -28,8 +39,7 @@ jobs:
       # 直前のコミットとの差分ファイルと処理に必要なファイルのみを sparse-checkout
       - name: Checkout content
         run: |
-          BRANCH_NAME=${GITHUB_BASE_REF#refs/heads/}
-          echo "BRANCH_NAME: ${BRANCH_NAME} GITHUB_SHA: ${GITHUB_SHA}"
+          echo "COMMIT_SHA: ${COMMIT_SHA}"
           git init -q
           git remote add origin https://${{secrets.CI_GITHUB_USER}}:${{secrets.CI_GITHUB_TOKEN}}@github.com/${{github.repository}}.git
           git fetch --depth 5
@@ -38,9 +48,9 @@ jobs:
           echo .github >> .git/info/sparse-checkout
           echo package.json >> .git/info/sparse-checkout
           echo package-lock.json >> .git/info/sparse-checkout
-          git -c core.quotepath=false diff ${GITHUB_SHA}^ ${GITHUB_SHA} --name-only >> .git/info/sparse-checkout
+          git -c core.quotepath=false diff ${COMMIT_SHA}^ ${COMMIT_SHA} --name-only >> .git/info/sparse-checkout
           cat .git/info/sparse-checkout
-          git checkout -q ${BRANCH_NAME}
+          git checkout -q ${COMMIT_SHA}
 
       # リリース日の設定
       - name: Set release date
