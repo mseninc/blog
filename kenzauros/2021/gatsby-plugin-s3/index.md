@@ -1,6 +1,6 @@
 ---
 title: gatsby-plugin-s3 で S3 にアップロードする際に Access Denied に悩まされた件
-date: 
+date: 2021-10-13
 author: kenzauros
 tags: [Gatsby.js, S3, CloudFront]
 description: Gatsby プラグインで S3 にアップロードする際に Access Denied に悩まされました。今回は gatsby-plugin-s3 の導入と IAM の設定について紹介します。
