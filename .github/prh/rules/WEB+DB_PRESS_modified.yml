@@ -2874,10 +2874,10 @@ rules:
   - expected: WARファイル
     pattern:  /\bWARファイル\b/i
   - expected: Web
-  - expected: Web
     pattern:
       - ウェブ
       - ウェッブ
+      - /\bweb\b/
   - expected: Web API
     pattern:  /\bWebAPI\b|\bWEBAPI\b|\bWEB API\b/
   - expected: Web UI
