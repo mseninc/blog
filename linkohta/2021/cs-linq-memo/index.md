@@ -65,6 +65,8 @@ private static TSource TryGetLast<TSource>(this IEnumerable<TSource> source, out
 
 上述のコードの通り、 `IList` 型に変換可能でない限り、 `Last()` と `LastOrDefault()` はすべての要素を最後まで取得します。
 
+そのため、複数回呼び出すとパフォーマンスに影響を及ぼす恐れがあります。
+
 最後の要素を使いまわす時は `ToList()` で `List` 型の結果を取得しましょう。
 
 ## Count()
