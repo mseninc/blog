@@ -25,7 +25,7 @@ jobs:
           const { repo: { owner, repo } } = context;
           const query = `query listPulls($owner: String!, $name: String!) {
             repository(owner: $owner, name: $name) {
-              pullRequests(states: OPEN, first: 10, orderBy: {field: CREATED_AT, direction: ASC}, baseRefName: "release") {
+              pullRequests(states: OPEN, first: 10, orderBy: {field: CREATED_AT, direction: ASC}, baseRefName: "release", labels: "release") {
                 totalCount
                 nodes {
                   number
