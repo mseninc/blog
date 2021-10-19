@@ -111,7 +111,7 @@ http {
 
 `location` ディレクティブは `server` ディレクティブ内にしか書けませんので `"location" directive is not allowed here` というわけです。
 
-つまり、正しくは下記のように利用するように設計されているわけですね。
+つまり、正しくは下記のように設計されているわけですね。
 
 - `.platform/nginx/conf.d/*.conf` は別の `server` 設定などを記述したい場合に配置
 - `.platform/nginx/conf.d/elasticbeanstalk/*.conf` は `location` 設定や HTTP の設定を記述したいときに配置
