@@ -1,8 +1,8 @@
 ---
-title: "[Elastic Beanstalk] PHP 環境の Nginx 設定ファイルでハマった件"
+title: "[Elastic Beanstalk] PHP 環境の nginx 設定ファイルを正しく配置する"
 date: 
 author: kenzauros
-tags: [Elastic Beanstalk]
+tags: [Elastic Beanstalk, AWS, Laravel, PHP]
 description: Elastic Beanstalk の PHP 環境で nginx の conf ファイルを正しく配置する方法をご紹介します。
 ---
 
