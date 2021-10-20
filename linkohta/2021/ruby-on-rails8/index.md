@@ -199,7 +199,9 @@ end
 
 アソシエーションを設定することで、従属するモデルのインスタンスを実際に持っているかのように扱うことができます。
 
-`app/views/schools/show.html.erb` の例では `students` を、 `app/views/students/index.html.erb` の例では、 `person.id` を利用しています。
+`app/views/schools/show.html.erb` の例では `students` を利用しています。
+
+また、 `app/views/students/index.html.erb` の例では、 `person.id` を利用しています。
 
 `app/views/students/show.html.erb` を以下のように変更します。
 ```html
@@ -221,7 +223,7 @@ end
 </table>
 ```
 
-最後に `config/route.rb` に以下のコードが追加されているかを確認しましょう。
+最後に、 `config/route.rb` に以下のコードが追加されているかを確認しましょう。
 
 コードが追加されていなかったり、この通りになっていなければ追記、修正してください。
 ```rb
@@ -239,7 +241,7 @@ get 'schools/:id', to: 'schools#show'
 
 ![schools/index](images\2021-10-19_16h57_27.png)
 
-また、各画面の `Id` のリンク先が `show` 画面に繋がっているかも確認しましょう。
+また、各画面の `Id` のリンク先が `show` 画面につながっているかも確認しましょう。
 
 ![students/show](images\2021-10-20_17h06_21.png)
 
@@ -271,7 +273,7 @@ get 'schools/:id', to: 'schools#show'
 
 ### has_many :through
 
-多対多の関連付けをする場合に使われます。この関連付けは 2 つのモデルの間に第 3 のモデルが介在するのが特徴です。
+多対多の関連付けをする場合に使われます。この関連付けは 2 つのモデルの間に第 3 のモデルが介在しています。
 
 ### has_one :through
 
