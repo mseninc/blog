@@ -1,6 +1,6 @@
 ---
 title: WordPress の自社ブログを Gatsby.js で静的サイトに移行した話 - コンテンツ検討編
-date: 
+date: 2021-10-20
 author: kenzauros
 tags: [Gatsby.js, WordPress, GitHub]
 description: WordPress で運営していた自社ブログを Gatsby.js で静的サイトに移行しました。移行にあたりコンテンツや運用ルールを検討したのでその検討内容を紹介します。
