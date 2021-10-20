@@ -21,9 +21,9 @@ link です。
 
 Railsでは、アソシエーションとは 2 つの Active Record の Model どうしのつながりを指します。
 
-アソシエーションの勉強をするにあたって先にプログラムの下準備を済ませておきましょう。
+実際にプログラムを記述しながらアソシエーションの勉強をしていきたいと思います。
 
-### 下準備：Model とデータベースの用意
+### Model とデータベースの用意
 
 まずは、今回利用する Model と Controller を生成します。
 
@@ -88,7 +88,11 @@ end
 
 これでアソシエーションの設定は完了です。
 
-細かい説明は後程記述しますが、 `School` は複数の `Student` を持ち、 `Student` は特定の `School` に持たれつつ、特定の `Person` を持つという関係にあります。
+`has_many` は Model が従属させているモデルの配列を表します。 Model 名の複数形を設定することで Rails 内で自動的にどの Model かを認識してくれます。
+
+`has_one` は Model が従属させているモデルのインスタンスを表します。 Model 名を設定することで Rails 内で自動的にどの Model かを認識してくれます。
+
+`belong_to` はどの Model に従属しているかを表します。 `has_many`, `has_one` 共通です。
 
 ### Controller と View の記述
 
@@ -136,7 +140,7 @@ end
 
 続いて、 View を書き換えます。
 
-`app/views/school/index.html.erb` を以下のように変更します。
+`app/views/schools/index.html.erb` を以下のように変更します。
 ```html
 <h1 class="display-4 text-primary">Schools#index</h1>
 <p><%= @msg %></p>
@@ -153,7 +157,7 @@ end
 </table>
 ```
 
-`app/views/school/show.html.erb` を以下のように変更します。
+`app/views/schools/show.html.erb` を以下のように変更します。
 ```html
 <h1 class="display-4 text-primary">Schools#show</h1>
 <p><%= @msg %></p>
@@ -185,15 +189,19 @@ end
   </th>
   <% @data.each do |obj| %>
   <tr>
-    <td><%= obj.id %></td>
-    <td><%= obj.school_id %></td>
-    <td><%= obj.person.id %></td>
+    <td><a href="/students/<%= obj.id %>"><%= obj.id %></a></td>
+    <td><a href="/schools/<%= obj.school_id %>"><%= obj.school_id %></a></td>
+    <td><a href="/people/<%= obj.person.id %>"><%= obj.person.id %></a></td>
   </tr>
   <% end %>
 </table>
 ```
 
-`app/views/school/show.html.erb` を以下のように変更します。
+アソシエーションを設定することで、従属するモデルのインスタンスを実際に持っているかのように扱うことができます。
+
+`app/views/schools/show.html.erb` の例では `students` を、 `app/views/students/index.html.erb` の例では、 `person.id` を利用しています。
+
+`app/views/students/show.html.erb` を以下のように変更します。
 ```html
 <h1 class="display-4 text-primary">Students#show</h1>
 <p><%= @msg %></p>
@@ -225,9 +233,23 @@ get 'schools/:id', to: 'schools#show'
 
 これでソースコードの修正は完了です。
 
+`localhost:3000/students/index` と `localhost:3000/schools/index` にアクセスして、以下のような画面になっているか確認しましょう。
+
+![students/index](images\2021-10-20_17h05_05.png)
+
+![schools/index](images\2021-10-19_16h57_27.png)
+
+また、各画面の `Id` のリンク先が `show` 画面に繋がっているかも確認しましょう。
+
+![students/show](images\2021-10-20_17h06_21.png)
+
+![schools/show](images\2021-10-20_17h13_48.png)
+
 ## アソシエーションの種類
 
-以下は各アソシエーションの解説です。
+以下はアソシエーションの解説です。
+
+今回利用したアソシエーション以外にも多対多の関係を表すアソシエーションがあります。
 
 ### has_one
 
@@ -246,6 +268,18 @@ get 'schools/:id', to: 'schools#show'
 `has_one`, `has_many` ともに従属させられる側の Model に記述されます。
 
 上述の例では、 `has_one` 関係の場合は `People` 、 `has_many` 関係の場合は `Students` が該当しています。
+
+### has_many :through
+
+多対多の関連付けをする場合に使われます。この関連付けは 2 つのモデルの間に第 3 のモデルが介在するのが特徴です。
+
+### has_one :through
+
+1 対 1 の関連付けをする際に使われます。通常の `has_many` と異なるのは第 3 のモデルが介在する点です。
+
+### has_and_belongs_to_many
+
+多対多の関連付けをする場合に使われます。 `has_many :through` と異なり、第 3 のモデルが介在しません。
 
 ## 参考サイト
 
