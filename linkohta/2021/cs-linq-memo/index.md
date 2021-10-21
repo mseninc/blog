@@ -37,7 +37,7 @@ private static TSource TryGetLast<TSource>(this IEnumerable<TSource> source, out
         {
             found = true;
             return list[count - 1];
-            }
+        }
     }
     else
     {
@@ -144,7 +144,9 @@ LINQ はメソッドチェインを利用することで集合に対して複数
 
 ## 参考サイト
 
-- [dotnet/corefx at master](https://github.com/dotnet/corefx/tree/master)
+上述のコードは .NET Platform にて掲載されているものです。
+
+- [.NET Platform](https://github.com/dotnet)
 - [Enumerable クラス (System.Linq) | Microsoft Docs](https://docs.microsoft.com/ja-jp/dotnet/api/system.linq.enumerable?view=net-5.0)
 
 ## まとめ
