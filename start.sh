@@ -21,7 +21,12 @@ fi
 read -p "slug? [$SLUG_CANDIDATE]> " SLUG
 
 if [ -z "${SLUG}" ]; then
-  SLUG=$SLUG_CANDIDATE
+  if [ -n "${SLUG_CANDIDATE}" ]; then
+    SLUG=$SLUG_CANDIDATE
+  else
+    echo 'CANCELED'
+    exit 0
+  fi
 fi
 
 if [ "`echo $SLUG | grep '[^0-9a-zA-Z-]'`" ]; then
@@ -49,11 +54,11 @@ case $CONFIRM in
     mkdir -p ${IMAGES}
     cat <<EOF > "${MD}"
 ---
-title:
-date:
+title: 
+date: 
 author: ${AUTHOR}
 tags: []
-description:
+description: 
 ---
 
 EOF
