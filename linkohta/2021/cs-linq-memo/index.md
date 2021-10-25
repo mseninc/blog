@@ -1,6 +1,6 @@
 ---
 title: 【LINQ 備忘録】LINQ で気を付けること集
-date: 
+date: 2021-10-25
 author: linkohta
 tags: [LINQ, .NET, Windows]
 ---
