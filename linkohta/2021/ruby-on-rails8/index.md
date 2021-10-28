@@ -78,13 +78,7 @@ class School < ApplicationRecord
 end
 ```
 
-`Student` Model を以下のコードに変更します。
-```rb
-class Student < ApplicationRecord
-    belongs_to :school
-    has_one :person
-end
-```
+`Student` は変更しません。
 
 これでアソシエーションの設定は完了です。
 
@@ -255,9 +249,11 @@ get 'schools/:id', to: 'schools#show'
 
 ### has_one
 
-1 対 1 関係で従属させる側の Model に記述されます。
+1 対 1 関係の Model に記述されます。
 
-上述の例では、 `Students` が該当しています。
+上記の例では使っていませんが、 `Person` の `belongs_to` の代わりに、 `Student` に `has_one` を記述することで同じ関係にできます。
+
+これについては後程解説します。
 
 ### has_many
 
@@ -267,9 +263,13 @@ get 'schools/:id', to: 'schools#show'
 
 ### belongs_to
 
-`has_one`, `has_many` ともに従属させられる側の Model に記述されます。
+1 対 1 関係の Model に記述されます。
 
-上述の例では、 `has_one` 関係の場合は `People` 、 `has_many` 関係の場合は `Students` が該当しています。
+`has_one` との違いは外部キーをどちらの Model に置くかです。
+
+`has_one` は外部キーを記述した Model の外側に置きますが、 `belongs_to` は記述した Model に置きます。
+
+上述の例では、 `Person` が該当しています。
 
 ### has_many :through
 
