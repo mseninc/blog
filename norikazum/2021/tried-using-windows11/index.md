@@ -90,10 +90,103 @@ Windows 10 がリリースされたときは、Windows として最後のOSと�
     旧来のイメージ。
     ![](images/2021-10-30_08h48_21.jpg)
 
-![](images/)
-![](images/)
-![](images/)
-![](images/)
-![](images/)
-![](images/)
-![](images/)
+- マルチデスクトップにも対応しているようです。
+    ![](images/2021-10-30_21h42_01.jpg)
+    ![](images/2021-10-30_21h42_18.jpg)
+
+## これからも使える便利なショートカット
+新しくなったとはいえ、**ファイル名を指定して実行** は健在です。
+![](images/2021-10-30_21h20_10.jpg)
+Windowsキー + R でも起動できます。
+![](images/2021-10-30_21h22_00.jpg)
+
+これからも現役であろうショートカットを紹介します。
+※Windows 11 で動作することを確認しました。
+
+プログラム | コマンド
+-- | --
+アドレス帳 | wab
+アドレス帳インポートツール | wabmig
+イベントビューアー | eventvwr
+インターネットのプロパティー | inetcpl.cpl
+エクスプローラ | explorer
+外字エディター | eudcedit
+拡大鏡 | magnify
+ディスプレイ設定 | desk.cpl
+共有フォルダ | fsmgmt.msc
+クリップブック | clipbrd
+グループポリシー | gpedit.msc
+ゲームコントローラー | joy.cpl
+コマンドプロンプト | cmd
+コンソール | mmc
+コントロールパネル | control
+コンピューターの管理 | compmgmt.msc
+コンポーネントサービス | dcomcnfg
+サウンドとオーディオ デバイスのプロパティー | mmsys.cpl
+サービス | services.msc
+システム構成ユーティリティー | msconfig
+システムのプロパティー | sysdm.cpl
+証明書 | certmgr.msc
+スクリーンキーボード | osk
+セキュリティが強化された Windows ファイアウォール | wf.msc
+ダイヤラ | dialer
+タスクスケジューラ | taskschd.msc
+タスクマネージャ | taskmgr
+地域と言語のオプション | intl.cpl
+ディスク クリーンアップ | cleanmgr
+送付状エディター | fxscover
+ディスクの管理 | diskmgmt.msc
+デバイスマネージャ | devmgmt.msc
+電源オプションのプロパティー | powercfg.cpl
+電卓 | calc
+ネットワーク接続 | rasphone
+電話とモデムのオプション | telephon.cpl
+同期センター | mobsync
+ドライバーの検証ツールマネージャー | verifier
+ナレータ | narrator
+ネットワーク接続 | ncpa.cpl
+パフォーマンスモニター | perfmon
+日付と時刻のプロパティー | timedate.cpl
+ファイアウォール | firewall.cpl
+ファイル署名の確認 | sigverif
+フォント | fonts
+プログラムと機能 | appwiz.cpl
+ペイント | mspaint
+ポリシーの結果セット | rsop.msc
+音声ミキサー | sndvol
+マウスのプロパティー | main.cpl
+メモ帳 | notepad
+文字コード表 | charmap
+アクセシビリティ | utilman
+リモートデスクトップ接続 | mstsc
+レジストリー エディター | regedit
+ローカルセキュリティポリシー | secpol.msc
+ローカルユーザーとグループ | lusrmgr.msc
+ログオフ | logoff
+ワードパット | write
+Bluetooth ファイル転送ウィザード | fsquirt
+DirectX診断ツール | dxdiag
+ディスク Partition Manager | diskpart
+Iexpress Wizard(自己解凍書庫) | iexpress
+Internet Explorer | iexplore
+nslookup | nslookup
+SQLクライアント設定ユーティリティー | cliconfg
+Windows 悪意のあるソフトウェアの削除ツール | mrt
+Windows セキュリティとメンテナンス | wscui.cpl
+Windows バージョン情報 | winver
+Windows Management Infrastructure | wmimgmt.msc
+Windows Media Player | wmplayer
+Windows Script Hostの設定 | wscript
+Microsoft Excel | excel
+Microsoft PowerPoint | powerpnt
+Microsoft Word | winword
+
+## あとがき
+プライベートPCにはあまりソフトを多くインストールしていませんが、ざっと以下の動作(起動)に問題ないことを確認しました。
+
+- Chrome 95.0.4638.69
+- Google Drive
+- FortiClient 7.0.1.0083
+- ATOK Passport
+- ESET 15.0.16.0
+- Word / Excel / PowerPoint (ともにバージョン2019)
