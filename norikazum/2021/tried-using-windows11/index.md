@@ -2,8 +2,8 @@
 title: Windows 11 を使ってみた
 date: 
 author: norikazum
-tags: []
-description: 
+tags: [Windows 11]
+description: Windows 11 にアップデートした際のレビュー記事
 ---
 
 こんにちは。
