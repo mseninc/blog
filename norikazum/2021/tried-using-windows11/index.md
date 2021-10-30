@@ -190,3 +190,8 @@ Microsoft Word | winword
 - ATOK Passport
 - ESET 15.0.16.0
 - Word / Excel / PowerPoint (ともにバージョン2019)
+
+まだ少しだけしか触っていませんが、操作性はそれほど Windows 10 と変わらないような感じです。
+気になる点があればまた記事にしたいと思います。
+
+それでは次回の記事でお会いしましょう。
