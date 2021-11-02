@@ -27,9 +27,76 @@ Scaffold は工事現場で使う足場、土台の意味で、 Model の CRUD �
 
 この Scaffold を使って、簡単なメールアプリを実装してみましょう。
 
+## メールアプリのデータ構成
+
+今回のメールアプリを実装するに当たって、以下の表のようなデータ構成を考えます。
+
 ## メールアプリの実装
 
+### Model 生成
 
+では早速、 Scaffold を使ってそれぞれの Model を生成しましょう。
+
+ターミナルから以下のコードを入力します。
+
+```
+$ rails g scaffold MailDatum mail_text:text to_user:integer from_user:integer
+$ rails g scaffold User name:string`
+$ rails g scaffold UserOwnMail mail_datum_id:integer user_id:integer
+```
+
+生成が完了したら、以下のページにアクセスして、画像のような画面が表示されるのを確認しましょう。
+
+- `localhost:3000/users/`
+- `localhost:3000/mail_data/`
+- `localhost:3000/user_own_mails/` 
+
+![](images/2021-11-02_16h50_05.png)
+
+`New Model 名` のリンクをクリックすると以下の画像のような Create 画面に遷移します。
+
+![](images/2021-11-02_16h50_09.png)
+
+データを入力して、登録したデータが Index 画面に表示されるのも確認しましょう。
+
+![](images/2021-11-02_16h50_23.png)
+
+Scaffold で生成したこれらのコードを改造してメールアプリを実装していきます。
+
+### Model の関連付け
+
+Model 間の関連付けを行います。生成した Model を以下のコードに書き換えます。
+
+```rb:app/models/user.rb
+class User < ApplicationRecord
+    has_many :user_own_mails
+    has_many :mail_data, through: :user_own_mails
+end
+```
+
+```rb:app/models/mail_datum.rb
+class MailDatum < ApplicationRecord
+    has_many :user_own_mails
+    has_many :users, through: :user_own_mails
+end
+```
+
+```rb:app/models/user_own_mail.rb
+class UserOwnMail < ApplicationRecord
+    belongs_to :user
+    belongs_to :mail_datum
+end
+```
+
+今回、多対多関係を実現するために `has_many through` を使っています。
+
+`UserOwnMail` は `User` と `MailDatum` の中間 Model です。
+
+### Controller の改造
+
+### View の改造
+
+### 完成形
 
 ## まとめ
 
