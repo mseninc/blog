@@ -31,6 +31,19 @@ Scaffold は工事現場で使う足場、土台の意味で、 Model の CRUD �
 
 今回のメールアプリを実装するに当たって、以下の表のようなデータ構成を考えます。
 
+| MailDatum | UserOwnMail | User |
+| --- | --- | --- |
+| id:integer | id:integer | id:integer |
+| mail_text:text | mail_datum_id:integer | name:string |
+| to_user_id:integer | user_id:integer | |
+| from_user_id:integer | | |
+
+`MailDatum` はメール本文、送信元、送信先のデータです。
+
+`User` はユーザのデータです。
+
+`UserOwnMail` はどのメールをどのユーザが持っているかを表す `MailDatum` と `User` の中間 Model です。
+
 ## メールアプリの実装
 
 ### Model 生成
@@ -40,7 +53,7 @@ Scaffold は工事現場で使う足場、土台の意味で、 Model の CRUD �
 ターミナルから以下のコードを入力します。
 
 ```
-$ rails g scaffold MailDatum mail_text:text to_user:integer from_user:integer
+$ rails g scaffold MailDatum mail_text:text to_user_id:integer from_user_id:integer
 $ rails g scaffold User name:string`
 $ rails g scaffold UserOwnMail mail_datum_id:integer user_id:integer
 ```
@@ -88,9 +101,7 @@ class UserOwnMail < ApplicationRecord
 end
 ```
 
-今回、多対多関係を実現するために `has_many through` を使っています。
-
-`UserOwnMail` は `User` と `MailDatum` の中間 Model です。
+今回、多対多関係を実現するために `has_many :through` を使っています。
 
 ### Controller の改造
 
@@ -101,5 +112,7 @@ end
 ## まとめ
 
 今回は Scaffold を使って簡単な Web アプリを実装してみました。
+
+次回は Rails と React を組み合わせる方法を勉強します。
 
 それではまた、別の記事でお会いしましょう。
