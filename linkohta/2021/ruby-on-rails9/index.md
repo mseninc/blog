@@ -31,42 +31,35 @@ Scaffold は工事現場で使う足場、土台の意味で、 Model の CRUD �
 
 今回のメールアプリを実装するに当たって、以下の表のようなデータ構成を考えます。
 
-| MailDatum | UserOwnMail | User |
+| MailDatum | User |
 | --- | --- | --- |
-| id:integer | id:integer | id:integer |
-| mail_text:text | mail_datum_id:integer | name:string |
-| to_user_id:integer | user_id:integer | |
-| from_user_id:integer | | |
+| id:integer | id:integer |
+| from_user_id:integer | name:string |
+| to_user_id:integer | |
+| mail_subject:string | |
+| mail_text:text | |
 
-`MailDatum` はメール本文、送信元、送信先のデータです。
-
-`User` はユーザのデータです。
-
-`UserOwnMail` はどのメールをどのユーザが持っているかを表す `MailDatum` と `User` の中間 Model です。
+`MailDatum` はメール本文、送信元、送信先のデータ、 `User` はユーザのデータです。
 
 ## メールアプリの実装
 
 ### Model 生成
 
-では早速、 Scaffold を使ってそれぞれの Model を生成しましょう。
+`User` と ` MailDatum` Model を生成しましょう。
 
 ターミナルから以下のコードを入力します。
 
 ```
-$ rails g scaffold MailDatum mail_text:text to_user_id:integer from_user_id:integer
 $ rails g scaffold User name:string`
-$ rails g scaffold UserOwnMail mail_datum_id:integer user_id:integer
+$ rails g controller MailData show
+$ rails g model MailDatum from_user_id:integer to_user_id:integer mail_subject:string mail_text:text 
 ```
 
-生成が完了したら、以下のページにアクセスして、画像のような画面が表示されるのを確認しましょう。
-
-- `localhost:3000/users/`
-- `localhost:3000/mail_data/`
-- `localhost:3000/user_own_mails/` 
+生成が完了したら、 `localhost:3000/users/` にアクセスして、画像のような画面が表示されるのを確認しましょう。
 
 ![](images/2021-11-02_16h50_05.png)
 
-`New Model 名` のリンクをクリックすると以下の画像のような Create 画面に遷移します。
+`New User` のリンクをクリックすると以下の画像のような Create 画面に遷移します。
 
 ![](images/2021-11-02_16h50_09.png)
 
@@ -74,7 +67,7 @@ $ rails g scaffold UserOwnMail mail_datum_id:integer user_id:integer
 
 ![](images/2021-11-02_16h50_23.png)
 
-Scaffold で生成したこれらのコードを改造してメールアプリを実装していきます。
+この Scaffold で生成した `User` のコードを改造してメールアプリを実装していきます。
 
 ### Model の関連付け
 
@@ -82,30 +75,141 @@ Model 間の関連付けを行います。生成した Model を以下のコー�
 
 ```rb:app/models/user.rb
 class User < ApplicationRecord
-    has_many :user_own_mails
-    has_many :mail_data, through: :user_own_mails
+    has_many :mail_data
 end
 ```
 
 ```rb:app/models/mail_datum.rb
 class MailDatum < ApplicationRecord
-    has_many :user_own_mails
-    has_many :users, through: :user_own_mails
-end
-```
-
-```rb:app/models/user_own_mail.rb
-class UserOwnMail < ApplicationRecord
     belongs_to :user
-    belongs_to :mail_datum
 end
 ```
-
-今回、多対多関係を実現するために `has_many :through` を使っています。
 
 ### Controller の改造
 
+Controller を書き換えていきます。
+
+`app/controllers/users_controller.rb` に `new_mail` アクションと `mail_datum_params` メソッドを追加します。
+
+`mail_datum_params` メソッドは `private` より下の位置に追記します。
+
+```rb:app/controllers/users_controller.rb
+def new_mail
+  @mail_datum = MailDatum.new
+  @mail_datum.from_user_id = params[:id]
+end
+private
+def mail_datum_params
+  params.require(:mail_datum).permit(:user_id, :from_user_id, :mail_subject, :mail_text)
+end
+```
+
+`app/controllers/mail_data_controller.rb` を以下のように書き換えます。
+
+```rb:app/controllers/mail_data_controller.rb
+class MailDataController < ApplicationController
+  before_action :set_mail_datum, only: %i[ show edit update destroy ]
+
+  def show
+  end
+
+  private
+  def set_mail_datum
+    @mail_datum = MailDatum.find(params[:id])
+  end
+end
+```
+
+`before_action` はアクションの前に呼び出すメソッドを指定するものです。
+
+上述のコードではアクションの前に `set_mail_datum` を呼び出して、 `@mail_datum` の中身を代入しています。
+
 ### View の改造
+
+View の中身を書き換えていきます。
+
+`app/views/users/new_mail.html.erb` を以下のように書き換えます。
+
+```html:app/views/users/new_mail.html.erb
+<h1>New Mail</h1>
+
+<%= form_with(model: @mail_datum, url: :user) do |form| %>
+  <div class="field">
+    <%= form.label :from_user_id %>
+    <%= form.number_field :from_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label 'To user' %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mail_subject %>
+    <%= form.text_field :mail_subject %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mail_text %>
+    <%= form.text_area :mail_text %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', mail_data_path %>
+```
+
+`app/views/users/show.html.erb` を以下のように書き換えます。
+
+```html:app/views/users/show.html.erb
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <% @user.mail_data.each do |mail| %>
+    <p><%= mail.id %>: <%= link_to(mail.mail_subject, "#{mail_data_path}/#{mail.id}") %></p>
+  <% end %>
+</p>
+
+<%= link_to 'Mailing', "/users/#{@user.id}/new_mail" %> |
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
+```
+
+`app/views/mail_data/show.html.erb` を以下のように書き換えます。
+
+```html:html:app/views/mail_data/show.html.erb
+<p>
+  <strong>To user id:</strong>
+  <%= @mail_datum.user_id %>
+</p>
+
+<p>
+  <strong>From user id:</strong>
+  <%= @mail_datum.from_user_id %>
+</p>
+
+<p>
+  <strong>Mail subject:</strong>
+  <%= @mail_datum.mail_subject %>
+</p>
+
+<p>
+  <strong>Mail text:</strong>
+  <%= @mail_datum.mail_text %>
+</p>
+
+<%= link_to('Back', "#{users_path}/#{@mail_datum.user_id}") %>
+```
+
+これでコードの書き換えは完了です。
 
 ### 完成形
 
