@@ -99,6 +99,9 @@ Windows 10 がリリースされたときは、Windows として最後のOSと�
     ![](images/2021-10-30_21h42_01.jpg)
     ![](images/2021-10-30_21h42_18.jpg)
 
+- 右クリックメニューはこんな感じになっていました。
+    ![](images/2021-11-02_15h24_48.jpg)
+
 ## これからも使える便利なファイル名を指定して実行
 
 新しくなったとはいえ、**ファイル名を指定して実行** は健在です。
@@ -198,6 +201,8 @@ Microsoft Word | winword
 - ATOK Passport
 - ESET 15.0.16.0
 - Word / Excel / PowerPoint (ともにバージョン2019)
+- CyberLink PowerDirector 14 14.0.1931.0
+- PlayMemories Home 6.0.00.12211
 
 まだ少しだけしか触っていませんが、操作性はそれほど Windows 10 と変わらないような感じです。
 気になる点があればまた記事にしたいと思います。
