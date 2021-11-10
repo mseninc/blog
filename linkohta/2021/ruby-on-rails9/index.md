@@ -21,7 +21,7 @@ link です。
 
 Scaffold は工事現場で使う足場、土台の意味で、 Model の CRUD を自動で生成してくれる Rails の機能です。
 
-コンソールで `rails g scaffold モデル名 カラム 1 : 型 カラム 2 : 型...` と入力するだけで CRUD を実装した Controller, View, Model のすべてを自動で生成してくれます。
+コンソールで `rails g scaffold モデル名 カラム 1 : 型 カラム 2 : 型...` と入力します。すると、 CRUD を実装した Controller, View, Model のすべてを自動で生成してくれます。
 
 ただし、自動生成されるのは CRUD だけなので Search(検索) などの別機能は自分で実装する必要があります。
 
@@ -29,17 +29,17 @@ Scaffold は工事現場で使う足場、土台の意味で、 Model の CRUD �
 
 ## メールアプリのデータ構成
 
-今回のメールアプリを実装するに当たって、以下の表のようなデータ構成を考えます。
+今回のメールアプリを実装するにあたって、以下の表のようなデータ構成を考えます。
 
 | MailDatum | User |
-| --- | --- | --- |
+| --- | --- |
 | id:integer | id:integer |
 | from_user_id:integer | name:string |
 | to_user_id:integer | |
 | mail_subject:string | |
 | mail_text:text | |
 
-`MailDatum` はメール本文、送信元、送信先のデータ、 `User` はユーザのデータです。
+`MailDatum` はメール本文、送信元、送信先のデータ、 `User` はユーザーのデータです。
 
 ## メールアプリの実装
 
@@ -211,7 +211,51 @@ View の中身を書き換えていきます。
 
 これでコードの書き換えは完了です。
 
+最後に、`users#new_mail` と `users#show` のルーティングを設定します。
+
+```rb:config/routes.rb
+get 'users/:id/new_mail', to: 'users#new_mail'
+post 'users/:id', to: 'users#show'
+```
+
+ `seeds.rb` にテスト用のレコードを追加して、 `db:migrate` と `db:seed` を実行しましょう。
+
+```rb:db/seeds.rb
+User.create(name: "Ichiro")
+User.create(name: "Jiro")
+```
+
 ### 完成形
+
+`localhost:3000/users` にアクセスして、以下の画像のような画面が出ることを確認します。
+
+![](images/2021-11-10_15h17_23.png)
+
+試しに、 `Ichiro` の `Show` リンクを押して、詳細を見てみます。
+
+![](images/2021-11-10_15h17_30.png)
+
+`Mailing` というリンクがあるを確認したら、クリックしてみましょう。
+
+すると、 `localhost:3000/users/new_mail` に移動します。
+
+`To User` を `Jiro` の `Id` である 2 にして `Create Mail datum` を押します。
+
+ボタンの文字列が気になる場合、 `new_mail.html.erb` の `<%= form.submit %>` を `<%= form.submit("送信") %>` に変えましょう。
+
+`Create Mail datum` が `送信` に置き換わります。
+
+`Ichiro` の `Show` 画面に戻るので、今度は `Jiro` の `Show` 画面に移動します。
+
+![](images/2021-11-10_15h17_44.png)
+
+`Ichiro` から送られたメールが届いているのがわかります。
+
+![](images/2021-11-10_15h20_36.png)
+
+リンクをクリックすると、 `MailData` の `Show` 画面に移動します。
+
+![](images/2021-11-10_15h20_48.png)
 
 ## まとめ
 
