@@ -85,7 +85,7 @@ $ ./start.sh
 1) norikazum           3) kenzauros          5) kosshii            7) k-so16             9) kohei-iwamoto-wa
 2) kiyoshin            4) jinna-i            6) hiroki-Fukumoto    8) junya-gera        10) linkohta
 name? > 3
-slug? > my-first-post
+slug? [my-first-post]> 👈ブランチ名から取得したものをスラグ候補として提案。変更する場合は任意のスラグを入力、問題なければ Enter
 -----
 You are "kenzauros"
 Will make
@@ -93,6 +93,7 @@ Will make
   "kenzauros/2021/my-first-post/images"
   "kenzauros/2021/my-first-post/index.md"
 OK? [y/N] > y
+Open with code? [y/N] > y 👈作成した markdown ファイルを VS Code で開くかどうか
 ```
 
 ### 文章校正 (textlint)
@@ -159,6 +160,10 @@ GitHub アカウント名/
         その他の画像ファイル 👈 記事中の画像
       index.md 👈 記事本文
 ```
+
+### スラグ
+
+スラグに使用可能な文字 : アルファベット・数字・ - 左記以外の含まれていたら `./start.sh` でエラーが発生します
 
 ### ブランチ
 
