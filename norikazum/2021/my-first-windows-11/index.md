@@ -1,6 +1,6 @@
 ---
 title: Windows 11 を使ってみた
-date: 
+date: 2021-11-12
 author: norikazum
 tags: [Windows 11]
 description: Windows 11 にアップデートした際のレビュー記事
