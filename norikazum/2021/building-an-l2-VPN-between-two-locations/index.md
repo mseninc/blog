@@ -78,7 +78,7 @@ OCN から提供されている情報でインターネットに接続する設�
     - 事前共有鍵 : yamaha
     - local nameおよびremote name : l2tpv3
 
-### 不定IP側 YAMAHA RTX830 (図中 RT2)
+### 不定IP側(イニシエーター側) YAMAHA RTX830 (図中 RT2)
 
 **ポイント**
 - グローバルIPアドレス : 不定
@@ -97,7 +97,6 @@ OCN から提供されている情報でインターネットに接続する設�
 # main:  RTX830 ver=00 serial=xxx MAC-Address=ac:44:f2:xx:xx:xx MAC-Address=ac:44:f2:xx:xx:xx
 # Reporting Date: Oct 25 12:41:46 2021
 console character ja.utf8
-ip route default gateway 192.168.1.1
 bridge member bridge1 lan1 tunnel1
 ip bridge1 address 192.168.100.254/24
 vlan lan1/1 802.1q vid=10 name=VLAN10
@@ -139,16 +138,14 @@ nat descriptor masquerade static 1 2 192.168.100.254 esp
 nat descriptor masquerade static 1 3 192.168.100.254 udp 4500
 ipsec auto refresh on
 ipsec transport 1 101 udp 1701
+syslog notice on
 syslog debug on
 telnetd host lan
-dhcp service server
-dhcp server rfc2131 compliant except remain-silent
-dhcp scope 1 192.168.100.2-192.168.100.191/24
 l2tp service on l2tpv3
 statistics traffic on
 ```
 
-### 固定IP側 YAMAHA RTX830 (図中 RT1)
+### 固定IP側(センター側) YAMAHA RTX830 (図中 RT1)
 
 - グローバルIPアドレス : 10.10.10.138
 - LAN側IPアドレス : 192.168.100.1/24
@@ -182,11 +179,10 @@ tunnel select 1
   ipsec ike keepalive log 1 on
   ipsec ike keepalive use 1 on
   ipsec ike local address 1 192.168.100.1
-  ipsec ike local name 1 l2tpv3
+  ipsec ike remote name 1 l2tpv3
   ipsec ike nat-traversal 1 on
   ipsec ike pre-shared-key 1 text yamaha
   ipsec ike remote address 1 any
-  ipsec ike remote name 1 l2tpv3
   ipsec ike log 1 key-info message-info payload-info
  l2tp always-on on
  l2tp hostname RT1
@@ -211,8 +207,6 @@ ipsec transport 1 101 udp 1701
 syslog notice on
 syslog debug on
 telnetd host lan
-dhcp server rfc2131 compliant except remain-silent
-dhcp scope 1 192.168.100.2-192.168.100.191/24
 l2tp service on l2tpv3
 statistics traffic on
 ```
