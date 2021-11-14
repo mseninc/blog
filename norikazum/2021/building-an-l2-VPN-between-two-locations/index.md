@@ -30,13 +30,11 @@ IPsecには **メインモード** と **アグレッシブモード** の 2つ�
 
 途中経路上で **必要通信(UDP/500, ESP, UDP/4500)が許可されていることが前提** になります。
 
-**NAPTは不要** です。
-
 **VLANは 10, 20, 30** と3つ設定する例とします。
 
 イメージは以下のようになります。
 
-![](images/2021-11-14_11h01_32.jpg)
+![](images/2021-11-14_11h24_28.jpg)
 
 それでは、各機器の設定を紹介します。
 
@@ -106,7 +104,7 @@ vlan lan1/1 802.1q vid=10 name=VLAN10
 vlan lan1/2 802.1q vid=20 name=VLAN20
 vlan lan1/3 802.1q vid=30 name=VLAN30
 ip lan1/3 address 192.168.254.253/24
-ip lan2 address 192.168.1.99/24
+ip lan2 address dhcp
 ip lan2 nat descriptor 1
 tunnel select 1
  tunnel encapsulation l2tpv3
@@ -146,7 +144,6 @@ telnetd host lan
 dhcp service server
 dhcp server rfc2131 compliant except remain-silent
 dhcp scope 1 192.168.100.2-192.168.100.191/24
-dns server 192.168.1.1
 l2tp service on l2tpv3
 statistics traffic on
 ```
