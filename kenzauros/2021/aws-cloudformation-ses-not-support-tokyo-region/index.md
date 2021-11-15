@@ -1,6 +1,6 @@
 ---
 title: "AWS CloudFormation で AWS::SES のリソースは東京リージョンで（まだ）使えないという話"
-date: 
+date: 2021-11-15
 author: kenzauros
 tags: [CloudFormation, AWS, Amazon SES]
 ---
