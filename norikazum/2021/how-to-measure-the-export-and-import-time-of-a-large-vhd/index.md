@@ -1,6 +1,6 @@
 ---
 title: "[Hyper-V] 容量の大きいVHDXのエクスポート・インポート時間を計測する"
-date: 
+date: 2021-11-22
 author: norikazum
 tags: [仮想化技術,Hyper-V]
 ---
