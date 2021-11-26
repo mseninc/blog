@@ -1,6 +1,6 @@
 ---
 title: 2拠点間でのL2TPv3/IPsecを用いたL2VPNの構築
-date: 
+date: 2021-11-26
 author: norikazum
 tags: [VPN,YAMAHA,ネットワーク]
 description: 2つのヤマハルーター間でL2TPv3/IPsecを用いたL2VPNを構築します。
