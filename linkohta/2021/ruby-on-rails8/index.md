@@ -1,6 +1,6 @@
 ---
 title: 【2021年から Ruby on Rails をはじめる人向け】 Ruby on Rails 6 入門 Part 8 ～ Rails で Model 連携（アソシエーション）を行う方法～
-date: 
+date: 2021-12-01
 author: linkohta
 tags: [Ruby on Rails, Web]
 ---
