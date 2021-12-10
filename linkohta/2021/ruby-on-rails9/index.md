@@ -31,15 +31,25 @@ Scaffold は工事現場で使う足場、土台の意味で、 Model の CRUD �
 
 今回のメールアプリを実装するにあたって、以下の表のようなデータ構成を考えます。
 
-| MailDatum | User |
-| --- | --- |
-| id:integer | id:integer |
-| from_user_id:integer | name:string |
-| to_user_id:integer | |
-| mail_subject:string | |
-| mail_text:text | |
-
 `MailDatum` はメール本文、送信元、送信先のデータ、 `User` はユーザーのデータです。
+
+### MailDatum
+
+| カラム名 | 型 |
+| --- | --- |
+| id | integer |
+| from_user_id | integer |
+| to_user_id | integer |
+| mail_subject | string |
+| mail_text | text |
+
+### User
+
+| カラム名 | 型 |
+| --- | --- |
+| id | integer |
+| name | string |
+
 
 ## メールアプリの実装
 
