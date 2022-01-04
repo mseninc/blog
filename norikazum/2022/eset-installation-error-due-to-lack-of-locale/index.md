@@ -8,7 +8,9 @@ description:
 
 こんにちは。
 
-先日、**Red Hat Enterprise Linux 8.5 を 最小構成でインストール** し、**ESET File Security 8.1 をインストールしたところ、USロケールが不足しているとエラー** になったので対処の流れを記事にしました。
+先日、**Red Hat Enterprise Linux 8.5 を 最小構成でインストール** し、**ESET File Security 8.1 をインストール** しました。
+
+その際、**USロケールが不足しているとエラー** になったので、その概要と対処について記事にします。
 
 ## 環境
 - Red Hat Enterprise Linux 8.5
