@@ -1,5 +1,5 @@
 ---
-title: ESET 8.1 のインストールにUSロケールが必要
+title: ESET Server Security 8.1 のインストールにUSロケールが必要
 date: 
 author: norikazum
 tags: [Linux,ESET]
@@ -8,17 +8,17 @@ description:
 
 こんにちは。
 
-先日、**Red Hat Enterprise Linux 8.5 を 最小構成でインストール** し、**ESET File Security 8.1 をインストール** しました。
+先日、**Red Hat Enterprise Linux 8.5 を 最小構成でインストール** し、**ESET Server Security 8.1 をインストール** しました。
 
 その際、**USロケールが不足しているとエラー** になったので、その概要と対処について記事にします。
 
 ## 環境
 - Red Hat Enterprise Linux 8.5
-- ESET File Security 8.1.813.0
+- ESET Server Security 8.1.813.0
 
 ## エラー内容
 
-- インストール次に以下のエラーが発生
+- インストール時に以下のエラーが発生
     ```bash
     ESET Server Security Error: en_US.UTF-8 locale is not present, please install it.
     ```
