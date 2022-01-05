@@ -30,13 +30,13 @@ description:
 ## エラー原因の特定
 - インストールされている **langpack の確認**
     ```bash
-    [root@cmc-hp ~]# rpm -qa | grep langpack
+    # rpm -qa | grep langpack
     glibc-langpack-ja-2.28-164.el8.x86_64
     langpacks-ja-1.0-12.el8.noarch
     ```
     
     ```
-    [root@cmc-hp ~]# localectl list-locales
+    # localectl list-locales
     C.utf8
     ja_JP.eucjp
     ja_JP.utf8
@@ -46,7 +46,7 @@ description:
 ## 対処
 - en langpacks をインストールする
     ```bash
-    [root@cmc-hp ~]# dnf install langpacks-en
+    # dnf install langpacks-en
     サブスクリプション管理リポジトリーを更新しています。
     メタデータの期限切れの最終確認: 3:39:16 時間前の 2021年12月27日 22時57分38秒 に実施しました。
     依存関係が解決しました。
@@ -92,7 +92,7 @@ description:
 ## 確認
 - en langpacks がインストールされていることを確認
     ```bash
-        [root@cmc-hp ~]# localectl list-locales
+    # localectl list-locales
     C.utf8
     en_AG
     en_AU
