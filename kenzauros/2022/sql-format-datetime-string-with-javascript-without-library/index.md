@@ -1,6 +1,6 @@
 ---
 title: 生の JavaScript で SQL 形式の日時文字列を取得する
-date: 
+date: 2022-01-07
 author: kenzauros
 tags: ["JavaScript", "Node.js"]
 description: 生の JavaScript で 日時を SQL 形式にフォーマットする方法を検討しました。
