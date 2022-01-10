@@ -1,5 +1,5 @@
 ---
-title: ESET Server Security 8.1 のインストールにUSロケールが必要
+title: ESET Server Security 8.1 に必要なUSロケールのインストール方法について
 date: 
 author: norikazum
 tags: [Linux,ESET]
