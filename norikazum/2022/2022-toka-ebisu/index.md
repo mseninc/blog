@@ -1,6 +1,6 @@
 ---
 title: 2022年も今宮十日戎にいってきました
-date: 
+date: 2022-01-12
 author: norikazum
 tags: [〇〇奮闘記]
 ---
