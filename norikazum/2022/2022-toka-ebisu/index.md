@@ -2,7 +2,7 @@
 title: 2022年も今宮十日戎にいってきました
 date: 
 author: norikazum
-tags: [その他]
+tags: [〇〇奮闘記]
 ---
 
 新年あけましておめでとうございます。
