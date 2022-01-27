@@ -19,9 +19,9 @@ RHSA は以下のように定義されています。
 [RHSA、RHBA、および RHEA アドバイザリーの説明 - Red Hat Customer Portal](https://access.redhat.com/ja/articles/2280941)
 
 ## 環境・前提
-- Red Hat Enterprise Linux release 8 ※恐らくRedhat系ならいけると思います
+- Red Hat Enterprise Linux release 8 ※おそらくRed Hat 系ならいけると思います
 - スクリプトを実行するサーバー自身をチェックする
-- スクリプトを実行するサーバーで `sendmail` コマンドでメールが送信できること
+- スクリプトを実行するサーバーは `sendmail` コマンドでメールが送信できること
 
 ## コマンド説明
 - 動作しているシステムで該当するセキュリティアドバイザリーをチェックする
