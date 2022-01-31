@@ -32,7 +32,7 @@ description: 今回は React で AWS Cognito を認証基盤として使うた�
 
 Amplify と組み合わせて使う前提のドキュメントが多いこと、 Amplify と組み合わせて「やってみた」系の記事が多いため、 Amplify ありきなのかと思ってしまいがちです。
 
-また、ログインの UI に [@aws-amplify/ui-react](https://www.npmjs.com/package/@aws-amplify/ui-react) を使っている例も多く、いざ別の UI フレームワークで構築するとなったときに「？？？」となりがちです。そのため本記事では @aws-amplify/ui-react は使いません。
+また、ログインの UI に [@aws-amplify/ui-react](https://www.npmjs.com/package/@aws-amplify/ui-react) を使っている例も多く、いざ別の UI フレームワークで構築するとなったときにつまづきがちです。そのため本記事では @aws-amplify/ui-react は使いません。
 
 ただし、**今回は npm パッケージの aws-amplify に含まれる `Auth` 部分を使います**。このライブラリーは Amplify と関係なく、認証用のライブラリーとして単純に便利なためです。
 
