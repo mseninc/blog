@@ -51,7 +51,7 @@ tmpfs            96M     0   96M   0% /run/user/1000
 
 [ec2-user@jinna-i ~]$ lsblk
 NAME          MAJ:MIN RM SIZE RO TYPE MOUNTPOINT
-nvme0n1       259:0    0   8G  0 disk　★20GBになった
+nvme0n1       259:0    0   8G  0 disk
 ├ nvme0n1p1   259:1    0   8G  0 part /
 └ nvme0n1p128 259:2    0   1M  0 part
 ```
@@ -73,7 +73,8 @@ AWS のコンソールから拡張対象のボリュームを右クリックし�
 
 ![ボリュームサイズの変更3](images/005.png)
 
-ボリュームの状態を確認すると `optimizing (○○%)` となっていますので、完了するまで待ちます。
+ボリュームの状態を確認すると `optimizing (○○%)` となっていますので、完了するまで待ちます。  
+※ 今回の場合は東京リージョンでしたので数分で完了しましたが、お使いの環境によっては時間がかかる場合があります。
 
 ![ボリュームサイズの変更4](images/006.png)
 
@@ -89,7 +90,7 @@ AWS のコンソールから拡張対象のボリュームを右クリックし�
 ```
 [ec2-user@jinna-i ~]$ lsblk
 NAME          MAJ:MIN RM SIZE RO TYPE MOUNTPOINT
-nvme0n1       259:0    0  20G  0 disk
+nvme0n1       259:0    0  20G  0 disk 　★20GBになった
 ├ nvme0n1p1   259:1    0   8G  0 part /
 └ nvme0n1p128 259:2    0   1M  0 part
 ```
