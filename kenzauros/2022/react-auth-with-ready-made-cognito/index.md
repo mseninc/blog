@@ -1,9 +1,9 @@
 ---
-title: React でなるべく Amplify に依存せず Cognito 認証を使う
+title: Amplify を使わず React で AWS Cognito 認証を使う
 date: 
 author: kenzauros
 tags: [React, Cognito, AWS, Node.js]
-description: 
+description: 今回は React で AWS Cognito を認証基盤として使うための最小限の実装を紹介します。 Amplify フレームワークを使わないのでピュアな認証部分の処理が確認できると思います。
 ---
 
 ## 前提
@@ -19,7 +19,7 @@ description:
 
 対象とする読者は下記のとおりです。
 
-- React を使う方
+- React, React Hooks がある程度使える方
 - Congino のユーザープールは設定できる方
 - Amplify のプラットフォームを使いたいわけではない方
 - 結局 React で Cognito 使うのに最低限なにが必要かわからない私のような方
@@ -80,12 +80,19 @@ Cognito のユーザープールは、すでに存在するものを利用しま
 
 ## 実践
 
+### リポジトリ
+
+今回のプロジェクトは以下のリポジトリに置いてありますので参考にしてください。
+
+- [kenzauros/react-auth-with-cognito](https://github.com/kenzauros/react-auth-with-cognito)
+
 ### プロジェクト作成
 
 今回は create-react-app で新しいアプリを作ります。
 
 ```sh
 npx create-react-app my_app --template typescript
+cd my_app
 ```
 
 ここでは TypeScript テンプレートを指定していますが、 JS の場合は template オプションを省略してください。
@@ -168,6 +175,10 @@ const Auth = {
 
 export default Auth;
 ```
+
+この設定オブジェクトは下記の公式ページを参照してください。
+
+- [Authentication - Create or re-use existing backend - JavaScript - AWS Amplify Docs](https://docs.amplify.aws/lib/auth/start/q/platform/js/#re-use-existing-authentication-resource)
 
 ここでは認証情報の永続化に *Cookie* を使うようにしています。 Amplify モジュールのデフォルトでは localStorage が使われるようです。
 
