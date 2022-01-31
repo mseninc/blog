@@ -30,11 +30,11 @@ description: 今回は React で AWS Cognito を認証基盤として使うた�
 
 というのも、 **React (というより Node.js) から Cognito を使う上では、アプリのプラットフォームとしての Amplify は必要でない** からです。
 
-Amplify と組み合わせて使う前提のドキュメントが多いこと、 Amplify と組み合わせて「やってみた」系の記事が多くいので、 Amplify ありきなのかと思ってしまいがちです。
+Amplify と組み合わせて使う前提のドキュメントが多いこと、 Amplify と組み合わせて「やってみた」系の記事が多いため、 Amplify ありきなのかと思ってしまいがちです。
 
 また、ログインの UI に [@aws-amplify/ui-react](https://www.npmjs.com/package/@aws-amplify/ui-react) を使っている例も多く、いざ別の UI フレームワークで構築するとなったときに「？？？」となりがちです。そのため本記事では @aws-amplify/ui-react は使いません。
 
-ただし、**今回は認証用のライブラリーとして npm パッケージの aws-amplify に含まれる `Auth` 部分を使います**。このライブラリーは Amplify と関係なく、単純に便利なためです。
+ただし、**今回は npm パッケージの aws-amplify に含まれる `Auth` 部分を使います**。このライブラリーは Amplify と関係なく、認証用のライブラリーとして単純に便利なためです。
 
 ### Cognito は既存流用
 
@@ -188,7 +188,7 @@ export default Auth;
 
 ### .env ファイルを追加
 
-`.env.local` を作成してそれぞれのパラメーターを設定します。 *`.env` ファイルは `src` ディレクトリではなく、プロジェクトルートに作成 *します。
+`.env.local` を作成してそれぞれのパラメーターを設定します。 *`.env` ファイルは `src` ディレクトリではなく、プロジェクトルートに作成* します。
 
 ```ini:title=.env.local
 REACT_APP_AUTH_REGION=<リージョン>
