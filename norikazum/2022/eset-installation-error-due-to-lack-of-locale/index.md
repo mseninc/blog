@@ -1,6 +1,6 @@
 ---
 title: ESET Server Security 8.1 に必要なUSロケールのインストール方法について
-date: 
+date: 2022-02-04
 author: norikazum
 tags: [Linux,ESET]
 description: 
