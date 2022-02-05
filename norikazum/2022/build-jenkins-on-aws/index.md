@@ -38,17 +38,16 @@ description:
     1. `ssh -i "jenkins.pem" ubuntu@ElasticIP` で接続
     1. `sudo su-` で root に昇格
     1. `cat /var/lib/jenkins/secrets/iniialAdminPassword` で 初期パスワードを出力しメモする
-1. http://ElasticIP:8080 にアクセスし、前項で確認した初期パスワードを入力します
-![](images/2022-02-05_14h16_25.jpg)
+1. http://ElasticIP:8080 にアクセスし、**前項で確認した初期パスワードを入力** します
+    ![](images/2022-02-05_14h16_25.jpg)
 1. 推奨プラグインをインストールしてもらうことにします
-![](images/2022-02-05_14h25_36.jpg)
-![](images/2022-02-05_14h25_59.jpg)
+    ![](images/2022-02-05_14h25_36.jpg)
+    ![](images/2022-02-05_14h25_59.jpg)
 1. 初期ユーザーの情報を入力します
-![](images/2022-02-05_14h27_44.jpg)
+    ![](images/2022-02-05_14h27_44.jpg)
 1. これで完了です
-![](images/2022-02-05_14h29_20.jpg)
-![](images/2022-02-05_14h30_04.jpg)
-
+    ![](images/2022-02-05_14h29_20.jpg)
+    ![](images/2022-02-05_14h30_04.jpg)
 
 ## Jenkins のアップデート
 
