@@ -16,7 +16,7 @@ description:
 
 「またかー」という心の声が聞こえます。
 
-お客様のシステムにより自動でアップデートすることは難しいことも珍しないので、今回のアプローチは **Jenkins から 少ない操作でアップデートを実施する** ことを目的とします。
+システムによりけりですが、自動でアップデートが難しいことも多いので、今回のアプローチは **Jenkins から 少ない操作でアップデートを実施する** ことを目的とします。
 
 また、 **Jenkinsを利用すれば一度ジョブを設定すれば誰でも実行** できるメリットもあるのではと考えます。
 
@@ -28,16 +28,138 @@ Jenkins の構築は 過去記事を参考にしてください。
 - Jenkins 2.319.2
 - Red Hat Enterprise Linux release 8.5 (アップデート対象)
 
-## 処理イメージ
+## 概要
 今回の評価では、以下 3パターンのアップデートを想定します。
 1. 全体アップデート ( `dnf -y upgrade` )
 1. 指定したパッケージのアップデート ( `dnf -y upgrade openssl` )
-1. RHSA (Red Hat Security Advisory) 単位のアップデート ( `dnf -y dnf upgrade --advisory=RHSA-2022:0267P` )
+1. RHSA (Red Hat Security Advisory) 単位のアップデート ( `dnf upgrade --advisory=RHSA-2022:0267` )
 
 これらをJenkinsの環境変数で指定し、それに対応した実行を実施をする設定にします。
 
-- イメージ図
-    ![](images/.jpg)
+再起動もできるように設定したいと思います。
 
-## 前提
-Jenkins で アップデート対象にSSHログインできる設定を事前に完了します。
+## Red Hat Enterprise Linux 8.5 (アップデート対象) の設定変更
+アップデートコマンドをパスワードなしで実行できるように `root` ユーザーで `visudo` を実行して **以下の1行を追加** します。
+
+`msen-staff      ALL=(ALL)       NOPASSWD: /usr/bin/dnf, /usr/sbin/reboot`
+
+## 接続設定
+Jenkins に SSH プラグインをインストールし、アップデート先のサーバーに接続するための設定をします。
+
+- SSH プラグイン のインストール
+    ![](images/2022-02-05_15h55_51.jpg)
+
+**このリンクが少し見つけにくい** のですが認証情報の追加は **以下のURLのIP部分を自身のものに変更** 接続します。
+http://IP:8080/credentials/store/system/domain/_/newCredentials
+
+テストサーバーには、秘密鍵で接続しますので種類は **SSHユーザー名と秘密鍵** になります。
+※鍵認証でなければ、 **ユーザー名とパスワード** を選択してください。
+
+**IDは空欄** でOKです。
+**秘密鍵の形式はOpenSSH形式** です。
+    ![](images/2022-02-05_16h04_30.jpg)
+
+続けて、**設定からSSHリモートホストを追加** します
+    ![](images/2022-02-05_16h14_10.jpg)
+
+**Check connection** をクリックし、**Successfull connection** が表示されればOKです。
+
+念のため **Check connection** をクリックしたとき、サーバーの `/var/log/secure` にログが記録されていることを確認します。
+
+```bash
+Feb  5 02:22:58 test sshd[2265]: Accepted publickey for msen-staff from 192.168.10.254 port 43144 ssh2: RSA SHA256:d9cJIMZRXt5xUnnVyX1vZDLIN+hlyOId5411VB8Z3ss
+Feb  5 02:22:58 test sshd[2265]: pam_unix(sshd:session): session opened for user msen-staff by (uid=0)
+Feb  5 02:22:58 test sshd[2265]: pam_unix(sshd:session): session closed for user msen-staff
+```
+
+**保存ボタンをクリック** して設定を保存します。
+
+## テストジョブ
+
+フリースタイルのジョブを作成して、`/etc/redhat-release` を表示してみます。
+- テストジョブの作成
+    ![](images/2022-02-05_16h25_16.jpg)
+    ![](images/2022-02-05_16h27_38.jpg)
+    ![](images/2022-02-05_16h28_56.jpg)
+
+- ジョブを実行
+    ![](images/2022-02-05_16h29_25.jpg)
+
+正常に実行できました。
+![](images/2022-02-05_16h30_44.jpg)
+
+
+## アップデート用のジョブを作成
+
+同じくフリースタイルのジョブを作成して、アップデート用のジョブを作成します。
+
+パラメーターは以下のとおりです。( **変更点のみ記載** )
+
+- ジョブ名：アップデート (任意)
+- ビルドのパラメーター化：チェック
+    - 選択
+        - 名前：type
+        - 選択値：all, package, rhsa
+    ![](images/2022-02-05_21h33_38.jpg)
+    - 文字列
+        - 名前：package_name
+        - デフォルト値：空欄
+    ![](images/2022-02-05_21h58_04.jpg)
+    - 文字列
+        - 名前：rhsa_name
+        - デフォルト値：空欄
+    ![](images/2022-02-05_21h34_35.jpg)
+    - 選択
+        - 名前：reboot
+        - 選択値：no, yes
+    ![](images/2022-02-05_21h34_56.jpg)
+- ビルド環境
+    - コンソール出力にタイムスタンプを追加する：チェック
+    - リモートホストでシェルを実行：チェック
+        - SSHサイト：msen-staff@ooo.ooo.ooo.ooo:22
+        - ビルド後スクリプト
+            ```bash
+            if [ "${reboot}" = "yes" ]; then
+              sudo reboot &
+            fi
+            ```
+            ※ **& をつけてバックグラウンド実行にしないと、ジョブが失敗**します。
+- ビルド
+    - リモートホストでシェルを実行
+        - SSHサイト：msen-staff@ooo.ooo.ooo.ooo:22
+        - シェルスクリプト
+            ```bash
+            if [ "${type}" = "all" ]; then
+              sudo dnf -y upgrade
+            elif [ "${type}" = "package" ]; then
+              sudo dnf -y upgrade ${package_name}
+            elif [ "${type}" = "rhsa" ]; then
+              sudo dnf -y upgrade --advisory=${rhsa_name}
+            fi
+            ```
+    
+## テスト
+- type=all のテスト
+    ![](images/2022-02-05_21h59_27.jpg)
+    ![](images/2022-02-05_17h43_20.jpg)
+
+- type=package のテスト
+    ![](images/2022-02-05_22h01_27.jpg)
+    ![](images/2022-02-05_18h02_38.jpg)
+
+- type=package(複数指定) のテスト
+    ![](images/2022-02-05_22h03_14.jpg)
+    ![](images/2022-02-05_21h56_36.jpg)
+
+- type=RHSA のテスト
+    ![](images/2022-02-05_22h02_19.jpg)
+    ![](images/2022-02-05_21h30_46.jpg)
+
+- reboot=yes のテスト
+    ![](images/2022-02-05_21h36_12.jpg)
+    ![](images/2022-02-05_22h31_26.jpg)
+
+## あとがき
+この方法はあくまでJenkinsから直接接続できるサーバーが対象になりますので、起点になるサーバーからしかログインできないような環境にも対応できるように今後検討したいと思います。
+
+それでは次回の記事でお会いしましょう。
