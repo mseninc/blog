@@ -30,11 +30,14 @@ Jenkins の構築は 過去記事を参考にしてください。
 
 ## 処理イメージ
 今回の評価では、以下 3パターンのアップデートを想定します。
-1. 全体アップデート
-1. 指定したパッケージのアップデート
-1. RHSA (Red Hat Security Advisory) 単位のタップデート
+1. 全体アップデート ( `dnf -y upgrade` )
+1. 指定したパッケージのアップデート ( `dnf -y upgrade openssl` )
+1. RHSA (Red Hat Security Advisory) 単位のアップデート ( `dnf -y dnf upgrade --advisory=RHSA-2022:0267P` )
 
-これらをJenkinsの環境変数で指定し、それに対応した実行を実施をしてみます。
+これらをJenkinsの環境変数で指定し、それに対応した実行を実施をする設定にします。
+
+- イメージ図
+    ![](images/.jpg)
 
 ## 前提
 Jenkins で アップデート対象にSSHログインできる設定を事前に完了します。
