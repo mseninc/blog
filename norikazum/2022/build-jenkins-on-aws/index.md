@@ -28,12 +28,15 @@ description:
 ![](images/2022-02-05_13h54_26.jpg)
 
 ## EC2 調整
-1. 外部からアクセスするために作成された **インスタンスにElastic IP 割り当て** ます
+1. 外部からアクセスするため、作成された **インスタンスにElastic IP 割り当て** ます
 ![](images/2022-02-05_14h13_54.jpg)
 1. **セキュリティグループは自動で作成・割り当て** され、**8080/tcp と 22/tcp が 公開** されているので必要に応じて調整します
 
 ## Jenkins の設定
-1. `ssh -i "jenkins.pem" ubuntu@ElasticIP` で SSHアクセスします。(他の方法でもOK) `sudo su-` で root に昇格した後 `cat /var/lib/jenkins/secrets/initialAdminPassword` で 初期パスワードを出力しメモします
+1. 以下の流れで **SSHアクセス** します。(他の方法でもOK) 
+    1. `ssh -i "jenkins.pem" ubuntu@ElasticIP` で接続
+    1. `sudo su-` で root に昇格
+    1. `cat /var/lib/jenkins/secrets/iniialAdminPassword` で 初期パスワードを出力しメモする
 1. http://ElasticIP:8080 にアクセスし、前項で確認した初期パスワードを入力します
 ![](images/2022-02-05_14h16_25.jpg)
 1. 推奨プラグインをインストールしてもらうことにします
