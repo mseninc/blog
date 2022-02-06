@@ -14,9 +14,7 @@ description:
 
 説明を見ると無料で利用できるようです。
 
-> Starting from $0.00/hr or from $0.00/yr (up to 70% savings) for software + AWS usage fees
-Linux/Unix, Ubuntu 18.04 LTS | 64 ビット Amazon マシンイメージ (AMI) x86 | 更新済み: 2021/04/03
-This product has charges associated with it for seller support. Jenkins on Ubuntu 18.04 and includes support.
+> Starting from $0.00/hr or from $0.00/yr (up to 70% savings) for software + AWS usage fees Linux/Unix, Ubuntu 18.04 LTS | 64 ビット Amazon マシンイメージ (AMI) x86 | 更新済み: 2021/04/03 This product has harges associated with it for seller support. Jenkins on Ubuntu 18.04 and includes support.
 
 ## 手順
 1. **AWS コンソールにログイン** します
