@@ -34,7 +34,7 @@ Jenkins の構築は 過去記事を参考にしてください。
 1. 指定したパッケージのアップデート ( `dnf -y upgrade openssl` )
 1. RHSA (Red Hat Security Advisory) 単位のアップデート ( `dnf upgrade --advisory=RHSA-2022:0267` )
 
-**再起動オプションも考慮** します。
+**アップデート前後に全パッケージバージョンを取得** し、**再起動オプションも考慮** します。
 
 ## Red Hat Enterprise Linux 8.5 (アップデート対象) の設定変更
 アップデートコマンドをパスワードなしで実行できるように `root` ユーザーで `visudo` を実行して **以下の1行を追加** します。
@@ -115,14 +115,28 @@ Feb  5 02:22:58 test sshd[2265]: pam_unix(sshd:session): session closed for user
         - 選択値：no, yes
         ![](images/2022-02-05_21h34_56.jpg)
 - ビルド環境
-    - コンソール出力にタイムスタンプを追加する：チェック
     - リモートホストでシェルを実行：チェック
         - SSHサイト：msen-staff@ooo.ooo.ooo.ooo:22
+        - ビルド前スクリプト
+            ```bash
+            # アップデート前の時刻を記録
+            TZ=JST-9 date
+            echo -e "\n"
+
+            # アップデート前のパッケージ一覧を記録
+            rpm -qa
+            ```
         - ビルド後スクリプト
             ```bash
             if [ "${reboot}" = "yes" ]; then
+              # 再起動の実行
               sudo reboot &
             fi
+            # アップデート後のパッケージ一覧を記録
+            rpm -qa
+            # アップデート後の時刻を記録
+            echo -e "\n"
+            TZ=JST-9 date
             ```
             ※ **& をつけてバックグラウンド実行にしないと、ジョブが失敗**します。
 - ビルド
@@ -130,6 +144,7 @@ Feb  5 02:22:58 test sshd[2265]: pam_unix(sshd:session): session closed for user
         - SSHサイト：msen-staff@ooo.ooo.ooo.ooo:22
         - シェルスクリプト
             ```bash
+            # アップデート実行
             if [ "${type}" = "all" ]; then
               sudo dnf -y upgrade
             elif [ "${type}" = "package" ]; then
