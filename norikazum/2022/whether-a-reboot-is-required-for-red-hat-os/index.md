@@ -25,6 +25,7 @@ Red Hat から公開されている以下のナレッジも参考に。
 ## 使い方
 
 以下の内容は **Red Hat Enterprise Linux 8.5 で実行** しています。
+※CentOSでも同様に利用できます。
 
 ### OSの再起動が必要かどうかを判断する場合
 `needs-restarting -r` を使います。
