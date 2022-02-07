@@ -1,6 +1,6 @@
 ---
 title: Red Hat Enterprise Linux を 組織IDでアクティベーションする方法
-date: 
+date: 2022-02-07
 author: norikazum
 tags: [Linux,Red Hat]
 description: 
