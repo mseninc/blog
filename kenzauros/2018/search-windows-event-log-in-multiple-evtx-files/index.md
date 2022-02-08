@@ -109,7 +109,46 @@ tags: [Windows, Windows Server, イベントログ]
 
 Gist に置いていますので、参考にしてください。
 
-<script src="https://gist.github.com/kenzauros/27a532942d9150c0910376acc03cec1d.js"></script>
+- [複数の Windows イベントログファイル (evtx) をまとめて検索する XML 作成スクリプト - gist](https://gist.github.com/kenzauros/27a532942d9150c0910376acc03cec1d)
+
+```python
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import codecs
+import glob
+import re
+import os
+
+# 上限ファイル数 (適宜変更)
+limit = 3
+# 対象にする EventID のリスト (適宜変更)
+event_id_list = [4624, 4634, 4625, 4648]
+# EventData/Data の検索値のリスト (適宜変更)
+data_value_list = ['hogehoge', 'fugafuga', 'momimomi']
+
+# ----------------------------------------------------------------------
+
+# 抽出条件式に変換
+event_id = " or ".join(["(EventID=" + str(i) + ")" for i in event_id_list])
+event_data = " or ".join(["(Data='" + v + "')" for v in data_value_list])
+condition = "*[System[" + event_id + "] and EventData[" + event_data + "]]"
+# ファイル番号
+n = 0
+# 出力ファイル
+output_file = codecs.open("query_list.xml", "w", "utf-8")
+output_file.write("<QueryList>\n")
+output_file.write("  <Query Id=\"0\">\n")
+for filename in glob.glob("*.evtx"):
+  print(filename)
+  path = os.path.abspath(filename)
+  output_file.write("    <Select Path=\"file://" + path + "\">" + condition + "</Select>\n")
+  n += 1
+  if n >= limit: break
+output_file.write("  </Query>\n")
+output_file.write("</QueryList>\n")
+output_file.close
+```
 
 このスクリプトは、同じフォルダーに存在する evtx ファイル分の `<Select>` タグを生成するようになっています。
 

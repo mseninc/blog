@@ -13,7 +13,23 @@ tags: [C#, .NET]
 
 なにはともあれソースコードです。
 
-<script src="https://gist.github.com/kenzauros/09c6b19b56a98aad0b79c6ed84376f31.js"></script>
+- [C# 任意の文字種を使ったランダムパスワードをつくるスタティックメソッド - gist](https://gist.github.com/kenzauros/09c6b19b56a98aad0b79c6ed84376f31)
+
+```js
+const string PWS_CHARS = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+/// <summary>
+/// 指定した長さの文字からなるランダムなパスワードを返します。
+/// </summary>
+/// <param name="length">生成するパスワードの長さ</param>
+/// <param name="availableChars">使用可能な文字の一覧</param>
+/// <returns>生成されたパスワード</returns>
+public static string GenerateRandomPassword(int length, string availableChars = PWS_CHARS)
+{
+    if (string.IsNullOrEmpty(availableChars)) availableChars = PWS_CHARS;
+    var r = new Random();
+    return string.Join("", Enumerable.Range(0, length).Select(_ => PWS_CHARS[r.Next(availableChars.Length)]));
+}
+```
 
 ## インターフェース
 

@@ -114,7 +114,49 @@ DotNetEnv はここまでの使い方でも便利ですが、 Settings っぽく
 
 Gist にあげましたので参考にしてください。
 
-<script src="https://gist.github.com/kenzauros/127be6447fb8d5a135a1d6f39f948795.js"></script>
+- [DotNetEnv を使った .NET アプリでの環境変数管理用ヘルパークラス - gist](https://gist.github.com/kenzauros/127be6447fb8d5a135a1d6f39f948795)
+
+```cs:title=Env.cs
+using System.Runtime.CompilerServices;
+
+/// <summary>
+/// 環境変数を管理します。
+/// </summary>
+public static class Env
+{
+    /// <summary>
+    /// デフォルトの .env ファイルのファイル名
+    /// </summary>
+    public const string DEFAULT_ENV_FILENAME = ".env";
+
+    /// <summary>
+    /// 環境変数を .env ファイルから読み込みます。
+    /// </summary>
+    /// <param name="path"></param>
+    public static void Load(string path = null)
+    {
+        DotNetEnv.Env.Load(path ?? DEFAULT_ENV_FILENAME);
+    }
+
+    #region 環境変数プロパティからの呼び出し用プロキシメソッド
+
+    public static string GetString([CallerMemberName] string key = "") => DotNetEnv.Env.GetString(key);
+    public static int GetInt([CallerMemberName] string key = "") => DotNetEnv.Env.GetInt(key);
+    public static bool GetBool([CallerMemberName] string key = "") => DotNetEnv.Env.GetBool(key);
+    public static double GetDouble([CallerMemberName] string key = "") => DotNetEnv.Env.GetDouble(key);
+
+    #endregion
+
+    #region 環境変数プロパティ
+
+    // サンプル
+    public static string FILE_PATH => GetString();
+    public static int EXPIRATION_PERIOD => GetInt();
+
+    #endregion
+
+}
+```
 
 Settings クラスのように環境変数名でアクセスできるよう、**静的プロパティを環境変数名で定義**しています。
 

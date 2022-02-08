@@ -108,7 +108,64 @@ Link: <https://api.github.com/organizations/6128107/repos?page=2>; rel="next", <
 
 Node.js で [axios](https://github.com/axios/axios) パッケージを使って、 REST API からのデータを取得します。
 
-<script src="https://gist.github.com/kenzauros/89ef31ad231e7efb62e4dcc6ce3bf695.js"></script>
+- [GitHub API で特定の user/organization のすべてのリポジトリ情報を取得する - gist](https://gist.github.com/kenzauros/89ef31ad231e7efb62e4dcc6ce3bf695)
+
+```js
+const GITHUB_API_URL = 'https://api.github.com';
+const GITHUB_TOKEN = '<GitHub API Token>';
+
+// Prepare axios for GitHub API
+const axiosBase = require('axios');
+const github = axiosBase.create({
+  baseURL: GITHUB_API_URL,
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': `token ${GITHUB_TOKEN}`,
+  },
+  responseType: 'json',
+});
+
+/**
+ * Gets a list of repos in GitHub.
+ * @param {String} ownerType Resource type of owner (orgs|users)
+ * @param {String} owner Owner name
+ */
+async function getGithubRepos(ownerType, owner) {
+  let url = `${ownerType}/${owner}/repos?sort=full_name`;
+  const array = [];
+  while (url) {
+    const { next, data } = await getGithubReposPage(url);
+    if (data) array.push(data);
+    url = next;
+  }
+  return array.flat();
+}
+
+async function getGithubReposPage(url) {
+  const result = await github.get(url);
+  let next = null;
+  if (result.headers && result.headers.link) {
+    // extract next url from "link" header
+    const matches = /\<([^<>]+)\>; rel\="next"/.exec(result.headers.link);
+    if (matches) {
+      next = matches[1];
+    }
+  }
+  const data = result.data || null;
+  return {
+    next,
+    data,
+  };
+}
+
+// demo
+(async () => {
+  const kenzaurosRepos = await getGithubRepos('users', 'kenzauros');
+  console.log(kenzaurosRepos);
+  const vuejsRepos = await getGithubRepos('orgs', 'vuejs');
+  console.log(vuejsRepos);
+})();
+```
 
 ※認証トークンを使わない場合は `GITHUB_TOKEN` の宣言 (2行目) と `Authorization` ヘッダー (10行目) を削除してください。
 

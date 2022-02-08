@@ -44,7 +44,55 @@ tags: [WPF, C#, .NET]
 
 少し手を入れたバージョンを Gist に上げていますので、 `App.xaml.cs` (`App.xaml` のコードビハインド) に追加するだけです。
 
-<script src="https://gist.github.com/kenzauros/a79d3eda53fda48be09e836bcad1658c.js"></script>
+- [WPF で外字フォントを表示する - gist](https://gist.github.com/kenzauros/a79d3eda53fda48be09e836bcad1658c)
+
+```cs
+public partial class App
+{
+    public App()
+    {
+        PrepareEUDCFont();
+    }
+
+    /// <summary>
+    /// 外字フォントを Window のデフォルトフォントに追加します。
+    /// </summary>
+    /// <seealso cref="https://araramistudio.jimdo.com/2017/04/21/wpf%E3%81%A7%E5%A4%96%E5%AD%97%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B-%E3%81%9D%E3%81%AE%EF%BC%92/"/>
+    private void PrepareEUDCFont()
+    {
+        var ffDef = Window.FontFamilyProperty.DefaultMetadata.DefaultValue as System.Windows.Media.FontFamily;
+        var ffName = ffDef.Source;
+
+        string eudc = "C:\\Windows\\Fonts\\EUDC.tte";
+        string eudcDef = null;
+        string eudcCur = null;
+        using (var key = Registry.CurrentUser.OpenSubKey("EUDC\\932"))
+        {
+            foreach (var nm in key.GetValueNames())
+            {
+                if (0 == nm.CompareTo("SystemDefaultEUDCFont"))
+                    eudcDef = key.GetValue(nm) as string;
+
+                if (0 == nm.CompareTo(ffName))
+                    eudcCur = key.GetValue(nm) as string;
+            }
+            if (eudcDef != null) eudc = eudcDef;
+            if (eudcCur != null) eudc = eudcCur;
+        }
+
+        var path = Path.IsPathRooted(eudc)
+            ? eudc
+            : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Fonts), eudc);
+        ffName = ffName + ", " + new Uri(path).AbsoluteUri + "#EUDC";
+        var font = new System.Windows.Media.FontFamily(ffName);
+
+        var style = new Style(typeof(Window));
+        style.Setters.Add(new Setter(Window.FontFamilyProperty, font));
+
+        FrameworkElement.StyleProperty.OverrideMetadata(typeof(Window), new FrameworkPropertyMetadata(style));
+    }
+}
+```
 
 手を入れたのは最後のほうだけです。
 

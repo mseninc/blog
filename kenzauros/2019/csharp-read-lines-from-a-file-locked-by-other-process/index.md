@@ -15,7 +15,42 @@ tags: [C#, .NET]
 
 結論から言うと下記のようなユーティリティメソッドを作って利用するのが手っ取り早いです。
 
-<script src="https://gist.github.com/kenzauros/3a5345dc40cfc1deeae4d6fc631a059a.js"></script>
+- [C# で書き込みモードで開かれたファイルを読み取る ReadLines メソッド - gist](https://gist.github.com/kenzauros/3a5345dc40cfc1deeae4d6fc631a059a)
+
+```cs
+using System.Collections.Generic;
+using System.IO;
+using System.Text;
+
+/// <summary>
+/// Provides iterators to read lines in a file.
+/// </summary>
+public static class TextFile
+{
+    /// <summary>
+    /// Enumrates lines in the file with the file share setting.
+    /// </summary>
+    /// <param name="path"></param>
+    /// <param name="fileShare"></param>
+    /// <param name="encoding"></param>
+    /// <returns></returns>
+    public static IEnumerable<string> ReadLines(
+        string path,
+        FileShare fileShare = FileShare.ReadWrite,
+        Encoding encoding = null)
+    {
+        using (var stream = new FileStream(path, FileMode.Open, FileAccess.Read, fileShare))
+        using (var reader = new StreamReader(stream, encoding ?? Encoding.UTF8))
+        {
+            string line;
+            while ((line = reader.ReadLine()) != null)
+            {
+                yield return line;
+            }
+        }
+    }
+}
+```
 
 この内容については後述します。例外処理等は適当なので、必要に応じて追加してください。
 

@@ -18,7 +18,19 @@ tags: [C#, .NET, .NET Framework]
 
 おそらく現状では下記が最短の記述となると思います。
 
-<script src="https://gist.github.com/kenzauros/09377008ff036a730d0c7de7e6ecdb89.js"></script>
+- [C# で SHA256 のハッシュ文字列を得る - gist](https://gist.github.com/kenzauros/09377008ff036a730d0c7de7e6ecdb89)
+
+```cs:title=GetSHA256HashedString.cs
+using System.Security.Cryptography;
+using System.Text;
+
+public class MyClass
+{
+    static readonly SHA256CryptoServiceProvider hashProvider = new SHA256CryptoServiceProvider();
+    public static string GetSHA256HashedString(string value)
+        => string.Join("", hashProvider.ComputeHash(Encoding.UTF8.GetBytes(value)).Select(x => $"{x:x2}"));
+}
+```
 
 下記のように使用できます。
 
