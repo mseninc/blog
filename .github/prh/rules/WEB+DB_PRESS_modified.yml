@@ -607,8 +607,6 @@ rules:
     expected: でき
   - pattern: するようになります
     expected: します
-  - pattern: るようになります
-    expected: ます
   - pattern: て欲し
     expected: てほし
   - pattern: で欲し
@@ -1627,7 +1625,7 @@ rules:
   - expected: O/Rマッパ
     pattern:  /O\/Rマッパー|\bORM\b/
   - expected: アイデア
-    pattern:  /アィディア|アイディア|アィディア|アィデア/
+    pattern:  /アィディア|アィディア|アィデア/
   - expected: アクワイアラー
     pattern:  /アクワイアラ(?!ー)/
   - expected: アスタリスク
@@ -1755,10 +1753,9 @@ rules:
     pattern:  /クローラ(?!ー)/
   - expected: ゲッター
     pattern:  /ゲッタ(?!ー)/
-  - expected: コピー&ペースト
+  - expected: コピー＆ペースト
     pattern:
-      - コピー＆ペースト
-      - コピペ
+      - コピー&ペースト
       - コピーアンドペースト
       - コピーペースト
   - expected: コミュニ
@@ -1978,7 +1975,7 @@ rules:
   - expected: ファイバチャネル
     pattern:  /ファイバチャンネル|ファイバチャネル|ファイバーチャンネル/
   - expected: フィルター
-    pattern:  /フィルタ(?!ー)/
+    pattern:  /フィルタ(?![ーリ])/
   - expected: フィクスチャー
     pattern:  /フィクスチャ(?!ー)/
   - expected: フェイルオーバー
@@ -2743,8 +2740,8 @@ rules:
     pattern:  /\bserver spec\b/
   - expected: Servlet $1
     pattern:  /Servlet([0-9])/
-  - expected: Shift_JIS
-    pattern:  /Shift-JIS|SHIFT-JIS|SHIFT_JIS|\bShift JIS\b|Shift_JIS|シフトJIS/
+  - expected: Shift-JIS
+    pattern:  /Shift_JIS|SHIFT-JIS|SHIFT_JIS|\bShift JIS\b|Shift_JIS|シフトJIS/
   - expected: Shrine
     pattern:  /\bShrine\b/i
   - expected: Shrpx
