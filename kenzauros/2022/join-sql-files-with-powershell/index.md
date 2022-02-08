@@ -55,7 +55,7 @@ foreach ($file in $files) {
 
 gist にも置いてあります。
 
-- [ディレクトリ内の SQL ファイルを結合する PowerShell スクリプト (SQL Server 用)](https://gist.github.com/kenzauros/6c6aad4ad938ece7deefabc0e6d6585a)
+- [ディレクトリ内の SQL ファイルを結合する PowerShell スクリプト (SQL Server 用) - gist](https://gist.github.com/kenzauros/6c6aad4ad938ece7deefabc0e6d6585a)
 
 あとは PowerShell から `.\join-sql.ps1 <出力ファイル名>` とするだけです。
 
