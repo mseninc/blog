@@ -1,6 +1,6 @@
 ---
 title: Amazon Linux 2 のディスク容量を拡張する方法
-date: 
+date: 2022-02-11
 author: jinna-i
 tags: [Amazon Linux 2, AWS]
 description: 
