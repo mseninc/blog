@@ -216,7 +216,8 @@ Get-Content $file.FullName -Encoding UTF8 `
 
 `MatchInfo.Line` プロパティーは検索にマッチした行をすべて含んでいるため、これを取り出すことで元の文字列が得られます。
 
-※今回は `Select-String` で `-NotMatch` を指定しているので「マッチしない」行が抽出されます。
+※ 今回は `Select-String` で `-NotMatch` を指定しているので「マッチしない」行が抽出されます。
+※ また、 SQL ファイルの文字コードは UTF-8 を想定しているため `-Encoding UTF8` としています。
 
 #### 改行コードなどのエスケープ
 
