@@ -169,8 +169,8 @@ async function getGithubReposPage(url) {
 
 ※認証トークンを使わない場合は `GITHUB_TOKEN` の宣言 (2行目) と `Authorization` ヘッダー (10行目) を削除してください。
 
-最後のほうに書いたように **`await getGithubRepos('users', 'kenzauros')`** のように書くことで、「ユーザー kenzauros のリポジトリ一覧」を取得することができます。
+最後のほうに書いたように **`await getGithubRepos('users', 'kenzauros')`** のように書くことで、「ユーザー kenzauros のリポジトリ一覧」を取得できます。
 
 `getGithubRepos` でやっていることは単純で **`rel="next"` を含む `Link` ヘッダーがなくなるまで、繰り返し問い合わせ**していくだけです。
 
-だれかの助けになれば幸いです。
+どなたかの助けになれば幸いです。
