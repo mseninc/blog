@@ -1727,7 +1727,9 @@ rules:
   - expected: クエリー
     pattern:  /クエリ(?!ー)/
   - expected: クオート
-    pattern:  /クォート|クオーテーション|クォーテーション/
+    pattern:  /クォート/
+  - expected: クオーテーション
+    pattern:  /クォーテーション/
   - expected: クオリティー
     pattern:  /クオリティ(?!ー)|クォリティ/
   - expected: クライアント／サーバ
