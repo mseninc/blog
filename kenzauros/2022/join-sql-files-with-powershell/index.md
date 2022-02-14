@@ -35,7 +35,7 @@ Param(
 )
 $divider="-- $("=" * 100)"
 $files = Get-ChildItem .\*.* -Include *.sql -Exclude $outputFile
-Clear-Content $outputFile
+if (Test-Path $outputFile) { Clear-Content $outputFile }
 
 function output {
   process {
