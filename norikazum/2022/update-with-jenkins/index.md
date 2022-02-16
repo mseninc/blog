@@ -1,6 +1,6 @@
 ---
 title: Jenkins を利用して Linux のアップデート作業を簡単にする
-date: 
+date: 2022-02-16
 author: norikazum
 tags: [RHEL,Linux,jenkins]
 description: 
