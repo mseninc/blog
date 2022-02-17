@@ -49,7 +49,7 @@ Red Hat から公開されている以下のナレッジも参考に。
     詳細情報: https://access.redhat.com/solutions/27943
     ```
 
-### OSの再起動が必要かどうかを判断する場合
+### サービスの再起動が必要かどうかを判断する場合
 `needs-restarting --services` を使います。
 
 - **再起動が不要** な場合
@@ -60,7 +60,7 @@ Red Hat から公開されている以下のナレッジも参考に。
     ```
     ※何も出力されない
 
-- **再起動が不要** な場合
+- **再起動が必要** な場合
     ```bash
     # needs-restarting --services
     systemd-udevd.service
