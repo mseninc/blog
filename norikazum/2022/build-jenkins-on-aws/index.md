@@ -1,6 +1,6 @@
 ---
 title: Amazon EC2 上に Jenkins を構築する
-date: 
+date: 2022-02-18
 author: norikazum
 tags: [Jenkins,AWS,EC2]
 description: 
