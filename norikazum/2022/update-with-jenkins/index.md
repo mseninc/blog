@@ -22,7 +22,7 @@ description:
 
 Jenkins の構築は 過去記事を参考にしてください。
 
-**(記事リリース後に更新)過去記事を入れる**
+[ Amazon EC2 上に Jenkins を構築する ](https://mseeeen.msen.jp/build-jenkins-on-aws/)
 
 ## 評価環境
 - Jenkins 2.319.2
