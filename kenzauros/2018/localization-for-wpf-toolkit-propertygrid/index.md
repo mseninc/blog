@@ -5,7 +5,7 @@ author: kenzauros
 tags: [WPF, PropertyGrid, .NET]
 ---
 
-Xceed Software 社の **[Extended WPF Toolkit](https://github.com/xceedsoftware/wpftoolkit)** に含まれる **[PropertyGrid](https://github.com/xceedsoftware/wpftoolkit/wiki/PropertyGrid)** は自作アプリなどでプロパティを設定するインターフェースを提供するために非常に有用です。
+Xceed Software 社の **[Extended WPF Toolkit](https://github.com/xceedsoftware/wpftoolkit)** に含まれる **[PropertyGrid](https://github.com/xceedsoftware/wpftoolkit/wiki/PropertyGrid)** は自作アプリなどでプロパティーを設定する UI を提供するために非常に有用です。
 
 Extended WPF Toolkit はライセンス的にも **[Microsoft Public License (MS-PL)](https://opensource.org/licenses/MS-PL)** で提供されるため、使いやすいです。
 
@@ -29,7 +29,7 @@ Extended WPF Toolkit はライセンス的にも **[Microsoft Public License (MS
 - [WPFアプリケーションの国際化対応 - かずきのBlog@hatena](https://blog.okazuki.jp/entry/20110309/1299683215)
 - [WPF での文字列リソースの利用と国際化 | プログラマーズ雑記帳](http://yohshiy.blog.fc2.com/blog-entry-232.html)
 
-プロジェクトには `Resources.resx` `Resources.ja-JP.resx` が配置済みで、ソースコードからは `Resources.リソース名` で文字列が取得できるようになっているものとします。
+プロジェクトに `Resources.resx` `Resources.ja-JP.resx` が配置済み、ソースコードから `Resources.リソース名` で文字列が取得できるようになっているものとします。
 
 ## PropertyGrid の表示制御とローカライズ
 
@@ -39,14 +39,14 @@ Extended WPF Toolkit はライセンス的にも **[Microsoft Public License (MS
 
 属性 | 指定対象 | 用途 | 国際化の要否
 -- | -- | -- | --
-**`CategoryAttribute`** | プロパティ | カテゴリー名の設定 | 要
-**`DisplayNameAttribute`** | プロパティ | プロパティの表示名 | 要
-**`DescriptionAttribute`** | プロパティ | プロパティの説明 | 要
-`PropertyOrderAttribute` | プロパティ | プロパティの並び順指定 | 不要
-`BrowsableAttribute` | プロパティ | プロパティの非表示指定 | 不要
+**`CategoryAttribute`** | プロパティー | カテゴリー名の設定 | 要
+**`DisplayNameAttribute`** | プロパティー | プロパティーの表示名 | 要
+**`DescriptionAttribute`** | プロパティー | プロパティーの説明 | 要
+`PropertyOrderAttribute` | プロパティー | プロパティーの並び順指定 | 不要
+`BrowsableAttribute` | プロパティー | プロパティーの非表示指定 | 不要
 **`CategoryOrderAttribute`** | クラス | カテゴリーの並び順指定 | 要
 
-※ `CategoryOrderAttribute` のみ Xceed.Wpf.Toolkit PropertyGrid の独自属性
+※ `CategoryOrderAttribute` のみ Xceed.Wpf.Toolkit PropertyGrid の独自属性です。
 
 通常、それぞれの属性の指定は下記のようになります。
 
@@ -67,7 +67,8 @@ internal class AwesomeClass {
 }
 ```
 
-`Browsable` や `PropertyOrder` はその性質上、多言語化を考慮する必要はありませんが、 `CategoryOrder` はカテゴリー名自体が多言語化されるため、並び順指定に使うカテゴリー名も国際化に合わせて変えてやる必要があります。
+`Browsable` や `PropertyOrder` はその性質上、多言語化を考慮する必要はありません。
+`CategoryOrder` はカテゴリー名自体が多言語化されるため、並び順指定に使うカテゴリー名も国際化に合わせて変えてやる必要があります。
 
 ということで、前述の表で "要" となっている 4 つのクラスについて多言語化を行います。
 
@@ -77,9 +78,10 @@ internal class AwesomeClass {
 
 ### Resources のラッパークラス作成
 
-Visual Studio が生成する `Resources` クラスは `Resources.MyText` のような感じで静的にリソース名を指定するしかできず、 `Resources.Get("MyText")` のようにキーを指定してリソースを取得できません。
+Visual Studio が生成する `Resources` クラスは `Resources.MyText` のような感じで静的にリソース名を指定するしかできません。
+`Resources.Get("MyText")` のようにキーを指定してリソースを取得できないのです。
 
-そのため、まず **`Resources` クラスからキー指定で文字列を取得する静的なラッパークラス**を作成します。本来ならパーシャルクラスで定義したいところですが、クラスに `partial` がついていないため、仕方なく別クラスにしています。
+そのため、まず **`Resources` クラスからキー指定で文字列を取得する静的なラッパークラス**を作成します。本来ならパーシャルクラスで定義したいところですが、クラスに `partial` がついていないため、しかたなく別クラスにしています。
 
 名前はなんでもいいのですが、ここでは **`LocalizedResources`** としました。
 
@@ -95,7 +97,7 @@ internal static class LocalizedResources
 }
 ```
 
-中身は `ResourceManager.GetString()` をプロキシしているだけの単純なユーティリティクラスです。
+中身は `ResourceManager.GetString()` をプロキシしているだけの単純なユーティリティークラスです。
 
 この **`LocalizedResources.GetString()` でリソースからローカライズされた文字列が取得できる**ので、各属性クラスを継承したクラスからこれを利用します。
 
@@ -129,7 +131,7 @@ internal class LocalizedCategoryOrderAttribute : CategoryOrderAttribute
 }
 ```
 
-つまり**継承クラスのコンストラクタで国際化済みの文字列を取得し、元々の属性クラスのコンストラクタに渡して初期化**しているだけです。
+つまり**継承クラスのコンストラクターで国際化済みの文字列を取得し、もともとの属性クラスのコンストラクターに渡して初期化**しているだけです。
 
 ### ローカライズ済み属性の適用
 
@@ -160,13 +162,13 @@ internal class AwesomeClass {
 
 ### 先人たちの取り組み
 
-このローカライズのためのアプローチは、 10 年以上前から様々な人が取り組んでいます。
+このローカライズのためのアプローチは、 10 年以上前からさまざまな人が取り組んでいます。
 
 - [Localization of Property Grid - PropertyGrid - UI for WPF Forum](https://www.telerik.com/forums/localization-of-property-grid)
 - [c# - Localization of DisplayNameAttribute - Stack Overflow](https://stackoverflow.com/questions/356464/localization-of-displaynameattribute)
 - [Localize Properties for the PropertyGrid](https://social.msdn.microsoft.com/Forums/vstudio/en-US/6a7a2088-81b3-4ce5-a9f5-3e461406bc4f/localize-properties-for-the-propertygrid?forum=netfxbcl)
 
-もっとも役にたったのは下記の Brian Lagunas 氏の 2015 年の記事でした。
+最も役にたったのは下記の Brian Lagunas 氏の 2015 年の記事でした。
 
 - [Localize Property Names, Descriptions, and Categories for the XamPropertyGrid | Infragistics Blog](https://www.infragistics.com/community/blogs/b/blagunas/posts/localize-property-names-descriptions-and-categories-for-the-xampropertygrid)
 
@@ -176,10 +178,10 @@ internal class AwesomeClass {
 
 彼は各クラスのメンバーをオーバーライドして実装していたのですが、それぞれオーバーライドするメンバーが異なるので、少々煩雑なイメージがありました。
 
-そこで `ResourceManager` の部分を別クラスに切り出し、各継承クラスはコンストラクタのみオーバーライドするだけで実現できるようにしたのが、今回の記事です。
+そこで `ResourceManager` の部分を別クラスに切り出し、各継承クラスはコンストラクターのみオーバーライドするだけで実現できるようにしたのが、今回の記事です。
 
 しかし今あらためて見返すと他の参照記事に似たようなアイディアがありましたね...
-自分で実装してみないとわからないものです。。。
+自分で実装してみないとわからないものです😭
 
 
 ### DisplayAttribute というのもある
@@ -194,14 +196,14 @@ internal class AwesomeClass {
 
 これでもたしかに表示名が国際化できました。
 
-あと、実はこの `DisplayAttribute` には `Description` プロパティや `GroupName` プロパティなどもあります。
+あと、実はこの `DisplayAttribute` には `Description` プロパティーや `GroupName` プロパティーなどもあります。
 
 ```cs
 [Display(ResourceType = typeof(Resources), Name = "Property_Name_DisplayName", Description = "Property_Name_Description", GroupName = "Category_General")]
 ```
 
-こんな感じで指定すれば、全部リソースからイイ感じにとってきてくれる...ことが期待されるのですが、残念ながら私の環境では `GroupName` などを指定すると PropertyGrid の表示が途中で止まってしまい、動作しませんでした。
+こんな感じで指定すれば、全部リソースからイイ感じにとってきてくれる...ことが期待されます。が、残念ながら私の環境では `GroupName` などを指定すると PropertyGrid の表示が途中で止まってしまい、動作しませんでした。
 
-WPF Toolkit の PropertyGrid が対応していないだけなのかもしれませんが、ソースを追う気力はなかったので、あきらめました。残念です。
+WPF Toolkit の PropertyGrid が対応していないだけなのかもしれませんが、ソースを追う気力はなかったので、諦めました。残念です。
 
-まぁ、今回の記事のソースコードは非常にシンプルなので、現状ではベターな解決法だと思います。
+まぁ、今回の記事のソースコードは非常にシンプルですので、現状ではベターな解決法だと思います。
