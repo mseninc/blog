@@ -1,6 +1,6 @@
 ---
 title: PowerShell でフォルダ内の SQL ファイルを結合した SQL ファイルを生成する
-date: 
+date: 2022-02-22
 author: kenzauros
 tags: [PowerShell, SQL, SQL Server]
 description: 複数の SQL ファイルを結合した SQL ファイルを出力する PowerShell のスクリプトを作りましたので紹介します。
