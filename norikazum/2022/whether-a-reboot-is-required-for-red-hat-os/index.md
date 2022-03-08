@@ -9,9 +9,9 @@ description:
 こんにちは。
 
 昨今、**日々脆弱性の通知が飛び交い、その都度アップデートを実施** します。
-その際、「**どのサービスを再起動したらいいんだ？**」「**OSの再起動は必要なのか？**」 ということが **よくある** と思います。
+その際、「**どのサービスを再起動したらいいんだ？**」「**OSの再起動は必要なのか？**」 ということがよくあると思います。
 
-そんなときに便利なのが、 **needs-restarting** というコマンドです。
+Red Hat 系 OS で、そんなときに便利なのが、 **needs-restarting** というコマンドです。
 
 Red Hat から公開されている以下のナレッジも参考に。
 [Which packages require a system reboot after the update? - Red Hat Customer Portal](https://access.redhat.com/solutions/27943)
