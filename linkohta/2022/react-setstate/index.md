@@ -61,47 +61,28 @@ export default Index;
 
 ![](images/2022-02-09_16h16_38.png)
 
-なぜこのような挙動になるのでしょうか。この挙動は React の useState の仕様に起因しています。
+なぜこのような挙動になるのでしょうか。この挙動は React の再レンダリングの仕様に起因しています。
 
-## useState の挙動
+## 再レンダリングの挙動
 
-useState の setter は実行されると対応する state を更新し、再レンダリングを行います。
+React では以下のタイミングで再レンダリングが起こるようになっています。
 
-**この時、 state の更新はすぐには行われず、再レンダリングを行う際、実行された setter をまとめて非同期で更新します。**
+1. stateが更新された時
+2. propsが更新された時
+3. 親コンポーネントが再レンダリングされた時
 
-そのため上記の例では `setCount` の直後に `props.setCount()` で `count` を代入しても、更新前の値が代入されるため、値がずれるという事象が発生していました。
+上記の例は 1 に該当しますが、**最新の state は次のレンダリングのときにしか反映されないようになっています。**
+
+そのため、子コンポーネント側で親コンポーネントの値を更新する場合は子コンポーネントの state と一緒に親コンポーネントの useState を呼び出して更新する必要があります。
 
 ## 解決法
 
-### useEffect を用いて更新を行う
-
-`useEffect` は指定した state が更新されるたびに実行される関数です。
-
-この `useEffect` が実行されるのが **state が更新された後**であることを用いることで値の更新を確実に反映できます。
-
-以下のコードのように `useEffect` の追加と `ButtonClick` を変更します。
+以下のコードのように更新後の値を state の更新に用いることで更新後の値を利用できます。
 
 ```js
-useEffect(() => {
-  props.setCount(count);
-}, [count]);
-
 const ButtonClick = () => {
   setCount(count + 1);
-}
-```
-
-### 新しい変数を用いて更新を行う
-
-新しい変数を用意して更新する方法もあります。
-
-以下のコードのように更新後の値を別の変数に保存して、その変数を state の更新に用いることで更新後の値を利用できます。
-
-```js
-const ButtonClick = () => {
-  const newValue = count + 1;
-  setCount(newValue);
-  props.setCount(newValue);
+  props.setCount(count + 1);
 }
 ```
 
