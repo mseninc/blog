@@ -43,7 +43,7 @@ class User extends Model
 }
 ```
 
-皆さんお馴染みの `get○○Attribute` や `set○○Attribute` のやつです。`○○` の部分は、アクセスする属性名をパスカルケースで記述する必要があります。
+皆さんお馴染みの `get●●Attribute` や `set●●Attribute` のやつです。`●●` の部分は、アクセスする属性名をパスカルケースで記述する必要があります。
 
 ### アクセサ
 
