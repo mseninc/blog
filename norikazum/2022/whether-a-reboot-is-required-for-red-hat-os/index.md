@@ -1,6 +1,6 @@
 ---
 title: Red Hat 系OSで再起動が必要かどうか判断する方法
-date: 
+date: 2022-03-09
 author: norikazum
 tags: [Linux,Red Hat]
 description: 
