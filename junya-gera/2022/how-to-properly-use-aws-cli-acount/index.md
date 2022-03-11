@@ -121,7 +121,7 @@ secret_key     ******************** shared-credentials-file
 ```
 region は [default] で設定している ap-northeast-1 になっており、 [default] で実行されていることがわかります。これを [company] プロファイルで実行するには2種類の方法があります。
 
-### 1. CLI コマンドに `--profile (プロファイル名)` オプションをつける
+### 1. CLI コマンドに --profile (プロファイル名) オプションをつける
 今回の場合は `--profile company` というオプションをつけることで [company] プロファイルで実行できます。
 
 ```
@@ -135,7 +135,7 @@ secret_key     ******************** shared-credentials-file
 ```
 プロファイル名の `company` が表示され、region も us-west-2 となっているので[company] プロファイルで実行できています。
 
-### 2. コマンドラインに `AWS_PROFILE` 環境変数を設定する
+### 2. コマンドラインに AWS_PROFILE 環境変数を設定する
 1 の方法では CLI コマンドを実行するたびに `--profile` オプションをつける必要があるので複数回コマンドを実行する際は手間がかかります。`AWS_PROFILE` という環境変数に使用するプロファイルを設定することで、オプションなしに使用するプロファイルを切り替えることができます。設定するコマンドは以下です。
 
 - Linux または macOS
