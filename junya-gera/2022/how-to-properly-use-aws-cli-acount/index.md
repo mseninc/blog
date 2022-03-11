@@ -6,7 +6,7 @@ tags: [AWS, AWS CLI]
 description: 
 ---
 
-こんにちは、じゅんじゅんです。AWS を使用される方の中には個人用、社内用など複数の環境のアカウントを所持している人も多いと思います。今回は**プロファイルという機能を使用して AWS CLI で複数のアカウントを使い分ける方法**をご紹介します。
+こんにちは、じゅんじゅんです。AWS を使用される方の中には個人用、社内用など複数の環境のアカウントを所持している人も多いと思います。今回は**プロファイルという機能を使用して AWS CLI で複数のアカウントを使い分ける方法**を紹介します。
 
 ## 前提
 - aws-cli 2.2.27
@@ -21,11 +21,11 @@ IAM の「ユーザー」からアクセスキーを作成するユーザーを�
 
 ![AWS コンソール IAM → ユーザー → ユーザーの選択](images/2022-03-09_23h17_12.png)
 
-「認証情報」タブにある「アクセスキーの作成」からアクセスキーを作成することができます。
+「認証情報」タブにある「アクセスキーの作成」からアクセスキーが作成できます。
 
 ![AWS コンソール IAM → ユーザー → 認証情報 → アクセスキーの作成](images/2022-03-09_23h19_38.png)
 
-シークレットキーを表示できるのは作成時のみなので、 csv ファイルをダウンロードしておくと安心です（アクセスキー自体はいつでも作成し直せます）。
+シークレットキーを表示できるのは作成時のみですので、 csv ファイルをダウンロードしておくと安心です（アクセスキー自体はいつでも作成し直せます）。
 
 ![AWS コンソール IAM → ユーザー → 認証情報 → アクセスキーの作成 → csv ダウンロード](images/2022-03-09_23h20_39.png)
 
@@ -98,7 +98,7 @@ region = us-west-2
 output = json
 ```
 
-これで社内用 CLI の認証情報も登録することができました。登録されているプロファイル名の一覧を表示させるコマンド `aws configure list-profiles` を実行してみましょう。
+これで社内用 CLI の認証情報も登録できました。登録されているプロファイル名の一覧を表示させるコマンド `aws configure list-profiles` を実行してみましょう。
 
 ```
 $ aws configure list-profiles
@@ -122,7 +122,7 @@ secret_key     ******************** shared-credentials-file
 region は [default] で設定している ap-northeast-1 になっており、 [default] で実行されていることがわかります。これを [company] プロファイルで実行するには2種類の方法があります。
 
 ### 1. CLI コマンドに `--profile (プロファイル名)` オプションをつける
-今回の場合は `--profile company` というオプションをつけることで [company] プロファイルで実行することができます。
+今回の場合は `--profile company` というオプションをつけることで [company] プロファイルで実行できます。
 
 ```
 $ aws configure list --profile company
@@ -152,7 +152,7 @@ set AWS_PROFILE=(プロファイル名)
 ```
 $ set AWS_PROFILE=company
 ```
-その上で `--profile` オプションをつけずに `aws configure list` コマンドを実行します。
+そのうえで `--profile` オプションをつけずに `aws configure list` コマンドを実行します。
 ```
 $ aws configure list
       Name                    Value             Type    Location
@@ -163,10 +163,14 @@ secret_key     ******************** shared-credentials-file
     region                us-west-2      config-file    ~/.aws/config
 ```
 
-上記のように [company] プロファイルの設定が表示されました。Location のところに `['AWS_PROFILE', 'AWS_DEFAULT_PROFILE']` と表示されていますが、 `set AWS_PROFILE=company` コマンドによってデフォルトで使用されるプロファイルを [company] プロファイルに変更したことを意味します。この設定はシェルのセッションが終了するまで変更されたままです。
+上記のように [company] プロファイルの設定が表示されました。
+
+Location のところに `['AWS_PROFILE', 'AWS_DEFAULT_PROFILE']` と表示されていますが、 `set AWS_PROFILE=company` コマンドによってデフォルトで使用されるプロファイルを [company] プロファイルに変更したことを意味します。
+
+この設定はシェルのセッションが終了するまで変更されたままです。
 
 ## まとめ
-プロファイルを使用して複数の AWS CLI アカウントを使い分ける方法をご紹介しました。ちなみに筆者はやらかしても自分にしか被害がかからないよう個人用アカウントを [default] に設定しています。他にも IAM ロールや多要素認証を使用する方法もあるので、今後この辺りもご紹介したいと思っています。
+プロファイルを使用して複数の AWS CLI アカウントを使い分ける方法を紹介しました。ちなみに筆者はやらかしても自分にしか被害がかからないよう個人用アカウントを [default] に設定しています。ほかにも IAM ロールや多要素認証を使用する方法もあるので、今後このあたりも紹介したいと思っています。
 
 ## 参考
 https://docs.aws.amazon.com/ja_jp/cli/latest/userguide/cli-configure-profiles.html
