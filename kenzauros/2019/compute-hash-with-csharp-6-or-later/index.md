@@ -18,7 +18,19 @@ tags: [C#, .NET, .NET Framework]
 
 おそらく現状では下記が最短の記述となると思います。
 
-<script src="https://gist.github.com/kenzauros/09377008ff036a730d0c7de7e6ecdb89.js"></script>
+- [C# で SHA256 のハッシュ文字列を得る - gist](https://gist.github.com/kenzauros/09377008ff036a730d0c7de7e6ecdb89)
+
+```cs:title=GetSHA256HashedString.cs
+using System.Security.Cryptography;
+using System.Text;
+
+public class MyClass
+{
+    static readonly SHA256CryptoServiceProvider hashProvider = new SHA256CryptoServiceProvider();
+    public static string GetSHA256HashedString(string value)
+        => string.Join("", hashProvider.ComputeHash(Encoding.UTF8.GetBytes(value)).Select(x => $"{x:x2}"));
+}
+```
 
 下記のように使用できます。
 
@@ -28,11 +40,11 @@ Console.WriteLine(hash);
 // will show "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08"
 ```
 
-16 進数文字列に変換して結合するところを LINQ の `Select` を用いることで直接 `string.Join` に渡し、式の形にできるのでラムダ式として記述することができます。
+16 進数文字列に変換して結合するところを LINQ の `Select` を用いることで直接 `string.Join` に渡し、式の形にできるのでラムダ式として記述できます。
 
 ※メソッドのラムダ式記述は C# 6 以降で可能になりました。 ([参考](https://www.atmarkit.co.jp/ait/articles/1606/01/news051.html))
 
-C# 7 以降で、複数の場所から使われることがないのであれば、ローカル関数として実装することもできますね。
+C# 7 以降で、複数の場所から使われることがないのであれば、ローカル関数として実装もできますね。
 
 ```cs
 static readonly SHA256CryptoServiceProvider hashProvider = new SHA256CryptoServiceProvider();
@@ -51,7 +63,7 @@ public void SomeMethod()
 
 ## その他のハッシュ関数
 
-上記の例では SHA256 を用いましたが、 .NET Framework の [System.Security.Cryptography](https://docs.microsoft.com/ja-jp/dotnet/api/system.security.cryptography?view=netframework-4.7.2) 名前空間には他にもハッシュプロバイダーが用意されているので、 `SHA256CryptoServiceProvider` の部分を置き換えるだけでそれらを利用することができます。
+上記の例では SHA256 を用いましたが、 .NET Framework の [System.Security.Cryptography](https://docs.microsoft.com/ja-jp/dotnet/api/system.security.cryptography?view=netframework-4.7.2) 名前空間にはほかにもハッシュプロバイダーが用意されています。`SHA256CryptoServiceProvider` の部分を置き換えるだけでそれらを利用できます。
 
 
 暗号化方式 | クラス

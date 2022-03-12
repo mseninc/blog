@@ -15,7 +15,35 @@ tags: [C#, .NET Framework, .NET]
 
 いちいち書くと冗長なので下記のような拡張メソッドを用意します。
 
-<script src="https://gist.github.com/kenzauros/e59e66fb6b3e76cddd790c4067b51917.js"></script>
+- [yyyymmdd 形式の文字列を DateTime 型に変換する拡張メソッド - gist](https://gist.github.com/kenzauros/e59e66fb6b3e76cddd790c4067b51917)
+
+```cs
+using System;
+using System.Globalization;
+
+namespace System
+{
+    public static class DateTimeExtensions
+    {
+        /// <summary>
+        /// 指定した日付を "yyyyMMdd" 形式で返します。
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static string ToDbDateString(this DateTime value) => value.ToString("yyyyMMdd");
+
+        /// <summary>
+        /// データベースの "yyyyMMdd" 形式の文字列を <see cref="DateTime"/> 型に変換します。
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static DateTime? ToDateTime(this string value)
+            => DateTime.TryParseExact(value, "yyyyMMdd", null, DateTimeStyles.None, out var result)
+            ? (DateTime?)result : null;
+    }
+}
+```
+
 
 ※ラムダ式でメソッドを記述しているため、 C# 6 未満をお使いの場合は、メソッド記法に修正してください。
 

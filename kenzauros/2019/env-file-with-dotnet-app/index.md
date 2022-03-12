@@ -7,7 +7,7 @@ tags: [.NET, .NET Framework, Visual Studio]
 
 .NET アプリの設定ファイルといえば **App.config** (Settings.settings) が手軽で便利ですが、他のプロジェクトから参照できなかったりして不便な部分もあります。
 
-ということで読み込みだけできればよい環境変数的な設定に関しては Web 系でのおなじみの `.env` ファイルを利用することにしようと思い、 **[DotNetEnv](https://github.com/tonerdo/dotnet-env)** を使ってみました。
+そこで、読み込みだけできればよい環境変数的な設定に関しては Web 系でのお馴染みの `.env` ファイルを利用することにしました。今回は **[DotNetEnv](https://github.com/tonerdo/dotnet-env)** を使ってみました。
 
 > [tonerdo/dotnet-env: A .NET library to load environment variables from .env files](https://github.com/tonerdo/dotnet-env)
 
@@ -37,7 +37,7 @@ tags: [.NET, .NET Framework, Visual Studio]
 - Visual Studio 2017 (v15.8.7)
 - .NET Framework 4.6.1
 
-本稿時点の DotNetEnv のバージョン 1.2.0 では **.NET Standard v1.3** が必要なので、 **.NET Framework の場合 4.6 以上**である必要があります。 (参考: [dotnet/standard](https://github.com/dotnet/standard/blob/master/docs/versions.md))
+本稿時点の DotNetEnv のバージョン 1.2.0 では **.NET Standard v1.3** が必要ですので、 **.NET Framework の場合 4.6 以上**である必要があります。 (参考: [dotnet/standard](https://github.com/dotnet/standard/blob/master/docs/versions.md))
 
 ## 基本的な使い方
 
@@ -47,14 +47,11 @@ NuGet からインストール可能なので VS のパッケージ管理か、�
 
 ![NuGet で DotNetEnv のインストール](images/env-file-with-dotnet-app-1.png)
 
-Visual Studio パッケージマネージャー:
-
+- Visual Studio パッケージマネージャー:
 ```
 PM> Install-Package DotNetEnv
 ```
-
-.NET Core CLI:
-
+- .NET Core CLI:
 ```
 dotnet add package DotNetEnv
 ```
@@ -93,14 +90,17 @@ DotNetEnv.Env.Load(
 --- | --- | ---
 `trimWhitespace` | `true` | `true` にするとキーと値の前後の空白を取り除く<br>(`=` の回りにスペースを書ける)
 `isEmbeddedHashComment` | `true` | `true` にすると各行の `#` 以降をコメントとして無視する
-`unescapeQuotedValues` | `true` | `true` にするとダブルクオーテーションかシングルクォーテーションで区切られた値のクオートを解除して読み込む
+`unescapeQuotedValues` | `true` | `true` にするとダブルクオーテーションかシングルクオーテーションで区切られた値のクオートを解除して読み込む
 `clobberExistingVars` | `true` | `false` にするとすでに環境変数として存在する場合、上書きしない
 
 ### 値の取得
 
-値の取得には `System.Environment.GetEnvironmentVariable("KEY")` のようにするか `DotNetEnv.Env.GetString("KEY")` のような DotNetEnv のヘルパーメソッドを使うかの 2 パターンがあります。
+値の取得には下記の 2 パターンがあります。
 
-DotNetEnv のヘルパーメソッドを使ったほうが、型指定できる (`int`, `double`, `bool`, `string` のみ) こと、変数が存在しない場合のフォールバック値を指定できることから便利だと思います。
+- `System.Environment.GetEnvironmentVariable("KEY")`
+- `DotNetEnv.Env.GetString("KEY")` (DotNetEnv のヘルパーメソッド)
+
+DotNetEnv のヘルパーメソッドのほうが、型指定でき (`int`, `double`, `bool`, `string` のみ)、変数が存在しない場合のフォールバック値を指定できることから便利だと思います。
 
 ```cs
 DotNetEnv.Env.GetString("FILE_PATH"); // string 型で "test.csv" が取得できるはず
@@ -114,24 +114,59 @@ DotNetEnv はここまでの使い方でも便利ですが、 Settings っぽく
 
 Gist にあげましたので参考にしてください。
 
-<script src="https://gist.github.com/kenzauros/127be6447fb8d5a135a1d6f39f948795.js"></script>
+- [DotNetEnv を使った .NET アプリでの環境変数管理用ヘルパークラス - gist](https://gist.github.com/kenzauros/127be6447fb8d5a135a1d6f39f948795)
 
-Settings クラスのように環境変数名でアクセスできるよう、**静的プロパティを環境変数名で定義**しています。
+```cs:title=Env.cs
+using System.Runtime.CompilerServices;
 
-これにより、
+/// <summary>
+/// 環境変数を管理します。
+/// </summary>
+public static class Env
+{
+    /// <summary>
+    /// デフォルトの .env ファイルのファイル名
+    /// </summary>
+    public const string DEFAULT_ENV_FILENAME = ".env";
 
-```cs
-DotNetEnv.Env.GetString("FILE_PATH");
+    /// <summary>
+    /// 環境変数を .env ファイルから読み込みます。
+    /// </summary>
+    /// <param name="path"></param>
+    public static void Load(string path = null)
+    {
+        DotNetEnv.Env.Load(path ?? DEFAULT_ENV_FILENAME);
+    }
+
+    #region 環境変数プロパティからの呼び出し用プロキシメソッド
+
+    public static string GetString([CallerMemberName] string key = "") => DotNetEnv.Env.GetString(key);
+    public static int GetInt([CallerMemberName] string key = "") => DotNetEnv.Env.GetInt(key);
+    public static bool GetBool([CallerMemberName] string key = "") => DotNetEnv.Env.GetBool(key);
+    public static double GetDouble([CallerMemberName] string key = "") => DotNetEnv.Env.GetDouble(key);
+
+    #endregion
+
+    #region 環境変数プロパティ
+
+    // サンプル
+    public static string FILE_PATH => GetString();
+    public static int EXPIRATION_PERIOD => GetInt();
+
+    #endregion
+
+}
 ```
 
-としていたところが
+Settings クラスのように環境変数名でアクセスできるよう、**静的プロパティーを環境変数名で定義**しています。
 
-```cs
-Env.FILE_PATH;
+これにより、下記のように簡略化できるだけでなく、 **IntelliSense の入力補完**を利用できるようになります。
+
+```diff
+- DotNetEnv.Env.GetString("FILE_PATH");
++ Env.FILE_PATH;
 ```
 
-とシンプルに書けるだけでなく、 **IntelliSense の入力補完**を利用することができるようになります。
-
-ヘルパークラスのプロパティ実装は `CallerMemberName` 属性を使って、プロパティ名と同名のキーを探しにいくので、最小限の記述で済みます。記述ミスでのバグが大幅に抑えられるでしょう。 
+ヘルパークラスのプロパティー実装は `CallerMemberName` 属性を使って、プロパティー名と同名のキーを探しにいくので、最小限の記述で済みます。記述ミスでのバグが大幅に抑えられるでしょう。
 
 参考になれば幸いです。

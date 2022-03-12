@@ -19,28 +19,26 @@ RHSA は以下のように定義されています。
 [RHSA、RHBA、および RHEA アドバイザリーの説明 - Red Hat Customer Portal](https://access.redhat.com/ja/articles/2280941)
 
 ## 環境・前提
-- Red Hat Enterprise Linux release 8 ※恐らくRedhat系ならいけると思います
+- Red Hat Enterprise Linux release 8 ※おそらくRed Hat 系ならいけると思います
 - スクリプトを実行するサーバー自身をチェックする
-- スクリプトを実行するサーバーで `sendmail` コマンドでメールが送信できること
+- スクリプトを実行するサーバーは `sendmail` コマンドでメールが送信できること
 
 ## コマンド説明
 - 動作しているシステムで該当するセキュリティアドバイザリーをチェックする
     `dnf updateinfo list available`
 - RHSA かつ 重要 を抜き出す
-    `dnf updateinfo list available | grep RHSA | grep "重要" | awk '{ print $1 }' | uniq`
+    `dnf updateinfo list available | grep RHSA | grep "重要" | awk '{ print $1 }' | sort | uniq`
 
 実行すると以下のようになります。
 ```sh
-# dnf updateinfo list available | grep RHSA | grep "重要" | awk '{ print $1 }' | uniq
+# dnf updateinfo list available | grep RHSA | grep "重要" | awk '{ print $1 }' | sort | uniq
 RHSA-2021:2170
 RHSA-2021:1206
 RHSA-2021:1620
 RHSA-2021:1197
 RHSA-2021:2354
-RHSA-2021:1620
 RHSA-2021:1242
 RHSA-2021:2308
-RHSA-2021:1206
 RHSA-2021:1024
 RHSA-2021:2238
 ```
@@ -55,7 +53,7 @@ RHSA-2021:2238
 URL=https://access.redhat.com/errata/
 
 ## セキュリティアドバイザリーの中でRHSAかつ重要を抽出
-result=(`dnf updateinfo list available | grep RHSA | grep "重要" | awk '{ print $1 }' | uniq`)
+result=(`dnf updateinfo list available | grep RHSA | grep "重要" | awk '{ print $1 }' | sort | uniq`)
 
 ## 該当件数を取得
 num=${#result[*]}
