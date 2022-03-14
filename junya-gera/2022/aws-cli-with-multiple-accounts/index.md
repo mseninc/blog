@@ -133,7 +133,7 @@ access_key     ******************** shared-credentials-file
 secret_key     ******************** shared-credentials-file
     region                us-west-2      config-file    ~/.aws/config
 ```
-プロファイル名の `company` が表示され、region も us-west-2 となっているので[company] プロファイルで実行できています。
+プロファイル名の `company` が表示され、region も us-west-2 となっているので [company] プロファイルで実行できています。
 
 ### 2. コマンドラインに AWS_PROFILE 環境変数を設定する
 1 の方法では CLI コマンドを実行するたびに `--profile` オプションをつける必要があるので複数回コマンドを実行する際は手間がかかります。`AWS_PROFILE` という環境変数に使用するプロファイルを設定することで、オプションなしに使用するプロファイルを切り替えることができます。設定するコマンドは以下です。
@@ -165,7 +165,7 @@ secret_key     ******************** shared-credentials-file
 
 上記のように [company] プロファイルの設定が表示されました。
 
-Location のところに `['AWS_PROFILE', 'AWS_DEFAULT_PROFILE']` と表示され、 `set AWS_PROFILE=company` コマンドによってデフォルトで使用されるプロファイルが [company] プロファイルに変更されたことがわかります。
+Location のところに `['AWS_PROFILE', 'AWS_DEFAULT_PROFILE']` と表示され、環境変数 `AWS_PROFILE` によってデフォルトで使用されるプロファイルが [company] プロファイルに変更されたことがわかります。
 
 この設定はシェルのセッションが終了するまで変更されたままです。
 
