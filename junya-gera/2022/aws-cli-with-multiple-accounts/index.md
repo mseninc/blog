@@ -165,7 +165,7 @@ secret_key     ******************** shared-credentials-file
 
 上記のように [company] プロファイルの設定が表示されました。
 
-Location のところに `['AWS_PROFILE', 'AWS_DEFAULT_PROFILE']` と表示されていますが、 `set AWS_PROFILE=company` コマンドによってデフォルトで使用されるプロファイルを [company] プロファイルに変更したことを意味します。
+Location のところに `['AWS_PROFILE', 'AWS_DEFAULT_PROFILE']` と表示され、 `set AWS_PROFILE=company` コマンドによってデフォルトで使用されるプロファイルが [company] プロファイルに変更されたことがわかります。
 
 この設定はシェルのセッションが終了するまで変更されたままです。
 
