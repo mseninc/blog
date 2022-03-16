@@ -1,6 +1,6 @@
 ---
 title: "[AWS CLI] プロファイルを使用して複数のアカウントを使い分ける方法"
-date: 
+date: 2022-03-16
 author: junya-gera
 tags: [AWS, AWS CLI]
 description: 
