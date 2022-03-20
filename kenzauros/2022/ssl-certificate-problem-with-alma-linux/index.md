@@ -1,5 +1,5 @@
 ---
-title: AlmaLinux 8.4 の dnf で SSL 証明書エラーがでたので時刻が合っていなかった話
+title: AlmaLinux 8.4 の dnf で SSL 証明書エラー (AlmaLinux 8.4 での時刻設定と NTP インストール)
 date: 
 author: kenzauros
 tags: [AlmaLinux, dnf, chrony]
