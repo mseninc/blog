@@ -45,40 +45,19 @@ $ date
 
 ちなみにこの日は2022年3月20日でした。二ヵ月もバック・トゥ・ザ・パスト。そりゃだめだ。
 
+おまけになぜかタイムゾーンが Korea になっておりました。インストール時に選択を間違えたかもしれません😅。
+
 ### 時刻設定
 
 以下、プロンプトが `#` の場合は `sudo su -` で root ユーザーになっている想定です。
 
-だいたい今の時間に設定します。
+まず、 **`timedatectl set-time` でおおよそ今の時間に設定**します。
 
 ```:title=bash
 # timedatectl set-time "2022-03-20 09:45:00"
-2022年  3月 20日 日曜日 09:45:00 KST
 ```
 
-`timedatectl` で確認します。
-
-```:title=bash
-# timedatectl
-               Local time: 日 2022-03-20 09:45:58 KST
-           Universal time: 日 2022-03-20 00:45:58 UTC
-                 RTC time: 土 2022-01-29 23:11:43
-                Time zone: Asia/Seoul (KST, +0900)
-System clock synchronized: no
-              NTP service: n/a
-          RTC in local TZ: no
-```
-
-ん...？ソウル？🤔
-
-```:title=bash
-# date
-2022年  3月 20日 日曜日 09:45:30 KST
-```
-
-なぜかタイムゾーンが Korea になっておりました。インストール時に選択を間違えたかもしれません😅。
-
-エラーとは関係ないと思いますが、 **`timedatectl set-timezone` で `Asia/Tokyo` に設定**しなおします。
+タイムゾーンも **`timedatectl set-timezone` で `Asia/Tokyo` に設定**します。
 
 ```:title=bash
 # timedatectl set-timezone Asia/Tokyo
