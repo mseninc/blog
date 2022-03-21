@@ -1,6 +1,6 @@
 ---
 title: Visual Studio 2019 のソリューションを Visual Studio 2022 のソリューションに更新する
-date: 
+date: 2022-03-21
 author: kenzauros
 tags: [Visual Studio]
 description: 今回は Visual Studio のソリューションファイルのバージョンを上げる方法を紹介します
