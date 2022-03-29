@@ -83,7 +83,7 @@ nodejs              16                  common [d], development, minimal, s2i   
 
 ### Node.js 16 の有効化
 
-`dnf module enable` コマンドで有効にするモジュールを設定します。 v16 を有効化する場合はは `dnf module enable nodejs:16` とします。
+`dnf module enable` コマンドで有効にするモジュールを設定します。 v16 を有効化する場合は `dnf module enable nodejs:16` とします。
 
 ```:title=bash
 $ sudo dnf module enable nodejs:16
