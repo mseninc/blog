@@ -1,6 +1,6 @@
 ---
 title: MySQL と MariaDB の Docker イメージでコンテナー起動時にサブディレクトリー内の SQL ファイルを読み込む
-date: 
+date: 2022-03-30
 author: kenzauros
 tags: [MySQL, MariaDB, Docker]
 description: MySQL (MariaDB) の Docker イメージを起動するときに、サブディレクトリーに配置した SQL ファイルも読み込めるようにする方法を紹介します。
