@@ -2307,8 +2307,8 @@ rules:
     pattern:  /CSS-Sprite|\bCSS Sprite\b/
   - expected: DBFlute
     pattern:  /\bDBFlute\b/i
-  - expected: Debian GNU/Linux
-    pattern:  /\bDebian\b|Debian\/GNU Linux/
+  - expected: Debian
+    pattern:  /debian/
   - expected: $1DeNA$2
     pattern:  /(?:([^/.])ディー・エヌ・エー)|(?:ディー・エヌ・エー([^/.]))/
   - expected: $1DeNA$2
