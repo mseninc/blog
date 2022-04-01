@@ -1,6 +1,6 @@
 ---
 title: AlmaLinux や Rocky Linux で Node.js 16 を dnf からインストールする
-date: 
+date: 2022-04-01
 author: kenzauros
 tags: [AlmaLinux, Node.js, dnf]
 description: AlmaLinux の dnf の既定では Node.js 10 しかインストールできないため、 Node.js 14 や 16 をインストールする方法を紹介します。
