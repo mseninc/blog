@@ -97,7 +97,7 @@ class User extends Model
 
 アロー関数を使ったりしているのもありますが、ずいぶんと見た目がかわってしまいました。
 
-メソッド名に `get○○Attribute` や `set○○Attribute` のような接頭辞が不要になっており、メソッドを1つにまとめることができるようになりました。また、戻り値の型を `Illuminate\Database\Eloquent\Casts\Attribute` にしておかないとアクセサ・ミューテータは定義されないので注意してください。
+メソッド名に `get●●Attribute` や `set●●Attribute` のような接頭辞が不要になっており、メソッドを1つにまとめることができるようになりました。また、戻り値の型を `Illuminate\Database\Eloquent\Casts\Attribute` にしておかないとアクセサ・ミューテータは定義されないので注意してください。
 
 ## まとめ
 
