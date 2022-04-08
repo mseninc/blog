@@ -1,5 +1,5 @@
 ---
-title: Value-domain で取得したドメインでダイナミックDNS環境を構築する
+title: Value-domain で取得したドメインでダイナミック DNS 環境を構築する
 date: 2018-09-06
 author: norikazum
 tags: [DNS, ネットワーク]
