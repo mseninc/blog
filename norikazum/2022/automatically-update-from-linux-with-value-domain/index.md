@@ -1,5 +1,5 @@
 ---
-title: Value-domainで取得したドメインをLinuxから自動更新する」
+title: Value-domainで取得したドメインをLinuxから自動更新する
 date: 
 author: norikazum
 tags: [DNS,ネットワーク]
