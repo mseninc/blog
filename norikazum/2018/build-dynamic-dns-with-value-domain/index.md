@@ -102,40 +102,33 @@ Value-Domainにログインし、対象のドメインに対してダイナミ�
 1. 右下のWindowsマークの上で右クリックし、 **ファイル名を指定して実行** をクリックします
 ![](images/build-dynamic-dns-with-value-domain-9.png)
 
-1. **taskschd.msc /s** と入力し、OKをクリックします
+2. **taskschd.msc /s** と入力し、OKをクリックします
 ![](images/build-dynamic-dns-with-value-domain-10.png)
 
-1. 「基本タスクの作成へ」進みます
+3. 「基本タスクの作成へ」進みます
 ![](images/build-dynamic-dns-with-value-domain-11.png)
 
-1. 任意の名前を入力します
+4. 任意の名前を入力します
 ![](images/build-dynamic-dns-with-value-domain-12.png)
 
-1. 以下の画像の流れで毎日12:00に実行されるように設定します
+5. 以下の画像の流れで毎日12:00に実行されるように設定します
 ![](images/build-dynamic-dns-with-value-domain-13.png)
 ![](images/build-dynamic-dns-with-value-domain-14.png)
 ![](images/build-dynamic-dns-with-value-domain-15.png)
 
-1. 各項目を以下を参考に入力します
+6. 各項目を以下を参考に入力します  
 ![](images/build-dynamic-dns-with-value-domain-16.png)
+[プログラム/スクリプト] `%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe`  
+[引数の追加] `-ExecutionPolicy RemoteSigned -File "C:\Users\user\Documents\mod-dns.ps1"`  
+[開始] `C:\Users\user\Documents` **C:\Users\user\Documents は保存場所です。**
 
-  [プログラム/スクリプト]
-  `%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe`
-  
-  [引数の追加]
-  `-ExecutionPolicy RemoteSigned -File "C:\Users\user\Documents\mod-dns.ps1"`
-
-  [開始]
-  `C:\Users\user\Documents`
-  **C:\Users\user\Documents は保存場所です。**
-
-1. **プロパティダイアログを開く** にチェックを入れて完了します
+7. **プロパティダイアログを開く** にチェックを入れて完了します
 ![](images/build-dynamic-dns-with-value-domain-17.png)
 
-1. ログオフ状態でも実行されるように、以下にチェックを入れてOKをクリックします
+8. ログオフ状態でも実行されるように、以下にチェックを入れてOKをクリックします
 ![](images/build-dynamic-dns-with-value-domain-18.png)
 
-1. パスワードが求められるので、入力してOKをクリックします。
+9. パスワードが求められるので、入力してOKをクリックします。
 ![](images/build-dynamic-dns-with-value-domain-19.png)
 
 以上で完了です。
