@@ -8,9 +8,9 @@ description:
 
 こんにちは。
 
-今回は、Zabbixでログから数値を抽出して監視する方法を紹介します。
+今回は、Zabbixを資料しログから数値を抽出して監視する方法を紹介します。
 
-[過去の記事](https://mseeeen.msen.jp/install-clam-antivirus-on-amazon-linux-2-to-automate-checks/)で、ClamAVを利用してログファイルを出力する方法を紹介しましたが、これを応用しウィルスが検知されたことをzabbixで検知したいと思います。
+[過去の記事](https://mseeeen.msen.jp/install-clam-antivirus-on-amazon-linux-2-to-automate-checks/)で、ClamAVを利用してログファイルを出力する方法を紹介しましたが、これを応用しマルウェアが検知されたことをzabbixで検知したいと思います。
 
 ## 環境
 - Zabbix server 6.0.1
@@ -65,6 +65,8 @@ log 関数のフォーマットは、`log[/path/to/file/file_name,<regexp>,<enco
 ```
 
 ![](images/2022-04-09_23h59_52.jpg)
+
+条件式はアイテムを指定していますが、最後の `>=1` が 数字の部分が `0以外` となります。
 
 ## あとがき
 本記事の設定で、マルウェアが1つ以上検出された場合に検出されます。
