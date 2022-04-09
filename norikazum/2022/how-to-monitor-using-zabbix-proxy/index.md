@@ -79,7 +79,7 @@ dnf -y intall zabbix-sql-scripts
 `mysql_secure_installation` コマンドを利用して、MySQL サーバー初期設定します。
 
 実行結果は以下のとおり。
-```
+```bash
 # mysql_secure_installation
 
 Securing the MySQL server deployment.
@@ -151,7 +151,7 @@ All done!
 ### データベースの作成
 
 以下の流れでデータベースを作成します。
-```
+```bash
 mysql -uroot -p
 create database zabbix_プロキシ character set utf8mb4 collate utf8mb4_bin;
 create user 'zabbix'@'localhost' identified by 'password';
@@ -162,7 +162,7 @@ quit;
 ### データベースに初期データの投入
 準備されているSQLを利用したデータを投入します。
 ※トラブルポイントです。
-```
+```bash
 cat /usr/share/doc/zabbix-sql-scripts/mysql/プロキシ.sql | mysql -uzabbix -p zabbix_プロキシ
 Enter password:
 ERROR 1050 (42S01) at line 2079: Table 'dbversion' already exists
@@ -218,7 +218,7 @@ cat /usr/share/doc/zabbix-sql-scripts/mysql/proxy.sql | mysql -uzabbix -p zabbix
 
 `/etc/zabbix/zabbix_agentd.conf` を以下の項目を修正します。
 
-```
+```bash
 Server=x.x.x.x
 Hostname=zabbix-proxy
 DBHost=localhost
@@ -230,24 +230,42 @@ TLSPSKIdentity=zabbix-proxy
 TLSPSKFile=/etc/zabbix/zabbix_proxy.psk
 ```
 
-それぞれの設定値について説明です。
+それぞれの設定値について説明します。
 
-`Server`：IPアドレスを設定を設定します。本記事ではグローバルIPアドレスの想定です。
-`Hostname`：任意のホスト名を設定します。後述の**zabbix server のプロキシ名と同名にする必要があります**。
-`DBHost`：今回の記事では `localhost` になります。
-`DBPassword`：設定したデータベースパスワードを平文で入力します。
-`ConfigFrequency`：zabbixサーバーから設定データを取得する頻度を秒単位で入力します。
-`TLSConnect`：zabbixサーバーとzabbixプロキシ間の通信を暗号化するため、`psk`と入力します。
-`TLSAccept`：zabbixサーバーとzabbixプロキシ間の通信を暗号化するため、`psk`と入力します。
-`TLSPSKIdentity`：zabbixサーバーに入力する`Identity`を入力します。わかりやすく`Hostname`と同名にしています。
-`TLSPSKFile`：pskファイルのパスを入力します。`/etc/zabbix/zabbix_プロキシ.psk` 次のコマンドで生成します。`openssl rand -hex 32 > /etc/zabbix/zabbix_プロキシ.psk`
+- Server
+    - IPアドレスを設定を設定します。本記事ではグローバルIPアドレスの想定です。
+
+- Hostname
+    - 任意のホスト名を設定します。後述の**zabbix サーバー に設定するプロキシ名と同名にする必要があります**。
+
+- DBHost
+    - 今回の記事では `localhost` になります。
+
+- DBPassword
+    - 設定したデータベースパスワードを平文で入力します。
+
+- ConfigFrequency
+    - zabbixサーバーから設定データを取得する頻度を秒単位で入力します。
+
+- TLSConnect
+    - zabbixサーバーとzabbixプロキシ間の通信を暗号化するため、`psk`と入力します。
+
+- TLSAccept
+    - zabbixサーバーとzabbixプロキシ間の通信を暗号化するため、`psk`と入力します。
+
+- TLSPSKIdentity
+    - zabbixサーバーに入力する`Identity`を入力します。わかりやすく`Hostname`と同名にしています。
+
+- TLSPSKFile
+    - pskファイルのパスを入力します。
+    - 次のコマンドで生成します。`openssl rand -hex 32 > /etc/zabbix/zabbix_proxy.psk`
 
 パラメーターは[公式ページ](https://www.zabbix.com/documentation/current/jp/manual/appendix/config/zabbix_proxy)も参考にしてください。
 
 ### サービス起動
 
 以下のコマンドを実行し、`zabbix-proxy` を起動します。
-```
+```bash
 systemctl enable zabbix-proxy
 systemctl start zabbix-proxy
 ```
