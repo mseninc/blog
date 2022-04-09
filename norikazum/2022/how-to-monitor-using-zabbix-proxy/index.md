@@ -78,7 +78,7 @@ dnf -y intall zabbix-sql-scripts
 
 `mysql_secure_installation` コマンドを利用して、MySQL サーバー初期設定します。
 
-実行結果は以下のとおり。
+実行結果は以下のとおりです。
 ```bash
 # mysql_secure_installation
 
