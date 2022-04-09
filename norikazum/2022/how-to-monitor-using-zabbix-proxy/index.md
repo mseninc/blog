@@ -1,5 +1,5 @@
 ---
-title: zabbix プロキシを利用して監視する方法
+title: zabbixプロキシを利用して監視する方法
 date: 
 author: norikazum
 tags: [zabbix]
@@ -8,9 +8,9 @@ description:
 
 こんにちは。
 
-今回は、zabbix プロキシを利用して監視する方法を紹介します。
+今回は、zabbixプロキシを利用して監視する方法を紹介します。
 
-以下は、[公式ドキュメント抜粋](https://www.zabbix.com/documentation/current/jp/manual/distributed_monitoring/proxies)です。
+以下は、[公式ドキュメント](https://www.zabbix.com/documentation/current/jp/manual/distributed_monitoring/proxies)抜粋です。
 
 Zabbixプロキシは、Zabbixサーバーに代わってパフォーマンスと可用性のデータを収集できます。
 このようにして、プロキシはデータ収集の負荷の一部を引き受け、Zabbixサーバーの負荷を軽減できます。
@@ -28,12 +28,12 @@ Zabbixプロキシは次の目的で使用できます。
 プロキシは、ZabbixサーバーへのTCP接続を1つだけ必要とします。この方法では、ファイアウォールルールを1つだけ構成する必要があるため、ファイアウォールを回避するのが簡単です。
 
 ## 環境
-- Zabbix server 6.0.1 
-- Zabbix proxy 6.0.1 (Alma Linux 8)
-- Zabbix agent 6.0.1
-**Zabbix serverとZabbix proxyは同じメジャーバージョンでなければ動作しません**。
+- Zabbix サーバー 6.0.1 
+- Zabbix プロキシ 6.0.1 (Alma Linux 8)
+- Zabbix エージェント 6.0.1
+**Zabbix サーバーとZabbix プロキシは同じメジャーバージョンでなければ動作しません**。
 
-本記事では Zabbix proxy に関連した設定を紹介します。
+本記事では Zabbix プロキシ に関連した設定を紹介します。
 
 ## zabbix プロキシ監視を利用するメリット
 zabbix監視 は サーバー・エージェントで行うことが多いと思います。
@@ -52,7 +52,7 @@ zabbix監視 は サーバー・エージェントで行うことが多いと思
 1. 前項のようなケースは監視系統を複数にして凌ぐケースがあります。
     ![](images/2022-04-10_01h24_03.jpg)
 
-これらのデメリットをzabbix プロキシ監視を利用すると解消することが可能です。
+これらのデメリットをzabbix プロキシ監視を利用すると解消できます。
 ![](images/2022-04-10_01h47_34.jpg)
 
 通信要件は、以下のとおりです。
@@ -63,20 +63,20 @@ zabbix監視 は サーバー・エージェントで行うことが多いと思
 
 それでは設定に進みましょう。
 
-## zabbix proxy の構築
+## zabbix プロキシ の構築
 ### インストール
 
 ```
 dnf -y install https://repo.zabbix.com/zabbix/6.0/rhel/8/x86_64/zabbix-release-6.0-1.el8.noarch.rpm
-dnf -y intall zabbix-proxy-mysql
+dnf -y intall zabbix-プロキシ-mysql
 dnf -y intall mysql-server
 dnf -y intall zabbix-sql-scripts
 ```
 
-### mysql-server の初期設定
+### MySQL サーバー の初期設定
 
 
-`mysql_secure_installation` コマンドを利用して、mysql-server初期設定を行います。
+`mysql_secure_installation` コマンドを利用して、MySQL サーバー初期設定します。
 
 実行結果は以下のとおり。
 ```
@@ -153,9 +153,9 @@ All done!
 以下の流れでデータベースを作成します。
 ```
 mysql -uroot -p
-create database zabbix_proxy character set utf8mb4 collate utf8mb4_bin;
+create database zabbix_プロキシ character set utf8mb4 collate utf8mb4_bin;
 create user 'zabbix'@'localhost' identified by 'password';
-grant all privileges on zabbix_proxy.* to 'zabbix'@'localhost';
+grant all privileges on zabbix_プロキシ.* to 'zabbix'@'localhost';
 quit;
 ```
 
@@ -163,20 +163,22 @@ quit;
 準備されているSQLを利用したデータを投入します。
 ※トラブルポイントです。
 ```
-cat /usr/share/doc/zabbix-sql-scripts/mysql/proxy.sql | mysql -uzabbix -p zabbix_proxy
+cat /usr/share/doc/zabbix-sql-scripts/mysql/プロキシ.sql | mysql -uzabbix -p zabbix_プロキシ
 Enter password:
 ERROR 1050 (42S01) at line 2079: Table 'dbversion' already exists
 ```
 
-本来、これで初期データが投入できるはずなのですが、`ERROR 1050 (42S01) at line 2079: Table 'dbversion' already exists` というエラーが発生しました。
+本来、これで初期データが投入できるはずなのですが、エラーが発生しました。
+
+エラー：`ERROR 1050 (42S01) at line 2079: Table 'dbversion' already exists` 
 
 そして、この解決でとても時間がかかりましたが、弊社[kiyoshin](https://github.com/kiyoshin)が **実行順をかえることでエラーが解消する** ことを見つけてくれました。
 
 `diff` の結果は以下のとおりです。
 ```diff
-# diff -u proxy.sql.org proxy.sql
---- proxy.sql.org       2022-03-01 19:15:06.000000000 +0900
-+++ proxy.sql   2022-03-10 16:23:06.133334842 +0900
+# diff -u プロキシ.sql.org プロキシ.sql
+--- プロキシ.sql.org       2022-03-01 19:15:06.000000000 +0900
++++ プロキシ.sql   2022-03-10 16:23:06.133334842 +0900
 @@ -1,3 +1,10 @@
 +CREATE TABLE `dbversion` (
 +       `dbversionid`            bigint unsigned                           NOT NULL,
@@ -200,15 +202,19 @@ ERROR 1050 (42S01) at line 2079: Table 'dbversion' already exists
 -) ENGINE=InnoDB;
 -INSERT INTO dbversion VALUES ('1','6000000','6000000');
  ALTER TABLE `users` ADD CONSTRAINT `c_users_1` FOREIGN KEY (`roleid`) REFERENCES `role` (`roleid`) ON DELETE CASCADE;
- ALTER TABLE `hosts` ADD CONSTRAINT `c_hosts_1` FOREIGN KEY (`proxy_hostid`) REFERENCES `hosts` (`hostid`);
+ ALTER TABLE `hosts` ADD CONSTRAINT `c_hosts_1` FOREIGN KEY (`プロキシ_hostid`) REFERENCES `hosts` (`hostid`);
  ALTER TABLE `hosts` ADD CONSTRAINT `c_hosts_2` FOREIGN KEY (`maintenanceid`) REFERENCES `maintenances` (`maintenanceid`);
 ```
 
-[正常に投入できたファイル](attach:image/proxy.sql)も添付しておきます。
+[正常に投入できたファイル](attach:image/プロキシ.sql)も添付しておきます。
 
-データベースを再作成し、`cat /usr/share/doc/zabbix-sql-scripts/mysql/proxy.sql | mysql -uzabbix -p zabbix_proxy` で無事登録できました。
+データベースを再作成し、初期データを投入するコマンドを実行することで無事登録できました。
 
-### zabbix proxy の設定
+```
+cat /usr/share/doc/zabbix-sql-scripts/mysql/proxy.sql | mysql -uzabbix -p zabbix_proxy
+```
+
+### zabbix プロキシ の設定
 
 `/etc/zabbix/zabbix_agentd.conf` を以下の項目を修正します。
 
@@ -230,13 +236,13 @@ TLSPSKFile=/etc/zabbix/zabbix_proxy.psk
 `Hostname`：任意のホスト名を設定します。後述の**zabbix server のプロキシ名と同名にする必要があります**。
 `DBHost`：今回の記事では `localhost` になります。
 `DBPassword`：設定したデータベースパスワードを平文で入力します。
-`ConfigFrequency`：zabbixサーバから設定データを取得する頻度を秒単位で入力します。
+`ConfigFrequency`：zabbixサーバーから設定データを取得する頻度を秒単位で入力します。
 `TLSConnect`：zabbixサーバーとzabbixプロキシ間の通信を暗号化するため、`psk`と入力します。
 `TLSAccept`：zabbixサーバーとzabbixプロキシ間の通信を暗号化するため、`psk`と入力します。
 `TLSPSKIdentity`：zabbixサーバーに入力する`Identity`を入力します。わかりやすく`Hostname`と同名にしています。
-`TLSPSKFile`：pskファイルのパスを入力します。`/etc/zabbix/zabbix_proxy.psk` 次のコマンドで生成します。`openssl rand -hex 32 > /etc/zabbix/zabbix_proxy.psk`
+`TLSPSKFile`：pskファイルのパスを入力します。`/etc/zabbix/zabbix_プロキシ.psk` 次のコマンドで生成します。`openssl rand -hex 32 > /etc/zabbix/zabbix_プロキシ.psk`
 
-パラメータは[公式ページ](https://www.zabbix.com/documentation/current/jp/manual/appendix/config/zabbix_proxy)も参考にしてください。
+パラメーターは[公式ページ](https://www.zabbix.com/documentation/current/jp/manual/appendix/config/zabbix_proxy)も参考にしてください。
 
 ### サービス起動
 
