@@ -49,6 +49,6 @@ online disk
 それでは次回の記事でお会いしましょう。
 
 ## 参考にした情報
-[「管理者により設定されているポリシーのために、ディスクはオフラインです」と表示される - Microsoft コミュニティ](https://answers.microsoft.com/ja-jp/windows/forum/all/%E7%AE%A1%E7%90%86%E8%80%85%E3%81%AB%E3%82%88/44306ac2-9f04-4f04-8bac-45d73964f978)
+- [「管理者により設定されているポリシーのために、ディスクはオフラインです」と表示される - Microsoft コミュニティ](https://answers.microsoft.com/ja-jp/windows/forum/all/%E7%AE%A1%E7%90%86%E8%80%85%E3%81%AB%E3%82%88/44306ac2-9f04-4f04-8bac-45d73964f978)
 
-[Windows Diskpartを使ってディスクをオフライン・オンラインにする方法 - 元「なんでもエンジニ屋」のダメ日記](https://nasunoblog.blogspot.com/2016/01/how-to-change-disk-offline-or-online.html)
+- [Windows Diskpartを使ってディスクをオフライン・オンラインにする方法 - 元「なんでもエンジニ屋」のダメ日記](https://nasunoblog.blogspot.com/2016/01/how-to-change-disk-offline-or-online.html)
