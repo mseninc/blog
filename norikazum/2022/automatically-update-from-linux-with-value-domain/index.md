@@ -11,7 +11,7 @@ description:
 以前、Value-domainで取得したドメインをダイナミックDNSに対応する記事を書きました。
 [Value-domain で取得したドメインでダイナミック DNS 環境を構築する](https://mseeeen.msen.jp/build-dynamic-dns-with-value-domain/)
 
-過去記事では、 `Windows Powershell` と `VBS` で更新する方法を記載しておりましたが、Linuxで更新する機会もありましたので更新用 `bashスクリプト` を紹介しました。
+過去記事では、 `Windows Powershell` と `VBS` で更新する方法を記載しておりましたが、Linuxで更新する機会もありましたので更新用 `bashスクリプト` を紹介します。
 
 ## 更新用bashスクリプト
 `DOMAINNAME=` , `PASSWORD=` , `HOSTNAME=` を設定します。
