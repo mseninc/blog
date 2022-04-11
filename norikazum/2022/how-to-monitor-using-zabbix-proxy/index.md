@@ -68,7 +68,7 @@ zabbix監視 は サーバー・エージェントで行うことが多いと思
 
 ```
 dnf -y install https://repo.zabbix.com/zabbix/6.0/rhel/8/x86_64/zabbix-release-6.0-1.el8.noarch.rpm
-dnf -y intall zabbix-プロキシ-mysql
+dnf -y intall zabbix-proxy-mysql
 dnf -y intall mysql-server
 dnf -y intall zabbix-sql-scripts
 ```
@@ -153,9 +153,9 @@ All done!
 以下の流れでデータベースを作成します。
 ```bash
 mysql -uroot -p
-create database zabbix_プロキシ character set utf8mb4 collate utf8mb4_bin;
+create database zabbix_proxy character set utf8mb4 collate utf8mb4_bin;
 create user 'zabbix'@'localhost' identified by 'password';
-grant all privileges on zabbix_プロキシ.* to 'zabbix'@'localhost';
+grant all privileges on zabbix_proxy.* to 'zabbix'@'localhost';
 quit;
 ```
 
@@ -163,7 +163,7 @@ quit;
 準備されているSQLを利用したデータを投入します。
 ※トラブルポイントです。
 ```bash
-cat /usr/share/doc/zabbix-sql-scripts/mysql/プロキシ.sql | mysql -uzabbix -p zabbix_プロキシ
+cat /usr/share/doc/zabbix-sql-scripts/mysql/proxy.sql | mysql -uzabbix -p zabbix_proxy
 Enter password:
 ERROR 1050 (42S01) at line 2079: Table 'dbversion' already exists
 ```
@@ -176,9 +176,9 @@ ERROR 1050 (42S01) at line 2079: Table 'dbversion' already exists
 
 `diff` の結果は以下のとおりです。
 ```diff
-# diff -u プロキシ.sql.org プロキシ.sql
---- プロキシ.sql.org       2022-03-01 19:15:06.000000000 +0900
-+++ プロキシ.sql   2022-03-10 16:23:06.133334842 +0900
+# diff -u proxy.sql.org proxy.sql
+--- proxy.sql.org       2022-03-01 19:15:06.000000000 +0900
++++ proxy.sql   2022-03-10 16:23:06.133334842 +0900
 @@ -1,3 +1,10 @@
 +CREATE TABLE `dbversion` (
 +       `dbversionid`            bigint unsigned                           NOT NULL,
@@ -202,11 +202,11 @@ ERROR 1050 (42S01) at line 2079: Table 'dbversion' already exists
 -) ENGINE=InnoDB;
 -INSERT INTO dbversion VALUES ('1','6000000','6000000');
  ALTER TABLE `users` ADD CONSTRAINT `c_users_1` FOREIGN KEY (`roleid`) REFERENCES `role` (`roleid`) ON DELETE CASCADE;
- ALTER TABLE `hosts` ADD CONSTRAINT `c_hosts_1` FOREIGN KEY (`プロキシ_hostid`) REFERENCES `hosts` (`hostid`);
+ ALTER TABLE `hosts` ADD CONSTRAINT `c_hosts_1` FOREIGN KEY (`proxy_hostid`) REFERENCES `hosts` (`hostid`);
  ALTER TABLE `hosts` ADD CONSTRAINT `c_hosts_2` FOREIGN KEY (`maintenanceid`) REFERENCES `maintenances` (`maintenanceid`);
 ```
 
-[正常に投入できたファイル](attach:image/プロキシ.sql)も添付しておきます。
+[正常に投入できたファイル](attach:image/proxy.sql)も添付しておきます。
 
 データベースを再作成し、初期データを投入するコマンドを実行することで無事登録できました。
 
@@ -216,7 +216,7 @@ cat /usr/share/doc/zabbix-sql-scripts/mysql/proxy.sql | mysql -uzabbix -p zabbix
 
 ### zabbix プロキシ の設定
 
-`/etc/zabbix/zabbix_agentd.conf` を以下の項目を修正します。
+`/etc/zabbix/zabbix_proxy.conf` を以下の項目を修正します。
 
 ```bash
 Server=x.x.x.x
@@ -281,6 +281,9 @@ zabbix サーバーにログインし、`管理→プロキシ→プロキシの
 最新データの受信が直近になっていればOKです。
 ![](images/2022-04-10_02h47_05.jpg)
 
+Zabbix監視にプロキシ監視の手法を加えることで柔軟で広範囲の監視が検討できます。
+
+それでは次回の記事でお会いしましょう。
 
 ## 参考サイト
 - [オープンソースソフトウェアへの取り組み： 技術コラム・特集： ZABBIX大解説： 第5回 応用編 （2/3） ｜ SCSK株式会社](https://www.scsk.jp/product/oss/tec_guide/zabbix/1_zabbix5_2.html)
