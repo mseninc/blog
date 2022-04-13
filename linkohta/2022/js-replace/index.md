@@ -1,5 +1,5 @@
 ---
-title: 【備忘録】 Node.js 15 以前で replaceAll をする方法
+title: 【備忘録】 replace を使って replaceAll をする方法
 date: 
 author: linkohta
 tags: [JavaScript]
@@ -14,25 +14,25 @@ JavaScript で文字列を処理するときに使う関数の 1 つとして `r
 
 `replace()` は最初に引っかかった文字列だけを置き換えますが、 `replaceAll()` は一致した文字列すべてを置き換えます。
 
-この内、 `replaceAll()` は ECMAScript2021 で追加されたかなり新しい関数となっています。
+この内、 `replaceAll()` は ES2021 で追加されたかなり新しい関数となっています。
 
-そのため、 ECMAScript2021 を搭載していない 15 以前の Node.js では使用できません。
+そのため、 15 以前の Node.js などの ES2021 を搭載していない環境では使用できません。
 
-今回は 15 以前の Node.js で `replaceAll()` と同じことを `replace()` で行う方法を紹介します。
+今回は 15 以前の Node.js で `replaceAll()` と同じことを `replace()` を使って行う方法を紹介します。
 
 ## 対象
 
-- Node.js 15 以前などの ECMAScript2021 が搭載されていないもの
+- Node.js 15 以前などの ES2021 が搭載されていない環境
 
 ## replace で全置換する方法
 
-`replace()` で全置換する方法ですが、とてもシンプルです。
+`replace()` で全置換する方法はとてもシンプルです。
 
 置換対象の文字列を g オプション付きの正規表現で書くだけです。
 
-g オプションは置き換えたい文字列を指定した時にその文字が複数含まれている場合に、そのすべてを置き換えるオプションです。
+JavaScript で正規表現を利用するときは `''`, `""` などで囲う代わりに `//` で囲います。
 
-また、 JavaScript で正規表現を利用するときは `''`, `""` などで囲う代わりに `//` で囲います。
+g オプションは置き換えたい文字列を指定した時にその文字が複数含まれている場合に、そのすべてを置き換えるオプションです。
 
 以下はソースコード例と実行結果です。
 
@@ -41,8 +41,13 @@ const str = 'hogehoge';
 str.replace(/h/g, 'r'); // rogeroge
 ```
 
-![](images/2022-03-22_17h35_45.png)
+![実行結果](images/2022-03-22_17h35_45.png)
 
-少し短い記事ですが、今回はここまで。
+## 参考サイト
+
+- [String.prototype.replaceAll() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll)
+- [String.prototype.replace() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
+
+少し短い記事ですが、ここまでとなります。
 
 それではまた、別の記事でお会いしましょう。
