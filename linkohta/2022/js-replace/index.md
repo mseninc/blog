@@ -36,18 +36,23 @@ g オプションは置き換えたい文字列を指定した時にその文字
 
 以下はソースコード例と実行結果です。
 
-```js
+```js:title=replaceAllの場合
+const str = 'hogehoge';
+str.replaceAll('h','r'); // rogeroge
+```
+
+![実行結果 replaceAll の場合](images/2022-04-13_17h09_22.png)
+
+```js:title=replaceの場合
 const str = 'hogehoge';
 str.replace(/h/g, 'r'); // rogeroge
 ```
 
-![実行結果](images/2022-03-22_17h35_45.png)
+![実行結果 replace の場合](images/2022-03-22_17h35_45.png)
 
 ## 参考サイト
 
 - [String.prototype.replaceAll() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll)
 - [String.prototype.replace() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
-
-少し短い記事ですが、ここまでとなります。
 
 それではまた、別の記事でお会いしましょう。
