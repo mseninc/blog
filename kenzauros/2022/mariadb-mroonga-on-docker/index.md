@@ -3,7 +3,7 @@ title: MariaDB の Docker で全文検索エンジン Mroonga を有効化して
 date: 
 author: kenzauros
 tags: [MariaDB, Mroonga, MeCab]
-description: MySQL 用の日本語全文検索ストレージエンジンである Mroonga と MeCab トークナイザーを MariaDB の Docker イメージで使えるようにする方法を紹介します。
+description: MySQL 用の日本語全文検索ストレージエンジンで Mroonga と MeCab トークナイザーを MariaDB の Docker イメージで使えるようにする方法を紹介します。
 ---
 
 **Mroonga は MySQL 用の日本語全文検索ストレージエンジン**です。テーブル作成時のエンジンを指定して、インデックスを作成するだけで全文検索ができるようになり、とても便利です。
@@ -193,7 +193,7 @@ Mroonga が正常にインストールできているか確認します。
 
 - [4.1. インストールチェック — Mroonga v12.02 documentation](https://mroonga.org/ja/docs/tutorial/installation_check.html)
 
-コンテナーに入った状態で `mysql` にログインし、 **`SHOW ENGINES;`** を実行してみます。
+コンテナーに入ってから `mysql` にログインし、 **`SHOW ENGINES;`** を実行してみます。
 
 ```:title=bash
 $ docker-compose exec db bash 👈 Docker に入る
@@ -334,6 +334,9 @@ echo
 
 ファイル名もテーブルの作成などより先に実行されれば、なんでもかまいません。 `/docker-entrypoint-initdb.d` 内のファイルは名前順に実行されます。
 
+
+## Mroonga エンジンの使用方法
+
 ### Mroonga エンジンを使ったテーブル作成と全文検索インデックスの追加
 
 Mroonga エンジンを使ったテーブルを作成するには下記のように `ENGINE` に `mroonga` を指定します。
@@ -357,6 +360,18 @@ ALTER TABLE employees ADD FULLTEXT INDEX ix_ft_name_en (name_en) COMMENT 'tokeni
 
 `TokenMecab` だと MeCab トークナイザー、 `TokenBigram` だとバイグラムトークナイザーが使われます。
 
+その他、下記の公式情報にあるトークナイザーが利用できるようです。
+（※公式ドキュメントは v12 系の情報のため v7 系では使えないものがあるかもしれませんのでご注意ください。）
+
+- [4.3. ストレージモード — Mroonga v12.02 documentation](https://mroonga.org/ja/docs/tutorial/storage.html?highlight=%E3%83%88%E3%83%BC%E3%82%AF%E3%83%8A%E3%82%A4%E3%82%B6%E3%83%BC#how-to-specify-the-parser-for-full-text-search)
+
+また、 `my.cnf` などで下記のように指定するとデフォルトのトークナイザーを指定できるようです。
+
+```ini:title=my.cnf
+[mysqld]
+mroonga_default_tokenizer=TokenMecab
+```
+
 ### Mroonga エンジンの注意
 
 **ストレージエンジンを Mroonga にしたテーブルでは、 NULL 値で指定したデータはカラムのデフォルト値として扱われます。**
@@ -368,6 +383,7 @@ NULL で INSERT/UPDATE して、 SELECT して NULL が返ってくると信じ�
 その他 Mroonga に関する制限事項は公式情報を参照してください。
 
 - [5.6. 制限事項 — Mroonga v12.02 documentation](https://mroonga.org/ja/docs/reference/limitations.html)
+
 
 ## まとめ
 
