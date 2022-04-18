@@ -1,5 +1,5 @@
 ---
-title: 【備忘録】 replace を使って replaceAll をする方法
+title: 【備忘録】 JavaScript で replace を使って replaceAll をする方法
 date: 
 author: linkohta
 tags: [JavaScript]
@@ -12,9 +12,9 @@ JavaScript で文字列を処理するときに使う関数の 1 つとして `r
 
 どちらも第一引数で指定した文字列に一致する箇所を第二引数の文字列に置き換える関数です。
 
-`replace()` は最初に引っかかった文字列だけを置き換えますが、 `replaceAll()` は一致した文字列すべてを置き換えます。
+**`replace()` は最初に引っかかった文字列だけを置き換えますが、 `replaceAll()` は一致した文字列すべてを置き換えます。**
 
-この内、 `replaceAll()` は ES2021 で追加されたかなり新しい関数となっています。
+この内、 **`replaceAll()` は ES2021 で追加されたかなり新しい関数**となっています。
 
 そのため、 15 以前の Node.js などの ES2021 を搭載していない環境では使用できません。
 
@@ -36,17 +36,12 @@ g オプションは置き換えたい文字列を指定した時にその文字
 
 以下はソースコード例と実行結果です。
 
-```js:title=replaceAllの場合
-const str = 'hogehoge';
-str.replaceAll('h','r'); // rogeroge
+```js
+'hogehoge'.replaceAll('h','r'); // replaceAll の場合
+'hogehoge'.replace(/h/g, 'r'); // replace の場合
 ```
 
 ![実行結果 : replaceAll の場合](images/2022-04-13_17h09_22.png)
-
-```js:title=replaceの場合
-const str = 'hogehoge';
-str.replace(/h/g, 'r'); // rogeroge
-```
 
 ![実行結果 : replace の場合](images/2022-03-22_17h35_45.png)
 
