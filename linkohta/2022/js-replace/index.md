@@ -41,9 +41,7 @@ g オプションは置き換えたい文字列を指定した時にその文字
 'hogehoge'.replace(/h/g, 'r'); // replace の場合
 ```
 
-![実行結果 : replaceAll の場合](images/2022-04-13_17h09_22.png)
-
-![実行結果 : replace の場合](images/2022-03-22_17h35_45.png)
+![実行結果](images/2022-04-18_17h31_40.png)
 
 ## 参考サイト
 
