@@ -1,6 +1,6 @@
 ---
 title: MariaDB の Docker で全文検索エンジン Mroonga を有効化して起動する
-date: 
+date: 2022-04-20
 author: kenzauros
 tags: [MariaDB, Mroonga, MeCab]
 description: MySQL 用の日本語全文検索ストレージエンジンで Mroonga と MeCab トークナイザーを MariaDB の Docker イメージで使えるようにする方法を紹介します。
