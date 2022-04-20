@@ -99,6 +99,60 @@ class User extends Model
 
 メソッド名に `get●●Attribute` や `set●●Attribute` のような接頭辞や接尾辞が不要になっており、メソッドを1つにまとめることができるようになりました。また、戻り値の型を `Illuminate\Database\Eloquent\Casts\Attribute` にしておかないとアクセサ・ミューテータとして動作しないので注意してください。
 
+tinker で実際の動作を確認してみました。
+
+```
+>>> $user = new App\Models\User();
+=> App\Models\User {#3493}
+>>> $user->zip_code = '１２３ー４５６７';
+=> "１２３ー４５６７"
+>>> $user->zip_code
+=> "123-4567"
+```
+
+アクセサが期待通りの値を返していることが確認できます。また、var_dump() 等でモデルの中身を確認すると `["zip_code"] => string(7) "1234567"` としっかり変換後の値が格納されてました。
+
+### 戻り値の型宣言について
+
+試しに戻り値の型を宣言しなかった場合の動作を確認してみました。
+
+```php
+public function zipCode()
+{
+    return new Attribute(
+        // アクセサ : 3桁-4桁の書式に変換
+        get: fn ($value) => substr($value ,0,3) . '-' . substr($value ,3),
+        // ミューテータ : 全角数字を半角数字に変換し、半角数字のみを抜き出す
+        set: fn ($value) => preg_replace('/[^0-9]/', '', mb_convert_kana($value, 'n')),
+    );
+}
+```
+
+これで実行してみると...
+
+```
+>>> $user = new App\Models\User();
+=> App\Models\User {#3493}
+>>> $user->zip_code = '１２３ー４５６７';
+=> "１２３ー４５６７"
+>>> $user->zip_code
+=> "１２３ー４５６７"
+>>>
+```
+
+`zipCode()` というファンクションは実装されていることになりますが、 `$user->zip_code` はただのプロパティになってしまいます。
+
+ちなみに、 `zipCode()` を呼び出してみると `Illuminate\Database\Eloquent\Casts\Attribute` のオブジェクトが返ってきました。
+
+```
+>>> $user->zipCode();
+=> Illuminate\Database\Eloquent\Casts\Attribute {#3489
+     +get: Closure($value) {#3491 …4},
+     +set: Closure($value) {#3492 …4},
+     +withObjectCaching: true,
+   }
+```
+
 ## まとめ
 
 個人的には、メソッドをまとめることができるようになった点が気に入りました。
