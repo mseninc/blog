@@ -15,6 +15,9 @@
         "allowEmojiAtEnd": true,
         "forceAppendPeriod": false
       },
+      "max-kanji-continuous-len": {
+        "max": 8
+      },
       "no-doubled-joshi": {
         "severity" : "warning",
         "allow": ["も", "としても", "にも"]
