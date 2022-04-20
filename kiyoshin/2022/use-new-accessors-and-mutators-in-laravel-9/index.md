@@ -8,17 +8,17 @@ description:
 
 こんにちは。
 
-**Laravel** の新しいバージョンとなる **Laravel 9** が 2022/02/08 にリリースされ、1ヵ月程度経過しました。
+**Laravel** の新しいバージョンとなる **Laravel 9** が 2022/02/08 にリリースされました。
 
 今回のバージョンは、 Laravel 6 以来の長期サポート (**LTS**) となるため、しばらくお世話になりそうです。
 
 バージョンアップに伴い、いくつか新しい機能が追加されていますが、主にバックエンド側のプログラムを実装する機会が多い私としては、 [新たな記述方法が追加されたアクセサとミューテータ](https://laravel.com/docs/9.x/releases#eloquent-accessors-and-mutators) に興味津々です。
 
-というわけで、さっそく使ってみたいと思います。
+というわけで、さっそく使ってみました。
 
 ## Laravel 8 以前のアクセサとミューテータの書き方
 
-さっそく使ってみるといいましたが、まずは従来のアクセサとミューテータについて触れておきたいと思います。
+さっそく使ってみるといいましたが、まずは従来のアクセサとミューテータについて触れておきます。
 
 ```php
 namespace App\Models;
@@ -73,13 +73,13 @@ $user->save();
 
 ## Laravel 9 での新しいアクセサとミューテータの書き方
 
-お待たせしました本題です。今回追加された記述方法で先ほどのアクセサとミューテータを実装してみたいと思います。
+お待たせしました。本題です。今回追加された記述方法で先ほどのアクセサとミューテータを実装してみます。
 
 ```php
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Casts\Attribute; // 👈 こちら追記が必要です
+use Illuminate\Database\Eloquent\Casts\Attribute; // 👈 この追記が必要です
 
 class User extends Model
 {
@@ -95,9 +95,9 @@ class User extends Model
 }
 ```
 
-アロー関数を使ったりしているのもありますが、ずいぶんと見た目がかわってしまいました。
+アロー関数を使っているのもありますが、ずいぶんと見た目が変わりました。
 
-メソッド名に `get●●Attribute` や `set●●Attribute` のような接頭辞が不要になっており、メソッドを1つにまとめることができるようになりました。また、戻り値の型を `Illuminate\Database\Eloquent\Casts\Attribute` にしておかないとアクセサ・ミューテータは定義されないので注意してください。
+メソッド名に `get●●Attribute` や `set●●Attribute` のような接頭辞や接尾辞が不要になっており、メソッドを1つにまとめることができるようになりました。また、戻り値の型を `Illuminate\Database\Eloquent\Casts\Attribute` にしておかないとアクセサ・ミューテータとして動作しないので注意してください。
 
 ## まとめ
 
