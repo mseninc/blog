@@ -128,7 +128,7 @@ public function zipCode()
 }
 ```
 
-これで実行してみると...
+これで実行してみると。。。
 
 ```
 >>> $user = new App\Models\User();
@@ -140,7 +140,7 @@ public function zipCode()
 >>>
 ```
 
-`zipCode()` というファンクションは実装されていることになりますが、 `$user->zip_code` はただのプロパティになってしまいます。
+`zipCode()` というファンクションは実装されていることになりますが、 `$user->zip_code` はただのプロパティーになってしまいます。
 
 ちなみに、 `zipCode()` を呼び出してみると `Illuminate\Database\Eloquent\Casts\Attribute` のオブジェクトが返ってきました。
 
