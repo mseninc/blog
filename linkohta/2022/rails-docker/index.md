@@ -6,7 +6,9 @@ tags: [Web, Ruby on Rails, Docker]
 description: 
 ---
 
-link です。
+link です。 Rails のバージョンが 7 に上がりましたが、 Webpacker がデフォルトでは搭載されなくなった影響で Rails に関するいろいろな情報が古くなっています。
+
+今回は Rails 7 に対応する一環として Docker 上で Ruby on Rails 7 の開発環境を構築する手順を紹介します。
 
 ## 前提条件
 
@@ -35,15 +37,9 @@ cd docker-rails
 Gemfile.lock は書き換えなくて大丈夫です。
 
 ```title=Dockerfile
-FROM ruby:3.1.2
+FROM ruby:3.1
 
-# yarnパッケージ管理ツールをインストール
-RUN apt-get update && apt-get install -y curl apt-transport-https wget && \
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
-apt-get update && apt-get install -y yarn
-
-RUN apt-get update -qq && apt-get install -y nodejs yarn
+RUN apt update -qq && apt install -y nodejs postgresql-client
 RUN mkdir /myapp
 WORKDIR /myapp
 COPY Gemfile /myapp/Gemfile
@@ -51,32 +47,25 @@ COPY Gemfile.lock /myapp/Gemfile.lock
 RUN bundle install
 COPY . /myapp
 
-RUN yarn install --check-files
-RUN bundle exec rails webpacker:compile
-
-# コンテナ起動時に実行させるスクリプトを追加
+# Add a script to be executed every time the container starts.
 COPY entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/entrypoint.sh
 ENTRYPOINT ["entrypoint.sh"]
 EXPOSE 3000
 
-# Rails サーバ起動
+# Start the main process.
 CMD ["rails", "server", "-b", "0.0.0.0"]
 ```
 
 ```title=docker-compose.yml
-version: '3'
+version: "3.9"
 services:
   db:
-    image: mysql:5.7
-    environment:
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: root
-    ports:
-      - "3306:3306"
+    image: postgres
     volumes:
-      - ./tmp/db:/var/lib/mysql
-
+      - ./tmp/db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: password
   web:
     build: .
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
@@ -102,25 +91,13 @@ rm -f /myapp/tmp/pids/server.pid
 exec "$@"
 ```
 
-## コンテナイメージのビルド
-
-次は、先ほど作成した Docker 関連ファイルを使ってコンテナイメージをビルドします。
-
-以下のコマンドを入力します。
-
-```title=ビルドコマンド
-docker-compose build
-```
-
-そこそこ時間がかかりますのでしばらく待ちます。
-
 ## 起動
 
 次は `docker-compose` コマンドを使って `rails new` を実行し、 Rails プロジェクトを作成しましょう。
 
-`docker-compose run` に続けてサービス名を指定し、さらにコンテナ内で実行したいコマンドを続けていきます。
+`docker-compose run` に続けてサービス名を指定し、さらにコンテナー内で実行したいコマンドを続けていきます。
 
-Rails が動くサービスには web という名前を docker-compose.yml で付けたのでコマンドでのコンテナ名としては web を当てはめます。
+Rails が動くサービスには `web` という名前を docker-compose.yml で付けたのでコマンドでのコンテナー名としては `web` を当てはめます。
 
 以下のコマンドを実行してください。
 
@@ -130,51 +107,67 @@ docker-compose run web rails new . --force --no-deps --database=mysql
 
 通常の `rails new` と同じように、ディレクトリ内に関連ファイルが生成されます。
 
-再度、ビルドコマンドを実行して足りないパッケージをインストールします。
+## コンテナーイメージのビルド
+
+次は、先ほど作成した Docker 関連ファイルを使ってコンテナーイメージをビルドします。
+
+以下のコマンドを入力します。
+
+```title=ビルドコマンド
+docker-compose build
+```
+
+そこそこ時間がかかりますのでしばらく待ちます。
 
 ## データベース作成
 
+コンテナー上で利用するデータベースを作成します。
+
+`config/database.yml` を以下のように書き換えます。
+
 ```yml:title=config/database.yml
 default: &default
-  adapter: mysql2
-  encoding: utf8mb4
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
-  password:
-  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  host: db
+  username: postgres
+  password: password
+  pool: 5
 
 development:
   <<: *default
   database: myapp_development
-  host: db
-  username: root
-  password: password
+
 
 test:
   <<: *default
   database: myapp_test
-  host: db
-  username: root
-  password: password
+
 ```
 
-## コンテナを起動
+書き換えが終わったら、以下のコマンドを実行して、データベースを作成しましょう。
 
-コンテナを起動するため、次のコマンドを実行します。
+```
+docker-compose run web rails db:create
+```
 
-```title=コンテナ起動コマンド
+## コンテナーを起動
+
+最後にコンテナーを起動するため、次のコマンドを実行します。
+
+```title=コンテナー起動コマンド
 docker-compose up -d
 ```
 
 `docker-compose up` は docker-compose.yml に基づいて起動するコマンドです。
 
-コンテナ起動時にコンテナ内で実行させたいコマンドは Dockerfile で設定しているので、コンテナを起動させると Rails サーバが立ち上がります。
+コンテナー起動時にコンテナー内で実行させたいコマンドは Dockerfile で設定しているので、コンテナーを起動させると Rails サーバーが立ち上がります。
 
 また、オプションの -d を付けるとバックグラウンドで起動させることができます。
 
 ## 動作確認
 
-これで無事に Rails の開発用サーバが起動したことになります。
+これで無事に Rails の開発用サーバーが起動したことになります。
 
 ブラウザのアドレスバーに http://localhost:3000/ と入力し、起動を確認してみましょう。
 
@@ -187,3 +180,9 @@ docker-compose up -d
 - [Quickstart: Compose and Rails | Docker Documentation](https://docs.docker.com/samples/rails/)
 
 ## まとめ
+
+今回は Docker 上 に Rails 7 の開発環境を構築する手順を紹介しました。
+
+今後も Rails 7 に対応した情報を発信していきたいと思います。
+
+それではまた、別の記事でお会いしましょう。
