@@ -36,7 +36,7 @@ cd docker-rails
 次に作成したファイルの中身を以下のように変更します。
 Gemfile.lock は書き換えなくて大丈夫です。
 
-```title=Dockerfile
+```Dockerfile:title=Dockerfile
 FROM ruby:3.1
 
 RUN apt update -qq && apt install -y nodejs postgresql-client
@@ -47,17 +47,15 @@ COPY Gemfile.lock /myapp/Gemfile.lock
 RUN bundle install
 COPY . /myapp
 
-# Add a script to be executed every time the container starts.
 COPY entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/entrypoint.sh
 ENTRYPOINT ["entrypoint.sh"]
 EXPOSE 3000
 
-# Start the main process.
 CMD ["rails", "server", "-b", "0.0.0.0"]
 ```
 
-```title=docker-compose.yml
+```yml:title=docker-compose.yml
 version: "3.9"
 services:
   db:
@@ -77,12 +75,12 @@ services:
       - db
 ```
 
-```title=Gemfile
+```Gemfile:title=Gemfile
 source 'https://rubygems.org'
 gem 'rails', '~> 7.0.2'
 ```
 
-```title=entrypoint.sh
+```sh:title=entrypoint.sh
 #!/bin/bash
 set -e
 
@@ -102,10 +100,12 @@ Rails が動くサービスには `web` という名前を docker-compose.yml �
 以下のコマンドを実行してください。
 
 ```title=Railsプロジェクト生成コマンド
-docker-compose run web rails new . --force --no-deps --database=mysql
+docker-compose run web rails new . --force --no-deps --database=postgresql
 ```
 
 通常の `rails new` と同じように、ディレクトリ内に関連ファイルが生成されます。
+
+この時、 `Could not find gem 'sprockets-rails' in locally installed gems.` というエラーが表示されるかもしれませんが、次のコンテナーイメージのビルドで解消されますので大丈夫です。
 
 ## コンテナーイメージのビルド
 
@@ -138,11 +138,9 @@ development:
   <<: *default
   database: myapp_development
 
-
 test:
   <<: *default
   database: myapp_test
-
 ```
 
 書き換えが終わったら、以下のコマンドを実行して、データベースを作成しましょう。
