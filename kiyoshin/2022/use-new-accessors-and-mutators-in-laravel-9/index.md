@@ -1,6 +1,6 @@
 ---
 title: Laravel 9 の新しいアクセサとミューテータを使ってみた
-date: 
+date: 2022-04-22
 author: kiyoshin
 tags: [Laravel, PHP]
 description: 
