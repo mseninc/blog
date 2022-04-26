@@ -1061,8 +1061,6 @@ rules:
     expected: 始めた
   - pattern: はじま
     expected: 始ま
-  - pattern: はじめ
-    expected: 始め
   - pattern: かたまり
     expected: 塊
   - pattern: やりかた
@@ -2168,7 +2166,7 @@ rules:
   - expected: マネージャー$1
     pattern:  /マネージャ([^ー])/
   - expected: メンテナー$1
-    pattern:  /メンテナ(?!ンス)([^ー]|)/
+    pattern:  /メンテナ(?!ンス)([^ー])/
   - expected: メンバー
     # 人間の意味では「メンバー」、変数などは「メンバ」
     pattern:  /メンバ(?!ー)/
@@ -2309,8 +2307,8 @@ rules:
     pattern:  /CSS-Sprite|\bCSS Sprite\b/
   - expected: DBFlute
     pattern:  /\bDBFlute\b/i
-  - expected: Debian GNU/Linux
-    pattern:  /\bDebian\b|Debian\/GNU Linux/
+  - expected: Debian
+    pattern:  /debian/
   - expected: $1DeNA$2
     pattern:  /(?:([^/.])ディー・エヌ・エー)|(?:ディー・エヌ・エー([^/.]))/
   - expected: $1DeNA$2
