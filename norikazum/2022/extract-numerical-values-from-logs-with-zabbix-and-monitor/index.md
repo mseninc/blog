@@ -1,5 +1,5 @@
 ---
-title: zabbixでログから数値を抽出して監視する
+title: Zabbixでログから数値を抽出して監視する
 date: 
 author: norikazum
 tags: [zabbix]
@@ -8,25 +8,27 @@ description:
 
 こんにちは。
 
-今回は、Zabbixを資料しログから数値を抽出して監視する方法を紹介します。
+今回は、Zabbixを使用しログから数値を抽出して監視する方法を紹介します。
 
-[過去の記事](https://mseeeen.msen.jp/install-clam-antivirus-on-amazon-linux-2-to-automate-checks/)で、ClamAVを利用してログファイルを出力する方法を紹介しましたが、これを応用しマルウェアが検知されたことをzabbixで検知したいと思います。
+[過去の記事](https://mseeeen.msen.jp/install-clam-antivirus-on-amazon-linux-2-to-automate-checks/)で、ClamAVを利用してログファイルを出力する方法を紹介しました。これを応用しマルウェアが検知されたことをZabbixで検知します。
 
 ## 環境
 - Zabbix server 6.0.1
 
 ![](images/2022-04-09_23h42_46.jpg)
 
-ログファイルが zabbix ユーザーからアクセスできる必要があります。
+ログファイルが Zabbix ユーザーからアクセスできる必要があります。
 環境によっては、権限の調整が必要になりますので以下の記事あたりを参考に設定してください。
+
 [技術メモメモ: ZabbixでAllowRoot=1をせずに/var/log/messagesなどを監視する方法](https://tech-mmmm.blogspot.com/2018/03/zabbixallowroot1varlogmessages.html)
 
 ## 監視仕様
 - `scanvirus.log` から `Infected files: 数字` を検出する。
-- 数字の部分を抜き出して、`0以外` のとき通報する。
+- 数字の部分を抜き出して、`0 を超える` のとき通報する。
+※`scanvirus.log` は [過去の記事](https://mseeeen.msen.jp/install-clam-antivirus-on-amazon-linux-2-to-automate-checks/) を `clamav_check_YYYYMMDD-HHMMSS.log` のファイル名を変更して応用しています。
 
-## zabbix の設定
-それでは、zabbixの設定をしていきましょう。
+## Zabbix の設定
+それでは、Zabbixの設定をしていきましょう。
 
 流用できるよう、テンプレートを作成します。
 `設定→テンプレート→テンプレートの作成` をクリックします。
@@ -37,15 +39,13 @@ description:
 ### アイテム
 以下のアイテムを作成します。
 
-```
-名前：マルウェアファイル検出監視
-タイプ：Zabbixエージェント(アクティブ)
-キー：log[/var/log/scanvirus.log,"Infected files: ([0-9]+)",,,skip,\1]
-データ型：ログ
-監視間隔：1m
-```
+- 名前：マルウェアファイル検出監視
+- タイプ：Zabbixエージェント(アクティブ)
+- キー：log[/var/log/scanvirus.log,"Infected files: ([0-9]+)",,,skip,\1]
+- データ型：ログ
+- 監視間隔：1m
 
-![](images/2022-04-09_23h54_44.jpg)
+![マルウェアファイル検出監視用アイテムの作成](images/2022-04-09_23h54_44.jpg)
 
 log 関数のフォーマットは、`log[/path/to/file/file_name,<regexp>,<encoding>,<maxlines>,<mode>,<output>]` となっています。
 
@@ -58,15 +58,13 @@ log 関数のフォーマットは、`log[/path/to/file/file_name,<regexp>,<enco
 ## トリガー
 以下のトリガーを作成します。
 
-```
-名前：Found infected files : {HOST.NAME}
-深刻度：重度の障害
-条件式：`last(/Scan Virus Log Infected files Check/log[/var/log/scanvirus.log,"Infected files: ([0-9]+)",,,skip,\1])>=1`
-```
+- 名前：Found infected files : {HOST.NAME}
+- 深刻度：重度の障害
+- 条件式：`last(/Scan Virus Log Infected files Check/log[/var/log/scanvirus.log,"Infected files: ([0-9]+)",,,skip,\1])>=1`
 
 ![](images/2022-04-09_23h59_52.jpg)
 
-条件式はアイテムを指定していますが、最後の `>=1` が 数字の部分が `0以外` となります。
+条件式は前述で作成したアイテムを指定していますが、最後の `>=1` が `1以上` を表します。
 
 ## あとがき
 本記事の設定で、マルウェアが1つ以上検出された場合に検出されます。
