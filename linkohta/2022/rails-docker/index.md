@@ -89,6 +89,18 @@ rm -f /myapp/tmp/pids/server.pid
 exec "$@"
 ```
 
+## コンテナーイメージのビルド
+
+次は、先ほど作成した Docker 関連ファイルを使ってコンテナーイメージをビルドします。
+
+以下のコマンドを入力します。
+
+```title=ビルドコマンド
+docker-compose build
+```
+
+そこそこ時間がかかりますのでしばらく待ちます。
+
 ## 起動
 
 次は `docker-compose` コマンドを使って `rails new` を実行し、 Rails プロジェクトを作成しましょう。
@@ -103,21 +115,7 @@ Rails が動くサービスには `web` という名前を docker-compose.yml �
 docker-compose run web rails new . --force --no-deps --database=postgresql
 ```
 
-通常の `rails new` と同じように、ディレクトリ内に関連ファイルが生成されます。
-
-この時、 `Could not find gem 'sprockets-rails' in locally installed gems.` というエラーが表示されるかもしれませんが、次のコンテナーイメージのビルドで解消されますので大丈夫です。
-
-## コンテナーイメージのビルド
-
-次は、先ほど作成した Docker 関連ファイルを使ってコンテナーイメージをビルドします。
-
-以下のコマンドを入力します。
-
-```title=ビルドコマンド
-docker-compose build
-```
-
-そこそこ時間がかかりますのでしばらく待ちます。
+これで通常の `rails new` と同じように、ディレクトリ内に関連ファイルが生成されます。
 
 ## データベース作成
 
