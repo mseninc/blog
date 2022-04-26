@@ -1,6 +1,6 @@
 ---
 title: 【備忘録】 JavaScript で replace を使って replaceAll をする方法
-date: 
+date: 2022-04-26
 author: linkohta
 tags: [JavaScript]
 description: 
