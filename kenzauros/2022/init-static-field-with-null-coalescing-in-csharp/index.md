@@ -105,7 +105,7 @@ public static class MyAssets {
 
 - `_MyBrushes` が null でなければ `_MyBrushes` を返す
 - `_MyBrushes` が null なら初期化して `_MyBrushes` に代入する
-- `_MyBrushes` が null を返す
+- `_MyBrushes` を返す
 
 ロジックはわかりやすいのですが、やりたいことの割にコードが長いですね。
 
