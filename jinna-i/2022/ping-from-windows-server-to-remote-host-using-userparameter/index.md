@@ -1,6 +1,6 @@
 ---
 title: "[zabbix] UserParameter を使って Windows Server からリモートホストに ping 監視する"
-date: 
+date: 2022-04-29
 author: jinna-i
 tags: [Zabbix]
 description: 
