@@ -1,6 +1,6 @@
 ---
 title: Visual Studio のクラステンプレートで標準のアクセス修飾子を public にする
-date: 
+date: 2022-05-02
 author: kenzauros
 tags: [Visual Studio, C#]
 description: Visual Studio で新しいクラスを追加したときのデフォルトのテンプレートを変更してみます。
