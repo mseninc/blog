@@ -1,6 +1,6 @@
 ---
 title: C# で null 合体代入演算子を使って読み取り専用プロパティーを動的に初期化する
-date: 
+date: 2022-05-04
 author: kenzauros
 tags: [C#, .NET]
 description: 今回は C# 8.0 から導入された null 合体代入演算子を使って、 getter のみのプロパティーの値を動的に初期化する方法を紹介します。
