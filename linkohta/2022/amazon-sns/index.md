@@ -12,11 +12,11 @@ link です。
 
 ## Amazon SNS とは
 
-Amazon SNS とは AWS のサービスの一つで、アプリケーションからの通知を可能にするサービスです。ユーザーが何かを行ったタイミングで通知する「イベントドリブン」なメッセージングを手軽に実現できます。
+Amazon SNS とは AWS のサービスの 1 つで、アプリケーションからの通知を可能にするサービスです。ユーザーが何かを行ったタイミングで通知する「イベントドリブン」なメッセージングを手軽に実現できます。
 
 >Amazon Simple Notification Service (Amazon SNS) は、配信者から受信者 (または生産者から消費者) へのメッセージ配信を提供するマネージドサービスです。発行者は、論理アクセスポイントおよび通信チャネルであるトピックにメッセージを送信することで、受信者と非同期的に通信します。クライアントは、Amazon Kinesis Data Firehose、Amazon SQS、AWS Lambda、HTTP、E メール、モバイルプッシュ通知、モバイルテキストメッセージ (SMS) などのサポートされたエンドポイントを使用して SNS トピックにサブスクライブし発行されたメッセージを受信できます。
 >
->出展 : [Amazon SNS とは - Amazon Simple Notification Service](https://docs.aws.amazon.com/ja_jp/sns/latest/dg/welcome.html)
+>出典 : [Amazon SNS とは - Amazon Simple Notification Service](https://docs.aws.amazon.com/ja_jp/sns/latest/dg/welcome.html)
 
 ## サブスクリプションの準備
 
@@ -64,7 +64,7 @@ Amazon SNS のトピックの管理画面で E メールのサブスクリプシ
 
 ![SMS のサブスクリプション 1](images\2022-05-06_22h33_04.png)
 
-この時に SMS サンドボックスに電話番号を追加することになると思います。
+この時、 SMS サンドボックスに電話番号を追加することになると思います。
 電話番号を入力して「電話番号を追加」ボタンをクリックします。
 
 ![SMS のサブスクリプション 2](images\2022-05-06_22h32_02.png)
@@ -85,6 +85,6 @@ Amazon SNS のトピックの管理画面で E メールのサブスクリプシ
 
 今回は Amazon SNS でサブスクリプションをする方法を勉強しました。
 
-Amazon SNS を利用すれば、非常に簡単にサブスクリプションを行うシステムを構築できますので是非活用してみてください。
+Amazon SNS を利用すれば、簡単にサブスクリプションを行うシステムを構築できますのでぜひ活用してみてください。
 
 それではまた、別の記事でお会いしましょう。
