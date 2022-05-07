@@ -2,7 +2,7 @@
 title: 【備忘録】rbenv の更新方法
 date: 
 author: linkohta
-tags: [Ruby]
+tags: [Ruby, Linux]
 description: 
 ---
 
