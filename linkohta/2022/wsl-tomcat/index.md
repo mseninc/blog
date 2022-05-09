@@ -13,7 +13,7 @@ link です。
 - Windows 10 もしくは Windows 11
 - WSL2 Ubuntu 20.04 以降
 
-## WSL 上で `systemd` を動かす
+## WSL 上で systemd を動かす
 
 WSL2 に Ubuntu をインストールし `systemctl` コマンドを実行すると以下のようなエラーが発生し実行できません。
 
