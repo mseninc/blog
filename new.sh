@@ -121,4 +121,10 @@ case $EDITOR in
     ;;
 esac
 
+echo $BOUNDARY
 echo "さぁ、執筆をはじめましょう！"
+echo
+echo "ヒント"
+echo "  textlint 校正 : npx textlint ${MD}"
+echo "  md ファイルを開く : code ${MD}"
+echo "  アイキャッチ画像のファイル名 : ${SLUG}.png または jpg"
