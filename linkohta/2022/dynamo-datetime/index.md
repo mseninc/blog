@@ -26,7 +26,11 @@ NoSQL な DynamoDB のデータの型は以下のようになっています。
 
 ## データ形式
 
-**ISO 8601 文字列**で保存すると日時データとして扱うことができます。
+先ほど引用したページの文字列の項目にある以下の記述の通り、**ISO 8601 文字列**で保存すると日時データとして扱うことができます。
+
+>文字列データ型を使用して、日付またはタイムスタンプを表すことができます。これを行う 1 つの方法は、これらの例に示すように、ISO 8601 文字列を使用することです。
+>
+>出典 : [命名ルールおよびデータ型 - Amazon DynamoDB](https://docs.aws.amazon.com/ja_jp/amazondynamodb/latest/developerguide/HowItWorks.NamingRulesDataTypes.html)
 
 ISO 8601 とは、 ISO が定めた日付および時刻に関連するデータの国際規格です。
 
