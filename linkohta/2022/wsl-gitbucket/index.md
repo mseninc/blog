@@ -43,7 +43,7 @@ $ cd /var/lib/tomcat9/webapps
 $ sudo wget https://github.com/gitbucket/gitbucket/releases/download/4.37.2/gitbucket.war
 ```
 
-Tomcat のユーザーフォルダを作成し、必要な権限を与えます。
+GitBucket の リポジトリの保存先となる Tomcat のユーザーフォルダを作成し、必要な権限を与えます。
 
 ```title=Tomcatのユーザーフォルダ
 $ sudo mkdir /home/tomcat9
