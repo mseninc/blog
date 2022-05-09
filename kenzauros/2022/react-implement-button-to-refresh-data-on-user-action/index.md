@@ -8,7 +8,7 @@ description:
 
 こんにちは、 kenzauros です。
 
-*Reack hooks で非同期にデータを取得してデータを表示するには useEffect を使用*します。
+*Reack hooks で非同期にデータを取得してデータを表示するには副作用を扱う useEffect フックを使用*します。
 
 通常、何らかの state が変更されたときにコンポーネントが再レンダリングされ、必要であれば useEffect が再実行されます。
 
@@ -26,7 +26,7 @@ description:
 
 *ユーザー ID の入力欄があり、その値が変更されるとユーザー情報を API から取得し、名前を表示する*というものです。更新がわかりやすいようにユーザー名はタイムスタンプをつけて動的に生成しています。
 
-```js{numberLines:1}:title=元のApp
+```js{numberLines:1}:title=元のApp.js
 import { useState, useEffect } from 'react'
 
 function App() {
@@ -62,9 +62,9 @@ export default App
 
 そこで、ここに *「Refresh ボタン」を追加して、ユーザー ID を変更せずにユーザー情報の再読込*をできるようにしましょう。
 
-発想としては「**state が更新されないと再実行されないのなら、更新する state を増やしちゃえばいいじゃん**」です。
+発想としては「**state が更新されないと再実行されないのなら、更新する state を追加しちゃえばいいじゃん**」です。
 
-```js{numberLines:1}{6,14,20}:title=Refreshボタン追加後のApp
+```js{numberLines:1}{6,14,20}:title=Refreshボタン追加後のApp.js
 import { useState, useEffect } from 'react'
 
 function App() {
@@ -100,10 +100,14 @@ export default App
 
 1. 「Refresh ボタン」用の state (`refreshKey`) を追加 (6 行目)
 2. `refreshKey` を useEffect の依存リスト (第2引数) に追加 (14 行目)
-3. 「Refresh ボタン」で `refreshKey` を更新 (18 行目)
+3. 「Refresh ボタン」で `refreshKey` を更新 (20 行目)
 
 この state は毎回更新されればなんでもよく、タイムスタンプでもいいと思いますが、この例のように数値をインクリメントしていくのが一番簡単でしょう。
 
+## まとめ
+
 これでまさに "REACTive" な動きが実現できました。
+
+イベントドリブンに慣れていると onClick に「更新する」ロジックを書かなければいけないという考えになりがちです。 React では state を更新することで画面に反映するという考え方を忘れないようにしましょう。
 
 簡単な内容でしたが、どなたかのお役に立てれば幸いです。
