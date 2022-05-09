@@ -79,12 +79,10 @@ $ docker images -a | grep "blog-gatsby" | awk '{print $3}' | xargs docker rmi �
 
 をまとめて行えます。
 
-使い方は `new.sh` に記事のスラグを指定して実行するだけです。
-
 git でワークツリーに変更中のファイルがある場合など、 git 操作がうまくいかなかった場合はエラーで中断されます。
 ワークツリーをクリーンな状態にして再試行してください。
 
-著者は [author.yaml](author.yaml) から読み込まれます。
+著者の一覧は [author.yaml](author.yaml) から読み込まれます。
 
 ```sh
 $ ./new.sh 記事のスラグ
