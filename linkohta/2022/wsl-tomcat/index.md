@@ -13,7 +13,7 @@ link です。
 - Windows 10 もしくは Windows 11
 - WSL2 Ubuntu 20.04 以降
 
-## genie のインストール
+## WSL 上で `systemd` を動かす
 
 WSL2 に Ubuntu をインストールし `systemctl` コマンドを実行すると以下のようなエラーが発生し実行できません。
 
@@ -25,9 +25,11 @@ Failed to connect to bus: Host is down
 
 これは `systemd` が PID1 で動作していないためです。
 
-Tomcat を Ubuntu 上で動作させるには `sytemd` が必要不可欠ですので、まずは `sytemd` を PID1 で稼働できるようにします。
+Tomcat を Ubuntu 上で動作させるには `systemd` が必要不可欠ですので、まずは `systemd` を PID1 で稼働できるようにします。
 
-WSL2 上で `sytemd` を PID1 で稼働できるようにするためのライブラリーとして **genie** が存在します。
+### genie のインストール
+
+WSL2 上で `systemd` を PID1 で稼働できるようにするためのライブラリーとして **genie** が存在します。
 
 この genie をインストールします。
 
