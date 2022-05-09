@@ -116,6 +116,11 @@ images ディレクトリを作成しています...
 index.md を作成しています...
 VS code で md ファイルを開きますか? [y/N] > y 👈 y を選ぶと VS code で index.md を開く
 さぁ、執筆をはじめましょう！
+
+ヒント
+  textlint 校正 : npx textlint kenzauros/2022/hogehoge/index.md
+  md ファイルを開く : code kenzauros/2022/hogehoge/index.md
+  アイキャッチ画像のファイル名 : hogehoge.png または jpg
 ```
 
 ### 文章校正 (textlint)
