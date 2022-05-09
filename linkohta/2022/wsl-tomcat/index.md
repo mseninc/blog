@@ -15,7 +15,7 @@ link です。
 
 ## genie のインストール
 
-WSL2 に Ubuntu をインストールし `systemctl` コマンドを実行すると以下のようなエラーが発生し実行することができません。
+WSL2 に Ubuntu をインストールし `systemctl` コマンドを実行すると以下のようなエラーが発生し実行できません。
 
 ```title=systemctlのエラーメッセージ
 $ systemctl
@@ -25,9 +25,9 @@ Failed to connect to bus: Host is down
 
 これは `systemd` が PID1 で動作していないためです。
 
-Tomcat を Ubuntu 上で動作させるには `sytemd` が必要不可欠なので、まずは `sytemd` を PID1 で稼働できるようにします。
+Tomcat を Ubuntu 上で動作させるには `sytemd` が必要不可欠ですので、まずは `sytemd` を PID1 で稼働できるようにします。
 
-WSL2 上で `sytemd` を PID1 で稼働できるようにするためのライブラリとして **genie** が存在します。
+WSL2 上で `sytemd` を PID1 で稼働できるようにするためのライブラリーとして **genie** が存在します。
 
 この genie をインストールします。
 
@@ -49,7 +49,7 @@ $ sudo apt-get install -y aspnetcore-runtime-5.0
 $ sudo apt install -y daemonize dbus gawk libc6 libstdc++6 policykit-1 systemd systemd-container
 ```
 
-続いて、 wsl-transdebian のリポジトリを設定します。
+続いて、 `wsl-transdebian` のリポジトリを設定します。
 
 ```title=wsl-transdebian のリポジトリの設定
 $ sudo apt install apt-transport-https
@@ -85,7 +85,7 @@ $ sudo apt install default-jre
 $ sudo apt install tomcat9 tomcat9-admin
 ```
 
-Tomcat Manager にログインするユーザーの設定を行います。
+Tomcat Manager にログインするユーザー情報を設定します。
 
 `tomcat-users` タグ内に以下の記述を追加します。ユーザー名とパスワードは適当に設定します。
 
@@ -109,7 +109,9 @@ $ sudo service tomcat8 restart
 
 ## 動作確認
 
-WSL2 の `localhost` にアクセスできるようにするために WSL2 の `localhost` を Windows の `localhost` にフォワーディングします。
+WSL2 の `localhost` へアクセスできるようにします。
+
+WSL2 の `localhost` を Windows の `localhost` にフォワーディングします。
 
 `<ユーザー名>/.wslconfig` を作成して、中身を以下のように書き換えます。
 
@@ -144,6 +146,6 @@ $ wsl --shutdown
 
 今回は WSL2 Ubuntu に Tomcat をインストールしました。
 
-今回インストールした Tomcat を利用して、 Gitbucket をインストールする手順を次回ご紹介したいと思います。
+今回インストールした Tomcat を利用して、 Gitbucket をインストールする手順を次回紹介したいと思います。
 
 それではまた、別の記事でお会いしましょう。
