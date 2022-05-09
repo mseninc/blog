@@ -70,30 +70,54 @@ $ docker images -a | grep "blog-gatsby" | awk '{print $3}' | xargs docker rmi �
 
 ### 記事テンプレートの作成
 
-`start.sh` を使うと記事のディレクトリ作成から `index.md` の作成までをまとめて行えます。記事の slug が必要になるので、先に検討しておいてください。
+`new.sh` を使うと記事のスラグを指定するだけで
 
-使い方は `start.sh` を実行し、著者 (番号) と slug を入力します。著者は [author.yaml](author.yaml) から読み込まれます。
+1. 最新の release ブランチのチェックアウト
+1. Git ブランチ作成
+1. 記事のディレクトリ作成
+1. `index.md` の作成
+
+をまとめて行えます。
+
+使い方は `new.sh` に記事のスラグを指定して実行するだけです。
+
+git でワークツリーに変更中のファイルがある場合など、 git 操作がうまくいかなかった場合はエラーで中断されます。
+ワークツリーをクリーンな状態にして再試行してください。
+
+著者は [author.yaml](author.yaml) から読み込まれます。
 
 ```sh
-$ ./start.sh
+$ ./new.sh 記事のスラグ
 ```
 
 #### 実行例
 
 ```sh
-$ ./start.sh
+$ ./new.sh hogehoge 👈 記事のスラグを指定
+フェッチしています...
+================================================================================
+release ブランチをチェックアウトしています...
+HEAD is now at 40790bb Release pre-process
+================================================================================
+著者番号を指定してください
 1) norikazum           3) kenzauros          5) kosshii            7) k-so16             9) kohei-iwamoto-wa
 2) kiyoshin            4) jinna-i            6) hiroki-Fukumoto    8) junya-gera        10) linkohta
-name? > 3
-slug? [my-first-post]> 👈ブランチ名から取得したものをスラグ候補として提案。変更する場合は任意のスラグを入力、問題なければ Enter
------
-You are "kenzauros"
-Will make
-  "kenzauros/2021/my-first-post"
-  "kenzauros/2021/my-first-post/images"
-  "kenzauros/2021/my-first-post/index.md"
-OK? [y/N] > y
-Open with code? [y/N] > y 👈作成した markdown ファイルを VS Code で開くかどうか
+> 3 👈 自分の番号を入力して Enter
+================================================================================
+スラグ: "hogehoge"
+ブランチ: "post/hogehoge"
+著者: "kenzauros"
+作成されるファイル:
+  "kenzauros/2022/hogehoge/images" (ディレクトリ)
+  "kenzauros/2022/hogehoge/index.md"
+よろしいですか? [y/N] > y 👈 確認して問題なければ y を入力して Enter
+================================================================================
+新しいブランチを作成しています...
+Switched to a new branch 'post/hogehoge'
+images ディレクトリを作成しています...
+index.md を作成しています...
+VS code で md ファイルを開きますか? [y/N] > y 👈 y を選ぶと VS code で index.md を開く
+さぁ、執筆をはじめましょう！
 ```
 
 ### 文章校正 (textlint)
