@@ -16,6 +16,10 @@ link です。 Rails のバージョンが 7 に上がりましたが、 Webpack
 - Ruby on Rails 7
 - Docker 4
 
+## 対象者
+
+- Docker をあまり触ったことがない人
+
 ## Docker ファイル作成
 
 まず、 Rails のプロジェクトフォルダを作りましょう。
@@ -39,7 +43,7 @@ Gemfile.lock は書き換えなくて大丈夫です。
 ```Dockerfile:title=Dockerfile
 FROM ruby:3.1
 
-RUN apt update -qq && apt install -y nodejs postgresql-client
+RUN apt update -qq && apt install -y postgresql-client
 RUN mkdir /myapp
 WORKDIR /myapp
 COPY Gemfile /myapp/Gemfile
@@ -54,6 +58,12 @@ EXPOSE 3000
 
 CMD ["rails", "server", "-b", "0.0.0.0"]
 ```
+
+Dockerfile は Docker イメージを作成するために必要なパッケージやアプリ、各種設定を指定するファイルです。
+
+Rails 7 では Webpacker が標準では組み込まれなくなった影響で yarn や Node.js のインストールが不要になりました。
+
+そのため、 Ruby 以外は PostgreSQL のみをインストールするようにしています。
 
 ```yml:title=docker-compose.yml
 version: "3.9"
@@ -75,10 +85,18 @@ services:
       - db
 ```
 
+docker-compose.yml は複数の Docker コンテナーを定義するためのファイルです。
+
+今回はデータベース用の `db` と Rails アプリ用の `web` を定義しています。
+
 ```Gemfile:title=Gemfile
 source 'https://rubygems.org'
 gem 'rails', '~> 7.0.2'
 ```
+
+Gemfile は Ruby と各種パッケージのバージョン管理するためのファイルです。
+
+Ruby は最新版、 Rails は 7.0.2 以上を指定しています。
 
 ```sh:title=entrypoint.sh
 #!/bin/bash
@@ -88,6 +106,8 @@ rm -f /myapp/tmp/pids/server.pid
 
 exec "$@"
 ```
+
+entrypoint.sh は特定のファイルがすでに存在する場合にサーバーを再起動できない Rails 固有の問題を修正するためのスクリプトです。
 
 ## コンテナーイメージのビルド
 
@@ -121,7 +141,7 @@ docker-compose run web rails new . --force --no-deps --database=postgresql
 
 コンテナー上で利用するデータベースを作成します。
 
-`config/database.yml` を以下のように書き換えます。
+`config/database.yml` に以下の内容を貼り付けします。
 
 ```yml:title=config/database.yml
 default: &default
