@@ -23,27 +23,6 @@ if [[ -n $FIND_RESULT ]]; then
   exit 1
 fi
 
-# fecth git commits from origin
-echo "フェッチしています..."
-
-git fetch origin
-
-if [ $? -gt 0 ]; then
-  echo "ERROR: フェッチできませんでした" 1>&2
-  exit 1
-fi
-
-# checkout release branch
-echo $BOUNDARY
-echo "release ブランチをチェックアウトしています..."
-
-git checkout origin/release
-
-if [ $? -gt 0 ]; then
-  echo "ERROR: release ブランチをチェックアウトできませんでした" 1>&2
-  exit 1
-fi
-
 # select author
 authors=($(cat author.yaml | grep '^- id: ' | sed 's/^- id: //'))
 
@@ -87,6 +66,28 @@ case $CONFIRM in
     ;;
 esac
 
+# fecth git commits from origin
+echo "フェッチしています..."
+
+git fetch origin
+
+if [ $? -gt 0 ]; then
+  echo "ERROR: フェッチできませんでした" 1>&2
+  exit 1
+fi
+
+# checkout release branch
+echo $BOUNDARY
+echo "release ブランチをチェックアウトしています..."
+
+git checkout origin/release
+
+if [ $? -gt 0 ]; then
+  echo "ERROR: release ブランチをチェックアウトできませんでした" 1>&2
+  exit 1
+fi
+
+## create branch
 echo "新しいブランチを作成しています..."
 git switch -c ${BRANCH_NAME}
 
