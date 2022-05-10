@@ -2,7 +2,7 @@
 title: WSL2 上で GitBucket を構築してみる
 date: 
 author: linkohta
-tags: [Linux, Windows, Git]
+tags: [Git, Linux, Windows]
 description: 
 ---
 
@@ -28,24 +28,24 @@ GitBucket とは、ローカル環境に構築可能な Git のプラットフ�
 
 ## GitBucket のインストール
 
-GitBucket のインストールには **Tomcat** がインストールされている必要があります。
+GitBucket のインストールには **Tomcat** がインストールされている必要があります。 Tomcat のインストールは [WSL2 上で Tomcat 9 を構築してみる](/wsl-tomcat/) の記事を参照してください。
 
 まず、 Tomcat を停止します。
 
-```title=Tomcatの停止
+```:title=Tomcatの停止
 $ sudo systemctl stop tomcat9
 ```
 
 そして、最新の GitBucket をダウンロードします。（記事執筆時の最新版は `4.37.2` ）
 
-```title=GitBucketのダウンロード
+```:title=GitBucketのダウンロード
 $ cd /var/lib/tomcat9/webapps
 $ sudo wget https://github.com/gitbucket/gitbucket/releases/download/4.37.2/gitbucket.war
 ```
 
 GitBucket の リポジトリの保存先となる Tomcat のユーザーフォルダを作成し、必要な権限を与えます。
 
-```title=Tomcatのユーザーフォルダ
+```:title=Tomcatのユーザーフォルダ
 $ sudo mkdir /home/tomcat9
 $ sudo chown tomcat:tomcat /home/tomcat9
 $ sudo usermod -d /home/tomcat9 tomcat
@@ -53,7 +53,7 @@ $ sudo usermod -d /home/tomcat9 tomcat
 
 最後に Tomcat を再起動します。
 
-```title=Tomcatの再起動
+```:title=Tomcatの再起動
 $ sudo systemctl start tomcat9
 ```
 
@@ -71,10 +71,8 @@ $ sudo systemctl start tomcat9
 
 デフォルトの管理者アカウントは以下のようになっていますのでこの管理者アカウントでサインインします。
 
-```
-UserName:root
-Password:root
-```
+- UserName:root
+- Password:root
 
 ### アカウント作成
 
@@ -84,9 +82,7 @@ Password:root
 
 ![System Administration 画面に移動](images/2022-05-08_15h36_41.png)
 
-ユーザー管理画面に移動できたら、 `New User` ボタンをクリックします。
-
-するとユーザー作成画面に移動します。
+ユーザー管理画面に移動できたら、 `New User` ボタンをクリックし、ユーザー作成画面に移動します。
 
 ![ユーザー管理画面](images/2022-05-08_15h35_24.png)
 
@@ -104,14 +100,14 @@ Password:root
 
 ![新規リポジトリ作成画面](images/2022-05-08_15h42_21.png)
 
-## 参考サイト
-
-- [GitBucket - Wikipedia](https://ja.wikipedia.org/wiki/GitBucket)
-
 ## まとめ
 
 今回は GitBucket を WSL2 にインストールしてみました。
 
-容易にローカル環境に Git システムを構築できるのでぜひ活用してみてください。
+手軽にローカル環境で Git システムを構築できるのでぜひ活用してみてください。
 
 それではまた、別の記事でお会いしましょう。
+
+## 参考サイト
+
+- [GitBucket - Wikipedia](https://ja.wikipedia.org/wiki/GitBucket)
