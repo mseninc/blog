@@ -42,7 +42,7 @@ Ubuntu のバージョンが 20.04 の場合は以下のコマンドを実行す
 ```:title=dotnet-runtime-5.0のインストール
 $ sudo wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 $ sudo dpkg -i packages-microsoft-prod.deb
-$ rm packages-microsoft-prod.deb
+$ sudo rm packages-microsoft-prod.deb
 $ sudo apt-get update
 $ sudo apt-get install -y apt-transport-https
 $ sudo apt-get update
@@ -60,8 +60,8 @@ $ sudo apt install apt-transport-https
 $ sudo wget -O /etc/apt/trusted.gpg.d/wsl-transdebian.gpg https://arkane-systems.github.io/wsl-transdebian/apt/wsl-transdebian.gpg
 $ sudo chmod a+r /etc/apt/trusted.gpg.d/wsl-transdebian.gpg
 $ sudo cat << EOF > /etc/apt/sources.list.d/wsl-transdebian.list
-> deb https://arkane-systems.github.io/wsl-transdebian/apt/ $(lsb_release -cs) main
-> deb-src https://arkane-systems.github.io/wsl-transdebian/apt/ $(lsb_release -cs) main
+> sudo deb https://arkane-systems.github.io/wsl-transdebian/apt/ $(lsb_release -cs) main
+> sudo deb-src https://arkane-systems.github.io/wsl-transdebian/apt/ $(lsb_release -cs) main
 > EOF
 $ sudo apt update
 ```
@@ -80,13 +80,13 @@ $ genie -s
 Tomcat の動作には Java が必要なのでインストールします。
 
 ```:title=javaのインストール
-$ sudo apt install default-jre
+$ sudo apt install -y default-jre
 ```
 
 続いて、 Tomcat 9 と Tomcat Manager をインストールします。
 
 ```:title=Tomcatのインストール
-$ sudo apt install tomcat9 tomcat9-admin
+$ sudo apt install -y tomcat9 tomcat9-admin
 ```
 
 Tomcat Manager にログインするユーザー情報を設定します。
@@ -105,10 +105,39 @@ $ sudo nano /etc/tomcat9/tomcat-users.xml
 </tomcat-users>
 ```
 
-最後に Tomcat を再起動します。
+Tomcat を systemd のサービスに登録するための定義ファイル `/etc/systemd/system/tomcat.service` を作成します。
 
-```:title=Tomcatを再起動
-$ sudo service tomcat8 restart
+```:title=/etc/systemd/system/tomcat.service
+[Unit]
+Description=Apache Tomcat 9
+After=network.target
+
+[Service]
+User=tomcat
+Group=tomcat
+Type=oneshot
+PIDFile=/opt/apache-tomcat-9.0.0.M21/tomcat.pid
+RemainAfterExit=yes
+
+ExecStart=/opt/apache-tomcat-9.0.0.M21/bin/startup.sh
+ExecStop=/opt/apache-tomcat-9.0.0.M21/bin/shutdown.sh
+ExecReStart=/opt/apache-tomcat-9.0.0.M21/bin/shutdown.sh;/opt/apache-tomcat-9.0.0.M21/bin/startup.sh
+
+[Install]
+WantedBy=multi-user.target
+```
+
+作成した定義ファイルの権限を 755 に変更します。
+
+```:title=定義ファイルの権限を 755 に変更
+$ sudo chmod 755 /etc/systemd/system/tomcat.service
+```
+
+最後に Tomcat のサービスを有効化して起動します。
+
+```:title=Tomcatを起動
+$ sudo systemctl enable tomcat
+$ sudo systemctl start tomcat
 ```
 
 ## 動作確認
