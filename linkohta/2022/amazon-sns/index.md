@@ -3,7 +3,7 @@ title: Amazon SNS でサブスクリプションする第一歩
 date: 
 author: linkohta
 tags: [AWS, Web]
-description: 
+description: Amazon SNS でサブスクリプションする手順、その第一歩。
 ---
 
 link です。
