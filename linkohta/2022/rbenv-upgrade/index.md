@@ -24,7 +24,7 @@ Ubuntu の APT パッケージマネージャー からインストールでき�
 
 `rbenv` のアップデートは `~/.rbenv` フォルダに最新版を pull することで行われます。
 
-```title=rbenvのpull
+```:title=rbenvのpull
 $ rm -rf .rbenv
 $ git clone https://github.com/sstephenson/rbenv.git .rbenv
 ```
@@ -37,7 +37,7 @@ $ git clone https://github.com/sstephenson/rbenv.git .rbenv
 
 `ruby-build` のアップデートは `~/.rbenv/plugins/ruby-build` フォルダに最新版を pull することで行われます。
 
-```title=ruby-buildのpull
+```:title=ruby-buildのpull
 $ git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 ```
 
@@ -49,7 +49,7 @@ $ git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-
 
 その時は `which gem` で Ruby の PATH を確認します。
 
-```title=RubyのPATH確認
+```:title=RubyのPATH確認
 $ which gem
   usr/local/bin
 ```
@@ -60,7 +60,7 @@ $ which gem
 
 まず、 `~/.bash_profile` を作成して、中身を以下のようにします。
 
-```title=.bash_profile
+```:title=.bash_profile
 export PATH="~/.rbenv/shims:/usr/local/bin:$PATH"
 eval "$(rbenv init -)"
 ```
