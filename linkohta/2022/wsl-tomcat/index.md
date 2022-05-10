@@ -1,5 +1,5 @@
 ---
-title: WSL に Tomcat 9 をインストールしてみる
+title: WSL2 に Tomcat 9 をインストールしてみる
 date: 
 author: linkohta
 tags: [WSL, Linux, Web]
@@ -89,6 +89,8 @@ $ sudo apt install -y default-jre
 $ sudo apt install -y tomcat9 tomcat9-admin
 ```
 
+### ユーザー情報設定
+
 Tomcat Manager にログインするユーザー情報を設定します。
 
 `tomcat-users` タグ内に以下の記述を追加します。ユーザー名とパスワードは適当に設定します。
@@ -104,6 +106,8 @@ $ sudo nano /etc/tomcat9/tomcat-users.xml
 ...
 </tomcat-users>
 ```
+
+### Tomcat をサービスに登録
 
 Tomcat を systemd のサービスに登録するための定義ファイル `/etc/systemd/system/tomcat.service` を作成します。
 
@@ -132,6 +136,8 @@ WantedBy=multi-user.target
 ```:title=定義ファイルの権限を 755 に変更
 $ sudo chmod 755 /etc/systemd/system/tomcat.service
 ```
+
+### Tomcat 起動
 
 最後に Tomcat のサービスを有効化して起動します。
 
@@ -170,11 +176,6 @@ $ wsl --shutdown
 
 ![Tomcat Manager 動作画面](images/2022-05-06_19h40_06.png)
 
-## 参考サイト
-
-- [Install .NET on Ubuntu - .NET | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/core/install/linux-ubuntu#2004-)
-- [wsl-transdebian | A repository for WSL-only apt packages.](https://arkane-systems.github.io/wsl-transdebian/)
-
 ## まとめ
 
 今回は WSL2 Ubuntu に Tomcat をインストールしました。
@@ -182,3 +183,8 @@ $ wsl --shutdown
 今回インストールした Tomcat を利用して、 GitBucket をインストールする手順を次回紹介したいと思います。
 
 それではまた、別の記事でお会いしましょう。
+
+## 参考サイト
+
+- [Install .NET on Ubuntu - .NET | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/core/install/linux-ubuntu#2004-)
+- [wsl-transdebian | A repository for WSL-only apt packages.](https://arkane-systems.github.io/wsl-transdebian/)
