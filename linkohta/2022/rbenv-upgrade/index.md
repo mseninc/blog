@@ -3,7 +3,7 @@ title: 【備忘録】rbenv の更新方法
 date: 
 author: linkohta
 tags: [Ruby, Linux]
-description: 
+description: rbenv の更新方法についての備忘録
 ---
 
 link です。
@@ -18,19 +18,20 @@ Ruby のバージョンを管理するのに便利な **`rbenv`** ですが、 U
 
 - Ubuntu 20.04 以降
 
-## `rbenv` のアップデート手順
+## rbenv のアップデート手順
 
 Ubuntu の APT パッケージマネージャー からインストールできる `rbenv` は最新のものになっていないため、 Git から最新版を pull してくる必要があります。
 
 `rbenv` のアップデートは `~/.rbenv` フォルダに最新版を pull することで行われます。
 
 ```title=rbenvのpull
+$ rm -rf .rbenv
 $ git clone https://github.com/sstephenson/rbenv.git .rbenv
 ```
 
 もしくは `~/.rbenv` フォルダに移動して、 `git pull` で最新版に更新できます。
 
-## `ruby-build` のアップデート手順
+## ruby-build のアップデート手順
 
 `ruby-build` の APT パッケージマネージャーからインストールできるバージョンも最新のものになっていないため、こちらも Git から最新版を pull してくる必要があります。
 
@@ -50,7 +51,7 @@ $ git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-
 
 ```title=RubyのPATH確認
 $ which gem
-$ usr/local/bin
+  usr/local/bin
 ```
 
 上記のように `usr/local/bin` が返ってくる場合、 `rbenv` が管理している場所に Ruby の PATH が通っていません。
