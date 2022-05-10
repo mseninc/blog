@@ -3,10 +3,14 @@ title: WSL に Tomcat 9 をインストールしてみる
 date: 
 author: linkohta
 tags: [WSL, Linux, Web]
-description: 
+description: WSL2 に Tomcat 9 をインストールする手順のまとめ
 ---
 
 link です。
+
+Linux 環境を Windows 上に手軽に用意できる WSL2 ですが、 Linux 上での Jenkins などの動作確認のために **Tomcat** をインストールしたいと思う方がいると思われます。
+
+そこで今回は Tomcat を WSL2 Ubuntu 上にインストールしてみたいと思います。
 
 ## 想定環境
 
@@ -17,7 +21,7 @@ link です。
 
 WSL2 に Ubuntu をインストールし `systemctl` コマンドを実行すると以下のようなエラーが発生し実行できません。
 
-```title=systemctlのエラーメッセージ
+```:title=systemctlのエラーメッセージ
 $ systemctl
 System has not been booted with systemd as init system (PID 1). Can't operate.
 Failed to connect to bus: Host is down
@@ -31,13 +35,11 @@ Tomcat を Ubuntu 上で動作させるには `systemd` が必要不可欠です
 
 WSL2 上で `systemd` を PID1 で稼働できるようにするためのライブラリーとして **genie** が存在します。
 
-この genie をインストールします。
+genie をインストールするため、まず、依存モジュールを一通りインストールします。
 
-まず、依存モジュールを一通りインストールします。
+Ubuntu のバージョンが 20.04 の場合は以下のコマンドを実行すれば OK です。
 
-Ubuntu のバージョンが 20.04 の場合は以下のコマンドを実行すればOKです。
-
-```title=dotnet-runtime-5.0のインストール
+```:title=dotnet-runtime-5.0のインストール
 $ sudo wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 $ sudo dpkg -i packages-microsoft-prod.deb
 $ rm packages-microsoft-prod.deb
@@ -47,13 +49,13 @@ $ sudo apt-get update
 $ sudo apt-get install -y aspnetcore-runtime-5.0
 ```
 
-```title=それ以外のインストール
+```:title=それ以外のインストール
 $ sudo apt install -y daemonize dbus gawk libc6 libstdc++6 policykit-1 systemd systemd-container
 ```
 
-続いて、 `wsl-transdebian` のリポジトリを設定します。
+`genie` は Ubuntu のデフォルトのリポジトリからは入手できないので、 `genie` の pull 元である `wsl-transdebian` のリポジトリを設定します。
 
-```title=wsl-transdebian のリポジトリの設定
+```:title=wsl-transdebian のリポジトリの設定
 $ sudo apt install apt-transport-https
 $ sudo wget -O /etc/apt/trusted.gpg.d/wsl-transdebian.gpg https://arkane-systems.github.io/wsl-transdebian/apt/wsl-transdebian.gpg
 $ sudo chmod a+r /etc/apt/trusted.gpg.d/wsl-transdebian.gpg
@@ -66,7 +68,7 @@ $ sudo apt update
 
 最後に genie をインストールして有効化します。
 
-```title=genieのインストール
+```:title=genieのインストール
 $ sudo apt install -y systemd-genie
 $ genie -s
 ```
@@ -77,13 +79,13 @@ $ genie -s
 
 Tomcat の動作には Java が必要なのでインストールします。
 
-```title=javaのインストール
+```:title=javaのインストール
 $ sudo apt install default-jre
 ```
 
 続いて、 Tomcat 9 と Tomcat Manager をインストールします。
 
-```title=Tomcatのインストール
+```:title=Tomcatのインストール
 $ sudo apt install tomcat9 tomcat9-admin
 ```
 
@@ -95,7 +97,7 @@ Tomcat Manager にログインするユーザー情報を設定します。
 $ sudo nano /etc/tomcat9/tomcat-users.xml
 ```
 
-```xml:title=title=TomcatManagerにログインするユーザーの設定
+```xml:title=TomcatManagerにログインするユーザーの設定
 <tomcat-users ... >
 ...
 <user username="admin" password="pass" roles="manager-gui,admin-gui"/>
@@ -105,7 +107,7 @@ $ sudo nano /etc/tomcat9/tomcat-users.xml
 
 最後に Tomcat を再起動します。
 
-```title=Tomcatを再起動
+```:title=Tomcatを再起動
 $ sudo service tomcat8 restart
 ```
 
@@ -117,13 +119,13 @@ WSL2 の `localhost` を Windows の `localhost` にフォワーディングし�
 
 `<ユーザー名>/.wslconfig` を作成して、中身を以下のように書き換えます。
 
-```title=<ユーザー名>/.wslconfig
+```:title=<ユーザー名>/.wslconfig
 localhostForwarding=True
 ```
 
-WSL2 の再起動をして準備完了です。
+WSL2 を再起動して準備完了です。
 
-```title=WSL2の再起動
+```:title=WSL2の再起動
 $ wsl --shutdown
 ```
 
@@ -148,6 +150,6 @@ $ wsl --shutdown
 
 今回は WSL2 Ubuntu に Tomcat をインストールしました。
 
-今回インストールした Tomcat を利用して、 Gitbucket をインストールする手順を次回紹介したいと思います。
+今回インストールした Tomcat を利用して、 GitBucket をインストールする手順を次回紹介したいと思います。
 
 それではまた、別の記事でお会いしましょう。
