@@ -1,5 +1,5 @@
 ---
-title: zabbixプロキシを利用して監視する方法
+title: Zabbixプロキシを利用して監視する方法
 date: 
 author: norikazum
 tags: [zabbix]
@@ -8,14 +8,13 @@ description:
 
 こんにちは。
 
-今回は、zabbixプロキシを利用して監視する方法を紹介します。
+今回は、**Zabbixプロキシを利用して監視する方法** を紹介します。
 
-以下は、[公式ドキュメント](https://www.zabbix.com/documentation/current/jp/manual/distributed_monitoring/proxies)抜粋です。
+以下は、[公式ドキュメント](https://www.zabbix.com/documentation/current/jp/manual/distributed_monitoring/proxies) の抜粋です。
 
-Zabbixプロキシは、Zabbixサーバーに代わってパフォーマンスと可用性のデータを収集できます。
-このようにして、プロキシはデータ収集の負荷の一部を引き受け、Zabbixサーバーの負荷を軽減できます。
-
-また、すべてのエージェントとプロキシが1つのZabbixサーバーにレポートし、すべてのデータが一元的に収集される場合、プロキシを使用するのが集中型および分散型のモニタリングを実装する最も簡単な方法です。
+> Zabbixプロキシは、Zabbixサーバーに代わってパフォーマンスと可用性のデータを収集できます。このようにして、プロキシはデータ収集の負荷の一部を引き受け、Zabbixサーバーの負荷を軽減できます。
+> 
+> また、すべてのエージェントとプロキシが1つのZabbixサーバーにレポートし、すべてのデータが一元的に収集される場合、プロキシを使用するのが集中型および分散型のモニタリングを実装する最も簡単な方法です。
 
 Zabbixプロキシは次の目的で使用できます。
 
@@ -31,11 +30,11 @@ Zabbixプロキシは次の目的で使用できます。
 - Zabbix サーバー 6.0.1 
 - Zabbix プロキシ 6.0.1 (Alma Linux 8)
 - Zabbix エージェント 6.0.1
-**Zabbix サーバーとZabbix プロキシは同じメジャーバージョンでなければ動作しません**。
+**Zabbix サーバーとZabbix プロキシは同じメジャーバージョンでなければ動作しません** 。
 
 本記事では Zabbix プロキシ に関連した設定を紹介します。
 
-## zabbix プロキシ監視を利用するメリット
+## Zabbix プロキシ監視を利用するメリット
 zabbix監視 は サーバー・エージェントで行うことが多いと思います。
 
 しかし、この方法はファイアウォールの設定が柔軟に行えない環境や、NATされているような環境では監視すること自体が難しく、監視系統が複数に分かれてしまうことがあります。
@@ -63,7 +62,7 @@ zabbix監視 は サーバー・エージェントで行うことが多いと思
 
 それでは設定に進みましょう。
 
-## zabbix プロキシ の構築
+## Zabbix プロキシ の構築
 ### インストール
 
 ```
@@ -76,7 +75,7 @@ dnf -y intall zabbix-sql-scripts
 ### MySQL サーバー の初期設定
 
 
-`mysql_secure_installation` コマンドを利用して、MySQL サーバー初期設定します。
+`mysql_secure_installation` コマンドを利用して、MySQL サーバーの初期設定を行います。
 
 実行結果は以下のとおりです。
 ```bash
@@ -160,7 +159,7 @@ quit;
 ```
 
 ### データベースに初期データの投入
-準備されているSQLを利用したデータを投入します。
+準備されているSQLを利用し、初期データを投入します。
 ※トラブルポイントです。
 ```bash
 cat /usr/share/doc/zabbix-sql-scripts/mysql/proxy.sql | mysql -uzabbix -p zabbix_proxy
@@ -172,7 +171,7 @@ ERROR 1050 (42S01) at line 2079: Table 'dbversion' already exists
 
 エラー：`ERROR 1050 (42S01) at line 2079: Table 'dbversion' already exists` 
 
-そして、この解決でとても時間がかかりましたが、弊社[kiyoshin](https://github.com/kiyoshin)が **実行順をかえることでエラーが解消する** ことを見つけてくれました。
+そして、この解決でとても時間がかかりましたが、[kiyoshin](https://github.com/kiyoshin)が **実行順をかえることでエラーが解消する** ことを見つけてくれました。
 
 `diff` の結果は以下のとおりです。
 ```diff
@@ -206,7 +205,8 @@ ERROR 1050 (42S01) at line 2079: Table 'dbversion' already exists
  ALTER TABLE `hosts` ADD CONSTRAINT `c_hosts_2` FOREIGN KEY (`maintenanceid`) REFERENCES `maintenances` (`maintenanceid`);
 ```
 
-[正常に投入できたファイル](attach:image/proxy.sql)も添付しておきます。
+正常に投入できたファイルを以下に掲載します。
+<script src="https://gist.github.com/norikazum/8cd4cd0aebd6630b1f5296b25b63d2b3.js"></script>
 
 データベースを再作成し、初期データを投入するコマンドを実行することで無事登録できました。
 
@@ -214,11 +214,11 @@ ERROR 1050 (42S01) at line 2079: Table 'dbversion' already exists
 cat /usr/share/doc/zabbix-sql-scripts/mysql/proxy.sql | mysql -uzabbix -p zabbix_proxy
 ```
 
-### zabbix プロキシ の設定
+### Zabbix プロキシ の設定
 
-`/etc/zabbix/zabbix_proxy.conf` を以下の項目を修正します。
+`/etc/zabbix/zabbix_proxy.conf` の以下の項目を修正します。
 
-```bash
+```ini:title=/etc/zabbix/zabbix_proxy.conf
 Server=x.x.x.x
 Hostname=zabbix-proxy
 DBHost=localhost
@@ -270,10 +270,10 @@ systemctl enable zabbix-proxy
 systemctl start zabbix-proxy
 ```
 
-## zabbix server の設定
+## Zabbix Server の設定
 
 ### プロキシの追加
-zabbix サーバーにログインし、`管理→プロキシ→プロキシの作成`へ進みます。
+Zabbix サーバーにログインし、`管理→プロキシ→プロキシの作成`へ進みます。
 `プロキシ` と `暗号化` の設定を以下の画像を参考に実施します。
 ![](images/2022-04-10_02h41_50.jpg)
 ![](images/2022-04-10_02h45_09.jpg)
