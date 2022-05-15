@@ -13,7 +13,7 @@ description:
 
 過去記事では、 **PowerShell** と **VBS** でダイナミック DNS のドメイン情報を更新する方法を記載しておりましたが、Linuxで更新する機会もありましたので更新用 **シェルスクリプト** を紹介します。
 
-## 更新用bashスクリプト
+## 更新用シェルスクリプト
 `DOMAINNAME=` , `PASSWORD=` , `HOSTNAME=` を設定します。
 以下のスクリプトは過去記事に内容を合わせています。
 `login.example.com` のような特定のホストを更新する場合は、`HOSTNAME=login` となります。 
