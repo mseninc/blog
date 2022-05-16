@@ -3,7 +3,7 @@ title: WSL2 に Tomcat 9 をインストールしてみる
 date: 
 author: linkohta
 tags: [WSL, Linux, Web]
-description: WSL2 に Tomcat 9 をインストールする手順のまとめ
+description: WSL2 に Tomcat 9 をインストールする手順を解説します。
 ---
 
 link です。
