@@ -157,13 +157,16 @@ $ exit
 wsl-user@flutter-env:~$
 ```
 
-ここまで確認できたら一度イメージを export しておきます。パスは好きな場所に変更してください。
+ここまで確認できたら、スナップショット代わりに一度イメージを export しておくといいでしょう。パスは好きな場所に変更してください。
 
 ```:title=コマンドプロンプト
 > wsl -t flutter-env
 > wsl -l -v
 > wsl --export flutter-env %HOMEPATH%\wsl\flutter-env.tar
 ```
+
+この時点では 1GB 程度でした。あとは適宜必要なときに export しておくと環境を戻しやすくなります。
+
 
 ## Java SDK と Android SDK のインストール
 
