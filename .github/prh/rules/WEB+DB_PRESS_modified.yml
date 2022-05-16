@@ -987,7 +987,7 @@ rules:
     expected: やむを得
   - pattern: すこし
     expected: 少し
-  - pattern: /すくな(?!り|る)/
+  - pattern: /すくな(?!り|る|っ)/
     expected: 少な
     specs:
       - from: すくなく
