@@ -1,6 +1,6 @@
 ---
 title: Value Domain で取得したドメインのDNS情報をLinuxから自動更新する
-date: 
+date: 2022-05-16
 author: norikazum
 tags: [DNS,ネットワーク]
 description: 
