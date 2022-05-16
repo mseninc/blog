@@ -3,7 +3,7 @@ title: 【備忘録】rbenv の更新方法
 date: 
 author: linkohta
 tags: [Ruby, Linux]
-description: rbenv の更新方法についての備忘録
+description: Ubuntu の rbenv の更新方法について解説します。
 ---
 
 link です。
