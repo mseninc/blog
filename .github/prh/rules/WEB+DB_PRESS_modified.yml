@@ -2088,8 +2088,8 @@ rules:
     pattern:  /レイヤ(?!ー)/
   - expected: レジスター
     pattern:  /レジスタ(?!ー)/
-  - expected: レジストリー
-    pattern:  /レジストリ(?!ー)/
+  - expected: レジストリ
+    pattern:  /レジストリー/
   - expected: レイテンシー
     pattern:  /レイテンシ(?!ー)/
   - expected: レコメンド
@@ -2611,8 +2611,6 @@ rules:
     pattern:  /\bPayPal\b/i
   - expected: parallel
     pattern:  /\bpararllel\b/
-  - expected: PC
-    pattern:  /パソコン/
   - expected: PECL
     pattern:  /\bPECL\b/i
   - expected: Pentium 4
