@@ -8,7 +8,7 @@ description: WSL2 に Tomcat 9 をインストールする手順のまとめ
 
 link です。
 
-Linux 環境を Windows 上に手軽に用意できる WSL2 ですが、 Linux 上での Jenkins などの動作確認のために **Tomcat** をインストールしたいと思う方がいると思われます。
+Linux 環境を Windows 上に手軽に用意できる WSL2 ですが、 Linux 上での Jenkins などの動作確認のために **Tomcat** をインストールしたいと考える方がいると思います。
 
 そこで今回は Tomcat を WSL2 Ubuntu 上にインストールしてみたいと思います。
 
@@ -55,7 +55,7 @@ $ sudo apt install -y daemonize dbus gawk libc6 libstdc++6 policykit-1 systemd s
 
 `genie` は Ubuntu のデフォルトのリポジトリからは入手できないので、 `genie` の pull 元である `wsl-transdebian` のリポジトリを設定します。
 
-```:title=wsl-transdebian のリポジトリの設定
+```:title=wsl-transdebianのリポジトリの設定
 $ sudo apt install apt-transport-https
 $ sudo wget -O /etc/apt/trusted.gpg.d/wsl-transdebian.gpg https://arkane-systems.github.io/wsl-transdebian/apt/wsl-transdebian.gpg
 $ sudo chmod a+r /etc/apt/trusted.gpg.d/wsl-transdebian.gpg
