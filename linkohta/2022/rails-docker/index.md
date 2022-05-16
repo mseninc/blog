@@ -2,13 +2,13 @@
 title: Docker 上で Ruby on Rails 7 の開発環境を構築してみた
 date: 
 author: linkohta
-tags: [Web, Ruby on Rails, Docker]
-description: 
+tags: [Ruby on Rails, Docker, Web]
+description: Docker 上で Ruby on Rails 7 の開発環境を構築する手順について解説します。
 ---
 
-link です。 Rails のバージョンが 7 に上がりましたが、 Webpacker がデフォルトでは搭載されなくなった影響で Rails に関するいろいろな情報が古くなっています。
+link です。 Docker の勉強をしたいと思い、とりあえず Docker + Rails 7 で開発環境を構築する手順を調べてみました。
 
-今回は Rails 7 に対応する一環として Docker 上で Ruby on Rails 7 の開発環境を構築する手順を紹介します。
+今回は調べた手順を記事に纏めたいと思います。
 
 ## 前提条件
 
@@ -18,7 +18,18 @@ link です。 Rails のバージョンが 7 に上がりましたが、 Webpack
 
 ## 対象者
 
-- Docker をあまり触ったことがない人
+- Docker をあまり触ったことがなく、 Rails を利用したことがある人
+
+## Docker とは
+
+Docker とは、仮想環境上でアプリケーションを開発・配置・実行するためのオープンプラットフォームです。
+
+様々な OS に対応したサンドボックス環境を容易に作成できることが特徴です。
+
+>Docker（ドッカー）は、コンテナ仮想化を用いてアプリケーションを開発・配置・実行するためのオープンプラットフォームである。
+>
+>Dockerはコンテナ仮想化を用いたOSレベルの仮想化（英語版）によりアプリケーションを開発・実行環境から隔離し、アプリケーションの素早い提供を可能にする。かつその環境自体をアプリケーションと同じようにコード（イメージ）として管理可能にする。Dockerを開発・テスト・デプロイに用いることで「コードを書く」と「コードが製品として実行される」間の時間的ギャップを大きく短縮できる。
+>出典 : [Docker - Wikipedia](https://ja.wikipedia.org/wiki/Docker)
 
 ## Docker ファイル作成
 
@@ -61,7 +72,7 @@ CMD ["rails", "server", "-b", "0.0.0.0"]
 
 Dockerfile は Docker イメージを作成するために必要なパッケージやアプリ、各種設定を指定するファイルです。
 
-Rails 7 では Webpacker が標準では組み込まれなくなった影響で yarn や Node.js のインストールが不要になりました。
+なお、 Rails 7 では Webpacker が標準では組み込まれなくなった影響で yarn や Node.js のインストールが不要になりました。
 
 そのため、 Ruby 以外は PostgreSQL のみをインストールするようにしています。
 
@@ -195,10 +206,11 @@ docker-compose up -d
 
 今回は Docker 上 に Rails 7 の開発環境を構築する手順を紹介しました。
 
-今後も Rails 7 に対応した情報を発信していきたいと思います。
+今後も Docker 関係の情報を発信していきたいと思います。
 
 それではまた、別の記事でお会いしましょう。
 
 ## 参考サイト
 
+- [Docker - Wikipedia](https://ja.wikipedia.org/wiki/Docker)
 - [Quickstart: Compose and Rails | Docker Documentation](https://docs.docker.com/samples/rails/)
