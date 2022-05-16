@@ -23,7 +23,7 @@ description: Windows (WSL 2) で Ubuntu 22.04 を利用した Flutter 3 のク�
 
 今回は WSL 2 上に **Ubuntu 22.04** を新たに用意します。既存環境がある場合はそちらにインストールしてもかまいませんが、 Java や Android SDK などが入るのと、いろいろ環境の試行錯誤も必要だと思うので、クリーンな環境のほうが気楽だと思います。
 
-WSL や Visual Studio Code 等もインストール済みで、すでに利用されている前提として進めます。
+WSL や Visual Studio Code 等もインストール済みで、すでに利用している前提として進めます。
 
 ### 全体の流れ
 
@@ -36,8 +36,8 @@ WSL や Visual Studio Code 等もインストール済みで、すでに利用�
 5. デモプロジェクトの作成と実行
 6. Android 実機でのリモートデバッグ
 
-なお、この記事は下記の参考記事を元にしており、 Flutter 3 で変わったと思われる部分と Ubuntu 22.04、 Pixel 5 を利用している点を除けばほぼ同様の内容です。
-とても丁寧にまとめられており、助かりました。著者に感謝申し上げます。
+なお、この記事は下記の記事を参考にしており、 Flutter 3 で変わったと思われる部分と Ubuntu 22.04、 Pixel 5 を利用している点を除けばほぼ同様の内容です。
+とても丁寧にまとめられており、大変参考になりました。著者に感謝申し上げます。
 
 - [WSL2でFlutter環境をできるだけクリーンに構築する(えみ) - Qiita](https://qiita.com/suruseas/items/42d5d9c5beffa6ebdd78#3-2-android%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83)
 
@@ -58,7 +58,7 @@ Ubuntu のリリースページから **22.04 のイメージをダウンロー�
 
 - [Ubuntu 22.04 (Jammy Jellyfish) \[20220506\]](https://cloud-images.ubuntu.com/releases/22.04/release/)
 
-通常の Windows 環境での WSL 向けイメージは **`*-amd64-wsl.rootfs.tar.gz`** で終わっているものです。これを適当なフォルダーにダウンロードします。ここではユーザーの「ダウンロード」フォルダー (`%HOMEPATH%\Downloads\`) にダウンロードしたものとして進めます。
+WSL 向けのイメージは **`*-amd64-wsl.rootfs.tar.gz`** で終わっているものです。これを適当なフォルダーにダウンロードします。ここではユーザーの「ダウンロード」フォルダー (`%HOMEPATH%\Downloads\`) にダウンロードしました。
 
 コマンドプロンプト (`cmd.exe`) を開き、下記のように **`wsl --import` コマンド**を実行します。パス部分は適宜変更してください。
 
@@ -87,15 +87,15 @@ Ubuntu のリリースページから **22.04 のイメージをダウンロー�
 > wsl -d flutter-env
 Welcome to Ubuntu 22.04 LTS (GNU/Linux 5.10.102.1-microsoft-standard-WSL2 x86_64)
 ～略～
-root@msen-dev-001:/mnt/c/Users/yamada#
+root@flutter-env:/mnt/c/Users/username#
 ```
 
 この時点ではログインユーザーが root になっているため、一般ユーザーを追加してログインしなおします。ここではユーザー名を `wsl-user` にしていますが、なんでもかまいません。
 
 ```:title=WSL(bash)
-# useradd -m -s $(which bash) wsl-user
-# passwd wsl-user
-# usermod -G sudo wsl-user
+# useradd -m -s $(which bash) wsl-user 👈 ユーザー追加
+# passwd wsl-user 👈 パスワード設定
+# usermod -G sudo wsl-user 👈 sudo ユーザーに追加
 # exit
 ```
 
@@ -105,37 +105,38 @@ root@msen-dev-001:/mnt/c/Users/yamada#
 > wsl -d flutter-env -u wsl-user
 ```
 
-WSL のログインユーザーと Windows の PATH 設定を引き継がないように設定するため、 `sudo` で `/etc/wsl.conf` を編集します。
+`sudo` で `/etc/wsl.conf` を編集して WSL の設定を変更します。
 
 ```:title=WSL(bash)
-sudo vi /etc/wsl.conf
+$ sudo vi /etc/wsl.conf
 ```
 
-下記のように設定して保存します。
+下記のように入力して保存します。
 
 ```ini:title=/etc/wsl.conf
 [user]
-default=wsl-user
+default=wsl-user 👈 WSL のデフォルトログインユーザーを変更
 [interop]
-appendWindowsPath = false
+appendWindowsPath = false 👈 Windows の PATH を引き継がないようにする
 ```
 
-ついでに Windows 関連の exe や VS Code に対して PATH を通しておきます。
+ついでにログイン時にホームディレクトリに移動するようにし、 Windows 関連の exe や VS Code に対して PATH を通しておきます。
 
 ```:title=WSL(bash)
+$ echo cd >> ~/.bashrc
 $ echo export PATH=\$PATH:/mnt/c/WINDOWS/ >> ~/.bashrc
 $ echo export PATH=\$PATH:\"/mnt/c/Users/ユーザー名/AppData/Local/Programs/Microsoft VS Code/bin\" >> ~/.bashrc
 ```
 
-※ VS Code のパスは既存の Ubuntu などで確認するといいでしょう。
+※ VS Code のパスは既存の Ubuntu などで確認すると楽だと思います。
 
 ```:title=WSL(別のUbuntuのbashなど)
 $ which code
-/mnt/c/Users/yamada/AppData/Local/Programs/Microsoft VS Code/bin/code
+/mnt/c/Users/ユーザー名/AppData/Local/Programs/Microsoft VS Code/bin/code
 ```
 
 設定したらパッケージのアップデートと unzip コマンドをインストールしておきます。
-アップデート・インストールが完了したら、ログアウトします。
+アップデートとインストールが完了したら、ログアウトします。
 
 ```:title=WSL(bash)
 $ sudo apt update -q; sudo apt upgrade -yq
@@ -153,7 +154,7 @@ $ exit
 今度は `wsl-user` として接続できていれば OK です。
 
 ```:title=WSL(bash)
-wsl-user@msen-dev-001:~$
+wsl-user@flutter-env:~$
 ```
 
 ここまで確認できたら一度イメージを export しておきます。パスは好きな場所に変更してください。
@@ -169,7 +170,6 @@ wsl-user@msen-dev-001:~$
 ### Java SDK のインストール
 
 下記の要領で Java SDK をインストールします。特に悩むところはないと思います。
-
 
 ```:title=WSL(bash)
 $ sudo apt update && sudo apt install default-jdk -y
@@ -353,7 +353,7 @@ $ flutter doctor -v
 
 いくつかエラーになっていて、 **Linux toolchain は ☠ (ドクロマーク)** でした(笑)
 
-Linux のデスクトップアプリをビルドするためのコンパイル用のツール群が不足しています。 Linux のデスクトップアプリを作らないのであれば不要だと思いますが、ここでは公式手順に従い、インストールしておきます。
+Linux のデスクトップアプリをビルドするためのツール群が不足しています。 Linux のデスクトップアプリを作らないのであれば不要だと思いますが、ここでは公式手順に従い、インストールしておきます。
 
 - [Additional Linux requirements - Linux install | Flutter](https://docs.flutter.dev/get-started/install/linux#additional-linux-requirements)
 
@@ -409,7 +409,7 @@ $ flutter doctor -v
 ! Doctor found issues in 3 categories.
 ```
 
-Linux toolchain は 👌 になりました。あと下記のようなエラーと警告が出ていますが、いずれも無視して進めます。
+Linux toolchain は ✓ になりました。あと下記のようなエラーと警告が出ていますが、特に問題ないため、無視して進めます。
 
 - Android toolchain: VS Code の実行時に自動的にインストールしてくれます
 - Chrome: Windows 上の Chrome 連携は VS Code の拡張機能と Chrome の拡張機能で連携してくれるようです
@@ -424,18 +424,19 @@ Linux toolchain は 👌 になりました。あと下記のようなエラー�
 とりあえず**ホームディレクトリで VS Code を起動**します。連携用パッケージがインストールされて VS Code が起動するはずです。
 
 ```:title=WSL(bash)
+$ cd
 $ code .
 ```
 
 ステータスバーで `WSL: flutter-env` のようになっていれば OK です。
 
-![構築した WSL の Ubuntu 22.04 から VS Code が起動した状態](images/vscode_launched.png)
+![WSL の Ubuntu 22.04 から VS Code が起動した状態](images/vscode_launched.png)
 
 ### VS Code の Flutter 拡張機能インストール
 
 VS Code の拡張機能 (Extensions) ペインから **Flutter 拡張機能**を検索してインストールします。
 
-![Flutter 拡張機能インストール](images/vscode_flutter_extension.png)
+![VS Code に Flutter 拡張機能をインストール](images/vscode_flutter_extension.png)
 
 ### Google Chrome の拡張機能インストール
 
@@ -443,37 +444,38 @@ Windows の Google Chrome に下記のリンクから **Dart Debug Extension** �
 
 - [Dart Debug Extension - Chrome ウェブストア](https://chrome.google.com/webstore/detail/dart-debug-extension/eljbmlghnomdjgdjmbdekegdkbabckhm/related?hl=ja)
 
-![Chrome にインストールされた Dart Debug Extension](images/chrome_dart_debug_extension.png)
-
 図のように、 Chrome の拡張機能メニューに Dart Debug Extension が表示されていれば OK です👌
+
+![Chrome にインストールされた Dart Debug Extension](images/chrome_dart_debug_extension.png)
 
 これで環境整備は終了です。お疲れさまでした👏
 
+
 ## デモプロジェクトの作成と実行
 
-VS Code に戻り、 <kbd>`Ctrl + Shift + P`</kbd> でコマンドパレットを開き、 `flutter` を入力し、 `Flutter: New Project` を選択します。
+VS Code に戻り、 <kbd>`Ctrl + Shift + P`</kbd> でコマンドパレットを開き、 `flutter` と入力し、 `Flutter: New Project` を選択します。
 
 ![Flutter: New Project を選択](images/vscode_flutter_new_project_1.png)
 
 `Application` を選択します。
 
-![Application を選択](images/vscode_flutter_new_project_2.png)
+![Flutter New Project - Application を選択](images/vscode_flutter_new_project_2.png)
 
 プロジェクトを作成する「親」ディレクトリーを選択します。
 
-![親ディレクトリーを指定](images/vscode_flutter_new_project_3.png)
+![Flutter プロジェクトを作成する親ディレクトリーを指定](images/vscode_flutter_new_project_3.png)
 
 プロジェクト名を入力します。
 
-![プロジェクト名を入力](images/vscode_flutter_new_project_4.png)
+![Flutter プロジェクト名を入力](images/vscode_flutter_new_project_4.png)
 
 これで新しいプロジェクトがルートになった状態で VS Code が再起動します。
 
-![新しいプロジェクトが VS Code で開かれた](images/vscode_flutter_new_project_ready.png)
+![新しいプロジェクトが開かれた VS Code](images/vscode_flutter_new_project_ready.png)
 
 ### Web Server で起動
 
-いったん、わかりやすい *Web Server* で起動してみます。
+はじめに *Web Server* で起動してみます。
 
 おそらくデフォルトでは実行するデバイスが Linux (desktop) になっているので、ステータスバーのデバイス選択から **Web Server** に切り替えます。
 
@@ -514,7 +516,7 @@ Google Pixel の場合は **[設定] > [デバイス情報] > [ビルド番号]*
 ### Android と Ubuntu のペアリングと接続
 
 Ubuntu に戻り、 Android で表示された IP アドレス・ポートを `adb pair` コマンドに指定して、ペアリングコードを入力します。
-※ワイヤレスデバッグの "IP アドレスとポート" に表示されているものではなく、ペアリングコードと一緒に表示されるアドレスとポートです。
+※ワイヤレスデバッグの "IP アドレスとポート" に表示されているものではなく、ペアリングコードと一緒に表示されるアドレスとポートを指定します。
 
 ```:title=WSL(bash)
 $ adb pair 192.168.0.202:41747
@@ -567,7 +569,7 @@ Linux (desktop)  • linux               • linux-x64     • Ubuntu 22.04 LTS 
 
 ![Android で起動した Flutter 3 アプリ](images/flutter3_helloworld_on_pixel5_1.png)
 
-この画像ではわかりづらいですが、画面上のステータスバーにまで DEBUG のリボンがかかっていて、アプリデバッグ中であることがわかりやすくなっています。
+この画像ではわかりづらいですが、画面上のステータスバーにまで DEBUG のリボンがかかっていて、アプリデバッグ中であることがわかります。
 
 試しに `main.dart` をちょっと書き換えてみると...無事、ホットリロードされて Android の表示も更新されました。
 
@@ -577,11 +579,11 @@ Linux (desktop)  • linux               • linux-x64     • Ubuntu 22.04 LTS 
 
 ## まとめ
 
-Flutter 3 が発表されたため、最近発表された Ubuntu 22.04 も取り入れて WSL 2 での開発環境を構築してみました。
+Flutter 3 が発表されたため、最近発表された Ubuntu 22.04 も取り入れて開発環境を構築してみました。
 
-割と長いのですが、内容がつかめれば、今後も役に立つかなと思いました。
+工程自体は割と長いのですが、内容がつかめれば、今後も役に立つかなと思いました。
 
-肝心の Flutter 3 はまだそんなに触れていないんですが、ホットリロードされただけで非常に満足でした(笑)
+肝心の Flutter 3 はまだそんなに触れていないんですが、ホットリロードされただけで非常に満足でした😂(笑)
 
 ### 参考サイト
 
