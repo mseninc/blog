@@ -1,9 +1,9 @@
 ---
-title: Ruby on Rails 入門 Part 10 ～ Rails と React を組み合わせて使う～
+title: Ruby on Rails 6 入門 Part 10 ～ Rails と React を組み合わせて使う～
 date: 
 author: linkohta
-tags: [Web, Ruby, Ruby on Rails, React]
-description: 
+tags: [Ruby on Rails, React, Web]
+description: Ruby on Rails の勉強をする第 10 回目です。
 ---
 
 link です。
@@ -40,9 +40,99 @@ Rails には View の機能を排して Web API として運用する API モー
 
 ```:title=APIモードで作成
 $ rails new ReactRails --api
-$ rails g controller task index show
-$ rails g model task name:string is_complated:boolean
+$ cd ReactRails
+$ rails g controller tasks index show create destroy update
+$ rails g model task id:integer name:string is_completed:boolean
 ```
+
+まずは、ルーティングを設定します。
+
+バージョン管理を容易にするために `namespace` を使って定義しています。
+
+```rb:title=config/routes.rb
+Rails.application.routes.draw do
+  namespace 'api' do
+    namespace 'v1' do
+      resources :tasks
+    end
+  end
+end
+```
+
+次に先ほど生成した `controllers/tasks_controller.rb` を `controllers/api/v1/` に移動します。
+
+`tasks_controller.rb` の中身を以下のように書き換えます。
+
+```rb:title:controllers/api/v1/tasks_controller.rb
+module Api
+  module V1
+    class TasksController < ApplicationController
+      before_action :set_task, only: [:show, :update, :destroy]
+
+      def index
+        tasks = Task.order(created_at: :desc)
+        render json: { status: 'SUCCESS', message: 'Loaded tasks', data: tasks }
+      end
+
+      def show
+        render json: { status: 'SUCCESS', message: 'Loaded the task', data: @task }
+      end
+
+      def create
+        task = Task.new(task_params)
+        if task.save
+          render json: { status: 'SUCCESS', data: task }
+        else
+          render json: { status: 'ERROR', data: task.errors }
+        end
+      end
+
+      def destroy
+        @task.destroy
+        render json: { status: 'SUCCESS', message: 'Deleted the task', data: @task }
+      end
+
+      def update
+        if @task.update(task_params)
+          render json: { status: 'SUCCESS', message: 'Updated the task', data: @task }
+        else
+          render json: { status: 'SUCCESS', message: 'Not updated', data: @task.errors }
+        end
+      end
+
+      private
+
+      def set_task
+        @task = Task.find(params[:id])
+      end
+
+      def task_params
+        params.require(:task).permit(:title)
+      end
+    end
+  end
+end
+```
+
+データベースの初期値を設定するため、 `db/seeds.rb` の中身を以下のように書き換えます。
+
+```rb:title=db/seeds.rb
+Task.create(id: 1, name: "Test1", is_completed: false)
+Task.create(id: 2, name: "Test2", is_completed: false)
+Task.create(id: 3, name: "Test3", is_completed: true)
+```
+
+最後にデータベースを作成するコマンドを一通り打ち込んで完了です。
+
+```:title=データベース作成
+$ rails db:create
+$ rails db:migrate
+$ rails db:seed
+```
+
+`rails s` で起動した後、 Postman などで `localhost:3000/api/v1/tasks` にアクセスして、以下の画像のような JSON が返ってくることを確認しましょう。
+
+![GET 結果](images/2022-05-17_16h59_19.png)
 
 ### React プロジェクトを作成
 
