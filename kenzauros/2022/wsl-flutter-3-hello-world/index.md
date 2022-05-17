@@ -96,19 +96,12 @@ root@flutter-env:/mnt/c/Users/username#
 # useradd -m -s $(which bash) wsl-user 👈 ユーザー追加
 # passwd wsl-user 👈 パスワード設定
 # usermod -G sudo wsl-user 👈 sudo ユーザーに追加
-# exit
 ```
 
-一度ログアウトしたら、再度コマンドプロンプトからユーザーを指定して Ubuntu にログインしなおします。
-
-```:title=コマンドプロンプト
-> wsl -d flutter-env -u wsl-user
-```
-
-`sudo` で `/etc/wsl.conf` を編集して WSL の設定を変更します。
+ついでに `/etc/wsl.conf` を編集して WSL の設定を変更します。
 
 ```:title=WSL(bash)
-$ sudo vi /etc/wsl.conf
+$ vi /etc/wsl.conf
 ```
 
 下記のように入力して保存します。
@@ -120,7 +113,13 @@ default=wsl-user 👈 WSL のデフォルトログインユーザーを変更
 appendWindowsPath = false 👈 Windows の PATH を引き継がないようにする
 ```
 
-ついでにログイン時のホームディレクトリ移動と PATH 設定をしておきます。
+root での設定は完了です。一度ログアウトして、再度コマンドプロンプトから Ubuntu にログインしなおします。
+
+```:title=コマンドプロンプト
+> wsl -d flutter-env
+```
+
+`wsl-user` でログインできたことを確認します。続けてログイン時のホームディレクトリ移動と PATH 設定をしておきます。
 
 ```:title=WSL(bash)
 $ echo cd >> ~/.bashrc
@@ -128,7 +127,7 @@ $ echo export PATH=\$PATH:/mnt/c/WINDOWS/ >> ~/.bashrc
 $ echo export PATH=\$PATH:\"/mnt/c/Users/ユーザー名/AppData/Local/Programs/Microsoft VS Code/bin\" >> ~/.bashrc
 ```
 
-※ VS Code のパスは既存の Ubuntu などで確認すると楽だと思います。
+※ VS Code のパスは既存の Ubuntu (WSL) などで確認すると楽だと思います。
 
 ```:title=WSL(別のUbuntuのbashなど)
 $ which code
