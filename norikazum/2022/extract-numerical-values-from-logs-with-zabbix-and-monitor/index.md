@@ -2,7 +2,7 @@
 title: Zabbixでログから数値を抽出して監視する
 date: 
 author: norikazum
-tags: [zabbix]
+tags: [Zabbix]
 description: 
 ---
 
@@ -24,7 +24,7 @@ description:
 
 ## 監視仕様
 - `scanvirus.log` から `Infected files: 数字` を検出する。
-- 数字の部分を抜き出して、`0 を超える` のとき通報する。
+- 数字の部分を抜き出して、`0 を超える` とき通報する。
 ※`scanvirus.log` は [過去の記事](https://mseeeen.msen.jp/install-clam-antivirus-on-amazon-linux-2-to-automate-checks/) を `clamav_check_YYYYMMDD-HHMMSS.log` のファイル名を変更して応用しています。
 
 ## Zabbix の設定
@@ -41,7 +41,7 @@ description:
 
 - 名前：マルウェアファイル検出監視
 - タイプ：Zabbixエージェント(アクティブ)
-- キー：log[/var/log/scanvirus.log,"Infected files: ([0-9]+)",,,skip,\1]
+- キー：`log[/var/log/scanvirus.log,"Infected files: ([0-9]+)",,,skip,\1]`
 - データ型：ログ
 - 監視間隔：1m
 
@@ -64,7 +64,7 @@ log 関数のフォーマットは、`log[/path/to/file/file_name,<regexp>,<enco
 
 ![](images/2022-04-09_23h59_52.jpg)
 
-条件式は前述で作成したアイテムを指定していますが、最後の `>=1` が `1以上` を表します。
+条件式は前述で作成したアイテムを指定していますが、最後の `>=1` で `1以上` を表します。
 
 ## あとがき
 本記事の設定で、マルウェアが1つ以上検出された場合に検出されます。
