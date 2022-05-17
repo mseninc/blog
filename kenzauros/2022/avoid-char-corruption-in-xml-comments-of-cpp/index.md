@@ -1,5 +1,5 @@
 ---
-title: cpp, h ファイルの XML ドキュメントコメントの文字化けを防ぐ
+title: Visual Studio で cpp, h ファイルの XML ドキュメントコメントの文字化けを防ぐ
 date: 
 author: kenzauros
 tags: [C++/CLI, EditorConfig, Visual Studio, C#]
