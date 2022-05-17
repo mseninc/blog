@@ -505,7 +505,7 @@ VS Code に戻り、 <kbd>`Ctrl + Shift + P`</kbd> でコマンドパレット�
 
 - [Android Debug Bridge（adb）  |  Android デベロッパー  |  Android Developers](https://developer.android.com/studio/command-line/adb#connect-to-a-device-over-wi-fi-android-11+)
 
-Google Pixel の場合は **[設定] > [デバイス情報] > [ビルド番号]** の**「ビルド番号」を 7 回タップ**します。
+Google Pixel の場合は **[設定] > [デバイス情報] > [ビルド番号]** の **「ビルド番号」を 7 回タップ** します。
 
 これで開発者向けオプションが表示されます。次に **[設定] > [システム] > [開発者向けオプション]** を開きます。
 
