@@ -205,7 +205,7 @@ ERROR 1050 (42S01) at line 2079: Table 'dbversion' already exists
  ALTER TABLE `hosts` ADD CONSTRAINT `c_hosts_2` FOREIGN KEY (`maintenanceid`) REFERENCES `maintenances` (`maintenanceid`);
 ```
 
-[正常に投入できたファイル](https://gist.github.com/norikazum/8cd4cd0aebd6630b1f5296b25b63d2b3/archive/ffab72b83dd5fda74df7138465273d4fb3527922.zip)を掲載します。
+[正常に投入できたファイル](https://gist.github.com/norikazum/8cd4cd0aebd6630b1f5296b25b63d2b3/)を掲載します。
 
 
 データベースを再作成し、初期データを投入するコマンドを実行することで無事登録できました。
