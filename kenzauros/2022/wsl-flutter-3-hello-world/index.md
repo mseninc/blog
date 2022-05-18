@@ -90,7 +90,7 @@ Welcome to Ubuntu 22.04 LTS (GNU/Linux 5.10.102.1-microsoft-standard-WSL2 x86_64
 root@flutter-env:/mnt/c/Users/username#
 ```
 
-この時点ではログインユーザーが root になっているため、一般ユーザーを追加してログインしなおします。ここではユーザー名を `wsl-user` にしていますが、なんでもかまいません。
+この時点ではログインユーザーが root になっているため、一般ユーザーを追加します。ここではユーザー名を `wsl-user` にしていますが、なんでもかまいません。
 
 ```:title=WSL(bash)
 # useradd -m -s $(which bash) wsl-user 👈 ユーザー追加
