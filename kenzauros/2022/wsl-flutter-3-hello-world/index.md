@@ -37,7 +37,7 @@ WSL や Visual Studio Code 等もインストール済みで、すでに利用�
 6. Android 実機でのリモートデバッグ
 
 なお、この記事は下記の記事を参考にしており、 Flutter 3 で変わったと思われる部分と Ubuntu 22.04、 Pixel 5 を利用している点を除けばほぼ同様の内容です。
-とても丁寧にまとめられており、とても参考になりました。著者に感謝申し上げます。
+とても丁寧にまとめられており、たいへん参考になりました。著者に感謝申し上げます。
 
 - [WSL2でFlutter環境をできるだけクリーンに構築する(えみ) - Qiita](https://qiita.com/suruseas/items/42d5d9c5beffa6ebdd78#3-2-android%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83)
 
@@ -101,7 +101,7 @@ root@flutter-env:/mnt/c/Users/username#
 ついでに `/etc/wsl.conf` を編集して WSL の設定を変更します。
 
 ```:title=WSL(bash)
-$ vi /etc/wsl.conf
+# vi /etc/wsl.conf
 ```
 
 下記のように入力して保存します。
@@ -530,7 +530,7 @@ Successfully paired to 192.168.0.202:41747 [guid=adb-06241FDD4000SY-jX5V3m]
 
 Successfully paired と表示されれば成功です。
 
-続けて `adb connet` コマンドで接続します。今度はワイヤレスデバッグの "IP アドレスとポート" に表示されているものを指定します。
+続けて `adb connect` コマンドで接続します。今度はワイヤレスデバッグの "IP アドレスとポート" に表示されているものを指定します。
 
 ![「ワイヤレスデバッグ」の IP アドレスとポート](images/pixel5_wireless_debug_3.png)
 
