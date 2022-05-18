@@ -114,6 +114,38 @@ module Api
 end
 ```
 
+```rb:title=config/application.rb
+require_relative "boot"
+
+require "rails/all"
+
+# Require the gems listed in Gemfile, including any gems
+# you've limited to :test, :development, or :production.
+Bundler.require(*Rails.groups)
+
+module ReactRails
+  class Application < Rails::Application
+    # Initialize configuration defaults for originally generated Rails version.
+    config.load_defaults 7.0
+
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins "*"
+        resource "*",
+          headers: :any,
+          methods: [:get, :post, :options, :head]
+      end
+    end
+    
+    config.api_only = true
+  end
+end
+```
+
+```rb:title=Gemfile
+gem 'rack-cors'
+```
+
 データベースの初期値を設定するため、 `db/seeds.rb` の中身を以下のように書き換えます。
 
 ```rb:title=db/seeds.rb
@@ -136,8 +168,51 @@ $ rails db:seed
 
 ### React プロジェクトを作成
 
-```:Reactプロジェクトを作成
+```:title=Reactプロジェクトを作成
 $ npx create-react-app react-frontend
+```
+
+```js:title=src/App.js
+import { useEffect } from 'react';
+import './App.css';
+import Task from './Task.js';
+
+const App = () => {
+  useEffect(() => {
+    fetch('http://localhost:3000/api/v1/tasks')
+    .then(result => result.json())
+    .then((output) => {
+        console.log('Output: ', output);
+      }).catch(err => console.error(err));
+  }, []);
+
+  return (
+    <div className="App">
+      <Task title="test" is_completed={true}/>
+    </div>
+  );
+}
+
+export default App;
+```
+
+```js:title=src/Task.js
+import { Form } from 'react-bootstrap';
+
+const Task = (props) => {
+  return (
+    <div>
+        <Form>
+            <Form.Group>
+                <Form.Check type="checkbox" label="完了" checked={props.is_completed}/>
+            </Form.Group>
+        </Form>
+        <p>{props.title}</p>
+    </div>
+  );
+}
+
+export default Task;
 ```
 
 ## まとめ
