@@ -1,6 +1,6 @@
 ---
 title: WSL 2 の Ubuntu 22.04 で Flutter 3 のクリーンな開発環境を作る
-date: 
+date: 2022-05-18
 author: kenzauros
 tags: [Flutter,Ubuntu 22.04]
 description: Windows (WSL 2) で Ubuntu 22.04 を利用した Flutter 3 のクリーンな開発環境を構築します。
