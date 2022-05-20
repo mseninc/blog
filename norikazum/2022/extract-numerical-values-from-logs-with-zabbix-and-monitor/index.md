@@ -1,6 +1,6 @@
 ---
 title: Zabbixでログから数値を抽出して監視する
-date: 
+date: 2022-05-20
 author: norikazum
 tags: [Zabbix]
 description: 
