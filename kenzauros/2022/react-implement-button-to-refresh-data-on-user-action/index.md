@@ -1,6 +1,6 @@
 ---
 title: "[React] useEffect をユーザー操作で再実行するリフレッシュボタンを実装する"
-date: 
+date: 2022-05-23
 author: kenzauros
 tags: [React, JavaScript]
 description: React でユーザーがボタンを押すことでデータを再読込できる機能を考えてみます。
