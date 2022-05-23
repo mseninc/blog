@@ -1686,10 +1686,7 @@ rules:
   - expected: エミュレーター
     pattern:  /エミュレータ(?!ー)/
   - expected: エンティティ
-    pattern:
-      - Entity
-      - entity
-      - エンティティー
+    pattern: エンティティー
   - expected: エントリー
     pattern:  /エントリ(?!ー)/
   - expected: オブザーバー
