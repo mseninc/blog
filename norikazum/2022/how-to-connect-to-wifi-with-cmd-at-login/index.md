@@ -66,7 +66,7 @@ netsh wlan connect name="TP-LINK_7***"
 ![](images/PXL_20220107_071413918.MP_R.jpg)
 
 この方法でログオン後に手動でWi-Fiを接続する手間な運用をさけることができました。
-※ 対処のSSIDの接続情報が保存されていることが前提になります。
+※ 対象のSSIDの接続情報が保存されていることが前提になります。
 
 ## 参考
 [WindowsのWi-Fi操作をコマンドプロンプトから行う - Qiita](https://qiita.com/mindwood/items/22e0895473578c4e0c7e)
