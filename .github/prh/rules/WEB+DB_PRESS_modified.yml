@@ -419,7 +419,7 @@ rules:
     expected: くく$1
   - pattern: 下さい
     expected: ください
-  - pattern: /([^解])決して|([^解])けして/
+  - pattern: /([^解])決して|([^解化])けして/
     expected: $1けっして
   - pattern: /拘([らりるれろっ])/
     expected: こだわ$1
@@ -2738,8 +2738,8 @@ rules:
     pattern:  /\bserver spec\b/
   - expected: Servlet $1
     pattern:  /Servlet([0-9])/
-  - expected: Shift-JIS
-    pattern:  /Shift_JIS|SHIFT-JIS|SHIFT_JIS|\bShift JIS\b|Shift_JIS|シフトJIS/
+  - expected: Shift_JIS
+    pattern:  /Shift[\-_ ]?JIS|シフト ?JIS|\bSJIS\b/i
   - expected: Shrine
     pattern:  /\bShrine\b/i
   - expected: Shrpx
