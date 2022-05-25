@@ -2,7 +2,7 @@
 title: Windows ログオン時にコマンドで Wi-Fi に接続する方法
 date: 
 author: norikazum
-tags: [Windows,バッチ]
+tags: [Windows]
 description: 
 ---
 
