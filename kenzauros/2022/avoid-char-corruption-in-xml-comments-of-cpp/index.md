@@ -1,6 +1,6 @@
 ---
 title: Visual Studio で cpp, h ファイルの XML ドキュメントコメントの文字化けを防ぐ
-date: 
+date: 2022-05-25
 author: kenzauros
 tags: [C++/CLI, EditorConfig, Visual Studio, C#]
 description: C++/CLI の XML ドキュメントコメントの文字化けを EditorConfig で解消する方法を紹介します。
