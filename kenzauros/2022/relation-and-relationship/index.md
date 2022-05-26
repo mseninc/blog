@@ -27,7 +27,7 @@ description: データベースの代表格であるリレーショナルデー�
 
 リレーション (relation; 関係) は、もともと [Edgar F Codd](https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%89%E3%82%AC%E3%83%BC%E3%83%BBF%E3%83%BB%E3%82%B3%E3%83%83%E3%83%89) 氏が考案した「*関係モデル*」において、データ集合を表す言葉として導入されました。その論文はオンラインでも読むことができますので、興味のある方は見てみてください。
 
-> The term **relation** is used here in its accepted mathematical sense. Given sets S1, S2, ..., Sn, (not necessarily distinct), R is a **relation** on these n sets if it is a set of ntuples each of which has its first element from S1, its second element from S2, and so on.
+> The term **relation** is used here in its accepted mathematical sense. Given sets S1, S2, ..., Sn, (not necessarily distinct), R is a **relation** on these n sets if it is a set of n tuples each of which has its first element from S1, its second element from S2, and so on.
 > <cite>E. F. Codd. 1970. [A Relational Model of Data for Large Shared Data Banks (大規模共有データバンク向けデータのリレーショナル・モデル)](https://www.seas.upenn.edu/~zives/03f/cis550/codd.pdf), p.379</cite>
 
 要約すると、**「リレーション」は「タプルの集まり」** であると解釈できます。また、ここでタプルとは「組」のことであり、テーブルにおける「行」に相当します。
@@ -93,13 +93,15 @@ description: データベースの代表格であるリレーショナルデー�
 こちらも用語辞典的な感じですが、大塚商会のIT用語辞典と同様の説明でした。
 
 > DBのリレーションとは？？
-> ・文字通り「関係」を表す。
+> 
+> ・文字通り「関係」を表す。<br>
 > ・テーブル同士の関係のことである。
 > <cite>[DBのリレーション - Qiita](https://qiita.com/miriwo/items/b44c8299c218fc367613)</cite>
 
 こちらの Qiita の記事も結構上位に出てくるページですが、やはり「リレーションシップ」の代わりに「リレーション」が使われています。
 
 > テーブルとテーブルをつなぐリレーション
+>
 > リレーションとは、テーブルとテーブルを繋ぐ共通のキー(key)となります。Excelで言うところの別シートのデータを紐づける意味と同じです。
 > <cite>[Webに関わる人に覚えてほしいデータベースとSQLの基礎 | 東京のWeb制作会社 クーシー（COOSY）](https://coosy.co.jp/blog/web-database-base/)</cite>
 
