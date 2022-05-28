@@ -2,7 +2,7 @@
 title: Zabbixプロキシを利用して監視する方法
 date: 
 author: norikazum
-tags: [zabbix]
+tags: [Zabbix]
 description: 
 ---
 
