@@ -61,8 +61,6 @@ zip 化するコマンドは `zip -r deploy_package.zip *` を使いましたが
 「ハンドラーやモジュールが見つからない」という内容のエラーでしたが、発生する原因がわかりづらかったので悩まされました。
 
 ## 参考
-[Node.js の AWS Lambda 関数ハンドラー](https://docs.aws.amazon.com/ja_jp/lambda/latest/dg/nodejs-handler.html)
-
-[Lambda デプロイパッケージ](https://docs.aws.amazon.com/ja_jp/lambda/latest/dg/gettingstarted-package.html)
-
-[teratail - ハンドラーが見つからず、index.jsを実行できない](https://teratail.com/questions/289341)
+- [Node.js の AWS Lambda 関数ハンドラー](https://docs.aws.amazon.com/ja_jp/lambda/latest/dg/nodejs-handler.html)
+- [Lambda デプロイパッケージ](https://docs.aws.amazon.com/ja_jp/lambda/latest/dg/gettingstarted-package.html)
+- [teratail - ハンドラーが見つからず、index.jsを実行できない](https://teratail.com/questions/289341)
