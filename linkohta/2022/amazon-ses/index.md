@@ -18,7 +18,7 @@ Amazon SES は特価販売などのマーケティング E メールや、注文
 >
 >例えば、特価販売などのマーケティング E メールや、注文確認などの取引 E メール、ニュースレターなどのその他のタイプの通信文の送信に使用できます。Amazon SES を使用してメールを受信するときは、E メール自動応答システム、E メール登録解除システム、受信 E メールからカスタマーサポートのチケットを生成するアプリケーションなどのソフトウェアソリューションを開発できます。
 >
->出典 : [Amazon SESとは？ - Amazon Simple Email Service](https://docs.aws.amazon.com/ja_jp/ses/latest/dg/Welcome.html)
+><cite>[Amazon SESとは？ - Amazon Simple Email Service](https://docs.aws.amazon.com/ja_jp/ses/latest/dg/Welcome.html)</cite>
 
 ## Amazon SES から E メールを送信してみる
 
