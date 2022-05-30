@@ -16,7 +16,7 @@ description: .NET 6 で非推奨になったインターフェースに対応す
 
 - [C# で SHA256 のハッシュ文字列を得る - gist](https://gist.github.com/kenzauros/09377008ff036a730d0c7de7e6ecdb89) (`GetSHA256HashedString_net6.cs`)
 
-```cs:title=GetSHA256HashedString_net6.cs
+```cs:title=StringExtensions.cs
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -73,7 +73,7 @@ SHA512 | `SHA512.Create()`
 
 byte 配列にも対応する場合は、 byte 配列を引数としたメソッドを定義して、そちらをベースにするとよいでしょう。
 
-```cs
+```cs:title=StringExtensions.cs
 public static class StringExtensions
 {
     static readonly HashAlgorithm hashAlgorithm = SHA256.Create();
