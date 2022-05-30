@@ -73,8 +73,8 @@ SHA512 | `SHA512.Create()`
 
 byte 配列にも対応する場合は、 byte 配列を引数としたメソッドを定義して、そちらをベースにするとよいでしょう。
 
-```cs:title=StringExtensions.cs
-public static class StringExtensions
+```cs:title=SHA256Extensions.cs
+public static class SHA256Extensions
 {
     static readonly HashAlgorithm hashAlgorithm = SHA256.Create();
 
