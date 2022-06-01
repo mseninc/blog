@@ -51,7 +51,7 @@ GitHub で設定できればいいのですが、そんな細かい設定はあ�
 これで **github.com だけで有効なスタイルを定義できる**ので、下記のように定義します。
 
 ```css
-label.drag-and-drop {
+:not(file-attachment) > label.drag-and-drop {
     display: none !important;
 }
 ```
@@ -59,6 +59,17 @@ label.drag-and-drop {
 ![Stylus で github.com の CSS を設定](images/hide-file-upload-bar-in-github-comment-5.png)
 
 右側のコード欄に記述したら、 **[保存]** ボタンをクリックします。
+
+<ins>
+
+2022/6/1 `:not(file-attachment) > ` を追加しました。
+
+アップロードボタンを消すには `label.drag-and-drop` だけでいいのですが、 [Release ページ](https://github.com/kenzauros/rharbor/releases/new) のアップロードボタンまで消えてしまって不便なので、こちらは残すようにしました。
+
+![Release ページのファイルアップロードボタンは表示する](images/hide-file-upload-bar-in-github-comment-7.png)
+
+
+</ins>
 
 ## 結果
 
