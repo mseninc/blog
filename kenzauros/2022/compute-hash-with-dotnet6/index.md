@@ -1,6 +1,6 @@
 ---
 title: "[.NET 6] SHA256 や MD5 の 16 進ハッシュ文字列を得る"
-date: 
+date: 2022-06-01
 author: kenzauros
 tags: [C#, .NET]
 description: .NET 6 で非推奨になったインターフェースに対応するため、イマドキの C# で SHA256 や MD5 のハッシュ文字列を得る方法を紹介します。
