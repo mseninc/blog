@@ -223,7 +223,7 @@ internal class PasswordBoxHelper : DependencyObject
 
 2022/6/1 追記
 
-`IsAttached` を明示的に設定しておかないとバインディングしたパスワードが空文字のときに下記の現象となり、入力値が VM に反映されません。
+`IsAttached` を明示的に設定しておかないとバインディングしたパスワードが空文字のときに、入力値が VM に反映されないことがあります。
 （`PasswordProperty_Changed` が発生せず、 `PasswordBox_PasswordChanged` ハンドラも設定されないため）
 
 このヘルパーを使用する場合は `IsAttached` を明示的に `True` にしておきましょう。
