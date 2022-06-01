@@ -54,7 +54,7 @@ unmanaged な配列を確保して暗号化して不要になったら解放し�
 
 が、プレーンテキストで取得する Password プロパティというバックドアまで存在するので、結局ザルでした。
 
-しかもこれらのプロパティ、またもセキュリティの観点から**依存関係プロパティとしては実装されておらず、バインディングできないのでここだけ　MVVM 的に実装できない**、という問題もありました。
+しかもこれらのプロパティ、またもセキュリティの観点から**依存関係プロパティとしては実装されておらず、バインディングできないのでここだけ MVVM 的に実装できない**、という問題もありました。
 
 これに対しては先人がヘルパーやビヘイビアを考案しておられるので、これを利用できます。
 
@@ -212,11 +212,23 @@ internal class PasswordBoxHelper : DependencyObject
 ```xml
 <PasswordBox
     PasswordChar="*"
+    helpers:PasswordBoxHelper.IsAttached="True"
     helpers:PasswordBoxHelper.Password="{Binding PasswordInViewModel}"
     />
 ```
 
 すっきりしていいですね。
+
+<ins>
+
+2022/6/1 追記
+
+`IsAttached` を明示的に設定しておかないとバインディングしたパスワードが空文字のときに下記の現象となり、入力値が VM に反映されません。
+（`PasswordProperty_Changed` が発生せず、 `PasswordBox_PasswordChanged` ハンドラも設定されないため）
+
+このヘルパーを使用する場合は `IsAttached` を明示的に `True` にしておきましょう。
+
+</ins>
 
 
 ## あとがき
