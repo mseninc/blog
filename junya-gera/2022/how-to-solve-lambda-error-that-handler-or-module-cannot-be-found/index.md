@@ -1,6 +1,6 @@
 ---
 title: "[AWS] Lambda 実行時に発生するハンドラーやモジュールが見つからないエラーの解決法"
-date: 
+date: 2022-06-03
 author: junya-gera
 tags: [Lambda, AWS]
 description: Lambda 実行時に発生する「index.handler is undefined or not exported」や「Cannot find module 'index'」というエラーの原因と解決法を解説します。
