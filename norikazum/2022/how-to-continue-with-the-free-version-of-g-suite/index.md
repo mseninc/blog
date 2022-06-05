@@ -20,7 +20,7 @@ description: 従来の無償版 G Suite は 2022 年 6 月 27 日以降利用で
 - **従来の無償版 G Suite は 2022 年 6 月 27 日以降利用できなくなる**
 - **2022 年 8 月 1 日まで無料で利用できるよう、今すぐ Google Workspace サブスクリプションにアップグレードすることをすすめる**
 - **アップグレードしない場合は、2022 年 6 月 27 日以降に自動的に Google Workspace に移行される**
-- **無償版 G Suite を非営利目的でご利用中の場合 [管理コンソール](https://admin.google.com/?utm_source=helpcenter) から、手続きができる**
+- **無償版 G Suite を非営利目的で利用中の場合 [管理コンソール](https://admin.google.com/?utm_source=helpcenter) から、手続きができる**
 
 私は非営利で利用していますので、料金のかからない無償版 G Suite を引き続き利用する手続きを実施しました。手続きはとても簡単です。
 
