@@ -1,6 +1,6 @@
 ---
 title: FortiGate でアップグレードパスを調べる方法
-date: 
+date: 2022-06-06
 author: norikazum
 tags: [FortiGate]
 description: 
