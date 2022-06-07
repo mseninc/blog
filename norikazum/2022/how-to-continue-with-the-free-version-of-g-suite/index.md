@@ -3,7 +3,7 @@ title: 無償版 G Suite を継続利用する方法
 date: 
 author: norikazum
 tags: [GSuite]
-description: 従来の無償版G Suiteは2022年6月27日以降利用できなくなります。
+description: 非営利で利用されている方がこの手続きを忘れると **勝手に有償版にアップグレードされますので忘れずに** 手続きしましょう。
 ---
 
 こんにちは。
