@@ -1,6 +1,6 @@
 ---
 title: 無償版 G Suite を継続利用する方法
-date: 
+date: 2022-06-08
 author: norikazum
 tags: [GSuite]
 description: 今まで無償で利用できていた G Suite が有償化されますが、非営利の場合はそのまま無償で利用できます。ただし手続きを忘れると勝手に有償版にアップグレードされますので忘れずに手続きしましょう。
