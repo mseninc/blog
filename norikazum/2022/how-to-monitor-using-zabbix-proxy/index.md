@@ -1,6 +1,6 @@
 ---
 title: Zabbixプロキシを利用して監視する方法
-date: 
+date: 2022-06-10
 author: norikazum
 tags: [Zabbix]
 description: 
