@@ -1,6 +1,6 @@
 ---
 title: フロントエンドTechCafe のオンラインイベントに参加しました
-date: 
+date: 2022-06-10
 author: k-so16
 tags: [〇〇奮闘記, その他]
 description: 5/18 に開催された『「フロントエンドの情報収集/学習方法」を語るフロントエンドTechCafe』の参加レポートです。
