@@ -162,7 +162,7 @@ exports.handler = async event => {
 
 最後に EventBridge で毎週水曜日と日曜日の21時に「notify_garbage_day」関数が実行されるよう設定します。
 
-[EventBridge](https://docs.aws.amazon.com/ja_jp/eventbridge/latest/userguide/eb-what-is.html) とは、**イベントを通じてさまざまなアプリケーションどうしを簡単に接続できるようにするサービス**です (元々は CloudWatch Events というサービスでした)。
+[EventBridge](https://docs.aws.amazon.com/ja_jp/eventbridge/latest/userguide/eb-what-is.html) とは、**イベントを通じてさまざまなアプリケーションどうしを簡単に接続できるようにするサービス**です (もともとは CloudWatch Events というサービスでした)。
 
 イベントは今回のようにスケジュールをトリガーにしたり、「Auto Scaring がインスタンスを増減させたら」など別の AWS リソースの状態変化をトリガーにできます。
 
