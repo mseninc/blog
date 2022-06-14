@@ -1,23 +1,21 @@
 ---
-title: "[AWS] Lambda と EventBridge でリマインダー LINE Bot を作成する方法"
+title: "[AWS] Lambda と EventBridge でリマインダー LINE Bot を作成する"
 date: 
 author: junya-gera
-tags: [Lambda, AWS, EventBridge, LINE Bot]
-description: 
+tags: [Lambda, EventBridge, AWS, LINE Bot]
+description: Lambda と EventBridge を使ってゴミを出す日にメッセージを送る LINE Bot を作成する方法を解説します。
 ---
 
-こんにちは、じゅんじゅんです。突然ですが、私の住居では水曜日と日曜日がゴミを出す日です。日曜日は大丈夫なのですが、水曜日は週の真ん中ということで気づきにくく、ついゴミを出すのを忘れてしまいます。
+こんにちは、じゅんじゅんです。突然ですが、私の住居では水曜日と日曜日がゴミを出す日です。日曜日は大丈夫なのですが、水曜日は週の真ん中ということもあり気付きにくく、ついゴミを出すのを忘れてしまいます。
 
-ということで「水曜日と日曜日の21時になったら "ゴミを出せ！" というメッセージを送る LINE Bot」を Lambda と EventBridge を使ったサーバーレス構成で作成しましたので、作り方を紹介します。
-
-### 前提
+ということで「**水曜日と日曜日の21時になったら "ゴミを出せ！" というメッセージを送る LINE Bot**」を Lambda と EventBridge を使ったサーバーレス構成で作成しましたので、作り方を紹介します。
 
 ### 対象読者
 - AWS 初心者でサーバーレスに興味がある方
 - LINE Bot 開発に興味がある方
 
 ### 1. LINE Message API の準備
-LINE のメッセージを送るには LINE 公式の API である [Message API](https://developers.line.biz/ja/services/messaging-api/) を使用します。今回は任意のタイミングでユーザーにメッセージを送信する「プッシュメッセージ」という機能を使います。ちなみに Message API では他にもユーザーからのメッセージに応答したり、友達になってくれたユーザーにメッセージを送信したりすることもできます。
+LINE のメッセージを送るには LINE 公式の API である [Message API](https://developers.line.biz/ja/services/messaging-api/) を使用します。今回は任意のタイミングでユーザーにメッセージを送信する「プッシュメッセージ」という機能を使います。ちなみに Message API ではほかにもユーザーからのメッセージに応答したり、友達になってくれたユーザーにメッセージを送信したりできます。
 
 #### LINE デベロッパーコンソールにログイン
 [LINE デベロッパーコンソール](https://developers.line.biz/ja/) を開き、右上の「ログイン」をクリックします。
@@ -73,7 +71,7 @@ LINE のメッセージを送るには LINE 公式の API である [Message API
 
 ![発行されたチャネルアクセストークン](images/2022-04-24_21h55_09.png "発行されたチャネルアクセストークン")
 
-ここまでできれば LINE デベロッパーでの設定はいったん終了です。
+ここまで設定できれば LINE デベロッパーでの設定はいったん終了です。
 
 
 ### 2. Lambda 関数の準備
@@ -83,7 +81,7 @@ LINE のメッセージを送るには LINE 公式の API である [Message API
 
 ![Lambda → 関数の作成](images/2022-04-29_09h07_31.png "Lambda → 関数の作成")
 
-「一から作成」を選択し、関数名を「notify_garbage_day」、ランタイムは「Node.js 14.x」としておきます。他は特に触らずに「関数の作成」ボタンをクリックします。
+「一から作成」を選択し、関数名を「notify_garbage_day」、ランタイムは「Node.js 14.x」としておきます。ほかは特に触らずに「関数の作成」ボタンをクリックします。
 
 ![関数の作成 → 項目の入力](images/2022-04-29_09h14_20.png "関数の作成 → 項目の入力")
 
@@ -93,7 +91,7 @@ LINE のメッセージを送るには LINE 公式の API である [Message API
 
 #### 環境変数の設定
 
-次に、 Messaging API を叩くために必要な**チャネルアクセストークン**とメッセージの送信先の**ユーザー ID** を環境変数に設定します。「notify_garbage_day」関数のページの「設定」タブから「環境変数」タブ、「編集」をクリックします。
+次に、 Messaging API をたたくために必要な**チャネルアクセストークン**とメッセージの送信先の**ユーザー ID** を環境変数に設定します。「notify_garbage_day」関数のページの「設定」タブから「環境変数」タブ、「編集」をクリックします。
 
 ![「設定」タブ → 「環境変数」タブ → 「編集」](images/2022-06-04_22h08_50.png "「設定」タブ → 「環境変数」タブ → 「編集」")
 
@@ -146,9 +144,9 @@ exports.handler = async event => {
 
 記載ができたら、`index.js` があるディレクトリで `zip -r deploy_package.zip *` コマンドを実行するなどして zip 化します。
 
-以前の記事に zip 化の際の注意点を記載していますので合わせてどうぞ。↓
+以下の記事に zip 化の際の注意点を記載していますので合わせてどうぞ。
 
-[[AWS] Lambda 実行時に発生するハンドラーやモジュールが見つからないエラーの解決法](https://mseeeen.msen.jp/how-to-solve-lambda-error-that-handler-or-module-cannot-be-found/)
+> [[AWS] Lambda 実行時に発生するハンドラーやモジュールが見つからないエラーの解決法](https://mseeeen.msen.jp/how-to-solve-lambda-error-that-handler-or-module-cannot-be-found/)
 
 「notify_garbage_day」関数の「コード」タブから「アップロード元」の「.zip ファイル」を選択します。
 
@@ -164,9 +162,9 @@ exports.handler = async event => {
 
 最後に EventBridge で毎週水曜日と日曜日の21時に「notify_garbage_day」関数が実行されるよう設定します。
 
-[EventBridge](https://docs.aws.amazon.com/ja_jp/eventbridge/latest/userguide/eb-what-is.html) とは、イベントを通じて様々なアプリケーション同士を簡単に接続できるようにするサービスです。
+[EventBridge](https://docs.aws.amazon.com/ja_jp/eventbridge/latest/userguide/eb-what-is.html) とは、**イベントを通じてさまざまなアプリケーションどうしを簡単に接続できるようにするサービス**です (元々は CloudWatch Events というサービスでした)。
 
-イベントは今回の「毎週水曜日と日曜日の21時」のようにスケジュールをトリガーにしたり、「Auto Scaring がインスタンスを増減させたら」など別の AWS リソースの状態変化をトリガーにすることができます。
+イベントは今回のようにスケジュールをトリガーにしたり、「Auto Scaring がインスタンスを増減させたら」など別の AWS リソースの状態変化をトリガーにできます。
 
 「notify_garbage_day」関数のページ上部の「トリガーの追加」をクリックします。
 
@@ -188,11 +186,11 @@ cron(0 12 ? * 1,4 *)
 
 最初 (一番左) は「分」ですが、21時ちょうどに通知してほしいので「0」にします。
 
-「時間」については、EventBridge の cron 式はタイムゾーンが UTC（協定世界時）となっているため、21時を指定する場合は9時間前の12時にする必要があります。
+「時間」については、**EventBridge の cron 式はタイムゾーンが UTC（協定世界時）となっている**ため、21時を指定する場合は9時間前の12時にする必要があります。
 
-次に「日」ですが、今回は曜日を指定するため、特定の日に決まりません。こういう場合は「?」とします。
+次に「日」ですが、今回は曜日を水曜日と日曜日に指定するため、特定の日に決まりません。こういう場合は「?」とします。
 
-月と年についてはどの月、年において適用させたいので、「すべて」を意味する「*」にします。
+月と年についてはどの月、年においても適用させたいので、「すべて」を意味する「*」にします。
 
 最後に「1,4」としている曜日ですが、1が日曜日、2が月曜日…と順番に数字が割り振られているため、日曜日と水曜日を表す「1,4」としています。
 
@@ -200,12 +198,13 @@ cron(0 12 ? * 1,4 *)
 
 ![スケジュール式を入力](images/2022-06-11_21h01_32.png "スケジュール式を入力")
 
-「notify_garbage_day」 関数にトリガーを追加することができました。
+「notify_garbage_day」 関数にトリガーを追加できました。
 
 ![notify_garbage_day にトリガーを追加](images/2022-06-11_21h04_01.png "notify_garbage_day にトリガーを追加")
 
 結果、ちゃんと水曜日と日曜日の21時に「ゴミを出せ！」というメッセージが通知されていました！
 
+![LINE Bot から届いたメッセージ](images/2022-06-14_22h51_46.png "LINE Bot から届いたメッセージ")
 
 ### まとめ
 今回は固定のメッセージを送信していましたが、 DynamoDB などのデータベースと合わせるとよりいろんな用途に活用できそうです。
@@ -213,6 +212,5 @@ cron(0 12 ? * 1,4 *)
 AWS のサービスを学んでいくにつれて、組み合わせ次第でできることがどんどん増えていくので楽しいですね。
 
 ### 参考
-[サーバーレスを学ぼう AWS Lambda DynamoDB API GatewayでLINEボット作成](https://www.amazon.co.jp/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%83%AC%E3%82%B9%E3%82%92%E5%AD%A6%E3%81%BC%E3%81%86-AWS-Lambda-DynamoDB-Gateway%E3%81%A7LINE%E3%83%9C%E3%83%83%E3%83%88%E4%BD%9C%E6%88%90-ebook/dp/B084RM69FX)
-
-[LINE Developers Messaging APIリファレンス](https://developers.line.biz/ja/reference/messaging-api/)
+- [サーバーレスを学ぼう AWS Lambda DynamoDB API GatewayでLINEボット作成](https://www.amazon.co.jp/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%83%AC%E3%82%B9%E3%82%92%E5%AD%A6%E3%81%BC%E3%81%86-AWS-Lambda-DynamoDB-Gateway%E3%81%A7LINE%E3%83%9C%E3%83%83%E3%83%88%E4%BD%9C%E6%88%90-ebook/dp/B084RM69FX)
+- [LINE Developers Messaging APIリファレンス](https://developers.line.biz/ja/reference/messaging-api/)
