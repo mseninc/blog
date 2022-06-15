@@ -1,6 +1,6 @@
 ---
 title: Docker 上で Ruby on Rails 7 の開発環境を構築してみた
-date: 
+date: 2022-06-15
 author: linkohta
 tags: [Ruby on Rails, Docker, Web]
 description: Docker 上で Ruby on Rails 7 の開発環境を構築する手順について解説します。
