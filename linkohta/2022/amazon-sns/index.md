@@ -1,6 +1,6 @@
 ---
 title: Amazon SNS でサブスクリプションする第一歩
-date: 
+date: 2022-06-17
 author: linkohta
 tags: [AWS, Amazon SNS]
 description: Amazon SNS でサブスクリプションするための第一歩について解説します。
