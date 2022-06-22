@@ -1,6 +1,6 @@
 ---
 title: "[Zabbix] net.dns や net.dns.record を使って DNS の名前解決ができているか監視する"
-date: 
+date: 2022-06-22
 author: jinna-i
 tags: [Zabbix]
 description: 
