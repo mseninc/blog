@@ -2,7 +2,7 @@
 title: React Three Fiber で 3D の地球をブラウザに表示させる
 date: 
 author: junya-gera
-tags: [3D, React, React Three Fiber, Three.js]
+tags: [React Three Fiber, Three.js, 3D, React]
 description: 
 --- React Three Fiber を使って 3D の地球をブラウザに表示させる方法を解説します。
 
@@ -20,6 +20,8 @@ Three.js について調べていたとき、 Three.js を React で記述でき
 
 ### Three.js で 3D の地球を表示
 まずは Three.js で 3D の地球を表示させるコードを紹介します。以下を参考に作成しました。
+
+> [Three.jsをかじる本](https://zenn.dev/sdkfz181tiger/books/735e854bee9fc9)
 
 ```js:title=Three.js
 <html>
@@ -88,6 +90,7 @@ Three.js について調べていたとき、 Three.js を React で記述でき
 </html>
 ```
 
+このコードによりブラウザに地球が表示されます。
 これを React Three Fiber に書き替えていきます。
 
 ### React Three Fiber で 3D の地球を表示
