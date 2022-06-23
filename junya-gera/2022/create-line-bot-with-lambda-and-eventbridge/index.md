@@ -113,9 +113,10 @@ LINE のメッセージを送るには LINE 公式の API である [Message API
 
 いよいよコーディングをしていきます。作業用ディレクトリを作成したらそのディレクトリで以下のコマンドを実行して npm の初期化と LineBot SDK のインストールを行います。
 
-`npm init`
-
-`npm i @line/bot-sdk`
+```
+npm init
+npm i @line/bot-sdk
+```
 
 `index.js` を作成し、以下のように記載します。
 
@@ -141,6 +142,25 @@ exports.handler = async event => {
 ```
 
 `pushMessage` 関数の第一引数に送信先のユーザー ID 、第二引数にメッセージのオブジェクトを指定することで送信できます。
+
+今回は「ゴミを出せ！」というテキストを送信するのでメッセージオブジェクトの `type` を `text` にしていますが、ほかにもスタンプ (`sticker`)、画像 (`image`)、動画 (`video`)、音声 (`audio`)、位置情報 (`location`) などが送信できます。
+
+また、メッセージオブジェクトに `sender.name` プロパティー、`sender.iconUrl` プロパティーを指定することで、送信者の名前やアイコンの変更もできます。
+
+```json:title=メッセージオブジェクト
+{
+    "type": "text",
+    "text": "Hello, I am Cony!!",
+    "sender": {
+        "name": "Cony",
+        "iconUrl": "https://line.me/conyprof"
+    }
+}
+```
+
+詳しくはドキュメントを参照してください。
+
+> [LINE Developers メッセージオブジェクト](https://developers.line.biz/ja/reference/messaging-api/#message-objects)
 
 記載ができたら、`index.js` があるディレクトリで `zip -r deploy_package.zip *` コマンドを実行するなどして zip 化します。
 
