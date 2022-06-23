@@ -1,6 +1,6 @@
 ---
 title: PHP TechCafe のオンラインイベント (静的解析編) に参加しました
-date: 
+date: 2022-06-23
 author: k-so16
 tags: [〇〇奮闘記, その他]
 description: 5/27 に開催された『PHPerのための「静的解析」を語り合うPHP TechCafe』の参加レポートです。
