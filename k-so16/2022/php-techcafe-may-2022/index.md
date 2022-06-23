@@ -1,5 +1,5 @@
 ---
-title: PHP TechCafe のオンラインイベントに参加しました
+title: PHP TechCafe のオンラインイベント (静的解析編) に参加しました
 date: 
 author: k-so16
 tags: [〇〇奮闘記, その他]
