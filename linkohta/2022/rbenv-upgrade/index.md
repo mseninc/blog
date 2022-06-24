@@ -1,6 +1,6 @@
 ---
 title: 【備忘録】rbenv の更新方法
-date: 
+date: 2022-06-24
 author: linkohta
 tags: [Ruby, Linux]
 description: Ubuntu の rbenv の更新方法について解説します。
