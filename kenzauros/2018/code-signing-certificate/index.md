@@ -5,6 +5,8 @@ author: kenzauros
 tags: [.NET, Visual Studio, 証明書]
 ---
 
+こんにちは、kenzauros です。
+
 今回は昨今のアプリ開発者は避けて通れない **SmartScreen と .NET アプリのコード署名**のお話です。
 
 ## Microsoft SmartScreen

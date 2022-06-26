@@ -5,6 +5,8 @@ author: kenzauros
 tags: [Git, SourceTree]
 ---
 
+こんにちは、kenzauros です。
+
 **SourceTree** を使っていて、一部のソースコードの diff が確認できなくて困ったのでメモです。
 
 ## 現象

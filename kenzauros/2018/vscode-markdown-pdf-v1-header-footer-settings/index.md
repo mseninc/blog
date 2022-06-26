@@ -5,6 +5,8 @@ author: kenzauros
 tags: [Visual Studio Code]
 ---
 
+こんにちは、kenzauros です。
+
 以前、記事でも紹介した **Markdown から PDF を生成できる Visual Studio Code の拡張機能 [markdown-pdf](https://github.com/yzane/vscode-markdown-pdf/)** 、業務でとても便利に使わせていただいています。
 
 - [Visual Studio Code で Markdown から PDF を一発生成する拡張機能 markdown-pdf](/vscode-markdown-pdf-extension/)

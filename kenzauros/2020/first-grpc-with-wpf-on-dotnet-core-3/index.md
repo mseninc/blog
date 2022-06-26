@@ -5,6 +5,8 @@ author: kenzauros
 tags: [.NET Core, gRPC, .NET]
 ---
 
+こんにちは、kenzauros です。
+
 とあるアプリで**プロセス間通信** (Inter-Process Communication; IPC) のために WCF (Windows Communication Foundation) を使っていたのですが、 **.NET Core に移行したことで WCF が使えなくなってしまいました**。
 
 大したことをやっていたわけではないのですが、なんらかの形でプロセス間通信が必要なため、 **.NET Core で利用できる gRPC** に移行することにしました。

@@ -5,6 +5,8 @@ author: kenzauros
 tags: [その他]
 ---
 
+こんにちは、kenzauros です。
+
 先日、下記の記事でも紹介したように **Google Pixel 5** を購入しました。
 
 - [Google Pixel 5 を Dual SIM で使うために楽天モバイル (eSIM) に MNP してみた](/mnp-to-rakute-mobile-esim-with-google-pixel-5/)

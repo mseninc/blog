@@ -5,6 +5,8 @@ author: kenzauros
 tags: [JavaScript, Web Speech API, 音声認識, 音声合成, Web]
 ---
 
+こんにちは、kenzauros です。
+
 音声認識対応の Web サイトを構築しようとしたとき、現代ではブラウザ標準で **SpeechRecognition API** があるため、 JavaScript で容易に構築できます。
 
 ただ、まだまだ機種依存が強く、クロスプラットフォームでうまく動作させるためには苦労が伴います。そもそも **iOS の Safari は未対応**ですので、 iOS のキーボードの音声認識機能を使わせるか、クラウド API を利用するなどの対策が必要です。

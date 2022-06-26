@@ -5,6 +5,8 @@ author: kenzauros
 tags: [Ubuntu, Windows Terminal, Windows, WSL]
 ---
 
+こんにちは、kenzauros です。
+
 最近、 Web 系の開発では WSL 2 上の Ubuntu で作業することが多くなりました。ターミナルには **[Windows Terminal](https://github.com/microsoft/terminal)** を使っています。
 
 ただ、 Windows Terminal で WSL のシェルを開くと**既定のディレクトリが `/mnt/c/Users/<ユーザー名>` になってしまうため、これをホームディレクトリ `~/` に変更**しました。

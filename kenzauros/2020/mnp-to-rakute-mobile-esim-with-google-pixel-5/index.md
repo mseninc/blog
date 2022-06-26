@@ -5,6 +5,8 @@ author: kenzauros
 tags: [Android, eSIM, その他]
 ---
 
+こんにちは、kenzauros です。
+
 先日 **[Google Pixel 5](https://store.google.com/jp/product/pixel_5)** を購入しました。
 
 これまで使っていた Huawei P10 と比べてさほどサイズも変わらず、軽快でおサイフケータイつき、防水つきになったので、気に入っています。

@@ -5,6 +5,8 @@ author: kenzauros
 tags: [PHP, Laravel, Eloquent, Web]
 ---
 
+こんにちは、kenzauros です。
+
 Laravel Eloquent の 2 回目です。
 
 [前回](/laravel-53-eloquent-orm-1/)はモデル作成までしか書けなかったので、今回はマイグレーションについて紹介します。

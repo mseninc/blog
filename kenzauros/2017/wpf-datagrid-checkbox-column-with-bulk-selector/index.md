@@ -5,6 +5,8 @@ author: kenzauros
 tags: [WPF, XAML, .NET]
 ---
 
+こんにちは、kenzauros です。
+
 WPF の DataGrid はまぁそれなりの見栄えにはなるのですが、いかんせん標準で用意されている Column がショボすぎて結局全部 `DataGridTemplateColumn` で書き直さざるを得なくなるのが玉に瑕です。
 
 ## まずワンクリックで使えるチェックボックス列にする

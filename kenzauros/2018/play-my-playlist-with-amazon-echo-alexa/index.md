@@ -5,6 +5,8 @@ author: kenzauros
 tags: [Amazon Alexa, Amazon Echo, その他]
 ---
 
+こんにちは、kenzauros です。
+
 今年に入ってから、我が家ではテレビがついていないときは **Amazon Echo** が音楽を奏でてくれています。
 
 - [Amazon | Echo - スマートスピーカー](http://www.amazon.co.jp/o/ASIN/B071ZF5KCM/m1s-22/ref=nosim)

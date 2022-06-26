@@ -5,6 +5,8 @@ author: kenzauros
 tags: [Windows Server, もくもく会, Windows]
 ---
 
+こんにちは、kenzauros です。
+
 別 PC から Windows のイベントログを取得したくなったので、 **Wevtutil** を試してみました。
 
 - [Wevtutil - MSDN](https://technet.microsoft.com/ja-jp/library/cc732848(v=ws.10).aspx)

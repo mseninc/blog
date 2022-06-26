@@ -5,6 +5,8 @@ author: kenzauros
 tags: [AWS, Lambda, PDF, Chrome, Puppeteer]
 ---
 
+こんにちは、kenzauros です。
+
 **AWS Lambdaを使ってサーバーレスで HTML を PDF に変換する** ということで三部構成でお送りしております。
 
 1. [概要・日本語フォントの準備](/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-1)

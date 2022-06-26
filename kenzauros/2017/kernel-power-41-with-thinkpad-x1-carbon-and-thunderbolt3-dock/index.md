@@ -5,6 +5,8 @@ author: kenzauros
 tags: [ThinkPad, その他]
 ---
 
+こんにちは、kenzauros です。
+
 最近、私の大事な **ThinkPad X1 Carbon (5th Gen.)** さんが魔の **Kernel-Power 41 病**に侵されています。
 
 ![](images/kernel-power-41-with-thinkpad-x1-carbon-and-thunderbolt3-dock-1.png)

@@ -5,6 +5,8 @@ author: kenzauros
 tags: [TechCrunch Tokyo, その他, 〇〇奮闘記]
 ---
 
+こんにちは、kenzauros です。
+
 11月14～15日に東京渋谷のヒカリエで開催されている **[TechCrunch Tokyo 2019](https://jp.techcrunch.com/event-info/techcrunch-tokyo-2019/)** に参加したので、リポートとともに感想を残しておきたいと思います。
 
 まずは1日目です。

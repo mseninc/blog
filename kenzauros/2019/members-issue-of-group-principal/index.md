@@ -5,6 +5,8 @@ author: kenzauros
 tags: [ActiveDirectory, C#, .NET]
 ---
 
+こんにちは、kenzauros です。
+
 **.NET** アプリで **Active Directory** を管理する際、 .NET 3.5 以降であれば **`System.DirectoryServices.AccountManagement` 名前空間の `PrincipalContext` や `GroupPrincipal` 、 `UserPrincipal` を使うのが、安心・安全**だと思いますが、ラッピングされている分、なかなか融通が利かないこともあります。
 
 今回は Active Directory で**ユーザーをセキュリティグループに参加させる**ときにつまづいたので、原因と解決法を紹介します。

@@ -5,6 +5,8 @@ author: kenzauros
 tags: [スマートバンド]
 ---
 
+こんにちは、kenzauros です。
+
 日々の健康管理のためスマートバンドを愛用しています。 2年ほど **[Huawei Band 3 Pro](https://consumer.huawei.com/jp/wearables/band3-pro/specs/) を使ってきました**が、スマホが Huawei でなくなり、アドバンテージがなくなったため、発売されたばかりの **Xiaomi Mi Band 6** に乗り換えました。
 
 **まだ日本語版がないため、今回中国語版を英語表示で使っています**が、結論から言うとまったく問題なく使用できています。せっかくなので、 Huawei のスマートバンドとの比較を交えつつ、使用レポをお送りします。
