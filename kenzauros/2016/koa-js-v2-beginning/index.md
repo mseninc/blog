@@ -5,7 +5,7 @@ author: kenzauros
 tags: [JavaScript, Node.js, Koa.js, ES2015(ES6), ES2017, Web]
 ---
 
-こんにちは！最近 Express から **[Koa.js](https://github.com/koajs/koa)** に乗り換え中です。
+こんにちは、 kenzauros です！最近 Express から **[Koa.js](https://github.com/koajs/koa)** に乗り換え中です。
 
 Web にも情報が少ないので、ちょっとずつ Koa のことを紹介していきたいと思います。
 

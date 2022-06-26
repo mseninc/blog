@@ -5,7 +5,7 @@ author: kenzauros
 tags: [Visual Studio Code]
 ---
 
-こんにちは！みなさん、エディターはなにをお使いですか？私は、去年は Atom 派でしたが今年は **Visual Studio Code** 派です。
+こんにちは、 kenzauros です！みなさん、エディターはなにをお使いですか？私は、去年は Atom 派でしたが今年は **Visual Studio Code** 派です。
 
 ## Visual Studio Code
 
