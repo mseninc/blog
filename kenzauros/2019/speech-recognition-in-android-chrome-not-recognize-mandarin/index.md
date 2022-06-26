@@ -71,7 +71,7 @@ recognizer.abort();
 
 ### 音声合成の言語タグ一覧
 
-「音声認識」ではなく、**「音声合成 (Speech Synthesis)」で利用できる言語タグの一覧は過去記事でも紹介したとおり、 `window.speechSynthesis.getVoices()` を使うことで簡単に取得できます**。
+「音声認識」ではなく、 **「音声合成 (Speech Synthesis)」で利用できる言語タグの一覧は過去記事でも紹介したとおり、 `window.speechSynthesis.getVoices()` を使うことで簡単に取得できます**。
 
 > - [Web Speech Synthesis API (音声合成) で利用可能な音声の一覧を手軽に取得する](/list-voices-with-web-speech-synthesis-api/)
 
@@ -85,7 +85,7 @@ recognizer.abort();
 
 PC 版 Chrome では `zh-CN` で動作したため、ハマりました。
 
-ではなんと指定すればよいのか。とりあえず**「中国語(中国本土)」は `zh` だけ**で動作させることができます。 (2019年8月現在)
+ではなんと指定すればよいのか。とりあえず **「中国語(中国本土)」は `zh` だけ**で動作させることができます。 (2019年8月現在)
 
 ということで少々泥臭いですが、最初は **Android の場合のみ `zh-CN` を `zh` に変換する**という方法をとりました。
 
@@ -113,7 +113,7 @@ recognizer.lang = fixRecognitionLang(lang);
 
 > - [言語対応  |  Cloud Speech-to-Text  |  Google Cloud](https://cloud.google.com/speech-to-text/docs/languages)
 
-たしかに**「普通话（中国大陆）」が `zh`** だけになっており、 台湾 (`zh-TW`) や 香港 (`zh-HK`) は普通の形式でいけるようです。
+たしかに **「普通话（中国大陆）」が `zh`** だけになっており、 台湾 (`zh-TW`) や 香港 (`zh-HK`) は普通の形式でいけるようです。
 
 > - [Chrome Browser](https://www.google.com/intl/ja/chrome/demos/speech.html)
 
@@ -126,7 +126,7 @@ recognizer.lang = fixRecognitionLang(lang);
                      ['yue-Hant-HK', '粵語 (香港)']],
 ```
 
-試しに Chrome の開発者ツール (DevTools) を使って Android をデバッグしてみたところ、**「普通话 (中国大陆)」を選択したときは `lang` プロパティに `cmn-Hans-CN` が設定されており、これで無事に中国が認識できました**。
+試しに Chrome の開発者ツール (DevTools) を使って Android をデバッグしてみたところ、 **「普通话 (中国大陆)」を選択したときは `lang` プロパティに `cmn-Hans-CN` が設定されており、これで無事に中国が認識できました**。
 
 ![](images/speech-recognition-in-android-chrome-not-recognize-mandarin-1.png)
 

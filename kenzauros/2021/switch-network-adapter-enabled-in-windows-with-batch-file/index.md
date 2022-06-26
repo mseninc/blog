@@ -57,11 +57,11 @@ IF ERRORLEVEL 1 PAUSE
 
 ![](images/switch-network-adapter-enabled-in-windows-with-batch-file-3.png)
 
-ショートカットを右クリックしてプロパティを開き、**「リンク先」でバッチファイル名の後にスペースを空けてネットワークアダプタ名を追加**（ここでは `Dock`）します。
+ショートカットを右クリックしてプロパティを開き、 **「リンク先」でバッチファイル名の後にスペースを空けてネットワークアダプタ名を追加**（ここでは `Dock`）します。
 
 ![](images/switch-network-adapter-enabled-in-windows-with-batch-file-4.png)
 
-ついでにその下の「詳細設定...」から詳細プロパティを開き、**「管理者として実行」**にチェックをいれておきます。
+ついでにその下の「詳細設定...」から詳細プロパティを開き、 **「管理者として実行」** にチェックをいれておきます。
 （ネットワークアダプタの切り替えには管理者権限が必要なため）
 
 ![](images/switch-network-adapter-enabled-in-windows-with-batch-file-5.png)

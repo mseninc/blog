@@ -38,7 +38,7 @@ tags: [PHP, Web]
 
 - [http://www8.cao.go.jp/chosei/shukujitsu/syukujitsu_kyujitsu.csv](http://www8.cao.go.jp/chosei/shukujitsu/syukujitsu_kyujitsu.csv)
 
-ちなみにこちらは**「振替休日」を含んだバージョン**です。含まないバージョンも提供されていますが、普通は含んだバージョンを利用することが多いでしょう。
+ちなみにこちらは **「振替休日」を含んだバージョン**です。含まないバージョンも提供されていますが、普通は含んだバージョンを利用することが多いでしょう。
 
 ちなみに**ファイルサイズは 1.1KB ぐらいで、 3 年間分**が含まれています。フォーマットは下記のような感じです。
 

@@ -34,7 +34,7 @@ MSEN では PDF 生成関連の設定は、プロジェクトごとに多少異�
 "markdown-pdf.footerTemplate": "<div style=\"font-family: '游ゴシック体', 'Yu Gothic', YuGothic, 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', sans-serif; position: relative; border-top: 1px solid black; margin: 0.5cm; font-size: 9px; width: 100%;\"><div style=\"position: absolute; width: 100%; top: 0.2cm; text-align: center;\"><span class='pageNumber'></span> / <span class='totalPages'></span></div><div style=\"position: absolute; right: 0; top: 0.2cm;\">MSEN Inc.</div></div>"
 ```
 
-この設定は**「ヘッダーなし」「フッター中央にページ番号/ページ数＋右端に社名」**という設定です。
+この設定は **「ヘッダーなし」「フッター中央にページ番号/ページ数＋右端に社名」** という設定です。
 
 うん、長いですね。なぜこんなに長いのかと言いますと...
 

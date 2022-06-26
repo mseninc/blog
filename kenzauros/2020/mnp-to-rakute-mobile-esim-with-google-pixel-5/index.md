@@ -60,15 +60,15 @@ tags: [Android, eSIM, その他]
 
 ![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-2.png)
 
-**「転入を開始する」**ボタンをクリックします。
+**「転入を開始する」** ボタンをクリックします。
 
 ![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-3.png)
 
-MNP 切替条件が表示されます。特に問題なければ**「転入を開始する」**ボタンをクリックします。
+MNP 切替条件が表示されます。特に問題なければ **「転入を開始する」** ボタンをクリックします。
 
 ![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-4.png)
 
-ステータスが**「有効化進行中」**になります。
+ステータスが **「有効化進行中」** になります。
 
 ![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-5.png)
 
@@ -88,15 +88,15 @@ MNP 切替条件が表示されます。特に問題なければ**「転入を�
 
 ![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-8.png)
 
-この状態で回線のステータスに戻ると**「開通手続きをする」**ボタンが表れるので、これを選択します。
+この状態で回線のステータスに戻ると **「開通手続きをする」** ボタンが表れるので、これを選択します。
 
 ![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-9.png)
 
-開通手続きが完了すると**「SIM の初期設定」という QR コード**が表示されます。これが **eSIM のダウンロード用 QR コード**ですので、この後の手順で設定するスマホから読み取ります。
+開通手続きが完了すると **「SIM の初期設定」という QR コード**が表示されます。これが **eSIM のダウンロード用 QR コード**ですので、この後の手順で設定するスマホから読み取ります。
 
 ![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-10.png)
 
-ここまでくると**楽天モバイルの回線ステータスは「開通済み」**となります。
+ここまでくると**楽天モバイルの回線ステータスは「開通済み」** となります。
 
 ![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-11.png)
 
@@ -105,7 +105,7 @@ MNP 切替条件が表示されます。特に問題なければ**「転入を�
 
 いよいよ **Pixel 5 に eSIM をダウンロード**します。
 
-設定から**「ネットワークとインターネット」**を選択します。
+設定から **「ネットワークとインターネット」** を選択します。
 
 ![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-12.png)
 
@@ -113,7 +113,7 @@ MNP 切替条件が表示されます。特に問題なければ**「転入を�
 
 ![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-13.png)
 
-「モバイルネットワークへの接続」画面で**「代わりに SIM をダウンロードしますか？ eSIM を使用して番号を追加」**を選択します。
+「モバイルネットワークへの接続」画面で **「代わりに SIM をダウンロードしますか？ eSIM を使用して番号を追加」** を選択します。
 
 ![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-14.png)
 
@@ -121,7 +121,7 @@ Pixel 5 では **Dual SIM の場合、 4G になってしまう**旨の警告が
 
 ![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-15.png)
 
-**「SIM のダウンロード」**画面で「次へ」を選択します。
+**「SIM のダウンロード」** 画面で「次へ」を選択します。
 
 ![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-16.png)
 
@@ -129,7 +129,7 @@ QR コードをスキャンする画面になるので、**楽天モバイルで
 
 ![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-17.png)
 
-回線名を確認して**「有効化」**を選択します。
+回線名を確認して **「有効化」** を選択します。
 
 ![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-18.png)
 
@@ -137,7 +137,7 @@ QR コードをスキャンする画面になるので、**楽天モバイルで
 
 ![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-19.png)
 
-**「Rakuten は有効です」**と表示されれば OK です。「完了」を選択します。
+**「Rakuten は有効です」** と表示されれば OK です。「完了」を選択します。
 
 ![](images/mnp-to-rakute-mobile-esim-with-google-pixel-5-20.png)
 

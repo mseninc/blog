@@ -90,7 +90,7 @@ System.DirectoryServices.AccountManagement.PrincipalOperationException
 
 590 行目を見てみると `UnsafeNativeMethods.DsGetDcName` が呼ばれて、結果がエラーなら `PrincipalOperationException` がスローされることがわかります。
 
-**`DsGetDcName` は Windows API の一つで「最も早く応答を返したドメインコントローラーの情報を取得する」**ものです。
+**`DsGetDcName` は Windows API の一つで「最も早く応答を返したドメインコントローラーの情報を取得する」** ものです。
 
 > [DsGetDcNameA function | Microsoft Docs](https://docs.microsoft.com/ja-jp/windows/desktop/api/dsgetdc/nf-dsgetdc-dsgetdcnamea)
 
