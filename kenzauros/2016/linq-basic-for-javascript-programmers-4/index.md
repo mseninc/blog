@@ -5,7 +5,7 @@ author: kenzauros
 tags: [JavaScript, C#, LINQ, .NET]
 ---
 
-こんにちは、けんけんです。連載 4 回目です。今回はちょっとむずかしいやつ、 **[reduce 関数](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)** です。
+こんにちは、 kenzauros です。連載 4 回目です。今回はちょっとむずかしいやつ、 **[reduce 関数](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)** です。
 
 MDN の定義によれば reduce 関数は **「隣り合う 2 つの配列要素に対して（左から右へ）同時に関数を適用し、単一の値にします。」** だそうです。これだけでは使い方以前に説明がさっぱりわかりませんね。
 

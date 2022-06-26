@@ -5,7 +5,7 @@ author: kenzauros
 tags: [JavaScript, C#, LINQ, .NET]
 ---
 
-こんにちは、けんけんです。連載 3 回目です。今回はまとめて一気に 2 セットお届けします！
+こんにちは、 kenzauros です。連載 3 回目です。今回はまとめて一気に 2 セットお届けします！
 
 **すべての要素が条件に一致しているかどうか**を調べる **[every 関数](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/every)** と**条件に一致している要素が一つでもあるか**を調べる **[some 関数](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/some)** です。
 
