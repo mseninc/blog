@@ -5,7 +5,7 @@ author: kenzauros
 tags: [WPF, XAML, C#, UWP, .NET]
 ---
 
-こんにちは、 kenzauros です。今回は WPF/UWP での画像処理関連です。
+こんにちは、kenzauros です。今回は WPF/UWP での画像処理関連です。
 
 最終的にはこのようなカラーパレット選択用のリストボックスを作ります。
 

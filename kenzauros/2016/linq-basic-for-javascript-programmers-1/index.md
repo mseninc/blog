@@ -5,7 +5,7 @@ author: kenzauros
 tags: [JavaScript, C#, LINQ, .NET]
 ---
 
-こんにちは、 kenzauros です。
+こんにちは、kenzauros です。
 
 さて今回は JavaScript という Web 系から C# という業務系に流れてきた人のために、JS でよく使う配列系関数に的を絞って「C# ではどう書けるのか」を連載形式でご紹介していきます。
 
