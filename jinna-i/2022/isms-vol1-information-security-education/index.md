@@ -1,5 +1,5 @@
 ---
-title: "ISMS 奮闘記 - 第1話- 情報セキュリティ教育"
+title: "ISMS 奮闘記 - 第1話 - 情報セキュリティ教育"
 date: 
 author: jinna-i
 tags: [ISMS, ○○奮闘記]
