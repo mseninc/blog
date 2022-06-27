@@ -1,6 +1,6 @@
 ---
 title: "[AWS] Lambda と EventBridge でリマインダー LINE Bot を作成する"
-date: 
+date: 2022-06-27
 author: junya-gera
 tags: [Lambda, EventBridge, AWS, LINE Bot]
 description: Lambda と EventBridge を使ってゴミを出す日にメッセージを送る LINE Bot を作成する方法を解説します。
