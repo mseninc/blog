@@ -2,28 +2,34 @@
 title: React Three Fiber で 3D の地球をブラウザに表示させる
 date: 
 author: junya-gera
-tags: [React Three Fiber, Three.js, 3D, React]
-description: 
---- React Three Fiber を使って 3D の地球をブラウザに表示させる方法を解説します。
+tags: [React Three Fiber, Three.js, 3D, React, Web]
+description: React Three Fiber を使って 3D の地球をブラウザに表示させる方法を解説します。
+--- 
 
-こんにちは、じゅんじゅんです。先日社内の勉強会で、前々から興味があった Three.js を使用して 3D の地球をブラウザに表示させる方法を発表しました。
+こんにちは、じゅんじゅんです。先日社内の勉強会で前々から興味があった Three.js を使用して 3D の地球をブラウザに表示させる方法を発表しました。
 
-Three.js について調べていたとき、 Three.js を React で記述できる React Three Fiber というライブラリがあることを知りました。
+Three.js について調べていたとき、 Three.js を React で記述できる React Three Fiber というライブラリーがあることを知りました。
 
 今回は 3D の地球を React Three Fiber で表示させる方法を Three.js での書き方と比較しながら紹介します。
 
-### 前提
+### 環境
 
+- react: 18.1.0
+- @react-three/fiber: 8.0.19
+- three: 0.141.0
 
 ### 対象読者
 
+- 3D コンテンツの制作に興味がある方
+- React で Three.js を扱いたい方
 
 ### Three.js で 3D の地球を表示
 まずは Three.js で 3D の地球を表示させるコードを紹介します。以下を参考に作成しました。
 
 > [Three.jsをかじる本](https://zenn.dev/sdkfz181tiger/books/735e854bee9fc9)
+> [Three.jsのマテリアルの基本](https://ics.media/tutorial-three/material_basic/)
 
-```js:title=Three.js
+```js:title=three.html
 <html>
 
 <head>
@@ -31,16 +37,12 @@ Three.js について調べていたとき、 Three.js を React で記述でき
   <script src="https://unpkg.com/three@0.137.4/build/three.min.js"></script>
   <script>
     window.onload = () => {
-      // サイズを指定
-      const width = 960;
-      const height = 540;
-
       // シーンを作成
       const scene = new THREE.Scene();
 
       // カメラを作成
-      const camera = new THREE.PerspectiveCamera(45, width / height);
-      camera.position.set(0, 0, +1000);
+      const camera = new THREE.PerspectiveCamera(45, 960 / 540);
+      camera.position.set(0, 0, 1000);
 
       // ライトを作成
       const directionalLight = new THREE.DirectionalLight(0xffffff);
@@ -52,7 +54,7 @@ Three.js について調べていたとき、 Three.js を React で記述でき
       const geometry = new THREE.SphereGeometry(300);
       // 画像を読み込む
       const loader = new THREE.TextureLoader();
-      const texture = loader.load('imgs/earthmap1k.jpg');
+      const texture = loader.load('./earthmap1k.jpg');
       // マテリアルに画像を設定
       const material = new THREE.MeshStandardMaterial({
         map: texture,
@@ -68,16 +70,12 @@ Three.js について調べていたとき、 Three.js を React で記述でき
       });
       renderer.setSize(width, height);
 
-      render();
-      
-      function render() {
-        // レンダリング
-        renderer.render(scene, camera);
-        // 地球を回転させる
-        mesh.rotation.y += 0.01;
-        // 1フレームごとに更新
-        requestAnimationFrame(render);
+      function animate() {
+        requestAnimationFrame(animate)
+        renderer.render(scene, camera)
       }
+
+      animate()
     }
 
   </script>
@@ -90,8 +88,10 @@ Three.js について調べていたとき、 Three.js を React で記述でき
 </html>
 ```
 
+地球の画像は[こちら](http://planetpixelemporium.com/earth.html)のサイトからお借りしました。
+
 このコードによりブラウザに地球が表示されます。
-これを React Three Fiber に書き替えていきます。
+これを React Three Fiber に書き換えていきます。
 
 ### React Three Fiber で 3D の地球を表示
 
@@ -104,10 +104,9 @@ npm install three @react-three/fiber
 
 #### Canvas コンポーネントを配置
 
-まずは App.js を以下のように記述し、Canvas コンポーネントを配置します。
+まずは App.js を以下のように記述し、`Canvas` コンポーネントを配置します。
 
 ```js:title=App.js
-import ReactDOM from 'react-dom';
 import { Canvas } from '@react-three/fiber';
 import './App.css';
 
@@ -125,47 +124,44 @@ const App = () => {
   );
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
 export default App;
 ```
 
-Canvas コンポーネントは、レンダリングに必要な基本要素であるシーンとカメラを裏側で設定しています。`camera` 属性でカメラの設定を行っています。
+`Canvas` コンポーネントは、**レンダリングに必要な基本要素であるシーンとカメラを裏側で設定してくれています**。
+
+また、 `Canvas` コンポーネントに対して `camera` プロパティーを記述してカメラの設定ができます。
 
  Three.js では以下のように記述していた部分です。
 
 ```js:title=Three.js
-// 1. シーンを作成
+// シーンを作成
 const scene = new THREE.Scene();
 
-// 2. カメラを作成
+// カメラを作成
 const camera = new THREE.PerspectiveCamera(45, 960 / 540);
-camera.position.set(0, 0, +1000);
+camera.position.set(0, 0, 1000);
 ```
 
-さらに、Canvas コンポーネントはフレームごとにシーンをレンダリングする役割も持っています。レンダラーを用意したり、`render` 関数を使用する必要はありません。Three.js では以下の部分です。
+さらに、**Canvas コンポーネントはフレームごとにシーンをレンダリングする役割も持っています**。レンダラーを用意したり、`render` 関数を使用する必要はありません。Three.js では以下の部分です。
 
 ```js:title=Three.js
-// 5. レンダラーを作成
+// レンダラーを作成
 const renderer = new THREE.WebGLRenderer({
   canvas: document.querySelector('#myCanvas'),
 });
 renderer.setSize(width, height);
 
-render();
-
-function render() {
-  // レンダリング
-  renderer.render(scene, camera);
-  // 地球を回転させる
-  mesh.rotation.y += 0.01;
-  // 1フレームごとに更新
-  requestAnimationFrame(render);
+function animate() {
+  requestAnimationFrame(animate)
+  renderer.render(scene, camera)
 }
+
+animate()
 ```
 
-これらの処理は Canvas コンポーネントが舞台裏で行ってくれます。
+これらの処理は `Canvas` コンポーネントが舞台裏で行ってくれます。
 
-ここで、 Canvas のサイズを設定しておきます。 Canvas は親ノードの大きさに合わせて変更されるため、 App.css で `canvas-container` 属性に対して `width` と `height` を以下のように設定します。
+ここで、 `Canvas` のサイズを設定しておきます。 `Canvas` は親ノードの大きさに合わせて変更されるため、 App.css で `canvas-container` 属性に対して `width` と `height` を以下のように設定して全画面にします。
 
 ```css:title=App.css
 #canvas-container {
@@ -174,16 +170,111 @@ function render() {
 }
 ```
 
+#### ライトを作成
+
+次はライトを作成します。App.js を以下のように修正します。
+
+```js{12}:title=App.js
+import { Canvas } from '@react-three/fiber';
+import './App.css';
+
+const App = () => {
+  return (
+    <div id="canvas-container">
+      <Canvas
+        camera={{
+          position: [0, 0, 1000],
+          aspect: 960 / 540,
+        }}>
+        <directionalLight color="white" position={[1, 1, 1]} />
+      </Canvas>
+    </div>
+  );
+}
+
+export default App;
+```
+
+`Canvas` コンポーネント下にライトの要素を置くだけでシーンに設置できます。今回は平行光源である `directionalLight` を置いていますが、 `AmbientLight` など他のライトでも同様です。
+
+Three.js ではライトに対して `set()` を使って `color` や `position` を設定していましたが、 react Three Fiber では `directionalLight` 要素の属性として設定できます。
+
+紹介のため `color="white"` と記載していますが、 `color` はデフォルトで白ですので記述は不要です。
+
+Three.js では以下のようにライトを作成していました。
+
+```js:title=Three.js
+// ライトを作成
+const directionalLight = new THREE.DirectionalLight(0xffffff);
+directionalLight.position.set(1, 1, 1);
+// ライトをシーンに追加
+scene.add(directionalLight);
+```
+
 #### メッシュを作成
 
-次は 3D 空間に地球を表示させるために、 mesh コンポーネントを追加します。Three.js では以下のように書いていた部分です。
+次はメッシュを作成します。**メッシュはオブジェクトの形状を 3D 空間で表現するためのジオメトリ (オブジェクトの種類) やマテリアル (オブジェクトの質感) を保持します**。
+
+`mesh` コンポーネントを `Canvas` コンポーネント下に置くことでメッシュを配置できます。App.js を以下のように修正します。
+
+```js{3-5,8,17-20}:title=App.js
+import { Canvas } from '@react-three/fiber';
+import './App.css';
+import { useLoader } from "@react-three/fiber";
+import * as THREE from 'three';
+import img from "./earthmap1k.jpg";
+
+const App = () => {
+  const texture = useLoader(THREE.TextureLoader, img);
+  return (
+    <div id="canvas-container">
+      <Canvas
+        camera={{
+          position: [0, 0, 1000],
+          aspect: 960 / 540,
+        }
+        }>
+        <mesh>
+          <sphereGeometry args={[300]} />
+          <meshStandardMaterial map={texture} />
+        </mesh>
+        <directionalLight color="white" position={[1, 1, 1]} />
+      </Canvas>
+    </div>
+  );
+}
+
+export default App;
+```
+
+`mesh` コンポーネントの子要素としてジオメトリとマテリアルを置くだけで、自動的に親の `mesh` コンポーネントに割り当てられます。
+
+今回は地球を表示させるのでジオメトリは `sphereGeometry` 、マテリアルはスタンダードな `meshStandardMaterial` にしています。
+
+Three.js では `sphereGeometry` の半径をコンストラクターで指定していました。
+
+```js
+const geometry = new THREE.SphereGeometry(300);
+```
+
+React Three Fiber では `args` という属性に配列を渡すことで指定できます。
+
+```js
+<sphereGeometry args={[300]} />
+```
+
+これで `npm run start` を実行するとブラウザに地球が表示されているのが確認できます。
+
+![ブラウザに表示された地球](images/2022-06-26_16h43_53.png "ブラウザに表示された地球")
+
+メッシュの作成とシーンへの追加は Three.js では以下のように記述していました。
 
 ```js:title=Three.js
 // ジオメトリを作成
 const geometry = new THREE.SphereGeometry(300);
 // 画像を読み込む
 const loader = new THREE.TextureLoader();
-const texture = loader.load('imgs/earthmap1k.jpg');
+const texture = loader.load('./earthmap1k.jpg');
 // マテリアルに画像を設定
 const material = new THREE.MeshStandardMaterial({
   map: texture,
@@ -194,90 +285,43 @@ const mesh = new THREE.Mesh(geometry, material);
 scene.add(mesh);
 ```
 
-まずは球体を表示させてみます。React Three Fiber では以下のように記述します (`camera` についての記述は省略しています)。
+### 完成したコード
 
-```js
-<Canvas>
-  <mesh>
-    <sphereGeometry args={[300]} />
-    <meshStandardMaterial />
-  </mesh>
-</Canvas>
-```
+最終的に App.js は以下のようになりました。
 
-mesh コンポーネントの子要素としてジオメトリとマテリアルを置くだけで、自動的に親の mesh コンポーネントに割り当てられます。今回は球体を表示させるのでジオメトリは `sphereGeometry` 、マテリアルはスタンダードな `meshStandardMaterial` にしています。
-
-Three.js では `sphereGeometry` の半径をコンストラクタで指定していました。
-
-```js:title=Three.js
-const geometry = new THREE.SphereGeometry(300);
-```
-
-r3f では `args` という属性に配列を渡すことで指定します。
-
-```js:title=r3f.js
-<sphereGeometry args={[300]} />
-```
-
-`npm run start` して確認してみるとブラウザに球体が表示されているはずです。
-
-![ブラウザに表示された球体](images/2022-06-17_23h00_11.png  "ブラウザに表示された球体")
-
-真っ黒で不気味なので、この球体を地球にしましょう。
-
-
-
-#### ライトを作成
-
-次はライトを作成します。Three.js では以下のようなライトを作成していました。
-
-```js:title=Three.js
-// ライトを作成
-const directionalLight = new THREE.DirectionalLight(0xffffff);
-directionalLight.position.set(1, 1, 1);
-// ライトをシーンに追加
-scene.add(directionalLight);
-```
-
-React Three Fiber では以下のように記述します。
-
-```js:title=r3f.js
-<Canvas>
-  <directionalLight color="white" position={[1, 1, 1]} />
-```
-
-Canvas コンポーネント下にライトの要素を置くだけでシーンに設置できます。今回は平行光源である directionalLight を置いていますが、AmbientLight など他のライトでも同様です。
-
-Three.js ではライトに対して `set()` を使って `color` や `position` を設定していましたが、 r3f では directionalLight 要素の属性として設定できます (`color` はデフォルトで白ですので本来は記述は不要です) 。
-
-
-
-
-
-```js
-import ReactDOM from 'react-dom'
-import { Canvas } from '@react-three/fiber'
-import Earth from './earth';
-import './App.css'
+```js:title=App.js
+import { Canvas } from '@react-three/fiber';
+import './App.css';
+import { useLoader } from "@react-three/fiber";
+import * as THREE from 'three';
+import img from "./earthmap1k.jpg";
 
 const App = () => {
+  const texture = useLoader(THREE.TextureLoader, img);
   return (
     <div id="canvas-container">
       <Canvas
         camera={{
           position: [0, 0, 1000],
           aspect: 960 / 540,
-          }
         }
-        >
-        <ambientLight intensity={0.1} />
-        <directionalLight position={[1, 1, 1]} />
-        <Earth />
+        }>
+        <mesh>
+          <sphereGeometry args={[300]} />
+          <meshStandardMaterial map={texture} />
+        </mesh>
+        <directionalLight color="white" position={[1, 1, 1]} />
       </Canvas>
     </div>
   );
 }
 
-ReactDOM.render(<App />, document.getElementById('root'))
 export default App;
 ```
+
+Three.js よりもとても少ない行数で書けています。
+
+また、基本的にコンポーネントを配置していくだけで必要な要素が追加されていくので直感的に書くことができ、コードを読んだときの理解もしやすいと思います。
+
+### まとめ
+とりあえず 3D オブジェクトを表示するという基本的な部分をやってみました。今後はアニメーションやイベントなどを扱えるようになりたいと思います。
