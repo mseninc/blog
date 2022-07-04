@@ -5,7 +5,9 @@ author: kenzauros
 tags: [Nextcloud, SAML, Web]
 ---
 
-AWS EC2 上に構築した **Nextcloud に Google アカウントでシングル・サインオン (SSO)**できるように設定しました。
+こんにちは、kenzauros です。
+
+AWS EC2 上に構築した **Nextcloud に Google アカウントでシングル・サインオン (SSO)** できるように設定しました。
 
 **Google Workspace** (旧 G Suite) は Google アカウントを使った SSO ができるよう **SAML 認証の IdP (Identity Provider)** の仕組みを提供しています。 Google Workspace の機能であるため個人アカウントでは利用できません。
 
