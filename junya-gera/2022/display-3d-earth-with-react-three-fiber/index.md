@@ -156,7 +156,7 @@ function animate() {
   renderer.render(scene, camera)
 }
 
-animate()
+animate();
 ```
 
 これらの処理は `Canvas` コンポーネントが舞台裏で行ってくれます。
