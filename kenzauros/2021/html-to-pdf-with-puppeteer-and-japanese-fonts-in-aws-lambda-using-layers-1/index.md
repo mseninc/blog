@@ -89,7 +89,7 @@ Windows などのリッチな環境に慣れていると忘れがちですが、
 
 ではいよいよ Lambda レイヤーを作成していきます。
 
-**適当なフォルダに `.fonts` フォルダを作成し、そこに必要なフォントファイルを入れます。この `.fonts` フォルダごと Zip で圧縮します。**今回は下記のような内容になりました。
+**適当なフォルダに `.fonts` フォルダを作成し、そこに必要なフォントファイルを入れます。この `.fonts` フォルダごと Zip で圧縮します。** 今回は下記のような内容になりました。
 
 ![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-1-4.png)
 
