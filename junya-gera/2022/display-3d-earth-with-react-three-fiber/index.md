@@ -104,9 +104,9 @@ npm install three @react-three/fiber
 
 #### Canvas コンポーネントを配置
 
-まずは App.js を以下のように記述し、`Canvas` コンポーネントを配置します。
+まずは App.jsx を以下のように記述し、`Canvas` コンポーネントを配置します。
 
-```js:title=App.js
+```js:title=App.jsx
 import { Canvas } from '@react-three/fiber';
 import './App.css';
 
@@ -172,9 +172,9 @@ animate()
 
 #### ライトを作成
 
-次はライトを作成します。App.js を以下のように修正します。
+次はライトを作成します。App.jsx を以下のように修正します。
 
-```js{12}:title=App.js
+```js{12}:title=App.jsx
 import { Canvas } from '@react-three/fiber';
 import './App.css';
 
@@ -215,9 +215,9 @@ scene.add(directionalLight);
 
 次はメッシュを作成します。**メッシュはオブジェクトの形状を 3D 空間で表現するためのジオメトリ (オブジェクトの種類) やマテリアル (オブジェクトの質感) を保持します**。
 
-`mesh` コンポーネントを `Canvas` コンポーネント下に置くことでメッシュを配置できます。App.js を以下のように修正します。
+`mesh` コンポーネントを `Canvas` コンポーネント下に置くことでメッシュを配置できます。App.jsx を以下のように修正します。
 
-```js{3-5,8,17-20}:title=App.js
+```js{3-5,8,17-20}:title=App.jsx
 import { Canvas } from '@react-three/fiber';
 import './App.css';
 import { useLoader } from "@react-three/fiber";
@@ -287,9 +287,9 @@ scene.add(mesh);
 
 ### 完成したコード
 
-最終的に App.js は以下のようになりました。
+最終的に App.jsx は以下のようになりました。
 
-```js:title=App.js
+```js:title=App.jsx
 import { Canvas } from '@react-three/fiber';
 import './App.css';
 import { useLoader } from "@react-three/fiber";
