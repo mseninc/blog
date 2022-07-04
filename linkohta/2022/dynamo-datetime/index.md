@@ -1,6 +1,6 @@
 ---
 title: Amazon DynamoDB で日時データを扱う方法
-date: 
+date: 2022-07-04
 author: linkohta
 tags: [Web, AWS]
 description: 
