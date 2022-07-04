@@ -5,6 +5,8 @@ author: kenzauros
 tags: [Raspberry Pi, Rust]
 ---
 
+こんにちは、kenzauros です。
+
 ## 前提条件
 
 先行記事 ([Raspberry Pi Imager を使って Raspberry Pi OS をインストールする](/install-raspberry-pi-os-with-raspberry-pi-imager)) でインストールを終えた状態を想定します。
