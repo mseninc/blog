@@ -5,6 +5,8 @@ author: kenzauros
 tags: [CentOS, Vagrant, VirtualBox, 仮想化技術]
 ---
 
+こんにちは、kenzauros です。
+
 **CentOS 7.3 で GNOME デスクトップ環境**を 2 ステップで立ち上げましょう。
 
 VirtualBox (5.1.22) と Vagrant (1.9.5) はインストール済みとします。

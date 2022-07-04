@@ -5,6 +5,8 @@ author: kenzauros
 tags: [Windows 10, ThinkPad, Windows]
 ---
 
+こんにちは、kenzauros です。
+
 近年の **ThinkPad X1 にはワイヤレス WAN がついていて、テザリングなしに外出先でもインターネット接続ができる**ので大変便利です。
 
 ただ、 **DoCoMo 以外の MVNO (格安 SIM)** で使おうと思うとなかなか面倒で、いつもセットアップ時に接続できなくてイラッとします。

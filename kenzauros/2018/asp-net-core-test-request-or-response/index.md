@@ -5,6 +5,8 @@ author: kenzauros
 tags: [.NET Core, ASP.NET Core, .NET]
 ---
 
+こんにちは、kenzauros です。
+
 **ASP.NET Core** でコントローラーを単体テストするとき、なにもせずにコントローラーをインスタンス化してしまうと `ControllerContext` が設定されないため、 `Request`, `Response` といった 本来の呼び出しでは設定されるはずのコンテキストプロパティが設定されません。
 
 このため、コントローラー内で `Response` ヘッダーなどを操作していると `NullReferenceException` が発生してしまいます。

@@ -5,6 +5,8 @@ author: kenzauros
 tags: [Node.js, Vue.js, Web]
 ---
 
+こんにちは、kenzauros です。
+
 最近 Laravel に組み込まれた **Vue.js** を使っていたのですが、 Vue を単体で使用したいこともあるため、ひさしぶりに個別にインストールしてみました。
 
 vue-cli を使えば 5 分程度で開発環境が構築できます。

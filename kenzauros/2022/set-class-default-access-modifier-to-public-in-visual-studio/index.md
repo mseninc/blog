@@ -6,7 +6,7 @@ tags: [Visual Studio, C#]
 description: Visual Studio で新しいクラスを追加したときのデフォルトのテンプレートを変更してみます。
 ---
 
-こんにちは、 kenzauros です。今回は **Visual Studio** の小ネタです。
+こんにちは、kenzauros です。今回は **Visual Studio** の小ネタです。
 
 C# でソリューションエクスプローラーから "追加" → "クラス(C)..." とすると、下記のようなクラスが生成されます。
 

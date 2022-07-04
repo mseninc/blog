@@ -5,6 +5,8 @@ author: kenzauros
 tags: [JavaScript, jQuery, Materialize, Web]
 ---
 
+こんにちは、kenzauros です。
+
 [Materialize](http://materializecss.com/) の日付選択 [Date Picker](http://materializecss.com/forms.html#date-picker) は、内部的に [pickadate.js](http://amsul.ca/pickadate.js/) が使われています。
 
 場合によっては動的に日付を設定したり、初期値を設定したりしたいことがあると思うのですが、単純に `input` の `value` に値を設定しても反映されません。

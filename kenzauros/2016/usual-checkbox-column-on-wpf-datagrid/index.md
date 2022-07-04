@@ -5,6 +5,8 @@ author: kenzauros
 tags: [DataGrid, WPF, XAML, .NET]
 ---
 
+こんにちは、kenzauros です。
+
 WPF でソフトを作っていると標準のコントロールで足りないことがよくあります。
 
 DataGrid の ComboBox や CheckBox もその一つで、イケてないコントロールの代表格です。おまけに [MahApps.Metro](http://mahapps.com/) のようなコントロールライブラリでもなかなか補完できないのが困った点です。

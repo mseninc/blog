@@ -5,6 +5,8 @@ author: kenzauros
 tags: [JavaScript, Git, GitHub]
 ---
 
+こんにちは、kenzauros です。
+
 資料をまとめたりするときに使えるかもしれない、ちょっとした小ネタです。
 
 **Git で差分のあるファイル名を抽出する**には `git diff` を使えばいいのですが、そのファイル名を使ってごにょごにょ加工したい場合、（私は）JavaScript のほうが便利なので、 **GitHub の Pull Request を利用**することにしました。

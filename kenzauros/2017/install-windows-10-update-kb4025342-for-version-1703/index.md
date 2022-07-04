@@ -5,6 +5,8 @@ author: kenzauros
 tags: [Windows 10, Windows Update, Windows]
 ---
 
+こんにちは、kenzauros です。
+
 **Windows 10** が Creators Update (Version 1703) にあがってからなんか調子悪いなーと感じたので、しばらく「インストールができない」と言われたまま放置していた累積更新プログラム **KB4025342** をちゃんとインストールしてみました。
 
 ## 自動ではインストールが完了しない

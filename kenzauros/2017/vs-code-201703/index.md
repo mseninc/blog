@@ -5,6 +5,8 @@ author: kenzauros
 tags: [Visual Studio Code, その他]
 ---
 
+こんにちは、kenzauros です。
+
 **Visual Studio Code** の 2017年3月度アップデート Version 1.11 が提供されています。
 
 [Visual Studio Code March 2017 (version 1.11)](https://code.visualstudio.com/updates/v1_11)

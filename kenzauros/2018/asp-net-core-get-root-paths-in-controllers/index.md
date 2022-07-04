@@ -5,6 +5,8 @@ author: kenzauros
 tags: [.NET Core, ASP.NET Core, .NET]
 ---
 
+こんにちは、kenzauros です。
+
 今回は **ASP.NET Core** で、たとえばファイルアップロードなど、コントローラー内で Web サーバーのパスを使う方法を紹介します。
 
 ## コンストラクターに IHostingEnvironment を渡せるようにする

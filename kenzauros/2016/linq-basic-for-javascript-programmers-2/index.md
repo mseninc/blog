@@ -5,7 +5,7 @@ author: kenzauros
 tags: [JavaScript, C#, LINQ, .NET]
 ---
 
-こんにちは、けんけんです。
+こんにちは、kenzauros です。
 
 連載 2 回目。今回は filter と同じくらい頻繁に使うであろう **map 関数**です。このような操作は数学的には「写像」とか「射影」とか呼ばれます。
 
