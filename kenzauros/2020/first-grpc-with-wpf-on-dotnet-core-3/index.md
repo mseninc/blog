@@ -5,6 +5,8 @@ author: kenzauros
 tags: [.NET Core, gRPC, .NET]
 ---
 
+こんにちは、kenzauros です。
+
 とあるアプリで**プロセス間通信** (Inter-Process Communication; IPC) のために WCF (Windows Communication Foundation) を使っていたのですが、 **.NET Core に移行したことで WCF が使えなくなってしまいました**。
 
 大したことをやっていたわけではないのですが、なんらかの形でプロセス間通信が必要なため、 **.NET Core で利用できる gRPC** に移行することにしました。
@@ -248,7 +250,7 @@ private void Window_Loaded(object sender, RoutedEventArgs e)
 }
 ```
 
-※今回はサンプルなので**「サーバーが起動できたらサーバーモード、できなかったらクライアントモード」というゴリ押しな仕様**にしています。真似しないでくださいね。
+※今回はサンプルなので **「サーバーが起動できたらサーバーモード、できなかったらクライアントモード」というゴリ押しな仕様**にしています。真似しないでくださいね。
 
 実質的に gRPC のサーバーを起動している部分は下記の部分だけです。わかりやすく簡潔ですね。
 

@@ -6,6 +6,8 @@ tags: [1Password, Shell Script, bash]
 description: 
 ---
 
+こんにちは、kenzauros です。
+
 ## 概要
 
 **1Password** で認証情報を管理していると、便利なのがカテゴリーごとに分けておける Vault 機能です。

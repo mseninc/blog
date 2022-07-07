@@ -5,6 +5,8 @@ author: kenzauros
 tags: [CentOS, Ansible, Linux]
 ---
 
+こんにちは、kenzauros です。
+
 Node.js から phantomjs を使って PDF を出力することになり、サーバー側に **fontconfig の設定と Noto fonts のインストール**が必要になったので、 **Ansible** を作成しました。
 
 

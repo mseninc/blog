@@ -5,6 +5,8 @@ author: kenzauros
 tags: [SQL Server, Entity Framework Core, .NET Core, ASP.NET Core, Blazor, .NET]
 ---
 
+こんにちは、kenzauros です。
+
 [前回](/asp-dotnet-core-blazor-install/) はインストールとセットアップを行ったので、**今回は Entity Framework Core (EFCore) を使って SQL Server に接続**してみます。
 
 SQLite で始める例も多いですが、今回はより実践的になるよう、**既存のデータベース (SQL Server) に接続**することを想定します。

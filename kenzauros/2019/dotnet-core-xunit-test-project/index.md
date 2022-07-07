@@ -5,6 +5,8 @@ author: kenzauros
 tags: [ユニットテスト, .NET Core, xUnit, .NET]
 ---
 
+こんにちは、kenzauros です。
+
 VS Code で **xUnit を使ったテストプロジェクトを追加して、テストを実行**してみます。
 
 ### 概要

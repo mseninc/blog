@@ -5,6 +5,8 @@ author: kenzauros
 tags: [.NET, .NET Framework, Visual Studio]
 ---
 
+こんにちは、kenzauros です。
+
 .NET アプリの設定ファイルといえば **App.config** (Settings.settings) が手軽で便利ですが、他のプロジェクトから参照できなかったりして不便な部分もあります。
 
 そこで、読み込みだけできればよい環境変数的な設定に関しては Web 系でのお馴染みの `.env` ファイルを利用することにしました。今回は **[DotNetEnv](https://github.com/tonerdo/dotnet-env)** を使ってみました。

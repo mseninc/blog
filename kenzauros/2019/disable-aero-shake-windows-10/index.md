@@ -5,6 +5,8 @@ author: kenzauros
 tags: [Windows 10]
 ---
 
+こんにちは、kenzauros です。
+
 Windows 10 を使っていて、ストレスを感じることナンバー15、 **Aero Shake (エアロシェイク)** の無効化方法です。
 
 ## 概要

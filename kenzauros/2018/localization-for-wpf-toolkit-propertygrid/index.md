@@ -5,6 +5,8 @@ author: kenzauros
 tags: [WPF, PropertyGrid, .NET]
 ---
 
+こんにちは、kenzauros です。
+
 Xceed Software 社の **[Extended WPF Toolkit](https://github.com/xceedsoftware/wpftoolkit)** に含まれる **[PropertyGrid](https://github.com/xceedsoftware/wpftoolkit/wiki/PropertyGrid)** は自作アプリなどでプロパティーを設定する UI を提供するために非常に有用です。
 
 Extended WPF Toolkit はライセンス的にも **[Microsoft Public License (MS-PL)](https://opensource.org/licenses/MS-PL)** で提供されるため、使いやすいです。

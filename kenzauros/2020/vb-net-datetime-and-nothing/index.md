@@ -5,6 +5,8 @@ author: kenzauros
 tags: [VB.NET, .NET]
 ---
 
+こんにちは、kenzauros です。
+
 **Visual Basic .NET** に慣れていればいいのですが、 C# に慣れていると同じ .NET でも仕様の異なる部分で戸惑うことがあります。
 
 **DateTime (= Date) の既定値**もその一つです。

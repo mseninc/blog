@@ -5,6 +5,8 @@ author: kenzauros
 tags: [WPF, .NET Core, .NET]
 ---
 
+こんにちは、kenzauros です。
+
 .NET Core で WPF が利用できるようになって便利になりましたが、 .NET Core では **[SecureString](https://docs.microsoft.com/ja-jp/dotnet/api/system.security.securestring?view=netcore-3.1)** の扱いが変更になったことで、 WPF の PasswordBox の扱いを変更せざるを得なくなりました。
 
 **SecureString クラスは元々パスワードのような機密性の高い文字列を格納するために導入されたクラスですが、 .NET Core では非推奨になり、今後は使用しないことが公式に勧奨**されています。

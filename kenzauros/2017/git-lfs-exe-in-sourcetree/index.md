@@ -5,6 +5,8 @@ author: kenzauros
 tags: [Git, Git LFS, SourceTree]
 ---
 
+こんにちは、kenzauros です。
+
 Git の GUI ツールである [SourceTree が Git LFS (Large File Storage) に対応してから 1 年ほどが経過](http://japan.blogs.atlassian.com/2016/02/sourcetree-update-atlassian-account-git-lfs-support-ui-refresh-and-more/)します。
 
 我々が使っている上ではまだまだ [Git LFS](https://git-lfs.github.com/) の不具合が多くて試行錯誤しているところですが、ともあれ大容量ファイルのバージョン管理には役立っています。

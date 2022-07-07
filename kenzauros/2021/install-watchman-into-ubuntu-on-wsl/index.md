@@ -5,6 +5,8 @@ author: kenzauros
 tags: [AWS, Ubuntu, AppSync, Web, Serverless Framework, WSL]
 ---
 
+こんにちは、kenzauros です。
+
 **WSL (Windows Subsystem for Linux) 上の Ubuntu に Watchman をインストール**したときのメモです。
 
 **Watchman は Facebook 製のファイルの変更を監視するツール**です。

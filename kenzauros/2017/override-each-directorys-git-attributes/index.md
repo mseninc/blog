@@ -5,6 +5,8 @@ author: kenzauros
 tags: [Git, Git LFS]
 ---
 
+こんにちは、kenzauros です。
+
 **Git LFS で巨大ファイルとして管理したいファイル**は `git lfs track` で管理対象として指定すればいいのですが、今回は**同じリポジトリ内でフォルダによって LFS の適用を切り替えたくなった**ので、その方法をメモしておきます。
 
 ## Git LFS の適用
