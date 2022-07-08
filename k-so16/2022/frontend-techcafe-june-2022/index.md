@@ -1,6 +1,6 @@
 ---
 title: 題目「Vite でお手軽 Vue.js の環境構築」でフロントエンドLT会 - vol.7に登壇してきました
-date: 
+date: 2022-07-08
 author: k-so16
 tags: [〇〇奮闘記, その他]
 description: 6/15 に開催された『フロントエンドLT会 - vol.7』の参加レポートです。
