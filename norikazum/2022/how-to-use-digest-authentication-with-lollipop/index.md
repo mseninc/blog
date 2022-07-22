@@ -2,8 +2,8 @@
 title: ロリポップでDigest認証を設定する方法
 date: 
 author: norikazum
-tags: []
-description: 
+tags: [lolipop]
+description: ロリポップレンタルサーバーでDigest認証の設定をしました。
 ---
 
 今回は、友人に頼まれて実施した、大手レンタルサーバーの[ロリポップ](https://lolipop.jp/)にDigest認証を設定したときのことを記事にしました。
