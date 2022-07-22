@@ -1,5 +1,5 @@
 ---
-title: ロリポップでDigest認証を設定する方法
+title: ロリポップでDigest認証の設定する方法
 date: 
 author: norikazum
 tags: [lolipop]
