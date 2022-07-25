@@ -85,7 +85,9 @@ functions:
 
 `useDotenv: true` と書くことで `.env` ファイルから環境変数を読み込むことができるようになります。
 
-`functions` の `hello` 関数に `enviroment` を追加し、`SYSTEM_NAME: ${env:SYSTEM_NAME}` のように書くことで `SYSTEM_NAME` に対して .env に記述した値を設定できます。
+次に、`functions` の `hello` 関数に `enviroment` を追加します。
+
+`SYSTEM_NAME: ${env:SYSTEM_NAME}` のように書くことで `SYSTEM_NAME` に対して .env に記述した値を設定できます。
 
 ### サービスをデプロイして Lambda の環境変数が設定されているか確認
 では以下のコマンドを実行してサービスをデプロイします。
