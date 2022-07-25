@@ -1,12 +1,4 @@
 ---
-title: 
-date: 
-author: junya-gera
-tags: []
-description: 
----
-
----
 title: Serverless Framework で Lambda の環境変数を設定する方法
 date: 
 author: junya-gera
