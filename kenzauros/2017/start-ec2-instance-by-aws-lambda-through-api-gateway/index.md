@@ -5,6 +5,8 @@ author: kenzauros
 tags: [AWS, EC2, Lambda, API Gateway]
 ---
 
+こんにちは、kenzauros です。
+
 [前回](/start-ec2-instance-by-aws-lambda-with-python-36)は Lambda 関数で EC2 インスタンスの起動と終了ができるところまで確認しましたので、今回は **API Gateway を使って Web 経由で呼び出せるようにします**。
 
 ざっくりなロードマップです。

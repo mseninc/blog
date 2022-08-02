@@ -5,6 +5,8 @@ author: kenzauros
 tags: [Photoshop, Illustrator]
 ---
 
+こんにちは、kenzauros です。
+
 **[Semantic UI](https://semantic-ui.com/)** の色合いが割と好きです。その名の通り、「セマンティック」にスタイルを定義できるところも気に入っています。
 
 Semantic UI 的デザインの際に **Photoshop や Illustrator で使えるスウォッチファイル**を作りましたので、よければご活用ください。

@@ -5,6 +5,8 @@ author: kenzauros
 tags: [Amazon Alexa, Amazon Echo, その他]
 ---
 
+こんにちは、kenzauros です。
+
 今年に入ってから、我が家ではテレビがついていないときは **Amazon Echo** が音楽を奏でてくれています。
 
 - [Amazon | Echo - スマートスピーカー](http://www.amazon.co.jp/o/ASIN/B071ZF5KCM/m1s-22/ref=nosim)
@@ -33,7 +35,7 @@ Alexa アプリ側ではマイミュージックの編集ができないため�
 
 > [Amazon ミュージックライブラリ](https://music.amazon.co.jp/playlists/)
 
-というわけで一番聞く時間の長い母が好きな曲を集めて、プレイリスト**「あきこ」(仮名)** を作りました。
+というわけで一番聞く時間の長い母が好きな曲を集めて、プレイリスト **「あきこ」(仮名)** を作りました。
 
 ## Alexa にプレイリストをかけていただくのは難しい
 
@@ -127,7 +129,7 @@ Alexa でたとえば「ほげほげ」というプレイリストを再生し�
 繰り返しますが、今のところ **Alexa アプリからは編集できません。**
 
 Amazon Music アプリを起動して、
-**プレイリストを長押し → プレイリストを編集 → 画面上部の名前欄を編集して「完了」**を押します。
+**プレイリストを長押し → プレイリストを編集 → 画面上部の名前欄を編集して「完了」** を押します。
 
 ![Amazon Music プレイリストの名前変更](images/play-my-playlist-with-amazon-echo-alexa-3.png)
 

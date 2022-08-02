@@ -5,6 +5,8 @@ author: kenzauros
 tags: [.NET Core, ASP.NET Core, .NET]
 ---
 
+こんにちは、kenzauros です。
+
 **.NET Core** や **ASP.NET Core** で設定ファイルから設定を読み込むには **`IConfiguration`** (Microsoft.Extensions.Configuration) を利用します。
 
 この `IConfiguration` は .NET Core でアプリを作る上ではかなり使えますので、ぜひご利用ください。

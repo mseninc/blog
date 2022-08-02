@@ -5,6 +5,8 @@ author: kenzauros
 tags: [AWS, Lambda, PDF, Chrome, Puppeteer]
 ---
 
+こんにちは、kenzauros です。
+
 **AWS Lambdaを使ってサーバーレスで HTML を PDF に変換する** ということで三部構成でお送りしております。
 
 1. [概要・日本語フォントの準備](/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-1)
@@ -33,21 +35,21 @@ tags: [AWS, Lambda, PDF, Chrome, Puppeteer]
 
 ### Lambda 関数の作成
 
-Lambda のコンソールから**「関数の作成」**をクリックします。
+Lambda のコンソールから **「関数の作成」** をクリックします。
 
 ![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-2.png)
 
-**「一から作成」**で適当な関数名（ここでは `html-to-pdf` ）を設定し、ランタイムは Node.js にして**「関数の作成」**をクリックします。
+**「一から作成」** で適当な関数名（ここでは `html-to-pdf` ）を設定し、ランタイムは Node.js にして **「関数の作成」** をクリックします。
 
 ![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-3.png)
 
 ### レイヤーの追加
 
-では**「レイヤーの追加」**をクリックしてさきほど作成した 日本語フォントと Puppeteer のレイヤーを追加していきます。
+では **「レイヤーの追加」** をクリックしてさきほど作成した 日本語フォントと Puppeteer のレイヤーを追加していきます。
 
 ![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-4.png)
 
-**「ARN を指定」でレイヤーの ARN を指定**（レイヤー作成後に生成された ARN）して**「追加」**をクリックします。レイヤー分繰り返します。
+**「ARN を指定」でレイヤーの ARN を指定**（レイヤー作成後に生成された ARN）して **「追加」** をクリックします。レイヤー分繰り返します。
 
 ![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-5.png)
 
@@ -57,19 +59,19 @@ Lambda のコンソールから**「関数の作成」**をクリックします
 
 ### Lambda 関数の設定
 
-次にメモリや権限などを設定しておきます。**「設定」→「基本設定」**を開きます。
+次にメモリや権限などを設定しておきます。 **「設定」→「基本設定」** を開きます。
 
 デフォルトではメモリが 128 MB しか割り当たっておらず、ブラウザの動作には厳しいため、 **メモリは 512 MB 程度に設定**します。 Puppeteer の推奨は 1 GB ぐらいだった気がします。
 
 また実行時間では 3 秒では足りないため、**タイムアウトも 1 分程度**にしましょう。
 
-**ロールに S3 への書き込み権限を与える**ため、画面下部のリンクから**「ロールを表示」**しましょう。
+**ロールに S3 への書き込み権限を与える**ため、画面下部のリンクから **「ロールを表示」** しましょう。
 
 ![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-7.png)
 
 ### ロールの設定
 
-ロール設定で**「ポリシーをアタッチします」**をクリックします。
+ロール設定で **「ポリシーをアタッチします」** をクリックします。
 
 ![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-8.png)
 
@@ -83,14 +85,14 @@ Lambda のコンソールから**「関数の作成」**をクリックします
 
 ### 環境変数の設定
 
-S3 のバケット名を環境変数経由で渡すため、**「設定」→「環境変数」** から下記のように `BUCKET_NAME` をキーとしてバケット名を設定します。
+S3 のバケット名を環境変数経由で渡すため、 **「設定」→「環境変数」** から下記のように `BUCKET_NAME` をキーとしてバケット名を設定します。
 （バケット名は先に作成したものを設定してください）
 
 ![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-11.png)
 
 ### ハンドラ関数の設定
 
-関数のコードソースから **`index.js` を開き、とりあえず下記のソースをコピペして「Deploy」**します。
+関数のコードソースから **`index.js` を開き、とりあえず下記のソースをコピペして「Deploy」** します。
 
 ![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-3-12.png)
 
@@ -149,7 +151,7 @@ exports.handler = async (event) => {
 
 ### テスト
 
-**「テスト」**から適当にテストイベントを作成し、ペイロードに下記のような `url` を含む JSON を指定して、**「呼び出し」**ます。
+**「テスト」** から適当にテストイベントを作成し、ペイロードに下記のような `url` を含む JSON を指定して、 **「呼び出し」** ます。
 
 ```
 {

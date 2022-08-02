@@ -5,6 +5,8 @@ author: kenzauros
 tags: [PHP, Laravel, Web]
 ---
 
+こんにちは、kenzauros です。
+
 昨日 **Laravel 6.0 の正式リリース**がアナウンスされました。
 
 > [Laravel 6 Is Now Released - Laravel News](https://laravel-news.com/laravel-6)

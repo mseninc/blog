@@ -51,11 +51,11 @@ Windows ではたぶん make は叩けないのでどこか適当な Linux で�
 
 ![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-2-1.png)
 
-さて、フォントのときと同様に Lambda のコンソールから**「レイヤー」**を開き、**「レイヤーの作成」**をクリックします。
+さて、フォントのときと同様に Lambda のコンソールから **「レイヤー」** を開き、 **「レイヤーの作成」** をクリックします。
 
 ![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-2-2.png)
 
-適当な名前を入力し、**「アップロード」**ボタンを押してさきほど生成された `chrome_aws_lambda.zip` を選択します。必須ではないですが、「互換性のあるランタイム」で「Node.js」を選択しておけばいいでしょう。入力できたら**「作成」**をクリックします。
+適当な名前を入力し、 **「アップロード」** ボタンを押してさきほど生成された `chrome_aws_lambda.zip` を選択します。必須ではないですが、「互換性のあるランタイム」で「Node.js」を選択しておけばいいでしょう。入力できたら **「作成」** をクリックします。
 
 ![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-2-3.png)
 

@@ -5,6 +5,8 @@ author: kenzauros
 tags: [PHP, Node.js, CentOS, Vagrant, Git, MySQL, 仮想化技術]
 ---
 
+こんにちは、kenzauros です。
+
 Laravel 5.3 を使ってみるのに vagrant に下記の開発環境を作成したので、まとめておきます。
 
 ## 概要

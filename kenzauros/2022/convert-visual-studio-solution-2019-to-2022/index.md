@@ -6,6 +6,8 @@ tags: [Visual Studio]
 description: 今回は Visual Studio のソリューションファイルのバージョンを上げる方法を紹介します
 ---
 
+こんにちは、kenzauros です。
+
 ## 概要
 
 **Visual Studio 2022** がリリースされてしばらく経ち、 .NET 5 のプロジェクトを .NET 6 に移行する機会も増えてきました。

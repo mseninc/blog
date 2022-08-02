@@ -5,6 +5,8 @@ author: kenzauros
 tags: [CloudFormation, AWS, Amazon SES]
 ---
 
+こんにちは、kenzauros です。
+
 CloudFormation で **SES (Simple Email Service)** の設定をしたくて、テンプレートを書いたら、下記のようなエラーに見舞われました。
 
 > An error occurred (ValidationError) when calling the CreateStack operation: Template format error: Unrecognized resource types: [AWS::SES::ConfigurationSetEventDestination, AWS::SES::ConfigurationSet]

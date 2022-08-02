@@ -5,6 +5,8 @@ author: kenzauros
 tags: [JavaScript, Node.js, Slack, AWS, EC2, RDS, Lambda, API Gateway]
 ---
 
+こんにちは、kenzauros です。
+
 **AWS の EC2 (サーバー) や RDS (データベース) は基本的に時間課金制**です。
 
 本番環境なら仕方ないのですが、ステージング環境で使っていない夜間や休日も課金されていくのでは夜も眠れません。

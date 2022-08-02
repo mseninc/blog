@@ -5,6 +5,8 @@ author: kenzauros
 tags: [Windows Server, もくもく会, Windows]
 ---
 
+こんにちは、kenzauros です。
+
 別 PC から Windows のイベントログを取得したくなったので、 **Wevtutil** を試してみました。
 
 - [Wevtutil - MSDN](https://technet.microsoft.com/ja-jp/library/cc732848(v=ws.10).aspx)
@@ -34,7 +36,7 @@ tags: [Windows Server, もくもく会, Windows]
 wevtutil qe Security /c:10 /f:XML > security-logs.xml
 ```
 
-これで「セキュリティ」のイベントログが 10 件取得できます。ちなみにこの `Security` の部分はイベントビューアーで見られる**「Windows ログ」の種類**に相当します。
+これで「セキュリティ」のイベントログが 10 件取得できます。ちなみにこの `Security` の部分はイベントビューアーで見られる **「Windows ログ」の種類**に相当します。
 
 | Windows ログの種類 | ログ名 |
 | ----------------- | ------ |

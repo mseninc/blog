@@ -5,6 +5,8 @@ author: kenzauros
 tags: [Entity Framework Core, .NET Core, ASP.NET Core, Blazor, .NET]
 ---
 
+こんにちは、kenzauros です。
+
 > .NET Core 3.0 の正式リリースに伴い、本記事を書き直しましたので、新記事をお読みください。
 > [[ASP.NET Core] Blazor Server 入門 (EF Core + SQL Server 編)](/asp-dotnet-core-blazor-ef-core-sqlserver)
 

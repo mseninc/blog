@@ -5,6 +5,8 @@ author: kenzauros
 tags: [Windows Terminal, Windows]
 ---
 
+こんにちは、kenzauros です。
+
 これまで開発用のシェルとして git bash を使いつつ cmder やら PowerShell やコマンドプロンプトを併用していましたが、統合的に利用できるようになった **[Windows ターミナル](https://docs.microsoft.com/ja-jp/windows/terminal/)** を利用することにしてみました。
 
 今回はせっかくなので Linux ディストリビューションである **Ubuntu をインストールして Windows ターミナル上で使ってみましょう**。

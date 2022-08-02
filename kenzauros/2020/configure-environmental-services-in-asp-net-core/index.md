@@ -70,7 +70,7 @@ public class Startup
 
 ### 説明
 
-実は ASP.NET Core には `ConfigureServices` メソッドの他に **`Configure<環境名>Services` という名前のメソッドを用意するとその環境のときのみ実行されるという「規約」**があります。
+実は ASP.NET Core には `ConfigureServices` メソッドの他に **`Configure<環境名>Services` という名前のメソッドを用意するとその環境のときのみ実行されるという「規約」** があります。
 
 これを利用して、特定の環境向けの設定メソッドを用意しておけば、自動的にそれが実行されます。たとえば **Production のときのみ実行したい場合は `ConfigureProductionServices`** といった具合です。
 

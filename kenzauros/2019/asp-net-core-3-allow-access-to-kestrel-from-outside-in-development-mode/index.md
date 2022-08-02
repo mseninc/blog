@@ -5,6 +5,8 @@ author: kenzauros
 tags: [.NET Core, ASP.NET Core, .NET]
 ---
 
+こんにちは、kenzauros です。
+
 Web アプリを開発していると、自機だけでなく、たとえばスマホから開発環境で起動している Web サーバーへ接続したくなることがあります。
 
 今回は **ASP.NET Core の Kestrel (組み込みの Web サーバー) で自分のマシン (localhost) 以外からサイトにアクセスする方法**を紹介します。
