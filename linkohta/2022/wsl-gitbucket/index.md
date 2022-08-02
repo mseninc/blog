@@ -1,6 +1,6 @@
 ---
 title: WSL2 上で GitBucket を構築してみる
-date: 
+date: 2022-08-02
 author: linkohta
 tags: [GitBucket, Git, Linux, Windows]
 description: WSL2 上で GitBucket を構築する手順について解説します。
