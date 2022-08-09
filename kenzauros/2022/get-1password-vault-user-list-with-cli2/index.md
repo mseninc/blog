@@ -50,7 +50,7 @@ CLI ツールを公式の手順にしたがってインストールします。
 
 適当なディレクトリーで **`wget` して `unzip` し、実行ファイルの `op` を `/usr/local/bin/` に `mv`** します。
 
-```sh
+```sh:title=bash
 ~$ cd /tmp
 
 /tmp$ wget https://cache.agilebits.com/dist/1P/op2/pkg/v2.6.0/op_linux_386_v2.6.0.zip 👈 URL は最新のものに変更してください
@@ -158,13 +158,13 @@ IFS=$ORG_IFS
 
 #### Vault 一覧の取得
 
-**Vault 一覧は `op valut ls` で取得**します。
+**Vault 一覧は `op vault ls` で取得**します。
 
 - [vault | 1Password CLI | 1Password Developer Documentation](https://developer.1password.com/docs/cli/reference/management-commands/vault#vault-list)
 
-これで得られる JSON は下記のようなシンプルな内容です。 `op valut ls | jq '.'` で表示してみるとわかりやすいでしょう。
+これで得られる JSON は下記のようなシンプルな内容です。 `op vault ls | jq '.'` で表示してみるとわかりやすいでしょう。
 
-```json
+```json:title=JSON
 [
   {
     "id": "6htyezadte2dj3n3afzm3j6n44",
