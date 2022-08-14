@@ -5,6 +5,8 @@ author: kenzauros
 tags: [HTML5, Web Speech API, Web]
 ---
 
+こんにちは、kenzauros です。
+
 今作っている Web サービスで **Web Speech Synthesis API** を利用する機会があり、端末ごとに利用できる言語を列挙したくなったため、 CodePen で簡単に作ってみました。
 
 ## 音声の列挙

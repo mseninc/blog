@@ -5,6 +5,8 @@ author: kenzauros
 tags: [WPF, MahApps.Metro, .NET]
 ---
 
+こんにちは、kenzauros です。
+
 WPF でとりあえずソフトを作るときに便利なのが Metro 調の UI にしてくれて、いくつかの有用な UI コントロールを提供してくれる **[MahApps.Metro](http://mahapps.com/)** です。
 
 特にウィンドウの外観を今風にしてくれる MetroWindow は割と優秀なので、これだけ使っている、という方もいらっしゃると思います。

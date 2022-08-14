@@ -5,6 +5,8 @@ author: kenzauros
 tags: [ThinkPad, その他]
 ---
 
+こんにちは、kenzauros です。
+
 私の愛用する Lenovo の **ThinkPad X1 Carbon** がリコールの対象かも...ということで早速チェックしました。
 
 リコールに関する記事はこちら。

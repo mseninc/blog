@@ -5,6 +5,8 @@ author: kenzauros
 tags: [イベントログ, Elasticsearch, Kibana, Windows]
 ---
 
+こんにちは、kenzauros です。
+
 **Windows のイベントログにあるセキュリティログ**、特にログインとログオフのイベントを **Kibana で検索・可視化**できるようにしてみます。
 
 ## 構成

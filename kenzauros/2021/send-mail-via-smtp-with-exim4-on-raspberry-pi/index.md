@@ -31,7 +31,7 @@ tags: [Raspberry Pi]
 
 ![](images/send-mail-via-smtp-with-exim4-on-raspberry-pi-1.png)
 
-**[アプリを選択] で「その他」**を選択し、適当なアプリ名を入力して **[生成]** を押します。今回は "My Alert" としました。
+**[アプリを選択] で「その他」** を選択し、適当なアプリ名を入力して **[生成]** を押します。今回は "My Alert" としました。
 
 ![](images/send-mail-via-smtp-with-exim4-on-raspberry-pi-2.png)
 

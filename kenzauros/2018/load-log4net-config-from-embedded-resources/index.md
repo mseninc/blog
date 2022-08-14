@@ -5,6 +5,8 @@ author: kenzauros
 tags: [WPF, C#, .NET]
 ---
 
+こんにちは、kenzauros です。
+
 C# のロギングといえば、今日日は **[NLog](http://nlog-project.org/)** のほうが盛んかもしれませんが、私は未だ **[log4net](https://logging.apache.org/log4net/)** を使用しています。
 
 - [log4net](https://logging.apache.org/log4net/)

@@ -25,7 +25,7 @@ Lambda であればよほど頻度が高くならない限り、ほぼタダで�
 
 ## Lambda の構成
 
-さて、今回の目的を AWS Lambda で達成するためには**「日本語フォント」**と**「Puppeteer」**が必要です。
+さて、今回の目的を AWS Lambda で達成するためには **「日本語フォント」** と **「Puppeteer」** が必要です。
 
 フォントは Lambda 関数のプロジェクトの **`.fonts` に配置**します。このディレクトリに配置することで、システムフォントとして読み込まれるので、 CSS でフォント名を指定するだけでフォントが利用できます。
 
@@ -89,15 +89,15 @@ Windows などのリッチな環境に慣れていると忘れがちですが、
 
 ではいよいよ Lambda レイヤーを作成していきます。
 
-**適当なフォルダに `.fonts` フォルダを作成し、そこに必要なフォントファイルを入れます。この `.fonts` フォルダごと Zip で圧縮します。**今回は下記のような内容になりました。
+**適当なフォルダに `.fonts` フォルダを作成し、そこに必要なフォントファイルを入れます。この `.fonts` フォルダごと Zip で圧縮します。** 今回は下記のような内容になりました。
 
 ![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-1-4.png)
 
-Lambda のコンソールから**「レイヤー」**を開き、**「レイヤーの作成」**をクリックします。
+Lambda のコンソールから **「レイヤー」** を開き、 **「レイヤーの作成」** をクリックします。
 
 ![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-1-5.png)
 
-適当な名前を入力し、**「アップロード」**ボタンを押してさきほど圧縮した `.fonts` の Zip ファイルを選択します。特に設定は不要なので、**「作成」**をクリックします。
+適当な名前を入力し、 **「アップロード」** ボタンを押してさきほど圧縮した `.fonts` の Zip ファイルを選択します。特に設定は不要なので、 **「作成」** をクリックします。
 
 ![](images/html-to-pdf-with-puppeteer-and-japanese-fonts-in-aws-lambda-using-layers-1-6.png)
 

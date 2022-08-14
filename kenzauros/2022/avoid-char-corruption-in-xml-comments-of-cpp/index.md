@@ -6,7 +6,7 @@ tags: [C++/CLI, EditorConfig, Visual Studio, C#]
 description: C++/CLI の XML ドキュメントコメントの文字化けを EditorConfig で解消する方法を紹介します。
 ---
 
-こんにちは、 kenzauros です。
+こんにちは、kenzauros です。
 
 Visual Studio で C# と C++/CLI 混在のソリューションを扱っていたところ、 *C++/CLI の XML ドキュメントコメントで書いた内容が盛大に文字化け*しました。
 

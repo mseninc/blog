@@ -5,6 +5,8 @@ author: kenzauros
 tags: [Webpack, Nuxt.js, Ant Design, Web]
 ---
 
+こんにちは、kenzauros です。
+
 今作っているサービスのビュー試作で **Nuxt.js** に UI フレームワークとして **[Ant Design Vue](https://www.antdv.com/docs/vue/introduce/)** を組み合わせて使っています。
 
 今回は **Ant Design Vue** のテーマをカスタマイズする方法を紹介します。

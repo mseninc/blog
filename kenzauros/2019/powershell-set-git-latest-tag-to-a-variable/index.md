@@ -5,6 +5,8 @@ author: kenzauros
 tags: [PowerShell, Git, Windows]
 ---
 
+こんにちは、kenzauros です。
+
 Git で対象のブランチの最新のタグ名を取得するには **`git describe` コマンド**を使います。
 
 今回はタグ名を PowerShell のスクリプト内で利用する必要があったので、変数に格納してみました。

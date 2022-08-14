@@ -5,6 +5,8 @@ author: kenzauros
 tags: [Laravel, Web]
 ---
 
+こんにちは、kenzauros です。
+
 SPA のアプリを作っていて、とりあえず **Laravel で静的な HTML を返す**ようにしたかったので、やってみました。
 
 ## 前提

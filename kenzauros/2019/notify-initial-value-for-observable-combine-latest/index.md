@@ -5,6 +5,8 @@ author: kenzauros
 tags: [C#, ReactiveProperty, .NET]
 ---
 
+こんにちは、kenzauros です。
+
 Observer パターンや ReactiveProperty を使った開発で **`IObservable<T>` の最初に任意の要素を付加したい**場合があります。
 
 ## 概要

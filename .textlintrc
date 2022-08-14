@@ -1,4 +1,9 @@
 {
+  "filters": {
+    "node-types": {
+      "nodeTypes": ["BlockQuote", "Link", "ReferenceDef", "Code"]
+    }
+  },
   "rules": {
     "preset-ja-technical-writing": {
       "ja-no-weak-phrase": false,
