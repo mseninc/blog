@@ -1,9 +1,9 @@
 ---
-title: Amazon SES で E メールを自動送信する第一歩
+title: Amazon SES で E メールを送信する第一歩
 date: 
 author: linkohta
 tags: [Amazon SES, AWS]
-description: Amazon SES で E メールを自動送信する手順を紹介します。
+description: Amazon SES で E メールを送信する手順を紹介します。
 ---
 
 link です。
@@ -46,7 +46,7 @@ Amazon SES は特価販売などのマーケティング E メールや、注文
 
 ![検証成功画面](images/2022-05-18_22h40_22.png)
 
-検証完了後に `Verified identities` 画面じぇ行き、登録したメールアドレスのステータスが `Verified` になっていることを確認しましょう。
+検証完了後に `Verified identities` 画面で登録したメールアドレスのステータスが `Verified` になっていることを確認しましょう。
 
 ![登録完了後の Identity](images/2022-05-18_22h41_07.png)
 
