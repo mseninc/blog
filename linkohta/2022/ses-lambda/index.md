@@ -90,24 +90,24 @@ E メールを送信するための Lambda 関数を作成します。
 関数を作成後、コードソースの `index.js` を以下のコードに書き換えます。
 
 ```js:title=メール送信関数
-var aws = require("aws-sdk");
-var ses = new aws.SES({ region: "us-east-1" });
-exports.handler = async function (event) {
-  var params = {
-    Destination: {
-      ToAddresses: ["Address", ...],
-    },
-    Message: {
-      Body: {
-        Text: { Data: "Test" },
-      },
+const aws = require("aws-sdk");
+const ses = new aws.SES({ region: "us-east-1" });
 
-      Subject: { Data: "Test Email" },
-    },
-    Source: "SourceAddress",
-  };
- 
-  return ses.sendEmail(params).promise()
+exports.handler = function (event) {
+    const params = {
+        Destination: {
+            ToAddresses: ["Address", ...],
+        },
+        Message: {
+            Body: {
+                Text: { Data: "Test" },
+            },
+            Subject: { Data: "Test Email" },
+        },
+        Source: "SourceAddress",
+    };
+
+    return ses.sendEmail(params).promise();
 };
 ```
 
