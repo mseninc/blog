@@ -5,6 +5,8 @@ author: kenzauros
 tags: [C#, LINQ, Entity Framework 6, .NET]
 ---
 
+こんにちは、kenzauros です。
+
 **.NET** で **Entity Framework 6 Code First** を使っていると共通的なインターフェースをもつエンティティに同じような処理を適用したいことがあります。
 
 そんなときはインターフェースを定義して、エンティティクラスにそのインターフェースを実装し、拡張メソッドで共通機能を実装するのがスマートかと思います。

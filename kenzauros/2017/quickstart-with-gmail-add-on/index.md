@@ -5,6 +5,8 @@ author: kenzauros
 tags: [Gmail, Google Apps Script, Web]
 ---
 
+こんにちは、kenzauros です。
+
 **[Gmail がアドオン (Add-on) に対応](https://www.blog.google/products/g-suite/do-more-your-inbox-gmail-add-ons/)**しました。
 
 Asana や Trello など有名サービスのアドオンがリリースされていますが、実は誰でもアドオンを開発することができます。

@@ -5,6 +5,8 @@ author: kenzauros
 tags: [Microsoft Azure, ASP.NET Core, .NET]
 ---
 
+こんにちは、kenzauros です。
+
 ## はじめに
 
 本記事は連載です。後続の記事については下記を参照ください。

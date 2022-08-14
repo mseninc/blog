@@ -5,6 +5,8 @@ author: kenzauros
 tags: [C#, .NET Framework, SSH, .NET]
 ---
 
+こんにちは、kenzauros です。
+
 多段 SSH 経由のリモートデスクトップを簡略化したくて、最近、[自前のソフト](https://kenzauros.github.io/rharbor/index.ja.html) を作っていたのですが、内部的に SSH 接続の確立に役立ってくれたのが、 **[SSH.NET](https://github.com/sshnet/SSH.NET)** です。
 
 > [sshnet/SSH.NET: SSH.NET is a Secure Shell (SSH) library for .NET, optimized for parallelism.](https://github.com/sshnet/SSH.NET)

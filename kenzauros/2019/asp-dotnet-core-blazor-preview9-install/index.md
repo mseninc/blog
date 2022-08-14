@@ -5,6 +5,8 @@ author: kenzauros
 tags: [.NET Core, ASP.NET Core, Blazor, .NET]
 ---
 
+こんにちは、kenzauros です。
+
 > .NET Core 3.0 の正式リリースに伴い、本記事を書き直しましたので、新記事をお読みください。
 > [\[ASP.NET Core\] Blazor Server 入門 (セットアップ編)](/asp-dotnet-core-blazor-install/)
 

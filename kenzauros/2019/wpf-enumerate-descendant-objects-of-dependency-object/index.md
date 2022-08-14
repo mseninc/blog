@@ -5,6 +5,8 @@ author: kenzauros
 tags: [WPF, C#, .NET]
 ---
 
+こんにちは、kenzauros です。
+
 タイトルのとおり、WPF の Window 等で **DependencyObject の子孫要素を特定の型のみすべて列挙する方法**を紹介します。
 
 ## やりたいこと

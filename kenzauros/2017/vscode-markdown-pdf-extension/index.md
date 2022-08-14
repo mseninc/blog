@@ -5,6 +5,8 @@ author: kenzauros
 tags: [Markdown, Visual Studio Code]
 ---
 
+こんにちは、kenzauros です。
+
 今回は **Visual Studio Code** (以下 VSCode) で **Markdown → PDF が一発で変換できるようになる拡張機能** をご紹介します。
 
 >2018/5/18 追記

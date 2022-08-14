@@ -5,6 +5,18 @@ author: kenzauros
 tags: [C#, .NET, .NET Framework]
 ---
 
+こんにちは、kenzauros です。
+
+<ins>
+2022/6/1 追記
+
+.NET 6 では一部が非推奨になっています。新しい記事をご参照ください。
+
+- [\[.NET 6\] SHA256 や MD5 の 16 進ハッシュ文字列を得る | MSeeeeN](https://mseeeen.msen.jp/compute-hash-with-dotnet6/)
+</ins>
+
+- - -
+
 **C# で SHA256 や MD5 のハッシュ文字列を得る**方法はいろいろなところで紹介されていますが、今どきのソースコードが少ないので、あらためて紹介します。
 
 ただし、 MD5 や SHA1 については、脆弱性や安全性の問題から使用は推奨されていませんので、用途を考慮してご使用ください。
@@ -22,6 +34,7 @@ tags: [C#, .NET, .NET Framework]
 
 ```cs:title=GetSHA256HashedString.cs
 using System.Security.Cryptography;
+using System.Linq;
 using System.Text;
 
 public class MyClass

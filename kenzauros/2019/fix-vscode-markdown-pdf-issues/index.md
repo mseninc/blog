@@ -5,6 +5,8 @@ author: kenzauros
 tags: [Markdown, Visual Studio Code, PlantUML]
 ---
 
+こんにちは、kenzauros です。
+
 VSCode の拡張機能 **[yzane/vscode-markdown-pdf](https://github.com/yzane/vscode-markdown-pdf)** はこれまでも何度か本ブログでも取り上げていますが、 **VSCode で markdown を PDF に変換するのに最適なツール**です。
 
 - [Visual Studio Code で Markdown から PDF を一発生成する拡張機能 markdown-pdf](/vscode-markdown-pdf-extension/)
