@@ -1,6 +1,6 @@
 ---
 title: 1Password CLI 2 で Vault とアクセス権のあるユーザーを一覧表示する
-date: 
+date: 2022-08-17
 author: kenzauros
 tags: [1Password, Shell Script, bash]
 description: 1Password CLI Version 2 を使って、 Vault とアクセス権のあるユーザーを権限付き一覧で表示してみます。
