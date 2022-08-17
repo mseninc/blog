@@ -247,7 +247,7 @@ $ op vault user list "Azure" --format json | jq '.'
     "name": "Inai HITO",
     "email": "unknown@example.com",
     "type": "MEMBER",
-    "state": "ACTIVE",
+    "state": "SUSPENDED",
     "permissions": ["allow_viewing", "allow_editing"]
   }
 ]
@@ -261,7 +261,9 @@ $ op vault user list "Azure" --format json | jq -r -S '.[] | select(.state == "A
 Kenji YAMADA
 ```
 
-さらにユーザーの Vault に対する権限が `permissions` に含まれているため、これも合わせて出力するには下記のようにすれば実現できます。
+1Password CLI のバージョン 2 では各 Vault に対するユーザーの権限も取得できるようになりました。
+
+ユーザーの Vault に対する権限が `permissions` に含まれているため、これも合わせて出力するには下記のようにすれば実現できます。
 
 ```sh:title=bash
 $ op vault user list "Azure" --format json | jq -r -S '.[] | select(.state == "ACTIVE") | .name + " (" + ( .permissions | map( split("_") | .[1][0:1] | ascii_upcase ) | @csv) + ")"' | sort
@@ -279,8 +281,8 @@ $ op vault user list "Azure" --format json | jq -r -S '.[] | select(.state == "A
 
 ## まとめ
 
-**1Password が公式に提供している CLI ツールを使って、 Vault やユーザーの一覧を取得する方法**を紹介しました。
+**1Password が公式に提供している CLI ツールを使って、 Vault やユーザー・権限の一覧を取得する方法**を紹介しました。
 
-バージョン 2 の CLI では各 Vault に対するユーザーのパーミッションも取得できるので便利になりました。
+バージョン 2 の CLI では、コマンド体系が少し変わり、取得できるデータが拡充されました。
 
 どなたかのお役に立てれば幸いです。
