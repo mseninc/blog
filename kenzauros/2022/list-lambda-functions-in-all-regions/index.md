@@ -1,6 +1,6 @@
 ---
 title: AWS CLI で全リージョンの Lambda 関数を一覧表示する
-date: 
+date: 2022-08-19
 author: kenzauros
 tags: [AWS, Node.js, Lambda, bash]
 description: 
