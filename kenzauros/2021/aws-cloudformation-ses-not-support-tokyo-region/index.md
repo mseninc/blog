@@ -5,6 +5,23 @@ author: kenzauros
 tags: [CloudFormation, AWS, Amazon SES]
 ---
 
+<ins datetime="2022-08-27T13:00:00:00+09:00">
+
+2022/2/23 のリリース以降、すべてのリージョンで SES のリソースが利用できるようになりました。
+
+![](images/ses-for-tokyo-region-released.png)
+
+> AWS::SES::Template is available now in all regions where SES is. Other SES resources are available as well as of yesterday:
+> AWS::SES::ConfigurationSetEventDestination
+> AWS::SES::ConfigurationSet
+> AWS::SES::ContactList
+>
+> Please continue to share your feedback we really appreciate it.
+>
+> <cite>[AWS::SES::Template - AWS::SES regional availability · Issue #326 · aws-cloudformation/cloudformation-coverage-roadmap](https://github.com/aws-cloudformation/cloudformation-coverage-roadmap/issues/326#issuecomment-1048727007)</cite>
+
+</ins>
+
 こんにちは、kenzauros です。
 
 CloudFormation で **SES (Simple Email Service)** の設定をしたくて、テンプレートを書いたら、下記のようなエラーに見舞われました。
