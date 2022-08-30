@@ -10,7 +10,7 @@ link です。
 
 別の記事で Amazon SES の `Identity` を作成して、テストメールを送信しましたが、今回は Lambda からテストメールを送信する手順を紹介します。
 
-この記事は[Amazon SES で E メールを自動送信する第一歩](../amazon-ses/)の続きです。
+この記事は[Amazon SES で E メールを自動送信する第一歩](https://mseeeen.msen.jp/amazon-ses/)の続きです。
 
 ## Lambda から SES にメールを送らせる手順
 
