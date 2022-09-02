@@ -1,6 +1,6 @@
 ---
 title: Amazon SES で E メールを送信する第一歩
-date: 
+date: 2022-09-02
 author: linkohta
 tags: [Amazon SES, AWS]
 description: Amazon SES で E メールを送信する手順を紹介します。
