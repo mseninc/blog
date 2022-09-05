@@ -1,6 +1,6 @@
 ---
 title: Amazon SES と Lambda を組み合わせて E メールを送る方法
-date: 
+date: 2022-09-05
 author: linkohta
 tags: [Amazon SES, Lambda, AWS]
 description: Amazon SES と Lambda を組み合わせて E メールを送る方法を紹介します。
