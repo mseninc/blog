@@ -1,5 +1,5 @@
 ---
-title: Serverless Framework で Lambda の環境変数を設定する方法
+title: .env ファイルを使って Serverless Framework で Lambda の環境変数を設定する方法
 date: 
 author: junya-gera
 tags: [Serverless Framework, Lambda]
@@ -16,7 +16,7 @@ description: Serverless Framework で Lambda の環境変数を設定する方�
 
 そういった理由からコマンドひとつで Lambda のデプロイができる Serverless Framework を使用することにしましたが、初めてだったためこれはこれで調べることがたくさんありました。
 
-その中でも今回は Serverless Framework で Lambda の環境変数を設定する方法について紹介します。
+その中でも今回は .env ファイルを使って Serverless Framework で Lambda の環境変数を設定する方法について紹介します。
 
 
 ### 前提
@@ -87,7 +87,9 @@ functions:
 
 次に、`functions` の `hello` 関数に `enviroment` を追加します。
 
-`SYSTEM_NAME: ${env:SYSTEM_NAME}` のように書くことで `SYSTEM_NAME` に対して .env に記述した値を設定できます。
+Serverless Framework では `${env: 〇〇}` のように書くことで、実行環境の環境変数を参照することができます。
+
+.env に記述した値についても `${env:SYSTEM_NAME}` で読み込めるので、 `SYSTEM_NAME` に対して設定します (TABLE_NAME も同様です)。
 
 ### サービスをデプロイして Lambda の環境変数が設定されているか確認
 では以下のコマンドを実行してサービスをデプロイします。
