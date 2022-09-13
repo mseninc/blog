@@ -10,7 +10,7 @@ description:
 
 今回は **EC2 インスタンス上の Docker で PHP 8 と nginx のコンテナーを起動して WordPress をホスト**します。
 
-目標としては **WordPress 6 と PHP 8 という比較的新しい組み合わせを、運用環境で利用**できるように構築することです。
+目標は **WordPress 6 と PHP 8 という比較的新しい組み合わせを、運用環境で安価に利用**できるようにすることです。
 
 コンテナーなら ECS でホストするのがベターですが、運用費の都合上、 EC2 しか選択できないこともあります。また、可用性がそこまで必要でない場合も、 1 つの選択肢になると思います。
 
@@ -18,15 +18,19 @@ description:
 
 ## 構成
 
-今回、 *WordPress 自体は EC2 インスタンスの Amazon Linux 上 (実際は後述の通り EFS でマウントした領域) に直接展開*します。
+今回の全体の構成は下記のような感じです。この記事では青い点線で囲った部分を扱います。それ以外の部分については別の記事で執筆予定です。
+
+![アーキテクチャ](images/architecture.png "アーキテクチャ")
+
+*WordPress 自体は EC2 インスタンスの Amazon Linux 上 (実際は後述の通り EFS でマウントした領域) に直接展開*します。
 
 WordPress にも公式 Docker イメージは存在しますが、アップデートなどでファイルが更新されることを考えると、 WordPress のファイル自体はホストに存在するほうがよいと考えました。
 
 ということで PHP 8 と nginx のコンテナーをそれぞれ WordPress のホスト環境として使用します。
 
-なお、今回は *EC2 を HTTP でホストし、 HTTPS は CloudFront で配信*します。また*データベースは RDS の MySQL で別途構築済み*とします。
+WordPress のファイル群は *EFS (Elastic File System)* に配置します。マウントポイントは `/mnt/efs` です。このあたりは CloudFormation によるインフラ構築側の記事を参照してください。
 
-また、 WordPress のファイル群は *EFS (Elastic File System)* に配置します。マウントポイントは `/mnt/efs` です。このあたりは CloudFormation によるインフラ構築側の記事を参照してください。
+なお、今回は *EC2 を HTTP でホストし、 HTTPS は CloudFront で配信*します。また*データベースは RDS の MySQL で別途構築済み*とします。
 
 各種バージョンなどは下記の通りです。
 
@@ -194,7 +198,7 @@ Chrome だと下記のようなエラーになります。
 
 CDN からのアクセスかどうかは HTTP ヘッダーで確認します。ただし、 *CloudFront の場合 `X-FORWARDED-PROTO` ヘッダーは削除されるため、 `X-CLOUDFRONT-FORWARDED-PROTO` ヘッダーを利用*します。
 
-CloudFront でもともと用意されているオリジンリクエストポリシーでは `X-CLOUDFRONT-FORWARDED-PROTO` も送信されないため、別途設定が必要です。このあたりは後続の記事で執筆予定です。
+CloudFront でもともと用意されているオリジンリクエストポリシーでは `X-CLOUDFRONT-FORWARDED-PROTO` も送信されないため、別途設定が必要です。このあたりは後続の記事をご参照ください。
 
 
 ### php/Dockerfile
