@@ -3,7 +3,7 @@ title: EC2 で PHP 8 と nginx の Docker コンテナーを使って WordPress 
 date: 
 author: kenzauros
 tags: [AWS, EC2, WordPress, PHP, nginx, Docker]
-description: 
+description: EC2 インスタンス上の Docker で PHP 8 と nginx のコンテナーを起動して WordPress をホストする方法をご紹介します。
 ---
 
 こんにちは、 kenzauros です。
