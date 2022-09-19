@@ -18,32 +18,32 @@ description:
 ## ローカルアカウント作成までのながれ
 新規購入した Windows 11 Home を参考に記載しています。
 1. 国とキーボードを選択します
-![](images/01.jpg)
-![](images/02.jpg)
-![](images/03.jpg)
+    ![](images/01.jpg)
+    ![](images/02.jpg)
+    ![](images/03.jpg)
 1. **ネットワークに接続しましょう の画面で Shift + F10 を押します**
-![](images/04.jpg)
+    ![](images/04.jpg)
 1. コマンドプロンプトが出るので、 `taskmgr` と入力して `Enter` を押します
-![](images/05.jpg)
+    ![](images/05.jpg)
 1. 詳細をクリックして、**ネットワーク接続フローを選択し、タスクの終了をクリック** します
-![](images/06.jpg)
-![](images/07.jpg)
+    ![](images/06.jpg)
+    ![](images/07.jpg)
 1. タスクを終了すると、ライセンス契約の同意画面がでてきますので同意して進めます
-![](images/08.jpg)
+    ![](images/08.jpg)
 1. ローカルアカウント名の入力を求められますので任意名を入力します
-![](images/09.jpg)
+    ![](images/09.jpg)
 1. パスワードを入力します
-![](images/10.jpg)
-![](images/11.jpg)
+    ![](images/10.jpg)
+    ![](images/11.jpg)
 1. セキュリティの質問を3つ設定します
-![](images/12.jpg)
-![](images/13.jpg)
-![](images/14.jpg)
+    ![](images/12.jpg)
+    ![](images/13.jpg)
+    ![](images/14.jpg)
 1. Hello を設定します。今回はスキップしています
-![](images/15.jpg)
+    ![](images/15.jpg)
 1. デバイスのプライバシー設定の選択 をデフォルトで完了します
-![](images/16.jpg)
-![](images/17.jpg)
+    ![](images/16.jpg)
+    ![](images/17.jpg)
 
 以上でセットアップが完了し、ローカルアカウントでログインできます。
 ![](images/18.jpg)
