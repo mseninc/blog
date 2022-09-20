@@ -28,9 +28,11 @@ AWS コンソールから実施します。
 
 ## AWS コンソールからの請求額アラーム設定手順
 
-まず **CloudWatch アラームのコンソール** (https://us-east-1.console.aws.amazon.com/cloudwatch/home?region=us-east-1#alarmsV2:?~(namespace~'AWS*2fBilling)) を開きます。
+まず CloudWatch アラームのコンソールを開きます。
 
-請求情報にアクセスするため、**バージニア北部リージョン (us-east-1)** を使用します。
+- [CloudWatch アラーム コンソール (バージニア北部 us-east-1)](https://us-east-1.console.aws.amazon.com/cloudwatch/home?region=us-east-1#alarmsV2:?~(namespace~'AWS*2fBilling))
+
+*AWS の全リージョンの請求情報はバージニア北部リージョンで管理されている*ため、このリージョンで請求アラームを作成します。
 
 請求アラームの画面を開いたら、 [アラームの作成] を選択します。
 
