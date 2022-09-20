@@ -1,5 +1,5 @@
 ---
-title: AWS CloudWatch アラームで予想請求額の通知をメールで受信する
+title: AWS CloudWatch アラームを設定して予想請求額の通知をメールで受信する
 date: 
 author: kenzauros
 tags: [AWS]
