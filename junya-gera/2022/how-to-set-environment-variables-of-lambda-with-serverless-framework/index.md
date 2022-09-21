@@ -1,6 +1,6 @@
 ---
 title: .env ファイルを使って Serverless Framework で Lambda の環境変数を設定する方法
-date: 
+date: 2022-09-22
 author: junya-gera
 tags: [Serverless Framework, Lambda]
 description: Serverless Framework で Lambda の環境変数を設定する方法を解説します。
