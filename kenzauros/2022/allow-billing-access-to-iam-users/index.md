@@ -8,11 +8,13 @@ description: 今回は AWS アカウントを作成後に行う、請求情報�
 
 今回は AWS アカウントを作成後に行う、**請求情報設定と IAM ユーザーへの請求情報アクセスの許可**について紹介します。
 
+基本的には公式ガイドに従えばよいのですが、非常にわかりづらいので画像付きで手順を紹介します。
+
 ## 前提
 
-新しく作成した AWS アカウントを前提とします。 IAM ユーザー/ロールに対する請求情報 (Billing) 系の権限設定は別途行います。
+新しく作成した AWS アカウントを前提とします。
 
-基本的には下記の公式ガイドに従えばよいのですが、非常にわかりづらいので画像付きで手順を紹介します。
+本記事の内容に関する AWS の公式ガイドです。 IAM ユーザー/ロールに対する請求情報 (Billing) 系の権限は 1 つ目のリンクを参考にして別途設定してください。
 
 - [アカウントの請求情報の表示を IAM ユーザーに許可する](https://aws.amazon.com/jp/premiumsupport/knowledge-center/iam-billing-access/)
 - [E メールで送付される請求書を取得する - AWS 請求](https://docs.aws.amazon.com/ja_jp/awsaccountbilling/latest/aboutv2/emailed-invoice.html)
