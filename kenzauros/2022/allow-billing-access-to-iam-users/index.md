@@ -1,6 +1,6 @@
 ---
 title: AWS アカウント作成後の請求情報設定と IAM ユーザーへの請求情報アクセスの設定
-date: 
+date: 2022-09-23
 author: kenzauros
 tags: [AWS]
 description: 今回は AWS アカウントを作成後に行う、請求情報設定と IAM ユーザーへの請求情報アクセスの許可について紹介します。
