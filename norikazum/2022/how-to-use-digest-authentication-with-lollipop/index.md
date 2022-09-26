@@ -2,7 +2,7 @@
 title: ロリポップでDigest認証の設定をする方法
 date: 
 author: norikazum
-tags: [lolipop]
+tags: [Digest認証]
 description: ロリポップレンタルサーバーでDigest認証の設定をしました。
 ---
 
@@ -32,7 +32,7 @@ description: ロリポップレンタルサーバーでDigest認証の設定を�
 1. 成功するとポップアップがでます。
     ![](images/2022-07-22_22h23_39.png)
 
-1. [ロリポップ！ＦＴＰ](https://lolipopftp.lolipop.jp/dir/list/) に接続し、制御フォルダに移動します。
+1. [ロリポップ！ＦＴＰ](https://lolipopftp.lolipop.jp/dir/list/) に接続し、アクセス制限を設定したフォルダ ( 今回の場合だとtestフォルダ ) に移動します。
     `.htpasswd` と `.htaccess` が作成されていて、ページに接続すると認証がかかっていることが確認できます。
     ![](images/2022-07-22_22h25_24.png)
     ![](images/2022-07-22_22h26_44.png)
@@ -44,13 +44,13 @@ description: ロリポップレンタルサーバーでDigest認証の設定を�
     htdigest -c .htpasswd "Auth" test
     ```
 
-1. パスワードを入力し、作成されたファイルの内容を [ロリポップ！ＦＴＰ](https://lolipopftp.lolipop.jp/dir/list/) から `.htpasswd` を開き上書きします。
+1. パスワードを入力し、作成されたファイルの内容を [ロリポップ！ＦＴＰ](https://lolipopftp.lolipop.jp/dir/list/) から `.htpasswd` を開いて上書きします。
     ![](images/2022-07-22_22h31_54.png)
 
 1. 接続テストをします。
-    以下のように認証が求められ、
+    以下のように認証が求められます。
     ![](images/2022-07-22_22h32_49.png)
-    `index.html` を作成していませんので404エラーですが認証が通りました。
+    `index.html` を作成していませんので404エラーになりましたが、認証は通りました。
     ![](images/2022-07-22_22h34_00.png)
     認証エラーになると、ポップアップがループで表示され、キャンセルをすると401エラーになります。
     ![](images/2022-07-22_22h36_24.png)
