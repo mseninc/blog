@@ -35,7 +35,7 @@ description:
 3. `server` : サーバー (EC2 インスタンス)
 4. `cdn` : CloudFront (ログバケット, ポリシー, ディストリビューション)
 
-デプロイも上記の順番で行います。
+デプロイも上記の順番で行いますが、 3 と 4 は依存していないので入れ替わっても問題ありません (後述)。
 
 1 は 2, 3 に必要なリソースを準備します。 1 はほとんど作り直す必要がないと思います。
 
@@ -45,22 +45,80 @@ description:
 
 4 は EC2 インスタンスの WordPress を配信するための CloudFront スタックです。
 
+
 ## スタック
 
-### 共通リソースのデプロイ
+### 共通リソース
 
-他のスタックで使用する VPC などのインフラ周りや、 EC2 インスタンスにマウントする EFS、 Elastic IP などが含まれます。
+#### デプロイ
 
-Serveless Framework を使ったデプロイコマンドは下記のような感じです。
+他のスタックで使用する **VPC などのインフラ周りや、 EC2 インスタンスにマウントする EFS、 Elastic IP** などが含まれます。
+
+Serveless Framework を使ったデプロイコマンドは下記のようになります。
 
 ```bash:title=共通リソースのデプロイ
 sls deploy --param="domain=<Route 53 でホストしているドメイン名>" --param="sshAllowedCidr=<SSH 接続を許可する CIDR>"
 ```
 
-パラメーターを2つ指定する必要があります。
+パラメーターを 2 つ指定する必要があります。 1 つは `domain` で Route 53 でホストしているドメイン名、ここでは `wp.example.com` です。
 
-もっともリソースの多い
+もう 1 つは `sshAllowedCidr` で EC2 インスタンスへの SSH 接続を許可する IP アドレスの CIDR を指定します。 CIDR は `123.123.123.123/32` のような形式です。
 
+#### 含まれるリソース
+
+- ネットワーク
+    - VPC
+    - サブネット (パブリックサブネット×2, プライベートサブネット×2)
+    - インターネットゲートウェイ
+    - ルートテーブル
+- ストレージ
+    - EFS (ファイルシステム, マウントターゲット)
+- セキュリティ
+    - セキュリティグループ (EC2 用, EFS 用, RDS 用)
+- シークレット
+    - EC2 インスタンス用キーペア
+    - RDS 認証情報 Secret
+- EC2 インスタンス用
+    - Elastic IP
+    - Route 53 DNS レコード
+
+ネットワークは標準な VPC の構成だと思います。今後の拡張 (サーバーや RDS の冗長化など) を考慮してパブリック、プライベートともに 2 つずつ用意しています。
+
+20 を超えるので少しリソースは多いですが、 1 つ 1 つ見ていけば難しくはないと思います。
+
+特徴的な部分のみ解説します。
+
+#### CloudFront → EC2 のセキュリティグループ
+
+EC2 をオリジンとする CloudFront の構成では、これまで EC2 へのアクセスを CloudFront のみに制限するのが困難でした。しかし、 2022 年から **CloudFront のマネージドプレフィックスリスト** を使ったアクセス制限を利用できるようになりました。
+
+- [Amazon CloudFront用のAWS マネージドプレフィックスリストを使用したオリジンへのアクセス制限 | Amazon Web Services ブログ](https://aws.amazon.com/jp/blogs/news/limit-access-to-your-origins-using-the-aws-managed-prefix-list-for-amazon-cloudfront/)
+
+これにより、下記のようにセキュリティグループで設定すれば、オリジン (EC2) へのアクセスを CloudFront からに制限できます。
+
+```
+# Security Groups for EC2 instance (HTTP)
+MySecurityGroupHTTP:
+  Type: AWS::EC2::SecurityGroup
+  Properties:
+    GroupDescription: Allow HTTP
+    VpcId: !Ref MyVPC
+    SecurityGroupIngress:
+      - IpProtocol: tcp
+        FromPort: 80
+        ToPort: 80
+        SourcePrefixListId: pl-3b927c52 # 👈 us-east-1 の CloudFront の マネージドプレフィックスリスト ID
+```
+
+ちなみに CloudFront がグローバルサービスなのにもかかわらず、**マネージドプレフィックスリストの ID は リージョンごとに異なります**。
+
+念のために確認しましたが、どのリージョンも内容は同じです。
+
+![](images/cf-prefix-list.png)
+
+ということで少し（かなり？）面倒ではありますが、 VPC のリージョンごとに別の ID を指定する必要があります。
+
+今回のテンプレートでは冒頭に `Mappings` で リージョンごとのプレフィックスリスト ID を定義しておき、 `!FindInMap ['RegionMap', !Ref 'AWS::Region', 'PrefixListCloudFront']` のようにして、デプロイリージョンに応じたプレフィックスリストを指定しています。
 
 ### データベース
 
@@ -72,7 +130,7 @@ sls deploy
 
 *MySQL の t3.micro であれば AWS の初期無料枠で利用できる*ので、検証環境で気軽に試せます。
 
-今回はシングル構成のため、使うリソースは `AWS::RDS::DBSubnetGroup` と `AWS::RDS::DBInstance` のみとシンプルです。
+今回はシングル構成のため、使うリソースは `AWS::RDS::DBSubnetGroup` と `AWS::RDS::DBInstance` のみです。
 
 初期無料枠の範囲となるように既定でストレージは 20GB 、インスタンスクラスは t3.micro にしています。
 
@@ -133,7 +191,7 @@ DB のユーザー名とパスワードは、共通リソースで作成した S
 - ユーザー名: `{{resolve:secretsmanager:SECRET_ID:username}}`
 - パスワード: `{{resolve:secretsmanager:SECRET_ID:password}}`
 
-この `SECRET_ID` を先の方法で置き換えています。CloudFormation の動的パラメータに関しては公式情報もわかりやすいです。
+この `SECRET_ID` を先の方法で置き換えています。CloudFormation の動的パラメーターに関しては公式情報もわかりやすいです。
 
 - [動的な参照を使用してテンプレート値を指定する - AWS CloudFormation](https://docs.aws.amazon.com/ja_jp/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
 
@@ -147,7 +205,7 @@ sls deploy --param="domain=wp.example.com" --param="sslCertificateArn=arn:aws:ac
 ```
 
 
-このスタックの特徴として、**リソース的には EC2 インスタンスとは依存関係がない**ことが挙げられます。このため、ドメインと証明書、オリジン (EC2 インスタンス) のドメイン名さえあれば、 EC2 側が準備できなくともデプロイできます。逆にこの CloudFront スタックを維持したまま EC2 インスタンスを削除したり、再構成することもできます。
+このスタックの特徴として、**リソース的には EC2 インスタンスとは依存関係がない**ことが挙げられます。このため、ドメインと証明書、オリジン (EC2 インスタンス) のドメイン名さえあれば、 EC2 側が準備できなくともデプロイできます。逆にこの CloudFront スタックを維持したまま EC2 インスタンスを削除したり、再構成したりもできます。
 
 [index.html を追加してファイル名を含まない URL をリクエストする - Amazon CloudFront](https://docs.aws.amazon.com/ja_jp/AmazonCloudFront/latest/DeveloperGuide/example-function-add-index.html)
 
