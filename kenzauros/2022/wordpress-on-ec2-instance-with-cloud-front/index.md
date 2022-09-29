@@ -2,9 +2,11 @@
 title: "[CloudFormation] EC2 でホストしている WordPress を CloudFront で配信する"
 date: 
 author: kenzauros
-tags: [AWS, EC2, WordPress, CloudFront, CloudFormation, Serverless Framework]
-description: 
+tags: [AWS, EC2, RDS, CloudFront, WordPress, CloudFormation, Serverless Framework]
+description: CloudFront で WordPress をホストする環境を CloudFormation で構築します。 EC2 をオリジンとした CloudFront の設定に役立つと思います。
 ---
+
+こんにちは、 kenzauros です。
 
 今回は **EC2 でホストしている WordPress を CloudFront で配信するため、 CloudFormation を使って構築**します。
 
@@ -23,8 +25,19 @@ description:
 
 スタック外で下記の設定が必要です。
 
-- **Route 53** : ドメインを指定済みであること (この記事では `wp.example.com` として進めます)
+- **Route 53** : ドメインを指定済みであること<br>(この記事では `wp.example.com` として進めます)
 - **ACM (Certificate Manager)** : `*.wp.example.com` に対する SSL 証明書を発行済みであること
+
+このスタックで使用するサブドメインは下記のようになります。
+
+- `wordpress.wp.example.com`: ユーザーがサイトにアクセスする際のサブドメイン (CloudFront のエイリアス)
+- `server.wp.example.com`: WordPress をホストしている EC2 インスタンスにアクセスするサブドメイン (Elastic IP に紐付け)
+
+実行環境は下記の通りです。
+
+- Ubuntu 20.04, WSL 2, Windows 10 Pro
+- Serverless Framework 3.22.0
+- aws-cli/2.2.22 Python/3.8.8 Linux/5.10.102.1-microsoft-standard-WSL2 exe/x86_64.ubuntu.20 prompt/off
 
 
 ## リポジトリ (GitHub)
@@ -80,9 +93,9 @@ description:
 
 ### 共通リソース
 
-#### 含まれるリソース
-
 他のスタックで使用する **VPC などのインフラ周りや、 EC2 インスタンスにマウントする EFS、 Elastic IP** などが含まれます。
+
+![共通リソース スタック](images/wp-common.png "共通リソース スタック")
 
 - ネットワーク
     - VPC
@@ -186,6 +199,8 @@ sls deploy --param="domain=<Route 53 でホストしているドメイン名>" -
 
 *MySQL の t3.micro であれば AWS の初期無料枠で利用できる*ので、検証環境で気軽に試せます。初年無料枠の範囲となるように、既定でストレージは 20GB 、インスタンスクラスは t3.micro にしています。
 
+![データベース スタック](images/wp-db.png "データベース スタック")
+
 今回は冗長化しないため、使うリソースは `AWS::RDS::DBSubnetGroup` と `AWS::RDS::DBInstance` のみです。
 
 
@@ -266,6 +281,8 @@ sls deploy
 ### EC2 インスタンス (WordPress サーバー)
 
 EC2 もインスタンスは t3.micro で、 OS は Amazon Linux 2 にします。
+
+![WordPress サーバースタック](images/wp-db.png "WordPress サーバースタック")
 
 いくつかキーポイントを説明します。
 
@@ -396,6 +413,8 @@ EC2 インスタンスの中に配置する WordPress 自体のデプロイや P
 
 最後に EC2 をオリジンとした CloudFront を CDN として設定します。
 
+![CDN スタック](images/wp-cdn.png "CDN スタック")
+
 ここで使用するリソースは 4 つです。
 
 1. ログ用 S3 バケット
@@ -462,3 +481,14 @@ sls deploy --param="domain=wp.example.com" --param="sslCertificateArn=arn:aws:ac
 もう 1 つは `sslCertificateArn` で、 ACM に登録済みの `wordpress.wp.example.com` 用の SSL 証明書の ARN を指定します。
 
 先述の通り、このスタックの特徴として、**リソースとして EC2 インスタンスに依存していません**。この CloudFront スタックを維持したまま EC2 インスタンスを削除したり、再構成したりもできます。
+
+
+## まとめ
+
+少し長い記事になりましたが、今回は CloudFront で WordPress をホストする環境を CloudFormation で構築することを目的にしました。
+
+デプロイ自体は 4 スタックでも 10 分程度で終わるため、一度作ってしまえば、削除したり作り直したりは気軽に行えます。
+
+それぞれキーポイントがいくつかあるので、応用すれば様々な環境に適用できると思います。
+
+どなたかの参考になれば幸いです。
