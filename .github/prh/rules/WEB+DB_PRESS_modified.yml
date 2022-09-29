@@ -1932,7 +1932,9 @@ rules:
   - expected: ハンドラー
     pattern:  /ハンドラ(?!ー)/
   - expected: ビューアー
-    pattern:  /ビューア(?!ー)|ビューワー|ビューワ/
+    pattern:  /ビューア(?!ー)/
+  - expected: ビューワー
+    pattern:  /ビューワ(?!ー)/
   - expected: ビルダー
     pattern:  /ビルダ(?!ー)/
   - expected: ビルトイン
