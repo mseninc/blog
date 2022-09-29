@@ -31,13 +31,13 @@ description: CloudFront で WordPress をホストする環境を CloudFormation
 このスタックで使用するサブドメインは下記のようになります。
 
 - `wordpress.wp.example.com`: ユーザーがサイトにアクセスする際のサブドメイン (CloudFront のエイリアス)
-- `server.wp.example.com`: WordPress をホストしている EC2 インスタンスにアクセスするサブドメイン (Elastic IP に紐付け)
+- `server.wp.example.com`: WordPress をホストしている EC2 インスタンスにアクセスするサブドメイン (Elastic IP と紐付け)
 
 実行環境は下記の通りです。
 
 - Ubuntu 20.04, WSL 2, Windows 10 Pro
 - Serverless Framework 3.22.0
-- aws-cli/2.2.22 Python/3.8.8 Linux/5.10.102.1-microsoft-standard-WSL2 exe/x86_64.ubuntu.20 prompt/off
+- aws-cli 2.2.22
 
 
 ## リポジトリ (GitHub)
@@ -489,6 +489,6 @@ sls deploy --param="domain=wp.example.com" --param="sslCertificateArn=arn:aws:ac
 
 デプロイ自体は 4 スタックでも 10 分程度で終わるため、一度作ってしまえば、削除したり作り直したりは気軽に行えます。
 
-それぞれキーポイントがいくつかあるので、応用すれば様々な環境に適用できると思います。
+それぞれキーポイントがいくつかあるので、応用すればいろんな環境に適用できると思います。
 
 どなたかの参考になれば幸いです。
