@@ -485,7 +485,7 @@ sls deploy --param="domain=wp.example.com" --param="sslCertificateArn=arn:aws:ac
 
 ## まとめ
 
-少し長い記事になりましたが、今回は CloudFront で WordPress をホストする環境を CloudFormation で構築することを目的にしました。
+少し長い記事になりましたが、今回は CloudFront で WordPress をホストする環境を CloudFormation で構築しました。
 
 デプロイ自体は 4 スタックでも 10 分程度で終わるため、一度作ってしまえば、削除したり作り直したりは気軽に行えます。
 
