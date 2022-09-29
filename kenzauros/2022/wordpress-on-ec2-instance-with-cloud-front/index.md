@@ -282,7 +282,7 @@ sls deploy
 
 EC2 もインスタンスは t3.micro で、 OS は Amazon Linux 2 にします。
 
-![WordPress サーバースタック](images/wp-db.png "WordPress サーバースタック")
+![WordPress サーバースタック](images/wp-server.png "WordPress サーバースタック")
 
 いくつかキーポイントを説明します。
 
