@@ -77,7 +77,7 @@ description: CloudFront で WordPress をホストする環境を CloudFormation
 
 それぞれ **`resources.yml` が CloudFormation のスタック**、 **`serverless.yml` が Serverless Framework のコンフィグ**です。
 
-デプロイも上記の順番で行いますが、 3 と 4 は依存していないので入れ替わっても問題ありません (後述)。
+デプロイも基本的には上記の順番で行いますが、 2 ～ 4 はそれぞれ依存していないので入れ替わっても問題ありません。
 
 1. `common` は 2, 3 に必要なリソースを準備します。このスタックはほとんどデプロイし直す必要がないと思います。
 
