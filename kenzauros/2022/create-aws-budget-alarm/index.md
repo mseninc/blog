@@ -1,6 +1,6 @@
 ---
 title: AWS CloudWatch アラームを設定して予想請求額の通知をメールで受信する
-date: 
+date: 2022-10-03
 author: kenzauros
 tags: [AWS]
 description: AWS の予定請求額が一定額を超えたときにメールで通知するように CloudWatch アラームを設定します。
