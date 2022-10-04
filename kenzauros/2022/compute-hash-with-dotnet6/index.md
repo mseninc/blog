@@ -6,7 +6,7 @@ tags: [C#, .NET]
 description: .NET 6 で非推奨になったインターフェースに対応するため、イマドキの C# で SHA256 や MD5 のハッシュ文字列を得る方法を紹介します。
 ---
 
-こんにちは、 kenzauros です。
+こんにちは、kenzauros です。
 
 過去に [**C# で SHA256 や MD5 のハッシュ文字列を得る**](https://mseeeen.msen.jp/compute-hash-with-csharp-6-or-later/) 方法を紹介しましたが、 .NET 6 で一部が非推奨になったため更新版を紹介します。
 

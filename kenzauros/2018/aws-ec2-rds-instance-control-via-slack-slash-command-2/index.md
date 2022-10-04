@@ -5,6 +5,8 @@ author: kenzauros
 tags: [JavaScript, Node.js, Slack, AWS, EC2, RDS, Lambda, API Gateway]
 ---
 
+こんにちは、kenzauros です。
+
 本記事は [Slack の Slash Command で AWS の EC2 と RDS の起動と停止を実現してみた (1) 導入](/aws-ec2-rds-instance-control-via-slack-slash-command-1) の続きです。やりたいことや前提条件は前回の記事を参照してください。
 
 - [(1) 導入](/aws-ec2-rds-instance-control-via-slack-slash-command-1)

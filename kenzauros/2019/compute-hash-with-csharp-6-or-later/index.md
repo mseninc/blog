@@ -5,6 +5,8 @@ author: kenzauros
 tags: [C#, .NET, .NET Framework]
 ---
 
+こんにちは、kenzauros です。
+
 <ins>
 2022/6/1 追記
 

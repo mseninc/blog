@@ -2236,8 +2236,6 @@ rules:
     pattern:  /アップル/
   - expected: Apple
     pattern:  /\bApple\b/i
-  - expected: APT
-    pattern:  /\bAPT\b/i
   - expected: ASP.NET
     pattern:  /ASP \.NET/
   - expected: Backbone.js

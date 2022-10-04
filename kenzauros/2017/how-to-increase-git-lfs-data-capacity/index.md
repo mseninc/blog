@@ -5,6 +5,8 @@ author: kenzauros
 tags: [Git, Git LFS, GitHub]
 ---
 
+こんにちは、kenzauros です。
+
 GitHub の有料プランで [Git LFS (Large File Storage)](https://git-lfs.github.com/) の使用容量と転送量の確認の仕方をご紹介します。
 
 ## 使用料の確認

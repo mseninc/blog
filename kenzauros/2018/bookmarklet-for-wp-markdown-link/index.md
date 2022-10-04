@@ -5,6 +5,8 @@ author: kenzauros
 tags: [WordPress, Markdown, Bookmarklet]
 ---
 
+こんにちは、kenzauros です。
+
 昔々、下記の記事を投稿しました。
 
 - [Markdown 記法のリンクを取得するブックマークレット MDLink](/bookmarklet-for-markdown-link/)

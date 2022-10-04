@@ -6,7 +6,7 @@ tags: [React, JavaScript]
 description: React でユーザーがボタンを押すことでデータを再読込できる機能を考えてみます。
 ---
 
-こんにちは、 kenzauros です。
+こんにちは、kenzauros です。
 
 *Reack hooks で非同期にデータを取得してデータを表示するには副作用を扱う useEffect フックを使用*します。
 
