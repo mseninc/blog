@@ -6,6 +6,8 @@ tags: [AWS, Node.js, Lambda, bash]
 description: 
 ---
 
+こんにちは、kenzauros です。
+
 AWS から Node.js 12 終了のお知らせが届いたので、**すべてのリージョンにある Node.js 12 の Lambda 関数**を列挙してみました。
 
 ## 前提
