@@ -6,6 +6,8 @@ tags: [Flutter,Ubuntu 22.04]
 description: Windows (WSL 2) で Ubuntu 22.04 を利用した Flutter 3 のクリーンな開発環境を構築します。
 ---
 
+こんにちは、kenzauros です。
+
 いよいよ **Flutter 3** が発表され、 Windows や Linux のアプリも作成できるようになりました。
 
 今回はさっそく **Windows (WSL 2) で Ubuntu 22.04 を利用した開発環境を構築**してみます。

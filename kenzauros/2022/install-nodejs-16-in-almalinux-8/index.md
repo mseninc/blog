@@ -6,6 +6,8 @@ tags: [AlmaLinux, Node.js, dnf]
 description: AlmaLinux の dnf の既定では Node.js 10 しかインストールできないため、 Node.js 14 や 16 をインストールする方法を紹介します。
 ---
 
+こんにちは、kenzauros です。
+
 AlmaLinux や Rocky Linux で Node.js をインストールしようと思ったら、バージョン 10 がインストールされてしまった！なんて場合の対処法を紹介します。
 
 本記事では **dnf で Node.js 16 をインストール**します。

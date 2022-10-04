@@ -6,6 +6,8 @@ tags: [MariaDB, Mroonga, MeCab]
 description: MySQL 用の日本語全文検索ストレージエンジンで Mroonga と MeCab トークナイザーを MariaDB の Docker イメージで使えるようにする方法を紹介します。
 ---
 
+こんにちは、kenzauros です。
+
 **Mroonga は MySQL 用の日本語全文検索ストレージエンジン**です。テーブル作成時のエンジンを指定して、インデックスを作成するだけで全文検索ができるようになり、とても便利です。
 
 - [Mroonga - MySQLで高速日本語全文検索](https://mroonga.org/ja/)
