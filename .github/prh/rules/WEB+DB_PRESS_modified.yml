@@ -769,8 +769,6 @@ rules:
     expected: やはり
   - pattern: 闇雲
     expected: やみくも
-  - pattern: 止め
-    expected: やめ
   - pattern: やり取り
     expected: やりとり
   - pattern: 他所
@@ -2834,7 +2832,7 @@ rules:
   - expected: Tritonn
     pattern:  /\bTriton\b|\btriton\b|\btritonn\b/
   - expected: TypeScript
-    pattern:  /\bTypeScript\b/i
+    pattern:  /typeScript|Typescript/
   - expected: Ubuntu
     pattern:  /\bubuntu\b|\bUbuntsu\b|\bubuntsu\b|\bUbuntu Linux\b/
   - expected: Unicode
