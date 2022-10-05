@@ -1,6 +1,6 @@
 ---
 title: "[Google Workspace] Google Drive の外部共有設定について"
-date: 
+date: 2022-10-05
 author: norikazum
 tags: [Google]
 description: Google Drive の 外部共有の設定を紹介します。
