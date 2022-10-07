@@ -787,7 +787,7 @@ rules:
     expected: わか$1
   - pattern: /解([らりるれろっ])/
     expected: わか$1
-  - pattern: /の分([^散割類解野離析岐])/
+  - pattern: /の分([^散割類解野離析岐け])/
     expected: のぶん$1
   - pattern:
       - 気をつか
@@ -1213,7 +1213,7 @@ rules:
       - プレフィックス
       - プレフィクス
       - プリフィックス
-    expected: 接頭辞
+    expected: プレフィックス
   - pattern:
       - サフィックス
       - サフィックス
@@ -1926,13 +1926,15 @@ rules:
   - expected: バラエティー
     pattern:  /バラエティ(?!ー)/
   - expected: パラメーター
-    pattern:  /パラメタ|パラメータ(?!ー)/
+    pattern:  /パラメタ|パラメータ(?!ー|ストア)/
   - expected: バランサー
     pattern:  /バランサ(?!ー)/
   - expected: ハンドラー
     pattern:  /ハンドラ(?!ー)/
   - expected: ビューアー
-    pattern:  /ビューア(?!ー)|ビューワー|ビューワ/
+    pattern:  /ビューア(?!ー)/
+  - expected: ビューワー
+    pattern:  /ビューワ(?!ー)/
   - expected: ビルダー
     pattern:  /ビルダ(?!ー)/
   - expected: ビルトイン
