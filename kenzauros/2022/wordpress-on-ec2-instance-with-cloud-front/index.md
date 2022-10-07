@@ -1,6 +1,6 @@
 ---
 title: "[CloudFormation] EC2 でホストしている WordPress を CloudFront で配信する"
-date: 
+date: 2022-10-07
 author: kenzauros
 tags: [AWS, EC2, RDS, CloudFront, WordPress, CloudFormation, Serverless Framework]
 description: CloudFront で WordPress をホストする環境を CloudFormation で構築します。 EC2 をオリジンとした CloudFront の設定に役立つと思います。
