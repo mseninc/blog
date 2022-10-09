@@ -10,7 +10,7 @@ description: Serverless Framework で Lambda レイヤーを作成した際、�
 
 Lambda で Node.js のライブラリを使いたいとき、ライブラリを含んだデプロイパッケージをアップロードする方法と、ライブラリを Lambda レイヤーに配置する方法があります。
 
-先日、 Serverless Framework を使ってライブラリを含めた Lambda レイヤーを作成してみたのですが、なぜか関数を実行しても「Cannot find module」のエラーが表示され苦しみました。
+先日、 Serverless Framework を使ってライブラリを含めた Lambda レイヤーを作成してみたのですが、**なぜか関数を実行しても「Cannot find module」のエラーが表示され苦しみました**。
 
 今回は、このエラーが発生していた原因と解決法を紹介し、正しい方法で Lambda レイヤーを作成し、ライブラリを使用した関数を実行してみます。
 
@@ -24,9 +24,9 @@ Lambda で Node.js のライブラリを使いたいとき、ライブラリを�
 
 先に私がどこを間違えていたせいでモジュールが読み込まれなかったのかをお伝えします。
 
-ライブラリを含んだ node_modules を格納するディレクトリには名前が決められていて、それ以外のディレクトリ名だと「Cannot find module」エラーが出るようです。
+**ライブラリを含んだ node_modules を格納するディレクトリには名前が決められていて、それ以外のディレクトリ名だと「Cannot find module」エラーが出る**ようです。
 
-Node.js の場合は「nodejs/node_modules」というディレクトリ構成にする必要があります。私は nodejs ディレクトリが用意できていませんでした。
+Node.js の場合は「**nodejs/node_modules**」というディレクトリ構成にする必要があります。私は nodejs ディレクトリが用意できていませんでした。
 
 - [Node.js で Lambda コードを実行すると「モジュールをインポートできません」というエラーが表示されるのですが、どうすれば解決できますか?](https://aws.amazon.com/jp/premiumsupport/knowledge-center/lambda-import-module-error-nodejs/)
 
@@ -50,8 +50,8 @@ Node.js 以外の場合は以下に記載されていました。
 
 sls-test ディレクトリ下には以下の2種類のファイルが作成されています。
 
-- handler.js
-- serverless.yml
+- `handler.js`
+- `serverless.yml`
 
 sls-test ディレクトリに移動し、以下のコマンドを実行して npm の初期化と Luxon のインストールを行います。
 
@@ -60,9 +60,9 @@ npm init
 npm i luxon
 ```
 
-### `handler.js` の記述
+### handler.js の記述
 
-handler.js には Luxon で現在時刻を出力する処理を記述します。
+`handler.js` には Luxon で現在時刻を出力する処理を記述します。
 
 関数名は `getTime` とします。
 
@@ -78,7 +78,7 @@ module.exports.getTime = async(event) => {
 
 次にレイヤーの定義を `serverless.yml` に記述します。
 
-不要なコメントアウトを削除し、 region を設定しておきます。`functions` に記述する関数を `getTime` に修正します。
+不要なコメントアウトを削除し、 `region` を設定しておきます。`functions` に記述する関数を `getTime` に修正します。
 
 ```yml{8,11,12}:title=serverless.yml
 service: sls-test
