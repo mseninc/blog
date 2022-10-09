@@ -1,9 +1,9 @@
 ---
-title: "[AWS] Lambda レイヤーのモジュールが読み込まれないときの解決法"
+title: "[AWS] Lambda レイヤーの node_modules が読み込まれないときの解決法"
 date: 
 author: junya-gera
-tags: [Lambda, AWS, Serverless Framework]
-description: Serverless Framework で Lambda レイヤーを作成した際、関数を実行したらモジュールが読み込まれない場合の解決方法を解説します。
+tags: [Lambda, AWS, Serverless Framework, Node.js]
+description: Serverless Framework で Lambda レイヤーを作成した際、関数を実行したら node_modules が読み込まれない場合の解決方法を解説します。
 ---
 
 こんにちは、じゅんじゅんです。
@@ -12,15 +12,15 @@ Lambda で Node.js のライブラリーを使いたいとき、ライブラリ�
 
 Serverless Framework を使ってライブラリーを含めた Lambda レイヤーを作成しましたが、**関数を実行しても「Cannot find module」のエラーが表示され苦しみました**。
 
-今回は、このエラーが発生していた原因と解決法を紹介し、正しい方法で Lambda レイヤーを作成し、ライブラリーを使用した関数を実行してみます。
+今回は、このエラーが発生していた原因と解決法を紹介します。また Serverless Framework で Lambda レイヤーを作成し、ライブラリーを使用した関数を実行してみます。
 
-### 前提
+## 前提
 - Serverless Framework 3.19.0
 - Node.js 16.0.0
 
 今回は時間を扱う JavaScript のライブラリー「[Luxon](https://moment.github.io/luxon/#/)」をレイヤーに含め、現在時刻を出力するだけの Lambda を作成します。
 
-### モジュールが読み込まれなかった原因
+## モジュールが読み込まれなかった原因
 
 先に私がどこを間違えていたせいでモジュールが読み込まれなかったのかをお伝えします。
 
@@ -39,6 +39,8 @@ Node.js 以外の場合は以下に記載されていました。
 公式ページにしっかり記載されていましたが、気付きませんでした...。
 
 ではこのことに気を付けて、実際に Serverless Framework で Lambda レイヤーを作成します。
+
+## Serverless Framework で Lambda レイヤーを作成する
 
 ### サービスの作成
 
@@ -66,10 +68,10 @@ npm i luxon
 
 関数名は `getTime` とします。
 
-```js
+```js:title=handler.js
 const { DateTime } = require("luxon");
 
-module.exports.getTime = async(event) => {
+module.exports.getTime = async (event) => {
     console.log(`現在時刻: ${DateTime.local().setZone('Asia/Tokyo').toFormat('yyyy-MM-dd HH:mm:ss')}`);
 };
 ```
@@ -153,7 +155,7 @@ Ref 関数で指定するレイヤー名は、ハイフンなどをなくし、�
 
 では `serverless.yml` で設定したとおりにディレクトリを配置します。
 
-sample-layer というディレクトリを作成し、中に nodejs というディレクトリを作成します。さらにその中に node_modules を格納します。以下のような構成になります。
+`sample-layer` というディレクトリを作成し、中に `nodejs` というディレクトリを作成します。さらにその中に `node_modules` を格納します。以下のような構成になります。
 
 ```
 .
@@ -183,7 +185,7 @@ END RequestId: 68eacc13-fe8c-4c89-8f45-6057a915b68c
 END Duration: 36.02 ms (init: 147.66 ms) Memory Used: 67 MB
 ```
 
-### あとがき
+## あとがき
 
 エラーメッセージでは「モジュールが見つからない」としか表示されないため、原因を見つけるのに苦労しました。
 
