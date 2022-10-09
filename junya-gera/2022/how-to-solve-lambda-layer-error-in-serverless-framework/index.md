@@ -8,23 +8,23 @@ description: Serverless Framework で Lambda レイヤーを作成した際、�
 
 こんにちは、じゅんじゅんです。
 
-Lambda で Node.js のライブラリを使いたいとき、ライブラリを含んだデプロイパッケージをアップロードする方法と、ライブラリを Lambda レイヤーに配置する方法があります。
+Lambda で Node.js のライブラリーを使いたいとき、ライブラリーを含んだデプロイパッケージをアップロードする方法と、ライブラリーを Lambda レイヤーに配置する方法があります。
 
-先日、 Serverless Framework を使ってライブラリを含めた Lambda レイヤーを作成してみたのですが、**なぜか関数を実行しても「Cannot find module」のエラーが表示され苦しみました**。
+Serverless Framework を使ってライブラリーを含めた Lambda レイヤーを作成しましたが、**関数を実行しても「Cannot find module」のエラーが表示され苦しみました**。
 
-今回は、このエラーが発生していた原因と解決法を紹介し、正しい方法で Lambda レイヤーを作成し、ライブラリを使用した関数を実行してみます。
+今回は、このエラーが発生していた原因と解決法を紹介し、正しい方法で Lambda レイヤーを作成し、ライブラリーを使用した関数を実行してみます。
 
 ### 前提
 - Serverless Framework 3.19.0
 - Node.js 16.0.0
 
-今回は時間を扱う JavaScript のライブラリ「[Luxon](https://moment.github.io/luxon/#/)」をレイヤーに含め、現在時刻を出力するだけの Lambda を作成します。
+今回は時間を扱う JavaScript のライブラリー「[Luxon](https://moment.github.io/luxon/#/)」をレイヤーに含め、現在時刻を出力するだけの Lambda を作成します。
 
 ### モジュールが読み込まれなかった原因
 
 先に私がどこを間違えていたせいでモジュールが読み込まれなかったのかをお伝えします。
 
-**ライブラリを含んだ node_modules を格納するディレクトリには名前が決められていて、それ以外のディレクトリ名だと「Cannot find module」エラーが出る**ようです。
+**ライブラリーを含んだ node_modules を格納するディレクトリには名前が決められていて、それ以外のディレクトリ名だと「Cannot find module」エラーが出る**ようです。
 
 Node.js の場合は「**nodejs/node_modules**」というディレクトリ構成にする必要があります。私は nodejs ディレクトリが用意できていませんでした。
 
@@ -36,7 +36,7 @@ Node.js 以外の場合は以下に記載されていました。
 
 ![各 Lambda ランタイムのレイヤーパス](images/2022-10-09_00h50_47.png "各 Lambda ランタイムのレイヤーパス")
 
-公式ページにしっかり記載されていましたが、気づきませんでした...。
+公式ページにしっかり記載されていましたが、気付きませんでした...。
 
 ではこのことに気を付けて、実際に Serverless Framework で Lambda レイヤーを作成します。
 
@@ -118,7 +118,7 @@ layers:
 
 今回は `sampleLayer` という名前のレイヤーを作成します。
 
-後ほど `sls-test` ディレクトリ直下、 `serverless.yml` と同じ階層に `sample-layer` というディレクトリを作成するので、 `path` に `sample-layer` と記述します。
+あとで `sls-test` ディレクトリ下、 `serverless.yml` と同じ階層に `sample-layer` というディレクトリを作成するので、 `path` は `sample-layer` とします。
 
 これだけでは定義しただけで関数から呼ぶことができないので、 `getTime` 関数に `layers` を呼ぶ処理を追記します。
 
@@ -151,7 +151,7 @@ Ref 関数で指定するレイヤー名は、ハイフンなどをなくし、�
 
 ### ディレクトリ構成
 
-では `serverless.yml` に書いたとおりにディレクトリを配置します。
+では `serverless.yml` で設定したとおりにディレクトリを配置します。
 
 sample-layer というディレクトリを作成し、中に nodejs というディレクトリを作成します。さらにその中に node_modules を格納します。以下のような構成になります。
 
