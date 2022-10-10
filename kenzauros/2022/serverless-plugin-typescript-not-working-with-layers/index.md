@@ -1,6 +1,6 @@
 ---
 title: "serverless-plugin-typescript で layers を指定すると ENOENT: no such file or directory になる"
-date: 
+date: 2022-10-10
 author: kenzauros
 tags: ["Serverless Framework"]
 description: "Serverless Framework v3 で serverless-plugin-typescript を Lambda レイヤーと併用してみたら ENOENT: no such file or directory エラーに見舞われましたので、仕方なくバージョンを下げて対応しました"
