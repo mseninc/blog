@@ -10,13 +10,13 @@ description:
 
 先日、VMware Tools に権限昇格の脆弱性 [CVE-2022-31676](https://www.vmware.com/security/advisories/VMSA-2022-0024.html) が公開されました。
 
-すでに仮想マシン単体や ESXi 本体に適用するパッチがリリースされております。(バージョン 12.1.0 で Fixed)
+すでに仮想マシン単体や ESXi 本体に適用するパッチがリリースされています。(バージョン 12.1.0 で Fixed)
 
 [VMware Tools のダウンロード - VMware Customer Connect](https://customerconnect.vmware.com/jp/downloads/details?downloadGroup=VMTOOLS1210&productId=1259&rPId=92824)
 
 ESXi へのパッチの適用は、いつもデータストアへパッチをアップロードしコマンドラインから行っていました。
 
-ところが、VMware の Web ページを見ていると、パッチの適用には **『VMware vSphere Update Manager を使用するのが一般的』** との記載を発見し、今回のパッチ適用に使ってみました。
+ところが、公式のページにはパッチの適用には **『VMware vSphere Update Manager を使用するのが一般的』** との記載を発見し、さっそく使ってみました。
 
 > ESXi ホストにパッチを適用するには、VMware vSphere Update Manager を使用するのが一般的です。詳細については、『[Installing and Administering VMware vSphere Update Manager](http://pubs.vmware.com/vsphere-60/topic/com.vmware.vsphere.update_manager.doc/GUID-F7191592-048B-40C7-A610-CFEE6A790AB0.html)』を参照してください。
 
@@ -27,7 +27,7 @@ ESXi へのパッチの適用は、いつもデータストアへパッチをア
 
 ## パッチの適用
 
-パッチの適用は概ね以下の流れで行うようです。
+パッチの適用はおおむね以下の流れで行うようです。
 
 1. ベースラインの作成
 2. ホストへの添付
@@ -99,7 +99,7 @@ vCenter Server > アップデート > ホストの更新 > 添付 から、**ベ
 
 ![](images/012.png)
 
-正常に VMware Tools 12.1.0 へアップグレードすることができました。
+正常に VMware Tools 12.1.0 へアップグレードできました。
 
 ![](images/013.png)
 
