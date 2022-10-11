@@ -1963,8 +1963,6 @@ rules:
         to:   プレイング
   - expected: ブローカ$1
     pattern:  /ブローカー([^ー])/
-  - expected: プロパティー
-    pattern:  /プロパティ(?!ー)/
   - expected: ヘビー
     pattern:  /ヘヴィ/
   - expected: ファイアウォール
