@@ -93,7 +93,7 @@ Wi-Fi                     802.11a/b/g Wireless Mode      6. Dual Band 802.11a/b/
 **特定のプロパティの値のみを表示したい場合は `RegistryKeyword` を指定**します。
 たとえば `802.11n/ac Wireless Mode` の値のみを取得する場合はその `RegistryKeyword` である `IEEE11nMode` を指定します。
 
-```:title=PowerShell
+```{1}:title=PowerShell
 PS> Get-NetadapterAdvancedProperty Wi-Fi -RegistryKeyword IEEE11nMode
 
 Name                      DisplayName                    DisplayValue                   RegistryKeyword RegistryValue
