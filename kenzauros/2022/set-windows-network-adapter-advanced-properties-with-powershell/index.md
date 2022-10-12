@@ -1,6 +1,6 @@
 ---
 title: "Windows のネットワークアダプターの詳細設定を PowerShell で設定する"
-date: 
+date: 2022-10-12
 author: kenzauros
 tags: [PowerShell, Windows]
 description: 「ネットワークアダプターの詳細設定」のプロパティを PowerShell から設定する方法を紹介します。環境によって頻繁に設定変更する場合などに便利かもしれません。
