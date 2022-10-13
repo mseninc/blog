@@ -6,6 +6,8 @@ tags: [React, Cognito, AWS, Node.js]
 description: 今回は React で AWS Cognito を認証基盤として使うための最小限の実装を紹介します。 Amplify フレームワークを使わないのでピュアな認証部分の処理が確認できると思います。
 ---
 
+こんにちは、kenzauros です。
+
 ## 前提
 
 タイトルにもあるとおり、今回のテーマは「**Amplify を使わず React で AWS Cognito 認証を使う**」です。

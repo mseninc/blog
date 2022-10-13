@@ -5,7 +5,7 @@ author: kenzauros
 tags: [ActiveDirectory, C#, .NET]
 ---
 
-こんにちは、イギリスに住みたいけんけんです。今回は ActiveDirectory ネタです。
+こんにちは、イギリスに住みたい kenzauros です。今回は ActiveDirectory ネタです。
 
 ## UserPrincipal と LastPasswordSet
 

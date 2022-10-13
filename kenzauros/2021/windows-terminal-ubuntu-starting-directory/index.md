@@ -5,6 +5,8 @@ author: kenzauros
 tags: [Ubuntu, Windows Terminal, Windows, WSL]
 ---
 
+こんにちは、kenzauros です。
+
 最近、 Web 系の開発では WSL 2 上の Ubuntu で作業することが多くなりました。ターミナルには **[Windows Terminal](https://github.com/microsoft/terminal)** を使っています。
 
 ただ、 Windows Terminal で WSL のシェルを開くと**既定のディレクトリが `/mnt/c/Users/<ユーザー名>` になってしまうため、これをホームディレクトリ `~/` に変更**しました。
@@ -37,13 +39,13 @@ tags: [Ubuntu, Windows Terminal, Windows, WSL]
 
 **`Ctrl + ,` で設定を開き、対象のプロファイル（今回は Ubuntu-20.04）を選択**します。
 
-**「ディレクトリの開始」**が開始時のディレクトリです。 ("Starting Directory" の略だと思いますが、誤訳っぽいですね)
+**「ディレクトリの開始」** が開始時のディレクトリです。 ("Starting Directory" の略だと思いますが、誤訳っぽいですね)
 
 **`%USERPROFILE%`** ＝ `C:\Users\<ユーザー名>` になっていることが確認できます。
 
 ![Windows Terminal のデフォルトでは「ディレクトリの開始」が %USERPROFILE% になっている](images/windows-terminal-ubuntu-starting-directory-2.png)
 
-ここをホームディレクトリ (`/home/<ユーザー名>`) に変更すればいいだけですが、この**「ディレクトリの開始」は Windows 側のパス指定**でないといけませんので Windows 側のパス指定で、 Linux 側のホームディレクトリを指定します。
+ここをホームディレクトリ (`/home/<ユーザー名>`) に変更すればいいだけですが、この **「ディレクトリの開始」は Windows 側のパス指定**でないといけませんので Windows 側のパス指定で、 Linux 側のホームディレクトリを指定します。
 
 WSL 側のファイルシステムは Windows 側から `\\wsl$\` でアクセスできます。よって、今回の `Ubuntu-20.04` の場合は **`\\wsl$\Ubuntu-20.04\home\<ユーザー名>`** のようになります。
 

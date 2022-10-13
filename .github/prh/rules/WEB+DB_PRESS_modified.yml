@@ -419,7 +419,7 @@ rules:
     expected: くく$1
   - pattern: 下さい
     expected: ください
-  - pattern: /([^解])決して|([^解])けして/
+  - pattern: /([^解])決して|([^解化])けして/
     expected: $1けっして
   - pattern: /拘([らりるれろっ])/
     expected: こだわ$1
@@ -769,8 +769,6 @@ rules:
     expected: やはり
   - pattern: 闇雲
     expected: やみくも
-  - pattern: 止め
-    expected: やめ
   - pattern: やり取り
     expected: やりとり
   - pattern: 他所
@@ -787,7 +785,7 @@ rules:
     expected: わか$1
   - pattern: /解([らりるれろっ])/
     expected: わか$1
-  - pattern: /の分([^散割類解野離析岐])/
+  - pattern: /の分([^散割類解野離析岐け])/
     expected: のぶん$1
   - pattern:
       - 気をつか
@@ -987,7 +985,7 @@ rules:
     expected: やむを得
   - pattern: すこし
     expected: 少し
-  - pattern: /すくな(?!り|る)/
+  - pattern: /すくな(?!り|る|っ)/
     expected: 少な
     specs:
       - from: すくなく
@@ -1213,7 +1211,7 @@ rules:
       - プレフィックス
       - プレフィクス
       - プリフィックス
-    expected: 接頭辞
+    expected: プレフィックス
   - pattern:
       - サフィックス
       - サフィックス
@@ -1686,10 +1684,7 @@ rules:
   - expected: エミュレーター
     pattern:  /エミュレータ(?!ー)/
   - expected: エンティティ
-    pattern:
-      - Entity
-      - entity
-      - エンティティー
+    pattern: エンティティー
   - expected: エントリー
     pattern:  /エントリ(?!ー)/
   - expected: オブザーバー
@@ -1929,13 +1924,15 @@ rules:
   - expected: バラエティー
     pattern:  /バラエティ(?!ー)/
   - expected: パラメーター
-    pattern:  /パラメタ|パラメータ(?!ー)/
+    pattern:  /パラメタ|パラメータ(?!ー|ストア)/
   - expected: バランサー
     pattern:  /バランサ(?!ー)/
   - expected: ハンドラー
     pattern:  /ハンドラ(?!ー)/
   - expected: ビューアー
-    pattern:  /ビューア(?!ー)|ビューワー|ビューワ/
+    pattern:  /ビューア(?!ー)/
+  - expected: ビューワー
+    pattern:  /ビューワ(?!ー)/
   - expected: ビルダー
     pattern:  /ビルダ(?!ー)/
   - expected: ビルトイン
@@ -1966,8 +1963,6 @@ rules:
         to:   プレイング
   - expected: ブローカ$1
     pattern:  /ブローカー([^ー])/
-  - expected: プロパティー
-    pattern:  /プロパティ(?!ー)/
   - expected: ヘビー
     pattern:  /ヘヴィ/
   - expected: ファイアウォール
@@ -2088,8 +2083,8 @@ rules:
     pattern:  /レイヤ(?!ー)/
   - expected: レジスター
     pattern:  /レジスタ(?!ー)/
-  - expected: レジストリー
-    pattern:  /レジストリ(?!ー)/
+  - expected: レジストリ
+    pattern:  /レジストリー/
   - expected: レイテンシー
     pattern:  /レイテンシ(?!ー)/
   - expected: レコメンド
@@ -2239,8 +2234,6 @@ rules:
     pattern:  /アップル/
   - expected: Apple
     pattern:  /\bApple\b/i
-  - expected: APT
-    pattern:  /\bAPT\b/i
   - expected: ASP.NET
     pattern:  /ASP \.NET/
   - expected: Backbone.js
@@ -2307,8 +2300,8 @@ rules:
     pattern:  /CSS-Sprite|\bCSS Sprite\b/
   - expected: DBFlute
     pattern:  /\bDBFlute\b/i
-  - expected: Debian GNU/Linux
-    pattern:  /\bDebian\b|Debian\/GNU Linux/
+  - expected: Debian
+    pattern:  /debian/
   - expected: $1DeNA$2
     pattern:  /(?:([^/.])ディー・エヌ・エー)|(?:ディー・エヌ・エー([^/.]))/
   - expected: $1DeNA$2
@@ -2611,8 +2604,6 @@ rules:
     pattern:  /\bPayPal\b/i
   - expected: parallel
     pattern:  /\bpararllel\b/
-  - expected: PC
-    pattern:  /パソコン/
   - expected: PECL
     pattern:  /\bPECL\b/i
   - expected: Pentium 4
@@ -2740,8 +2731,8 @@ rules:
     pattern:  /\bserver spec\b/
   - expected: Servlet $1
     pattern:  /Servlet([0-9])/
-  - expected: Shift-JIS
-    pattern:  /Shift_JIS|SHIFT-JIS|SHIFT_JIS|\bShift JIS\b|Shift_JIS|シフトJIS/
+  - expected: Shift_JIS
+    pattern:  /Shift[\-_ ]?JIS|シフト ?JIS|\bSJIS\b/i
   - expected: Shrine
     pattern:  /\bShrine\b/i
   - expected: Shrpx
@@ -2841,7 +2832,7 @@ rules:
   - expected: Tritonn
     pattern:  /\bTriton\b|\btriton\b|\btritonn\b/
   - expected: TypeScript
-    pattern:  /\bTypeScript\b/i
+    pattern:  /typeScript|Typescript/
   - expected: Ubuntu
     pattern:  /\bubuntu\b|\bUbuntsu\b|\bubuntsu\b|\bUbuntu Linux\b/
   - expected: Unicode

@@ -1,4 +1,9 @@
 {
+  "filters": {
+    "node-types": {
+      "nodeTypes": ["BlockQuote", "Link", "ReferenceDef", "Code"]
+    }
+  },
   "rules": {
     "preset-ja-technical-writing": {
       "ja-no-weak-phrase": false,
@@ -11,9 +16,12 @@
       },
       "ja-no-mixed-period": {
         "periodMark": "。",
-        "allowPeriodMarks": ["👍"],
+        "allowPeriodMarks": ["👍", "👏"],
         "allowEmojiAtEnd": true,
         "forceAppendPeriod": false
+      },
+      "max-kanji-continuous-len": {
+        "max": 8
       },
       "no-doubled-joshi": {
         "severity" : "warning",

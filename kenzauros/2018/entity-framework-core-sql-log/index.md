@@ -5,6 +5,8 @@ author: kenzauros
 tags: [Entity Framework Core, .NET Core, .NET]
 ---
 
+こんにちは、kenzauros です。
+
 **Entity Framework Core (EF Core)** で SQL をログとして出力させるには Entity Framework の `context.Database.Log` のように簡単にはいきません。
 
 `ILoggerProvider` を継承したクラスをもつ **`ILoggerFactory` を `DbContext` に設定**してやる必要があります。

@@ -5,6 +5,8 @@ author: kenzauros
 tags: [WPF, .NET Core, .NET]
 ---
 
+こんにちは、kenzauros です。
+
 .NET Core で WPF が利用できるようになって便利になりましたが、 .NET Core では **[SecureString](https://docs.microsoft.com/ja-jp/dotnet/api/system.security.securestring?view=netcore-3.1)** の扱いが変更になったことで、 WPF の PasswordBox の扱いを変更せざるを得なくなりました。
 
 **SecureString クラスは元々パスワードのような機密性の高い文字列を格納するために導入されたクラスですが、 .NET Core では非推奨になり、今後は使用しないことが公式に勧奨**されています。
@@ -54,7 +56,7 @@ unmanaged な配列を確保して暗号化して不要になったら解放し�
 
 が、プレーンテキストで取得する Password プロパティというバックドアまで存在するので、結局ザルでした。
 
-しかもこれらのプロパティ、またもセキュリティの観点から**依存関係プロパティとしては実装されておらず、バインディングできないのでここだけ　MVVM 的に実装できない**、という問題もありました。
+しかもこれらのプロパティ、またもセキュリティの観点から**依存関係プロパティとしては実装されておらず、バインディングできないのでここだけ MVVM 的に実装できない**、という問題もありました。
 
 これに対しては先人がヘルパーやビヘイビアを考案しておられるので、これを利用できます。
 
@@ -212,11 +214,23 @@ internal class PasswordBoxHelper : DependencyObject
 ```xml
 <PasswordBox
     PasswordChar="*"
+    helpers:PasswordBoxHelper.IsAttached="True"
     helpers:PasswordBoxHelper.Password="{Binding PasswordInViewModel}"
     />
 ```
 
 すっきりしていいですね。
+
+<ins>
+
+2022/6/1 追記
+
+`IsAttached` を明示的に設定しておかないとバインディングしたパスワードが空文字のときに、入力値が VM に反映されないことがあります。
+（`PasswordProperty_Changed` が発生せず、 `PasswordBox_PasswordChanged` ハンドラも設定されないため）
+
+このヘルパーを使用する場合は `IsAttached` を明示的に `True` にしておきましょう。
+
+</ins>
 
 
 ## あとがき

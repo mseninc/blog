@@ -5,6 +5,8 @@ author: kenzauros
 tags: [SSH, scp, Linux]
 ---
 
+こんにちは、kenzauros です。
+
 先日、[ターミナルソフト RLogin を使って多段 SSH 経由でリモートデスクトップで Windows サーバーに接続する](/remote-desktop-through-cascaded-ssh-with-rlogin) という記事を書いたので、次に **[RLogin](http://nanno.dip.jp/softlib/man/rlogin/) と [WinSCP](https://winscp.net/eng/docs/lang:jp) を使って 2 段の SSH 経由でリモートサーバーのファイルを操作する**方法を紹介します。
 
 ## 概要

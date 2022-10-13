@@ -5,6 +5,8 @@ author: kenzauros
 tags: [C#, Visual Studio, .NET]
 ---
 
+こんにちは、kenzauros です。
+
 ちょこっと C# を実行して試したいとき、 Visual Studio に内蔵されている対話型の **C# Interactive** (CSI) が便利です。
 
 Web でいえばちょうど開発者ツールの Console に相当するような機能で、 **REPL** (Read-Eval-Print Loop) なんて呼ばれたりするやつです。

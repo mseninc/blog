@@ -5,6 +5,8 @@ author: kenzauros
 tags: [ActiveDirectory, C#, .NET]
 ---
 
+こんにちは、kenzauros です。
+
 **.NET** アプリで **Active Directory** を管理する際、 .NET 3.5 以降であれば **`System.DirectoryServices.AccountManagement` 名前空間の `PrincipalContext` や `GroupPrincipal` 、 `UserPrincipal` を使うのが、安心・安全**だと思いますが、ラッピングされている分、なかなか融通が利かないこともあります。
 
 今回は Active Directory で**ユーザーをセキュリティグループに参加させる**ときにつまづいたので、原因と解決法を紹介します。
@@ -90,7 +92,7 @@ System.DirectoryServices.AccountManagement.PrincipalOperationException
 
 590 行目を見てみると `UnsafeNativeMethods.DsGetDcName` が呼ばれて、結果がエラーなら `PrincipalOperationException` がスローされることがわかります。
 
-**`DsGetDcName` は Windows API の一つで「最も早く応答を返したドメインコントローラーの情報を取得する」**ものです。
+**`DsGetDcName` は Windows API の一つで「最も早く応答を返したドメインコントローラーの情報を取得する」** ものです。
 
 > [DsGetDcNameA function | Microsoft Docs](https://docs.microsoft.com/ja-jp/windows/desktop/api/dsgetdc/nf-dsgetdc-dsgetdcnamea)
 

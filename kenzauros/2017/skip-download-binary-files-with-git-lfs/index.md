@@ -5,6 +5,8 @@ author: kenzauros
 tags: [Git, GitLab, Git LFS, SourceTree]
 ---
 
+こんにちは、kenzauros です。
+
 **Git LFS** は Git で大容量ファイルを扱えるようにするものですが、不具合というか結構クセが強くて、正常に pull できなかったり、 push できなかったりすることがあります。
 
 今回は 1GB 超の大容量ファイルがうまく pull できないリポジトリがあったので、その回避方法をご紹介します。
