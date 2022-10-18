@@ -21,7 +21,7 @@ Lambda で Node.js のライブラリーを使いたい場合、2 つの方法�
 
 2 の方法では Lambda レイヤーに配置した `node_modules` を複数の関数で使用できるので、関数の数が増えても都度追加する必要がありません。
 
-今回 Serverless Framework を使ってライブラリーを含めた Lambda レイヤーを作成しましたが、**関数を実行しても「Cannot find module」のエラーが表示され苦しみました**。
+Serverless Framework を使ってライブラリーを含めた Lambda レイヤーを作成した際、**関数を実行しても「Cannot find module」のエラーが表示され苦しみました**。
 
 今回はこのエラーが発生していた原因と解決法を紹介します。また Serverless Framework で Lambda レイヤーを作成し、ライブラリーを使用した関数を実行してみます。
 
