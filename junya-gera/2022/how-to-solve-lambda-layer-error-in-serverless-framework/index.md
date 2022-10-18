@@ -3,16 +3,27 @@ title: "[AWS] Lambda レイヤーの node_modules が読み込まれないとき
 date: 
 author: junya-gera
 tags: [Lambda, AWS, Serverless Framework, Node.js]
-description: Serverless Framework で Lambda レイヤーを作成した際、関数を実行したら node_modules が読み込まれない場合の解決方法を解説します。
+description: Serverless Framework で Lambda レイヤーを作成し、関数を実行しても node_modules が読み込めない場合の解決方法を解説します。
 ---
 
 こんにちは、じゅんじゅんです。
 
-Lambda で Node.js のライブラリーを使いたいとき、ライブラリーを含んだデプロイパッケージをアップロードする方法と、ライブラリーを Lambda レイヤーに配置する方法があります。
+Lambda で Node.js のライブラリーを使いたい場合、2 つの方法があります。
 
-Serverless Framework を使ってライブラリーを含めた Lambda レイヤーを作成しましたが、**関数を実行しても「Cannot find module」のエラーが表示され苦しみました**。
 
-今回は、このエラーが発生していた原因と解決法を紹介します。また Serverless Framework で Lambda レイヤーを作成し、ライブラリーを使用した関数を実行してみます。
+1. `node_modules` を含んだデプロイパッケージをアップロードする方法
+
+2. `node_modules` を Lambda レイヤーに配置する方法
+
+1 の方法の場合、zip ファイルに `node_modules` を含めてアップロードするだけですので簡単ですが、 `node_modules` に修正が入る場合はアップロードし直す必要があります。
+
+それだけでなく、ライブラリーのサイズが大きい場合、デプロイに時間がかかるので開発効率が悪くなります。
+
+2 の方法では Lambda レイヤーに配置した `node_modules` を複数の関数で使用できるので、関数の数が増えても都度追加する必要がありません。
+
+今回 Serverless Framework を使ってライブラリーを含めた Lambda レイヤーを作成しましたが、**関数を実行しても「Cannot find module」のエラーが表示され苦しみました**。
+
+今回はこのエラーが発生していた原因と解決法を紹介します。また Serverless Framework で Lambda レイヤーを作成し、ライブラリーを使用した関数を実行してみます。
 
 ## 前提
 - Serverless Framework 3.19.0
@@ -20,9 +31,9 @@ Serverless Framework を使ってライブラリーを含めた Lambda レイヤ
 
 今回は時間を扱う JavaScript のライブラリー「[Luxon](https://moment.github.io/luxon/#/)」をレイヤーに含め、現在時刻を出力するだけの Lambda を作成します。
 
-## モジュールが読み込まれなかった原因
+## node_modules が読み込まれなかった原因
 
-先に私がどこを間違えていたせいでモジュールが読み込まれなかったのかをお伝えします。
+先に私がどこを間違えていたせいでnode_modules が読み込まれなかったのかをお伝えします。
 
 **ライブラリーを含んだ node_modules を格納するディレクトリには名前が決められていて、それ以外のディレクトリ名だと「Cannot find module」エラーが出る**ようです。
 
@@ -61,6 +72,8 @@ sls-test ディレクトリに移動し、以下のコマンドを実行して n
 npm init
 npm i luxon
 ```
+
+これで node_modules が生成されました。
 
 ### handler.js の記述
 
@@ -141,13 +154,13 @@ functions:
       - {Ref: SampleLayerLambdaLayer}
 
 layers:
-  samplelayer:
+  sampleLayer:
     path: sample-layer
 ```
 
 `Ref` 関数は CloudFormation の関数で、指定したリソースの値を取得します。
 
-Ref 関数で指定するレイヤー名は、ハイフンなどをなくし、最初の文字を大文字にして後ろに `LambdaLayer` をつけます。
+Ref 関数で指定する際、レイヤー名 (ここでは `sampleLayer`) は最初の文字を大文字にし、後ろに `LambdaLayer` をつけて `SampleLayerLambdaLayer` とします。
 
 これで `serverless.yml` にレイヤーの設定が記述できました。
 
