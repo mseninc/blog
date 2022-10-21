@@ -1,6 +1,6 @@
 ---
 title: "[AWS] Lambda レイヤーの node_modules が読み込まれないときの解決法"
-date: 
+date: 2022-10-21
 author: junya-gera
 tags: [Lambda, AWS, Serverless Framework, Node.js]
 description: Serverless Framework で Lambda レイヤーを作成し、関数を実行しても node_modules が読み込めない場合の解決方法を解説します。
