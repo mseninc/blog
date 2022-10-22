@@ -60,7 +60,7 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
 
 利用可能なバージョンは `nvm list available` で確認できます。
 
-`nvm install` でインストールされるのは通常 64bit 版ですが、 `nvm install 16.18.0 32` で 32 bit 版を指定してインストールすることもできます。
+`nvm install` でインストールされるのは通常 64bit 版ですが、 `nvm install 16.18.0 32` で 32 bit 版を指定してのインストールもできます。
 
 アンインストールする場合は `nvm uninstall 16.18.0` でバージョンを指定してアンインストールできます。
 
