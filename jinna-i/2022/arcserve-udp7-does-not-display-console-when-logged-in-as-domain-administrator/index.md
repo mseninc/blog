@@ -58,7 +58,7 @@ Windows 認証情報(IWA) を使用すると、ユーザー名とパスワード
 
 [コンソール関連](https://documentation.arcserve.com/Arcserve-UDP/Available/7.0/JPN/Bookshelf_Files/HTML/Update2/default.htm#Console_Related.htm)
 
-つまり、**ローカルアカウントに Administrator が存在してる場合に、ドメインの Administrator では Windows 認証情報を使用してログインできない**ようです。
+つまり、**ローカルアカウントに Administrator が存在している場合、ドメインの Administrator では Windows 認証情報を使用してログインできない**ようです。
 
 ## 解決策
 
@@ -73,7 +73,7 @@ Windows 認証情報(IWA) を使用すると、ユーザー名とパスワード
 
 ![](images/003.png)
 
-設定 > ユーザ管理 から `Arcserve UDP ユーザ管理コンソールを起動` をクリックします。
+設定 > ユーザ管理 から `Arcserve UDP ユーザー管理コンソールを起動` をクリックします。
 
 ![](images/004.png)
 
@@ -101,7 +101,7 @@ admin の `ユーザの割り当て` から **ローカルの Administrator** �
 
 正常にコンソールが表示されました。あとはウィザードに沿ってバックアッププランなどを設定してく流れです。
 
-今回の事象は既知の問題のようなので、何かのアップデートで解消されることを望みます。
+今回の事象は既知の問題のようですので、何かのアップデートで解消されることを望みます。
 
 ではまた。
 
