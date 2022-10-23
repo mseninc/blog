@@ -2,11 +2,15 @@
 title: Node-Red で Web スクレイピングをする方法
 date: 
 author: linkohta
-tags: [Web, Node-Red, Selenium]
+tags: [Node-Red, Selenium, Web]
 description: Node-Red で Web スクレイピングをする方法を説明します。
 ---
 
 link です。
+
+Web スクレイピングを自動で行う方法として Selenium などが存在します。
+
+今回は Node-Red 上で Selenium を利用できるノードを導入して Web スクレイピングをする方法を紹介します。
 
 ## 想定環境
 
@@ -15,7 +19,7 @@ link です。
 
 ## Node-Red と Selenium のコンテナーを作成
 
-Node-Red と Selenium のコンテナーを作成します。
+今回は簡単に導入可能な Docker イメージを利用して Node-Red と Selenium のコンテナーを作成します。
 
 ### Node-Red のコンテナー作成
 
@@ -44,3 +48,9 @@ Node-Red に webdriver ノードをインストールします。
 - [SeleniumHQ/docker-selenium: Docker images for Selenium Grid](https://github.com/SeleniumHQ/docker-selenium)
 
 ## まとめ
+
+今回はNode-Red で Web スクレイピングをする方法を紹介しました。
+
+Node-Red 上であれば Web スクレイピングの手順が容易に可視化できるため、ぜひ活用してみてください。
+
+それではまた、別の記事でお会いしましょう。
