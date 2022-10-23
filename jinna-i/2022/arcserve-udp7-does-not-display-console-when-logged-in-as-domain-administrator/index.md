@@ -73,7 +73,7 @@ Windows 認証情報(IWA) を使用すると、ユーザー名とパスワード
 
 ![](images/003.png)
 
-設定 > ユーザ管理 から `Arcserve UDP ユーザー管理コンソールを起動` をクリックします。
+設定 > ユーザー管理 から `Arcserve UDP ユーザー管理コンソールを起動` をクリックします。
 
 ![](images/004.png)
 
@@ -85,7 +85,7 @@ Windows 認証情報(IWA) を使用すると、ユーザー名とパスワード
 
 ![](images/006.png)
 
-admin の `ユーザの割り当て` から **ローカルの Administrator** を追加します。
+admin の `ユーザーの割り当て` から **ローカルの Administrator** を追加します。
 
 ![](images/007.png)
 
