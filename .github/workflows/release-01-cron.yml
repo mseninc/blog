@@ -18,8 +18,9 @@ jobs:
     steps:
 
     - name: List pull requests
-      uses: actions/github-script@v4
+      uses: actions/github-script@v6
       with:
+        retries: 3
         github-token: ${{ secrets.CI_GITHUB_TOKEN }}
         script: |
           const { repo: { owner, repo } } = context;
@@ -66,7 +67,7 @@ jobs:
           if (candidates.length > 0) {
             const { number, url } = candidates[0]
             console.log(`Merging #${number}...`)
-            await github.pulls.merge({
+            await github.rest.pulls.merge({
               owner,
               repo,
               pull_number: number

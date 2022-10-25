@@ -16,7 +16,7 @@ jobs:
     steps:
 
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Make summary (Current term)
       id: make-summary-1
@@ -25,8 +25,8 @@ jobs:
         OUTPUT=$(.github/scripts/term-summary.sh)
         PERIOD=$(echo "${OUTPUT}" | head -n 1)
         SUMMARY=$(echo "${OUTPUT}" | tail -n +2 | awk '{printf $1":"$2";"}')
-        echo "::set-output name=period::$PERIOD"
-        echo "::set-output name=summary::$SUMMARY"
+        echo "period=$PERIOD" >> $GITHUB_OUTPUT
+        echo "summary=$SUMMARY" >> $GITHUB_OUTPUT
 
     - name: Make summary (Previous term)
       id: make-summary-2
@@ -35,8 +35,8 @@ jobs:
         OUTPUT=$(.github/scripts/term-summary.sh $(date --date '-6 months' +%Y-%m-%d))
         PERIOD=$(echo "${OUTPUT}" | head -n 1)
         SUMMARY=$(echo "${OUTPUT}" | tail -n +2 | awk '{printf $1":"$2";"}')
-        echo "::set-output name=period::$PERIOD"
-        echo "::set-output name=summary::$SUMMARY"
+        echo "period=$PERIOD" >> $GITHUB_OUTPUT
+        echo "summary=$SUMMARY" >> $GITHUB_OUTPUT
 
     - name: Report to slack
       uses: 8398a7/action-slack@v3
