@@ -89,7 +89,9 @@ admin の `ユーザーの割り当て` から **ローカルの Administrator**
 
 ![](images/007.png)
 
-このように admin に **ローカルの Administrator** と **ドメインの Administrator** が表示されていれば OK です。
+![](images/010.png)
+
+ユーザーの表示を行い、このように admin に **ローカルの Administrator** と **ドメインの Administrator** が表示されていれば OK です。
 
 ![](images/008.png)
 
