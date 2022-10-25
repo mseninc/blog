@@ -109,9 +109,9 @@ admin の `ユーザーの割り当て` から **ローカルの Administrator**
 
 ## 参考
 
-[Arcserve UDP の関連サービスとプロセスを再起動する方法](https://support.arcserve.com/s/article/209065226?language=ja)
+- [Arcserve UDP の関連サービスとプロセスを再起動する方法](https://support.arcserve.com/s/article/209065226?language=ja)
 
-[コンソール関連](https://documentation.arcserve.com/Arcserve-UDP/Available/7.0/JPN/Bookshelf_Files/HTML/Update2/default.htm#Console_Related.htm)
+- [コンソール関連](https://documentation.arcserve.com/Arcserve-UDP/Available/7.0/JPN/Bookshelf_Files/HTML/Update2/default.htm#Console_Related.htm)
 
-[事前定義済みの役割の割り当て](https://documentation.arcserve.com/Arcserve-UDP/Available/7.0/JPN/Bookshelf_Files/HTML/SolG/default.htm#UDPSolnGuide/udp_assign_predef_role.htm)
+- [事前定義済みの役割の割り当て](https://documentation.arcserve.com/Arcserve-UDP/Available/7.0/JPN/Bookshelf_Files/HTML/SolG/default.htm#UDPSolnGuide/udp_assign_predef_role.htm)
 
