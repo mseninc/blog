@@ -1,5 +1,5 @@
 ---
-title: "[ArcServe UPD7] Windows 認証情報(IWA) を使用してドメインの Administrator でログインするとコンソールが表示されない"
+title: "[ArcServe UDP7] Windows 認証情報(IWA) を使用してドメインの Administrator でログインするとコンソールが表示されない"
 date: 
 author: jinna-i
 tags: [バックアップ, ArcServe]
@@ -10,11 +10,11 @@ description:
 
 ArcServe UDP7 でバックアップサーバー構成しています。
 
-**ドメインの Administrator で Windows 認証情報(IWA) を使用してログインすると正しくコンソールが表示されない** 現象が発生していました。
+ドメインの Administrator で **「Windows 認証情報(IWA) を使用してログインすると正しくコンソールが表示されない」** 現象が発生していました。
 
 ![](images/001.png)
 
-Windows 認証情報(IWA) を使用すると、ユーザー名とパスワードを入力することなく現在の Windows でログオン中の認証情報でログインできます。
+Windows 認証情報 (IWA; Integrated Windows Authentication) を使用すると、ユーザー名とパスワードを入力することなく現在の Windows でログオン中の認証情報でログインできます。
 
 ![](images/002.png)
 
@@ -30,7 +30,7 @@ Windows 認証情報(IWA) を使用すると、ユーザー名とパスワード
 
 ## 関連サービスを再起動するも解消せず
 
-まずは ArcServe UDP7 関連のサービスをしましたが、事象は解消しませんでした。
+まずは ArcServe UDP7 関連のサービスを再起動しましたが、事象は解消しませんでした。
 
 他の不具合にも使えるので関連サービスの再起動手順を記載しておきます。
 
