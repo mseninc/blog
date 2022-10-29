@@ -31,7 +31,7 @@ docker run -it -p 1880:1880 -v node_red_data:/data --name mynodered nodered/node
 
 `localhost:1880` にアクセスして以下の画像のような画面が表示されれば OK です。
 
-![Node-Red 初期画面](image/2022-08-14_14h38_46.png)
+![Node-Red 初期画面](images/2022-08-14_14h38_46.png)
 
 ### Selenium のコンテナー作成
 
@@ -47,7 +47,7 @@ docker run -d -p 4444:4444 --shm-size="2g" selenium/standalone-firefox:4.4.0-202
 
 初期パスワードは `secret` に設定されています。
 
-![noVNC 初期画面](image/2022-10-25_23h44_15.png)
+![noVNC 初期画面](images/2022-10-25_23h44_15.png)
 
 ## Node-Red に webdriver ノードをインストール
 
@@ -55,15 +55,15 @@ Node-Red に webdriver ノードをインストールします。
 
 右上のメニューから**パレットの管理**を選択します。
 
-![パレットの管理](image/2022-08-14_14h45_59.png)
+![パレットの管理](images/2022-08-14_14h45_59.png)
 
 **ノードを追加**タブを選択して `node-red-contrib-simple-webdriver` を検索して、ノードを追加します。
 
-![ノードを追加](image/2022-08-14_14h58_03.png)
+![ノードを追加](images/2022-08-14_14h58_03.png)
 
 ノードの追加に成功すると以下のノード一式がパレットに追加されていると思います。
 
-![webdriver ノード](image/../images/2022-08-14_14h58_52.png)
+![webdriver ノード](images/2022-08-14_14h58_52.png)
 
 ## Web スクレイピングをさせてみる
 
@@ -78,14 +78,14 @@ Node-Red に webdriver ノードをインストールします。
 その後、各ノードの設定を以下のようにします。
 
 - `open browser`
-- ブラウザを開きます、サーバーはポート番号 4444 の URL を Docker の Selenium コンテナーのログから探して入力します。画像の例だと `172.17.0.2:4444` です。 
+  - ブラウザを開きます、サーバーはポート番号 4444 の URL を Docker の Selenium コンテナーのログから探して入力します。画像の例だと `172.17.0.2:4444` です。 
 ![open browser](images\2022-10-26_23h28_20.png)
 ![Selenium ログ](images\2022-10-26_23h55_14.png)
 - `navigate`
-- 指定したページに遷移します
+  - 指定したページに遷移します
 ![navigate](images\2022-10-26_23h28_34.png)
 - `get text`
-- 指定した要素の文字列を取得します
+  - 指定した要素の文字列を取得します
 ![get text](images\2022-10-26_23h29_16.png)
 
 `inject` ノードをクリックして動作させます。
