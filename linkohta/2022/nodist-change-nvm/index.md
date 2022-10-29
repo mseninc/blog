@@ -29,8 +29,6 @@ npm ERR! Cannot find module '@npmcli/arborist'
 
 基本的な機能は Nodist と違いはありません。
 
-nvm では使用する Node.js のバージョンに合わせて npm のバージョンを手動で変更する作業が不要になります。
-
 Windows と Linux それぞれの手順を紹介します。
 
 ### Windows の場合
