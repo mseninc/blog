@@ -31,9 +31,9 @@ jobs:
           git checkout -q origin/${BRANCH_NAME}
 
       - name: Node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: '14'
+          node-version: 16
           cache: npm
 
       - name: npm install
