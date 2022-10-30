@@ -69,9 +69,9 @@ jobs:
 
       # Node & npm 初期化
       - name: Node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: '14'
+          node-version: 16
           cache: npm
 
       # npm install
@@ -86,8 +86,8 @@ jobs:
           RESULT=$(node .github/scripts/optimize-images.js . --no-backup)
           echo ${RESULT}
           RESULT="${RESULT//$'\n'/\\n}"
-          echo "::set-output name=result::$RESULT"
-          echo "::set-output name=elapsed::$SECONDS"
+          echo "result=$RESULT" >> $GITHUB_OUTPUT
+          echo "elapsed=$SECONDS" >> $GITHUB_OUTPUT
 
       # コミットプッシュ
       - name: Commit & push
@@ -99,11 +99,11 @@ jobs:
           git commit -m "Release pre-process"
           git push origin ${GIT_BRANCH}
           COMMIT_HASH=$(git rev-parse HEAD)
-          echo "::set-output name=hash::$COMMIT_HASH"
+          echo "hash=$COMMIT_HASH" >> $GITHUB_OUTPUT
 
       # Pull request に画像最適化の結果をコメント
       - name: Comment to PR
-        uses: actions/github-script@0.3.0
+        uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
@@ -124,5 +124,5 @@ jobs:
                   return `[${fileName}](${baseUrl}${relPath})`
                 })
               const body = `### Image optimization\ncommit: ${commitHash} elapsed: ${elapsed}\n${resultText}`
-              github.issues.createComment({ issue_number, owner, repo, body })
+              github.rest.issues.createComment({ issue_number, owner, repo, body })
             }
