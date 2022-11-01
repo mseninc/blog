@@ -128,17 +128,14 @@ onPressed: () => {
 
 `initState()` は画面の初期化時に呼び出されるメソッドです。
 
-↓ `debugPrint()`
-```dart
+```dart:title=debugPrint()を利用する場合
   void initState() {
     super.initState();
     debugPrint("テストテスト");
   }
 ```
 
-↓ `kDebugMode`
-
-```dart
+```dart:title=kDebugModeを利用する場合
   void initState() {
     super.initState();
     if (kDebugMode) {print("テストテスト")}
