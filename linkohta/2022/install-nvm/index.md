@@ -1,33 +1,18 @@
 ---
-title: 【備忘録】Nodist を nvm に置き換える手順
+title: 【備忘録】Windows と Linux で nvm をインストールして Node.js を使う手順
 date: 
 author: linkohta
 tags: [nvm, Node.js]
-description: nodist を nvm に置き換える手順を紹介します。
+description: Windows と Linux で nvm をインストールして Node.js を使う手順を紹介します。
 ---
 
 link です。
 
-Nodist で Node.js のバージョンを変更する際に詰まって、 nvm に変更することがあったのでその手順を残しておきます。
+**nvm** を使って Node.js のバージョンを変更することがあったのでその手順を残しておきます。
 
-## Nodist について
+## nvm について
 
-Node.js のバージョン管理ツールとして便利な Nodist ですが、最新の Node.js と npm にして npm を利用しようとすると以下のようなエラーが発生します。
-
-```:title=npmのエラー
-npm ERR! code MODULE_NOT_FOUND
-npm ERR! Cannot find module '@npmcli/arborist'
-```
-
-これは Nodist がすでにメンテナンスされておらず、最新の npm が正常に展開されないために発生している模様です。
-
-最新の Node.js まで扱うためには Nodist から別のバージョン管理ツールに移行する必要があります。
-
-そこで今回は Nodist を **nvm** に置き換える手順について紹介します。
-
-## nvm に置き換える
-
-基本的な機能は Nodist と違いはありません。
+nvm は Node.js のバージョン管理ツールです。
 
 Windows と Linux それぞれの手順を紹介します。
 
@@ -35,7 +20,7 @@ Windows と Linux それぞれの手順を紹介します。
 
 Windows の場合は [nvm-windows](https://github.com/coreybutler/nvm-windows/releases) で簡単にインストールできます。
 
-Nodist をアンインストールして、 nvm-windows をインストールするだけで OK です。
+nvm-windows をインストールするだけで使えるようになります。
 
 ### Linux の場合
 
@@ -54,7 +39,7 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
 
 ## nvm で Node.js をインストールしてみる
 
-`nvm install 16.18.0` という風にバージョンを指定することでインストールできます。
+`nvm install 16.18.0` のようにバージョンを指定してインストールできます。
 
 利用可能なバージョンは `nvm list available` で確認できます。
 
@@ -75,6 +60,6 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
 
 ## まとめ
 
-今回は Nodist の代わりに nvm をインストールして利用する方法を紹介しました。
+今回は Windows と Linux で nvm をインストールして Node.js を使う手順を紹介しました。
 
 それではまた、別の記事でお会いしましょう。
