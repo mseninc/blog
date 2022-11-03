@@ -1,37 +1,37 @@
 ---
-title: Node-Red で Web スクレイピングをする方法
+title: Node-RED で Web スクレイピングをする方法
 date: 
 author: linkohta
-tags: [Node-Red, Selenium, Web]
-description: Node-Red で Web スクレイピングをする方法を説明します。
+tags: [Node-RED, Selenium, Web]
+description: Node-RED で Web スクレイピングをする方法を説明します。
 ---
 
 link です。
 
 Web スクレイピングを自動で行う方法として Selenium などが存在します。
 
-今回は Node-Red 上で Selenium を利用できるノードを導入して Web スクレイピングをする方法を紹介します。
+今回は Node-RED 上で Selenium を利用できるノードを導入して Web スクレイピングをする方法を紹介します。
 
 ## 想定環境
 
 - Windows 10 以降
 - Docker 4
 
-## Node-Red と Selenium のコンテナーを作成
+## Node-RED と Selenium のコンテナーを作成
 
-今回は簡単に導入可能な Docker イメージを利用して Node-Red と Selenium のコンテナーを作成します。
+今回は簡単に導入可能な Docker イメージを利用して Node-RED と Selenium のコンテナーを作成します。
 
-### Node-Red のコンテナー作成
+### Node-RED のコンテナー作成
 
 以下のコマンドを実行します。
 
-```bash:title=Node-Redのコンテナー作成
+```bash:title=Node-REDのコンテナー作成
 docker run -it -p 1880:1880 -v node_red_data:/data --name mynodered nodered/node-red
 ```
 
 `localhost:1880` にアクセスして以下の画像のような画面が表示されれば OK です。
 
-![Node-Red 初期画面](images/2022-08-14_14h38_46.png)
+![Node-RED 初期画面](images/2022-08-14_14h38_46.png)
 
 ### Selenium のコンテナー作成
 
@@ -49,9 +49,9 @@ docker run -d -p 4444:4444 --shm-size="2g" selenium/standalone-firefox:4.4.0-202
 
 ![noVNC 初期画面](images/2022-10-25_23h44_15.png)
 
-## Node-Red に webdriver ノードをインストール
+## Node-RED に webdriver ノードをインストール
 
-Node-Red に webdriver ノードをインストールします。
+Node-RED に webdriver ノードをインストールします。
 
 右上のメニューから**パレットの管理**を選択します。
 
@@ -61,7 +61,7 @@ Node-Red に webdriver ノードをインストールします。
 
 ![ノードを追加](images/2022-08-14_14h58_03.png)
 
-ノードの追加に成功すると以下のノード一式がパレットに追加されていると思います。
+ノードの追加に成功すると以下のノード一式がパレットに追加されます。
 
 ![webdriver ノード](images/2022-08-14_14h58_52.png)
 
@@ -71,21 +71,38 @@ Node-Red に webdriver ノードをインストールします。
 
 今回は Mseeeen のトップページの標語「Beyond our knowledge」を取得してみます。
 
-ノードを以下の画像のように設置します。
+まず、取得する要素を指定するため、 DOM を確認します。
+
+取得する要素の上で右クリック → 調査を選択します。
+
+![DOM の表示](images\2022-11-03_14h24_41.png)
+
+取得する要素を特定できるもの、ここでは `class` 名を確認します。
+
+![取得要素の確認](images\2022-11-03_14h25_25.png)
+
+続いて、ノードを以下の画像のように設置します。
 
 ![設置ノード](images\2022-10-26_23h28_01.png)
 
 その後、各ノードの設定を以下のようにします。
 
 - `open browser`
-  - ブラウザを開きます、サーバーはポート番号 4444 の URL を Docker の Selenium コンテナーのログから探して入力します。画像の例だと `172.17.0.2:4444` です。 
-![open browser](images\2022-10-26_23h28_20.png)
-![Selenium ログ](images\2022-10-26_23h55_14.png)
+  - ブラウザを開きます、サーバーは Selenium の IP アドレスを入力します
+  - Selenium の URL は以下の手順で調べられます
+    - `docker ps` コマンドで Selenium コンテナーの ID を調べます
+    ![Selenium コンテナーの ID 取得](images\2022-11-03_14h19_07.png)
+    - `docker inspect コンテナー ID` コマンドを実行して `IPAddress` を調べます
+    ![IP アドレス取得](images\2022-11-03_14h19_54.png)
+  - 画像の例だと `172.17.0.2:4444` です
+![open browser 設定](images\2022-10-26_23h28_20.png)
 - `navigate`
   - 指定したページに遷移します
+  - ここでは `https://mseeeen.msen.jp/` を指定します
 ![navigate](images\2022-10-26_23h28_34.png)
 - `get text`
   - 指定した要素の文字列を取得します
+  - `By` を `className` に、 `Target` に確認した `class` 名を入力します
 ![get text](images\2022-10-26_23h29_16.png)
 
 `inject` ノードをクリックして動作させます。
@@ -105,8 +122,8 @@ Node-Red に webdriver ノードをインストールします。
 
 ## まとめ
 
-今回はNode-Red で Web スクレイピングをする方法を紹介しました。
+今回はNode-RED で Web スクレイピングをする方法を紹介しました。
 
-Node-Red 上であれば Web スクレイピングの手順が容易に可視化できるため、ぜひ活用してみてください。
+Node-RED 上であれば Web スクレイピングの手順が容易に可視化できるため、ぜひ活用してみてください。
 
 それではまた、別の記事でお会いしましょう。
