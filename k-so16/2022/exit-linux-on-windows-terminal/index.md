@@ -1,6 +1,6 @@
 ---
 title: Windows Terminal で終了コードによらず WSL の終了と同時にウィンドウを閉じる方法
-date: 
+date: 2022-11-04
 author: k-so16
 tags: [Windows, WSL]
 description: Windows Terminal で WSL から exit する際に、終了コードによらずウィンドウを閉じる方法を紹介します。
