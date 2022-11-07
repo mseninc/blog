@@ -1,9 +1,9 @@
 ---
-title: 【備忘録】C++ でファイル名を取得する方法
+title: 【備忘録】C++ でファイルパスからファイル名を取得する
 date: 
 author: linkohta
 tags: [C++, Visual Studio]
-description: C++ でファイル名を取得する方法を紹介します。
+description: C++ でファイルパスからファイル名を取得する方法を紹介します。
 ---
 
 link です。
