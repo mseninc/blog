@@ -62,7 +62,7 @@ jobs:
 
     - name: Install dependencies
       if: steps.cache-node-modules.outputs.cache-hit != 'true' # https://github.com/actions/cache#Skipping-steps-based-on-cache-hit
-      run: npm ci
+      run: npm install --production
 
     - name: Build
       run: node_modules/.bin/gatsby build --verbose
