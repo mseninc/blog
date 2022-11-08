@@ -1,6 +1,6 @@
 ---
 title: "VMware vSphere Update Manager を使用して ESXi にパッチを適用する"
-date: 
+date: 2022-11-08
 author: jinna-i
 tags: [仮想化技術, VMware, vCenter Server]
 description: 
