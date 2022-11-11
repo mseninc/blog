@@ -1,6 +1,6 @@
 ---
 title: "[Flutter] 「Avoid print calls in production code.」 という警告の意味と解消法"
-date: 
+date: 2022-11-11
 author: junya-gera
 tags: [Flutter, Dart]
 description: Flutter で print() を使用したときに表示される「Avoid print calls in production code.」という警告の意味と解消法を紹介します。
