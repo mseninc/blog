@@ -3,7 +3,7 @@ title: "[NextAuth.js] ログアウト時に認証プロバイダーのセッシ�
 date: 
 author: kenzauros
 tags: [Next.js, OpenID Connect, OAuth, Cognito]
-description: 
+description: 今回は「NextAuth.js でサインアウトしても認証先 (OpenID Connect provider) でログアウトできていない」問題を解決します。
 ---
 
 こんにちは、 kenzauros です。
@@ -67,11 +67,11 @@ NextAuth のリポジトリでも、この問題は 2020 年から議論され�
 
 `COGNITO_LOGOUT_ENDPOINT_URL?client_id=COGNITO_CLIENT_ID&redirect_uri=REDIRECT_URI&response_type=code`
 
-ここで `COGNITO_CLIENT_ID` は NextAuth の Cognito 設定で使用しているはずなので、環境変数などから流用できるでしょう。
+ここで `COGNITO_CLIENT_ID` は NextAuth の Cognito 設定で使用しているはずですので、環境変数などから流用できるでしょう。
 
 `REDIRECT_URI` もおそらく環境変数の `NEXTAUTH_URL` に NextAuth のコールバック URI (`/api/auth/callback/cognito`) を結合すれば得られます。
 
-あと必要な情報は `COGNITO_LOGOUT_ENDPOINT_URL` だけです。これは `hogehoge.auth.us-east-1.amazoncognito.com` みたいなドメインに `/logout` をくっつけたものです。このドメインは Cognito ユーザープールの「*アプリケーションの統合*」で確認できます。
+あと必要な情報は `COGNITO_LOGOUT_ENDPOINT_URL` だけです。これは `hogehoge.auth.us-east-1.amazoncognito.com` みたいなドメインに `/logout` を結合したものです。このドメインは Cognito ユーザープールの「*アプリケーションの統合*」で確認できます。
 
 !["Cognito ドメインの確認"](images/cognito-domain.png "Cognito ドメインの確認")
 
@@ -118,16 +118,14 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
 
 これでサインアウトボタンを押せば、 Cognito 側でもログアウトが行われ、 Cognito のログイン画面まで自動で遷移するはずです👏
 
-## 別の解決法もある
+## まとめ（別の解決法もある）
 
 今回紹介した方法とは別に、ディスカッションの少し上で提案されていた下記の方法も使えそうです（試していません）。
 
 [![](images/workaround2.png)](https://github.com/nextauthjs/next-auth/discussions/3938#discussioncomment-2231398)
 
-こちらはルートを作成することなく、 `[...nextauth].ts` 内で完結するので、情報が一箇所に集約され、わかりやすいかもしれません。
+こちらは `[...nextauth].ts` 内で完結するため、情報が一ヵ所に集約され、わかりやすいかもしれません。
 
-- - -
+私は最初に紹介した方法のほうが、流れがシンプルに思えたため、そちらを選択しました。
 
-私は最初に紹介した方法のほうが流れがシンプルかなと思って、そちらを選択しました。
-
-いずれにしても泥臭い感じなので、なんらか標準で対応してもらえるといいですね🚀
+どなたかのお役に立てれば幸いです。
