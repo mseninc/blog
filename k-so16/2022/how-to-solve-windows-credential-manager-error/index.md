@@ -2,7 +2,7 @@
 title: 資格情報マネージャーが開けないエラーへの対処方法
 date: 2022-05-11
 author: k-so16
-tags: [windows]
+tags: [Windows]
 description: コントロールパネル内の資格情報マネージャーが開けないエラーへの対処方法について説明します。
 ---
 
