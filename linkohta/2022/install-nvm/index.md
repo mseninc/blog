@@ -1,5 +1,5 @@
 ---
-title: 【備忘録】Windows と Linux で nvm をインストールして Node.js を使う手順
+title: 【2022年版】Windows と Linux の nvm で Node.js を使う
 date: 
 author: linkohta
 tags: [nvm, Node.js]
@@ -25,11 +25,14 @@ nvm-windows をインストールするだけで使えるようになります�
 ### Linux の場合
 
 Linux の場合は nvm の公式サイトに記載されているインストールスクリプトを実行することでインストールできます。
-本記事執筆時のインストールスクリプトは以下の通りです。
 
-```:title=インストールスクリプト
+本記事執筆時のインストールスクリプトは以下の 2 通りです。
+
+```:title=インストールスクリプト (curl)
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
-もしくは
+```
+
+```:title=インストールスクリプト (wget)
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
 ```
 
