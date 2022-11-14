@@ -37,7 +37,7 @@ jobs:
           cache: npm
 
       - name: npm install
-        run: npm ci
+        run: npm install --omit=dev
 
       - name: Setup reviewdog
         uses: reviewdog/action-setup@v1
