@@ -70,7 +70,7 @@ docker run -itd --network=node-red-selenium -it -p 1880:1880 -v node_red_data:/d
 以下のコマンドを実行します。
 
 ```bash:title=Seleniumのコンテナー作成
-docker run -itd --network=node-red-selenium -d -p 4444:4444 --shm-size="2g" selenium/standalone-firefox:4.4.0-20220812
+docker run -itd --network=node-red-selenium -d -p 4444:4444 -p 7900:7900 --shm-size="2g" --name selenium-hub selenium/standalone-firefox:4.6.0-20221104
 ```
 
 `localhost:7900` にアクセスして以下の画像のような画面が表示されれば OK です。
@@ -120,8 +120,8 @@ Node-RED に webdriver ノードをインストールします。
 その後、各ノードの設定を以下のようにします。
 
 - `open browser`
-  - ブラウザを開きます、サーバーは Selenium の IP アドレスを入力します
-![open browser 設定](images\2022-10-26_23h28_20.png)
+  - ブラウザを開きます、サーバーは `http://selenium-hub:4444/wd/hub` を入力します
+![open browser 設定](images\2022-11-15_23h17_47.png)
 - `navigate`
   - 指定したページに遷移します
   - ここでは `https://mseeeen.msen.jp/` を指定します
