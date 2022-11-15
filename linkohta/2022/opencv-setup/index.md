@@ -1,6 +1,6 @@
 ---
 title: Visual Studio で OpenCV を使う手順
-date: 
+date:
 author: linkohta
 tags: [OpenCV, Visual Studio]
 description: Visual Studio で OpenCV を使う手順について紹介します。
@@ -12,8 +12,11 @@ OpenCV を使って画像処理をする機会があったので Visual Studio �
 
 ## 想定環境
 
+OpenCV は C#, Python, Java など様々な言語で利用可能ですが、今回は C++ で利用します。
+
 - Windows 10 以降
 - Visual Studio 2022
+- C++14 以降
 
 ## OpenCV のインストール
 
@@ -41,7 +44,7 @@ Visual Studio の NuGet でプロジェクトに直接インストールする�
 
 ![追加のインクルードディレクトリ](images\2022-10-30_22h17_02.png)
 
-続いて、「リンカー」の「追加のライブラリディレクトリ」に `OpenCV のフォルダ \build\x64\vc14\lib` を設定します。
+続いて、「リンカー」の「追加のライブラリディレクトリ」に `OpenCV のフォルダ \build\x64\vc14\lib; OpenCV のフォルダ \build\x64\vc15\lib` を設定します。
 
 ![追加のライブラリディレクトリ](images/2022-10-30_22h17_21.png)
 
@@ -55,7 +58,7 @@ Visual Studio の NuGet でプロジェクトに直接インストールする�
 
 `main()` を以下のように書き換えます。
 
-```cpp
+```cpp:title=main.cpp
 #include "opencv2/opencv.hpp"
 #include <filesystem>
 
