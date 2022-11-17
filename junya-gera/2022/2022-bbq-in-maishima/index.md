@@ -1,6 +1,6 @@
 ---
 title: 舞洲 森とリルのBBQフィールドで BBQ してきました！
-date: 
+date: 2022-11-17
 author: junya-gera
 tags: [レク]
 description: MSEN のメンバーで「舞洲 森とリルのBBQフィールド」で BBQ をした様子をお届けします。
