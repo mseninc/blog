@@ -1,14 +1,14 @@
 ---
-title: Pixel 5 から Pixel 7 に乗り換えた話
+title: Pixel 5 から Pixel 7 に乗り換えて挫折しそうになったけど THE FROST AIR に救われた件
 date: 
 author: kenzauros
-tags: [Pixel]
-description: 
+tags: [Google Pixel]
+description: 先日 Pixel 5 から Pixel 7 に乗り換えました。最初は不満爆発で Pixel 5 に戻そうかと思いましたが、神カバーを入手したことでなんとか Pixel 7 を使い続けられそうです🚀
 ---
 
 こんにちは、 kenzauros です。
 
-先日 **Pixel 5 から Pixel 7 に乗り換え**ました。最初は不満爆発で Pixel 5 に戻そうかと思いましたが、なんとか Pixel 7 にも慣れてきたので、レビューしてみたいと思います🚀
+先日 **Pixel 5 から Pixel 7 に乗り換え**ました。最初は不満爆発で Pixel 5 に戻そうかと思いましたが、なんとか Pixel 7 にも慣れてきたので、レビューしたいと思います🚀
 
 - [Google Pixel 7 - Google ストア](https://store.google.com/jp/product/pixel_7?hl=ja)
 
