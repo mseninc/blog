@@ -1,5 +1,5 @@
 ---
-title: Windows11の右クリックを旧形式に戻す方法
+title: Windows11の右クリックで表示されるメニューを旧形式に戻す方法
 date: 
 author: norikazum
 tags: [Windows 11]
