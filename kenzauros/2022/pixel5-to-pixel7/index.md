@@ -1,6 +1,6 @@
 ---
 title: Pixel 5 から Pixel 7 に乗り換えて挫折しそうになったけど THE FROST AIR に救われた件
-date: 
+date: 2022-11-19
 author: kenzauros
 tags: [Google Pixel]
 description: 先日 Pixel 5 から Pixel 7 に乗り換えました。最初は不満爆発で Pixel 5 に戻そうかと思いましたが、神カバーを入手したことでなんとか Pixel 7 を使い続けられそうです🚀
