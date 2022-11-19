@@ -8,7 +8,7 @@ description:
 
 こんにちは。
 
-今回は、評価でPacketix VPN Client 接続マネージャーを利用しようとした際、以下のエラーで起動しない現象に見舞われました。
+評価でPacketix VPN Client 接続マネージャーを利用しようとした際、以下のエラーで起動しない現象に見舞われました。
 
 > このコンピュータで動作しているVPN Client サービスに接続できませんでした。VPN Client サービスが起動し、正しく動作いているかどうか確認してください。
 
@@ -17,6 +17,8 @@ description:
 エラー内容にサービスが起動しているかどうかの確認がありましたが、 **サービスは問題なく起動していました** 。
 
 ![Packetix VPN Client のサービス起動状態](images/2022-11-19_17h18_31.png "Packetix VPN Client のサービス起動状態")
+
+今回はこの現象を解決した際の流れを記事にします。
 
 ## 環境
 - 端末OS : Windows 11
@@ -31,7 +33,7 @@ description:
 
 コマンドプロンプトを開き、 `netstat -ano | find "9999"` を実行します。
 
-結果の上部を見ると、2つのプロセスが待ち受けている ( LISTENING している ) ことが分かります。
+コマンド結果の先頭を見ると、**2つのプロセスが待ち受けている ( LISTENING している ) ことが分かります**。
 ```
 TCP         0.0.0.0:9999           0.0.0.0:0      LISTENING       5752
 TCP         127.0.0.1:9999         0.0.0.0:0      LISTENING       4824
@@ -52,17 +54,18 @@ TCP         127.0.0.1:9999         0.0.0.0:0      LISTENING       4824
 ![Acronis Agent Core の停止](images/2022-11-19_20h59_17.png "Acronis Agent Core の停止")
 
 Packetix VPN Client 接続マネージャー を起動してみます。
+起動しました。
 
 ![Packetix VPN Client を起動](images/2022-11-19_21h00_26.png "Packetix VPN Client を起動")
 
-起動したので、 **原因は Acronis Agent Core と 待ち受けているポート番号がバッティングしている** ことであることが特定されました。
+このことから、 **原因は Packetix VPN Client と Acronis Agent Core の 待ち受けポート番号がバッティングしている** と特定されました。
 
 ## 対処
 Acronis Agent Core Service の待ち受けポートを変更することで対処します。
 
 ポート番号は任意ですが 1つ 小さな `9998` にします。
 
-コマンドプロンプトから `netstat -ano | find "9998"` を実行して `ポート 9998` が空いていることを確認します。
+コマンドプロンプトから `netstat -ano | find "9998"` を実行して `9998 ポート` が空いていることを確認します。
 
 問題ありませんでした。
 
