@@ -76,7 +76,7 @@ Pixel 7 | 6.3 インチ | 155.64 mm | 73.16 mm | 8.7 mm | 197 g
 
 特に安価なカバーだとそれ自体が 30 g ぐらいあり、サイズもさらに肥大するので、かなり不満に感じました。純正ケースは 34.7 g もあります。
 
-![Pixel 7 純正ケース](images/pixel7-official-case.png.jpg "Pixel 7 純正ケース")
+![Pixel 7 純正ケース](images/pixel7-official-case.png "Pixel 7 純正ケース")
 
 ### 指紋認証
 
