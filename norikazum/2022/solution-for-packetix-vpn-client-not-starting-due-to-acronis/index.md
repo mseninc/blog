@@ -70,7 +70,7 @@ Acronis Agent Core Service の待ち受けポートを変更することで対�
 
 続けて、設定ファイルを変更します。
 
-1. `C:\ProgramData\Acronis\Agent\etc\aakore.yaml` をテキストエディタで開き、 `http: 127.0.0.1:9999` の部分を `http: 127.0.0.1:9998` に変更して保存します。
+1. `C:\ProgramData\Acronis\Agent\etc\aakore.yaml` をテキストエディターーで開き、 `http: 127.0.0.1:9999` の部分を `http: 127.0.0.1:9998` に変更して保存します。
 1. サービスから、 `Acronis Agent Core Service` を再起動します。
 ![Acronis Agent Core Service を再起動](images/2022-11-19_22h11_56.png "Acronis Agent Core Service を再起動")
 
