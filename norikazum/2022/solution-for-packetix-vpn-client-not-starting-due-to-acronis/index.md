@@ -23,6 +23,7 @@ description:
 ## 環境
 - 端末OS : Windows 11
 - Packetix VPN Client: v4.39-9772-beta-2022.04.26
+- Acronis Cyber Protect Home Office
 
 ## 原因の特定
 
