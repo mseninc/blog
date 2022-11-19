@@ -54,8 +54,7 @@ TCP         127.0.0.1:9999         0.0.0.0:0      LISTENING       4824
 
 ![Acronis Agent Core の停止](images/2022-11-19_20h59_17.png "Acronis Agent Core の停止")
 
-Packetix VPN Client 接続マネージャー を起動してみます。
-起動しました。
+この状態でPacketix VPN Client 接続マネージャー を起動してみると正常に起動しました。
 
 ![Packetix VPN Client を起動](images/2022-11-19_21h00_26.png "Packetix VPN Client を起動")
 
