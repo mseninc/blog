@@ -1,5 +1,5 @@
 ---
-title: 【備忘録】OpenCV で画像を分割・結合する方法
+title: OpenCV で画像を分割・結合する方法
 date: 
 author: linkohta
 tags: [OpenCV, C++]
