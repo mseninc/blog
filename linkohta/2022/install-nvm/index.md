@@ -18,9 +18,7 @@ Windows と Linux それぞれの手順を紹介します。
 
 ### Windows の場合
 
-Windows の場合は [nvm-windows](https://github.com/coreybutler/nvm-windows/releases) で簡単にインストールできます。
-
-nvm-windows をインストールするだけで使えるようになります。
+Windows の場合は [nvm-windows](https://github.com/coreybutler/nvm-windows/releases) をインストールするだけで使えるようになります。
 
 ### Linux の場合
 
@@ -31,6 +29,8 @@ Linux の場合は nvm の公式サイトに記載されているインストー
 ```:title=インストールスクリプト (curl)
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
 ```
+
+もしくは
 
 ```:title=インストールスクリプト (wget)
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
