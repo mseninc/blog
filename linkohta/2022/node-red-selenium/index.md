@@ -1,9 +1,9 @@
 ---
-title: Node-RED で Web スクレイピングをする方法
+title: Node-RED で Selenium を使った Web スクレイピングを試す
 date: 
 author: linkohta
 tags: [Node-RED, Selenium, Web]
-description: Node-RED で Web スクレイピングをする方法を説明します。
+description: Node-RED で Selenium を使った Web スクレイピングをする方法を説明します。
 ---
 
 link です。
@@ -16,6 +16,8 @@ Web スクレイピングを自動で行う方法として Beautiful Soup や Oc
 
 - Windows 10 以降
 - Docker 4
+- Node-RED 3 以降
+- Selenium 4.6.0
 
 ## Selenium とは
 
@@ -27,7 +29,7 @@ Web スクレイピングを自動で行う方法として Beautiful Soup や Oc
 
 ### メリット
 
-Selenium はブラウザ操作に特化しているので習得のための難易度が比較的低いことや、様々な言語に対応しているという特徴があります。
+Selenium はブラウザ操作に特化しているので習得のための難易度が比較的低いことやさまざまな言語に対応しているという特徴があります。
 
 主な対応言語として `Java`, `JavaScript`, `Python` などが挙げられます。
 
@@ -45,7 +47,9 @@ Selenium はブラウザ操作に特化しているので習得のための難�
 
 ### Node-Red と Selenium 用のネットワーク作成
 
-まず、 Node-Red と Selenium 用のネットワークを作成します。
+ただコンテナーを作っただけでは IP アドレスが固定化されず、再起動などで Node-RED から Selenium へ接続できなくなることがあります。
+
+ですので、まずは Node-Red と Selenium 用のネットワークを作成して IP アドレスを固定化します。
 
 以下のコマンドを実行します。
 
@@ -72,6 +76,8 @@ docker run -itd --network=node-red-selenium -it -p 1880:1880 -v node_red_data:/d
 ```bash:title=Seleniumのコンテナー作成
 docker run -itd --network=node-red-selenium -d -p 4444:4444 -p 7900:7900 --shm-size="2g" --name selenium-hub selenium/standalone-firefox:4.6.0-20221104
 ```
+
+`--name` オプションで指定している `selenium-hub` がコンテナー名になります。
 
 `localhost:7900` にアクセスして以下の画像のような画面が表示されれば OK です。
 
@@ -120,7 +126,9 @@ Node-RED に webdriver ノードをインストールします。
 その後、各ノードの設定を以下のようにします。
 
 - `open browser`
-  - ブラウザを開きます、サーバーは `http://selenium-hub:4444/wd/hub` を入力します
+  - ブラウザを開きます
+  - **同一のネットワーク内であれば、コンテナー名をドメイン名として扱うことができます**
+  - 今回はコンテナー名を `selenium-hub` にしているため、 `server` は `http://selenium-hub:4444/wd/hub` を入力します
 ![open browser 設定](images\2022-11-15_23h17_47.png)
 - `navigate`
   - 指定したページに遷移します
@@ -137,7 +145,7 @@ Node-RED に webdriver ノードをインストールします。
 
 ![取得結果](images\2022-10-26_23h29_51.png)
 
-取得したテキストは Node-RED 上の `change` ノードや `function` ノードなどにそのまま流せるので、そこで加工したり、ファイルに出力したりすることもできます。
+取得したテキストは Node-RED 上の `change` ノードや `function` ノードなどにそのまま流せるので、そこで加工したり、ファイルに出力したりできます。
 
 ちなみに取得中は以下の画像のように noVNC でブラウザが動いていることがわかります。
 
