@@ -1,6 +1,6 @@
 ---
 title: 【2022年版】Windows と Linux の nvm で Node.js を使う
-date: 
+date: 2022-11-21
 author: linkohta
 tags: [nvm, Node.js]
 description: Windows と Linux で nvm をインストールして Node.js を使う手順を紹介します。
