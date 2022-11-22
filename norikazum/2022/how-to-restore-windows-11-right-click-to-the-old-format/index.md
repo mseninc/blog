@@ -51,7 +51,9 @@ Windows 11 では、以下のようにメニューが省略された形式に変
 
 ファイルを以下のリンクからZIPファイルをダウンロードし、解凍した reg ファイルをダブルクリックして実行すると追加されます。
 
-[右クリックメニューを旧形式に戻す.reg](https://gist.github.com/norikazum/3b8fa2e2e321ebfef2c3ee0472b7f606/archive/511616864782177294c4e33ebb31189e00ca67f9.zip)
+[右クリックメニューを旧形式に戻すレジストリファイル ( リンク )](https://gist.github.com/norikazum/3b8fa2e2e321ebfef2c3ee0472b7f606/)
+
+[右クリックメニューを旧形式に戻すレジストリファイル ( ZIP 直接ダウンロード )](https://gist.github.com/norikazum/3b8fa2e2e321ebfef2c3ee0472b7f606/archive/511616864782177294c4e33ebb31189e00ca67f9.zip)
 
 ※自己責任でご利用ください。
 
