@@ -49,7 +49,7 @@ Selenium はブラウザ操作に特化しているので習得のための難�
 
 ただコンテナーを作っただけでは IP アドレスが固定化されず、再起動などで Node-RED から Selenium へ接続できなくなることがあります。
 
-ですので、まずは Node-Red と Selenium 用のネットワークを作成して IP アドレスを固定化します。
+ですので、まずは Node-Red と Selenium 用のネットワークを作成して DNS による名前解決ができるようにします。
 
 以下のコマンドを実行します。
 
@@ -62,7 +62,7 @@ docker network create -d bridge node-red-selenium
 以下のコマンドを実行します。
 
 ```bash:title=Node-REDのコンテナー作成
-docker run -itd --network=node-red-selenium -it -p 1880:1880 -v node_red_data:/data --name mynodered nodered/node-red
+docker run -itd --network=node-red-selenium -p 1880:1880 -v node_red_data:/data --name mynodered nodered/node-red
 ```
 
 `localhost:1880` にアクセスして以下の画像のような画面が表示されれば OK です。
@@ -74,7 +74,7 @@ docker run -itd --network=node-red-selenium -it -p 1880:1880 -v node_red_data:/d
 以下のコマンドを実行します。
 
 ```bash:title=Seleniumのコンテナー作成
-docker run -itd --network=node-red-selenium -d -p 4444:4444 -p 7900:7900 --shm-size="2g" --name selenium-hub selenium/standalone-firefox:4.6.0-20221104
+docker run -itd --network=node-red-selenium -p 4444:4444 -p 7900:7900 --shm-size="2g" --name selenium-hub selenium/standalone-firefox:4.6.0-20221104
 ```
 
 `--name` オプションで指定している `selenium-hub` がコンテナー名になります。
@@ -128,7 +128,7 @@ Node-RED に webdriver ノードをインストールします。
 - `open browser`
   - ブラウザを開きます
   - **同一のネットワーク内であれば、コンテナー名をドメイン名として扱うことができます**
-  - 今回はコンテナー名を `selenium-hub` にしているため、 `server` は `http://selenium-hub:4444/wd/hub` を入力します
+  - 今回はコンテナー名を `selenium-hub` にしているため、 `server` は `http://selenium-hub:4444/wd/hub` を入力します。今回は同じネットワークに所属させているため、コンテナーどうしは名前解決が可能です
 ![open browser 設定](images\2022-11-15_23h17_47.png)
 - `navigate`
   - 指定したページに遷移します
