@@ -1,6 +1,6 @@
 ---
 title: "[Todoist] スマート日付認識機能を無効にして日付が勝手に反映されるのを防ぐ"
-date: 
+date: 2022-11-23
 author: jinna-i
 tags: [Todoist, タスク管理]
 description: 
