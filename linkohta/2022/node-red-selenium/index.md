@@ -1,6 +1,6 @@
 ---
 title: Node-RED で Selenium を使った Web スクレイピングを試す
-date: 
+date: 2022-11-25
 author: linkohta
 tags: [Node-RED, Selenium, Web]
 description: Node-RED で Selenium を使った Web スクレイピングをする方法を説明します。
