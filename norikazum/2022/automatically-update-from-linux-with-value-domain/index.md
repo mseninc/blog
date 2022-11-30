@@ -39,7 +39,7 @@ wget -q -O - "https://dyn.value-domain.com/cgi-bin/dyn.fcg?d=$DOMAINNAME&p=$PASS
 前項で作成したスクリプトを`crontab -e` から、以下を追記して定期的に更新するようにします。
 設定例は `30分ごと` です。
 
-```:title=crontab -e
+```:title=crontab&nbsp;-e
 */30 * * * * /root/valuedomain.sh
 ```
 
