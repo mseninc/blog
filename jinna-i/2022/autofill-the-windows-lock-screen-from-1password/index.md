@@ -1,5 +1,5 @@
 ---
-title: "[1Password] 'Type in Window' で Windows ロック画面でパスワードを自動入力する"
+title: "[1Password] 'Type in window' で Windows ロック画面でパスワードを自動入力する"
 date: 
 author: jinna-i
 tags: [Windows, Windows Server, 1Password]
