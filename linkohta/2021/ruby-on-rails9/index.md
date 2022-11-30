@@ -195,7 +195,7 @@ View の中身を書き換えていきます。
 
 `app/views/mail_data/show.html.erb` を以下のように書き換えます。
 
-```html:html:title=app/views/mail_data/show.html.erb
+```html:title=app/views/mail_data/show.html.erb
 <p>
   <strong>To user id:</strong>
   <%= @mail_datum.user_id %>
