@@ -133,7 +133,7 @@ WantedBy=multi-user.target
 
 作成した定義ファイルの権限を 755 に変更します。
 
-```:title=定義ファイルの権限を 755 に変更
+```:title=定義ファイルの権限を755に変更
 $ sudo chmod 755 /etc/systemd/system/tomcat.service
 ```
 
