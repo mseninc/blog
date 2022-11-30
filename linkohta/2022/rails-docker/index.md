@@ -101,7 +101,7 @@ docker-compose.yml は複数の Docker コンテナーを定義するための�
 
 今回はデータベース用の `db` と Rails アプリ用の `web` を定義しています。
 
-```Gemfile:title=Gemfile
+```:title=Gemfile
 source 'https://rubygems.org'
 gem 'rails', '~> 7.0.2'
 ```

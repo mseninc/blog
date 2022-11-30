@@ -83,13 +83,13 @@ $ rails g model MailDatum from_user_id:integer to_user_id:integer mail_subject:s
 
 Model 間の関連付けを行います。生成した Model を以下のコードに書き換えます。
 
-```rb:app/models/user.rb
+```rb:title=app/models/user.rb
 class User < ApplicationRecord
     has_many :mail_data
 end
 ```
 
-```rb:app/models/mail_datum.rb
+```rb:title=app/models/mail_datum.rb
 class MailDatum < ApplicationRecord
     belongs_to :user
 end
@@ -103,7 +103,7 @@ Controller を書き換えていきます。
 
 `mail_datum_params` メソッドは `private` より下の位置に追記します。
 
-```rb:app/controllers/users_controller.rb
+```rb:title=app/controllers/users_controller.rb
 def new_mail
   @mail_datum = MailDatum.new
   @mail_datum.from_user_id = params[:id]
@@ -116,7 +116,7 @@ end
 
 `app/controllers/mail_data_controller.rb` を以下のように書き換えます。
 
-```rb:app/controllers/mail_data_controller.rb
+```rb:title=app/controllers/mail_data_controller.rb
 class MailDataController < ApplicationController
   before_action :set_mail_datum, only: %i[ show edit update destroy ]
 
@@ -140,7 +140,7 @@ View の中身を書き換えていきます。
 
 `app/views/users/new_mail.html.erb` を以下のように書き換えます。
 
-```html:app/views/users/new_mail.html.erb
+```html:title=app/views/users/new_mail.html.erb
 <h1>New Mail</h1>
 
 <%= form_with(model: @mail_datum, url: :user) do |form| %>
@@ -174,7 +174,7 @@ View の中身を書き換えていきます。
 
 `app/views/users/show.html.erb` を以下のように書き換えます。
 
-```html:app/views/users/show.html.erb
+```html:title=app/views/users/show.html.erb
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -195,7 +195,7 @@ View の中身を書き換えていきます。
 
 `app/views/mail_data/show.html.erb` を以下のように書き換えます。
 
-```html:html:app/views/mail_data/show.html.erb
+```html:html:title=app/views/mail_data/show.html.erb
 <p>
   <strong>To user id:</strong>
   <%= @mail_datum.user_id %>
@@ -223,14 +223,14 @@ View の中身を書き換えていきます。
 
 最後に、`users#new_mail` と `users#show` のルーティングを設定します。
 
-```rb:config/routes.rb
+```rb:title=config/routes.rb
 get 'users/:id/new_mail', to: 'users#new_mail'
 post 'users/:id', to: 'users#show'
 ```
 
  `seeds.rb` にテスト用のレコードを追加して、 `db:migrate` と `db:seed` を実行しましょう。
 
-```rb:db/seeds.rb
+```rb:title=db/seeds.rb
 User.create(name: "Ichiro")
 User.create(name: "Jiro")
 ```
