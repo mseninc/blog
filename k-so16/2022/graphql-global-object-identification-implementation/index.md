@@ -55,7 +55,7 @@ Global Object Identification の実装の流れは以下の通りです。
 引数には `ID` を受け取り、 `Node` を返却します。
 実際に `node` クエリーが実行される際には、実体のオブジェクトが返却されます。
 
-実際にインタフェースと実装するオブジェクトの定義してみます。
+実際にインタフェースと実装するオブジェクトを定義してみます。
 GraphQL のスキーマ定義を以下のように変更します。
 
 ```graphql{numberLines:1}:title=schema.graphql
