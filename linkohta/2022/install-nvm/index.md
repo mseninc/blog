@@ -26,13 +26,13 @@ Linux の場合は nvm の公式サイトに記載されているインストー
 
 本記事執筆時のインストールスクリプトは以下の 2 通りです。
 
-```:title=インストールスクリプト (curl)
+```:title=インストールスクリプト(curl)
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
 ```
 
 もしくは
 
-```:title=インストールスクリプト (wget)
+```:title=インストールスクリプト(wget)
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
 ```
 
