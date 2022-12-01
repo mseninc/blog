@@ -39,7 +39,7 @@ Laradock をビルドすると、以下のエラーが発生しました。
 > Invalid template: "admin:$2y$10$lXaL3lj6raFic6rFqr2.lOBoCudAIhB6zyoqObNg290UFppiUzTTi"
 
 `lXaL3lj6raFic6rFqr2` という変数を利用するような設定は書いていないはずなのに、変数が設定されていないと怒られています。
-`.env` で該当の文字列を検索してみると、 `TRAEFIK_DASHBOARD_USER` という変数の値に含まれていました。
+`.env` で該当の文字列を検索してみると、 `TRAEFIK_DASHBOARD_USER` という環境変数の値に含まれていました。
 
 ```bash:title=.env
 TRAEFIK_DASHBOARD_USER=admin:$2y$10$lXaL3lj6raFic6rFqr2.lOBoCudAIhB6zyoqObNg290UFppiUzTTi
@@ -56,7 +56,7 @@ TRAEFIK_DASHBOARD_USER=admin:$2y$10$lXaL3lj6raFic6rFqr2.lOBoCudAIhB6zyoqObNg290U
 TRAEFIK_DASHBOARD_USER='admin:$2y$10$lXaL3lj6raFic6rFqr2.lOBoCudAIhB6zyoqObNg290UFppiUzTTi'
 ```
 
-環境変数をシングルクオーテーションで囲むことで、無事にビルドに成功してコンテナーを立ち上げることができました。
+環境変数の値をシングルクオーテーションで囲むことで、無事にビルドに成功してコンテナーを立ち上げることができました。
 
 本記事を執筆する上で、以下の記事を参考にしました。
 
