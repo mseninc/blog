@@ -1,6 +1,6 @@
 ---
 title: Visual Studio で OpenCV を使う手順
-date:
+date: 2022-12-02
 author: linkohta
 tags: [OpenCV, Visual Studio]
 description: Visual Studio で OpenCV を使う手順について紹介します。
