@@ -1,6 +1,6 @@
 ---
 title: OpenCV で画像を切り抜き・結合する方法
-date: 
+date:
 author: linkohta
 tags: [OpenCV, C++]
 description: OpenCV で画像を切り抜き・結合する方法を紹介します。
@@ -14,7 +14,7 @@ link です。
 
 ## 画像の切り抜き
 
-画像の切り抜きは元の画像に ROI( `Rect` ) を指定するとできます。
+画像の切り抜きは元の画像に ROI (`Rect`) を指定するとできます。
 
 具体例は以下の通りです。
 
