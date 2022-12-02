@@ -52,7 +52,7 @@ description:
 ![](images/PXL_20220107_071143362_R.jpg)
 
 1. 任意の場所に以下のバッチを作成します。今回は例として `D:\wifi_connect.bat` とします。
-```bat
+```:title=wifi_connect.bat
 netsh wlan connect name="TP-LINK_7***"
 ```
 

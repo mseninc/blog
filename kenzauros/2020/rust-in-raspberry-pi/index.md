@@ -97,7 +97,7 @@ $ vim main.rs
 
 `main.rs` に `main` 関数を書きましょう。
 
-```rs
+```rust
 fn main() {
     // 世界よ、こんにちは
     println!(&quot;Hello, world!&quot;);

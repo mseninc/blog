@@ -1,36 +1,48 @@
 - id: norikazum
+  github: norikazum
   name: 社長
   bio: 専門分野はサーバ・ネットワークです。 2022年で8期目を迎えました。 今年の目標は11月の健康診断で脂質値を正常値まで下げることです。(笑)
 - id: kiyoshin
+  github: kiyoshin
   name: きよしん
   bio: バックエンドエンジニアですが、フロントエンドもたまにやってみたります。 ネットゲーム大好き人間でしたが、最近はごぶさたです。
 - id: kenzauros
+  github: kenzauros
   name: kenzauros
   bio: CTO です。好きなのは .NET (C#), React, Vue, Node(JS) です。もともとは電子回路設計や実験装置開発をやっていました。趣味は旅行ですが、最近はいけなくてちょっと哀しいです。海外ドラマが好きでいろいろ見ています。
 - id: jinna-i
+  github: jinna-i
   name: じんない
   bio: インフラ担当してます。関西の某お笑い芸人に似ていると言われます。でっかいものと、美しいものが好きです。よく聞かれますが、筋トレはしていません。
 - id: kosshii
+  github: kosshii
   name: こっしー
   bio: 将来の夢は、「これがないと困る」そう言ってくれるものを作ることです。
 - id: hiroki-Fukumoto
+  github: hiroki-Fukumoto
   name: ふっくん
   bio: ふっくんです。そろそろ夏ですね。
 - id: k-so16
+  github: k-so16
   name: k-so16
   bio: 入社 4 年目をむかえた MSEN のプログラマーです。最近は基礎技術の磨き直しに力を入れています。自炊もそこそこ頑張っています(笑)
 - id: junya-gera
+  github: junya-gera
   name: じゅんじゅん
   bio: 2年目プログラマーです。今は C# と AWS に興味があります。Vtuber に沼っています。
 - id: kohei-iwamoto-wa
+  github: kohei-iwamoto-wa
   name: IwamotoKohei
   bio: 
 - id: linkohta
+  github: linkohta
   name: link
   bio: ゲームを作るのとゲームを遊ぶのが趣味な社会人２年生。 得意言語は Ruby 、 Java 、 C# などのオブジェクト指向系。 Ruby はツクールで、 Java は大学で勉強。 世界史にもそれなりに深い知識を持つ（自称）。
 - id: hiratatsu04
+  github: hiratatsu04
   name: ひらたつ
   bio: 入社1年目です。インフラを担当しております。最近子供が産まれました。子供の成長を見ていると人間はすごいなと感じます。自分も負けずに立派なエンジニアになれるように頑張ろうと思います。
 - id: r-Funakoshi
+  github: r-Funakoshi
   name: LEAF
   bio: 新人エンジニアです。同調圧力に負けて何らかの運動を始めようと考えています。ゲーム、音楽、お菓子作りと多趣味なインドア派です。
