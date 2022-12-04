@@ -5,6 +5,10 @@ on:
   # 手動実行時
   workflow_dispatch:
     inputs:
+      generator_branch:
+        description: 'Branch name of generator repository'
+        required: false
+        default: 'main'
       s3_bucket_name:
         description: 'S3 bucket name'
         required: false
@@ -50,7 +54,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
       with:
-        ref: ${{ secrets.GENERATOR_BRANCH }}
+        ref: ${{ github.event.inputs.generator_branch || secrets.GENERATOR_BRANCH }}
         repository: mseninc/blog-gatsby
 
     - name: Checkout
