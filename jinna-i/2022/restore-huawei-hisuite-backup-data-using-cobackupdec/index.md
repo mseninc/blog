@@ -1,5 +1,5 @@
 ---
-title: "HUAWEI HiSuite で暗号化されたバックアップデータを cobackupdec で復号する'"
+title: "HUAWEI HiSuite で暗号化されたバックアップデータを cobackupdec で復号する"
 date: 
 author: jinna-i
 tags: [Windows, Python3, HUAWEI]
