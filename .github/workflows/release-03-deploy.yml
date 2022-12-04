@@ -19,9 +19,6 @@ on:
       cloudfront_distribution:
         description: 'ID of CloudFront Distribution'
         required: false
-      cloudfront_region:
-        description: 'Region of CloudFront Distribution'
-        required: false
 
   # デプロイ前処理の実行後
   workflow_run:
@@ -76,7 +73,7 @@ jobs:
     - name: Node
       uses: actions/setup-node@v3
       with:
-        node-version: 16
+        node-version: 18
         cache: npm
 
     - name: Install dependencies
@@ -91,6 +88,6 @@ jobs:
     - name: Invalidate CloudFront
       uses: chetan/invalidate-cloudfront-action@master
       env:
-        AWS_REGION: ${{ github.event.inputs.cloudfront_region || env.AWS_DEFAULT_REGION }}
+        AWS_REGION: us-east-1
         DISTRIBUTION: ${{ github.event.inputs.cloudfront_distribution || secrets.CLOUDFRONT_DISTRIBUTION }}
         PATHS: '/*'
