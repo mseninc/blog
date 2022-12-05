@@ -63,7 +63,7 @@ C:\work>pip install pycryptodome
 
 ![](images/002.png)
 
-ダウンロードしたファイルは適当なフォルダへ解凍しておきましょう。私は `C:\work` へ展開しました。
+ダウンロードしたファイルは適当なフォルダへ展開しておきましょう。私は `C:\work` へ展開しました。
 
 ```cmd
 C:\work>dir
