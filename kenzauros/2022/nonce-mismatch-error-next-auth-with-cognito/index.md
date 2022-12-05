@@ -45,7 +45,7 @@ export default NextAuth({
 
 ここで "Sign in with Cognito" をクリックすると、なぜかそのままログインでき、ユーザー情報も正常に取得できます。また、このエラーは ** Cognito と IdP 間で認証が行われるときのみ発生し、 Cognito にセッションが残っている状態では発生しません**でした。
 
-しかしセッション確立時にこのような画面になるのはアプリケーションとして終わっています😭
+しかしセッション確立時に、このような画面になるのはアプリケーションとして終わっています😭
 
 コンソール側でエラーを確認すると下記のような内容が確認できます。
 
@@ -79,7 +79,7 @@ https://next-auth.js.org/errors#oauth_callback_error nonce mismatch, expected un
 
 - [Cognito + Third party IDPs - Nonce Mismatch Error · Discussion #3551 · nextauthjs/next-auth](https://github.com/nextauthjs/next-auth/discussions/3551)
 
-[一部のコメント](https://github.com/nextauthjs/next-auth/discussions/3551#discussioncomment-1965364) ではライブラリー内部で `nonce: null` にすると回避できるとしていますが、 nonce チェックをあえて無効化するのは望ましくありません。
+[一部のコメント](https://github.com/nextauthjs/next-auth/discussions/3551#discussioncomment-1965364) ではライブラリー内部で `nonce: null` にすれば回避できるとしていますが、 nonce チェックをあえて無効化するのは望ましくありません。
 
 念のため、プロバイダーオプションの `checks` に `'none'` を指定することでも無効化できるようだったので試してみましたが、エラーは変わりませんでした。
 
