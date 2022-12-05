@@ -31,7 +31,7 @@ NextAuth の認証プロバイダーとして **Amazon Cognito** を使ってい
 4. NextAuth でサインイン
 5. 自動的にユーザー A としてサインインされる❗
 
-一般的なアプリだと特に問題にならないかもしれませんが、*一旦サインアウトした後に別のアカウントでサインインし直したいとき*に困ります。
+一般的なアプリだと特に問題にならないかもしれませんし、この方が都合のよいアプリもありますが、*一旦サインアウトした後に別のアカウントでサインインし直したい*というニーズに対応できません。
 
 原因は「**認証プロバイダー (Cognito) 側のセッションが残っている**」ことです。要するに自分で作ったアプリからサインアウトした後も Cognito にはログインした状態が続いているというわけです。
 
@@ -43,19 +43,49 @@ NextAuth のリポジトリでも、この問題は 2020 年から議論され�
 
 ディスカッションではいくつかの解決策が示されています。結果的に私が採用したものは、下記の方の提案です。
 
-[![](images/workaround-in-discussion.png)](https://github.com/nextauthjs/next-auth/discussions/3938#discussioncomment-3836431)
+[![](images/workaround2.png)](https://github.com/nextauthjs/next-auth/discussions/3938#discussioncomment-2231398)
+
 
 ## 解決法
 
-やっていることはシンプルです。まず「**認証プロバイダーログアウト用の API route**」を用意し、そこから「**プロバイダーのログアウトエンドポイント (URL)**」にリダイレクトすることでログアウトしてしまおう、という話です。
+やっていることはシンプルです。 NextAuth のログアウト処理後に「**プロバイダーのログアウトエンドポイント (URL)**」にリダイレクトすることでログアウトしてしまおう、という話です。
+
+提案のものを少し改良していますが、 NextAuth の API エンドポイントである `[...nextauth].ts` に下記のようなコールバックを追加するだけです。
+
+```ts:title=/api/auth/[...nextauth].ts
+  callbacks: {
+    redirect({ url, baseUrl }) {
+      // Sign out from OAuth provider (Cognito)
+      // call `signOut({ callbackUrl: "signOut" });` then this callback called
+      // https://github.com/nextauthjs/next-auth/discussions/3938#discussioncomment-2231398
+      if (url.startsWith(baseUrl)) return url;
+      if (url === 'signOut' && process.env.COGNITO_LOGOUT_ENDPOINT_URL) {
+        // Sign out from auth provider
+        const logoutEndpointUrl = process.env.COGNITO_LOGOUT_ENDPOINT_URL || "";
+        const params = new URLSearchParams({
+          client_id: process.env.COGNITO_CLIENT_ID || "",
+          redirect_uri: `${process.env.NEXTAUTH_URL}/api/auth/callback/cognito`,
+          response_type: "code",
+        });
+        return `${logoutEndpointUrl}?${params.toString()}`;
+      }
+      // Allows relative callback URLs
+      if (url.startsWith('/')) return new URL(url, baseUrl).toString();
+      // Redirect to root when the redirect URL is still an external domain
+      return baseUrl;
+    },
+  },
+```
+
+### サインアウトの流れ
 
 サインアウトボタンからの流れは下記のようになります。
 
 1. サインアウトボタンが押される
-2. `signOut` (NextAuth のサインアウト関数) を呼び出す
-3. NextAuth のサインアウト後 `/api/auth/logout` にリダイレクト
-4. `/api/auth/logout` から「プロバイダーのログアウトエンドポイント」にリダイレクト
-5. プロバイダーからログアウトできる👍
+2. `signOut` (NextAuth のサインアウト関数) のコールバック URL に `"signOut"` を指定して呼び出す (`signOut({ callbackUrl: "signOut" });`)
+3. NextAuth のサインアウト後 `signOut` にリダイレクト
+4. `redirect` コールバック内で `signOut` の場合は「プロバイダーのログアウトエンドポイント」にリダイレクト
+5. プロバイダーからログアウトできる👏
 
 ### Amazon Cognito のログアウトエンドポイントの確認
 
@@ -80,6 +110,30 @@ NextAuth のリポジトリでも、この問題は 2020 年から議論され�
 ```:title=.env.local
 COGNITO_LOGOUT_ENDPOINT_URL=https://hogehoge.auth.us-east-1.amazoncognito.com/logout
 ```
+
+
+## 別の解決法（問題あり）
+
+実は上記の解決法に至るまでに下記の方法を試していました。
+
+[![](images/workaround-in-discussion.png)](https://github.com/nextauthjs/next-auth/discussions/3938#discussioncomment-3836431)
+
+この方法でも無事認証プロバイダーのサインアウトは実現できます。
+
+ただしこの方法は「**サインアウト後に再度サインインしてもまたサインアウトしてしまう**」という難点がありました。
+
+一応この方法についても概要を説明します。
+
+### サインアウトの流れ
+
+サインアウトボタンからの流れは下記のようになります。
+
+1. サインアウトボタンが押される
+2. `signOut` (NextAuth のサインアウト関数) を呼び出す
+3. NextAuth のサインアウト後 `/api/auth/logout` にリダイレクト
+4. `/api/auth/logout` から「プロバイダーのログアウトエンドポイント」にリダイレクト
+5. プロバイダーからログアウトできる👍
+
 
 ### 認証プロバイダーログアウト用のルートを用意する
 
@@ -116,16 +170,15 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
 </Button>
 ```
 
-これでサインアウトボタンを押せば、 Cognito 側でもログアウトが行われ、 Cognito のログイン画面まで自動で遷移するはずです👏
+これでサインアウトボタンを押せば、 Cognito 側でもログアウトが行われ、 Cognito のログイン画面まで自動で遷移するはずです。
 
-## まとめ（別の解決法もある）
+ただし、この方法では `callbackUrl` が `/api/auth/logout` で残っているため、再度サインインした直後、 `/api/auth/logout` にリダイレクトされてしまいます。
+そうすると前述のとおり、何度やってもログインできない状態が続きますので、この方法はコールバック URL を書き換えるなど、追加の対処が必要です。
 
-今回紹介した方法とは別に、ディスカッションの少し上で提案されていた下記の方法も使えそうです（試していません）。
+ただそれなら先に紹介した方法のほうが `[...nextauth].ts` で完結し、シンプルですのでそちらを採用することにしました。
 
-[![](images/workaround2.png)](https://github.com/nextauthjs/next-auth/discussions/3938#discussioncomment-2231398)
+## まとめ
 
-こちらは `[...nextauth].ts` 内で完結するため、情報が一ヵ所に集約され、わかりやすいかもしれません。
+今回は「**NextAuth でサインアウトしたときに認証プロバイダーでログアウトしたい場合**」の解決法を紹介しました。
 
-私は最初に紹介した方法のほうが、流れがシンプルに思えたため、そちらを選択しました。
-
-どなたかのお役に立てれば幸いです。
+ワークアラウンドですが、どなたかのお役に立てれば幸いです。
