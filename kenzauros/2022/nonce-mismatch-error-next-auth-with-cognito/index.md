@@ -43,7 +43,7 @@ export default NextAuth({
 
 ![NextAuth ➡ Cognito ➡ Google SAML と認証した後のエラー](images/nonce-mismatched.png "NextAuth ➡ Cognito ➡ Google SAML と認証した後のエラー")
 
-ここで "Sign in with Cognito" をクリックすると、なぜかそのままログインでき、ユーザー情報も正常に取得できます。また、このエラーは ** Cognito と IdP 間で認証が行われるときのみ発生し、 Cognito にセッションが残っている状態では発生しません**でした。
+ここで "Sign in with Cognito" をクリックすると、なぜかそのままログインでき、ユーザー情報も正常に取得できます。また、このエラーは **Cognito と IdP 間で認証が行われるときのみ発生し、 Cognito にセッションが残っている状態では発生しません**でした。
 
 しかしセッション確立時に、このような画面になるのはアプリケーションとして終わっています😭
 
