@@ -8,7 +8,7 @@ description: Windows Server 2003 の NTP 設定を Allsync にする方法です
 
 こんにちは、ひらたつです。
 
-先日、Windows Server 2003の NTP(Network Time Protocol) 設定を変更しましたが、最初はうまく設定できず苦労したので、備忘録として残しておきます。
+先日、Windows Server 2003 の NTP(Network Time Protocol) 設定を変更しましたが、最初はうまく設定できず苦労したので、備忘録として残しておきます。
 
 Windows Server 2003 を使っておられる方は少ないかもしれませんが、何かの役に立てば幸いです。
 
@@ -64,6 +64,8 @@ w32tm /config /syncfromflags:[Type] /manualpeerlist:[NtpServer] /update
 
 しかし、Windows Server 2003 環境では `Type` に `ALL` を指定するとエラーとなってしまいます。
 
+![指定値 ALL はエラー](images/ALLerror.png)
+
 ## Windows Server 2003 での AllSync 設定方法
 
 `ALL` 以外の指定値があるのかと調べましたが、他の指定値は見つかりませんでした。
@@ -72,7 +74,12 @@ w32tm /config /syncfromflags:[Type] /manualpeerlist:[NtpServer] /update
 ```
 w32tm /config /syncfromflags:DOMHIER,MANUAL
 ```
+![AllSync に設定](images/settingAllSync_1.png)
+![AllSync になっているか確認](images/settingAllSync_2.png)
 
 AllSync は、ドメイン階層と外部 NTP サーバーの両方から同期を行うという設定ですので、それらを意味する、`DOMHIER`と`MANUAL`を設定すれば良いみたいでした。
+
+Microsoftの公式サイトではないですが、以下でも同じ方法が紹介されていました。  
+[Windowsで時刻同期が正常に出来てるか確認する方法。w32tmコマンド](https://blog.putise.com/windows%E3%81%A7%E6%99%82%E5%88%BB%E5%90%8C%E6%9C%9F%E3%81%8C%E6%AD%A3%E5%B8%B8%E3%81%AB%E5%87%BA%E6%9D%A5%E3%81%A6%E3%82%8B%E3%81%8B%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%E3%80%82w32t/)
 
 以上です。
