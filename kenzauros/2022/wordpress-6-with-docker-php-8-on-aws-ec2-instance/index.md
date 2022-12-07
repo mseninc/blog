@@ -149,7 +149,7 @@ php コンテナーの実行ユーザーはデフォルトで root なので問�
 
 nginx の設定です。途中の https に関する部分以外は、普通の http (80 番ポート) のホスティング設定です。
 
-```conf:title=nginx/conf.d/default.conf
+```:title=nginx/conf.d/default.conf
 server {
     listen 80;
     server_name localhost;
