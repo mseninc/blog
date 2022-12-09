@@ -24,7 +24,7 @@ if [[ -n $FIND_RESULT ]]; then
 fi
 
 # select author
-authors=($(cat author.yaml | grep '^- id: ' | sed 's/^- id: //'))
+authors=($(cat author.yaml | grep '^- github: ' | sed 's/^- github: //'))
 
 echo $BOUNDARY
 echo "著者番号を指定してください"
