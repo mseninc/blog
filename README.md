@@ -163,7 +163,7 @@ Over 54 characters   ja-technical-writing/sentence-length
 
 #### ショートカットキー設定 (オプション)
 
-VS Code の場合、 `keybindings.json` で設定を行っておくと、ショートカットキーで `npx textlint <ファイルパス>` がターミナルに入力できます。
+VS Code の場合、 `keybindings.json` で設定を行っておくと、ショートカットキーでターミナルにコマンドを入力できます。
 
 `Ctrl+Shift+P` でコマンドパレットを開き、 `Preferences: Open Keyboard Shortcuts (JSON)` を選択して、 `keybindings.json` を開きます。
 
