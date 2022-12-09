@@ -161,23 +161,6 @@ Over 54 characters   ja-technical-writing/sentence-length
   118:30   warning  一文に二回以上利用されている助詞 "は" がみつかりました。                   ja-technical-writing/no-doubled-joshi
 ```
 
-#### ショートカットキー設定 (オプション)
-
-VS Code の場合、 `keybindings.json` で設定を行っておくと、ショートカットキーでターミナルにコマンドを入力できます。
-
-`Ctrl+Shift+P` でコマンドパレットを開き、 `Preferences: Open Keyboard Shortcuts (JSON)` を選択して、 `keybindings.json` を開きます。
-
-下記の設定を追加します。これでターミナルにフォーカスがある状態で `Ctrl+Shift+L` を押すと `npx textlint <ファイルパス>` が入力されます。
-
-```json
-  {
-    "key": "ctrl+shift+l",
-    "command": "workbench.action.terminal.sendSequence",
-    "args": { "text": "npx textlint ${relativeFile}" },
-    "when": "terminalFocus"
-  }
-```
-
 
 ## 記事の執筆ルール
 
