@@ -1,0 +1,12 @@
+{
+  "configurations": [
+    {
+      "name": "textlint",
+      "request": "launch",
+      "type": "node-terminal",
+      "command": "npx textlint ${file}",
+      "cwd": "${workspaceFolder}"
+    }
+  
+  ]
+}
