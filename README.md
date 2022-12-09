@@ -46,27 +46,38 @@ $ npm ci
 $ chmod +x ./*.sh
 ```
 
-#### プレビュー環境 (Docker) のセットアップ
 
-こちらのセットアップは、必須ではありません。
+### プレビュー環境 (Docker コンテナー)
 
 自分の PC 上で本番と同じプレビューを見ながら編集したい場合は、下記のコマンドを実行して docker コンテナーを起動してください。
 
+#### イメージのダウンロード・コンテナーの起動
+
 ```sh
 $ cd ~/blog
-$ docker run -d --name blog-gatsby -v $PWD:/content -p 8000:8000 ghcr.io/mseninc/blog-gatsby:latest
+$ docker run -d --name blog-gatsby -v $PWD:/content -p 8000:8000 ghcr.io/mseninc/blog-gatsby:main
 ```
 
 docker イメージのダウンロード・起動が終わると http://localhost:8000 でプレビューが可能です。記事を保存するとブラウザー側も自動で更新されます。
+
+起動完了まで少し時間がかかります。
 
 #### コンテナーの操作
 
 ```sh
 $ docker start blog-gatsby 👈 コンテナー起動
 $ docker stop blog-gatsby 👈 コンテナー停止
-$ docker rm blog-gatsby 👈 コンテナー削除
+```
+
+#### イメージ入れ替え
+
+イメージが更新されているときは一旦削除した上で「起動」手順を行ってください。
+
+```sh
+$ docker stop blog-gatsby && docker rm blog-gatsby 👈 コンテナー停止・削除
 $ docker images -a | grep "blog-gatsby" | awk '{print $3}' | xargs docker rmi 👈 イメージ削除
 ```
+
 
 ### 記事テンプレートの作成
 
