@@ -1,6 +1,6 @@
 ---
 title: "[NextAuth.js] ログアウト時に認証プロバイダーのセッションもログアウトする"
-date: 
+date: 2022-12-09
 author: kenzauros
 tags: [NextAuth.js, Next.js, OpenID Connect, OAuth, Cognito]
 description: 今回は「NextAuth.js でサインアウトしても認証先 (OpenID Connect provider) でログアウトできていない」問題を解決します。
