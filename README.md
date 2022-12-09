@@ -174,7 +174,7 @@ VS Code の場合、 `keybindings.json` で設定を行っておくと、ショ�
     "key": "ctrl+shift+l",
     "command": "workbench.action.terminal.sendSequence",
     "args": { "text": "npx textlint ${relativeFile}" },
-    "when": "terminalFocus && resourceExtname == .md"
+    "when": "terminalFocus"
   }
 ```
 
