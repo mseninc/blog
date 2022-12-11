@@ -159,40 +159,6 @@ VS Code の場合、ファイルパスは `Copy Relative Path` で取得でき�
 
 Pull Request で `textlint` ラベルをつけると GitHub 上でも文章校正が行われます。
 
-#### 実行例
-
-```sh
-$ npx textlint <ファイルパス>
-
-/home/yamada/blog/sample.md
-   10:1    error    Line 10 sentence length(154) exceeds the maximum sentence length of 100.
-Over 54 characters   ja-technical-writing/sentence-length
-   10:33   ✓ error  ユーティリティ => ユーティリティー                                         prh
-  118:30   warning  一文に二回以上利用されている助詞 "は" がみつかりました。                   ja-technical-writing/no-doubled-joshi
-```
-
-```sh
-$ node .github/scripts/lint/lint.js <ファイルパス>
-
-/home/yamada/blog/sample.md
-
-L45: コードブロックのタイトルが正しく設定されていない可能性があります
-    ```title=hoge
-    ```:title=hoge
-L210: コードブロックのタイトルの空白は &nbsp; を使用してください
-     ```JSON:title=hoge shoge
-     ```JSON:title=JSON&nbsp;hoge
-L259: alt 属性はダブルクオーテーションで括る必要はありません
-     !["hoge"](image.png)
-     ![hoge](image.png)
-L260: アクセシビリティ向上のため alt 属性を指定してください
-     ![](image.png)
-     ![画像の説明](image.png)
-L261: 画像のキャプションはダブルクオーテーションで括ります
-     ![hoge](image.png キャプション)
-     ![hoge](image.png "キャプション")
-```
-
 
 ## 記事の執筆ルール
 
