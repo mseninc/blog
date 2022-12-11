@@ -126,6 +126,6 @@ echo $BOUNDARY
 echo "さぁ、執筆をはじめましょう！"
 echo
 echo "ヒント"
-echo "  textlint 校正 : npx textlint ${MD}"
+echo "  文章校正 (textlint) と構文チェック : F5 キー (2回目からは Ctrl+Shift+F5 キー) ※VS Code のみ"
 echo "  md ファイルを開く : code ${MD}"
-echo "  アイキャッチ画像のファイル名 : ${SLUG}.png または jpg"
+echo "  アイキャッチ画像 : images/HERO.png または images/HERO.jpg に配置"

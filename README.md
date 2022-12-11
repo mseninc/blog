@@ -130,20 +130,26 @@ VS code で md ファイルを開きますか? [y/N] > y 👈 y を選ぶと VS 
 さぁ、執筆をはじめましょう！
 
 ヒント
-  textlint 校正 : npx textlint kenzauros/2022/hogehoge/index.md
+  文章校正 (textlint) と構文チェック : F5 キー (2回目からは Ctrl+Shift+F5 キー) ※VS Code のみ
   md ファイルを開く : code kenzauros/2022/hogehoge/index.md
-  アイキャッチ画像のファイル名 : hogehoge.png または jpg
+  アイキャッチ画像 : images/HERO.png または images/HERO.jpg に配置
 ```
 
-### 文章校正 (textlint)
+### 文章校正 (textlint) と構文チェック
 
-プッシュ前に文章校正 (textlint) を実行し、修正するようにしてください。
+プッシュ前に文章校正 (textlint) と構文チェックを実行し、修正するようにしてください。
 
-**VS Code では F5 キー (デバッグ実行) で文章校正 (textlint) が実行できます。**
+**VS Code では `F5` キー (デバッグ実行) で文章校正 (textlint) と構文チェックが同時に実行できます。**
+2回目 (デバッグツールバーが表示されている状態）からは `Ctrl+Shift+F5` で再チェックできます。
 
-手動で実行する場合は下記のように textlint コマンドを実行します。
+![](.github/readme/images/debug-tool-bar.png)
+
+### 手動実行
+
+手動で実行する場合は下記のようにコマンドを実行します。
 
 ```sh
+$ node .github/scripts/lint/lint.js <ファイルパス> 👈
 $ npx textlint <ファイルパス>
 ```
 
@@ -163,6 +169,28 @@ $ npx textlint <ファイルパス>
 Over 54 characters   ja-technical-writing/sentence-length
    10:33   ✓ error  ユーティリティ => ユーティリティー                                         prh
   118:30   warning  一文に二回以上利用されている助詞 "は" がみつかりました。                   ja-technical-writing/no-doubled-joshi
+```
+
+```sh
+$ node .github/scripts/lint/lint.js <ファイルパス>
+
+/home/yamada/blog/sample.md
+
+L45: コードブロックのタイトルが正しく設定されていない可能性があります
+    ```title=hoge
+    ```:title=hoge
+L210: コードブロックのタイトルの空白は &nbsp; を使用してください
+     ```JSON:title=hoge shoge
+     ```JSON:title=JSON&nbsp;hoge
+L259: alt 属性はダブルクオーテーションで括る必要はありません
+     !["hoge"](image.png)
+     ![hoge](image.png)
+L260: アクセシビリティ向上のため alt 属性を指定してください
+     ![](image.png)
+     ![画像の説明](image.png)
+L261: 画像のキャプションはダブルクオーテーションで括ります
+     ![hoge](image.png キャプション)
+     ![hoge](image.png "キャプション")
 ```
 
 

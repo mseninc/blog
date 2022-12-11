@@ -1,12 +1,11 @@
 {
   "configurations": [
     {
-      "name": "textlint",
+      "name": "lint",
       "request": "launch",
       "type": "node-terminal",
-      "command": "npx textlint ${file}",
+      "command": "npx textlint ${file} & node .github/scripts/lint/lint.js ${file}",
       "cwd": "${workspaceFolder}"
     }
-  
   ]
 }
