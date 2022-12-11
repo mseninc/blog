@@ -1,5 +1,5 @@
 ---
-title: "HUAWEI HiSuite で暗号化されたバックアップデータを cobackupdec で復号する"
+title: "HUAWEI HiSuite で暗号化されたバックアップデータを kobackupdec で復号する"
 date: 
 author: jinna-i
 tags: [Windows, Python3, HUAWEI]
@@ -54,7 +54,7 @@ python -m pip install --upgrade pip setuptools
 `pycryptodome` パッケージが必須要件となっているため、これもインストールします。
 
 ```cmd
-C:\work>pip install pycryptodome
+pip install pycryptodome
 ```
 
 ### スクリプトの展開
@@ -84,7 +84,7 @@ C:\work>dir
                3 個のディレクトリ  43,530,944,512 バイトの空き領域
 ```
 
-コマンドプロンプトを展開した `C:\work` で開き、Python スクリプトが実行できることを確認します。下記ではコマンドのヘルプを参照しています。
+ファイルを展開した `C:\work` でコマンドプロンプト開き、Python スクリプトが実行できることを確認します。下記ではコマンドのヘルプを参照しています。
 
 ```cmd
 C:\work>py kobackupdec.py -h
