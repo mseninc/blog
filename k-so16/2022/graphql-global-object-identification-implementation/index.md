@@ -1,6 +1,6 @@
 ---
 title: Apollo Server で GraphQL の Global Object Identification を実装する
-date: 
+date: 2022-12-12
 author: k-so16
 tags: [Web, GraphQL, Node.js]
 description: Apollo Server 上で GraphQL の Global Object Identification を実装する方法を紹介します。
