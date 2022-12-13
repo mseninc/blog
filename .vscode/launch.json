@@ -4,7 +4,7 @@
       "name": "lint",
       "request": "launch",
       "type": "node-terminal",
-      "command": "npx textlint ${file} & node .github/scripts/lint/lint.js ${file}",
+      "command": "npx textlint ${relativeFile} & node .github/scripts/lint/lint.js ${relativeFile}",
       "cwd": "${workspaceFolder}"
     }
   ]

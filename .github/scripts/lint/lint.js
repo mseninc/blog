@@ -10,7 +10,9 @@ const CH_RED = "\x1b[31m";
 const CH_GREEN = "\x1b[32m";
 const CH_YELLOW = "\x1b[33m";
 const CH_BLUE = "\x1b[34m";
-const CH_RESET = "\x1b[39m";
+const CH_RESET = "\x1b[0m";
+const CH_BOLD = "\x1b[1m";
+const CH_LOW_CONTRAST = "\x1b[2m";
 
 async function loadYamlFile(filename) {
   const yamlText = await readFile(filename, "utf8");
@@ -24,6 +26,19 @@ function makeRegexps(rules) {
       ...rest,
     };
   });
+}
+
+function type2Color(type) {
+  switch (type) {
+    case 'recommended':
+      return CH_BLUE;
+    case 'warn':
+      return CH_YELLOW;
+    case 'error':
+      return CH_RED;
+    default:
+      return CH_RESET;
+  }
 }
 
 function check(regexps, line) {
@@ -55,8 +70,6 @@ async function main() {
 
   const filename = process.argv[2];
 
-  console.log(`\n${filename}\n`);
-
   const stream = createReadStream(filename);
   const rl = readline.createInterface({
     input: stream,
@@ -68,11 +81,15 @@ async function main() {
   rl.on("line", (line) => {
     const results = check(regexps, line);
     if (results.length) {
-      for (const { actual, expected, message, type } of results) {
-        const indent = `${" ".repeat(`${i}`.length)}  `;
-        const color = type === "warn" ? CH_YELLOW : CH_RED;
+      for (const { actual, expected, message, type, ref } of results) {
+        const indent = `    `;
+        const color = type2Color(type);
         console.log(
-          `L${i}: ${message}\n${indent}${color}${actual}\n${indent}${CH_GREEN}${expected}${CH_RESET}`
+          `${CH_LOW_CONTRAST}${filename}${CH_RESET}:${i}\n` +
+          `${indent}${color}${type}${CH_RESET} ${message}\n` +
+          `${indent}${color}- ${actual}\n` +
+          `${indent}${CH_GREEN}+ ${expected}${CH_RESET}\n` +
+          `${indent}${CH_LOW_CONTRAST}参考: ${ref}${CH_RESET}`
         );
       }
     }
