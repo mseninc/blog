@@ -1,0 +1,25 @@
+rules:
+  - message: alt 属性はダブルクオーテーションで括る必要はありません
+    pattern: '^!\["([^\]]+)"\]'
+    expected: '![$1]'
+    type: error
+
+  - message: アクセシビリティ向上のため alt 属性を指定してください
+    pattern: '^!\[\]'
+    expected: '![画像の説明]'
+    type: warn
+
+  - message: 画像のキャプションはダブルクオーテーションで括ります
+    pattern: '^!\[([^\]]+)\]\((\S*)\s([^"]*)\)'
+    expected: '![$1]($2 "$3")'
+    type: error
+
+  - message: コードブロックのタイトルが正しく設定されていない可能性があります
+    pattern: '^```(.*)(?<!:)title='
+    expected: '```$1:title='
+    type: warn
+
+  - message: コードブロックのタイトルの空白は &nbsp; を使用してください
+    pattern: '^```(.*):title=(.*) (.*)$'
+    expected: '```$1:title=$1&nbsp;$2'
+    type: error
