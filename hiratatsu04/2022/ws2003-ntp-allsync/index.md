@@ -21,21 +21,21 @@ NTP の設定項目には以下の2つがあります。
 
 #### Type
 
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;値&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 意味 |
+| 値 | 意味 |
 | :---: | -- |
-| NoSync | 同期を行わない |
-| NTP | NtpServer レジストリ値（次の表参照）で指定したサーバーから同期を行う |
-| NT5DS | ドメイン階層により決定されたサーバーから同期を行う |
-| AllSync | ドメイン階層と外部NTPサーバーの両方から同期を行う |
+| `NoSync` | 同期を行わない |
+| `NTP` | NtpServer レジストリ値（次の表参照）で指定したサーバーから同期を行う |
+| `NT5DS` | ドメイン階層により決定されたサーバーから同期を行う |
+| `AllSync` | ドメイン階層と外部NTPサーバーの両方から同期を行う |
 
 #### NtpServer
 
-| &nbsp;&nbsp;値&nbsp;&nbsp; | 意味 |
+| 値 | 意味 |
 | :---: | -- |
-| 0x1 | Symmetric Active モードで同期／Windows で実装した一定間隔での同期 |
-| 0x2 | Symmetric Active モードで同期／フォールバック時に利用する NTP サーバー を指定 |
-| 0x4 | Symmetric Active モードで同期／RFC 1305 に準拠した間隔での同期 |
-| 0x8 | Client モードで同期／RFC 1305 に準拠した間隔での同期 |
+| `0x1` | Symmetric Active モードで同期／Windows で実装した一定間隔での同期 |
+| `0x2` | Symmetric Active モードで同期／フォールバック時に利用する NTP サーバー を指定 |
+| `0x4` | Symmetric Active モードで同期／RFC 1305 に準拠した間隔での同期 |
+| `0x8` | Client モードで同期／RFC 1305 に準拠した間隔での同期 |
 
 ※上記の 0x1 ～ 0x8 はそれぞれを組み合わせて使うこともできます。  
 例：0x8 + 0x2 = 0xa。
@@ -55,12 +55,12 @@ w32tm /config /syncfromflags:[Type] /manualpeerlist:[NtpServer] /update
 
 この `Type` に以下を設定することで、任意の設定に変更可能です。
 
-| &nbsp;&nbsp;Typeへの指定値&nbsp;&nbsp; | &nbsp;&nbsp;Typeへ設定される値&nbsp;&nbsp; |
+| Type への指定値 | Type へ設定される値 |
 | -- | -- |
-| NO | NoSync |
-| MANUAL | NTP |
-| DOMHIER | NT5DS |
-| ALL | AllSync |
+| `NO` | `NoSync` |
+| `MANUAL` | `NTP` |
+| `DOMHIER` | `NT5DS` |
+| `ALL` | `AllSync` |
 
 しかし、Windows Server 2003 環境では `Type` に `ALL` を指定するとエラーとなってしまいます。
 
