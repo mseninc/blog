@@ -38,14 +38,26 @@ OAuth2 でアクセストークンを使って認証する場合、アクセス�
 - Next.js 12.3.1
 - NextAuth.js 4.16.4
 
+また、 Cognito 側で**クライアントシークレットを有効にしたアプリクライアント**を事前に作成してあるものとします。
 
-## 更新トークンを使ったローテーションの実装
+## Cognito プロバイダーのセットアップ
 
-### 変更前
+まず、公式手順に従い、 Amazon Cognito 用のプロバイダーを設定します。
 
-まず、単純に ID プロバイダーとして `CognitoProvider` をセットアップした場合、 `[...nextauth].ts` は下記のようになっていると思います。
+- [Amazon Cognito | NextAuth.js](https://next-auth.js.org/providers/cognito)
 
-```ts:title=pages/api/auth/[...nextauth].ts
+### `[...nextauth].ts` の初期設定
+
+```ts{numberLines:1}:title=pages/api/auth/[...nextauth].ts
+import NextAuth, { NextAuthOptions } from "next-auth";
+import { JWT } from "next-auth/jwt";
+import CognitoProvider from "next-auth/providers/cognito";
+import { Issuer } from "openid-client";
+
+if (!process.env.COGNITO_CLIENT_ID || !process.env.COGNITO_CLIENT_SECRET) {
+  throw new Error("Parameters for Cognito not set properly");
+}
+
 export const authOptions: NextAuthOptions = {
   providers: [
     CognitoProvider({
@@ -54,19 +66,63 @@ export const authOptions: NextAuthOptions = {
       issuer: process.env.COGNITO_ISSUER,
     }),
   ],
-  callbacks: {
-    //session: async ({ session, token }) => {
-    //},
-    //jwt: async ({ user, token, account }) => {
-    //},
-  }
+  session: {
+    strategy: "jwt",
+    maxAge: 30 * 24 * 60 * 60,
+  },
+};
+
+export default NextAuth(authOptions);
+```
+
+この時点でまだ不要な import がいくつかありますが、この後使用しますので、あまり気にしないでください。
+
+### 環境変数の設定
+
+環境変数を設定します。ローカル環境では `.env.local` に記述すればいいでしょう。
+
+```:title=.env.local
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=dxasidDaixe8qy4i05yeyuDSm54xau9h
+
+COGNITO_CLIENT_ID=th1s1smycl1ent
+COGNITO_CLIENT_SECRET=th1s1smycl1entsecret
+COGNITO_ISSUER=https://cognito-idp.{region}.amazonaws.com/{PoolId}
+```
+
+`NEXTAUTH_SECRET` は NextAuth.js 内で暗号化に用いるシークレットです。指定していない場合は `secret` が使われるようなのでなるべくアプリで設定しておきます。
+
+`COGNITO_CLIENT_ID` と `COGNITO_CLIENT_SECRET` は **Cognito ユーザープールのクライアント ID とシークレット**を設定します。
+
+`COGNITO_ISSUER` には `{region}` と `{PoolId}` の部分に **Cognito ユーザープールのリージョンと ID** をはめた URL を指定します。この URL は `CognitoProvider` 内部で `/.well-known/openid-configuration` から各種エンドポイントの情報を取得するために使用されます。
+
+### `_app.tsx` の設定
+
+こちらは公式の [Getting Started](https://next-auth.js.org/getting-started/example) のままです。
+
+`SessionProvider` で囲えば、その配下で NextAuth.js のセッション情報が使用できます。
+
+```tsx:title=pages/_app.tsx
+import { SessionProvider } from "next-auth/react";
+
+export default function App({
+  Component,
+  pageProps: { session, ...pageProps },
+}: AppProps) {
+  return (
+    <SessionProvider session={session}>
+      <Component {...pageProps} />
+    </SessionProvider>
+  );
 }
 ```
 
-Amazon Cognito Provider の基本的な使い方は下記のページで確認できます。
+これで Cognito プロバイダーの基本的なセットアップは完了です。
 
-- [Amazon Cognito | NextAuth.js](https://next-auth.js.org/providers/cognito)
 
+## 更新トークンを使ったローテーションの実装
+
+続いて、今回の本題、更新トークンを使ったアクセストークンのローテーションを実装していきます。
 
 [公式の実装例](https://next-auth.js.org/tutorials/refresh-token-rotation)は JavaScript でしたので TypeScript で書けるようにしています。大まかには下記のような内容を実装します。
 
@@ -201,6 +257,8 @@ async function refreshAccessToken(token: any): Promise<JWT> {
 }
 ```
 
+※ `console` は必要に応じて削除してください。
+
 Cognito のトークンエンドポイントに関する説明は公式ページを参照してください。
 
 - [トークンエンドポイント - Amazon Cognito](https://docs.aws.amazon.com/ja_jp/cognito/latest/developerguide/token-endpoint.html)
@@ -208,11 +266,11 @@ Cognito のトークンエンドポイントに関する説明は公式ページ
 各処理について簡単に解説します。
 
 - L3-4: クライアント ID とクライアントシークレットは `cognitoProvider` のオプションで指定されたものを流用します。
-- L5-6: トークンエンドポイントの URL を取得するため、 Cognito の **`/.well-known/openid-configuration` を取得**し、メタデータから URL を抽出します。取得には `openid-client` モジュールの `Issuer.discover` を利用します。ファイル冒頭で import (`import { Issuer } from "openid-client";`) してください。
+- L5-6: トークンエンドポイントの URL を取得するため、 Cognito の **`/.well-known/openid-configuration` を取得**し、メタデータから URL を抽出します。取得には `openid-client` モジュールの `Issuer.discover` を利用します。
 - L7-8: Cognito で**クライアントシークレットが有効な場合は、 ID とシークレットの対で BASIC 認証する必要があります**。ここで `Authorization` ヘッダーに設定する BASE64 文字列を生成しています。
 - L9: リクエスト body を生成するための `URLSearchParams` に必要なパラメーターを設定します。
 - L16: トークンエンドポイントに対して新しいトークンの発行をリクエストします。
-- L29: 新しいアクセストークンの有効期限を計算します。 Cognito の場合 **`expires_in` に有効期限が秒数で格納されています**ので、これを現在時刻に加算して UNIX 時間で保持しておきます。<br>※ `expires_at` ではないので注意してください。
+- L29: 新しいアクセストークンの有効期限を計算します。 Cognito の場合 **`expires_in` に有効期限が秒数で格納されています**ので、これを現在時刻に加算して UNIX 時間で保持します。<br>※ `expires_at` ではないので注意してください。
 - L33: 新しいアクセストークンとその有効期限を返します。
 
 ### `jwt` コールバックを実装
@@ -236,9 +294,7 @@ Cognito のトークンエンドポイントに関する説明は公式ページ
         console.debug(`Token available (expired at: ${token.accessTokenExpires})`);
         return token;
       }
-      console.debug(
-        `Token expired at ${token.accessTokenExpires}. Trying to refresh...`
-      );
+      console.debug(`Token expired at ${token.accessTokenExpires}. Trying to refresh...`);
       // Access token has expired, try to update it
       return refreshAccessToken(token);
     },
@@ -246,7 +302,7 @@ Cognito のトークンエンドポイントに関する説明は公式ページ
 
 - L4-11: 最初にサインインされたときは `account` からアクセストークンや有効期限を抽出して `user` とともに NextAuth.js 上のトークンとして返します。
 - L13-16: サインイン時でなく、アクセストークンの有効期限が切れていなければ、そのままトークンを返します。
-- L21: アクセストークンの有効期限が切れていれば更新関数を呼び出して結果を返します。
+- L19: アクセストークンの有効期限が切れていれば更新関数を呼び出して結果を返します。
 
 ### `session` コールバックを実装
 
@@ -267,12 +323,38 @@ Cognito のトークンエンドポイントに関する説明は公式ページ
     },
 ```
 
+## セッション情報の利用
+
+NextAuth.js に設定した Amazon Cognito で更新トークンを使って、アクセストークンをローテーションできるようになりました🚀
+
+セッションに保存されたアクセストークンは `useSession` フックを利用して `accessToken` 属性から取得できます。
+
+```tsx:title=コンポーネント
+import { useSession } from "next-auth/react"
+
+export default function Component() {
+  const { data: session } = useSession();
+
+  // console.log('session.accessToken', session.accessToken);
+
+  // ... Component implementation
+}
+```
+
+クライアントが接続されている状態でアクセストークンの有効期限が切れると、下記のようにトークンが更新されるはずです。
+
+```:title=アクセストークンの更新ログ
+Token expired at 1670991520. Trying to refresh... 👈 期限切れ
+Token refreshed (expired at: 1671007097) 👈 更新された
+Token available (expired at: 1671007097) 👈 有効になった
+```
+
 ## まとめ
 
 NextAuth.js に設定した Amazon Cognito で更新トークンを使って、アクセストークンをローテーションできるようになりました🚀
 
 これで更新トークンの期限内であれば、ログイン状態を継続して利用できます。
 
-アクセストークンの有効期限は通常短く設定するため、毎回ログインするなど非現実的です。なぜアクセストークンの更新機能が標準でないのか、かなり疑問です😂
+アクセストークンの有効期限は通常短く設定するため、毎回ログインするのは非現実的です。なぜアクセストークンの更新機能が標準でないのか、かなり疑問です😂
 
 どなたかのお役に立てば幸いです。
