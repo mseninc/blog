@@ -1,6 +1,6 @@
 ---
 title: Windows Server 2003 で NTP 設定の Type エントリを AllSync にする方法
-date: 
+date: 2022-12-16
 author: hiratatsu04
 tags: [Windows Server,NTP]
 description: Windows Server 2003 の NTP 設定を Allsync にする方法です。
