@@ -42,11 +42,13 @@ OAuth2 でアクセストークンを使って認証する場合、アクセス�
 
 ## Cognito プロバイダーのセットアップ
 
+### `[...nextauth].ts` の初期設定
+
 まず、公式手順に従い、 Amazon Cognito 用のプロバイダーを設定します。
 
 - [Amazon Cognito | NextAuth.js](https://next-auth.js.org/providers/cognito)
 
-### `[...nextauth].ts` の初期設定
+`[...nextauth].ts` を下記のように設定するだけです。
 
 ```ts{numberLines:1}:title=pages/api/auth/[...nextauth].ts
 import NextAuth, { NextAuthOptions } from "next-auth";
@@ -239,7 +241,7 @@ async function refreshAccessToken(token: any): Promise<JWT> {
     // Next expiration period
     const accessTokenExpires =
       Math.floor(Date.now() / 1000) + newTokens.expires_in;
-    console.debug(`Token refreshed (expired at: ${accessTokenExpires})`);
+    console.debug(`Token refreshed (expires at: ${accessTokenExpires})`);
     // Return new token set
     return {
       ...token,
@@ -291,7 +293,7 @@ Cognito のトークンエンドポイントに関する説明は公式ページ
       }
       // Return previous token if the access token has not expired yet
       if (Date.now() < (token.accessTokenExpires ?? 0) * 1000) {
-        console.debug(`Token available (expired at: ${token.accessTokenExpires})`);
+        console.debug(`Token available (expires at: ${token.accessTokenExpires})`);
         return token;
       }
       console.debug(`Token expired at ${token.accessTokenExpires}. Trying to refresh...`);
@@ -345,8 +347,8 @@ export default function Component() {
 
 ```:title=アクセストークンの更新ログ
 Token expired at 1670991520. Trying to refresh... 👈 期限切れ
-Token refreshed (expired at: 1671007097) 👈 更新された
-Token available (expired at: 1671007097) 👈 有効になった
+Token refreshed (expires at: 1671007097) 👈 更新された
+Token available (expires at: 1671007097) 👈 有効になった
 ```
 
 ## まとめ
