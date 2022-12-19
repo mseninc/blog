@@ -1,6 +1,6 @@
 ---
 title: NextAuth.js + Cognito で Refresh Token を使ってアクセストークンを更新する
-date: 
+date: 2022-12-19
 author: kenzauros
 tags: [NextAuth.js, Next.js, Cognito, TypeScript, OpenID Connect, OAuth, Node.js]
 description: 今回は NextAuth.js + Cognito という環境で更新トークンを使ったアクセストークンのローテーションを実装します。
