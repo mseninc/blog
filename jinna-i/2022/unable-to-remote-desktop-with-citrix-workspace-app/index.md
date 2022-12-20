@@ -10,7 +10,7 @@ description:
 
 Citrix Virtual Apps 1912 LTSR で公開デスクトップシステムを構成しています。
 
-先日、Citrix Workspace App から公開デスクトップへ接続しようとした際、下図のようにくるくると回っていつまで経っても接続できない状態となりました。
+先日、Citrix Workspace App から公開デスクトップへ接続しようとした際、下図の**ようにくるくると回っていつまで経っても接続できない状態**となりました。
 
 ![](images/001.png)
 
@@ -22,9 +22,9 @@ Citrix Virtual Apps 1912 LTSR で公開デスクトップシステムを構成�
 
 ## Windows Update を最新にしてみる
 
-Windows Update が最新でない場合に、同様な事象がありました。
+**Windows Update が最新でない場合**に、同様な事象がありました。
 
-[設定] > [Windows Update] から更新プログラムをチェックし、最新の状態になっているか確認しましょう。
+[設定] > [Windows Update] から更新プログラムをチェックし、**最新の状態になっているか**確認しましょう。
 
 ![](images/004.png)
 
@@ -36,7 +36,7 @@ Receiver for Web を有効化している場合は、ブラウザから以下の
 
 ![](images/002.png)
 
-ログオン後、[Citrix Workspace Launcher を開く] をクリックし Citrix Workspace App が起動するか確認します。
+ログオン後、[Citrix Workspace Launcher を開く] をクリックし **Citrix Workspace App が起動するか**確認します。
 
 ![](images/003.png)
 
@@ -44,7 +44,7 @@ Receiver for Web を有効化している場合は、ブラウザから以下の
 
 ## Receiver Clean-Up Utility でアンインストールする
 
-[Receiver Clean-Up Utility](https://support.citrix.com/article/CTX137494/receiver-cleanup-utility) を使用することで、Citrix Workspace App を完全にアンインストールできます。
+[Receiver Clean-Up Utility](https://support.citrix.com/article/CTX137494/receiver-cleanup-utility) を使用することで、**Citrix Workspace App を完全にアンインストール**できます。
 
 その後、Citrix Workspace App を再インストールし、事象が解消するか確認します。
 
