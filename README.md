@@ -46,27 +46,38 @@ $ npm ci
 $ chmod +x ./*.sh
 ```
 
-#### プレビュー環境 (Docker) のセットアップ
 
-こちらのセットアップは、必須ではありません。
+### プレビュー環境 (Docker コンテナー)
 
 自分の PC 上で本番と同じプレビューを見ながら編集したい場合は、下記のコマンドを実行して docker コンテナーを起動してください。
 
+#### イメージのダウンロード・コンテナーの起動
+
 ```sh
 $ cd ~/blog
-$ docker run -d --name blog-gatsby -v $PWD:/content -p 8000:8000 ghcr.io/mseninc/blog-gatsby:latest
+$ docker run -d --name blog-gatsby -v $PWD:/content -p 8000:8000 ghcr.io/mseninc/blog-gatsby:main
 ```
 
 docker イメージのダウンロード・起動が終わると http://localhost:8000 でプレビューが可能です。記事を保存するとブラウザー側も自動で更新されます。
+
+起動完了まで少し時間がかかります。
 
 #### コンテナーの操作
 
 ```sh
 $ docker start blog-gatsby 👈 コンテナー起動
 $ docker stop blog-gatsby 👈 コンテナー停止
-$ docker rm blog-gatsby 👈 コンテナー削除
+```
+
+#### イメージ入れ替え
+
+イメージが更新されているときは一旦削除した上で「起動」手順を行ってください。
+
+```sh
+$ docker stop blog-gatsby && docker rm blog-gatsby 👈 コンテナー停止・削除
 $ docker images -a | grep "blog-gatsby" | awk '{print $3}' | xargs docker rmi 👈 イメージ削除
 ```
+
 
 ### 記事テンプレートの作成
 
@@ -119,40 +130,34 @@ VS code で md ファイルを開きますか? [y/N] > y 👈 y を選ぶと VS 
 さぁ、執筆をはじめましょう！
 
 ヒント
-  textlint 校正 : npx textlint kenzauros/2022/hogehoge/index.md
+  文章校正 (textlint) と構文チェック : F5 キー (2回目からは Ctrl+Shift+F5 キー) ※VS Code のみ
   md ファイルを開く : code kenzauros/2022/hogehoge/index.md
-  アイキャッチ画像のファイル名 : hogehoge.png または jpg
+  アイキャッチ画像 : images/HERO.png または images/HERO.jpg に配置
 ```
 
-### 文章校正 (textlint)
+### 文章校正 (textlint) と構文チェック
 
-Pull Request で文章校正が自動で行われますが、事前にローカルで実行し、修正するようにしてください。
+プッシュ前に文章校正 (textlint) と構文チェックを実行し、修正するようにしてください。
 
-下記のシェルスクリプトで現在のブランチで変更している Markdown に textlint を実行できます。
+**VS Code では `F5` キー (デバッグ実行) で文章校正 (textlint) と構文チェックが同時に実行できます。**
+2回目 (デバッグツールバーが表示されている状態）からは `Ctrl+Shift+F5` で再チェックできます。
 
-※注意: 変更されたファイルリストを Git で取得するため、index.md をコミットされていないファイルは校正されません。
+![](.github/readme/images/debug-tool-bar.png)
+
+### 手動実行
+
+手動で実行する場合は下記のようにコマンドを実行します。
 
 ```sh
-$ ./textlint-changed-all.sh
-```
-
-個別の Markdown ファイルを指定して校正する場合は下記のようにします。ファイルパスは VS Code のツリービューの index.md を右クリックして `Copy Relative Path` で取得するとよいでしょう。
-
-```sh
+$ node .github/scripts/lint/lint.js <ファイルパス>
 $ npx textlint <ファイルパス>
 ```
 
-#### 実行例
+VS Code の場合、ファイルパスは `Copy Relative Path` で取得できます。
 
-```sh
-$ ./textlint-changed-all.sh
+![](.github/readme/images/copy-relative-path.png)
 
-/home/yamada/blog/sample.md
-   10:1    error    Line 10 sentence length(154) exceeds the maximum sentence length of 100.
-Over 54 characters   ja-technical-writing/sentence-length
-   10:33   ✓ error  ユーティリティ => ユーティリティー                                         prh
-  118:30   warning  一文に二回以上利用されている助詞 "は" がみつかりました。                   ja-technical-writing/no-doubled-joshi
-```
+Pull Request で `textlint` ラベルをつけると GitHub 上でも文章校正が行われます。
 
 
 ## 記事の執筆ルール
@@ -164,16 +169,14 @@ Over 54 characters   ja-technical-writing/sentence-length
 1. `origin/release` ブランチをチェックアウト  
 `git checkout origin/release`
 2. スラグを考える (例. `hoge-hoge`)
-3. `./start.sh` で記事のひな型を作成
+3. `./hew.sh` で記事のひな型を作成
 4. `index.md` に記事を執筆
 5. アイキャッチ画像を配置
-6. `post/` を接頭辞としてブランチ作成  
-`git switch -c post/hoge-hoge`
-7. コミット・プッシュ  
+6. コミット・プッシュ  
 `git add <ディレクトリ>`  
 `git commit -m "コミットメッセージ"`  
 `git push -u origin HEAD`
-8. Pull Reqeust を発行
+7. Pull Reqeust を発行
 
 ### ディレクトリ構成
 
@@ -184,15 +187,14 @@ GitHub アカウント名/
   年/
     記事slug/
       images/ 👈 画像ディレクトリ
-        記事slug.{jpg,png} 👈 アイキャッチ画像
+        HERO.{jpg,png} 👈 アイキャッチ画像
         その他の画像ファイル 👈 記事中の画像
       index.md 👈 記事本文
 ```
 
 ### スラグ
 
-スラグに使用可能な文字 : アルファベット・数字・半角ダッシュ (`-`) 
-上記以外が含まれていると `./start.sh` でエラーが発生します
+スラグに使用可能な文字 : アルファベット・数字・半角ダッシュ (`-`)
 
 ### ブランチ
 
@@ -301,3 +303,25 @@ frontmatter | 説明
     ```js{numberLines:1}{2,7-9}:title=hogehoge.js
     ```
     ![](.github/readme/images/code-block-sample-07.png)
+
+### アイキャッチ画像について
+
+記事を書いたら**アイキャッチ画像**を必ず作成してください。
+
+アイキャッチ画像は `images/` ディレクトリの下に `HERO.png` または `HERO.jpg` というファイル名で配置します。フォーマットは下記の通りです。
+
+- 縦横比: **16:9**
+- 幅: 960 px 以上 1600 px 未満
+- 圧縮形式: JPEG, PNG
+
+16:9 の画像を作成するには Google スライドなど、キャンバスが 16:9 になっているツールを使うと簡単です。
+
+Google スライドの場合、メニューの「ファイル」➡「ダウンロード」➡「PNG 画像 (.png、現在のスライド)」で出力できます。
+
+#### アイキャッチ画像作成上の注意
+
+- **背景色はサービスのロゴ等に含まれる色の単色か濃色**を使うとよい場合が多いです。わからなければ **無彩色（グレー）** にしておくとよいでしょう。 Google スライドの場合は、スライドの背景を右クリックして「背景を変更」から設定します。
+- 特に理由がなければ**主要素は中央揃え**にします。 Google スライドの場合は、右クリックから「ページ中央に配置」➡「左右」でセンタリングできます。
+- ロゴ等は下図の赤枠で示したように中央の正方形に収まるようにします。これは SNS 等でアイキャッチ画像が自動的にトリミングされるときのためです。
+
+![](.github/readme/images/eyecatch-slide.png)
