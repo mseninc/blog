@@ -14,10 +14,12 @@ Citrix Virtual Apps 1912 LTSR で公開デスクトップシステムを構成�
 
 ![](images/001.png)
 
+今回はこのような場合の確認点を紹介します。
+
 ## 想定環境
 
 - Citrix Virtual Apps 1912 LTSR CU4
-- Citrix Workspace Apps 22.10.5.14
+- Citrix Workspace App 22.10.5.14
 - Windows 11 Pro (22H2)
 
 ## Windows Update を最新にしてみる
