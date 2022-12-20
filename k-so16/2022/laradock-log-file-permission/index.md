@@ -86,7 +86,14 @@ sudo chown laradock:laradock storage/logs/laravel-*.log
 
 これで無事に workspace コンテナーの Web サーバーから正常にレスポンスが返るようになりました。
 
-## コンテナーの入る際のユーザーの指定方法
+## 防止策
+
+今回のトラブルの防止策として、以下の 2 つの方法を考えました。
+
+- コンテナーに入る際のユーザーを指定
+- コンソールログと Web のログを分離
+
+### コンテナーに入る際のユーザーの指定方法
 
 *コンテナーに入った際のログインユーザーが `root` になっていた* ことが今回のトラブルの発生の取っ掛かりといえます。
 *コンテナーを操作するユーザーを指定* できれば、トラブルを回避できたはずです。
@@ -104,6 +111,41 @@ laradock
 laradock@5b0db194b72c:/var/www$
 ```
 
+### コンソールログと Web のログを分離する方法
+
+ユーザーを指定してコンテナーに入る方法では、毎回ユーザーを指定しなければなりません。
+うっかりユーザーを指定し忘れて、 `root` ユーザーでコマンドを実行する可能性もあります。
+
+*コンソールから出力されるログと Web のログで出力先のファイルが分ける* ことで、 **ログの所有者を分ける** ことができ、権限がないという事態を防げるはずです。
+
+Laravel では、 **[`runningInConsole()`](https://laravel.com/api/9.x/Illuminate/Contracts/Foundation/Application.html#method_runningInConsole)** というメソッドでコンソールから実行されたかを判定できます。
+コンソールで実行された場合は `true`, そうでなければ `false` を返します。
+*`app()->runningInConsole()`* と記述することで実行できます。
+
+`aoo()->runningInConsole()` でコンソールから実行されているかを判定し、その結果に応じて出力先を変えるようにします。
+ログファイルの出力先は `config/logging.php` の `'path'` に指定します。
+
+ログファイルの出力先の設定例は以下の通りです。
+以下の例では、ログのドライバーは `daily` が指定されている想定です。
+
+```php{3}:title=config/logging.php
+'daily' => [
+    'driver' => 'daily',
+    'path' => app()->runningInConsole() ? storage_path('logs/console.log') : storage_path('logs/laravel.log'),
+    'level' => 'debug',
+    'days' => 14,
+],
+```
+
+上記の設定の場合、コンソールログは *`storage/logs/console-yyyy-mm-dd.log`* に、その他のログは *`storage/logs/laravel-yyyy-mm-dd.log`* に出力されます。
+(`yyyy-mm-dd` 部分は実行時の年月日が入る)
+
+これで、 `root` ユーザーで `artisan` コマンドを実行しても、ログの出力先が分離されるので、 Web アプリケーション側が動かなくなる事態を回避できるようになりました。
+
+本記事を執筆する上で、以下の書籍を参考にしました。
+
+> [PHPフレームワーク Laravel Webアプリケーション開発 バージョン 5.5 LTS対応](https://www.socym.co.jp/book/1184)
+
 ## まとめ
 
 本記事のまとめは以下の通りです。
@@ -113,6 +155,7 @@ laradock@5b0db194b72c:/var/www$
     - **Laravel のログファイルの所有者や権限を適切に修正** することで解決
 - コンテナーに入る際のユーザーを変更する方法を紹介
     - Docker Compose の `exec` コマンドで `--user` オプションを使って指定可能
+- ログファイルの出力先を分離させる方法を紹介
 
 以上、 k-so16 でした。
 Docker って難しいですね (笑)
