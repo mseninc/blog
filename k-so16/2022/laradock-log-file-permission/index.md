@@ -43,7 +43,7 @@ description: つい昨日まで正常に動いていた Laradock が急に動か
 ### エラーの理由と発生原因
 
 **Laravel のログファイルに対して書き込み権限がなかったこと** が原因でした。
-Laravel のログのファイル名は `storage/logs/laravel-{日付}.log` という形式で生成されます。
+筆者の環境ではログのドライバーを `daily` に設定していたので、ログのファイル名は `storage/logs/laravel-{日付}.log` という形式で生成されています。
 500 エラーが起きた日のログファイルを確認してみると、他のログファイルは所有者が `laradock` になっているのに対し、このファイルだけ *所有者が `root`* になっていました。
 
 ログファイルの所有者が `root` になっていると、 workspace コンテナーの Web サーバーへアクセスされた際に  *書き込み権限がないため、ログを書き込めず* 500 エラーが発生します。
@@ -137,8 +137,7 @@ Laravel では、 **[`runningInConsole()`](https://laravel.com/api/9.x/Illuminat
 ],
 ```
 
-上記の設定の場合、コンソールログは *`storage/logs/console-yyyy-mm-dd.log`* に、その他のログは *`storage/logs/laravel-yyyy-mm-dd.log`* に出力されます。
-(`yyyy-mm-dd` 部分は実行時の年月日が入る)
+上記の設定の場合、コンソールログは *`storage/logs/console-{日付}.log`* に、その他のログは *`storage/logs/laravel-{日付}.log`* に出力されます。
 
 これで、 `root` ユーザーで `artisan` コマンドを実行しても、ログの出力先が分離されるので、 Web アプリケーション側が動かなくなる事態を回避できるようになりました。
 
