@@ -1,5 +1,5 @@
 ---
-title: "Citrix Workspace App で公開デスクトップが接続できないときの確認点"
+title: "Citrix Workspace App で公開デスクトップへ接続できないときの確認点"
 date: 
 author: jinna-i
 tags: [Citrix, Windows 11]
