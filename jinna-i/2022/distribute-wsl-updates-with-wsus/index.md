@@ -12,7 +12,7 @@ description:
 
 WSUS では管理者が選択した製品と分類に応じて、配信する更新プログラムをコントロールできます。
 
-WSL (Windows Subsystem for Linux) のカーネルアップデートも Windows Update から提供されるようで、その方法を調べてみました。
+**WSL (Windows Subsystem for Linux) のカーネルアップデートも Windows Update から提供される**ようで、その方法を調べてみました。
 
 ## 想定環境
 
@@ -28,7 +28,7 @@ WSL (Windows Subsystem for Linux) のカーネルアップデートも Windows U
 
 手動でもかまわない場合はこの方法でよいでしょう。
 
-Windows Update で適用するには、設定からオプションを有効にする必要があります。
+Windows Update で適用するには、設定から**オプションを有効にする必要**があります。
 
 Windows の [設定] から [Windows Update] > [詳細オプション] を開き、`その他の Microsoft 製品の更新プログラムを受け取る` を **オン** にします。
 
@@ -56,7 +56,7 @@ Windows の [設定] から [Windows Update] > [詳細オプション] を開き
 
 ## WSUS の設定
 
-WSUS から WSL の更新プログラムを配信するには、同期する製品の設定が必要です。
+WSUS から WSL の更新プログラムを配信するには、**同期する製品の設定が必要**です。
 
 WSUS のオプションから [製品と分類] を開き、下記の製品にチェックを入れます。
 
