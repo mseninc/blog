@@ -55,9 +55,11 @@ The key's randomart image is:
 
 と出ていました。
 
-このエラーを追いかけると以下の記事に到達し、**SHA-1 が非推奨になったことが影響している** ことが分かります。
+このエラーを追いかけると以下の記事に到達し、**SHA-1 が非推奨になったことが影響している** ことが確認できます。
 [\[Red Hat Enterprise Linux9\]sshd: userauth_pubkey: key type ssh-rsa not in PubkeyAcceptedAlgorithms \[preauth\] - Red Hat Customer Portal](https://access.redhat.com/solutions/6966079)
 ※閲覧には Red Hat account でログインが必要です。
+
+**The issue was due to the disable of SHA1 on RHEL9.** が原因と記載されています。
 
 ## OK パターン
 マニュアルを参考にして、暗号アルゴリズムオプションに ECDSA ( 楕円曲線暗号 ) を指定して鍵ペアを作成します。
