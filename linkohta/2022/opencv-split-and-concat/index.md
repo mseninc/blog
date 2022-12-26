@@ -1,6 +1,6 @@
 ---
 title: OpenCV で画像を切り抜き・結合する方法
-date:
+date: 2022-12-26
 author: linkohta
 tags: [OpenCV, C++]
 description: OpenCV で画像を切り抜き・結合する方法を紹介します。
