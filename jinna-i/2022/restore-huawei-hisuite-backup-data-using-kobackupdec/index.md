@@ -1,6 +1,6 @@
 ---
 title: "HUAWEI HiSuite で暗号化されたバックアップデータを kobackupdec で復号する"
-date: 
+date: 2022-12-29
 author: jinna-i
 tags: [Windows, Python3, HUAWEI]
 description: 
