@@ -1,6 +1,6 @@
 ---
 title: 【未解決】NextAuth.js を Cognito + SAML 認証で使うと nonce mismatch エラーになる
-date: 
+date: 2023-01-02
 author: kenzauros
 tags: [NextAuth.js, Cognito, SAML, React, Next.js]
 description: NextAuth.js + Cognito + SAML 認証という組み合わせで nonce mismatch エラーに見舞われ、結局解決できなかったのですが、備忘録として記事にしました😂
