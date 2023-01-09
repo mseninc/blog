@@ -1,6 +1,6 @@
 ---
 title: "Citrix Workspace App で公開デスクトップへ接続できないときの確認点"
-date: 
+date: 2023-01-09
 author: jinna-i
 tags: [Citrix, Windows 11]
 description: 
