@@ -21,7 +21,7 @@ Windows には **Microsoft Defender (Windows Defender) というセキュリテ�
 
 ### 前提
 
-対象のサーバーに Zabbix Agent がインストールされていること。また、Agent → Server のアクティブチェックが可能な環境であることを想定しています。
+対象のコンピューターに Zabbix Agent がインストールされていること。また、Agent → Server のアクティブチェックが可能な環境であることを想定しています。
 
 ## 脅威検出時にどのようなイベントが記録されるのか
 
