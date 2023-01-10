@@ -1,6 +1,6 @@
 ---
 title: 2023年も今宮十日戎にいってきました
-date: 
+date: 2023-01-10
 author: norikazum
 tags: [〇〇奮闘記]
 description: 
