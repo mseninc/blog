@@ -1,6 +1,6 @@
 ---
 title: "[VS Code] ショートカットキーで統合ターミナルにファイルパスを入力する"
-date: 
+date: 2023-01-13
 author: kenzauros
 tags: [Visual Studio Code]
 description: 今回は VS Code のショートカットキーで開いているファイルの相対パスを統合ターミナルに入力する Tips を紹介します。
