@@ -1,6 +1,6 @@
 ---
 title: "2023年1月 情報処理安全確保支援士 実践講習A を受講しました"
-date: 
+date: 2023-01-20
 author: jinna-i
 tags: [〇〇奮闘記]
 description: 
