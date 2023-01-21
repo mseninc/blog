@@ -2,8 +2,8 @@
 title: ディスクのラベルを変更する方法
 date: 
 author: hiratatsu04
-tags: [Windows, ]
-description: 
+tags: [Windows, バックアップ, 回復パーティション]
+description: バックアップタスクを構築しているときに「ディスクにドライブ文字がありません」と表示されるディスクがありました。ディスクのラベルを修正することで解決しましたので、その方法を紹介します。
 ---
 
 こんにちは、ひらたつです。
@@ -12,12 +12,12 @@ description:
 
 構築作業の一部としてバックアップタスクを設定しているときに、`(ディスクにドライブ文字がありません)` と表示されているディスクが存在していることに気づきました。
 
-[画像]
+![Windows Server 2022 ではドライブ文字が表示されない](images/no-drive-label.png)
 
 このディスクは 回復パーティション であり、Windows Server 2019 の環境では `RECOVERY` と表示されていました。
 Windows Server 2022 からこのように表示されるようになったと思われます。
 
-[画像]
+![Windows Server 2019 ではドライブ文字が表示されている](images/exist-drive-label.png)
 
 
 このように表示されていると何のディスクをバックアップしているのか分からず困ります。
@@ -29,7 +29,7 @@ Windows Server 2022 からこのように表示されるようになったと思
 ご参考になれば幸いです。
 
 ※ラベルとはディスクに付ける名称で、ドライブ文字（ドライブレター）はディスクに付けるアルファベットのことです。
-[画像]
+![ラベルとドライブ文字について](images/explain-label-driveletter.png
 
 ### システム構成
 - Windows Server 2022
@@ -147,10 +147,9 @@ DISKPART> list volume
   Volume 3         RECOVERY     NTFS   Partition    599 MB  正常         非表 示
 ```
 
+### 最後に
 
+ちなみに、冒頭で記載した Windows Server 2019 環境ではラベルが設定されていました。
+Windows Server 2022 からは明示的に設定しないといけないように変わったのかもしれません。
 
-
-
-
-
-
+では、また。
