@@ -104,11 +104,11 @@ mkdir -p ${IMAGES}
 echo "index.md を作成しています..."
 cat <<EOF > "${MD}"
 ---
-title: 
+title: ""
 date: 
 author: ${AUTHOR}
 tags: []
-description: 
+description: ""
 ---
 
 EOF
