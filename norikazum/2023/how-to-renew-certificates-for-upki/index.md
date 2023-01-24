@@ -17,53 +17,53 @@ UPKI向けの証明書に関連した記事は過去に2つほど書きました
 ## 下準備
 1. 更新対象の証明書
     - テキストで作業PC上に保存する
-    ![更新対象の証明書](images/2023-01-23_23h31_08.png "更新対象の証明書")
+        ![更新対象の証明書](images/2023-01-23_23h31_08.png "更新対象の証明書")
 1. `openssl` と `bash` スクリプトが使えるマシン
 1. 上記マシンに以下のスクリプトを展開する ( ファイル名は任意です )
     - DNの情報には定められた情報を入力してください。
     - 現在のルールでは `OU` は空欄です。
-    ```bash:mk_csr.sh
-    #!/usr/bin/env bash
-    
-    ## DN 情報を入力
-    CN="$1"
-    C="JP"
-    ST="Osaka"
-    L="Osaka-shi"
-    O="MSEN\ University"
-    OU=""
-    
-    ## 変数に設定
-    #Common Name (eg, your name or your server's hostname)
-    CN="${CN}"
-    # Country Name (2 letter code)
-    C="${C}"
-    # State or Province Name (full name)
-    ST="${ST}"
-    # Locality Name (eg, city)
-    L="${L}"
-    # Organization Name (eg, company)
-    O="${O}"
-    # Organizational Unit Name (eg, section)
-    OU="${OU}"
-    
-    csrfile=$CN.csr
-    pkeyfile=$CN.key
-    subject="/C=$C/ST=$ST/L=$L/O=$O/OU=$OU/CN=$CN"
-    
-    ## エラー処理
-    if [ -f $pkeyfile ] ; then
-        echo "Error: Private Key already exists."
-        exit
-    fi
-    
-    ## 作成処理
-    openssl req -new -sha256 -newkey rsa:2048 -nodes -out $csrfile -keyout $pkeyfile -subj "$subject"
-    
-    # CHECK modules
-    openssl req -in $csrfile -text
-    openssl rsa -in $pkeyfile -text
-    ```
+        ```bash:title=mk_csr.sh
+        #!/usr/bin/env bash
+        
+        ## DN 情報を入力
+        CN="$1"
+        C="JP"
+        ST="Osaka"
+        L="Osaka-shi"
+        O="MSEN\ University"
+        OU=""
+        
+        ## 変数に設定
+        #Common Name (eg, your name or your server's hostname)
+        CN="${CN}"
+        # Country Name (2 letter code)
+        C="${C}"
+        # State or Province Name (full name)
+        ST="${ST}"
+        # Locality Name (eg, city)
+        L="${L}"
+        # Organization Name (eg, company)
+        O="${O}"
+        # Organizational Unit Name (eg, section)
+        OU="${OU}"
+        
+        csrfile=$CN.csr
+        pkeyfile=$CN.key
+        subject="/C=$C/ST=$ST/L=$L/O=$O/OU=$OU/CN=$CN"
+        
+        ## エラー処理
+        if [ -f $pkeyfile ] ; then
+            echo "Error: Private Key already exists."
+            exit
+        fi
+        
+        ## 作成処理
+        openssl req -new -sha256 -newkey rsa:2048 -nodes -out $csrfile -keyout $pkeyfile -subj "$subject"
+        
+        # CHECK modules
+        openssl req -in $csrfile -text
+        openssl rsa -in $pkeyfile -text
+        ```
 
 ## 作業の流れ
 以下の流れで作業します。 
