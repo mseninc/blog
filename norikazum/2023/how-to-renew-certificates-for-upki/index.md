@@ -1,5 +1,5 @@
 ---
-title: [サーバー証明書] UPKI向け証明書の更新方法
+title: サーバー証明書 UPKI向け証明書の更新方法
 date: 
 author: norikazum
 tags: [セキュリティ,サーバー,NII,UPKI,SSL,証明書]
@@ -13,7 +13,6 @@ UPKI向けの証明書に関連した記事は過去に2つほど書きました
 
 [\[サーバー証明書\] UPKI向けCSRとTSVの作成方法](https://mseeeen.msen.jp/how-to-create-csr-and-tsv-for-upki/)
 [\[サーバー証明書\] UPKI向け証明書失効手続きの流れ](https://mseeeen.msen.jp/flow-of-certificate-revocation-procedure-of-upki/)
-
 
 ## 下準備
 1. 更新対象の証明書
@@ -66,7 +65,7 @@ UPKI向けの証明書に関連した記事は過去に2つほど書きました
     ```
 
 ## 作業の流れ
-以下の流れで作業します。
+以下の流れで作業します。 
 1. 失効用TSVの作成
 1. 秘密鍵とCSR作成 ( 秘密鍵の再利用はできません )
 1. 更新用TSVの作成
