@@ -3,7 +3,7 @@ title: "[Next.js] API Routes と iron-session を使ってカスタムの認証�
 date: 
 author: kenzauros
 tags: [Next.js,React,Node.js,認証,TypeScript]
-description: Next.js で NextAuth.js を使わず、 API Routes と iron-session を使ってカスタムの認証を実装する方法をご紹介します。
+description: Next.js で NextAuth.js を使わず、 API Routes と iron-session を使ってカスタムの認証を実装する方法を紹介します。
 ---
 
 こんにちは、 kenzauros です。
@@ -256,7 +256,7 @@ export const getServerSideProps = withUserSessionSsr("/login", (({ req, res }) =
 
 ## まとめ
 
-今回は Next.js で NextAuth.js を使わず、 API Routes と iron-session を使ってカスタムの認証を実装する方法をご紹介しました。
+今回は Next.js で NextAuth.js を使わず、 API Routes と iron-session を使ってカスタムの認証を実装する方法を紹介しました。
 
 認証部分は用途に応じて実装が必要ですが、ボイラープレートとして使えると思います。
 
