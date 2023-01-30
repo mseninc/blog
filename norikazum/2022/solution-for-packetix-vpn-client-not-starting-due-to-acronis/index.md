@@ -1,6 +1,6 @@
 ---
 title: PacketiX VPN Client が起動しない原因は Acronis だった
-date: 
+date: 2023-01-30
 author: norikazum
 tags: [Acronis,Packetix]
 description: 
