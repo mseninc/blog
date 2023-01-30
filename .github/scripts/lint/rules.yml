@@ -1,0 +1,36 @@
+rules:
+  - message: 画像のキャプションはダブルクオーテーションで括ります
+    pattern: '^!\[([^\]]+)\]\((\S*)\s([^"]*)\)'
+    expected: '![$1]($2 "$3")'
+    type: error
+    ref: https://github.com/mseninc/blog#%E7%94%BB%E5%83%8F%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6
+
+  - message: alt 属性はダブルクオーテーションで括る必要はありません
+    pattern: '^!\["([^\]]+)"\]'
+    expected: '![$1]'
+    type: error
+    ref: https://github.com/mseninc/blog#%E7%94%BB%E5%83%8F%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6
+
+  - message: アクセシビリティ向上のため alt 属性を指定してください
+    pattern: '^!\[\]'
+    expected: '![画像の説明]'
+    type: recommended
+    ref: https://zenn.dev/pacchiy/articles/650e6212dee77b#seo
+
+  - message: コードブロックのタイトルが正しく設定されていません
+    pattern: '^```(.*)(?<!:)title='
+    expected: '```$1:title='
+    type: error
+    ref: https://github.com/mseninc/blog#%E3%82%B3%E3%83%BC%E3%83%89%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6
+
+  - message: コードブロックのタイトルの空白は &nbsp; を使用してください
+    pattern: '^```(.*):title=(.*) (.*)$'
+    expected: '```$1:title=$1&nbsp;$2'
+    type: error
+    ref: https://github.com/mseninc/blog#%E3%82%B3%E3%83%BC%E3%83%89%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6
+
+  - message: コードブロックにはなるべくタイトルを指定してください
+    pattern: '^```(?!.*:title=)(.+)$'
+    expected: '```$1:title=タイトル'
+    type: recommended
+    ref: https://github.com/mseninc/blog#%E3%82%B3%E3%83%BC%E3%83%89%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6

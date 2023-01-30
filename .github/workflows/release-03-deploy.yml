@@ -4,6 +4,27 @@ name: Release Deploy
 on:
   # 手動実行時
   workflow_dispatch:
+    inputs:
+      generator_branch:
+        description: 'Branch name of generator repository'
+        required: false
+        default: 'main'
+      s3_bucket_name:
+        description: 'S3 bucket name'
+        required: false
+      s3_region:
+        description: 'Region of S3 bucket'
+        required: false
+        default: 'ap-northeast-1'
+      cloudfront_distribution:
+        description: 'ID of CloudFront Distribution'
+        required: false
+      google_adsense_url:
+        description: 'URL of Google Adsense'
+        required: false
+      google_programmable_search_url:
+        description: 'URL of Google Programmable Search'
+        required: false
 
   # デプロイ前処理の実行後
   workflow_run:
@@ -27,8 +48,10 @@ jobs:
       GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES: true
       NO_CACHE: ${{ secrets.NO_CACHE }}
       GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
-      S3_BUCKET_NAME: ${{ secrets.S3_BUCKET_NAME }}
-      S3_REGION: ${{ secrets.S3_REGION }}
+      S3_BUCKET_NAME: ${{ github.event.inputs.s3_bucket_name || secrets.S3_BUCKET_NAME }}
+      S3_REGION: ${{ github.event.inputs.s3_region || secrets.S3_REGION }}
+      GOOGLE_ADSENSE_URL: ${{ github.event.inputs.google_adsense_url || secrets.GOOGLE_ADSENSE_URL }}
+      GOOGLE_PROGRAMMABLE_SEARCH_URL: ${{ github.event.inputs.google_programmable_search_url || secrets.GOOGLE_PROGRAMMABLE_SEARCH_URL }}
       S3_REMOVE_NONEXISTENT_OBJECTS: true
 
     steps:
@@ -36,7 +59,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
       with:
-        ref: ${{ secrets.GENERATOR_BRANCH }}
+        ref: ${{ github.event.inputs.generator_branch || secrets.GENERATOR_BRANCH }}
         repository: mseninc/blog-gatsby
 
     - name: Checkout
@@ -51,14 +74,14 @@ jobs:
         path: |
           public
           .cache
-        key: ${{ runner.os }}-blog-release-gatsby
+        key: ${{ runner.os }}-blog-release-gatsby-${{ hashFiles('package-lock.json') }}
     
     - run: ls -la
 
     - name: Node
       uses: actions/setup-node@v3
       with:
-        node-version: 16
+        node-version: 18
         cache: npm
 
     - name: Install dependencies
@@ -73,6 +96,6 @@ jobs:
     - name: Invalidate CloudFront
       uses: chetan/invalidate-cloudfront-action@master
       env:
-        AWS_REGION: ${{ env.AWS_DEFAULT_REGION }}
-        DISTRIBUTION: ${{ secrets.CLOUDFRONT_DISTRIBUTION }}
+        AWS_REGION: us-east-1
+        DISTRIBUTION: ${{ github.event.inputs.cloudfront_distribution || secrets.CLOUDFRONT_DISTRIBUTION }}
         PATHS: '/*'
