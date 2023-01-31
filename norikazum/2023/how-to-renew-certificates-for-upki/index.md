@@ -9,10 +9,11 @@ description:
 こんにちは。
 
 UPKI向けの証明書に関連した記事は過去に2つほど書きましたが、今回は更新の方法を紹介したいと思います。
-作成に関連したルールはたびたび変わることがあり、執筆時点で有効であることを確認した方法です。
 
-[\[サーバー証明書\] UPKI向けCSRとTSVの作成方法](https://mseeeen.msen.jp/how-to-create-csr-and-tsv-for-upki/)
-[\[サーバー証明書\] UPKI向け証明書失効手続きの流れ](https://mseeeen.msen.jp/flow-of-certificate-revocation-procedure-of-upki/)
+- [\[サーバー証明書\] UPKI向けCSRとTSVの作成方法](https://mseeeen.msen.jp/how-to-create-csr-and-tsv-for-upki/)
+- [\[サーバー証明書\] UPKI向け証明書失効手続きの流れ](https://mseeeen.msen.jp/flow-of-certificate-revocation-procedure-of-upki/)
+
+作成に関連したルールはたびたび変わることがあります。執筆時点で有効であることを確認しています。
 
 ## 下準備
 1. 更新対象の証明書
@@ -78,10 +79,10 @@ openssl rsa -in $pkeyfile -text
 それではそれぞれの手順を解説します。
 
 ### 失効用TSVの作成
-1. [TSVツール: 種別選択](https://certs.nii.ac.jp/tsv-tool/create/) に 接続します。
+1. [TSVツール: 種別選択](https://certs.nii.ac.jp/tsv-tool/create/) に接続します。
 1. 失効用TSVの作成を開始します。
     ![失効用TSVの作成を開始](images/2023-01-23_23h39_01.png "失効用TSVの作成を開始")
-1. 下準備の 1. の **更新対象の証明書を読み込ませます** 。
+1. 下準備の 1. の **更新対象の証明書**を読み込ませます。
     ![更新対象の証明書を読み込み](images/2023-01-23_23h52_33.png "更新対象の証明書を読み込み")
 1. 以下の画像を参考に手続きします。
     - ① この10進数をテキストエディター等に保存します
@@ -97,10 +98,10 @@ openssl rsa -in $pkeyfile -text
 1. `./mk_csr.sh CN名` を実行します。CN名が `mseeeen.msen.jp` であれば `./mk_csr.sh mseeeen.msen.jp` です。
 1. スクリプトを実行することで秘密鍵とCSRが作成されますので、 **CSRをテキストで作業PC上に保存** します。
     ![更新用CSR](images/2023-01-24_11h51_14.png "更新用CSR")
-1. [TSVツール: 種別選択](https://certs.nii.ac.jp/tsv-tool/create/) に 接続します。
+1. [TSVツール: 種別選択](https://certs.nii.ac.jp/tsv-tool/create/) に接続します。
 1. 更新用TSVの作成を開始します。
     ![更新用TSVの作成を開始](images/2023-01-24_00h09_18.png "更新用TSVの作成を開始")
-1. 前項で保存した **CSRファイルを読み込ませます** 。
+1. 前項で保存した **CSRファイル**を読み込ませます。
     ![更新用CSRを読み込み](images/2023-01-24_00h10_35.png "更新用CSRを読み込み")
 1. 以下の画像を参考に手続きします。
     - ① **失効用TSVの作成のときに保存した10進数** を入力します
@@ -113,7 +114,7 @@ openssl rsa -in $pkeyfile -text
 以上でTSVの発行が完了します。
 
 更新の場合になぜ失効用が必要になるのか？と思われるかもしれませんが、
-現在は秘密鍵の再利用ができないため、更新用証明書をサーバーに設定したあと、
+現在は秘密鍵の再利用ができず、更新用証明書をサーバーに設定したあと、
 旧証明書を失効する必要があるため失効用TSVの作成が必要になります。
 
 それでは次回の記事でお会いしましょう。
