@@ -1,6 +1,6 @@
 ---
 title: "WSUS で WSL (Windows Subsystem for Linux) の更新プログラムを配信するには"
-date: 
+date: 2023-02-03
 author: jinna-i
 tags: [Windows, WSUS, WSL]
 description: 
