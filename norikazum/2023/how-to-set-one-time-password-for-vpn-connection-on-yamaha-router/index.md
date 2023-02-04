@@ -1,5 +1,5 @@
 ---
-title: "YAMAHAルーターでVPN接続にワンタムパスワードを設定する方法"
+title: "YAMAHAルーターでVPN接続にワンタイムパスワードを設定する方法"
 date: 
 author: norikazum
 tags: []
