@@ -9,23 +9,22 @@ description: "YAMAHA"
 こんにちは。
 
 今回の記事は、YAMAHA のルーターで L2TP / IPsec VPN を設定し、
-**認証するパスワードにワンタイムパスワードを利用する**、というものです。
+**認証するパスワードにワンタイムパスワードを利用する** ものです。
 
-主に以下の記事を参考に設定します。
+主に以下の記事を参考にしています。
 
 [Google 認証システムの確認コード生成方法に準じたワンタイムパスワードを設定する](https://network.yamaha.com/setting/router_firewall/monitor/lua_script/one_time_password2-rtx1200)
 
 ## 概要
 
 L2TP/IPsec VPN 接続は、Pre-Shared Key ( 事前共有鍵 ) (以降 PSK ) と ユーザー名、パスワードを利用して認証します。
-この **パスワードが Google 認証システムの生成方法に準じたワンタイムパスワード** となります。
 
 ルーターに **Lua スクリプトを配置し、定期的に実行させることでユーザー名に紐付くパスワード部分が定期的に変更される** しくみです。
 
 ![概要図](images/2023-02-04_13h37_21.png "概要図")
 
-
 L2TP/IPsec VPN の設定はYAMAHAの記事を参考にしてください。
+
 [L2TP/IPsecを使用したリモートアクセス : ルーター コマンド設定](https://network.yamaha.com/setting/router_firewall/vpn/vpn_client/vpn-smartphone-setup_rtx1200)
 
 
@@ -57,7 +56,7 @@ L2TP/IPsec VPN の設定はYAMAHAの記事を参考にしてください。
 - NVR510(Rev.15.01.03以降)
 - FWX120(Rev.11.03.08以降)
 
-今回で確認した機種は RTX1220 です。
+確認に利用した機種は RTX1220 です。
 
 ## 設定の流れ
 おおむね以下の流れで設定します。
@@ -65,7 +64,7 @@ L2TP/IPsec VPN の設定はYAMAHAの記事を参考にしてください。
 1. ルーターの基本設定
     - LAN, WAN を適切に設定し、LANからWANにインターネット接続ができること
 1. L2TP/IPsec の設定
-    - インターネット側から PSK ユーザー名・パスワードを利用してVPN接続ができること
+    - インターネット側から PSK と ユーザー名・パスワードを利用してVPN接続ができること
 1. L2TP/IPsec で設定したユーザーに対してセットアップキーの設定
 1. Lua スクリプトの配置と関連設定
     - YAMAHA から提供されているLuaスクリプトをUSBメモリーー経由でアップロードします
@@ -73,10 +72,10 @@ L2TP/IPsec VPN の設定はYAMAHAの記事を参考にしてください。
 今回の記事では、 1, 2 は割愛します。
 後述するサンプルコンフィグやYAMAHAの設定事例を確認してください。
 
-## L2TP/IPsec で設定したユーザーに対してセットアップキーの設定
+## ユーザーに対してセットアップキーの設定
 L2TP/IPsec で設定した `pp auth username` に対応したキーを設定します。
 
-`pp auth username msen testpassword` と設定された1つめのユーザーが `PP1` になります。
+`pp auth username msen testpassword` で設定された1つめのユーザーが `PP1` になります。
 `set PP1=msen:1a123biziktj12S9` はこの1つめのユーザーに対するセットアップキーの指定です。
 
 この値が Google 認証システム ( Google Authenticator ) に入力するセットアップキーです。
@@ -122,14 +121,14 @@ USBメモリーを機器に接続します。
 正常に認識すると **ピロ** という電子音がします。
 
 電子音がしない場合、認識されていません。
-いくつかのUSBメモリーを試した限り、認識しないUSBメモリーのほうが多かったです。
+いくつかのUSBメモリーを試しましたが、認識しないUSBメモリーのほうが多かったです。
 
 **認識したUSBメモリーは、RUF3-K32GB でした** 。
 ![RUF3-K32GB-BL](images/2023-02-04_13h58_37.png "RUF3-K32GB-BL")
 
 USBメモリーを認識させたあと、以下のコマンドでUSBから機器のルートにコピーします。
 
-``` title=USBから機器にファイル転送
+```title=USBから機器にファイル転送
 copy usb1:/lua-script-one_time_password2.lua /
 copy usb1:/onetimepass.lua /
 copy usb1:/sha1.lua /
@@ -137,7 +136,7 @@ copy usb1:/sha1.lua /
 
 スクリプトファイルを差し替えする場合は、削除後に再度コピーします。
 
-``` title=機器からファイルを削除
+```title=機器からファイルを削除
 delete /lua-script-one_time_password2.lua
 ```
 
@@ -146,11 +145,11 @@ delete /lua-script-one_time_password2.lua
 Lua スクリプトを自動的に起動するため、以下のようにパスとスケジュール設定します。
 ※ at 3 の数字部分は環境に応じて変化します。
 
-``` title=パス指定
+```title=パス指定
 set LUA_PATH="./\?.lua;"
 ```
 
-``` title=スケジュール設定
+```title=スケジュール設定
 schedule at 3 startup * lua /lua-script-one_time_password2.lua
 ```
 
@@ -158,7 +157,7 @@ schedule at 3 startup * lua /lua-script-one_time_password2.lua
 即時手動で起動する場合は、 `lua lua-script-one_time_password2.lua` とします。
 
 ### 実行の確認
-`show status lua` コマンドを利用し、スクリプトが正常に実行されるた確認します。
+`show status lua` コマンドを利用し、スクリプトが正常に実行されたかを確認します。
 
 正常に実行されていれば、以下のような出力になります。
 
@@ -209,7 +208,7 @@ Luaスクリプト機能バージョン:    1.08
 以上で設定は完了です。
 
 ## Google Authenticator の設定
-Google Authenticator アプリをインストール以下の流れで設定します。
+Google Authenticator アプリをインストールし、以下の流れで設定します。
 
 1. ＋ボタンからセットアップを開始
 ![＋ボタンから設定を追加](images/IMG_0454.png "＋ボタンから設定を追加")
@@ -228,7 +227,7 @@ Google Authenticator アプリをインストール以下の流れで設定し�
 ## サンプルコンフィグ
 一部マスクしていますが、確認したコンフィグを参考に掲載します。
 
-``` title=サンプルコンフィグ
+```title=サンプルコンフィグ
 # RTX1220 Rev.15.04.04 (Mon Jun 13 16:36:19 2022)
 # MAC Address : ac:44:f2:b6:fe:c1, ac:44:f2:b6:fe:c2, ac:44:f2:b6:fe:c3
 # Memory 256Mbytes, 3LAN
@@ -256,8 +255,8 @@ switch control use lan3 on
 pp select anonymous
  pp bind tunnel1-tunnel2
  pp auth request chap
- pp auth username msen AnPYHNwRr9@z
- pp auth username msen2 O+[9kS4DT}(i
+ pp auth username msen testpassword
+ pp auth username msen2 testpassword
  ppp ipcp ipaddress on
  ppp ipcp msext on
  ip pp remote address pool 192.168.11.201-192.168.11.210
@@ -351,11 +350,11 @@ set PP2=msen2:2b567baeljkt12S9
 いろいろ設定を変更してみて最終的に `set PP` の部分のキーを修正することで解決しました。
 ※1ヵ月ほど時間がかかってしまいました。
 
-``` title=error exit になったキー
+```title=error exit になったキー
 set PP1=msen:E55X44RHV4EIBIVR
 ```
 
-``` title=解決したキー
+```title=解決したキー
 set PP1=msen:1a123biziktj12S9
 ```
 
@@ -365,6 +364,6 @@ set PP1=msen:1a123biziktj12S9
 
 この部分は現在もYAMAHAサポートにて調査中となっています。
 
-2要素認証を利用することで、セキュリティは格段にアップしますので導入の検討をいただけましたら幸いです。
+2要素認証を利用することで、セキュリティは格段にアップしますので検討いただければ幸いです。
 
 それでは、次回の記事でお会いしましょう。
