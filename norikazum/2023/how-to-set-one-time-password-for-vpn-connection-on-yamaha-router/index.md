@@ -161,7 +161,7 @@ schedule at 3 startup * lua /lua-script-one_time_password2.lua
 
 正常に実行されていれば、以下のような出力になります。
 
-```
+```:title=正常
 # show status lua
 Luaライブラリバージョン:        Lua 5.1.5
 Luaスクリプト機能バージョン:    1.08
@@ -180,7 +180,7 @@ LuaタスクID (状態):  1  (SLEEP)
 
 何らの理由で失敗した場合は、以下ような出力になります。
 
-```
+```:title=エラー
 # show status lua
 Luaライブラリバージョン:        Lua 5.1.5
 Luaスクリプト機能バージョン:    1.08
