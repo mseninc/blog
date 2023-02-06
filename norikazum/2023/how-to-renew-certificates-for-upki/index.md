@@ -1,6 +1,6 @@
 ---
 title: サーバー証明書 UPKI向け証明書の更新方法
-date: 
+date: 2023-02-01
 author: norikazum
 tags: [セキュリティ,サーバー,NII,UPKI,SSL,証明書]
 description: 
