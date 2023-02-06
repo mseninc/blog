@@ -1,6 +1,6 @@
 ---
 title: "ahamo「かけ放題オプション」を解約する方法"
-date: 
+date: 2023-02-06
 author: jinna-i
 tags: [ライフハック]
 description: 
