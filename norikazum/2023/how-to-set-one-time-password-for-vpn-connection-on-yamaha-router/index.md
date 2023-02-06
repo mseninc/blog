@@ -2,8 +2,8 @@
 title: "YAMAHAルーターでVPN接続にワンタイムパスワードを設定する方法"
 date: 
 author: norikazum
-tags: []
-description: "YAMAHA"
+tags: [YAMAHA,L2TP,Lua,VPN]
+description: 
 ---
 
 こんにちは。
@@ -128,7 +128,7 @@ USBメモリーを機器に接続します。
 
 USBメモリーを認識させたあと、以下のコマンドでUSBから機器のルートにコピーします。
 
-```title=USBから機器にファイル転送
+```:title=USBから機器にファイル転送
 copy usb1:/lua-script-one_time_password2.lua /
 copy usb1:/onetimepass.lua /
 copy usb1:/sha1.lua /
@@ -136,7 +136,7 @@ copy usb1:/sha1.lua /
 
 スクリプトファイルを差し替えする場合は、削除後に再度コピーします。
 
-```title=機器からファイルを削除
+```:title=機器からファイルを削除
 delete /lua-script-one_time_password2.lua
 ```
 
@@ -145,11 +145,11 @@ delete /lua-script-one_time_password2.lua
 Lua スクリプトを自動的に起動するため、以下のようにパスとスケジュール設定します。
 ※ at 3 の数字部分は環境に応じて変化します。
 
-```title=パス指定
+```:title=パス指定
 set LUA_PATH="./\?.lua;"
 ```
 
-```title=スケジュール設定
+```:title=スケジュール設定
 schedule at 3 startup * lua /lua-script-one_time_password2.lua
 ```
 
@@ -227,7 +227,7 @@ Google Authenticator アプリをインストールし、以下の流れで設�
 ## サンプルコンフィグ
 一部マスクしていますが、確認したコンフィグを参考に掲載します。
 
-```title=サンプルコンフィグ
+```:title=サンプルコンフィグ
 # RTX1220 Rev.15.04.04 (Mon Jun 13 16:36:19 2022)
 # MAC Address : ac:44:f2:b6:fe:c1, ac:44:f2:b6:fe:c2, ac:44:f2:b6:fe:c3
 # Memory 256Mbytes, 3LAN
@@ -350,11 +350,11 @@ set PP2=msen2:2b567baeljkt12S9
 いろいろ設定を変更してみて最終的に `set PP` の部分のキーを修正することで解決しました。
 ※1ヵ月ほど時間がかかってしまいました。
 
-```title=error exit になったキー
+```:title=error&nbsp;exitになったキー
 set PP1=msen:E55X44RHV4EIBIVR
 ```
 
-```title=解決したキー
+```:title=解決したキー
 set PP1=msen:1a123biziktj12S9
 ```
 
