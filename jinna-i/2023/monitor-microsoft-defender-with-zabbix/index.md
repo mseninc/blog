@@ -3,7 +3,7 @@ title: "Zabbix で Microsoft Defender のセキュリティ脅威検出を監視
 date: 
 author: jinna-i
 tags: [Zabbix, Microsoft Defender]
-description: 
+description: "Microsoft Defender がウィルス等のセキュリティ脅威を検出した際に、Zabbix で監視できるようにする"
 ---
 
 こんにちは、じんないです。
@@ -12,7 +12,7 @@ Windows には **Microsoft Defender (Windows Defender) というセキュリテ�
 
 クライアント OS のみならずサーバー OS にもインストールされています。無償ということもあって、使用されている方も多いのではないでしょうか。
 
-今回は **Microsoft Defender がウィルス等のセキュリティ脅威を検出した際に、Zabbix で監視できるようにしたい**と思います。
+今回は **Microsoft Defender がウィルス等のセキュリティ脅威を検出した際に、Zabbix で検知できるようにしたい**と思います。
 
 ## 想定環境
 
@@ -21,7 +21,8 @@ Windows には **Microsoft Defender (Windows Defender) というセキュリテ�
 
 ### 前提
 
-対象のコンピューターに Zabbix Agent がインストールされていること。また、Agent → Server のアクティブチェックが可能な環境であることを想定しています。
+- 対象のコンピューターに Zabbix Agent がインストールされていること
+- Agent → Server のアクティブチェックが可能な環境であること
 
 ## 脅威検出時にどのようなイベントが記録されるのか
 
@@ -65,7 +66,7 @@ Windows には **Microsoft Defender (Windows Defender) というセキュリテ�
 
 ### トリガーの作成
 
-作成したアイテムで**深刻度が `1(情報)` ではないイベントが記録された場合にトリガー**させます。
+作成したアイテムで**深刻度 `1(情報)` 以外のイベントが記録された場合にトリガー**させます。
 
 イベント ID `1116` を決め打ちしてもよかったのですが、その他の警告やエラーもトリガーしたかったのでこのような設定にしています。
 
