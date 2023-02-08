@@ -61,9 +61,9 @@ DISKPART> list volume
   Volume ###  Ltr Label        Fs    Type        Size     Status     Info
   ----------  --- -----------  ----  ----------  -------  ---------  --------
   Volume 0     D                       DVD-ROM         0 B  メディアなし
-  Volume 1     C                NTFS   Partition     59 GB  正常         ブー ト
-  Volume 2                      FAT32  Partition    100 MB  正常         シス テム
-  Volume 3                      NTFS   Partition    599 MB  正常         非表 示
+  Volume 1     C                NTFS   Partition     59 GB  正常         ブート
+  Volume 2                      FAT32  Partition    100 MB  正常         システム
+  Volume 3                      NTFS   Partition    599 MB  正常         非表示
 ```
 
 この結果から、C ドライブ、D ドライブにドライブ文字 (Ltr 列) が割り振られているだけで、その他はドライブ文字もラベル (Label 列) も割り振られていないことが分かります。
@@ -153,7 +153,11 @@ label \\?\Volume{<GUID>} <label name>
 ```
 
 この際 `<GUID>` には上記でコピーした `GUID` を、`<label name>` にはラベルとして設定したい文字列を入力ください。  
-たとえば、今回の場合だと、`label \\?\Volume{ce1494bd-30bc-4ed3-a898-ab0dc1700766} RECOVERY` となります。
+たとえば、今回の場合だと以下になります。
+
+```cmd
+label \\?\Volume{ce1494bd-30bc-4ed3-a898-ab0dc1700766} RECOVERY
+```
 
 ## 結果の確認
 
