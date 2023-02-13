@@ -3,7 +3,7 @@ title: "Zabbix で Microsoft Defender のセキュリティ脅威検出を監視
 date: 
 author: jinna-i
 tags: [Zabbix, Microsoft Defender]
-description: "Microsoft Defender がウィルス等のセキュリティ脅威を検出した際に、Zabbix で監視できるようにする"
+description: "Microsoft Defender がウィルス等のセキュリティ脅威を検出した際に、Zabbix で検知する方法を紹介します。"
 ---
 
 こんにちは、じんないです。
