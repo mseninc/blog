@@ -15,8 +15,11 @@ MSEN では、デプロイツールに **[Jenkins](https://www.jenkins.io/)** �
 そのプロジェクトで Jenkins のジョブを見直す機会があり、改善点を見つけたので、自身の学習も兼ねて Jenkins のジョブを作り直してみることにしました。
 自身で Jenkins のジョブを作成したことがなかったので、自身の学習を兼ねてローカル環境に Jenkins の Docker コンテナーを作成してジョブを作成することにしました。
 
-ジョブを作成して実行してみると、 *`git checkout` でエラーが発生* しました。
-調べてみると、 **Git LFS** の設定の問題でした。
+作成したジョブを実行したところ、 コンソールログに以下のエラーメッセージが出力されており、ジョブが失敗していました。
+
+> Error downloading object: path/to/image.png ({short hash}): Smudge error: Error path/to/image.png ({long hash}): batch response: Bad credentials
+
+原因を調べてみると、 **Git LFS** で管理されているファイルの checkout に失敗していました。
 
 本記事では、 **Git LFS を利用したリポジトリの checkout が Jenkins 上で失敗する場合の対処方法** を紹介します。
 
@@ -37,7 +40,7 @@ MSEN では、デプロイツールに **[Jenkins](https://www.jenkins.io/)** �
 
 ### Jenkins のジョブの設定
 
-プロジェクトのリポジトリを Jenkins の workspace へ clone するために、 "*Source Code Management*" を **Git** を選択して、次のように設定しました。
+プロジェクトのリポジトリを Jenkins の workspace へ clone するために、 "*Source Code Management*" で **Git** を選択して、次のように設定しました。
 
 - Repository URL: 対象のプロジェクトのリポジトリ URL
 - Credentials: プロジェクトのリポジトリにアクセスするための認証情報を設定
@@ -45,15 +48,17 @@ MSEN では、デプロイツールに **[Jenkins](https://www.jenkins.io/)** �
 - Branches to build: ビルド時のパラメーターを設定
     - General で設定したパラメーターを指定 (画像の例の場合は `branch`)
 
+![Source Code Management で Git を選択](./images/source-code-management.png)
+
 ![Git の設定](./images/jenkins-job-git-config.png)
 
 Git の設定をしている際に、 *ビルド時に設定されたパラメーターを "Branches to build" の項目に設定できるのか疑問* でした。
-Branch Specifier の隣にあるヘルプボタンを押して内容を読んでみると、 **`${パラメーター名}`** と記述することでパラメーターを参照できると記載されていました。
+Branch Specifier の隣にあるヘルプボタンを押して内容を読むと、 **`${パラメーター名}`** と記述することでパラメーターを参照できると記載されていました。
 ビルド時のパラメーターも指定できることに感動しました (笑)
 
 ### エラーの内容
 
-設定したジョブを実行してみると、早々にビルドに失敗していました。
+設定したジョブを実行したところ、早々にビルドに失敗していました。
 ジョブ実行時のコンソールの出力ログを見てみると、 *リポジトリの checkout で失敗* しているようでした。
 
 ```{numberLines:1}:title=コンソールログに出力されたエラーメッセージ
@@ -72,12 +77,12 @@ error: external filter 'git-lfs filter-process' failed
 fatal: path/to/image.png: smudge filter lfs failed
 ```
 
-Git の認証情報は合っているはずなのに、なぜか 5 行目で `Bad credentials` と出力されていました。
-しかし、リポジトリ内のファイルパスは取得できているので、リポジトリにはアクセスできているはずです。
+上記のログの 5 行目のように、エラーメッセージに *`Bad credentials`* と出力されていました。
+Git の認証情報の設定が間違っているのかとも思いましたが、 *リポジトリ内のファイルパスは取得できているので、認証情報は合っているはず* です。
 
 ## 解決方法
 
-いろいろと調べてみると、 Jenkins で同様のエラーが発生している issue を見つけました。
+エラーメッセージで検索し、 Jenkins で同様のエラーが発生している issue を見つけました。
 
 > [Jenkins pipeline - smudge filter lfs failed · Issue #4248 · git-lfs/git-lfs](https://github.com/git-lfs/git-lfs/issues/4248)
 
@@ -87,8 +92,8 @@ Git の認証情報は合っているはずなのに、なぜか 5 行目で `Ba
 >
 > GitLFS オプションがジョブの設定で有効になっていなかったから、ファイルをダウンロードしてコケていた。
 
-Git の設定項目を見直してみると、 **Additional Behaviours** という項目を見つけました。
-Add ボタンを押してみて、 *LFS* という文字列でフィルターしてみると、 **Git LFS pull after checkout** という項目が見つかりました。
+Git の設定項目を見直し、 **Additional Behaviours** という項目を見つけました。
+Add ボタンを押し、 *LFS* という文字列でフィルターしてみると、 **Git LFS pull after checkout** という項目が見つかりました。
 
 ![Additional Behaviours の項目から LFS という文字列でフィルター](./images/enable-git-lfs.png)
 
@@ -97,7 +102,7 @@ Add ボタンを押してみて、 *LFS* という文字列でフィルターし
 ![Additional Behaviours に Git LFS pull after checkout を追加](./images/fixed-git-config.png)
 
 再度ビルドしてみると、無事にジョブが完了しました。
-成功したジョブのコンソール出力を確認してみると、 *Git LFS を有効化してから checkout* していることが確認できました。
+成功したジョブのコンソール出力を確認すると、 *Git LFS を有効化してから checkout* していることが確認できました。
 
 ```{numberLines:1}{2}:title=成功時のコンソールログの抜粋
 Checking out Revision {commit hash} (origin/{branch})
