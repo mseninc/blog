@@ -1,6 +1,6 @@
 ---
 title: "[WSL2] git-credential-manager のパスを修正する"
-date: 
+date: 2023-02-15
 author: kenzauros
 tags: [Git,WSL,git-credential-manager]
 description: 
