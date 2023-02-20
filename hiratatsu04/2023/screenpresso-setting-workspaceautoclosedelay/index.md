@@ -1,6 +1,6 @@
 ---
 title: Screenpresso でスクリーンショット後にワークスペースを一瞬だけ表示させる方法
-date: 
+date: 2023-02-20
 author: hiratatsu04
 tags: [Screenpresso]
 description: Screenpresso は非常に便利なツールですが、スクリーンショット後にワークスペースが邪魔になってしまうときがあります。この記事ではワークスペースを一瞬だけ表示させる方法について記載します。
