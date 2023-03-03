@@ -1,6 +1,6 @@
 ---
 title: "Git LFS を利用したリポジトリの checkout が Jenkins 上で失敗する場合の対処法"
-date: 
+date: 2023-03-03
 author: k-so16
 tags: [Jenkins, Git, Git LFS]
 description: "Git LFS を利用したリポジトリの checkout が Jenkins 上で失敗する場合の対処方法を紹介します。"
