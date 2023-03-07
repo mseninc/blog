@@ -2,7 +2,7 @@
 title: "ChatGPTと遊んでみた"
 date: 2023-03-04
 author: r-Funakoshi
-tags: [人工知能][ChatGPT][OpenAI]
+tags: [人工知能,ChatGPT,OpenAI]
 description: "少し前に流行った ChatGPT と遊んでみました。"
 ---
 
