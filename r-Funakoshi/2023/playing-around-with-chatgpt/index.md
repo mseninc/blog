@@ -3,14 +3,15 @@ title: "ChatGPTと遊んでみた"
 date: 2023-03-04
 author: r-Funakoshi
 tags: [人工知能,ChatGPT,OpenAI]
-description: "少し前に流行った ChatGPT と遊んでみました。"
+description: "ChatGPT と遊んでみました。"
 ---
 
 こんにちは、リーフです。
 
 さっそくですが皆さんは **ChatGPT** をご存じですか？
 
-少し前に世間を騒がせた対話型の「人工知能ツール」です。
+
+ChatGPT は対話型の「人工知能ツール」です。
 
 最近ニュースでも取り上げられ、注目が高まっています。
 
