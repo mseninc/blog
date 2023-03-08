@@ -2,7 +2,7 @@
 title: Active Directory 環境における NTP サーバーの冗長化設定
 date: 
 author: hiratatsu04
-tags: [ActiveDirectory, NTP, Windows Server, 冗長]
+tags: [ActiveDirectory, NTP, Windows Server]
 description: Active Directory 環境において、PDC エミュレーター以外のドメインコントローラーは PDC エミュレーターを参照して時刻同期します。しかし、この場合参照先の PDC エミュレーターの役割を持つドメインコントローラーが障害などで停止すると、時刻同期ができなくなります。この記事では、PDC エミュレーターが停止した時に、外部のドメインコントローラーを参照することで NTP サーバーを冗長構成とする方法を紹介します。
 ---
 
