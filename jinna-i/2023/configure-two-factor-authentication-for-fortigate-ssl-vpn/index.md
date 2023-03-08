@@ -1,6 +1,6 @@
 ---
 title: "[FortiGate] SSL VPN に二要素認証 (Slack) を設定する"
-date: 
+date: 2023-03-08
 author: jinna-i
 tags: [FortiGate]
 description: "FortiGate 60F で SSL VPN に二要素認証を設定してみます"
