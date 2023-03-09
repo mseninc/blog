@@ -10,7 +10,7 @@ description: "FortiGate では SSL VPN に二要素認証を設定できます�
 
 FortiGate では SSL VPN に二要素認証を設定できます。
 
-具体的な設定方法は以下を参考にしてください。
+具体的な設定方法は以下を参考にしてください。  
 [[FortiGate] SSL VPN に二要素認証 (Slack) を設定する | MSeeeeN](https://mseeeen.msen.jp/configure-two-factor-authentication-for-fortigate-ssl-vpn/)
 
 上記の記事では送信先を Slack としていますが、任意のメールアドレスを設定することで Slack 以外（たとえば Gmail）にもトークンを送れます。
