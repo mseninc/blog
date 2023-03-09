@@ -57,17 +57,17 @@ teraterm などで FortiGate にアクセスします。
 アクセス後に以下コマンドを実行します。
 
 ```
-<ホスト名 > # config system email-server
-<ホスト名 > (email-server) #  set reply-to <送信元メールアドレス>
-<ホスト名 > (email-server) #  end
+<ホスト名> # config system email-server
+<ホスト名> (email-server) # set reply-to <送信元メールアドレス>
+<ホスト名> (email-server) # end
 ```
 
 たとえば、`no-reply@sample.com` を設定する場合は以下となります。
 
 ```
-# config system email-server
-#  set reply-to no-reply@sample.com
-#  end
+<ホスト名> # config system email-server
+<ホスト名> (email-server) # set reply-to no-reply@sample.com
+<ホスト名> (email-server) # end
 ```
 
 設定後に GUI から [システム] > [設定] > [Eメールサービス] を確認すると、デフォルトのリプライ先に `no-reply@sample.com` が設定されています。
