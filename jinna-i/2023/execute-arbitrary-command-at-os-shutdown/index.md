@@ -1,6 +1,6 @@
 ---
 title: "[CentOS7] OS シャットダウン時に任意のコマンドを実行する"
-date: 
+date: 2023-03-10
 author: jinna-i
 tags: [Linux, CentOS, Red Hat]
 description: "OS シャットダウン時に任意のコマンドを実行する方法を紹介します。"
