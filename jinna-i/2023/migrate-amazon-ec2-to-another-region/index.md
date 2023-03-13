@@ -1,6 +1,6 @@
 ---
 title: "Amazon EC2 を別のリージョンへ移行する"
-date: 
+date: 2023-03-13
 author: jinna-i
 tags: [AWS,EC2]
 description: "Amazon EC2 を別のリージョンへ移行する方法を紹介します。"
