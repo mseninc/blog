@@ -151,7 +151,7 @@ Mi Watch で測定したデータを確認するには **Mi Fitness** という�
   "avg_hrm":171,  👈 心拍数 の平均
   "calories":587,  👈 活動で消費したカロリー [kcal]
   "distance":10144,  👈 走った距離 [m]
-  "duration":2635,  👈 BPM の平均
+  "duration":2635,  👈 ランニングしていた時間 [s]
   "end_time":1678136264,  👈 トレーニング終了時間 (UNIX時間)
   "energy_consume":28,  👈 エネルギー消費量
   "fall_height":0.0,  👈 下降した標高の長さ
