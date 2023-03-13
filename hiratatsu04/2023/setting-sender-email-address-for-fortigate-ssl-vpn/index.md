@@ -1,5 +1,5 @@
 ---
-title: "[FortiGate] SSL VPN の二要素認証(メール)に送信元アドレスを設定する方法"
+title: "[FortiGate] SSL VPN の二要素認証(メール)に任意の送信元アドレスを設定する方法"
 date: 
 author: hiratatsu04
 tags: [FortiGate]
