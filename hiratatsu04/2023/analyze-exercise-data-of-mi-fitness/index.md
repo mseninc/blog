@@ -135,7 +135,13 @@ Mi Watch で測定したデータを確認するには **Mi Fitness** という�
 
 ![ファイルの中身](images/fitness-recode.png "ファイルの中身")
 
-`Uid` はアカウントID、`Sid` はデータのソースデバイスID、`Key` は `Category` を細分化した分類、`Time` はトレーニングが終了した時間、`Category` はトレーニングの分類、`Value` はトレーニングの詳細データ、`UpdateTime` はデータの更新日時。
+- `Uid`: アカウントID
+- `Sid`: データのソースデバイスID
+- `Key`: `Category` を細分化した分類
+- `Time`: トレーニングが終了した時間
+- `Category`: トレーニングの分類
+- `Value`: トレーニングの詳細データ
+- `UpdateTime`: データの更新日時
 
 この中で、**`Value` にワークアウトデータの詳細が入っていました。**
 
