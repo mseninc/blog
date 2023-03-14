@@ -14,8 +14,6 @@ description:
 
 Todoist から今日のタスクを取ってくるところを前編、取ってきたタスクを Slack に投稿するところを後編でお送りします。
 
-## 前提
-
 ## Todoist の API トークンを取得する
 
 まずは Todoist API を使用するためのトークンを取得します。
@@ -34,9 +32,7 @@ Todoist API を使用する準備ができたので、次に GAS のコードを
 
 Google ドライブにアクセスします。
 
-```
-https://drive.google.com/drive/my-drive?ths=true
-```
+[Google ドライブ](https://drive.google.com/drive/my-drive?ths=true)
 
 「新規」をクリックします。
 
@@ -83,23 +79,17 @@ function getTasks() {
 }
 ```
 
-定数 `TODOIST_TOKEN` にはあらかじめ控えておいた Todoist API トークンを入れます。
+3 行目、定数 `TODOIST_TOKEN` にはあらかじめ控えておいた Todoist API トークンを入れます。
 
-定数 `ENDPOINT` には、タスクを取得する Todoist API のエンドポイントを入れます。
+4 行目、定数 `ENDPOINT` には、タスクを取得する Todoist API のエンドポイントを入れます。
 
-↓ Todoist API の公式ドキュメント
-```
-https://developer.todoist.com/rest/v2/?shell#get-active-tasks
-```
+[Todoist API の公式ドキュメント](https://developer.todoist.com/rest/v2/?shell#get-active-tasks)
 
 クエリパラメータを `?filter=today` とすることで、今日のタスクに絞って取得することができます。
 
-GAS の `UrlFetchApp` で `fetch` メソッドを使用することで、引数に指定した URL に対し HTTP リクエストを送ることができます。
+16 行目、 GAS の `UrlFetchApp` で `fetch` メソッドを使用することで、引数に指定した URL に対し HTTP リクエストを送ることができます。
 
-↓ GAS の公式ドキュメント
-```
-https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app?hl=ja
-```
+[GAS の公式ドキュメント](https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app?hl=ja)
 
 返される HTTP レスポンスに対し `getContentText` メソッドを使用することで文字列に変換します。ここではさらに `JSON.parse` することでオブジェクトにしています。
 
