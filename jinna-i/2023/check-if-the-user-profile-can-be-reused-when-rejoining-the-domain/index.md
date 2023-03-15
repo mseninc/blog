@@ -1,6 +1,6 @@
 ---
 title: "Windows ドメイン再参加時にユーザープロファイルは引き継げるのか"
-date: 
+date: 2023-03-15
 author: jinna-i
 tags: [Windows]
 description: "Windows ドメインから離脱後、再度ドメイン参加した時に元のプロファイルを引き継げるのかを調査しました。結果と注意点を紹介しています。"
