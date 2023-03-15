@@ -3,7 +3,7 @@ title: ".NET MAUI で Android アプリを作る"
 date: 
 author: linkohta
 tags: [.NET MAUI, Android, Windows]
-description: ".NET MAUI で Android アプリを作る方法を紹介します。"
+description: "共有コードベースから、 Android, iOS, macOS, Windows で実行できるアプリを開発できる .NET MAUI を使ってAndroid アプリを作る方法を紹介しています。"
 ---
 
 link です。
@@ -27,15 +27,11 @@ link です。
 
 C# と XAML を使用して Android, iOS, macOS, Windows で実行できるアプリを開発できます。
 
-## プロジェクトを作成
-
-
-
 ## テスト環境を用意する
 
 Android アプリの開発にはデバッグ用の環境を用意する必要があります。
 
-実機、エミュレータそれぞれの手順を紹介します。
+実機、エミュレーターそれぞれの手順を紹介します。
 
 ### 実機の場合
 
@@ -45,23 +41,25 @@ Android アプリの開発にはデバッグ用の環境を用意する必要が
 
 この表示させるための手順が機種や Android のバージョンによって異なるため、それぞれで手順を調べて表示させてください。
 
-### エミュレータの場合
+### エミュレーターの場合
 
-エミュレータを使う場合は新規プロジェクトを作成後、**Android デバイスマネージャー**を起動して、エミュレータを作成します。
+エミュレーターを使う場合は新規プロジェクトを作成後、**Android デバイスマネージャー**を起動して、エミュレーターを作成します。
 
 ![Android デバイスマネージャー](images/android-manager1.png)
 
-起動したデバイスマネージャーでエミュレータを新規作成します。
+起動したデバイスマネージャーでエミュレーターを新規作成します。
 
 ![デバイス作成](images/android-manager2.png)
 
-デバッグに作成したエミュレータを指定すればデバッグ時に自動でビルドとデプロイをやってくれます。
+デバッグに作成したエミュレーターを指定すればデバッグ時に自動でビルドとデプロイをやってくれます。
 
 ![デバッグ指定](images/android-manager3.png)
 
 ## Hello World! を表示させる
 
-早速、 Hello World! を表示させてみましょう。
+さっそく、 Hello World! を表示させてみましょう。
+
+まず、 **.NET MAUI アプリ**でプロジェクトを新規作成します。
 
 作成直後のプロジェクトはデフォルトで Hello World! を表示するようになっています。
 
@@ -75,7 +73,7 @@ Android アプリの開発にはデバッグ用の環境を用意する必要が
 
 これをデータバインディングを使った形に書き換えてみます。
 
-`MainPage.xaml` の書き換えと `CountViewModel.cs` の新規作成を行います。
+`MainPage.xaml` の書き換えと `CountViewModel.cs` を新規作成します。
 
 ```xml:title=MainPage.xaml
 <?xml version="1.0" encoding="utf-8" ?>
