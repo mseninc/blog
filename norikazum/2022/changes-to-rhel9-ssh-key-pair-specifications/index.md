@@ -44,7 +44,7 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 
-上記が Red Hat Enterprise Linux9 デフォルトの `ssh-keygen` の動作です。
+上記が Red Hat Enterprise Linux 9 デフォルトの `ssh-keygen` の動作です。
 3072ビットが標準になっていますね。
 
 鍵ペアを適切に設定し、秘密鍵をダウンロードしてターミナルから接続すると以下のように接続できません。
@@ -55,11 +55,11 @@ The key's randomart image is:
 
 と出ていました。
 
-このエラーを追いかけると以下の記事に到達し、**SHA-1 が非推奨になったことが影響している** ことが確認できます。
-[\[Red Hat Enterprise Linux9\]sshd: userauth_pubkey: key type ssh-rsa not in PubkeyAcceptedAlgorithms \[preauth\] - Red Hat Customer Portal](https://access.redhat.com/solutions/6966079)
-※閲覧には Red Hat account でログインが必要です。
+このエラーを追いかけると以下の記事が見つかりました。 
+`The issue was due to the disable of SHA1 on RHEL9.` の一文から、 **SHA-1 が非推奨になったことが影響している** ようです。
 
-**The issue was due to the disable of SHA1 on RHEL9.** が原因と記載されています。
+[\[Red Hat Enterprise Linux9\]sshd: userauth_pubkey: key type ssh-rsa not in PubkeyAcceptedAlgorithms \[preauth\] - Red Hat Customer Portal](https://access.redhat.com/solutions/6966079)
+※閲覧には Red Hat アカウントでログインが必要です。
 
 ## OK パターン
 マニュアルを参考にして、暗号アルゴリズムオプションに ECDSA ( 楕円曲線暗号 ) を指定して鍵ペアを作成します。
