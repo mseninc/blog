@@ -17,7 +17,7 @@ Red Hat Enterprise Linux 9 から **SHA-1 メッセージダイジェストの�
 [Red Hat Enterprise Linux 9.0 における主な変更点](https://access.redhat.com/documentation/ja-jp/red_hat_enterprise_linux/9/html-single/9.0_release_notes/index#overview-major-changes)
 
 ## NG パターン
-ターミナルを利用し作成したいユーザー ( ここでは user としています ) で `ssh-keygen` (オプションなし) で鍵ペアを作成します。
+ターミナルを利用し作成したいユーザー ( ここでは user としています ) で `ssh-keygen` (オプションなし) コマンドを利用して鍵ペアを作成します。
 
 ```bash
 $ ssh-keygen
