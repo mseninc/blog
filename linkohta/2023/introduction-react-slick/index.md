@@ -3,7 +3,7 @@ title: "slick を React に移植する方法"
 date: 
 author: linkohta
 tags: [slick, React, Web]
-description: "slick を React に移植する方法を紹介します。"
+description: "Web ページ上でスライダーを作成できるプラグイン「slick」を紹介しています。"
 ---
 
 link です。
@@ -22,7 +22,7 @@ slick のオプションをそのまま引き継いでいるため、スライ�
 
 ## 導入と動作確認
 
-導入は npm でインストールするだけです。
+導入は npm で React プロジェクトにインストールするだけです。
 
 ```sh:title=React Slick導入
 $ npm install react-slick
@@ -31,22 +31,32 @@ $ npm install react-slick
 以下のコード例のように `<Slider>` を使ってその中に各種オプションを設定するだけでスライダーが作れます。
 
 ```tsx:title=スライダーの一例
-const settings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1
-}
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-return (
-  <Slider {...settings}>
-    <div><img src="/img1.png"></div>
-    <div><img src="/img2.png"></div>
-    <div><img src="/img3.png"></div>
-  </Slider>
-);
+function App() {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  }
+  
+  return (
+    <div>
+      <Slider {...settings}>
+        <div><img src={img1} alt='img1' /></div>
+        <div><img src={img2} alt='img2' /></div>
+        <div><img src={img3} alt='img3' /></div>
+      </Slider>
+    </div>
+  );
+}
 ```
+
+![スライダー例](images/slider-example.png)
 
 ## 機能紹介
 
@@ -56,28 +66,13 @@ return (
 
 スライドを自動再生します。
 
-```js
-Type: bool
-Default: false
-```
-
 ### infinite
 
 コンテンツをループさせます。(例 : ① -> ② -> ③ -> ① ...)
 
-```js
-Type: bool
-Default: true
-```
-
 ### initialSlide
 
 最初に表示するスライドを指定します。
-
-```js
-Type: int
-Default: 0
-```
 
 ### lazyLoad
 
@@ -85,118 +80,53 @@ Default: 0
 
 `progressive` は最初にまとめて、 `ondemand` は遅延読み込みをします。
 
-```js
-Type: ondemand | progressive
-Default: null
-```
-
 ### slidesToScroll
 
 一度にスライドを何枚スクロールするか指定します。
-
-```js
-Type: int
-Default: 1
-```
 
 ### slidesToShow
 
 フレーム内にスライドを何枚表示するかを指定します。
 
-```js
-Type: int
-Default: 1
-```
-
 ### speed
 
 スクロール、フェードアニメーションの速度をミリ秒で指定します。
-
-```js
-Type: int
-Default: 500
-```
 
 ### pauseOnHover
 
 `autoplay` が `true` の場合に自動再生をマウスホバーで一時停止します。
 
-```js
-Type: bool
-Default: false
-```
-
 ### arrows
 
 「前」「次」のスライドを操作する矢印を表示します。
-
-```js
-Type: bool
-Default: true
-```
 
 ### centerMode
 
 現在表示しているスライドを中央に配置し、次のスライドを少し見切れて表示させます。
 
-```js
-Type: bool
-Default: false
-```
-
 ### centerPadding
 
 `centerMode` を指定した場合に見切れて表示をさせる割合を指定します。
-
-```js
-Type: string
-Default: '50px'
-```
 
 ### customPaging
 
 `dots` が `true` の場合ドットナビをカスタムできます。
 
-```js
-Type: func
-Default: (i) => {i + 1}
-```
-
 ### dots
 
 ドットナビを表示します。
-
-```js
-Type: bool
-Default: false
-```
 
 ### fade
 
 スライドの切り替え方をフェードにします。
 
-```js
-Type: bool
-Default: false
-```
-
 ### nextArrow
 
 `arrows` が `true` の場合に「次」の矢印の見た目を HTML でカスタムできます。
 
-```js
-Type: html
-Default: NEXT
-```
-
 ### prevArrow
 
 `arrows` が `true` の場合に「前」の矢印の見た目を HTML でカスタムできます。
-
-```js
-Type: html
-Default: Previous
-```
 
 ## まとめ
 
