@@ -1,5 +1,5 @@
 ---
-title: ".NET MAUI で Android アプリを作る"
+title: ".NET MAUI で Android アプリを作る方法"
 date: 
 author: linkohta
 tags: [.NET MAUI, Android, Windows]
