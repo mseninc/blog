@@ -16,13 +16,13 @@ WSL 上の **Ubuntu からカレントディレクトリーを Windows エクス
 
 ## 結論
 
-`~/.bashrc` を開き、最後に下記を追記して保存します。
+結論です。 `~/.bashrc` を開き、最後に下記を追記して保存します。
 
 ```sh:title=~/.bashrc
 alias open='/mnt/c/windows/explorer.exe .'
 ```
 
-あとは `open` を実行するだけです。
+あとは `open` を実行するだけです👏
 
 ## 説明
 
