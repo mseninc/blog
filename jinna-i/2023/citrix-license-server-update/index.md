@@ -1,6 +1,6 @@
 ---
 title: "[Citrix]ライセンステレメトリデータ収集に伴うライセンスサーバーのアップデート対応"
-date: 
+date: 2023-03-20
 author: jinna-i
 tags: [Citrix, Virtual Apps]
 description: "2023年3月31日までに対応が必要な Citrix ライセンスサーバーのアップデートの流れと、動作確認の方法を紹介しています。"
