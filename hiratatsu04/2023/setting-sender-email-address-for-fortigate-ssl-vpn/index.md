@@ -19,7 +19,7 @@ FortiGate では SSL VPN に二要素認証を設定できます。
 
 ![同じアドレスになる](images/same-address.png "同じアドレスになる")
 
-Gmail のサービスを利用していると問題ないですが、outlook などのサービスを利用していると迷惑メールに振り分けられてしまいます。
+Gmail のサービスを利用していると問題ないですが、Outlook などのサービスを利用していると迷惑メールに振り分けられてしまいます。
 
 そこで、送信元のメールアドレスを変更する方法を記事にしようと思います。
 
@@ -40,7 +40,7 @@ FortiGate の管理コンソールにログインします。
 
 [システム] > [設定] > [Eメールサービス] の **`デフォルトのリプライ先` に送信元として設定したいメールアドレスを設定します。**
 
-以下の例では、`no-reply@sample.com` を設定しています。
+以下の例では、`no-reply@example.com.com` を設定しています。
 
 ![GUI での設定](images/setting-gui.png "GUI での設定")
 
@@ -52,7 +52,7 @@ FortiGate の管理コンソールにログインします。
 
 ## 設定方法 (CLI)
 
-teraterm などで FortiGate にアクセスします。
+Tera Term などで FortiGate にアクセスします。
 
 アクセス後に以下コマンドを実行します。
 
@@ -62,15 +62,15 @@ teraterm などで FortiGate にアクセスします。
 <ホスト名> (email-server) # end
 ```
 
-たとえば、`no-reply@sample.com` を設定する場合は以下となります。
+たとえば、`no-reply@example.com.com` を設定する場合は以下となります。
 
 ```
 <ホスト名> # config system email-server
-<ホスト名> (email-server) # set reply-to no-reply@sample.com
+<ホスト名> (email-server) # set reply-to no-reply@example.com.com
 <ホスト名> (email-server) # end
 ```
 
-設定後に GUI から [システム] > [設定] > [Eメールサービス] を確認すると、デフォルトのリプライ先に `no-reply@sample.com` が設定されています。
+設定後に GUI から [システム] > [設定] > [Eメールサービス] を確認すると、デフォルトのリプライ先に `no-reply@example.com.com` が設定されています。
 
 ![デフォルトのリプライ先にアドレスが設定されている](images/setting-cli.png "デフォルトのリプライ先にアドレスが設定されている")
 
