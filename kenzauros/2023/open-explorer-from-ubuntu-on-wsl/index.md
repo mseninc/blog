@@ -1,6 +1,6 @@
 ---
 title: "[WSL] Ubuntu から Windows エクスプローラーを一発で開く"
-date: 
+date: 2023-03-22
 author: kenzauros
 tags: ["WSL","Ubuntu","Windows"]
 description: "WSL 上の Ubuntu からカレントディレクトリーを Windows エクスプローラーで開く方法を紹介します📂"
