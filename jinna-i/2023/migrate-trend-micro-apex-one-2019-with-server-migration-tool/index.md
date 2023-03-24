@@ -1,6 +1,6 @@
 ---
 title: "Server Migration Tool を使って Trend Micro Apex One 2019 を移行する"
-date: 
+date: 2023-03-24
 author: jinna-i
 tags: [Trend Micro, Apex One, ウィルスバスター]
 description: "Server Migration Tool を使って Trend Micro Apex One 2019 を移行する方法を紹介します"
