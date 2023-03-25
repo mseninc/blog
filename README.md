@@ -81,7 +81,7 @@ $ docker images -a | grep "blog-gatsby" | awk '{print $3}' | xargs docker rmi �
 
 ### 記事テンプレートの作成
 
-`make post` コマンドを使うと記事のスラグを指定するだけで
+`make post` コマンドを使うと
 
 1. 最新の release ブランチのチェックアウト
 1. Git ブランチ作成
