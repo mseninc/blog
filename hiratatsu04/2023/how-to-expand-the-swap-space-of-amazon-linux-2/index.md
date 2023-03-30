@@ -3,7 +3,7 @@ title: "Amazon Linux 2 の swap 領域を拡張する方法"
 date: 
 author: hiratatsu04
 tags: [Amazon Linux 2,AWS]
-description: "システムを運用しているとメモリーが枯渇してしまうことがあると思います。直接的な解決方法としてはメモリー増設だと思いますが、一時的なメモリー消費量が増えている場合では swap 容量を増やす対処も考えられます。そこで今回は、**Amazon Linux 2 環境で swap 領域を拡張する方法** を紹介します。"
+description: "システムを運用しているとメモリーが枯渇してしまうことがあると思います。直接的な解決方法としてはメモリー増設だと思いますが、一時的なメモリー消費量が増えている場合では swap 容量を増やす対処も考えられます。そこで今回は、ｆAmazon Linux 2 環境で swap 領域を拡張する方法を紹介します。"
 ---
 
 こんにちは、ひらたつです。
@@ -50,7 +50,7 @@ swap 容量を増やすということは、そのぶんディスク容量を使
 
 以下の手順を参考にしてください。
 
-[Amazon Linux 2 のディスク容量を拡張する方法 | MSeeeeN](https://mseeeen.msen.jp/how-to-expand-the-disk-space-of-amazon-linux-2/#%E6%BA%96%E5%82%99)
+[スナップショットの作成 - Amazon Linux 2 のディスク容量を拡張する方法 | MSeeeeN](https://mseeeen.msen.jp/how-to-expand-the-disk-space-of-amazon-linux-2/#%E6%BA%96%E5%82%99)
 
 また、**本作業時には一時的に swap 領域が使用できなくなります。**
 
@@ -58,7 +58,7 @@ swap 容量を増やすということは、そのぶんディスク容量を使
 
 ### swap 領域の無効化
 
-拡張前の状態を確認します。
+`swapon --show` コマンドで拡張前の状態を確認します。
 
 ```bash
 [ec2-user@hiratatsu04 ~]$ sudo swapon --show
@@ -66,13 +66,15 @@ NAME  TYPE  SIZE USED PRIO
 /swap file 1024M   0B   -2　　👈 swap は 1GB のみ（初期状態）
 ```
 
-まずは swap 領域を無効化します。
+まずは `swapoff -a` コマンドで swap 領域を無効化します。
 
 ```bash
 [ec2-user@hiratatsu04 ~]$ sudo swapoff -a
 ```
 
 無効化されているか確認します。
+
+`swapon --show` コマンドを実行し、何も表示されなければ無効化されています。
 
 ```bash
 [ec2-user@hiratatsu04 ~]$ sudo swapon -show
@@ -90,25 +92,40 @@ boot  etc  lib   local  mnt    proc  run   srv   tmp  var
 
 ### 新規 swap 領域の作成
 
-以下のコマンドで swap 領域を作成ください。
+以下の例では 2GB の swap 領域を作成しています。
 
-2GB の swap 領域を作成しています。
+まずは `dd` コマンドで指定サイズの空のファイルを作成します。
 
-他の容量にする時は `sudo dd if=/dev/zero of=/swap bs=1M count=2048` の `count=` の値を変更ください。
+2GB 以外の容量にする時は `count=2048` を任意の数値に変更ください。
 
-また、swap のファイル名や場所を変更する場合は、`of=/swap` を任意の値に変更ください。
+また、swap のファイル名や場所を変更する場合は、`of=/swap` を任意の場所に変更ください。
 
 ```bash
 [ec2-user@hiratatsu04 ~]$ sudo dd if=/dev/zero of=/swap bs=1M count=2048
 2048+0 records in
 2048+0 records out
 2147483648 bytes (2.1 GB) copied, 14.2129 s, 151 MB/s
+```
+
+`mkswap` コマンドで、作成したファイルをスワップ領域として使用できるようにします。
+
+```bash
 [ec2-user@hiratatsu04 ~]$ sudo mkswap /swap
 mkswap: /swap: insecure permissions 0644, 0600 suggested.
 Setting up swapspace version 1, size = 2 GiB (2147479552 bytes)
 no label, UUID=f78c7bdc-5a58-47b8-8792-665dc21ec129
+```
+
+`swapon` コマンドでスワップ領域を有効にします。
+
+```bash
 [ec2-user@hiratatsu04 ~]$ sudo swapon /swap
 swapon: /swap: insecure permissions 0644, 0600 suggested.
+```
+
+上記で提案されている通りにパーミッションを変更します。
+
+```bash
 [ec2-user@hiratatsu04 ~]$ sudo chmod 600 /swap
 ```
 
@@ -128,9 +145,8 @@ NAME  TYPE SIZE USED PRIO
 
 ### `/etc/fstab` 修正
 
-swap ファイルの名前や場所を変更していない場合は修正不要です。
-
-変更した場合は fstab の内容を修正ください。
+swap ファイルの名前や場所を変更した場合は fstab の内容を修正ください。  
+変更していない場合は修正不要です。
 
 ```bash
 [ec2-user@hiratatsu04 ~]$ cat /etc/fstab
