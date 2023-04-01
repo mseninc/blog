@@ -1,5 +1,5 @@
 ---
-title: "React で input の defaultValue を反映させる"
+title: "React で input の defaultValue の変更を反映させる"
 date: 
 author: kenzauros
 tags: [React.js]
