@@ -6,7 +6,7 @@ tags: [React.js]
 description: "React.js の非制御コンポーネントで初期値をマウント後に変更する方法を紹介します。初期値の変更を反映するには key 属性にも初期値を渡すことでコンポーネントを再描画します。"
 ---
 
-React.js の フォーム要素には**制御コンポーネント (controlled component)**と**非制御コンポーネント (uncontrolled component)**があります。フォーム要素とは `input` や `textarea` などを指します。
+React.js の フォーム要素には **制御コンポーネント (controlled component)** と **非制御コンポーネント (uncontrolled component)** があります。フォーム要素とは `input` や `textarea` などを指します。
 
 - [非制御コンポーネント – React](https://ja.reactjs.org/docs/uncontrolled-components.html)
 
@@ -26,7 +26,7 @@ React のメリットを活かすために、通常は制御コンポーネン�
 
 非制御コンポーネントの場合、最初に表示しておく値として、以下のように **`defaultValue`** を指定します。
 
-```jsx:title=React&nbsp;非制御コンポーネント
+```jsx:title=React非制御コンポーネント
 <input defaultValue={initialValue} />
 ```
 
@@ -35,7 +35,7 @@ React のメリットを活かすために、通常は制御コンポーネン�
 > コンポーネントのマウント後に defaultValue 属性の値を変更しても DOM 内の値の更新は引き起こされません。
 > <cite>[デフォルト値 - 非制御コンポーネント – React](https://ja.reactjs.org/docs/uncontrolled-components.html#default-values)</cite>
 
-試しに下記の CodePen を開き、 [change] ボタンを押してみてください。値自体は `hoge` と `fuga` が入れ替わっているのですが、 `input` に表示される文字は変化しないはずです。
+試しに下記の CodePen を開き、 [change] ボタンを押してみてください。 state 自体は `hoge` と `fuga` が入れ替わっているのですが、 `input` に表示される文字は変化しないはずです。
 
 - [Update React input's defaultValue - CodePen](https://codepen.io/kenzauros/pen/dyqEQep)
 
