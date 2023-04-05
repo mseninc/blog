@@ -50,7 +50,7 @@ Zabbix に限らず、Slack に届くメールから任意の項目を取り出�
 
 ![Add an OAuth Scope をクリック](images/5-add-permission.png "Add an OAuth Scope をクリック")
 
-下図のように `history` に関係する4つを追加ください。
+下図のように `history` に関係する4つを追加してください。
 
 - channels:history
 - groups:history
