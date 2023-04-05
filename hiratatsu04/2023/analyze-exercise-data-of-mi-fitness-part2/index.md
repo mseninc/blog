@@ -80,7 +80,7 @@ description: "前回は Mi Fitness のデータをエクスポートしました
 
 ### 全文
 
-```c#
+```cs
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -337,7 +337,7 @@ namespace analyze_mi_fitness
 
 ### ファイル読み込み
 
-```c#
+```cs
 private void SelectFileButton_Click(object sender, EventArgs e)
 {
     OpenFileDialog ofDialog = new OpenFileDialog();
@@ -377,7 +377,7 @@ private void SelectFileButton_Click(object sender, EventArgs e)
 3. json データを Dictionary 型に変換
 4. Dictionary 型データを List に格納する
 
-```c#
+```cs
 //指定したcsvを開く
 StreamReader sr = new StreamReader(@filePass);
 
@@ -420,7 +420,7 @@ using (TextFieldParser txtParser =
 }
 ```
 
-```c#
+```cs
 // JSON文字列をDictionary<string, dynamic>型に変換するメソッド
 public static Dictionary<string, dynamic> ParseJson(string json)
 {
@@ -454,7 +454,7 @@ private static dynamic JsonData(JsonElement elem)
 
 **[〔C#〕CSVのデータ内にカンマがあっても、カンマ区切りでデータを取得する - ぺやろぐ](https://www.peyarogu.com/entry/2016/05/08/182252)**
 
-```c#
+```cs
 / ランニングデータのみ取得する
 if (splittedResult[2] == "outdoor_running")
 {
@@ -481,7 +481,7 @@ json データを Dictionary 型に変換する部分は以下を参考にさせ
 
 ### Excel に出力
 
-```c#
+```cs
 private void ExcelOutPutEx(List<Dictionary<string, dynamic>> data)
 {
     //Excelオブジェクトの初期化
@@ -633,7 +633,7 @@ Excel への出力は `ExcelOutPutEx` 関数にまとめています。
 
 また、ペースは `distance` と `duration` から計算しています。
 
-```c#
+```cs
 // エクセルファイルにデータをセットする
 for (int i = 1; i < data.Count; i++)
 {
