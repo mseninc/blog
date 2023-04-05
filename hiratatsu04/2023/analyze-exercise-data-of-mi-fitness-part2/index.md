@@ -368,13 +368,13 @@ private void SelectFileButton_Click(object sender, EventArgs e)
 
 ダイアログを開いてファイルを指定し、`filePass` にパスを代入しています。
 
-### csv から json 部分を取り出し、Dictionary に格納
+### CSV から JSON 部分を取り出し、Dictionary に格納
 
-以下の流れで csv データを List に格納しています。
+以下の流れで CSV データを List に格納しています。
 
-1. csv データをカンマで区切る
-2. 区切ったデータからエクササイズデータ部分 (json 形式) を抜き出す
-3. json データを Dictionary 型に変換
+1. CSV データをカンマで区切る
+2. 区切ったデータからエクササイズデータ部分 (JSON 形式) を抜き出す
+3. JSON データを Dictionary 型に変換
 4. Dictionary 型データを List に格納する
 
 ```cs
@@ -446,9 +446,9 @@ private static dynamic JsonData(JsonElement elem)
 }
 ```
 
-始めは、csv データを一行読み込み、カンマで区切って配列への格納を試みました。
+始めは、CSV データを一行読み込み、カンマで区切って配列への格納を試みました。
 
-しかし、データの1つに json 形式のデータがあり、そこのカンマにも反応してしまいました。
+しかし、データの1つに JSON 形式のデータがあり、そこのカンマにも反応してしまいました。
 
 そこで以下を参考にさせていただき、データを抜き出すようにしています。
 
@@ -472,10 +472,10 @@ if (splittedResult[2] == "outdoor_running")
 上記の部分で、以下を実行しています。
 
 - ランニングデータのみに絞り込む
-- json 形式のデータを Dictionary 型に変更
+- JSON 形式のデータを Dictionary 型に変更
 - 指定の範囲に該当するデータのみをリスト (`data`) に追加
 
-json データを Dictionary 型に変換する部分は以下を参考にさせていただいています。
+JSON データを Dictionary 型に変換する部分は以下を参考にさせていただいています。
 
 **[\[C#\] JSON文字列をDictionaryに変換する](https://yaspage.com/cs-json-to-dictionary/)**
 
