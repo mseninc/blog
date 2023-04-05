@@ -1,5 +1,5 @@
 ---
-title: "一般のドメインユーザーがドメイン参加できる上限値を増やす"
+title: "Active Directory で一般のドメインユーザーがドメイン参加できる上限値を増やす"
 date: 
 author: jinna-i
 tags: [Windows, Windows Server,ActiveDirectory]
@@ -35,7 +35,7 @@ Active Directory では**一般のドメインユーザー (Domain Users権限) 
 - フォレストの機能レベル：Windows Server 2016
 
 
-### ドメインユーザーがドメイン参加させれる上限値を増やす
+### ドメインユーザーがドメイン参加させられる上限値を増やす
 
 [Windows 管理ツール] から [ADSI エディター] を起動します。
 
@@ -51,7 +51,7 @@ Active Directory では**一般のドメインユーザー (Domain Users権限) 
 
 ![上限値の変更](images/004.png)
 
-これで一般のドメインユーザーがドメイン参加できる上限値を変更できました。
+これで一般のドメインユーザーがドメイン参加させられるコンピューターの上限値を変更できました。
 
 再度ドメイン参加を試してみてください。
 
