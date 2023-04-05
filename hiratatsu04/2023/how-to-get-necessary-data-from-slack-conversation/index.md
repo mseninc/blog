@@ -52,10 +52,10 @@ Zabbix に限らず、Slack に届くメールから任意の項目を取り出�
 
 下図のように `history` に関係する4つを追加してください。
 
-- channels:history
-- groups:history
-- im:history
-- mpim:history
+- channels:history (説明：パブリックチャンネルのメッセージやその他のコンテンツの取得)
+- groups:history (説明：プライベートチャネルのメッセージやその他のコンテンツの取得)
+- im:history (説明：ダイレクトメッセージのメッセージやその他のコンテンツの取得)
+- mpim:history (説明：グループダイレクトメッセージのメッセージやその他のコンテンツの取得)
 
 ![OAuth Scope を追加する](images/6-select-history.png "OAuth Scope を追加する")
 
@@ -218,10 +218,10 @@ import datetime
 
 print("start")
 
-json_file = open('C:\\Users\\tatsuya-hirano\\Desktop\\test.json', 'r', encoding="utf-8")
+json_file = open('<保存したファイルのパスを記載ください>', 'r', encoding="utf-8")
 json_object = json.load(json_file)
 
-with open('C:\\Users\\tatsuya-hirano\\Desktop\\test.csv', 'w', newline="") as f:
+with open('<csvファイルを保存するファイルのパスを記載ください>', 'w', newline="") as f:
 
   for i in range(len(json_object["messages"])):
       name = json_object["messages"][i]["files"][0]["name"]
