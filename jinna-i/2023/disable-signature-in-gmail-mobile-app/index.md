@@ -1,6 +1,6 @@
 ---
 title: "Gmail スマホアプリで PC 版の署名が勝手に入るのを防止する方法"
-date: 
+date: 2023-04-05
 author: jinna-i
 tags: [iOS, Gmail]
 description: "Gmail スマホアプリで PC 版の署名を無効化する方法を紹介します。"
