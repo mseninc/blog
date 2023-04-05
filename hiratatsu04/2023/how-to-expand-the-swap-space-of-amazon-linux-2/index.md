@@ -2,7 +2,7 @@
 title: "Amazon Linux 2 の swap 領域を拡張する方法"
 date: 
 author: hiratatsu04
-tags: [Amazon Linux 2,AWS]
+tags: [Amazon Linux 2,EC2,AWS]
 description: "システムを運用しているとメモリーが枯渇してしまうことがあると思います。直接的な解決方法としてはメモリー増設だと思いますが、一時的なメモリー消費量が増えている場合では swap 容量を増やす対処も考えられます。そこで今回は、ｆAmazon Linux 2 環境で swap 領域を拡張する方法を紹介します。"
 ---
 
