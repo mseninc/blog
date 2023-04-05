@@ -215,7 +215,7 @@ chennel の上部にある「∨」押してください。
 
 以下の Python のコードを実行すると「通知メールの件名」と「通知日時」を抜き出した csv ファイルが出力されます。
 
-```python
+```python{13,14}
 import json
 import csv
 import datetime
