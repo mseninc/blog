@@ -22,6 +22,8 @@ Zabbix に限らず、Slack に届くメールから任意の項目を取り出�
 2. App のトークンを使って通知を取得する
 3. 取得したデータから必要な箇所のみ取り出す
 
+※ 3の工程で Python を使います。今回は Python を使う準備工程は省いています。
+
 ## Slack API で App を作成する
 
 **[Slack API: Applications | Slack](https://api.slack.com/apps)** にアクセスして、「Create an App」をクリックください。
@@ -211,7 +213,7 @@ chennel の上部にある「∨」押してください。
 
 必要に応じて取得する情報は変更してください。
 
-以下の Python のコードを実行してください。
+以下の Python のコードを実行すると「通知メールの件名」と「通知日時」を抜き出した csv ファイルが出力されます。
 
 ```python
 import json
