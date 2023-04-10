@@ -1,6 +1,6 @@
 ---
 title: "Ubuntu で Ruby 3.2.0 がインストールできない時の解決法"
-date: 
+date: 2023-04-10
 author: linkohta
 tags: [Ruby, Linux]
 description: "Ubuntu で Ruby 3.2.0 がインストールできない時の解決法について解説します。"
