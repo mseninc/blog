@@ -1,6 +1,6 @@
 ---
 title: "WSL 上で VS Code の Markdown PDF から PDF 出力ができないときの解決方法"
-date:
+date: 2023-04-14
 author: k-so16
 tags: [Visual Studio Code, WSL, Ubuntu]
 description: "WSL 上で VS Code の Markdown PDF から PDF 出力する際にエラーが発生した場合の対処方法を紹介します。"
