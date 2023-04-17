@@ -1,6 +1,6 @@
 ---
 title: "YAMAHAルーターでVPN接続にワンタイムパスワードを設定する方法"
-date: 
+date: 2023-04-17
 author: norikazum
 tags: [YAMAHA,L2TP,Lua,VPN]
 description: 
