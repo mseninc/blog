@@ -230,13 +230,13 @@ json_file = open('<保存したファイルのパスを記載ください>', 'r'
 json_object = json.load(json_file)
 
 with open('<csvファイルを保存するファイルのパスを記載ください>', 'w', newline="") as f:
-
+  
+  writer = csv.writer(f)
   for i in range(len(json_object["messages"])):
       name = json_object["messages"][i]["files"][0]["name"]
       timestamp_unix = json_object["messages"][i]["files"][0]["timestamp"]
       timestamp = datetime.datetime.fromtimestamp(timestamp_unix)
       
-      writer = csv.writer(f)
       writer.writerow([name, timestamp])
 
 print("end")
