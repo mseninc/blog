@@ -36,8 +36,8 @@ VPN (Virtual Private Network) で使われる2つの方式については以下�
 
  [Automatically provision a certificate | FortiGate / FortiOS 7.2.4](https://docs.fortinet.com/document/fortigate/7.2.4/administration-guide/822087/automatically-provision-a-certificate)
 
-- FortiGate の wan インタフェースの IP アドレスがグローバルネットワークに公開されていること
-- 上記アドレスにドメイン名が設定されていること
+- FortiGate の wan インタフェースの IP アドレスがインターネットに公開されていること
+- 上記 IP アドレスにドメイン名が設定されていること
 - ポート 80 が空いていること
 
     Let's Encrypt 証明書を設定する場合はポート 80 が空いている必要があります。詳細は以下を参照してください。  
