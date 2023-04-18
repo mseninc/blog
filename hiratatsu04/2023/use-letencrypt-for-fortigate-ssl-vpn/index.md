@@ -24,7 +24,7 @@ FortiGate の SSLVPN でサーバー証明書を設定せずにクライアン�
 
 ## 前提条件
 
- [Automatically provision a certificate | FortiGate / FortiOS 7.2.4](https://docs.fortinet.com/document/fortigate/7.2.4/administration-guide/822087/automatically-provision-a-certificate)
+[Automatically provision a certificate | FortiGate / FortiOS 7.2.4](https://docs.fortinet.com/document/fortigate/7.2.4/administration-guide/822087/automatically-provision-a-certificate)
 
 - FortiGate の wan インタフェースの IP アドレスがインターネットに公開されていること
 - 上記 IP アドレスにドメイン名が設定されていること
@@ -84,3 +84,10 @@ VPN を接続して、警告ウィンドウが表示されなくなっている�
 ご参考になれば幸いです。
 
 では、次の記事でお会いしましょう。
+
+## 参考
+
+FortiGate の公式 HP にも登録方法が載っています。
+今回はこちらを参考にして登録しました。
+
+[Automatically provision a certificate | FortiGate / FortiOS 7.2.4](https://docs.fortinet.com/document/fortigate/7.2.4/administration-guide/822087/automatically-provision-a-certificate)
