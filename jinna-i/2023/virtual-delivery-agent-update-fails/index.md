@@ -1,6 +1,6 @@
 ---
 title: "Citrix Virtual Apps 1912 LTSR で VDA のアップデートがエラーコード－4で失敗する"
-date: 
+date: 2023-04-21
 author: jinna-i
 tags: [Citrix, Virtual Apps]
 description: "Citrix Virtual Apps のアップデートでエラーが発生しました。その際の切り分けや回避策を紹介しています。"
