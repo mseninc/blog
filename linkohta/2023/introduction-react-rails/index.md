@@ -38,7 +38,7 @@ $ rails webpacker:install
 $ yarn add react react-dom @babel/preset-react prop-types css-loader style-loader mini-css-extract-plugin css-minimizer-webpack-plugin
 ```
 
-`package.json` の babel の設定を以下のように変更します。
+`package.json` の Babel の設定を以下のように変更します。
 
 ```js:title=package.json
 "babel": {
