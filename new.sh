@@ -1,13 +1,21 @@
 #!/bin/bash
 
 BOUNDARY=$(printf "=%0.s" {0..79})
+SLUG=$1
 
 if [ $# -ne 1 ]; then
-  echo "ERROR: 引数に記事のスラグを指定してください" 1>&2
+  echo "記事のスラグを入力してください"
+  echo "  スラグにはアルファベット・数字・ハイフンのみ使用できます (0-9, a-z, -)"
+  echo "  例: my-first-post"
+  read -e -p "> " SLUG
+fi
+
+if [ -z $SLUG ]; then
+  echo "ERROR: 記事のスラグを指定してください" 1>&2
   exit 1
 fi
 
-SLUG="${1,,}" # make slug lower-case
+SLUG="${SLUG,,}" # make slug lower-case
 
 if [ "`echo $SLUG | grep '[^0-9a-zA-Z-]'`" ]; then
   echo "ERROR: スラグにはアルファベット・数字・ハイフンのみ使用できます (0-9, a-z, -)" 1>&2
@@ -128,4 +136,5 @@ echo
 echo "ヒント"
 echo "  文章校正 (textlint) と構文チェック : F5 キー (2回目からは Ctrl+Shift+F5 キー) ※VS Code のみ"
 echo "  md ファイルを開く : code ${MD}"
+echo "  タグ一覧を見る : make taglist"
 echo "  アイキャッチ画像 : images/HERO.png または images/HERO.jpg に配置"
