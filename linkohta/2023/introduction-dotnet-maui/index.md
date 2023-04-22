@@ -1,14 +1,14 @@
 ---
-title: ".NET MAUI で Android アプリを作る方法"
+title: ".NET MAUI で MVVM な Android アプリを作る第一歩"
 date: 
 author: linkohta
 tags: [.NET MAUI, Android, Windows]
-description: "共有コードベースから、 Android, iOS, macOS, Windows で実行できるアプリを開発できる .NET MAUI を使ってAndroid アプリを作る方法を紹介しています。"
+description: "共有コードベースから、 Android, iOS, macOS, Windows で実行できるアプリを開発できる .NET MAUI を使ってAndroid アプリを作る第一歩を紹介しています。"
 ---
 
 link です。
 
-今回は **.NET MAUI** を使って Android アプリを作る方法を紹介します。
+今回は **.NET MAUI** を使って MVVM な Android アプリを作る第一歩を紹介します。
 
 ## 想定環境
 
@@ -179,7 +179,7 @@ WPF などと同じ .NET 系のフレームワークなだけあって、ほぼ�
 
 ## まとめ
 
-今回は .NET MAUI を使って Android アプリを作る方法を紹介しました。
+今回は .NET MAUI を使って MVVM な Android アプリを作る第一歩を紹介しました。
 
 WPF とほぼ同じ感覚で Android アプリを開発できるので活用していければと思います。
 
