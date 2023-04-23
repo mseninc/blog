@@ -40,7 +40,7 @@ FortiGate の管理コンソールにログインします。
 
 [システム] > [設定] > [Eメールサービス] の **`デフォルトのリプライ先` に送信元として設定したいメールアドレスを設定します。**
 
-以下の例では、`no-reply@example.com.com` を設定しています。
+以下の例では、`no-reply@example.com` を設定しています。
 
 ![GUI での設定](images/setting-gui.png "GUI での設定")
 
