@@ -1,6 +1,6 @@
 ---
 title: "[Node-RED] グローバル関数を定義して function ノードで共通関数を使う"
-date: 
+date: 2023-04-24
 author: kenzauros
 tags: ["Node-RED","JavaScript"]
 description: "Node-RED は、フローベースのプログラミングツールであり、ノードを繋げることでフローを作成できます。この記事では、Node-RED でグローバルコンテキストに共通関数を定義して、 `function` ノードで使用する方法について説明します。"
