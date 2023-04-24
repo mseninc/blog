@@ -8,7 +8,7 @@ description: GAS を使って Todoist から取ってきた今日のタスクを
 
 こんにちは、じゅんじゅんです。
 
-この記事はGAS を使って Todoist に登録してある今日のタスクを自動的に Slack に投稿してくれるボットを作る方法の後編です。
+この記事はGAS を使って Todoist に登録してある今日のタスクを自動的に Slack に投稿してくれる bot を作る方法の後編です。
 
 前編はこちら → [[GAS] Todoist から取ってきた今日のタスクを Slack に投稿する【前編】](https://mseeeen.msen.jp/post-todays-todoist-task-in-gas-to-slack-part1)
 
@@ -200,7 +200,7 @@ function postToSlack() {
 }
 ```
 
-では実際に Slack に投稿してみます。GAS の ① の部分 (実行するメソッド) を `postToSlack()` に設定し、「実行」をクリックします。
+では実際に Slack へ投稿してみます。GAS の ① の部分 (実行するメソッド) を `postToSlack()` に設定し、「実行」をクリックします。
 
 ![GAS で postToSlack() を実行](images/13.png "GAS で postToSlack() を実行")
 
@@ -210,7 +210,7 @@ function postToSlack() {
 
 ### GAS を定期実行させる
 
-最後に、この GAS を毎朝定期実行させるための設定を行います。
+最後に、この GAS を毎朝定期実行させるための設定をします。
 
 GAS の画面左の時計のマークをクリックします。
 
@@ -220,7 +220,7 @@ GAS の画面左の時計のマークをクリックします。
 
 ![「トリガーを追加」をクリック](images/16.png "「トリガーを追加」をクリック")
 
-「PostTasksBot のトリガーを編集」というモーダルが開きました。この画面では GAS をどのようなタイミングで実行するかを細かく指定することができます。
+「PostTasksBot のトリガーを編集」というモーダルが開きました。この画面では GAS をどのようなタイミングで実行するかを細かく指定できます。
 
 ![PostTasksBot のトリガーを編集](images/17.png "PostTasksBot のトリガーを編集")
 
@@ -236,7 +236,7 @@ GAS の画面左の時計のマークをクリックします。
 
 ### あとがき
 
-今回は GAS という便利なツールと、 Todoist 、Slack の API を使って、割と簡単に日々の作業を自動化することができました。
+今回は GAS という便利なツールと、 Todoist 、Slack の API を使って、割と簡単に日々の作業を自動化できました。
 
 以下のページからたくさんの API を探すことができるので、もっといろんな API の組み合わせを試してみようと思います。
 

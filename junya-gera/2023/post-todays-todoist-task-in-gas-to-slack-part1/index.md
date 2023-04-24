@@ -10,7 +10,7 @@ description: GAS を使って Todoist から取ってきた今日のタスクを
 
 弊社ではチャットツールに Slack を使用しており、毎朝その日にやることを投稿しています。
 
-今回は GAS を使って Todoist に登録してある今日のタスクを自動的に Slack に投稿してくれるボットを作る方法を紹介します。
+今回は GAS を使って Todoist に登録してある今日のタスクを自動的に Slack に投稿してくれる bot を作る方法を紹介します。
 
 Todoist から今日のタスクを取ってくるところを前編、取ってきたタスクを Slack に投稿するところを後編でお送りします。
 
@@ -87,7 +87,7 @@ function getTasks() {
 
 [Todoist API の公式ドキュメント](https://developer.todoist.com/rest/v2/?shell#get-active-tasks)
 
-クエリパラメータを `?filter=today` とすることで、今日のタスクに絞って取得することができます。
+クエリーパラメーターを `?filter=today` とすることで、今日のタスクに絞って取得できます。
 
 16 行目の GAS の `UrlFetchApp` で `fetch` メソッドを使用することで、引数に指定した URL に対し HTTP リクエストを送ることができます。
 
@@ -175,7 +175,7 @@ function getTasks() {
 - テスト3
 ```
 
-これで今日のタスクのタイトルを取得することができました。
+これで今日のタスクのタイトルを取得できました。
 
 後編ではこれを Slack に投稿する方法を解説します。
 
