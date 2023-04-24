@@ -3,16 +3,18 @@ title: "[GAS] Todoist から取ってきた今日のタスクを Slack に投稿
 date: 
 author: junya-gera
 tags: [GAS, Todoist, Slack]
-description: 
+description: GAS を使って Todoist から取ってきた今日のタスクを Slack に投稿する方法を解説します。前編では Todoist から今日のタスクを取得する部分を解説します。
 ---
 
 こんにちは、じゅんじゅんです。
 
 弊社ではチャットツールに Slack を使用しており、毎朝その日にやることを投稿しています。
 
-今回は貴重な朝の時間を少しでも活用するため、GAS を使って Todoist に登録してある今日のタスクを自動的に Slack に投稿してくれるボットを作る方法を紹介します。
+今回は GAS を使って Todoist に登録してある今日のタスクを自動的に Slack に投稿してくれるボットを作る方法を紹介します。
 
 Todoist から今日のタスクを取ってくるところを前編、取ってきたタスクを Slack に投稿するところを後編でお送りします。
+
+後編はこちら → [[GAS] Todoist から取ってきた今日のタスクを Slack に投稿する【後編】](https://mseeeen.msen.jp/post-todays-todoist-task-in-gas-to-slack-part2)
 
 ## Todoist の API トークンを取得する
 
@@ -60,12 +62,12 @@ Google ドライブにアクセスします。
 ```js{numberLines:1}
 function getTasks() {
   // Todoist の API トークン 
-  const TODOIST_TOKEN = '***********';
-  const ENDPOINT = 'https://api.todoist.com/rest/v2/tasks?filter=today';
+  const todoistToken = '***********';
+  const endpoint = 'https://api.todoist.com/rest/v2/tasks?filter=today';
 
   const headers = {
     'Content-Type': 'application/json',
-    'Authorization': 'Bearer ' + TODOIST_TOKEN,
+    'Authorization': 'Bearer ' + todoistToken,
   }
 
   const params = {
@@ -73,21 +75,21 @@ function getTasks() {
     'headers': headers,
   }
 
-  const tasks = JSON.parse(UrlFetchApp.fetch(ENDPOINT, params).getContentText());
+  const tasks = JSON.parse(UrlFetchApp.fetch(endpoint, params).getContentText());
   const taskTitles = tasks.map(task => '- ' + task.content).join('\n');
   console.log(taskTitles);
 }
 ```
 
-3 行目、定数 `TODOIST_TOKEN` にはあらかじめ控えておいた Todoist API トークンを入れます。
+3 行目の定数 `TODOIST_TOKEN` にはあらかじめ控えておいた Todoist API トークンを入れます。
 
-4 行目、定数 `ENDPOINT` には、タスクを取得する Todoist API のエンドポイントを入れます。
+4 行目の定数 `ENDPOINT` には、タスクを取得する Todoist API のエンドポイントを入れます。
 
 [Todoist API の公式ドキュメント](https://developer.todoist.com/rest/v2/?shell#get-active-tasks)
 
 クエリパラメータを `?filter=today` とすることで、今日のタスクに絞って取得することができます。
 
-16 行目、 GAS の `UrlFetchApp` で `fetch` メソッドを使用することで、引数に指定した URL に対し HTTP リクエストを送ることができます。
+16 行目の GAS の `UrlFetchApp` で `fetch` メソッドを使用することで、引数に指定した URL に対し HTTP リクエストを送ることができます。
 
 [GAS の公式ドキュメント](https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app?hl=ja)
 
