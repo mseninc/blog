@@ -81,9 +81,8 @@ function getTasks() {
 }
 ```
 
-3 行目の定数 `TODOIST_TOKEN` にはあらかじめ控えておいた Todoist API トークンを入れます。
-
-4 行目の定数 `ENDPOINT` には、タスクを取得する Todoist API のエンドポイントを入れます。
+3 行目の定数 `todoistToken` にはあらかじめ控えておいた Todoist API トークンを入れます。
+4 行目の定数 `endpoint` には、タスクを取得する Todoist API のエンドポイントを入れます。
 
 [Todoist API の公式ドキュメント](https://developer.todoist.com/rest/v2/?shell#get-active-tasks)
 
