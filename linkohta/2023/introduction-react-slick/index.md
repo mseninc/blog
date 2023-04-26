@@ -1,6 +1,6 @@
 ---
 title: "slick を React に移植する方法"
-date: 
+date: 2023-04-26
 author: linkohta
 tags: [slick, React, Web]
 description: "Web ページ上でスライダーを作成できるプラグイン「slick」を紹介しています。"
