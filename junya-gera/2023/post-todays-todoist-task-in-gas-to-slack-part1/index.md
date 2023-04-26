@@ -92,7 +92,7 @@ function getTasks() {
 
 [GAS の公式ドキュメント](https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app?hl=ja)
 
-返される HTTP レスポンスに対し `getContentText` メソッドを使用することで文字列に変換します。ここではさらに `JSON.parse` することでオブジェクトにしています。
+返される HTTP レスポンスに対し `getContentText` メソッドを使用することでコンテンツを文字列に変換します。ここではさらに `JSON.parse` することでオブジェクトにしています。
 
 変数 `tasks` は以下のような状態になっています。
 
