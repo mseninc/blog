@@ -1,5 +1,5 @@
 ---
-title: "Slack へのメール通知から必要な内容のみを取得する方法"
+title: "Slack へのメール通知から必要な情報のみを取得する方法"
 date: 
 author: hiratatsu04
 tags: [Slack]
@@ -91,7 +91,7 @@ Zabbix に限らず、Slack に届くメールから任意の項目を取り出�
 
 次に通知を取得したい Slack の channel を開いてください。
 
-chennel の上部にある「∨」押してください。
+channel の上部にある「∨」押してください。
 
 ![∨ を押す](images/10-get-channel-id-1.png "∨ を押す")
 
@@ -206,16 +206,16 @@ chennel の上部にある「∨」押してください。
 }
 ```
 
-## 必要な情報のみ取得する
+## 必要な情報のみフィルタリングする
 
-上記で保存したデータから必要な情報のみを取得します。
+上記で保存したデータから必要な情報のみをフィルタリングします。
 
-今回は **「通知メールの件名」** と **「通知日時」** を取得しています。
+今回は **「通知メールの件名」** と **「通知日時」** のみを取得します。
 
-`name` で「通知メールの件名」を取得し、`timestamp` で「通知日時」を取得しています。  
+`name` で「通知メールの件名」を選択し、`timestamp` で「通知日時」を選択しています。  
 ※ `timestamp` は UNIX 形式ですので、日付文字列に変更しています。
 
-必要に応じて取得する情報は変更してください。
+必要に応じてフィルタリングする情報は変更してください。
 
 以下の Python のコードを実行すると「通知メールの件名」と「通知日時」を抜き出した csv ファイルが出力されます。
 
@@ -233,11 +233,11 @@ with open('<csvファイルを保存するファイルのパスを記載くだ�
   
   writer = csv.writer(f)
   for i in range(len(json_object["messages"])):
-      name = json_object["messages"][i]["files"][0]["name"]
-      timestamp_unix = json_object["messages"][i]["files"][0]["timestamp"]
-      timestamp = datetime.datetime.fromtimestamp(timestamp_unix)
-      
-      writer.writerow([name, timestamp])
+    name = json_object["messages"][i]["files"][0]["name"]
+    timestamp_unix = json_object["messages"][i]["files"][0]["timestamp"]
+    timestamp = datetime.datetime.fromtimestamp(timestamp_unix)
+    
+    writer.writerow([name, timestamp])
 
 print("end")
 ```
@@ -249,7 +249,7 @@ print("end")
 
 ![csvデータの中身](images/13-result.png "csvデータの中身")
 
-これで必要な情報のみ取得できました。
+これで必要な情報のみを保存できました。
 
 ## 最後に
 
@@ -257,4 +257,4 @@ print("end")
 
 ご参考になれば幸いです。
 
-次の記事でお会いしましょう。
+では、次の記事でお会いしましょう。
