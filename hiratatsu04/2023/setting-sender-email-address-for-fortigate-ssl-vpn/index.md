@@ -62,15 +62,15 @@ Tera Term などで FortiGate にアクセスします。
 <ホスト名> (email-server) # end
 ```
 
-たとえば、`no-reply@example.com.com` を設定する場合は以下となります。
+たとえば、`no-reply@example.com` を設定する場合は以下となります。
 
 ```
 <ホスト名> # config system email-server
-<ホスト名> (email-server) # set reply-to no-reply@example.com.com
+<ホスト名> (email-server) # set reply-to no-reply@example.com
 <ホスト名> (email-server) # end
 ```
 
-設定後に GUI から [システム] > [設定] > [Eメールサービス] を確認すると、デフォルトのリプライ先に `no-reply@example.com.com` が設定されています。
+設定後に GUI から [システム] > [設定] > [Eメールサービス] を確認すると、デフォルトのリプライ先に `no-reply@example.com` が設定されています。
 
 ![デフォルトのリプライ先にアドレスが設定されている](images/setting-cli.png "デフォルトのリプライ先にアドレスが設定されている")
 
