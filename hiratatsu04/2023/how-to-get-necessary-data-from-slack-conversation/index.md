@@ -226,10 +226,10 @@ import datetime
 
 print("start")
 
-json_file = open('<保存したファイルのパスを記載ください>', 'r', encoding="utf-8")
+json_file = open('/path/to/source.json', 'r', encoding="utf-8")
 json_object = json.load(json_file)
 
-with open('<csvファイルを保存するファイルのパスを記載ください>', 'w', newline="") as f:
+with open('/path/to/destination.csv', 'w', newline="") as f:
   
   writer = csv.writer(f)
   for i in range(len(json_object["messages"])):
@@ -241,9 +241,6 @@ with open('<csvファイルを保存するファイルのパスを記載くだ�
 
 print("end")
 ```
-
-※`<保存したファイルのパスを記載ください>` は `C:\\test.json` のように記載ください。  
-※`<csvファイルを保存するファイルのパスを記載ください>` は `C:\\test.csv` のように記載ください。
 
 上記を実行すると、下図のように出力されます。
 
