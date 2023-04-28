@@ -303,12 +303,12 @@ private void ExcelOutput(List<Dictionary<string, dynamic>> data)
                 {
                     DateTimeOffset dateTime = DateTimeOffset.FromUnixTimeSeconds(decimal.ToInt64(data[i - 1]["time"])).ToLocalTime();
                     
-                    Decimal distance_km = data[i - 1]["distance"] / 1000;
-                    Decimal duration_min = data[i - 1]["duration"] / 60;
-                    Decimal pace = duration_min / distance_km;
+                    Decimal distanceKm = data[i - 1]["distance"] / 1000;
+                    Decimal durationMin = data[i - 1]["duration"] / 60;
+                    Decimal pace = durationMin / distanceKm;
 
-                    int paceMinKm = decimal.ToInt32(data[i - 1]["duration"] / distance_km) / 60;
-                    int paceSecKm = decimal.ToInt32(data[i - 1]["duration"] / distance_km) % 60;
+                    int paceMinKm = decimal.ToInt32(data[i - 1]["duration"] / distanceKm) / 60;
+                    int paceSecKm = decimal.ToInt32(data[i - 1]["duration"] / distanceKm) % 60;
 
                     // Excelにデータをセット
                     switch (j)
