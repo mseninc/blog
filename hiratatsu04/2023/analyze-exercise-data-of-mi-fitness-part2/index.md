@@ -44,11 +44,11 @@ description: "前回は Mi Fitness のデータをエクスポートしました
 ![出力データ例](images/exported-date.png "出力データ例")
 
 以下のデータを出力します。
-- ランニングを実施した日時 (2通り (日時 と 日にち))
+- ランニングを実施した日時 (「日にち+時間」と「日にちのみ」の2通り)
 - 平均心拍数 [bpm]
 - 走行距離 [m]
 - 所要時間 [s]
-- 平均ペース（2通り ([min] と [min:s])）
+- 平均ペース（[min] と [min:s] の2通り）
 
 ## データ分析
 
@@ -62,7 +62,7 @@ description: "前回は Mi Fitness のデータをエクスポートしました
 
 初めのころは距離も短く、タイムも遅いのが分かります。
 
-半年、1年くらいたったころから次第に距離を伸ばし始め、タイムも縮んできています。
+半年、1年くらい経過したころから次第に距離を伸ばし始め、タイムも縮んできています。
 
 成長を感じます。
 
@@ -84,14 +84,16 @@ description: "前回は Mi Fitness のデータをエクスポートしました
 
 https://github.com/hiratatsu04/analyze-mi-fitness.git
 
-### CSV から JSON 部分を取り出し、Dictionary に格納
+### 1. CSV から JSON 部分を取り出し、Dictionary に格納
 
 以下の流れで CSV データを List に格納しています。
 
 1. CSV データをカンマで区切る
-2. 区切ったデータからエクササイズデータ部分 (JSON 形式) を抜き出す
+2. 区切ったデータから運動データの詳細 (JSON 形式) を抜き出す
 3. JSON データを Dictionary 型に変換
 4. Dictionary 型データを List に格納する
+
+#### 1-1. CSV データをカンマで区切る
 
 始めは、CSV データを一行読み込み、カンマで区切って配列への格納を試みました。
 
@@ -101,13 +103,7 @@ https://github.com/hiratatsu04/analyze-mi-fitness.git
 
 **[〔C#〕CSVのデータ内にカンマがあっても、カンマ区切りでデータを取得する - ぺやろぐ](https://www.peyarogu.com/entry/2016/05/08/182252)**
 
-```cs:title=CSVデータを取得し、カンマで区切ったデータからエクササイズデータ部分(JSON形式)を抜き出す
-//指定したcsvを開く
-StreamReader sr = new StreamReader(@filePass);
-
-// json 形式のデータを格納する変数を用意
-List<Dictionary<string, dynamic>> data = new List<Dictionary<string, dynamic>>();
-
+```cs{numberLines:1}{8-20}:title=JSONのカンマを無視して、CSVデータをカンマで区切る
 // ファイル名と文字エンコードを指定してパーサを実体化
 using (TextFieldParser txtParser =
     new TextFieldParser(
@@ -116,6 +112,7 @@ using (TextFieldParser txtParser =
 {
     // 内容は区切り文字形式
     txtParser.TextFieldType = FieldType.Delimited;
+
     // デリミタはカンマ
     txtParser.SetDelimiters(",");
 
@@ -125,6 +122,103 @@ using (TextFieldParser txtParser =
         // 一行を読み込んで配列に結果を受け取る
         string[] splittedResult = txtParser.ReadFields();
 
+        ...
+    }
+
+    // エクセルに出力
+    ExcelOutput(data);
+}
+```
+
+#### 1-2. 区切ったデータから運動データの詳細 (JSON 形式) を抜き出す
+
+1-1の作業でカンマで区切られたデータが `splittedResult` に格納されています。
+
+`splittedResult` は2次元配列となっており、各要素の3列目にトレーニング種類、6列目にトレーニングの詳細データが格納されています。
+
+11行目でランニングデータ (`splittedResult[2] == "outdoor_running`) のみを選択し、14行目の `splittedResult[5]` でトレーニングの詳細データを抜き出しています。
+
+```cs{numberLines:1}{11-16}:title=区切ったデータから運動データの詳細(JSON形式)を抜き出す
+...
+{
+    ...
+    // ファイルの終わりまで一行ずつ処理
+    while (!txtParser.EndOfData)
+    {
+        // 一行を読み込んで配列に結果を受け取る
+        string[] splittedResult = txtParser.ReadFields();
+  
+        // ランニングデータのみ取得する
+        if (splittedResult[2] == "outdoor_running")
+        {
+            // splittedResult[5] の json 型データを Dictionary 型に変換
+            Dictionary<string, dynamic> dic = ParseJson(splittedResult[5]);
+            ...
+        }
+    }
+}
+...
+```
+
+#### 1-3. JSON データを Dictionary 型に変換
+
+`ParseJson()` 関数で JSON 形式のデータを `Dictionary<string, dynamic>` 型に変換しています。
+
+JSON データを Dictionary 型に変換する部分は以下を参考にさせていただいています。
+
+**[\[C#\] JSON文字列をDictionaryに変換する](https://yaspage.com/cs-json-to-dictionary/)**
+
+```cs{numberLines:1}{8,16-35}:title=JSONデータをDictionary型に変換
+...
+{
+    ...
+    {
+        ...
+        {
+            // splittedResult[5] の json 型データを Dictionary 型に変換
+            Dictionary<string, dynamic> dic = ParseJson(splittedResult[5]);
+            ...
+        }
+    }
+...
+}
+  
+// JSON文字列をDictionary<string, dynamic>型に変換するメソッド
+public static Dictionary<string, dynamic> ParseJson(string json)
+{
+    // JSON文字列をDictionary<string, JsonData>型に変換
+    Dictionary<string, JsonElement> dic = JsonSerializer.Deserialize<Dictionary<string, JsonElement>>(json);
+  
+    // JsonElementから値を取り出してdynamic型に入れてDictionary<string, dynamic>型で返す
+    return dic.ToDictionary(d => d.Key, d => JsonData(d.Value));
+}
+  
+private static dynamic JsonData(JsonElement elem)
+{
+    switch (elem.ValueKind)
+    {
+        case JsonValueKind.String:
+            return elem.GetString();
+        case JsonValueKind.Number:
+            return elem.GetDecimal();
+    }
+    return elem;
+}
+```
+
+#### 1-4. Dictionary 型データを List に格納する
+
+2行目で Dictionary 型のリスト `data` を作成します。
+
+14行目で、[フォームで入力された距離]と[作業1-3で作成したデータの距離]を比較し、特定の要素のみを `data` に追加します。
+
+```cs{numberLines:1}{2,14-17}:title=Dictionary型データをListに格納する
+// json 形式のデータを格納する変数を用意
+List<Dictionary<string, dynamic>> data = new List<Dictionary<string, dynamic>>();
+...
+{
+    ...
+    {
         // ランニングデータのみ取得する
         if (splittedResult[2] == "outdoor_running")
         {
@@ -144,59 +238,7 @@ using (TextFieldParser txtParser =
 }
 ```
 
-```cs:title=JSONデータをDictionary型に変換する
-// JSON文字列をDictionary<string, dynamic>型に変換するメソッド
-public static Dictionary<string, dynamic> ParseJson(string json)
-{
-    // JSON文字列をDictionary<string, JsonData>型に変換
-    Dictionary<string, JsonElement> dic = JsonSerializer.Deserialize<Dictionary<string, JsonElement>>(json);
-
-    // JsonElementから値を取り出してdynamic型に入れてDictionary<string, dynamic>型で返す
-    return dic.Select(d => new { key = d.Key, value = JsonData(d.Value) })
-    .ToDictionary(a => a.key, a => a.value);
-}
-
-private static dynamic JsonData(JsonElement elem)
-{
-    switch (elem.ValueKind)
-    {
-        case JsonValueKind.String:
-            return elem.GetString();
-        case JsonValueKind.Number:
-            return elem.GetDecimal();
-    }
-
-    return elem;
-}
-```
-
-下記のコードで、以下を処理を実行しています。
-
-- ランニングデータのみにフィルタリング
-- JSON 形式のデータを Dictionary 型に変換
-- 指定の範囲に該当するデータのみをリスト (`data`) に追加
-
-JSON データを Dictionary 型に変換する部分は以下を参考にさせていただいています。
-
-**[\[C#\] JSON文字列をDictionaryに変換する](https://yaspage.com/cs-json-to-dictionary/)**
-
-
-```cs:title=ランニングデータのみにフィルタリングし、JSON形式のデータをDictionary型に変換する
-/ ランニングデータのみ取得する
-if (splittedResult[2] == "outdoor_running")
-{
-    // splittedResult[5] の json 型データを Dictionary 型に変換
-    Dictionary<string, dynamic> dic = ParseJson(splittedResult[5]);
-
-    // 指定の範囲のデータのみ取り出し、data に格納
-    if (dic["distance"] > Decimal.Parse(MinDistanceRangeComboBox.SelectedItem.ToString()) * 1000 && dic["distance"] < Decimal.Parse(MaxDistanceRangeComboBox.Text.ToString()) * 1000)
-    {
-        data.Add(dic);
-    }
-}
-```
-
-### Excel に出力
+### 2. Excel に出力
 
 Excel への出力は `ExcelOutput` 関数にまとめています。
 
@@ -206,7 +248,15 @@ Excel への出力は `ExcelOutput` 関数にまとめています。
 
 引数として、Dictionary 型データを格納した List を指定しています。
 
-```cs
+ハイライト部分でデータを Excel の各セルに格納しています。
+
+データが Dictionary 型ですので、`key` を指定してデータを抜き出しています。
+
+日付データは扱いやすいように、`dateTime.Date` で日付のみを抜き出しています。
+
+また、ペースは `distance` と `duration` から計算しています。
+
+```cs{numberLines:1}{33-87}:title=ExcelOutput関数
 private void ExcelOutput(List<Dictionary<string, dynamic>> data)
 {
     //Excelオブジェクトの初期化
@@ -294,117 +344,8 @@ private void ExcelOutput(List<Dictionary<string, dynamic>> data)
                 }
             }
         }
-
-        // SaveFileDialogを表示
-        SaveFileDialog saveFileDialog = new SaveFileDialog();
-
-        //ダイアログのタイトルを指定する
-        saveFileDialog.Title = "ファイルを保存する";
-        // デフォルトのフォルダを指定する
-        saveFileDialog.InitialDirectory = @"C:";
-
-        // デフォルトファイル名
-        saveFileDialog.FileName = @"output.xlsx";
-
-        //ダイアログを表示する
-        if (saveFileDialog.ShowDialog() == DialogResult.OK)
-        {
-            wb.SaveAs(saveFileDialog.FileName);
-            wb.Close(false);
-            excelApp.Quit();
-        }
-        else
-        {
-            Console.WriteLine("キャンセルされました");
-        }
-
-        // オブジェクトを破棄する
-        saveFileDialog.Dispose();
-
-        ProgressLabel.Text = "出力完了";
     }
-    finally
-    {
-        //Excelのオブジェクトを開放し忘れているとプロセスが落ちないため注意
-        Marshal.ReleaseComObject(ws);
-        Marshal.ReleaseComObject(shs);
-        Marshal.ReleaseComObject(wb);
-        Marshal.ReleaseComObject(wbs);
-        Marshal.ReleaseComObject(excelApp);
-        ws = null;
-        shs = null;
-        wb = null;
-        wbs = null;
-        excelApp = null;
-
-        GC.Collect();
-    }
-}
-```
-
-以下の部分でデータを Excel の各セルに格納しています。
-
-データが Dictionary 型ですので、`key` を指定してデータを抜き出しています。
-
-日付データは扱いやすいように、`dateTime.Date` で日付のみを抜き出しています。
-
-また、ペースは `distance` と `duration` から計算しています。
-
-```csrange
-// エクセルファイルにデータをセットする
-for (int i = 1; i < data.Count; i++)
-{
-    ProgressLabel.Text = $"{i} / {data.Count - 1}";
-
-    for (int j = 1; j < 8; j++)
-    {
-        // Excelのcell指定
-        Excel.Range range = ws.Cells[i + 1, j];
-
-        try
-        {
-            DateTime dateTime = DateTimeOffset.FromUnixTimeSeconds(decimal.ToInt64(data[i - 1]["time"])).ToLocalTime();
-            
-            Decimal distance_km = data[i - 1]["distance"] / 1000;
-            Decimal duration_min = data[i - 1]["duration"] / 60;
-            Decimal pace = duration_min / distance_km;
-
-            int paceMinKm = decimal.ToInt32(data[i - 1]["duration"] / distance_km) / 60;
-            int paceSecKm = decimal.ToInt32(data[i - 1]["duration"] / distance_km) % 60;
-
-            // Excelにデータをセット
-            switch (j)
-            {
-                case 1:
-                    range.Value2 = dateTime.ToString();
-                    break;
-                case 2:
-                    range.Value2 = dateTime.Date.ToString();
-                    break;
-                case 3:
-                    range.Value2 = data[i - 1]["avg_hrm"];
-                    break;
-                case 4:
-                    range.Value2 = data[i - 1]["distance"];
-                    break;
-                case 5:
-                    range.Value2 = data[i - 1]["duration"];
-                    break;
-                case 6:
-                    range.Value2 = pace.ToString("0.00");
-                    break;
-                case 7:
-                    range.Value2 = $"0:{paceMinKm}:{paceSecKm}";
-                    break;
-            }
-        }
-        finally
-        {
-            // Excelのオブジェクトはループごとに開放する
-            Marshal.ReleaseComObject(range);
-            range = null;
-        }
-    }
+...
 }
 ```
 
