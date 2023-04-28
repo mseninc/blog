@@ -1,6 +1,6 @@
 ---
 title: ".NET MAUI で MVVM な Android アプリを作る第一歩"
-date: 
+date: 2023-04-28
 author: linkohta
 tags: [.NET MAUI, Android, Windows]
 description: "共有コードベースから、 Android, iOS, macOS, Windows で実行できるアプリを開発できる .NET MAUI を使ってAndroid アプリを作る第一歩を紹介しています。"
