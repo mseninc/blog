@@ -1,6 +1,6 @@
 ---
 title: "Active Directory で一般のドメインユーザーがドメイン参加できる上限値を増やす"
-date: 
+date: 2023-05-01
 author: jinna-i
 tags: [Windows, Windows Server,ActiveDirectory]
 description: "一般のドメインユーザーではコンピューターをドメイン参加させることのできる台数に制限があります。この上限値を増やす方法や運用で回避する方法を紹介します。"
