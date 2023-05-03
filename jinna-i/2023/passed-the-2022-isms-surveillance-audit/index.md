@@ -1,6 +1,6 @@
 ---
 title: "2022年度 ISMS サーベイランス審査を通過しました"
-date: 
+date: 2023-05-03
 author: jinna-i
 tags: [ISMS, 〇〇奮闘記]
 description: "MSEN では ISMS に取り組んでいます。今回、2022年度のサーベイランス審査を通過しましたのでその様子を紹介します。"
