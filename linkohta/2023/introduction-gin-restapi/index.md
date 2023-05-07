@@ -109,10 +109,10 @@ func main() {
 
 書き換え後の `main.go` の `setupRouter()` で使っている関数について解説します。
 
-- `gin.Default()` : ウェブサーバーを生成
-- `Params.ByName()` : パスパラメータを取得
-- `Query()` : クエリパラメータを取得
-- `PostForm()` : フォームパラメータを取得
+- `gin.Default()` : Web サーバーを生成
+- `Params.ByName()` : パスパラメーターを取得
+- `Query()` : クエリーパラメーターを取得
+- `PostForm()` : フォームパラメーターを取得
 - `JSON()` : 返す JSON を生成
 
 ## Web アプリケーション
@@ -150,11 +150,11 @@ Postman などで `localhost:8080` の各ルーティングにリクエストを
 
 ### POST /user
 
-フォームパラメータの `name` と `value` で指定した値の `user` が保存される。
+フォームパラメーターの `name` と `value` で指定した値の `user` が保存される。
 
 ### PUT /user/:name
 
-`:name` で指定した `user` の `value` をクエリパラメータの `value` に更新する。
+`:name` で指定した `user` の `value` をクエリーパラメーターの `value` に更新する。
 
 ### DELETE /user/:name
 
