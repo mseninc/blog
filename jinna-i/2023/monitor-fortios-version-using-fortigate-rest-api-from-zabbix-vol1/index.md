@@ -16,7 +16,7 @@ description: "昨今のセキュリティ事情から FortiOS のバージョン
 
 脆弱性が公表された場合に必要な情報として **「どの FortiGate がどの FortiOS バージョンで稼働しているのか」** を把握しておく必要があります。
 
-自社の FortiGate を管理しているだけならまだしも、お客様の環境の FortiGate を複数管理している場合、大変になってきます。
+自社の FortiGate を管理しているだけならまだしも、お客様の環境の FortiGate を複数管理している場合、煩雑になってきます。
 
 そのような問題を解消すべく、本記事では **Zabbix から FortiOS のバージョンを監視する方法**を紹介します。
 
@@ -70,12 +70,12 @@ REST API を実行するインタフェース設定の [管理者アクセス] �
 
 コマンドプロンプトを起動して FortiOS のバージョンを取得します。
 
-`curl -k -X GET https://<FortiGate FQDN>/api/v2/monitor/system/status/?access_token=<API キー>`
+`curl -H "Authorization: Bearer <API キー>" -k -X GET https://<FortiGate FQDN>/api/v2/monitor/system/status/`
 
 レスポンスは👇のような感じです。
 
 ```cmd{15}
-C:\Users\jinna-i>curl -k -X GET https://<FortiGate FQDN>/api/v2/monitor/system/status/?access_token=<API キー>
+C:\Users\jinna-i>curl -H "Authorization: Bearer <API キー>" -k -X GET https://<FortiGate FQDN>/api/v2/monitor/system/status/
 {
   "http_method":"GET",
   "results":{
