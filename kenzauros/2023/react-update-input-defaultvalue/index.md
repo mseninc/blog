@@ -46,9 +46,45 @@ React のメリットを活かすために、通常は制御コンポーネン�
 
 結論から言うと、**初期値の変更をフォーム要素に反映するには `key` 属性を指定**します。 `key` 属性に渡す値は初期値、つまり `defaultValue` と同じ値です。
 
+```jsx:title=key属性を指定したReact非制御コンポーネント
+<input key={initialValue} defaultValue={initialValue} />
+```
+
 これにより、初期値が変更されたときはフォーム要素が再描画され、 `defaultValue` の値が表示されるというわけです。
 
 試しに、さきほどの CodePen の 5 行目でコメントアウトされている部分を解除してみてください。
+
+```jsx{5}:title=input要素にkey属性を指定
+const DemoComponent = (props) => {
+  const { firstValue } = props;
+  return (
+    <input
+      key={firstValue} // uncomment me to re-render on firstValue changed
+      defaultValue={firstValue}
+    />
+  );
+};
+
+const App = () => {
+  const [initValue, setInitValue] = React.useState("hoge");
+  const handleClick = () =>
+    setInitValue(initValue === "hoge" ? "fuga" : "hoge");
+  return (
+    <div>
+      <div>
+        <button onClick={handleClick}>change</button>
+        {" state: "}
+        {initValue}
+      </div>
+      <div>
+        <DemoComponent firstValue={initValue} />
+      </div>
+    </div>
+  );
+};
+
+ReactDOM.render(<App />, document.querySelector("#app"));
+```
 
 - [Update React input's defaultValue - CodePen](https://codepen.io/kenzauros/pen/dyqEQep)
 
