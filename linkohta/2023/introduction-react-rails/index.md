@@ -13,21 +13,25 @@ link です。
 ## 想定環境
 
 - Ruby 2.7.0 以降
+- Ruby on Rails 7
+- react-rails 2.6.2 以降
 
 ## インストール
 
 Ruby on Rails と React を組み合わせて使うにあたって **react-rails** を利用します。
 
-まず、`--skip-javascript` オプションを指定した Rails プロジェクトを新規作成します。
+まず、 `--skip-javascript` オプションを指定した Rails プロジェクトを新規作成します。
 
-```:title=プロジェクト作成
+`--skip-javascript` オプションはデフォルトの JavaScript 関係の依存パッケージをインストールしないようにするための指定です。
+
+```bash:title=プロジェクト作成
 $ rails new ReactRails --skip-javascript
 $ cd ReactRails
 ```
 
-作成したプロジェクトに `shakapacker` をインストールします。
+作成したプロジェクトに React アプリの構築に必要な `webpacker` の後継である `shakapacker` をインストールします。
 
-```:title=shakapackerインストール
+```bash:title=shakapackerインストール
 $ bundle add shakapacker --strict
 $ rails webpacker:install
 ```
@@ -57,7 +61,7 @@ source_entry_path: packs
 
 最後に `react-rails` をインストールします。
 
-```:title=react-railsインストール
+```bash:title=react-railsインストール
 $ bundle add 'react-rails' --strict
 $ rails g react:install
 ```
@@ -72,13 +76,12 @@ Rails の View に React コンポーネントを表示させます。
 
 HelloWorld コンポーネントで表示するのは greeting に指定した文字列を表示するだけのシンプルなものです。
 
-```
+```bash:title=コンポーネントとController生成
 $ rails g react:component HelloWorld greeting:string
 $ rails g controller react index
 ```
 
 `app/views/react/index.html.erb` に以下のコードを追加します。
-
 `react_component()` に呼び出すコンポーネント名とプロパティを指定しています。
 
 ```
@@ -87,7 +90,7 @@ $ rails g controller react index
 
 `rails s` で Rails アプリを起動して `localhost:3000/react/index` にアクセスし、以下の画像のような画面が表示されることを確認しましょう。
 
-![イメージ画面](images/react-rails.png)
+![表示画面](images/react-rails.png)
 
 ## 参考サイト
 
