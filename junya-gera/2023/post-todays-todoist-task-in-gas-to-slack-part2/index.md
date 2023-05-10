@@ -1,5 +1,5 @@
 ---
-title: "[GAS] Todoist から取ってきた今日のタスクを Slack に投稿する【後編】"
+title: "[GAS] Todoist の今日のタスクを Slack に投稿する【後編】"
 date: 
 author: junya-gera
 tags: [GAS, Todoist, Slack]
@@ -10,7 +10,7 @@ description: GAS を使って Todoist から取ってきた今日のタスクを
 
 この記事はGAS を使って Todoist に登録してある今日のタスクを自動的に Slack に投稿してくれる bot を作る方法の後編です。
 
-前編はこちら → [[GAS] Todoist から取ってきた今日のタスクを Slack に投稿する【前編】](https://mseeeen.msen.jp/post-todays-todoist-task-in-gas-to-slack-part1)
+前編はこちら → [[GAS] Todoist の今日のタスクを Slack に投稿する【前編】](https://mseeeen.msen.jp/post-todays-todoist-task-in-gas-to-slack-part1)
 
 前編では Todoist に登録された今日のタスクを取ってくる部分までできましたので、後編では取ってきたタスクを Slack に投稿する方法を紹介します。
 
@@ -70,7 +70,7 @@ Slack API の準備ができたので、 GAS に Slack へタスクを投稿す�
 
 以下は前編で Todoist から今日のタスクを取得したスクリプトです。この続きから書いていきます。
 
-```js{numberLines:1}
+```js{numberLines:1}:title=PostTasksBot.gscript
 function getTasks() {
   // Todoist の API トークン 
   const todoistToken = '***********';
@@ -94,7 +94,7 @@ function getTasks() {
 
 まず、前回書いた Todoist からタスクを取得する `getTasks()` を、取得した `taskTitles` を `return` するよう修正します。
 
-```js{numberLines:1}{18}
+```js{numberLines:1}{18}:title=PostTasksBot.gscript
 function getTasks() {
   // Todoist の API トークン 
   const todoistToken = '***********';
@@ -118,7 +118,7 @@ function getTasks() {
 
 `getTasks()` によって取得した `taskTitles` を Slack に投稿する `postToSlack()` というメソッドを以下のように作成します。
 
-```js{numberLines:1}
+```js{numberLines:1}:title=PostTasksBot.gscript
 function postToSlack() {
   const slackToken = '******';
   const channelId = '******';
@@ -159,7 +159,7 @@ function postToSlack() {
 
 全体のコードは以下のようになっています。
 
-```js
+```js:title=PostTasksBot.gscript
 function getTasks() {
   // Todoist の API トークン 
   const todoistToken = '******';
@@ -228,7 +228,7 @@ GAS の画面左の時計のマークをクリックします。
 
 「時刻を選択」の部分に「午前 8 時～ 9 時」と書いてあるように、午前 8 時から 9 時の間のどこかで実行されます。
 
-日付だけでなく、分や時間、週や月ごとに指定することもできます。
+日付だけでなく、分や時間、週や月ごとに指定できます。
 
 これで次の日の朝 8 時に今日のタスクが投稿されていました！
 
