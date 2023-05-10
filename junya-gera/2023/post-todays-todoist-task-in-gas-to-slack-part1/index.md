@@ -1,5 +1,5 @@
 ---
-title: "[GAS] Todoist から取ってきた今日のタスクを Slack に投稿する【前編】"
+title: "[GAS] Todoist の今日のタスクを Slack に投稿する【前編】"
 date: 
 author: junya-gera
 tags: [GAS, Todoist, Slack]
@@ -14,7 +14,7 @@ description: GAS を使って Todoist から取ってきた今日のタスクを
 
 Todoist から今日のタスクを取ってくるところを前編、取ってきたタスクを Slack に投稿するところを後編でお送りします。
 
-後編はこちら → [[GAS] Todoist から取ってきた今日のタスクを Slack に投稿する【後編】](https://mseeeen.msen.jp/post-todays-todoist-task-in-gas-to-slack-part2)
+後編はこちら → [[GAS] Todoist の今日のタスクを Slack に投稿する【後編】](https://mseeeen.msen.jp/post-todays-todoist-task-in-gas-to-slack-part2)
 
 ## Todoist の API トークンを取得する
 
@@ -59,7 +59,7 @@ Google ドライブにアクセスします。
 
 以下のコードで、今日のタスクを取得し、コンソールに表示します。
 
-```js{numberLines:1}
+```js{numberLines:1}:title=PostTasksBot.gscript
 function getTasks() {
   // Todoist の API トークン 
   const todoistToken = '***********';
@@ -96,7 +96,7 @@ function getTasks() {
 
 変数 `tasks` は以下のような状態になっています。
 
-```json
+```js:title=tasks
 [ { id: '6692075690',
     assigner_id: null,
     assignee_id: null,
