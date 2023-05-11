@@ -3,7 +3,7 @@ title: "AWS に Rails のアプリをデプロイする方法 ～ Rails アプ�
 date: 
 author: linkohta
 tags: [EC2, Ruby on Rails, Web]
-description: ""
+description: "EC2 インスタンス上に Rails アプリの起動に必要なライブラリをインストールしてブラウザ上で Rails アプリに接続するまでの手順を紹介します。"
 ---
 
 link です。
@@ -12,11 +12,13 @@ link です。
 
 前回は EC2 インスタンスに接続するまでをやりました。
 
-今回は EC2 インスタンス上に Rails アプリの起動に必要なライブラリをインストールしてブラウザ上で Rails アプリに接続するまでをやりたいと思います。
+今回は EC2 インスタンス上に Rails アプリの起動に必要なライブラリをインストールしてブラウザ上で Rails アプリに接続するまでの手順を紹介します。
 
 ## 前提条件
 
-- Windows
+- Windows 11
+- WSL2(Ubuntu 22.04)
+- Amazon Linux 2023
 - Ruby 3.2.2
 
 ## Git, Ruby などをインストール
@@ -25,7 +27,7 @@ link です。
 
 以下のコマンドを実行します。
 
-```:title=インストール
+```bash:title=インストール
 $ sudo yum -y install git make gcc-c++ patch libyaml-devel libffi-devel libicu-devel zlib-devel readline-devel libxml2-devel libxslt-devel ImageMagick ImageMagick-devel openssl-devel ruby ruby-devel
 ```
 
@@ -35,7 +37,7 @@ nvm を使って Node.js をインストールします。
 
 以下のコマンドを実行します。
 
-```:title=Node.jsインストール
+```bash:title=Node.jsインストール
 $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 $ . ~/.nvm/nvm.sh
 $ nvm install 16
@@ -53,7 +55,7 @@ EC2 にログインして、 `ssh-keygen -t rsa -b 4096` を実行します。
 
 すると以下のようにコンソール上に表示されると思います。
 
-```
+```bash:title=公開鍵作成
 $ ssh-keygen -t rsa -b 4096
 Generating public/private rsa key pair.
 Enter file in which to save the key (/home/ec2-user/.ssh/id_rsa):
@@ -62,7 +64,7 @@ Enter same passphrase again:
 Your identification has been saved in /home/ec2-user/.ssh/id_rsa
 Your public key has been saved in /home/ec2-user/.ssh/id_rsa.pub
 The key fingerprint is:
-SHA256:krEfl5Urgw+o+Fm3mD1D4gwE1gKdSsB+4cpM3qvfp/Q ec2-user@ip-172-31-81-143.ec2.internal
+??? ec2-user@ip-172-31-81-143.ec2.internal
 The key's randomart image is:
 +---[RSA 4096]----+
 |=o o             |
@@ -89,7 +91,7 @@ EC2 上で `ssh -T git@github.com` を実行して、以下の様に表示され
 
 途中で一回 yes を入力する必要があります。
 
-```:title=Github確認
+```bash:title=Github確認
 $ ssh -T git@github.com
 The authenticity of host 'github.com (140.82.112.3)' can't be established.
 ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
@@ -105,7 +107,7 @@ Rails アプリをクローンします。
 
 まず、 Rails アプリを保存するディレクトリを作成します。
 
-```:title=保存先ディレクトリ作成
+```bash:title=保存先ディレクトリ作成
 $ sudo mkdir /var/www/
 $ sudo chown ec2-user /var/www/
 $ cd /var/www/
@@ -119,13 +121,13 @@ EC2 インスタンスに gem をインストールします。
 
 EC2 ではなく、ローカル環境の Rails アプリを開き、以下のコマンドを実行します。
 
-```:title=bundle確認
+```bash:title=bundle確認
 $ bundler -v
 ```
 
 これで表示された bundle と同じバージョンを EC2 に入れます。
 
-```:title=bundleインストール
+```bash:title=bundleインストール
 $ gem install bundler -v 2.4.8
 ```
 
