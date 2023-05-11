@@ -21,15 +21,19 @@ link です。
 
 ## 本番環境構築について
 
-今回、本番環境を構築するにあたって **Unicorn+Nginx** で Rails アプリを立ち上げます。
+今回、本番環境を構築するにあたって **Unicorn+nginx** で Rails アプリを立ち上げます。
 
-なぜ `rails s` ではなく Unicorn+Nginx を使って Rails アプリを立ち上げるのかというと、
-`rails s` で立ち上がる rack アプリサーバーは負荷を分散させるための機能などがなく、
-実運用していく上で、大勢の人がサイトを見たときなどにとても重くなってしまうためです。
+Rails アプリの起動は `rails s` で行えます。
+
+しかし `rails s` で立ち上がる Rack アプリサーバーは負荷を分散させるための機能がありません。
+
+そのため、実運用していく上で、大勢の人がサイトを見たときなどにとても重くなってしまいます。
+
+そこで Unicorn+nginx を使ってアクセス時の負荷を分散できるようにします。
 
 ## Unicorn のインストールと設定
 
-ローカルの Rails のプロジェクトフォルダにある `Gemfile` に Unicorn を追加します。
+ローカルの Rails のプロジェクトフォルダ内の `Gemfile` に Unicorn を追加します。
 
 ```rb:title=Gemfile
 group :production do
@@ -158,11 +162,11 @@ $ export SECRET_KEY_BASE=`bundle exec rake secret`
 
 最後にEC2 インスタンス内のプロジェクトフォルダで `git pull` して変更を反映します。
 
-## Nginx のインストールと設定
+## nginx のインストールと設定
 
-EC2 インスタンスに Nginx をインストールします。
+EC2 インスタンスに nginx をインストールします。
 
-```bash:title=Nginxインストール
+```bash:title=nginxインストール
 $ sudo yum -y install nginx
 ```
 
@@ -198,14 +202,14 @@ server {
 }
 ```
 
-Nginx の権限を変更して POST メソッドを実行できるようにします。
+nginx の権限を変更して POST メソッドを実行できるようにします。
 
 ```bash:title=権限変更
 $ cd /var/lib
 $ sudo chmod -R 775 nginx
 ```
 
-Nginx のインストールと設定はこれで完了です。
+nginx のインストールと設定はこれで完了です。
 
 ## 本番環境でのアプリ起動
 
@@ -225,9 +229,9 @@ $ rake unicorn:start
 
 ## 参考サイト
 
-- [【CentOS 7】Nginx + Unicorn で Rails アプリケーションを本番環境で立ち上げる方法](https://zenn.dev/noraworld/articles/deploy-rails-application-with-nginx-and-unicorn)
+- [【CentOS 7】nginx + Unicorn で Rails アプリケーションを本番環境で立ち上げる方法](https://zenn.dev/noraworld/articles/deploy-rails-application-with-nginx-and-unicorn)
 - [独学向けRailsアプリをAWSにデプロイする方法まとめ【入門】 - Qiita](https://qiita.com/gyu_outputs/items/b123ef229842d857ff39)
-- [なぜrailsの本番環境ではUnicorn,Nginxを使うのか? 　~ Rack,Unicorn,Nginxの連携について ~【Ruby On Railsでwebサービス運営】 - Qiita](https://qiita.com/fritz22/items/fcb81753eaf381b4b33c)
+- [なぜrailsの本番環境ではUnicorn,nginxを使うのか? 　~ Rack,Unicorn,nginxの連携について ~【Ruby On Railsでwebサービス運営】 - Qiita](https://qiita.com/fritz22/items/fcb81753eaf381b4b33c)
 
 ## まとめ
 
