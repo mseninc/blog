@@ -112,7 +112,7 @@ SSH 接続には作成したキーペアの ppm ファイルが必要になり�
 
 Ubuntu を起動し、 `/etc/wsl.conf` を以下のように設定します。
 
-```:title=/etc/wsl.conf
+```conf:title=/etc/wsl.conf
 # Enable extra metadata options by default
 [automount]
 enabled=true
@@ -132,7 +132,7 @@ generateResolvConf=true
 
 IP アドレスを EC2 インスタンスの Elastic IP に指定すれば接続できます。
 
-```:title=インスタンスに接続
+```bash:title=インスタンスに接続
 $ chmod 600 Rails.pem
 $ ssh -i Rails.pem ec2-user@IPアドレス
    ,     #_
