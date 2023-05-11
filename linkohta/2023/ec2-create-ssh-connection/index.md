@@ -3,7 +3,7 @@ title: "AWS に Rails のアプリをデプロイする方法 ～ EC2 インス�
 date: 
 author: linkohta
 tags: [EC2, Ruby on Rails, Web]
-description: ""
+description: "EC2 を利用して Rails のアプリをデプロイ、公開する方法の EC2 インスタンスに接続するまでを紹介します。"
 ---
 
 link です。
@@ -16,8 +16,9 @@ AWS では Web アプリケーションをデプロイ、公開するサービ�
 
 ## 前提条件
 
-- Windows
+- Windows 11
 - WSL2(Ubuntu 22.04)
+- Amazon Linux 2023
 
 ## EC2 インスタンス作成
 
