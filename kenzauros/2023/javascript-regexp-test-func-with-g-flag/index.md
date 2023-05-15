@@ -1,6 +1,6 @@
 ---
 title: "JavaScript 正規表現の g フラグを使ったときの test() の挙動"
-date: 
+date: 2023-05-15
 author: kenzauros
 tags: [JavaScript,正規表現]
 description: "JavaScript でグローバルフラグをつけた正規表現を扱っているとき、予期せぬ挙動でバグを起こすことがあります。この記事ではその事例と原因・解決法を紹介します。"
