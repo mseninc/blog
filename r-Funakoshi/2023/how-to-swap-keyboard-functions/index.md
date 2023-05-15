@@ -26,7 +26,7 @@ ThinkPad は **Fn Ctrl** の順番でキーが配置されています。
 
 そこでいくつかのノート PC を見比べてみましたが、ThinkPad だけキー配置が異なりました。
 
-![Lenovo社(ThinkPad)](images/Lenovo.png "Lenovo社(ThinkPad)")
+![Lenovo社(ThinkPad)](images/Lenovo.png)
 
 ![HP社](images/HP.png "HP社")
 
@@ -65,7 +65,7 @@ Ctrl Fn の順番で配置されていることが圧倒的に多いことが分
 まず BIOS 画面を表示します。
 
 ※以下の手順を行うとPCが再起動します。
-編集中のファイルがある場合、あらかじめ保存を行ってください。
+編集中のファイルがある場合、あらかじめ保存してください。
 
 1. 設定を開き、「システム」>「回復」を選択
 ![](images/01.png "")
