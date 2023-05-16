@@ -70,7 +70,7 @@ Slack API の準備ができたので、 GAS に Slack へタスクを投稿す�
 
 以下は前編で Todoist から今日のタスクを取得したスクリプトです。この続きから書いていきます。
 
-```js{numberLines:1}:title=PostTasksBot.gscript
+```js{numberLines:1}:title=PostTasksBot.gscript(getTasks)
 function getTasks() {
   // Todoist の API トークン 
   const todoistToken = '***********';
@@ -94,7 +94,7 @@ function getTasks() {
 
 まず、前回書いた Todoist からタスクを取得する `getTasks()` を、取得した `taskTitles` を `return` するよう修正します。
 
-```js{numberLines:1}{18}:title=PostTasksBot.gscript
+```js{numberLines:1}{18}:title=PostTasksBot.gscript(getTasks)
 function getTasks() {
   // Todoist の API トークン 
   const todoistToken = '***********';
@@ -118,7 +118,7 @@ function getTasks() {
 
 `getTasks()` によって取得した `taskTitles` を Slack に投稿する `postToSlack()` というメソッドを以下のように作成します。
 
-```js{numberLines:1}:title=PostTasksBot.gscript
+```js{numberLines:1}:title=PostTasksBot.gscript(postToSlack)
 function postToSlack() {
   const slackToken = '******';
   const channelId = '******';
