@@ -1,6 +1,6 @@
 ---
 title: "AWS に Rails のアプリをデプロイする方法 ～ Rails アプリを起動するまで"
-date: 
+date:
 author: linkohta
 tags: [EC2, Ruby on Rails, Web]
 description: "EC2 インスタンス上に Rails アプリの起動に必要なライブラリをインストールしてブラウザ上で Rails アプリに接続するまでの手順を紹介します。"
@@ -13,6 +13,8 @@ link です。
 前回は EC2 インスタンスに接続するまでをやりました。
 
 今回は EC2 インスタンス上に Rails アプリの起動に必要なライブラリをインストールしてブラウザ上で Rails アプリに接続するまでの手順を紹介します。
+
+また、今回デプロイする Rails アプリは GitHub リポジトリからクローンします。
 
 ## 前提条件
 
@@ -45,9 +47,9 @@ $ nvm install 16
 
 ## Rails アプリを EC2 インスタンスにクローン
 
-Rails アプリを Git からクローンします。
+Rails アプリを GitHub リポジトリからクローンします。
 
-ただし、デフォルトのままだと permission denied エラーが発生するので、先に EC2インスタンスの SSH 公開鍵を Github に登録する必要があります。
+ただし、デフォルトのままだと permission denied エラーが発生するので、先に EC2 インスタンスの SSH 公開鍵を GitHub に登録する必要があります。
 
 ### SSH 公開鍵を Github に登録
 
@@ -103,7 +105,7 @@ Hi ユーザー名! You've successfully authenticated, but GitHub does not provi
 
 ### Rails アプリのクローン
 
-Rails アプリをクローンします。
+Rails アプリを GitHub リポジトリからクローンします。
 
 まず、 Rails アプリを保存するディレクトリを作成します。
 
@@ -153,8 +155,8 @@ Rails アプリのディレクトリ内で `bundle exec rails server -p 3000 -b 
 
 ## 参考サイト
 
-- [独学向けRailsアプリをAWSにデプロイする方法まとめ【入門】 - Qiita](https://qiita.com/gyu_outputs/items/b123ef229842d857ff39)
-- [EC2でRailsアプリを起動したけどブラウザからアクセスできないとき - Qiita](https://qiita.com/sakaimo/items/dd138b39c7480fb2ebff)
+- [独学向け Rails アプリを AWS にデプロイする方法まとめ【入門】 - Qiita](https://qiita.com/gyu_outputs/items/b123ef229842d857ff39)
+- [EC2 で Rails アプリを起動したけどブラウザからアクセスできないとき - Qiita](https://qiita.com/sakaimo/items/dd138b39c7480fb2ebff)
 
 ## まとめ
 
