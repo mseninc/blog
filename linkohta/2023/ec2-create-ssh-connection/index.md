@@ -1,6 +1,6 @@
 ---
 title: "AWS に Rails のアプリをデプロイする方法 ～ EC2 インスタンスに接続するまで"
-date: 
+date:
 author: linkohta
 tags: [EC2, Ruby on Rails, Web]
 description: "EC2 を利用して Rails のアプリをデプロイ、公開する方法の EC2 インスタンスに接続するまでを紹介します。"
@@ -24,7 +24,7 @@ AWS では Web アプリケーションをデプロイ、公開するサービ�
 
 まず、 EC2 インスタンスを作成します。
 
-EC2 のトップ画面から**インスタンス(実行中)**をクリックして、**インスタンスを起動**をクリックします。
+EC2 のトップ画面から**インスタンス（実行中）**をクリックして、**インスタンスを起動**をクリックします。
 
 ![リソース](images\2023-04-30_20h25_00.png)
 
@@ -38,7 +38,7 @@ EC2 のトップ画面から**インスタンス(実行中)**をクリックし�
 
 ![新しいキーペアの作成](images/2023-04-30_20h27_04.png)
 
-適当なキーペア名を指定して、**キーペアのタイプ**を **RSA** 、**プライベートキーファイル形式**を **.ppm** に指定します。ここで作成したキーペアは後で利用しますので保存しておいてください。
+適当なキーペア名を指定して、**キーペアのタイプ**を **RSA** 、**プライベートキーファイル形式**を **.pem** に指定します。ここで作成したキーペアは後で利用しますので保存しておいてください。
 
 ![キーペアを作成](images/2023-04-30_20h27_34.png)
 
@@ -104,36 +104,22 @@ EC2 インスタンスのセキュリティタブから**セキュリティグ�
 
 起動した EC2 インスタンスに SSH で接続してみます。
 
-SSH 接続には作成したキーペアの ppm ファイルが必要になりますが、この ppm ファイルを使うには `chmod` コマンドで権限を設定しておく必要があります。
+SSH 接続には作成したキーペアの pem ファイルが必要になりますが、この pem ファイルを使うには `chmod` コマンドで権限を設定しておく必要があります。
 
-そこで `chmod` コマンドを使うために WSL2 上の Ubuntu を利用しますが、デフォルトのままだと Windows 上のファイルに `chmod` コマンドを適用できません。
+そこで `chmod` コマンドを使うために WSL2 上の Ubuntu を利用します。
 
-まず、 Windows 上のファイルに `chmod` コマンドを適用できるようにします。
+まず、ダウンロードした pem ファイルを WSL2 上の Ubuntu に設置します。
 
-Ubuntu を起動し、 `/etc/wsl.conf` を以下のように設定します。
+`sudo chmod 600 Rails.pem` で pem ファイルに読み出し許可と書き出し許可の権限を設定すれば完了です。
 
-```conf:title=/etc/wsl.conf
-# Enable extra metadata options by default
-[automount]
-enabled=true
-root=/mnt/
-options="metadata,umask=22,fmask=11"
-mountFsTab=false
-# Enable DNS – even though these are turned on by default, we'll specify here just to be explicit.
-[network]
-generateHosts=true
-generateResolvConf=true
-```
-
-設定後、 `wsl --shutdown` で WSL を再起動します。
-これで Windows 上のファイルに `chmod` コマンドを適用できるようになりました。
-
-あとは `chmod` で pem ファイルに権限を設定し、 `ssh` で接続するだけです。
+後は `ssh -i Rails.pem ec2-user@IPアドレス` コマンドで接続するだけです。
 
 IP アドレスを EC2 インスタンスの Elastic IP に指定すれば接続できます。
 
+以下のように表示されれば接続成功です。
+
 ```bash:title=インスタンスに接続
-$ chmod 600 Rails.pem
+$ sudo chmod 600 Rails.pem
 $ ssh -i Rails.pem ec2-user@IPアドレス
    ,     #_
    ~\_  ####_        Amazon Linux 2023
