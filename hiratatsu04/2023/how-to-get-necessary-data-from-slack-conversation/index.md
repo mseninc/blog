@@ -1,6 +1,6 @@
 ---
 title: "Slack へのメール通知から必要な情報のみを取得する方法"
-date: 
+date: 2023-05-17
 author: hiratatsu04
 tags: [Slack]
 description: "Slack にメールを届くようにしている方も多いと思います。MSEN では Zabbix からのアラートメールを Slack で受信して確認しています。この Slack に届くメールの件名と日時を取り出したい機会がありましたので、今回は Slack に届くメール通知から必要な内容のみを取得する方法を紹介します。"
