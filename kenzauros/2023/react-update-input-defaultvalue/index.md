@@ -1,6 +1,6 @@
 ---
 title: "React で input の defaultValue の変更を反映させる"
-date: 
+date: 2023-05-19
 author: kenzauros
 tags: [React.js]
 description: "React.js の非制御コンポーネントで初期値をマウント後に変更する方法を紹介します。初期値の変更を反映するには key 属性にも初期値を渡すことでコンポーネントを再描画します。"
