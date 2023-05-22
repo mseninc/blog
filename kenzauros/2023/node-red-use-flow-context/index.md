@@ -1,6 +1,6 @@
 ---
 title: "[Node-RED] フローコンテキストを使ったループ変数を使う"
-date: 
+date: 2023-05-22
 author: kenzauros
 tags: [Node-RED,JavaScript]
 description: "Node-RED でフローコンテキストに変数を持たせて、順次処理する方法を紹介します。 change ノードでの設定の他、 JSONata 式や function ノードを使ったフローコンテキストへのアクセス方法についても説明します。"
