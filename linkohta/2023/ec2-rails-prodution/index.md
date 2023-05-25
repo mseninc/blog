@@ -188,7 +188,7 @@ $ export SECRET_KEY_BASE=`bundle exec rake secret`
 
 これで Unicorn を使う準備は完了です。
 
-最後に EC2 インスタンス内のプロジェクトフォルダで `git pull` して変更を反映します。
+最後に、変更を commit してリモートリポジトリに push したあと、 EC2 インスタンス内のプロジェクトフォルダで `git pull` して変更を反映します。
 
 ## nginx のインストールと設定
 
@@ -223,7 +223,7 @@ server {
   }
 
   try_files $uri/index.html $uri @unicorn;
-
+  # Unicorn のリバースプロキシ
   location @unicorn {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header Host $http_host;
