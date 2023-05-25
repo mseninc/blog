@@ -20,8 +20,13 @@ description: FortiGate を使用して VPN 接続中のユーザーがいるか�
 
 弊社では主に **SSL-VPN** を使用していますが、 **IPsec** を使用した際の確認方法も紹介します。
 
+※あくまでも VPN 接続中のユーザーを確認する方法ですので社内など、ローカルな環境で接続しているユーザーに関しては別途確認する必要があります。
+
 GUI・CLI の両方で確認が可能です。
 お好きな方法で確認してみてください。
+
+### 想定環境
+- Forti OS(メジャーバージョン):v7
 
 ### GUI で確認する方法
 1. FortiGate の管理画面へログインします。
@@ -42,11 +47,11 @@ GUI・CLI の両方で確認が可能です。
 
 - SSL-VPN の場合
 
-```　　　get vpn ssl monitor　　```
+```get vpn ssl monitor```
 
 - IPsec の場合
 
-```　　　diagnose vpn ike gateway list　　```
+```diagnose vpn ike gateway list```
 
 3. `User` に表示される名前が現在接続中のユーザー名です。
 
