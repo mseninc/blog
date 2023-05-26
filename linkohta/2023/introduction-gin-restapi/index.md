@@ -1,6 +1,6 @@
 ---
 title: "Gin を使って RESTful API を構築する第一歩"
-date: 
+date:
 author: linkohta
 tags: [Gin, Go, Web]
 description: "Go 言語のフレームワークである Gin を使って RESTful API を構築してみます。"
@@ -17,13 +17,13 @@ link です。
 
 ## Gin とは
 
->Gin は、Golang で書かれた Web フレームワークです。
+> Gin は、Golang で書かれた Web フレームワークです。
 >
->martini に似た API を持ちながら、非常に優れたパフォーマンスを発揮し、最大で40倍高速であることが特徴です。
+> martini に似た API を持ちながら、非常に優れたパフォーマンスを発揮し、最大で 40 倍高速であることが特徴です。
 >
->性能と優れた生産性が必要なら、きっと Gin が好きになれるでしょう。
+> 性能と優れた生産性が必要なら、きっと Gin が好きになれるでしょう。
 >
->出典 : [Gin Web Framework](https://gin-gonic.com/ja/#td-block-1)
+> 出典 : [Gin Web Framework](https://gin-gonic.com/ja/#td-block-1)
 
 Gin とは Go 言語の Web アプリケーションフレームワークです。
 
@@ -39,16 +39,97 @@ $ cd ginrest
 $ go mod init
 ```
 
-Gin をダウンロードし、開始用のテンプレートをダウンロードします。
+Gin をダウンロードし、 Gin プロジェクト開始用のテンプレートをダウンロードします。
 
 ```
 $ go get -u github.com/gin-gonic/gin
 $ curl https://raw.githubusercontent.com/gin-gonic/examples/master/basic/main.go > main.go
 ```
 
+テンプレートのダウンロードが完了すれば、プロジェクトの作成は完了です。
+
 ## API 作成
 
-ダウンロードしたテンプレート `main.go` を以下のように書き換えます。
+ダウンロードしたテンプレート `main.go` は以下のようになっています。
+
+```go:title=main.go
+package main
+
+import (
+	"net/http"
+
+	"github.com/gin-gonic/gin"
+)
+
+var db = make(map[string]string)
+
+func setupRouter() *gin.Engine {
+	// Disable Console Color
+	// gin.DisableConsoleColor()
+	r := gin.Default()
+
+	// Ping test
+	r.GET("/ping", func(c *gin.Context) {
+		c.String(http.StatusOK, "pong")
+	})
+
+	// Get user value
+	r.GET("/user/:name", func(c *gin.Context) {
+		user := c.Params.ByName("name")
+		value, ok := db[user]
+		if ok {
+			c.JSON(http.StatusOK, gin.H{"user": user, "value": value})
+		} else {
+			c.JSON(http.StatusOK, gin.H{"user": user, "status": "no value"})
+		}
+	})
+
+	// Authorized group (uses gin.BasicAuth() middleware)
+	// Same than:
+	// authorized := r.Group("/")
+	// authorized.Use(gin.BasicAuth(gin.Credentials{
+	//	  "foo":  "bar",
+	//	  "manu": "123",
+	//}))
+	authorized := r.Group("/", gin.BasicAuth(gin.Accounts{
+		"foo":  "bar", // user:foo password:bar
+		"manu": "123", // user:manu password:123
+	}))
+
+	/* example curl for /admin with basicauth header
+	   Zm9vOmJhcg== is base64("foo:bar")
+
+		curl -X POST \
+	  	http://localhost:8080/admin \
+	  	-H 'authorization: Basic Zm9vOmJhcg==' \
+	  	-H 'content-type: application/json' \
+	  	-d '{"value":"bar"}'
+	*/
+	authorized.POST("admin", func(c *gin.Context) {
+		user := c.MustGet(gin.AuthUserKey).(string)
+
+		// Parse JSON
+		var json struct {
+			Value string `json:"value" binding:"required"`
+		}
+
+		if c.Bind(&json) == nil {
+			db[user] = json.Value
+			c.JSON(http.StatusOK, gin.H{"status": "ok"})
+		}
+	})
+
+	return r
+}
+
+func main() {
+	r := setupRouter()
+	// Listen and Server in 0.0.0.0:8080
+	r.Run(":8080")
+}
+```
+
+`main.go` を以下のように書き換えます。
 
 ```go:title=main.go
 package main
@@ -119,7 +200,7 @@ func main() {
 
 `go run main.go` コマンドを実行して Web アプリケーションを起動します。
 
-起動後、以下のように表示されると思います。
+起動後、以下のように表示されます。
 
 ```
 [GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
