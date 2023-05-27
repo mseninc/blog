@@ -36,7 +36,7 @@ Go 言語のプロジェクトを作成します。
 ```:title=プロジェクト作成
 $ mkdir ginrest
 $ cd ginrest
-$ go mod init
+$ go mod init ginrest
 ```
 
 Gin をダウンロードし、 Gin プロジェクト開始用のテンプレートをダウンロードします。
@@ -64,62 +64,7 @@ import (
 var db = make(map[string]string)
 
 func setupRouter() *gin.Engine {
-	// Disable Console Color
-	// gin.DisableConsoleColor()
-	r := gin.Default()
-
-	// Ping test
-	r.GET("/ping", func(c *gin.Context) {
-		c.String(http.StatusOK, "pong")
-	})
-
-	// Get user value
-	r.GET("/user/:name", func(c *gin.Context) {
-		user := c.Params.ByName("name")
-		value, ok := db[user]
-		if ok {
-			c.JSON(http.StatusOK, gin.H{"user": user, "value": value})
-		} else {
-			c.JSON(http.StatusOK, gin.H{"user": user, "status": "no value"})
-		}
-	})
-
-	// Authorized group (uses gin.BasicAuth() middleware)
-	// Same than:
-	// authorized := r.Group("/")
-	// authorized.Use(gin.BasicAuth(gin.Credentials{
-	//	  "foo":  "bar",
-	//	  "manu": "123",
-	//}))
-	authorized := r.Group("/", gin.BasicAuth(gin.Accounts{
-		"foo":  "bar", // user:foo password:bar
-		"manu": "123", // user:manu password:123
-	}))
-
-	/* example curl for /admin with basicauth header
-	   Zm9vOmJhcg== is base64("foo:bar")
-
-		curl -X POST \
-	  	http://localhost:8080/admin \
-	  	-H 'authorization: Basic Zm9vOmJhcg==' \
-	  	-H 'content-type: application/json' \
-	  	-d '{"value":"bar"}'
-	*/
-	authorized.POST("admin", func(c *gin.Context) {
-		user := c.MustGet(gin.AuthUserKey).(string)
-
-		// Parse JSON
-		var json struct {
-			Value string `json:"value" binding:"required"`
-		}
-
-		if c.Bind(&json) == nil {
-			db[user] = json.Value
-			c.JSON(http.StatusOK, gin.H{"status": "ok"})
-		}
-	})
-
-	return r
+	...各 API の処理
 }
 
 func main() {
@@ -129,9 +74,9 @@ func main() {
 }
 ```
 
-`main.go` を以下のように書き換えます。
+`setupRouter()` の 中身を書き換えて `main.go` を以下のように変更します。
 
-```go:title=main.go
+```go{89-126}:title=main.go {.line-numbers}
 package main
 
 import (
@@ -188,7 +133,7 @@ func main() {
 
 `setupRouter()` では各ルーティングに対して実行する関数を実装しています。
 
-書き換え後の `main.go` の `setupRouter()` で使っている関数について解説します。
+書き換え後の `setupRouter()` で使っている関数について解説します。
 
 - `gin.Default()` : Web サーバーを生成
 - `Params.ByName()` : パスパラメーターを取得
