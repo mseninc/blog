@@ -17,7 +17,13 @@ link です。
 
 ## EC2 インスタンスの設定
 
-リモートデスクトップ接続ができるように EC2 インスタンスのインバウンドルールを編集します。
+リモートデスクトップ接続ができるように EC2 インスタンスに設定しているセキュリティグループのインバウンドルールを編集します。
+
+インスタンスの詳細からセキュリティタブを選択し、セキュリティグループをクリックします。
+
+![セキュリティグループ](images/2023-05-27_22h34_53.png)
+
+「インバウンドのルールを編集する」をクリックします。
 
 ルールを追加してタイプを `RDP` 、ソースを `0.0.0.0/0` に設定します。
 
@@ -25,11 +31,13 @@ link です。
 
 ## Amazon Linux 2 の環境構築
 
-Amazon Linux 2 にデスクトップ環境と **VNCTiger** と **xrdp** を導入します。
+Amazon Linux 2 にデスクトップ環境と Windows 側から Linux にリモート接続できるようにする **VNCTiger** と **xrdp** を導入します。
 
-デスクトップ環境は MATE を導入します。
+デスクトップ環境は **MATE** を導入します。
 
-```:title=MATEとVNCTigerとxrdpをインストール
+EC2 インスタンスに ssh 接続して以下のコマンドを実行します。
+
+```bash:title=MATEとVNCTigerとxrdpをインストール
 $ sudo amazon-linux-extras install mate-desktop1.x
 $ sudo bash -c 'echo PREFERRED=/usr/bin/mate-session > /etc/sysconfig/desktop'
 $ sudo yum install tigervnc-server
@@ -39,14 +47,14 @@ $ sudo yum install xrdp
 
 xrdp の起動と起動設定を行います。
 
-```:title=xrdpの設定
+```bash:title=xrdpの設定
 $ sudo systemctl start xrdp
 $ sudo systemctl enable xrdp
 ```
 
 xrdp からログインするためのパスワードを設定します。
 
-```:title=パスワード設定
+```bash:title=パスワード設定
 $ sudo passwd ec2-user
 ```
 
@@ -56,12 +64,12 @@ MATE の日本語化を行います。
 
 フォントなどをインストールします。
 
-```:title=日本語化用のパッケージインストール
+```bash:title=日本語化用のパッケージインストール
 $ sudo yum install ibus-kkc
 $ sudo yum install google-noto-sans-japanese-fonts
 ```
 
-`~/.bashrc` に以下の内容を追加します。
+`~/.bashrc` の最後尾に以下の内容を追加します。
 
 ```:title=~/.bashrc
 export GTK_IM_MODULE=ibus
@@ -70,9 +78,9 @@ export QT_IM_MODULE=ibus
 ibus-daemon -drx
 ```
 
-ロケールを設定します。
+言語などを指定するロケールを設定します。
 
-```
+```bash:title=ロケール設定
 $ sudo localectl set-locale LANG=ja_JP.UTF-8
 $ sudo localectl set-keymap jp106
 $ sudo localectl set-keymap jp-OADG109A
