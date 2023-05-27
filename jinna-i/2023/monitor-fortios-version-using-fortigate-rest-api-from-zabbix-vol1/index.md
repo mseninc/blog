@@ -1,6 +1,6 @@
 ---
 title: "Zabbix から FortiGate REST API を使って FortiOS のバージョンを監視する（API 編）"
-date: 
+date: 2023-05-27
 author: jinna-i
 tags: [FortiGate, Zabbix]
 description: "昨今のセキュリティ事情から FortiOS のバージョン情報を把握しておくことは大切です。今回は FortiGate REST API を使って FortiOS のバージョン情報を取得する方法を紹介します。"
