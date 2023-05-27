@@ -10,7 +10,8 @@ link です。
 
 Windows 上で Linux を利用する時、 WSL か仮想 PC を作成してインストールすることがほとんどだと思います。
 
-WSL だと GUI を伴うアプリケーションが利用できないため、そういうアプリケーションを利用する場合は仮想 PC を作成する必要がありますが、 Windows の領域を圧迫する問題があります。
+WSL だと GUI アプリケーションが利用できないため、GUI アプリケーションを利用する場合は仮想 PC を作成する必要があります。
+しかし、仮想 PC は Windows の領域を圧迫する問題があります。
 
 そこで WSL 上の Ubuntu にリモートデスクトップ接続して、 GUI アプリケーションを利用する方法を紹介します。
 
@@ -22,9 +23,10 @@ WSL だと GUI を伴うアプリケーションが利用できないため、�
 
 ## Ubuntu 上での準備
 
-Windows 上から Ubuntu へリモートデスクトップ接続するために **xrdp** をインストールします。また、デスクトップ環境として **LXDE** をインストールします。
+Windows 上から Ubuntu へリモートデスクトップ接続するために Windows から Linux へリモート接続できるようにする機能である **xrdp** をインストールします。
+また、デスクトップを表示する機能が WSL にはデフォルトでは入っていないため、 **LXDE** をインストールします。
 
-```:title=インストールコマンド
+```bash:title=インストールコマンド
 $ sudo apt install xrdp
 $ sudo apt install lxde
 ```
@@ -35,29 +37,29 @@ xrdp インストール中に以下の画面が表示されると思います。
 
 ![xrdpインストール](images/2023-05-06_15h24_10.png)
 
-xrdp のデフォルトのポートは 3389 になっているのでこれを 3390 に置き換えます。
+xrdp のデフォルトのポートは 3389 になっているのでこれをリモート接続の既定ポートである 3390 に置き換えます。
 
-```:title=ポート置換
+```bash:title=ポート置換
 $ sudo sed -i -e 's/^port=3389/port=3390/g' /etc/xrdp/xrdp.ini
 ```
 
 リモートデスクトップの接続時に LXDE が起動するように、ホームディレクトリに.`xsessionrc` というファイルを作成します。
 
-```:title=xsessionrc作成
+```bash:title=xsessionrc作成
 $ echo "export LANG=ja_JP.UTF-8" > ~/.xsessionrc
 $ echo "startlxde" >> ~/.xsessionrc
 ```
 
-Windows 11 からフォントを参照できるようにしておきます。
+後々フォントを変更できるようにするために Windows 11 からフォントを参照できるようにしておきます。
 
-```:title=フォント設定
+```bash:title=フォント設定
 $ sudo ln -s /mnt/c/Windows/Fonts/ /usr/share/fonts/windows
 $ sudo fc-cache -fv
 ```
 
 最後に xrdp を再起動して Ubuntu 側の作業は完了です。
 
-```:title=xrdp再起動
+```bash:title=xrdp再起動
 $ sudo service xrdp restart
 ```
 
