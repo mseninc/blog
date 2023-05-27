@@ -76,7 +76,7 @@ func main() {
 
 `setupRouter()` の 中身を書き換えて `main.go` を以下のように変更します。
 
-```go{89-126}:title=main.go {.line-numbers}
+```go{10-47}:title=main.go
 package main
 
 import (
