@@ -1,6 +1,6 @@
 ---
 title: "Ruby on Rails と React を組み合わせて使う方法"
-date: 
+date: 2023-05-28
 author: linkohta
 tags: [Ruby on Rails, React, Ruby, Web]
 description: "Ruby on Rails と React を組み合わせて使う方法を紹介します。"
