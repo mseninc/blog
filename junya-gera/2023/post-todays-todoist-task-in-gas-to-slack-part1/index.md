@@ -1,6 +1,6 @@
 ---
 title: "[GAS] Todoist の今日のタスクを Slack に投稿する【前編】"
-date: 
+date: 2023-05-28
 author: junya-gera
 tags: [GAS, Todoist, Slack]
 description: GAS を使って Todoist から取ってきた今日のタスクを Slack に投稿する方法を解説します。前編では Todoist から今日のタスクを取得する部分を解説します。
