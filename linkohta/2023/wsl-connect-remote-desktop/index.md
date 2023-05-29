@@ -1,6 +1,6 @@
 ---
 title: "WSL 上の Ubuntu にリモートデスクトップ接続する方法"
-date: 
+date:
 author: linkohta
 tags: [WSL, Ubuntu]
 description: "WSL 上の Ubuntu にリモートデスクトップ接続して、 GUI アプリケーションを利用する方法を紹介します。"
@@ -8,7 +8,7 @@ description: "WSL 上の Ubuntu にリモートデスクトップ接続して、
 
 link です。
 
-Windows 上で Linux を利用する時、 WSL か仮想 PC を作成してインストールすることがほとんどだと思います。
+Windows 上で Linux を利用する時、 WSL (Windows Subsystem for Linux) か仮想 PC を作成してインストールすることがほとんどだと思います。
 
 WSL だと GUI アプリケーションが利用できないため、GUI アプリケーションを利用する場合は仮想 PC を作成する必要があります。
 しかし、仮想 PC は Windows の領域を圧迫する問題があります。
@@ -37,7 +37,12 @@ xrdp インストール中に以下の画面が表示されると思います。
 
 ![xrdpインストール](images/2023-05-06_15h24_10.png)
 
-xrdp のデフォルトのポートは 3389 になっているのでこれをリモート接続の既定ポートである 3390 に置き換えます。
+xrdp のデフォルトのポートは 3389 になっています。
+このままリモート接続しようとすると WSL ではこのポートを既に利用しているため、以下のエラーが発生します。
+
+> Your computer could not connect to another console session on the remote computer because you already have a console session in progress.
+
+なのでポート番号を 3390 に置き換えます。
 
 ```bash:title=ポート置換
 $ sudo sed -i -e 's/^port=3389/port=3390/g' /etc/xrdp/xrdp.ini
@@ -50,7 +55,7 @@ $ echo "export LANG=ja_JP.UTF-8" > ~/.xsessionrc
 $ echo "startlxde" >> ~/.xsessionrc
 ```
 
-後々フォントを変更できるようにするために Windows 11 からフォントを参照できるようにしておきます。
+後々 Windows のフォントを利用できるようにするために Windows 11 のフォントを参照できるようにしておきます。
 
 ```bash:title=フォント設定
 $ sudo ln -s /mnt/c/Windows/Fonts/ /usr/share/fonts/windows
@@ -97,7 +102,7 @@ Thunderbird のようなアプリも使えます。
 
 ## 参考サイト
 
-- [WSL2+ubuntu20.04: GUI化して使う方法 - Qiita](https://qiita.com/atomyah/items/887a5185ec9a8206c7c4)
+- [WSL2+ubuntu20.04: GUI 化して使う方法 - Qiita](https://qiita.com/atomyah/items/887a5185ec9a8206c7c4)
 
 ## まとめ
 
