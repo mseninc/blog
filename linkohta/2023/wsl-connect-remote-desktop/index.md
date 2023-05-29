@@ -48,7 +48,7 @@ xrdp のデフォルトのポートは 3389 になっています。
 $ sudo sed -i -e 's/^port=3389/port=3390/g' /etc/xrdp/xrdp.ini
 ```
 
-リモートデスクトップの接続時に LXDE が起動するように、ホームディレクトリに.`xsessionrc` というファイルを作成します。
+リモートデスクトップの接続時に LXDE が起動するように、ホームディレクトリに `.xsessionrc` というファイルを作成します。
 
 ```bash:title=xsessionrc作成
 $ echo "export LANG=ja_JP.UTF-8" > ~/.xsessionrc
