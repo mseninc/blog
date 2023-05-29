@@ -1,6 +1,6 @@
 ---
 title: "AWS の技術勉強会に参加してきました"
-date: 
+date: 2023-05-29
 author: k-so16
 tags: [AWS, 〇〇奮闘記]
 description: "2023/5/11 に開催された AWS の技術に関する外部勉強会の参加レポートです。"
