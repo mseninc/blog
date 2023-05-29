@@ -1,6 +1,6 @@
 ---
 title: "Gin を使って RESTful API を構築する第一歩"
-date:
+date: 2023-05-29
 author: linkohta
 tags: [Gin, Go, Web]
 description: "Go 言語のフレームワークである Gin を使って RESTful API を構築してみます。"
