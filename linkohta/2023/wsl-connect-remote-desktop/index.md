@@ -38,7 +38,7 @@ xrdp インストール中に以下の画面が表示されると思います。
 ![xrdpインストール](images/2023-05-06_15h24_10.png)
 
 xrdp のデフォルトのポートは 3389 になっています。
-このままリモート接続しようとすると WSL ではこのポートを既に利用しているため、以下のエラーが発生します。
+このままリモート接続しようとすると WSL ではこのポートをすでに利用しているため、以下のエラーが発生します。
 
 > Your computer could not connect to another console session on the remote computer because you already have a console session in progress.
 
@@ -55,7 +55,7 @@ $ echo "export LANG=ja_JP.UTF-8" > ~/.xsessionrc
 $ echo "startlxde" >> ~/.xsessionrc
 ```
 
-後々 Windows のフォントを利用できるようにするために Windows 11 のフォントを参照できるようにしておきます。
+あとあと Windows のフォントを利用できるように Windows 11 のフォントを参照できるようにしておきます。
 
 ```bash:title=フォント設定
 $ sudo ln -s /mnt/c/Windows/Fonts/ /usr/share/fonts/windows
