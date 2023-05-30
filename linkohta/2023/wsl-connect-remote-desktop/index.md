@@ -1,6 +1,6 @@
 ---
 title: "WSL 上の Ubuntu にリモートデスクトップ接続する方法"
-date:
+date: 2023-05-31
 author: linkohta
 tags: [WSL, Ubuntu]
 description: "WSL 上の Ubuntu にリモートデスクトップ接続して、 GUI アプリケーションを利用する方法を紹介します。"
