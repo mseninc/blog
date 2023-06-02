@@ -1,6 +1,6 @@
 ---
 title: "Amazon Linux 2 にリモートデスクトップ接続する手順"
-date: 
+date:
 author: linkohta
 tags: [EC2, Linux]
 description: "EC2 インスタンスの Amazon Linux 2 上にデスクトップ環境を構築してリモートデスクトップ接続する手順を紹介します。"
@@ -31,13 +31,17 @@ link です。
 
 ## Amazon Linux 2 の環境構築
 
-Amazon Linux 2 にデスクトップ環境と Windows 側から Linux にリモート接続できるようにする **VNCTiger** と **xrdp** を導入します。
+Amazon Linux 2 にデスクトップ環境と Windows 側から Linux にリモート接続できるようにする **TigerVNC** と **xrdp** を導入します。
+
+TigerVNC はグラフィカルデスクトップ共有用のシステムであり、他のコンピューターのリモート制御を可能にします。
+
+xrdp は Windows のリモートデスクトップ接続に用いられる RDP(Remote Desktop Protocol) のサーバ機能を Linux 向けに提供するサーバソフトウェアです。
 
 デスクトップ環境は **MATE** を導入します。
 
 EC2 インスタンスに ssh 接続して以下のコマンドを実行します。
 
-```bash:title=MATEとVNCTigerとxrdpをインストール
+```bash:title=MATEとTigerVNCとxrdpをインストール
 $ sudo amazon-linux-extras install mate-desktop1.x
 $ sudo bash -c 'echo PREFERRED=/usr/bin/mate-session > /etc/sysconfig/desktop'
 $ sudo yum install tigervnc-server
@@ -69,14 +73,15 @@ $ sudo yum install ibus-kkc
 $ sudo yum install google-noto-sans-japanese-fonts
 ```
 
-`~/.bashrc` の最後尾に以下の内容を追加します。
+`~/.bashrc` の末尾に以下の内容を追加します。
 
 ```:title=~/.bashrc
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
 ibus-daemon -drx
-```
+
+````
 
 言語などを指定するロケールを設定します。
 
@@ -84,7 +89,7 @@ ibus-daemon -drx
 $ sudo localectl set-locale LANG=ja_JP.UTF-8
 $ sudo localectl set-keymap jp106
 $ sudo localectl set-keymap jp-OADG109A
-```
+````
 
 最後に `sudo reboot` で再起動して完了です。
 
@@ -107,7 +112,7 @@ EC2 インスタンスにリモートデスクトップ接続してみます。
 ## 参考サイト
 
 - [Amazon Linux 2 を実行している Amazon EC2 インスタンスに GUI をインストールする | AWS re:Post](https://repost.aws/ja/knowledge-center/ec2-linux-2-install-gui)
-- [\[AWS\] 「Amazon Linux 2」でMATE（GUI） を日本語化する。 – .zapping](https://zapping.beccou.com/2021/06/17/aws-japaneseize-mate-on-amazon-linux-2/)
+- [\[AWS\] 「Amazon Linux 2」で MATE（GUI） を日本語化する。 – .zapping](https://zapping.beccou.com/2021/06/17/aws-japaneseize-mate-on-amazon-linux-2/)
 
 ## まとめ
 
