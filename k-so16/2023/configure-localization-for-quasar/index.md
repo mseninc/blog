@@ -264,6 +264,13 @@ export default defineComponent({
 </script>
 ```
 
+本記事を執筆する上で、以下の記事を参考にしました。
+
+> - [Internationalization - MDN Web Docs Glossary: Definitions of Web-related terms | MDN](https://developer.mozilla.org/en-US/docs/Glossary/Internationalization_and_localization)
+> - [Internationalization - W3C](https://www.w3.org/standards/webdesign/i18n)
+> - [Quasar Language Packs | Quasar Framework](https://quasar.dev/options/quasar-language-packs)
+> - [App Internationalization (i18n) | Quasar Framework](https://quasar.dev/options/app-internationalization)
+
 ## まとめ
 
 本記事のまとめは以下の通りです。
