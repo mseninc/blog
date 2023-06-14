@@ -114,7 +114,7 @@ bash-4.2$ systemctl status radiusd
 
 `sudo systemctl start radiusd` 以外の実行にはパスワードが必要です。
 
-```bash{12,20}
+```bash{15,24}
 [root@hiratatsupc ~]# su -s /bin/bash zabbix
 bash-4.2$
 bash-4.2$ cat /etc/hosts
