@@ -24,7 +24,7 @@ Zabbix で監視設定を入れていましたので起動に失敗した通知�
 
 - CentOS 7.7
 - Zabbix Server 4.0 LTS
-- Zabbix Agent 　 4.0.16
+- Zabbix Agent 4.0.16
 - Zabbix サーバーから対象エージェントの監視を設定済み
 
 ## エージェント側の設定
