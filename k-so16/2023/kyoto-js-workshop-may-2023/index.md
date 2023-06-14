@@ -1,6 +1,6 @@
 ---
 title: "JavaScript の技術勉強会 (Kyoto.js) に参加してきました"
-date: 
+date: 2023-06-14
 author: k-so16
 tags: [JavaScript, 〇〇奮闘記]
 description: "2023/5/26 に開催された JavaScript の技術に関する外部勉強会の参加レポートです。"
