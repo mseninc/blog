@@ -70,7 +70,7 @@ description: "業務 PC へのソフトウェア一括インストールを実�
 
 ただ、では実際にどこで `Scope` を指定すればよいかが分かりませんでしたが、いろいろ試してみて以下の部分に `Scope` の指定を入れることでマシンインストールできました。
 
-```json:title=winget.json{11,15}
+```json{11,15}:title=winget.json
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
 	"CreationDate" : "2022-01-29T15:37:38.042-00:00",
