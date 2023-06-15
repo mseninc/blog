@@ -15,7 +15,7 @@ description: "業務 PC へのソフトウェア一括インストールを実�
 1. インストール用の JSON ファイル (`winget.json`) を PC にダウンロードする
 2. コマンドプロンプトを管理者権限で起動し、ダウンロード先のファイルパスに移動して、`winget import winget.json` を実行する
 
-```bash:title=winget.json
+```json:title=winget.json
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
 	"CreationDate" : "2022-01-29T15:37:38.042-00:00",
@@ -70,7 +70,7 @@ description: "業務 PC へのソフトウェア一括インストールを実�
 
 ただ、では実際にどこで `Scope` を指定すればよいかが分かりませんでしたが、いろいろ試してみて以下の部分に `Scope` の指定を入れることでマシンインストールできました。
 
-```bash:title=winget.json{11,15}
+```json:title=winget.json{11,15}
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
 	"CreationDate" : "2022-01-29T15:37:38.042-00:00",
