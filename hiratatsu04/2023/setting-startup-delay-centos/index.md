@@ -166,7 +166,7 @@ WantedBy=multi-user.target
 
 設定前に確認した方法と同じ方法で設定後の遅延時間を確認します。
 
-サーバーを再起動させる、または `systemctl stop [SERVICE NAME]` でサービスを停止後 `systemctl start [SERVICE NAME]` でサービスを再起動して、以下コマンドを実行ください。
+サーバーを再起動させる、または `systemctl restart [SERVICE NAME]` でサービスを再起動して、以下コマンドを実行ください。
 
 ```bash
 [user@hiratatsupc ~]$ systemd-analyze plot > plot.svg
