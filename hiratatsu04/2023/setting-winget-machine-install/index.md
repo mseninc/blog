@@ -59,7 +59,7 @@ description: "業務 PC へのソフトウェア一括インストールを実�
 > ```bash
 > "installBehavior": {
 >    "preferences": {
->        "locale": [ "en-US", "fr-FR" ]
+>        "scope": "user"
 >    }
 > },
 > ```
