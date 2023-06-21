@@ -1,6 +1,6 @@
 ---
 title: "[FortiGate] SSL-VPN のサーバー証明書として Let's Encrypt の証明書を使用する方法"
-date:
+date: 2023-06-21
 author: hiratatsu04
 tags: [FortiGate, Let's Encrypt, ACME]
 description: "FortiGate の SSL-VPN にサーバー証明書を設定せずにクライアントから接続すると警告が出てしまいます。証明書を登録すれば解決しますが、毎年更新する必要があり手間に感じてしまいます。この記事では Let's Encrypt の証明書を設定することで、証明書を自動更新する方法を紹介します"
