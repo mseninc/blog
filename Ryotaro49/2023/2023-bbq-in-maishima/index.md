@@ -1,6 +1,6 @@
 ---
 title: '第2回 BBQ in 森とリルのBBQフィールド'
-date:
+date: 2023-06-23
 author: Ryotaro49
 tags: [レク]
 description: '森とリルのBBQフィールドで BBQ してきました！'
