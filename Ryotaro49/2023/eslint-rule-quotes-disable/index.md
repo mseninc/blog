@@ -10,7 +10,7 @@ description: 'ESLint で特定のファイルのルールを変更する方法�
 
 先日、とある JS ファイルを作った時に「**String must use singlequote**(文字列にはシングルクォートが必要ですよ！)」という Lint エラーがでてきていました。
 
-```js:title=Lintエラー
+```js{4}:title=Lintエラー
  App •  ERROR  •  UI  Reported by ESLint:
 [eslint]
 /index.js
@@ -19,9 +19,9 @@ description: 'ESLint で特定のファイルのルールを変更する方法�
 
 基本的に Lint エラーになっているのは、コーディング規約違反ですので、本来は修正すべきです。
 
-ただ、背景として自動生成したプログラムを組み込む際に Lint エラーが発生したので、自動生成したプログラムについては Lint エラーを無視させたいということがありました。
+ただ、背景として自動生成したソースコードをそのまま使うため、 Linter のルールを適用させたくないということがありました。
 
-そこで今回は、クォートを例として、特定のファイルのみ 別のルールを適用する方法を紹介します。
+そこで今回は、クォートを例として、**特定のファイルのみ**別のルールを適用する方法を紹介します。
 
 ## 想定環境
 
@@ -30,11 +30,14 @@ description: 'ESLint で特定のファイルのルールを変更する方法�
 
 ## 設定方法
 
-以下のように、`overrides` を使用して新しいルールを記述します。
+以下のように、`overrides` を使用して新しいルールを `.eslintrc.js` に記述します。
 
 ただし、すでに `rules` がある場合は、**すでにある `rules` と `overrides` を同レベルの階層に記述してください。**
 
-```js:title=ファイルパスを指定してルールを設定
+```js{4}:title=ファイルパスを指定してルールを設定
+  rules: {
+    quotes: ["error", "single"],
+  },
   overrides: [ // overrides を使用して新しくルールを作ります。
     {
       files: ["./src/index.js"], // ここでファイルを指定します。
@@ -55,7 +58,7 @@ description: 'ESLint で特定のファイルのルールを変更する方法�
 
 `fruit.js` と`language.js` というファイルがあるとします。
 
-```js:title=fruit.js
+```js{numberLines:1}:title=fruit.js
 {
   apple: 'りんご', // シングルクォート
   grapes: "ぶどう", // ダブルクォート
@@ -63,7 +66,7 @@ description: 'ESLint で特定のファイルのルールを変更する方法�
 }
 ```
 
-```js:title=language.js
+```js{numberLines:1}:title=language.js
 {
   JP: 'jp', // シングルクォート
   US: "us", // ダブルクォート
@@ -72,7 +75,7 @@ description: 'ESLint で特定のファイルのルールを変更する方法�
 
 以下のコードは `rules` (プロジェクト全体) ではエラーが出るように、`overrides` (ファイルごと) では無効化するように設定しました。
 
-```js:title=eslintrc.js
+```js:title=.eslintrc.js
 module.exports = {
   root: true,
 
@@ -90,16 +93,16 @@ module.exports = {
 };
 ```
 
-```js:title=結果：Lintエラー
+```js{4}:title=結果：Lintエラー
  App •  ERROR  •  UI  Reported by ESLint:
 [eslint]
 /language.js
   3:7  error  Strings must use singlequote  quotes  //"us", ダブルクォート
 ```
 
-出力結果は、 *`overrides` で指定していないファイル*(language.js)でシングルクォート以外を使用しているため、エラーが出ます。
+出力結果は、 *`overrides` で指定していないファイル*( `language.js` )でシングルクォート以外を使用しているため、エラーが出ます。
 
-ですが、**指定したファイル**(fruit.js)ではエラーが出ません。
+**指定したファイル**( `fruit.js` )ではエラーが出ません。
 
 これで、*プロジェクト単位、ファイル単位*で**異なるルール**を設定できました。
 
@@ -117,7 +120,7 @@ ESLint のエラーレベルは 3 段階ありますので使い分けができ�
 
 #### `fruit.js` を例に挙動を見ていく。
 
-```js:title=index.js
+```js{numberLines:1}:title=fruit.js
 {
   apple: 'りんご', // シングルクォート
   grapes: "ぶどう", // ダブルクォート
@@ -131,7 +134,7 @@ ESLint のエラーレベルは 3 段階ありますので使い分けができ�
 quotes: ["error", "single"] // 引数の1番目にエラーレベル、2番目に対象を書く
 ```
 
-```js:title=結果：Lintエラー
+```js{4-5}:title=結果：Lintエラー
  App •  ERROR  •  UI  Reported by ESLint:
 [eslint]
 /fruit.js
@@ -139,7 +142,7 @@ quotes: ["error", "single"] // 引数の1番目にエラーレベル、2番目�
     4:11  error  Strings must use singlequote  quotes // `バナナ`, バッククォート
 ```
 
-結果は、**コードは実行されず Lint エラーが出ます。**
+**ESLint の実行結果は失敗となり、 Lint エラーが出ます。**
 
 ダブルクォートとバッククォートを使用したところだけエラーが出ているので、正しい結果が出ています。
 
@@ -158,7 +161,7 @@ quotes: ["error", "single"] // 引数の1番目にエラーレベル、2番目�
 quotes: ["warn", "single"] // 引数の1番目にエラーレベル、2番目に対象を書く
 ```
 
-```js:title=結果：Lintエラー(warning)
+```js{4-5}:title=結果：Lintエラー(warning)
  App •  WARNING  •  UI  Reported by ESLint:
 [eslint]
 /fruit.js
@@ -166,7 +169,7 @@ quotes: ["warn", "single"] // 引数の1番目にエラーレベル、2番目に
     4:11  warning  Strings must use singlequote  quotes // `バナナ`, バッククォート
 ```
 
-結果は、**コードは実行されて `warning` として Lint エラーが出ます。**
+**ESLint の実行結果は成功するが、 `warning` として Lint エラーが出ます。**
 
 ##### `quotes` のあとに `off` のみを記述する。
 
@@ -178,7 +181,7 @@ quotes: "off" // offのみを記述
 App •  READY  • Compiled: "UI"
 ```
 
-結果は、**コードは実行され Lint エラーも出ません。**
+**ESLint の実行結果は成功し、 Lint エラーも出ません。**
 
 `quotes` のあとに `off` のみを記述することによって**すべて**のクォートに対してのルールを設定できます。
 （ダブルクォート、シングルクォート、バッククォートのルールを無効化しています。）
@@ -188,7 +191,7 @@ App •  READY  • Compiled: "UI"
 - ファイル単位で適用範囲を分ける
 
   - *プロジェクト全体*を指定してクォートを `許可・制限` したいときは **`rules` の中に記述する。**
-  - *ファイル*を指定してクォートを `許可・制限` したいときは **`rules の外`の `overrides` の中に記述する。**
+  - *ファイル*を指定してクォートを `許可・制限` したいときは **`overrides` の中に記述する。**
 
 - クォートの種類でルールを分ける
   - *特定*のクォートを `許可`しそれ以外を `制限` したいときは **`quotes: ["error 又は warn", "特定のクォート"]`**
@@ -200,7 +203,7 @@ App •  READY  • Compiled: "UI"
 
 日本語のサイトのみでは、調べ方が悪かったのか問題を解決できませんでした。
 
-ですが、英語のドキュメントを参考にするとすぐに欲しかった情報にたどり着き、解決できました！
+しかし、英語のドキュメントを参考にするとすぐに欲しかった情報にたどり着き、解決できました！
 
 この体験から、英語の読解力を上げて英語のドキュメントも読むことを選択肢にいれれば、エンジニアとしての問題解決力に直結するんだなと思いました。
 
