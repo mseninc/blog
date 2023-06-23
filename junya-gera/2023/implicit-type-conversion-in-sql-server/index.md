@@ -1,30 +1,34 @@
 ---
-title: "[SQL Server] varchar の型に文字列を代入すると int と判断されてしまう"
+title: "[SQL Server] INSERT する値に複数の型が存在すると優先順位が高い型に評価される"
 date: 
 author: junya-gera
 tags: [SQL Server, SQL]
-description: "SQL Server で varchar の型に文字列を代入すると int と判断されてしまう場合の原因と解決法を解説します。"
+description: "SQL Server で複数の型を挿入すると優先順位の高い型として評価されることについて解説します。"
 ---
 
 こんにちは、じゅんじゅんです。
 
 先日、 SQL Server で一時テーブルを作成し、その一時テーブルにレコードを追加したときのことです。
 
-`varchar` に定義した列に対して文字列の値を入れているのに、**varchar の値 'B2' をデータ型 int に変換できませんでした。** というエラーメッセージが表示され、レコードの追加ができませんでした。
+`varchar` に定義した列に対して文字列の値を挿入しているのに、**varchar の値 'B2' をデータ型 int に変換できませんでした。** というエラーメッセージが表示され、レコードの追加ができませんでした。
 
-今回は SQL Server で `INSERT` 時に別の型として判断されてしまう場合の原因と解決法を紹介します。
+**原因は「2」のような整数リテラルと、「'B2'」のような文字列を同じ列に挿入しようとしていたからでした。**
+
+このことから SQL Server における「データ型の優先順位」について学びましたので、紹介します。
 
 ## エラーが発生する SQL
 
+まず冒頭でお話したエラーについて、どのような SQL で発生したか紹介します。
+
 以下のような SQL の場合、「`varchar` の値 `'B2'` をデータ型 `int` に変換できませんでした。」というエラーが発生します。
 
-```sql:title=一時テーブルに値を挿入する&nbsp;SQL
+```sql:title=一時テーブルへの値の挿入が失敗する&nbsp;SQL
 BEGIN TRAN;
 
 DECLARE @user TABLE (
-  NAME NVARCHAR(20)
-, AGE INT
-, RANK NVARCHAR(10)
+  NAME nvarchar(20)
+, AGE int
+, RANK nvarchar(10)
 )
 
 INSERT INTO @user
@@ -49,29 +53,93 @@ ROLLBACK;
 
 ## エラーが発生する原因
 
-「`varchar` の値 `'B2'`」を代入しようとしているカラムは `NVARCHAR` 型の `RANK` ですが、**なぜか `int` に変換しようとしています**。 `B2` はもちろん `int` 型にはなれないので変換に失敗します。
+「`varchar` の値 `'B2'`」を代入しようとしているカラムは `nvarchar` 型の `RANK` ですが、**なぜか `int` に変換しようとしています**。 `B2` はもちろん `int` 型にはなれないので変換に失敗します。
 
-`int` に変換しようとする原因は **`VALUES` の 1 つ目で `RANK` に対して `2` という int の値を代入していたから**です。
+今回 `RANK` 列に挿入しようとした値は `2`、 `'B2'`、 `3` です。
 
-文字列の `'2'` を入力するべきところを数値の `2` と記載していたことで**暗黙的な型変換**がはたらき、 `RANK` は `int` 型と判断されたのでした。
+挿入しようとした値の型に `2` のような整数リテラル (`int` 型) と `'B2'` のような文字列 (`varchar` 型) が混ざっていたため、優先順位の高い `int` 型と評価されました。
 
-## 暗黙的な型変換とは
+## データ型の優先順位とは
 
-Microsoft のドキュメント「[暗黙的な変換と明示的な変換](https://learn.microsoft.com/ja-jp/sql/t-sql/data-types/data-type-conversion-database-engine?view=sql-server-ver16#implicit-and-explicit-conversion)」には以下のように記載されています。
+Microsoft のドキュメント「[データ型の優先順位](https://learn.microsoft.com/ja-jp/sql/t-sql/data-types/data-type-precedence-transact-sql?view=sql-server-ver16)」には以下のように記載されています。
 
-> 暗黙的な変換はユーザーが意識する必要はありません。 SQL Server がデータのデータ型を自動的に変換します。 たとえば、smallint 型を int 型と比較する場合、比較を実行する前に、smallint 型から int 型に暗黙的に変換されます。
+> 演算子でデータ型が異なる 2 つの式を結合すると、最初に優先順位の低いデータ型が優先順位の高いデータ型に変換されます。 暗黙的な変換がサポートされていない場合は、エラーが返されます。 同じデータ型を持つオペランド式を結合する演算子の場合、演算の結果も同じデータ型になります。
 
-**異なる型を比較する場合や、今回のように `INSERT` をするときに、データベースが自動的に型を同じものに変換してくれる機能**なのですが、これが逆に悪さをしていました。
+SQL Server のデータ型の優先順位は以下のように定義されています。
 
-ドキュメントの同ページに、どの型がどの型に変換できるかを示した表があります (見づらいですが...) 。
+|順位|型|
+|:----|:----|
+|1| ユーザー定義データ型 (最高)|
+|2| sql_variant|
+|3| xml|
+|4| datetimeoffset|
+|5| datetime2|
+|6| datetime|
+|7| smalldatetime|
+|8| date|
+|9| time|
+|10| float|
+|11| real|
+|12| decimal|
+|13| money|
+|14| smallmoney|
+|15| bigint|
+|16| int|
+|17| smallint|
+|18| tinyint|
+|19| bit|
+|20| ntext|
+|21| text|
+|22| image|
+|23| timestamp|
+|24| uniqueidentifier|
+|25| nvarchar (nvarchar(max) など)|
+|26| nchar|
+|27| varchar (varchar(max) など)|
+|28| char|
+|29| varbinary (varbinary(max) など)|
+|30| binary (最低)|
 
-![SQL Server における型の変換表](images/2.png "SQL Server における型の変換表")
+たとえば以下の式では `varchar` 型 (27 位) である `2` はより優先順位の高い `int` 型 (16 位) へと変換され、結果は `int` 型の `4` となります。
 
-たとえば画像の矢印で記した部分を見ると、 `varchar` から `int` へ変換可能なことがわかります。
+![2 + '2' の計算](images/2.png "2 + '2' の計算")
 
-そのため、**今回の `VALUES` の 1 つ目のように `2` という `int` 型は文字列 `2` に変換が可能なので `int` として代入され、結果 `RANK` が `int` 型の列だと判断されてしまいました**。
+しかし、次の式だと `B2` は `int` 型に変換ができないため、「varchar の値 'B2' をデータ型 int に変換できませんでした。」というメッセージが表示されます。
 
-暗黙的な型変換は一見すると変換が不要なので楽に見えますが、**バグの元であり原因もわかりづらいため、これに頼らず正しい型を記述したり、明示的に型変換するほうが賢明です**。
+![2 + 'B2' の計算は失敗する](images/3.png "2 + 'B2' の計算は失敗する")
+
+同じ事象が、複数の型を挿入しようとした `INSERT` でも発生したものと思われます。
+
+## エラーの解決法
+
+言うまでもないですが、 `nvarchar` に定義した列には整数リテラルではなく文字列を挿入する必要がありました。
+
+以下のようにすればエラーが出ず `INSERT` が成功します。
+
+```sql{11,13}:title=一時テーブルへの値の挿入が成功する&nbsp;SQL
+BEGIN TRAN;
+
+DECLARE @user TABLE (
+  NAME nvarchar(20)
+, AGE int
+, RANK nvarchar(10)
+)
+
+INSERT INTO @user
+VALUES
+  ('hogehoge', 28, '2')
+, ('piyopiyo', 31, 'B2')
+, ('fugafuga', 23, '3')
+;
+
+SELECT
+  *
+FROM @user
+;
+
+
+ROLLBACK;
+```
 
 ## あとがき
 
