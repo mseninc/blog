@@ -1,6 +1,6 @@
 ---
 title: "AWS に Rails のアプリをデプロイする方法 ～ EC2 インスタンスに接続するまで"
-date:
+date: 2023-06-26
 author: linkohta
 tags: [EC2, Ruby on Rails, Web]
 description: "EC2 を利用して Rails のアプリをデプロイ、公開する方法の EC2 インスタンスに接続するまでを紹介します。"
