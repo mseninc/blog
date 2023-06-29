@@ -34,7 +34,10 @@ description: 'ESLint で特定のファイルのルールを変更する方法�
 
 ただし、すでに `rules` がある場合は、**すでにある `rules` と `overrides` を同レベルの階層に記述してください。**
 
-```js{4}:title=ファイルパスを指定してルールを設定
+```js{7}:title=.eslintrc.js
+module.exports = {
+  root: true,
+
   rules: {
     quotes: ["error", "single"],
   },
@@ -46,6 +49,7 @@ description: 'ESLint で特定のファイルのルールを変更する方法�
       },
     },
   ],
+};
 ```
 
 `overrides` の中で `files` を記述し、ファイルを指定します。
