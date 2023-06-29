@@ -8,7 +8,7 @@ description: "EC2 インスタンス上に Rails アプリの起動に必要な�
 
 link です。
 
-この記事は前回 [AWS に Rails のアプリをデプロイする方法 ～ EC2 インスタンスに接続するまで](linkohta/ec2-create-ssh-connection)の続きになっています。
+この記事は前回 [AWS に Rails のアプリをデプロイする方法 ～ EC2 インスタンスに接続するまで](/ec2-create-ssh-connection)の続きになっています。
 
 前回は EC2 インスタンスに接続するまでをやりました。
 
