@@ -131,8 +131,9 @@ WantedBy=multi-user.target
 
 #### 【参考】`TimeoutStartUSec` と `TimeoutStartSec` の違い
 
-[1. タイムアウト時間の確認] で `systemctl show radiusd | grep ^Timeout` を実行した際には **`TimeoutStartUSec`** 表示されました。  
-[2. タイムアウト時間の変更] でタイムアウト時間を設定するときは、**`TimeoutStartSec`** に値を設定しました。
+[1.タイムアウト時間の確認] で `systemctl show radiusd | grep ^Timeout` を実行した際には **`TimeoutStartUSec`** 表示されました。
+
+[2.タイムアウト時間の変更] でタイムアウト時間を設定するときは **`TimeoutStartSec`** に値を設定しました。
 
 分かりにくいですが、`Sec` 前の `U` の有無の違いがあります。
 
@@ -147,7 +148,7 @@ WantedBy=multi-user.target
 
 設定で使うのは、秒単位の `TimeoutStartSec` で、設定した値がマイクロ秒単位に変換されて systemd 内部で管理されるようです。
 
-実際設定する変数は **`TimeoutStartSec`** なので `TimeoutStartUSec` は気にしなくて良さそうです。
+実際に設定する変数は **`TimeoutStartSec`** ですので、`TimeoutStartUSec` は気にしなくて良さそうです。
 
 ### 3. 遅延設定
 
