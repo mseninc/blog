@@ -33,8 +33,8 @@ DECLARE @user TABLE (
 
 INSERT INTO @user
 VALUES
-  ('hogehoge', 28, 2)
-, ('piyopiyo', 31, 'B2')
+  ('hogehoge', 28, 'B2')
+, ('piyopiyo', 31, 2)
 , ('fugafuga', 23, 3)
 ;
 
@@ -127,8 +127,8 @@ DECLARE @user TABLE (
 
 INSERT INTO @user
 VALUES
-  ('hogehoge', 28, '2')
-, ('piyopiyo', 31, 'B2')
+  ('hogehoge', 28, 'B2')
+, ('piyopiyo', 31, '2')
 , ('fugafuga', 23, '3')
 ;
 
