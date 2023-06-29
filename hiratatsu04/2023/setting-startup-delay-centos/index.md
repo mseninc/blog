@@ -91,7 +91,7 @@ TimeoutStopUSec=1min 30s
 
 > /usr/lib/systemd/system のフォルダは CentOS 7 のデフォルトで設定されているサービスや、yum などで提供されているソフトウェアをインストールした際のデフォルト設定を保存するルールになっています。 よってサーバーの管理者が編集・変更したファイルをここに配置してはいけません。
 > サーバーの管理者が独自に変更・編集した設定ファイルは /etc/systemd/system フォルダに配置するルールになっています。 具体的には、/usr/lib/systemd/system 配下のファイルをここにコピーしてきて変更を加えることが多いでしょう。
-> <cite>[CentOS 7 における systemd のファイル・フォルダ構成 |](https://weblabo.oscasierra.net/centos7-systemd-files/)</cite>
+> <cite>[CentOS 7 における systemd のファイル・フォルダ構成](https://weblabo.oscasierra.net/centos7-systemd-files/)</cite>
 
 従って、`/etc/systemd/system` 配下に対象サービスの設定ファイルを作成して、そこに設定を書いていきます。
 
