@@ -118,13 +118,33 @@ TimeoutStartSec=10min　👈 10分のタイムアウト時間を設定
 WantedBy=multi-user.target
 ```
 
-#### 【参考】`TimeoutStartUSec=` とは
+#### 【参考】`TimeoutStartSec=` とは
 
 > 起動を待つ時間を設定します。
 > デーモンサービスが構成された時間内に起動完了を通知しない場合、サービスは失敗したと見なされ、再びシャットダウンされます。
 > 秒単位の単位のない値、または 5min 20s などのタイムスパン値を取ります。
 
-[man systemd.service 日本語訳 - Qiita](https://qiita.com/JhonnyBravo/items/a28074c20fa9adf02be3)
+[man systemd.service 日本語訳 - Qiita](https://qiita.com/JhonnyBravo/items/a28074c20fa9adf02be3#timeoutstartsec)
+
+#### 【参考】`TimeoutStartUSec` と `TimeoutStartSec` の違い
+
+[1. タイムアウト時間の確認] で `systemctl show radiusd | grep ^Timeout` を実行した際には **`TimeoutStartUSec`** 表示されました。  
+[2. タイムアウト時間の変更] でタイムアウト時間を設定するときは、**`TimeoutStartSec`** に値を設定しました。
+
+分かりにくいですが、`Sec` 前の `U` の有無の違いがあります。
+
+この違いについて調べてみると以下の使い分けがあるみたいです。
+
+- `TimeoutStartUSec`: **systemd 内部的で管理されるプロパティ。** `U` はマイクロ秒 (μs) を表している。
+- `TimeoutStartSec`: **設定する際に使われる変数。**
+
+[org.freedesktop.systemd1](https://www.freedesktop.org/software/systemd/man/org.freedesktop.systemd1.html) や [TimeoutStartSec vs. TimeoutStartUSec · Issue #2047 · systemd/systemd](https://github.com/systemd/systemd/issues/2047) に記載がありますが、systemd 内部では時間はマイクロ秒で管理されるみたいです。
+
+> Properties exposing time values are usually encoded in microseconds (µs) on the bus, even if their corresponding settings in the unit files are in seconds.
+
+設定で使うのは、秒単位の `TimeoutStartSec` で、設定した値がマイクロ秒単位に変換されて systemd 内部で管理されるようです。
+
+実際設定する変数は **`TimeoutStartSec`** なので `TimeoutStartUSec` は気にしなくて良さそうです。
 
 ### 3. 遅延設定
 
