@@ -116,7 +116,7 @@ SQL Server のデータ型の優先順位は以下のように定義されてい
 
 以下のようにすればエラーが出ず `INSERT` が成功します。
 
-```sql{11,13}:title=一時テーブルへの値の挿入が成功する&nbsp;SQL
+```sql{12,13}:title=一時テーブルへの値の挿入が成功する&nbsp;SQL
 BEGIN TRAN;
 
 DECLARE @user TABLE (
