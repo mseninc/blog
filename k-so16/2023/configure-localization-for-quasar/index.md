@@ -1,6 +1,6 @@
 ---
 title: "Quasar で国際化の設定をする方法"
-date: 
+date: 2023-06-30
 author: k-so16
 tags: [Web, Quasar Framework, Vue.js, Vue I18n, JavaScript]
 description: "Quasar で作成したアプリケーションに国際化の設定をする方法を紹介します。"
