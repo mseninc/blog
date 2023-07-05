@@ -61,9 +61,10 @@ ROLLBACK;
 
 ## データ型の優先順位とは
 
-Microsoft のドキュメント「[データ型の優先順位](https://learn.microsoft.com/ja-jp/sql/t-sql/data-types/data-type-precedence-transact-sql?view=sql-server-ver16)」には以下のように記載されています。
+Microsoft のドキュメントには以下のように記載されています。
 
 > 演算子でデータ型が異なる 2 つの式を結合すると、最初に優先順位の低いデータ型が優先順位の高いデータ型に変換されます。 暗黙的な変換がサポートされていない場合は、エラーが返されます。 同じデータ型を持つオペランド式を結合する演算子の場合、演算の結果も同じデータ型になります。
+> <cite>[データ型の優先順位](https://learn.microsoft.com/ja-jp/sql/t-sql/data-types/data-type-precedence-transact-sql?view=sql-server-ver16)</cite>
 
 SQL Server のデータ型の優先順位は以下のように定義されています。
 
