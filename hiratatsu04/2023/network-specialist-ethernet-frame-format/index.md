@@ -99,8 +99,8 @@ MAC アドレスは良く説明がありご存じの方も多いと思うので�
 
 具体的にプリアンブルの中身は以下です。
 
-`0xAAAAAAAAAAAAAAAB`  
-`10101010 10101010 10101010 10101010 10101010 10101010 10101010 10101011`
+`10101010 10101010 10101010 10101010 10101010 10101010 10101010 10101011`  
+(`0xAAAAAAAAAAAAAAAB`)
 
 最後に `11` を続けることで、フレームの始まりを表しています。
 
@@ -120,6 +120,7 @@ MAC アドレスは良く説明がありご存じの方も多いと思うので�
 0800 | IPv4
 0806 | Address Resolution Protocol ( ARP )
 8035 | Reverse Address Resolution Protocol ( RARP )
+8100 | Customer VLAN Tag Type
 814C | SNMP over Ethernet
 8191 | NetBIOS/NetBEUI
 86DD | IP version 6 ( IPv6 )
@@ -139,6 +140,8 @@ VLAN のフレームはタイプの前に入るので、タイプに VLAN を表
 従って、**VLAN フレームでは `TPID` に VLAN を表す `0x8100` が入ります。**
 
 その他の項目については別の記事で整理できたらと思います。
+
+※ `0x8100` は 2013年の10月に RFC7042 で規定されたみたいです。
 
 #### FCS (Frame Check Sequence)
 
