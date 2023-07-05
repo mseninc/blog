@@ -181,7 +181,10 @@ bash-4.2$ sudo systemctl stop radiusd
 
 4. 「追加」をクリックして設定を反映させます
 
-5. 「追加」をクリックして設定を保存します
+
+![実行内容の詳細を設定する](images/5-end-setting-action-detail.png "実行内容の詳細を設定する")
+
+1. 「追加」をクリックして設定を保存します
 
 ![実行内容の詳細を設定する](images/4-end-setting.png "実行内容の詳細を設定する")
 
