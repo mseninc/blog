@@ -1,5 +1,5 @@
 ---
-title: "Ethernet のフレームフォーマットについて"
+title: "Ethernet のフレームフォーマットと各領域の説明"
 date:
 author: hiratatsu04
 tags: [Ethernet,ネットワークスペシャリスト]
