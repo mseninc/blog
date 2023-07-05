@@ -1,6 +1,6 @@
 ---
 title: "Amazon Linux 2 にリモートデスクトップ接続する手順"
-date:
+date: 2023-07-05
 author: linkohta
 tags: [EC2, Linux]
 description: "EC2 インスタンスの Amazon Linux 2 上にデスクトップ環境を構築してリモートデスクトップ接続する手順を紹介します。"
