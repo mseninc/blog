@@ -1,6 +1,6 @@
 ---
 title: "OpenSSL 3系で発行された p12 形式の証明書が macOS にインポートできない"
-date: 
+date: 2023-07-10
 author: jinna-i
 tags: [macOS, OpenSSL]
 description: "macOS に OpenSSL 3系で発行した p12 形式の証明書のインポートが失敗しました。原因を調査していると暗号化アルゴリズムが関係していそうでしたので対応を記事にしました。"
