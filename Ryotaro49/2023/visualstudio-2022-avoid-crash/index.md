@@ -2,7 +2,7 @@
 title: "VisualStudio 2022 の起動時にクラッシュする現象を回避する方法"
 date: 
 author: Ryotaro49
-tags: [VisualStudio2022]
+tags: [Visual Studio,Visual Studio 2022]
 description: "VisualStudio 2022 で 起動してすぐクラッシュする現象について、ダウングレードで回避する方法を紹介します。"
 ---
 
