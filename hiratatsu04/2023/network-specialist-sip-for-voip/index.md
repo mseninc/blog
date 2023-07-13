@@ -109,58 +109,214 @@ SIP のフレーム構造は下図です。
 
 
 
+具体的な中身は下図のようになっています。
+
+- リクエスト例
+
+
+
+- レスポンス例
+
+
+スタートラインに SIP メソッドなどが記載されており、ヘッダにリクエストの着信先や生成元、リクエストが経由したパスなどが記載されます。
+
+ボディには、RTP で使う IP アドレスやポート番号、音声の圧縮方式などの情報が記載されます。  
+このボディの記載方法は SIP では規定されておらず、SDP で決められています。
+
 ### 1. スタートライン
 
-SIP の通信は、リクエストとレスポンスがのやり取りで行われます。
+SIP の通信は、リクエストとレスポンスのやり取りで行われます。
 
-このリクエストとレスポンスは HTTP 
+SIP は HTTP を例に設計されたらしく、リクエストとレスポンスという仕組みは HTTP と同じになっています。
 
-#### リクエスト
+<table>
+<caption>リクエスト</caption>
+	<tr>
+		<td>SIPメソッド</td>
+		<td>説明</td>
+	</tr>
+	<tr>
+		<td>INVITE</td>
+		<td>セッション開始要求</td>
+	</tr>
+	<tr>
+		<td>ACK</td>
+		<td>セッション確立の確認</td>
+	</tr>
+	<tr>
+		<td>BYE</td>
+		<td>セッション終了</td>
+	</tr>
+	<tr>
+		<td>CANCEL</td>
+		<td>セッション確立のキャンセル</td>
+	</tr>
+	<tr>
+		<td>REGISTER</td>
+		<td>情報の登録</td>
+	</tr>
+	<tr>
+		<td>OPTIONS</td>
+		<td>サーバ機能問い合わせ</td>
+	</tr>
+	<tr>
+		<td>PRACK</td>
+		<td>暫定応答に対する確認</td>
+	</tr>
+	<tr>
+		<td>INFO</td>
+		<td>セッション内の情報通知</td>
+	</tr>
+	<tr>
+		<td>SUBSCRIBE</td>
+		<td>イベントの通知要請</td>
+	</tr>
+	<tr>
+		<td>NOTIFY</td>
+		<td>要請されたイベントの通知</td>
+	</tr>
+	<tr>
+		<td>MESSAGE</td>
+		<td>テキストメッセージなどの送信</td>
+	</tr>
+	<tr>
+		<td>UPDATE</td>
+		<td>セッションの変更</td>
+	</tr>
+	<tr>
+		<td>PUBLISH</td>
+		<td>ステータス情報の通知</td>
+	</tr>
+	<tr>
+		<td>REFER</td>
+		<td>転送指示</td>
+	</tr>
+</table>
 
-SIPメソッド | 説明
--- | --
-INVITE | セッション開始要求
-ACK | セッション確立の確認
-BYE | セッション終了
-CANCEL | セッション確立のキャンセル
-REGISTER | 情報の登録
-OPTIONS | サーバ機能問い合わせ
-PRACK | 暫定応答に対する確認
-INFO | セッション内の情報通知
-SUBSCRIBE | イベントの通知要請
-NOTIFY | 要請されたイベントの通知
-MESSAGE | テキストメッセージなどの送信
-UPDATE | セッションの変更
-PUBLISH | ステータス情報の通知
-REFER | 転送指示
 
-#### レスポンス
 
-ステータス | コード | メッセージ | 応答内容
--- | -- | -- | --
-100～199：暫定応答（経過情報） | 100 | Trying | 暫定応答
-180 | Ringing | 呼び出し中
-200～299：成功応答 | 200 | OK | リクエスト成功
-300～399：転送応答 | 301 | Moved   Permanently | 恒久的に移動した
-302 | Moved   Temporary | 一時的に移動した
-400～499：リクエストエラー | 400 | Bad   Request | リクエストが不正な構文
-401 | Unauthorized | ユーザ認証が必要
-403 | Forbidden | 禁止されている
-404 | Not   Found | 見つからなかった
-486 | Busy   Here | ビジー状態である（通話中など）
-487 | Request   Terminated | リクエストが終了させられた
-500～599：サーバーエラー | 500 | Server   Internal Error | サーバー内部エラー
-503 | Service   Unavailable | サーバー利用不可
-600～699：グローバルエラー | 600 | Busy   Everywhere | どの場所もビジー
-603 | Decline | どの端末も参加できない
+<table>
+<caption>レスポンス</caption>
+	<tr>
+		<td>ステータス</td>
+		<td>コード</td>
+		<td>メッセージ</td>
+		<td>応答内容</td>
+	</tr>
+	<tr>
+		<td rowspan="2">暫定応答（経過情報）<br>(コード：100～199)</td>
+		<td>100</td>
+		<td>Trying</td>
+		<td>暫定応答</td>
+	</tr>
+	<tr>
+		<td>180</td>
+		<td>Ringing</td>
+		<td>呼び出し中</td>
+	</tr>
+	<tr>
+		<td>成功応答<br>(コード：200～299)</td>
+		<td>200</td>
+		<td>OK</td>
+		<td>リクエスト成功</td>
+	</tr>
+	<tr>
+		<td rowspan="2">転送応答<br>(コード：300～399)</td>
+		<td>301</td>
+		<td>Moved Permanently</td>
+		<td>恒久的に移動した</td>
+	</tr>
+	<tr>
+		<td>302</td>
+		<td>Moved Temporary</td>
+		<td>一時的に移動した</td>
+	</tr>
+	<tr>
+		<td rowspan="6">リクエストエラー<br>(コード：400～499)</td>
+		<td>400</td>
+		<td>Bad Request</td>
+		<td>リクエストが不正な構文</td>
+	</tr>
+	<tr>
+		<td>401</td>
+		<td>Unauthorized</td>
+		<td>ユーザ認証が必要</td>
+	</tr>
+	<tr>
+		<td>403</td>
+		<td>Forbidden</td>
+		<td>禁止されている</td>
+	</tr>
+	<tr>
+		<td>404</td>
+		<td>Not Found</td>
+		<td>見つからなかった</td>
+	</tr>
+	<tr>
+		<td>486</td>
+		<td>Busy Here</td>
+		<td>ビジー状態である（通話中など）</td>
+	</tr>
+	<tr>
+		<td>487</td>
+		<td>Request Terminated</td>
+		<td>リクエストが終了させられた</td>
+	</tr>
+	<tr>
+		<td rowspan="2">サーバーエラー<br>(コード：500～599)</td>
+		<td>500</td>
+		<td>Server Internal Error</td>
+		<td>サーバー内部エラー</td>
+	</tr>
+	<tr>
+		<td>503</td>
+		<td>Service Unavailable</td>
+		<td>サーバー利用不可</td>
+	</tr>
+	<tr>
+		<td rowspan="2">グローバルエラー<br>(コード：600～699)</td>
+		<td>600</td>
+		<td>Busy Everywhere</td>
+		<td>どの場所もビジー</td>
+	</tr>
+	<tr>
+		<td>603</td>
+		<td>Decline</td>
+		<td>どの端末も参加できない</td>
+	</tr>
+</table>
 
 ### 2. ヘッダ
 
+リクエストの着信先や生成元、リクエストが経由したパスなどが記載されます。
 
+パラメータ | 内容
+-- | --
+Call-ID | ユニーク ID であり、セッションの識別に使用される
+To | リクエストの着信先 URI
+From | リクエストの生成元 URI
+Contact | 以後、自分へのリクエストを送ってほしい URI
+Cseq | 同一 Call-ID で何個目のリクエストかを表示
+Via | リクエストが経由してきた経路。レスポンスを転送する経路として使われる。
+Content-Type | ボディメッセージの MIME タイプ
+Content-Length | ボディの長さ（バイト数）
+
+※ URI (Uniform Resource Identifier) とは URL (Uniform Resource Locator) と URN (Uniform Resource Name) の総称
+
+※ Content-Type は例として以下がある。
+INVITE リクエスト：application/SDP
+NOTIFY リクエスト：application/xpidftxml or application/cpim-pidftxml
+MESSAGE リクエスト：text/plain
 
 ### 3. ボディ
 
+ボディの記載方法について SIP では MIME (Multipurpose Internet Mail Extensions) 形式で記載することのみを規定しています。
 
+具体的にどのように記載されるかは、使用する MIME Type に依存します。
+
+使用される MIME は SDP (Session Description Protocol) が
+
+[MIME Type一覧](https://manual.iij.jp/cwh/manual/37913919.html)
 
 ### SDP とは？
 
