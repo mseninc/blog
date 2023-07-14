@@ -1,6 +1,6 @@
 ---
 title: "[Zabbix] Zabbix からサービスの自動復旧を行う方法"
-date:
+date: 2023-07-14
 author: hiratatsu04
 tags: [Zabbix, CentOS]
 description: "Linux サービスに対して Zabbix で監視設定を入れている方は多いと思います。監視設定のみでは起動に失敗した通知はきますが、もちろん機転を利かせて自動的に起動してくれるなんてことはありません。そこで今回は CentOS で動いているサービスが起動しなかったときに、Zabbix からサービスを起動する方法を紹介します。"
