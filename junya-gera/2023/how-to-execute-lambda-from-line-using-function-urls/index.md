@@ -55,7 +55,7 @@ AWS コンソールにログインし、 Lambda のページから「関数の�
 
 画面下へ進むと「詳細設定」という部分があるのでクリックして開きます。「関数 URL を有効化」にチェックを入れることで関数 URL を使用できます。
 
-認証タイプを選択します。「IAM 認証」は記載のとおり、 Lambda を呼び出す権限 (`lambda:InvokeFunctionUrl`) が付与されている IAM ユーザー・ロールのみ実行できるようになります。今回パブリックのエンドポイントとして使用するので「NONE」を選択します。
+認証タイプを選択します。「AWS_IAM」は記載のとおり、 Lambda を呼び出す権限 (`lambda:InvokeFunctionUrl`) が付与されている IAM ユーザー・ロールのみ実行できるようになります。今回パブリックのエンドポイントとして使用するので「NONE」を選択します。
 
 ![「関数の作成」- 詳細設定](images/3.png "「関数の作成」- 詳細設定")
 
@@ -69,7 +69,7 @@ AWS コンソールにログインし、 Lambda のページから「関数の�
 
 キーに「ACCESS_TOKEN」、「USER_ID」と入力します。値のほうは、「ACCESS_TOKEN」については先ほど発行した「チャネルアクセストークン」を入力します。「USER_ID」は LINE デベロッパーコンソールの「チャネル基本設定」の一番下にある「あなたのユーザー ID」に記載されている文字列を入力します。
 
-![「チャネルの基本設定」タブ → 「あなたのユーザー ID」」](images/6.png "「チャネルの基本設定」タブ → 「あなたのユーザー ID」」")
+![「チャネルの基本設定」タブ → 「あなたのユーザー ID」](images/6.png "「チャネルの基本設定」タブ → 「あなたのユーザー ID」")
 
 入力できたら「保存」をクリックします。
 
@@ -79,7 +79,7 @@ AWS コンソールにログインし、 Lambda のページから「関数の�
 
 ### タイムアウトを変更する
 
-Lambda 関数は実行数や実行時間に応じて支払いが発生するため、 Lambda 関数が無期限に実行されないようにタイムアウト設定がなされています。
+Lambda 関数は実行数や実行時間に応じて支払いが発生するため、無期限に実行されないようにタイムアウト設定がなされています。
 
 デフォルトでは 3 秒に設定されていますが、 3 秒では処理が終わらないかもしれないので、30 秒に伸ばします。
 
@@ -210,9 +210,9 @@ const body = JSON.parse(event.body);
 const inputText = JSON.parse(JSON.stringify(body.events[0].message.text));
 ```
 
-数字以外が送られた場合、36～43 行目で「数字を入力してね」というメッセージを LINE に返します。
+数字以外が送られた場合、37～44 行目で「数字を入力してね」というメッセージを LINE に返します。
 
-```js:title=36～43&nbsp;行目
+```js:title=37～44&nbsp;行目
 if (isNaN(inputText)) {
   const message = {
     "type": "text",
@@ -223,15 +223,15 @@ if (isNaN(inputText)) {
 }
 ```
 
-数字が送られた場合、45 行目で `getPokeImage()` を実行します。
+数字が送られた場合、46 行目で `getPokeImage()` を実行します。
 
-```js:title=45&nbsp;行目
+```js:title=46&nbsp;行目
 const pokeImageUrl = await getPokeImage(inputText);
 ```
 
-数字に該当するポケモンがいない場合、47～54 行目で「該当するポケモンはいません」というメッセージを LINE に返します。
+数字に該当するポケモンがいない場合、48～55 行目で「該当するポケモンはいません」というメッセージを LINE に返します。
 
-```js:title=47～54&nbsp;行目
+```js:title=48～55&nbsp;行目
 if (pokeImageUrl === "not found") {
   const message = {
     "type": "text",
@@ -242,9 +242,9 @@ if (pokeImageUrl === "not found") {
 }
 ```
 
-数字に該当するポケモンがいる場合、65～70 行目でポケモンの画像を LINE に返します。
+数字に該当するポケモンがいる場合、66～71 行目でポケモンの画像を LINE に返します。
 
-```js:title=65～70&nbsp;行目
+```js:title=66～71&nbsp;行目
 const message = {
   "type": "image",
   "previewImageUrl": pokeImageUrl
@@ -280,7 +280,7 @@ zip ファイルをドラッグ&ドロップし、「保存」をクリックし
 
 `index.js` や `node_module` などをアップロードできました。
 
-## LINE Message API の Webhook に 2 で作成した Lambda の関数 URL を設定する
+## 3. LINE Message API の Webhook に 2 で作成した Lambda の関数 URL を設定する
 
 「get_poke_image」関数の「関数の概要」の部分を見ると、この Lambda の関数 URL が表示されています。
 
@@ -302,7 +302,7 @@ LINE にメッセージを送信したとき、デフォルトで応答メッセ
 
 これで準備が整いました！
 
-## QR コードを読み取って友達追加し、メッセージを送る
+## 4. QR コードを読み取って友達追加し、メッセージを送る
 
 それでは「Messaging API設定」画面に表示されている QR コードをスマホで読み込んで友達登録し、「25」と入力して送信してみます。
 
