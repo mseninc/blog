@@ -111,8 +111,8 @@ const client = new line.Client({
   channelAccessToken: process.env.ACCESS_TOKEN
 });
 
-async function getPokeImage(inputText) {
-  const url = `https://pokeapi.co/api/v2/pokemon/${inputText}`;
+async function getPokeImageUrl(zukanNumber) {
+  const url = `https://pokeapi.co/api/v2/pokemon/${zukanNumber}`;
   const options = {
     'method': 'GET',
     'headers': {
@@ -139,9 +139,9 @@ async function getPokeImage(inputText) {
 exports.handler = async event => {
   try {
     const body = JSON.parse(event.body);
-    const inputText = JSON.parse(JSON.stringify(body.events[0].message.text));
+    const zukanNumber = JSON.parse(JSON.stringify(body.events[0].message.text));
 
-    if (isNaN(inputText)) {
+    if (isNaN(zukanNumber)) {
       const message = {
         "type": "text",
         "text": "数字を入力してね"
@@ -150,7 +150,7 @@ exports.handler = async event => {
       return;
     }
 
-    const pokeImageUrl = await getPokeImage(inputText);
+    const pokeImageUrl = await getPokeImageUrl(zukanNumber);
 
     if (pokeImageUrl === "not found") {
       const message = {
@@ -183,12 +183,12 @@ exports.handler = async event => {
 };
 ```
 
-7 行目の `getPokeImage()` は、渡された番号のポケモンの画像を返す関数です。
+7 行目の `getPokeImageUrl()` は、渡された番号のポケモンの画像の URL を返す関数です。
 
-8 行目は[ポケモンの情報を取得する poke API](https://pokeapi.co/docs/v2#pokemon) の URL です。`inputText` には LINE から送られてきた数字が入ります。
+8 行目は[ポケモンの情報を取得する poke API](https://pokeapi.co/docs/v2#pokemon) の URL です。`zukanNumber` には LINE から送られてきた数字が入ります。
 
 ```js:title=8&nbsp;行目
-const url = `https://pokeapi.co/api/v2/pokemon/${inputText}`;
+const url = `https://pokeapi.co/api/v2/pokemon/${zukanNumber}`;
 ```
 
 17 行目の `fetch()` 関数で poke API をたたきます。 `response` のステータスが `404` でなければ、24 行目でポケモンの画像 (`json.sprites.front_default`) を返します。
@@ -207,13 +207,13 @@ return json.sprites.front_default;
 
 ```js:title=34～35&nbsp;行目
 const body = JSON.parse(event.body);
-const inputText = JSON.parse(JSON.stringify(body.events[0].message.text));
+const zukanNumber = JSON.parse(JSON.stringify(body.events[0].message.text));
 ```
 
 数字以外が送られた場合、37～44 行目で「数字を入力してね」というメッセージを LINE に返します。
 
 ```js:title=37～44&nbsp;行目
-if (isNaN(inputText)) {
+if (isNaN(zukanNumber)) {
   const message = {
     "type": "text",
     "text": "数字を入力してね"
@@ -223,10 +223,10 @@ if (isNaN(inputText)) {
 }
 ```
 
-数字が送られた場合、46 行目で `getPokeImage()` を実行します。
+数字が送られた場合、46 行目で `getPokeImageUrl()` を実行します。
 
 ```js:title=46&nbsp;行目
-const pokeImageUrl = await getPokeImage(inputText);
+const pokeImageUrl = await getPokeImageUrl(zukanNumber);
 ```
 
 数字に該当するポケモンがいない場合、48～55 行目で「該当するポケモンはいません」というメッセージを LINE に返します。
@@ -263,12 +263,10 @@ pushMessage() の第二引数のオブジェクトの `type` を `image` とす�
 
 `index.js` に処理を記述できましたので、コンソール画面からアップロードを行います。
 
-作業ディレクトリの以下 4 つのファイルを zip 化します (こちらの記事に zip 化する際の注意を記載しています[[AWS] Lambda 実行時に発生するハンドラーやモジュールが見つからないエラーの解決法](https://mseeeen.msen.jp/how-to-solve-lambda-error-that-handler-or-module-cannot-be-found/)) 。
+作業ディレクトリの以下 2 つのファイルを zip 化します (こちらの記事に zip 化する際の注意を記載しています[[AWS] Lambda 実行時に発生するハンドラーやモジュールが見つからないエラーの解決法](https://mseeeen.msen.jp/how-to-solve-lambda-error-that-handler-or-module-cannot-be-found/)) 。
 
 - node_modules
 - index.js
-- package.json
-- package-lock.json
 
 Lambda の画面にある「アップロード元」をクリックし、「.zip ファイル」を選択します。
 
