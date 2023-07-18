@@ -35,14 +35,12 @@ INSERT INTO @user
 VALUES
   ('hogehoge', 28, 'B2')
 , ('piyopiyo', 31, 2)
-, ('fugafuga', 23, 3)
 ;
 
 SELECT
   *
 FROM @user
 ;
-
 
 ROLLBACK;
 ```
@@ -55,9 +53,9 @@ ROLLBACK;
 
 「`varchar` の値 `'B2'`」を代入しようとしているカラムは `nvarchar` 型の `RANK` ですが、**なぜか `int` に変換しようとしています**。 `B2` はもちろん `int` 型にはなれないので変換に失敗します。
 
-今回 `RANK` 列に挿入しようとした値は `2`、 `'B2'`、 `3` です。
+今回 `RANK` 列に挿入しようとした値は `'B2'`、`2` です。
 
-挿入しようとした値に `2` のような整数リテラル (`int` 型) と `'B2'` のような文字列 (`varchar` 型) が混ざっていたため、優先順位の高い `int` 型と評価されました。
+挿入しようとした値に `'B2'` のような文字列 (`varchar` 型) と `2` のような整数リテラル (`int` 型) が混ざっていたため、優先順位の高い `int` 型と評価されました。
 
 ## データ型の優先順位とは
 
@@ -130,7 +128,6 @@ INSERT INTO @user
 VALUES
   ('hogehoge', 28, 'B2')
 , ('piyopiyo', 31, '2')
-, ('fugafuga', 23, '3')
 ;
 
 SELECT
