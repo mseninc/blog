@@ -12,7 +12,7 @@ link です。
 
 Screenpresso で画面をキャプチャするときは PtrSc キーで自動起動するようになっています。
 
-ところが、 2023 年 6 月頃の Windows 11 のアップデートで PtrSc キーで自動起動するのがデフォルトでは Snipping Tool に設定されるようになりました。
+ところが、 2023 年 6 月ごろの Windows 11 のアップデートで、デフォルトでは Snipping Tool が PtrSc キーで自動起動するように設定されました。
 
 その影響で Windows アップデート後に PtrSc キーで Screenpresso が自動起動しなくなる場合があります。
 
