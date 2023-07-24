@@ -1,6 +1,6 @@
 ---
 title: "Windows アップデート後に PrtSc キーで Screenpresso が起動しなくなった時の対処法"
-date: 
+date:
 author: linkohta
 tags: [Windows, Screenpresso]
 description: "Windows アップデート後に PrtSc キーで Screenpresso が起動しなくなった時の対処法を紹介します。"
@@ -10,19 +10,19 @@ link です。
 
 デスクトップ画面キャプチャのソフトとして **Screenpresso** を利用している方は多いと思います。
 
-Screenpresso で画面をキャプチャするときは PtrSc キーで自動起動するようになっています。
+Screenpresso で画面をキャプチャするときは PrtSc キーで自動起動するようになっています。
 
-ところが、 2023 年 6 月ごろの Windows 11 のアップデートで、デフォルトでは Snipping Tool が PtrSc キーで自動起動するように設定されました。
+ところが、 2023 年 6 月ごろの Windows 11 のアップデートで、デフォルトでは Snipping Tool が PrtSc キーで自動起動するように設定されました。
 
-その影響で Windows アップデート後に PtrSc キーで Screenpresso が自動起動しなくなる場合があります。
+その影響で Windows アップデート後に PrtSc キーで Screenpresso が自動起動しなくなる場合があります。
 
-今回は PtrSc キーで Screenpresso が自動起動しなくなった場合の対処法を紹介します。
+今回は PrtSc キーで Screenpresso が自動起動しなくなった場合の対処法を紹介します。
 
 ## 対処法
 
 対処法はいたって単純です。
 
-PtrSc キーで Snipping Tool が自動起動しないようにします。
+PrtSc キーで Snipping Tool が自動起動しないようにします。
 
 「設定」→「アクセシビリティ」→「キーボード」を選択します。
 
@@ -32,10 +32,12 @@ PtrSc キーで Snipping Tool が自動起動しないようにします。
 
 ![Snipping Tool が自動起動しないように設定](images/setting2.png)
 
-無効化後、Windows を再起動すれば PtrSc キーで Screenpresso が自動起動するようになっています。
+無効化後、 PrtSc キーで Screenpresso が自動起動するようになっています。
+
+もし、これでも Screenpresso が自動起動しない場合、 Windows を再起動して再度 PrtSc キーの動作を確認します。
 
 ## まとめ
 
-今回は PtrSc キーで Screenpresso が自動起動しなくなった場合の対処法を紹介しました。
+今回は PrtSc キーで Screenpresso が自動起動しなくなった場合の対処法を紹介しました。
 
 それではまた、別の記事でお会いしましょう。
