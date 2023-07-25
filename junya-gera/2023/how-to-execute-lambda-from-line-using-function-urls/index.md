@@ -123,16 +123,25 @@ async function getPokeImageUrl(zukanNumber) {
   try {
     const response = await fetch(url, options);
 
-    if (response.status === 404) {
-      return 'not found';
+    if (!response.ok) {
+      switch (response.status) {
+        case 400:
+          throw new Error("リクエストが不正です");
+        case 404:
+          throw new Error("該当するポケモンはいません");
+        case 500:
+          throw new Error("サーバーエラーが発生しました");
+        default:
+          throw new Error(`予期しないエラーが発生しました。ステータスコード: ${response.status}`);
+      }
     }
     
     const json = await response.json();
     return json.sprites.front_default;
     
   } catch (error) {
-    console.log('エラーが発生しました。', error);
-    return 'error';
+    console.error("Error:", error.message);
+    return error.message;
   }
 }
 
@@ -143,37 +152,27 @@ exports.handler = async event => {
 
     if (isNaN(zukanNumber)) {
       const message = {
-        "type": "text",
-        "text": "数字を入力してね"
+        type: "text",
+        text: "数値を入力してね"
       };
       await client.pushMessage(process.env.USER_ID, message);
       return;
     }
 
     const pokeImageUrl = await getPokeImageUrl(zukanNumber);
-
-    if (pokeImageUrl === "not found") {
+    if (!pokeImageUrl.endsWith(".png")) {
       const message = {
-        "type": "text",
-        "text": "該当するポケモンはいません"
-      };
-      await client.pushMessage(process.env.USER_ID, message);
-      return;
-    }
-    
-    if (pokeImageUrl === "error") {
-      const message = {
-        "type": "text",
-        "text": "エラーが発生しました"
+        type: "text",
+        text: pokeImageUrl
       };
       await client.pushMessage(process.env.USER_ID, message);
       return;
     }
 
     const message = {
-      "type": "image",
-      "previewImageUrl": pokeImageUrl
-      "originalContentUrl": pokeImageUrl,
+      type: "image",
+      originalContentUrl: pokeImageUrl,
+      previewImageUrl: pokeImageUrl
     };
     await client.pushMessage(process.env.USER_ID, message);
 
@@ -191,28 +190,38 @@ exports.handler = async event => {
 const url = `https://pokeapi.co/api/v2/pokemon/${zukanNumber}`;
 ```
 
-17 行目の `fetch()` 関数で poke API をたたきます。 `response` のステータスが `404` でなければ、24 行目でポケモンの画像 (`json.sprites.front_default`) を返します。
+17 行目の `fetch()` 関数で poke API をたたきます。 `response` のステータスがエラーコードでなければ、33 行目でポケモンの画像 (`json.sprites.front_default`) を返します。
 
-```js:title=17～24&nbsp;行目
-const response = await fetch(url, options);
-if (response.status === 404) {
-  return 'not found';
-}
+```js:title=17～33&nbsp;行目
+    const response = await fetch(url, options);
 
-const json = await response.json();
-return json.sprites.front_default;
+    if (!response.ok) {
+      switch (response.status) {
+        case 400:
+          throw new Error("リクエストが不正です");
+        case 404:
+          throw new Error("該当するポケモンはいません");
+        case 500:
+          throw new Error("サーバーエラーが発生しました");
+        default:
+          throw new Error(`予期しないエラーが発生しました。ステータスコード: ${response.status}`);
+      }
+    }
+    
+    const json = await response.json();
+    return json.sprites.front_default;
 ```
 
-34～35 行目では `hander` 関数の `event` 引数から LINE で送信されたテキストを取得しています。
+43～44 行目では `hander` 関数の `event` 引数から LINE で送信されたテキストを取得しています。
 
-```js:title=34～35&nbsp;行目
+```js:title=43～44&nbsp;行目
 const body = JSON.parse(event.body);
 const zukanNumber = JSON.parse(JSON.stringify(body.events[0].message.text));
 ```
 
-数字以外が送られた場合、37～44 行目で「数字を入力してね」というメッセージを LINE に返します。
+数字以外が送られた場合、46～53 行目で「数字を入力してね」というメッセージを LINE に返します。
 
-```js:title=37～44&nbsp;行目
+```js:title=46～53&nbsp;行目
 if (isNaN(zukanNumber)) {
   const message = {
     "type": "text",
@@ -223,28 +232,28 @@ if (isNaN(zukanNumber)) {
 }
 ```
 
-数字が送られた場合、46 行目で `getPokeImageUrl()` を実行します。
+数字が送られた場合、55 行目で `getPokeImageUrl()` を実行します。
 
-```js:title=46&nbsp;行目
+```js:title=55&nbsp;行目
 const pokeImageUrl = await getPokeImageUrl(zukanNumber);
 ```
 
-数字に該当するポケモンがいない場合、48～55 行目で「該当するポケモンはいません」というメッセージを LINE に返します。
+`getPokeImageUrl()` の戻り値が画像の URL ではなくエラーメッセージだった場合、56～63 行目でそのエラーメッセージを LINE に送信します。
 
-```js:title=48～55&nbsp;行目
-if (pokeImageUrl === "not found") {
+```js:title=56～63&nbsp;行目
+if (!pokeImageUrl.endsWith(".png")) {
   const message = {
-    "type": "text",
-    "text": "該当するポケモンはいません"
+    type: "text",
+    text: pokeImageUrl
   };
   await client.pushMessage(process.env.USER_ID, message);
   return;
 }
 ```
 
-数字に該当するポケモンがいる場合、66～71 行目でポケモンの画像を LINE に返します。
+65～70 行目でポケモンの画像を LINE に返します。
 
-```js:title=66～71&nbsp;行目
+```js:title=65～70&nbsp;行目
 const message = {
   "type": "image",
   "previewImageUrl": pokeImageUrl
