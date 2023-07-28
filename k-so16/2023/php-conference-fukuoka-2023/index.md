@@ -1,6 +1,6 @@
 ---
 title: "PHP カンファレンス福岡 2023 に参加しました"
-date: 
+date: 2023-07-28
 author: k-so16
 tags: [PHP, 〇〇奮闘記]
 description: "2023/6/24 に開催された PHP カンファレンス福岡の参加レポートです。"
