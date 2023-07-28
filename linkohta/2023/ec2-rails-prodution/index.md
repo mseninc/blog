@@ -1,6 +1,6 @@
 ---
 title: "AWS に Rails のアプリをデプロイする方法 ～本番環境を構築する～"
-date:
+date: 2023-07-28
 author: linkohta
 tags: [EC2, Ruby on Rails, Web]
 description: "実際に外部公開する Rails アプリの本番環境を EC2 インスタンス上で構築する手順を紹介します。"
