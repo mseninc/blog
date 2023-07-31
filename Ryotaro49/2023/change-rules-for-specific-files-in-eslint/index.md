@@ -1,6 +1,6 @@
 ---
 title: 'ESLint で特定のファイルのルールを変更する方法'
-date:
+date: 2023-07-31
 author: Ryotaro49
 tags: [ESLint, JavaScript]
 description: 'ESLint で特定のファイルのルールを変更する方法を紹介します。'
