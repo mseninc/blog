@@ -19,11 +19,13 @@ ThinkPad は **Fn Ctrl** の順番でキーが配置されています。
 
 それにより初めて ThinkPad を使った方が、普段と同じように打鍵することで押し間違いが発生していたというわけです。
 
-また、Lenovo の PC でも Ctrl Fn の順番でキーが配置されているものあります。
+また、Lenovo の PC でも Ctrl Fn の順番でキーが配置されているものもあります。
 
 そこでいくつかのノート PC を見比べてみましたが、ThinkPad と NEC 社製の PC だけキー配置が異なりました。
 
 ![Lenovo社(ThinkPad)](images/lenovo.png)
+
+![NEC社](images/nec.png "NEC社")
 
 ![HP社](images/hp.png "HP社")
 
@@ -34,8 +36,6 @@ ThinkPad は **Fn Ctrl** の順番でキーが配置されています。
 ![dynabook社](images/dynabook.png "dynabook社")
 
 ![富士通社](images/fujitsu.png "富士通社")
-
-![NEC社](images/nec.png "NEC社")
 
 Ctrl Fn の順番で配置されていることが圧倒的に多いことが分かります。
 
