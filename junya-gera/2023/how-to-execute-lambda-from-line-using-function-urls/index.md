@@ -214,6 +214,10 @@ const url = `https://pokeapi.co/api/v2/pokemon/${zukanNumber}`;
 
 43～44 行目では `hander` 関数の `event` 引数から LINE で送信されたテキストを取得しています。
 
+関数 URL を実行した際に渡される `event` 引数の中身は、 API Gateway から Lambda を呼び出した際の形式と同じです。
+
+> [Lambda 関数 URL の呼び出し - リクエストとレスポンスのペイロード](https://docs.aws.amazon.com/ja_jp/lambda/latest/dg/urls-invocation.html#urls-payloads)
+
 ```js:title=43～44&nbsp;行目
 const body = JSON.parse(event.body);
 const zukanNumber = JSON.parse(JSON.stringify(body.events[0].message.text));
