@@ -126,10 +126,10 @@ SIP の通信は、リクエストとレスポンスのやりとりで行われ�
 SIP は HTTP を例に設計されたらしく、リクエストとレスポンスというしくみは HTTP と同じになっています。
 
 <table>
-<caption>リクエスト</caption>
+<caption><b>【リクエスト】</b></caption>
 	<tr>
-		<td>SIPメソッド</td>
-		<td>説明</td>
+		<th>SIPメソッド</th>
+		<th>説明</th>
 	</tr>
 	<tr>
 		<td>INVITE</td>
@@ -192,12 +192,12 @@ SIP は HTTP を例に設計されたらしく、リクエストとレスポン�
 
 
 <table>
-<caption>レスポンス</caption>
+<caption><b>【レスポンス】</b></caption>
 	<tr>
-		<td>ステータス</td>
-		<td>コード</td>
-		<td>メッセージ</td>
-		<td>応答内容</td>
+		<th>ステータス</th>
+		<th>コード</th>
+		<th>メッセージ</th>
+		<th>応答内容</th>
 	</tr>
 	<tr>
 		<td rowspan="2">暫定応答<br>(コード：100～199)</td>
