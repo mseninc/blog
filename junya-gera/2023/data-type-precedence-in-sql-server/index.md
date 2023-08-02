@@ -1,6 +1,6 @@
 ---
 title: "[SQL Server] INSERT する値に複数の型が存在すると優先順位が高い型に評価される"
-date: 
+date: 2023-08-02
 author: junya-gera
 tags: [SQL Server, SQL]
 description: "SQL Server で複数の型を挿入すると優先順位の高い型として評価されることについて解説します。"
