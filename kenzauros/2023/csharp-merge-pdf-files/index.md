@@ -2,7 +2,7 @@
 title: "[.NET] C# で複数の PDF ファイルを結合する (PdfSharp, C# 9.0 版)"
 date: 
 author: kenzauros
-tags: [C#, .NET, PDF]
+tags: [C#, .NET, .NET Framework, PDF]
 description: "今回はオープンソースの PDF ライブラリーである PdfSharp を使って、 C# (.NET) で複数の PDF ファイルを 1 つに結合する方法を紹介します。"
 ---
 
