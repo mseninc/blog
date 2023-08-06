@@ -61,10 +61,10 @@ public void MergePdfFiles(IEnumerable<string> sourceFilenames, string destinatio
 
 ざっくりとした流れは下記の通りです。
 
-1. 結合した PDF を格納する `PdfDocument` を生成
+1. 結合した PDF を格納する `PdfDocument` (`document`) を生成
 2. 各 PDF ファイルを開く
-3. 各ページを結果用 `PdfDocument` に追加
-4. 結果用 `PdfDocument` を保存
+3. 各ページを `document` に追加
+4. `document` をファイルとして保存
 
 ※ `using` 変数宣言は C# 8.0 以降で対応したため、それより前の環境では `using` ステートメント (`using (X x = new()) { }`) を使用してください。
 
