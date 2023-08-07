@@ -1,5 +1,5 @@
 ---
-title: "[.NET] C# で複数の PDF ファイルを結合する (PdfSharp, C# 9.0 版)"
+title: "[C#] PdfSharp で複数の PDF ファイルを結合する (.NET Framework)"
 date: 
 author: kenzauros
 tags: [C#, .NET, .NET Framework, PDF]
@@ -36,9 +36,45 @@ NuGet パッケージが用意されていますので、 Visual Studio で「Nu
 
 インタフェースは非常に簡単です。使うクラスは PDF 文書を扱う `PdfDocument`、 PDF を読み取る `PdfReader`、 ページを表す `PdfPage` のみです。
 
-下記の例では、入力として「複数の PDF ファイルのパス」と「保存先のファイルパス」を渡して、順番に PDF を結合しています。
+下記の例では、入力として「複数の PDF ファイルのパス」と「保存先のファイルパス」を渡して、順番に PDF を結合しています。日本語の PDF でも問題なく結合できました。
 
 ```cs:title=PdfSharpによるPDFファイルの結合
+/// <summary>
+/// 複数の PDF ファイルを結合して、指定したファイルパスに保存します。
+/// </summary>
+/// <param name="sourceFilenames">PDF ファイルのパスのリスト</param>
+/// <param name="destinationFilename">保存先のファイルパス</param>
+public void MergePdfFiles(IEnumerable<string> sourceFilenames, string destinationFilename)
+{
+    using (PdfDocument document = new PdfDocument())
+    {
+        foreach (string filename in sourceFilenames)
+        {
+            using (PdfDocument inputDocument = PdfReader.Open(filename, PdfDocumentOpenMode.Import))
+            {
+                foreach (PdfPage page in inputDocument.Pages)
+                {
+                    document.AddPage(page);
+                }
+            }
+        }
+        document.Save(destinationFilename);
+    }
+}
+```
+
+ざっくりとした流れは下記の通りです。
+
+1. 結合した PDF を格納する `PdfDocument` (`document`) を生成
+2. 各 PDF ファイルを開く
+3. 各ページを `document` に追加
+4. `document` をファイルとして保存
+
+実際のアプリケーションで使うときは、進捗表示のためにページや文書ごとにコールバックを呼び出す必要があるかもしれません。
+
+ちなみに C# 9.0 が利用できる場合は using 変数宣言と new 演算子後の型名を省略して下記のようにスッキリ書けます。
+
+```cs:title=PdfSharpによるPDFファイルの結合(C#&nbsp;9.0以降版)
 /// <summary>
 /// 複数の PDF ファイルを結合して、指定したファイルパスに保存します。
 /// </summary>
@@ -59,20 +95,6 @@ public void MergePdfFiles(IEnumerable<string> sourceFilenames, string destinatio
 }
 ```
 
-ざっくりとした流れは下記の通りです。
-
-1. 結合した PDF を格納する `PdfDocument` (`document`) を生成
-2. 各 PDF ファイルを開く
-3. 各ページを `document` に追加
-4. `document` をファイルとして保存
-
-※ `using` 変数宣言は C# 8.0 以降で対応したため、それより前の環境では `using` ステートメント (`using (X x = new()) { }`) を使用してください。
-
-※ C# 8.0 までは `new` 演算子のあとに型名が必要です。
-
-実際のアプリケーションで使うときは、進捗表示のためにページや文書ごとにコールバックを呼び出す必要があるかもしれません。
-
-ちなみに日本語の PDF でも問題なく結合できました。
 
 ## .NET Core, .NET 5 以降の場合
 
