@@ -1,6 +1,6 @@
 ---
 title: "winget で Visual Studio 2022 のバージョンをダウングレードする方法"
-date: 
+date: 2023-08-07
 author: Ryotaro49
 tags: [Visual Studio,Visual Studio 2022]
 description: "winget を使って Visual Studio 2022 のバージョンをダウングレードする方法を紹介します。"
