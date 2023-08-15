@@ -50,17 +50,19 @@ NEXT_PUBLIC_SITE_NAME=My first Next.js app (local)
 Amplify の環境変数には、アプリでは不要なシークレットなどが含まれる場合もあるため、直接は参照できない仕様になっています😲
 
 > However, a Next.js server component doesn't have access to those environment variables by default.
+> 
 > 既定では Next.js サーバーコンポーネントはこれらの環境変数にアクセスできません。
 > <cite>[Making environment variables accessible to server-side runtimes - AWS Amplify Hosting](https://docs.aws.amazon.com/amplify/latest/userguide/ssr-environment-variables.html)</cite>
 
 ということで別のアプローチをとる必要があります。
 
 
-## Amplify の環境変数を .env.production に環境変数を書き出す
+## Amplify の環境変数を .env.production に書き出す
 
 実は同じ公式ガイドに解決法も書いてあります。
 
 > you can modify the Amplify build specification file to set them in the environment files that Next.js recognizes.
+> 
 > Next.js が認識できる環境ファイルにこれらの環境変数をセットするように Amplify のビルド設定を変更しましょう。
 > <cite>[Making environment variables accessible to server-side runtimes - AWS Amplify Hosting](https://docs.aws.amazon.com/amplify/latest/userguide/ssr-environment-variables.html)</cite>
 
