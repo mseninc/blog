@@ -1,6 +1,6 @@
 ---
 title: "関数 URL を使って LINE から直接 Lambda を実行する"
-date: 
+date: 2023-08-23
 author: junya-gera
 tags: [Lambda, LINE]
 description: "Lambda の関数 URL を使って LINE に送信した番号のポケモン画像を表示する LINE Bot を作成します。"

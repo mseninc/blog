@@ -1,6 +1,6 @@
 ---
 title: "Ethernet のフレームフォーマットと各領域の説明"
-date:
+date: 2023-08-18
 author: hiratatsu04
 tags: [Ethernet,ネットワークスペシャリスト]
 description: "ネットワークスペシャリスト試験を目指す方やネットワークに興味がある方向けの記事を書いていこうと思います。初回はEthernet のフレームフォーマットについてまとめました。"
