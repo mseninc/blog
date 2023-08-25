@@ -1,6 +1,6 @@
 ---
 title: "[Amplify] Next.js の SSR で環境変数を使用するには"
-date: 
+date: 2023-08-21
 author: kenzauros
 tags: [Next.js, SSR, Amplify]
 description: "今回は Amplify Hosting で設定した環境変数を Next.js アプリの環境変数に流し込む方法を紹介します。"

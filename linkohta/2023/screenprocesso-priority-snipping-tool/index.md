@@ -1,6 +1,6 @@
 ---
 title: "Windows アップデート後に PrtSc キーで Screenpresso が起動しなくなった時の対処法"
-date:
+date: 2023-08-11
 author: linkohta
 tags: [Windows, Screenpresso]
 description: "Windows アップデート後に PrtSc キーで Screenpresso が起動しなくなった時の対処法を紹介します。"
