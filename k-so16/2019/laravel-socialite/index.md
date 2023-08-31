@@ -22,32 +22,32 @@ Laravel で Facebook や Google などのソーシャルアカウントを連携
 ## socialite のインストールと設定
 `composer` コマンドを用いて、 `laravel/socialite` パッケージをインストールします。
 
-```bash
+```bash:title=laravel/socialite&nbsp;のインストール
 composer require laravel/socialite
 ```
 
 インストールが終わったら、サービスプロバイダとエイリアスの設定をします。以下のように `config/app.php` に追加します。
 
 - サービスプロバイダの設定
-    ```diff
-    'providers' => [
-      /* 中略 */
+```diff:title=config/app.php&nbsp;内の&nbsp;providers&nbsp;にクラスを追加
+'providers' => [
+    /* 中略 */
 
-      App\Providers\RouteServiceProvider::class,
-    + Laravel\Socialite\SocialiteServiceProvider::class,
-    ],
-    ```
+    App\Providers\RouteServiceProvider::class,
++ Laravel\Socialite\SocialiteServiceProvider::class,
+],
+```
 
 - エイリアスの設定
-    ```diff
-    'aliases' => [
-      /* 中略 */
-      'Session' => Illuminate\Support\Facades\Session::class,
-    + 'Socialite' => Laravel\Socialite\Facades\Socialite::class,
-      'Storage' => Illuminate\Support\Facades\Storage::class,
-      /* 中略 */
-    ],
-    ```
+```diff:title=config/app.php&nbsp;内の&nbsp;aliases&nbsp;にクラスを追加
+'aliases' => [
+    /* 中略 */
+    'Session' => Illuminate\Support\Facades\Session::class,
++ 'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+    'Storage' => Illuminate\Support\Facades\Storage::class,
+    /* 中略 */
+],
+```
 
 これで socialite を利用する準備が完了しました。
 
@@ -58,20 +58,20 @@ composer require laravel/socialite
 ### GitHub の OAuth 設定
 1. GitHub のメニューから、 Settings を選択します。
 
-    ![](images/laravel-socialite-1.png "右上のユーザのアイコンをクリックしてメニューを表示")
+    ![右上のユーザのアイコンをクリックしてメニューを表示](images/laravel-socialite-1.png "右上のユーザのアイコンをクリックしてメニューを表示")
 
 1. Developer settings を選択します。
 
-    ![](images/laravel-socialite-2.png "左側のメニューから Developer settings をクリック")
+    ![左側のメニューから Developer settings をクリック](images/laravel-socialite-2.png "左側のメニューから Developer settings をクリック")
 
 1. OAuth Apps を選択し、 New OAuth App をクリックします。
 
-    ![](images/laravel-socialite-3.png "OAuth Apps をクリックして New OAuth App をクリック")
+    ![OAuth Apps をクリックして New OAuth App をクリック](images/laravel-socialite-3.png "OAuth Apps をクリックして New OAuth App をクリック")
 
 1. Application name, Homepage URL, Authorization callback URL を入力します。
     - Authorization callback URL は Laravel に返すためのパスを設定します。
 
-    ![](images/laravel-socialite-4.png "入力事項を埋める (* の項目は必須)")
+    ![入力事項を埋める (* の項目は必須)](images/laravel-socialite-4.png "入力事項を埋める (* の項目は必須)")
 
     本記事では、例として以下のように入力します。
 
@@ -84,7 +84,7 @@ composer require laravel/socialite
 1. Client ID と Client Secret を Laravel 側に反映させます。
 
     入力が完了すると、 Client ID と Client Secret が発行されます。それぞれの値を Laravel に設定します。
-![](images/laravel-socialite-5.png "Client ID と Client Secret が発行される")
+    ![Client ID と Client Secret が発行される](images/laravel-socialite-5.png "Client ID と Client Secret が発行される")
 
 
     - `.env` に環境変数を作り、 Client ID と Client Secret を代入します。
