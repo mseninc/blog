@@ -23,50 +23,44 @@ tags: [Git]
 
 - ローカルブランチを検索する場合
 
-    ```bash
-    git branch --contain $COMMIT_ID
-    ```
+```bash:title=$COMMID_ID&nbsp;のコミットハッシュが含まれるローカルブランチを検索するコマンド
+git branch --contain $COMMIT_ID
+```
 
-    - 出力結果例
-
-    ```
-      bar
-      foo
-    * main
-    ```
+```:title=出力結果の例
+  bar
+  foo
+* main
+```
 
 - リモートブランチを検索する場合
 
-    ```bash
-    git branch -r --contain $COMMIT_ID
-    ```
+```bash:title=$COMMID_ID&nbsp;のコミットハッシュが含まれるリモートブランチを検索するコマンド
+git branch -r --contain $COMMIT_ID
+```
 
-    - 出力結果例
-
-    ```
-      origin/bar
-      origin/foo
-      origin/HEAD -> origin/main
-      origin/main
-    ```
+```:title=出力結果の例
+  origin/bar
+  origin/foo
+  origin/HEAD -> origin/main
+  origin/main
+```
 
 - ローカルとリモート両方合わせて検索する場合
 
-    ```bash
-    git branch -a --contain $COMMIT_ID
-    ```
+```bash:title=$COMMID_ID&nbsp;のコミットハッシュが含まれるブランチを検索するコマンド
+git branch -a --contain $COMMIT_ID
+```
 
-    - 出力結果例
-
-    ```
-      bar
-      foo
-    * main
-      remotes/origin/bar
-      remotes/origin/foo
-      remotes/origin/HEAD -> origin/main
-      remotes/origin/main
-    ```
+```:title=出力結果の例
+  bar
+  foo
+* main
+  remotes/origin/bar
+  remotes/origin/foo
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main
+```
 
 本記事を執筆する上で以下の記事を参考にしました。
 
