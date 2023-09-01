@@ -139,6 +139,22 @@ fn main() {
 }
 ```
 
+```rust:title=不変変数のコンパイルエラー
+error[E0384]: cannot assign twice to immutable variable `x`
+ --> main.rs:4:3
+  |
+2 |   let x = 5;
+  |       -
+  |       |
+  |       first assignment to `x`
+  |       help: consider making this binding mutable: `mut x`
+3 |   println!("The value of x is: {}", x);
+4 |   x = 6;
+  |   ^^^^^ cannot assign twice to immutable variable
+
+error: aborting due to previous error
+```
+
 他の言語のように変数に代入を行える**可変変数**を利用したい場合は `let` の後ろに `mut` をつけます。
 
 ```rust:title=可変変数
@@ -148,6 +164,11 @@ fn main() {
     x = 6;
     println!("The value of x is: {}", x);
 }
+```
+
+```:title=可変変数のコードの実行結果
+The value of x is: 5
+The value of x is: 6
 ```
 
 ### シャドーイング
@@ -181,6 +202,13 @@ fn main() {
 }
 ```
 
+実行結果は以下のようになります。
+
+```:title=コードの実行結果
+The value of x in the inner scope is: 12
+The value of x is: 6
+```
+
 まず、 `x` は 5 として宣言されます。
 
 次に `x = x + 1` が宣言し `x = 5` を `x + 1` の値でシャドーイングします。
@@ -196,6 +224,10 @@ fn main() {
 このシャドーイングはスコープを抜けると消えるため、その直後にある`println!()` で表示される値は 6 のままです。
 
 なお、このシャドーイングが行えるのは不変変数のみであり、可変変数で行おうとするとコンパイルエラーが発生します。
+
+また、**シャドーイングで再宣言する変数は別の型でも問題ありません。**
+
+**これによって値の型を変えつつ、同じ変数名を使いまわすことが可能です。**
 
 ## 参考サイト
 
