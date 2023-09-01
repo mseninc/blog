@@ -72,7 +72,7 @@ Sequelize と Sequelize CLI を利用するために、以下のパッケージ�
 
 以下はコマンドのインストール作業例です。
 
-```bash
+```bash:title=Sequelize&nbsp;とデータベースのドライバーのインストール
 yarn add sequelize mysql2
 yarn add sequelize-cli sequelize-cli-esm -D
 ```
@@ -85,7 +85,7 @@ yarn add sequelize-cli sequelize-cli-esm -D
 
 Sequelize CLI を使ってモデルのディレクトリなどを作成します。 Sequelize CLI を利用すると、自動で `models`, `migations` などの ディレクトリや `models/index.js` や `config/config.js` などの雛形のファイルが自動生成されます。
 
-```bash
+```bash:title=Sequelize&nbsp;の初期化
 yarn sequelize-esm init
 ```
 
@@ -104,7 +104,7 @@ yarn sequelize-esm init
 
 以下は `User` モデルとマイグレーションファイルを自動生成するコマンド例です。 Sequelize CLI の `model:generate` の引数 `--name` はファイル名にも自動で反映されるので、 CLI では小文字で指定し、のちほどモデルファイルを修正することにします。
 
-```bash
+```bash:title=モデルファイルとマイグレーションファイルの生成
 yarn sequelize-esm model:generate --name user --attributes name:string,username:string,email:string,password:string
 ```
 
