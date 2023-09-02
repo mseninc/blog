@@ -1,5 +1,5 @@
 ---
-title: "はじめての Rust 入門 Part1 ～Hello World! して変数について学ぶまで～"
+title: "はじめての Rust 入門 Part1 ～Hello world! して変数について学ぶまで～"
 date: 
 author: linkohta
 tags: [Rust]
