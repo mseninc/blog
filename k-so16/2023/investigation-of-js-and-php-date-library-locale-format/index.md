@@ -1,6 +1,6 @@
 ---
 title: "Moment.js と date-fns でローカライズされた日付文字列への変換方法を調査してみた"
-date: 
+date: 2023-08-30
 author: k-so16
 tags: [Web, Moment.js, date-fns, JavaScript]
 description: "Moment.js と date-fns でローカライズされた日付文字列へ変換する方法を調査してみました。"
