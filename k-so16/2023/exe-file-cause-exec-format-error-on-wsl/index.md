@@ -1,6 +1,6 @@
 ---
 title: "WSL 上の VSCode で \"Exec format error\" が発生して起動しなくなったときの対処方法"
-date: 
+date: 2023-09-04
 author: k-so16
 tags: [Visual Studio Code, WSL, Ubuntu]
 description: "WSL から VSCode を起動しようとした際に \"Exec format error\" が発生して起動しなくなった場合の対処方法を紹介します。"
