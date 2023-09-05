@@ -34,12 +34,12 @@ C 言語、 C++ に代わるシステムプログラミング言語を目指し�
 rustup は [Rust の公式サイト](https://www.rust-lang.org/ja/tools/install/)からダウンロードできます。
 
 もし、 Visual Studio がインストールされていない場合は rustup を実行すると、以下の画像のように Visual Studio のインストールを求められます。
-その場合は 1 を選択して Visual Studio Community をインストールしましょう。
+その場合は `1) Quick install via the Visual Studio Community installer` を選択して Visual Studio Community をインストールしましょう。
 
 ![rustup 実行 : Visual Studio Community インストール](images/rustup1.png)
 
 Visual Studio Community のインストールが完了、もしくはインストール済みの場合は以下の画像のように Rust のインストール方法が求められます。
-ここは 1 で問題ありません。
+ここは `1) Process with installation (default)` で問題ありません。
 
 ![rustup 実行 : Rust インストール](images/rustup2.png)
 
@@ -88,7 +88,16 @@ $ cargo new hello_cargo
 $ cd hello_cargo
 ```
 
-この作成した Cargo プロジェクトにはデフォルトで Hello world! のコードが入っています。
+Cargo プロジェクトの構造は以下の通りです。
+
+- `src`
+    - `main.rs (デフォルト)`
+- `target`
+    - ビルド後にアプリや必要なライブラリ一式が保存されます
+- `Cargo.toml`
+    - 依存関係を記述します
+
+この作成した Cargo プロジェクトにデフォルトで入っている `src/main.rs` に Hello world! のコードが記述されています。
 
 Cargo プロジェクトを `cargo build` でビルドします。
 
