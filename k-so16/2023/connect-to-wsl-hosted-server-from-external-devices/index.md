@@ -1,6 +1,6 @@
 ---
 title: "WSL 上の Linux でホストしているサーバーに外部端末からアクセスする方法"
-date: 
+date: 2023-09-15
 author: k-so16
 tags: [仮想化技術, WSL, Windows, Linux]
 description: "別 PC やスマホなどの別端末から WSL 上の Linux でホストしているサーバーにアクセスする方法を紹介します。"
