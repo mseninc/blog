@@ -279,7 +279,7 @@ fn main() {
 
 ## 参考サイト
 
-- [The Rust Programming Language 日本語版 - The Rust Programming Language 日本語版](https://doc.rust-jp.rust/book-ja/title-page.html)
+- [The Rust Programming Language 日本語版 - The Rust Programming Language 日本語版](https://doc.rust-jp.rs/book-ja/title-page.html)
 
 ## まとめ
 
