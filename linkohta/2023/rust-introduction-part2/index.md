@@ -31,7 +31,7 @@ Rust において関数定義は、 `fn` で始まります。
 
 C や Java のように関数名の後に `()` が続き、 `{}` が関数の処理内容を指定します。
 
-```rs:title=関数例
+```rust:title=関数例
 fn main() {
     test_function();
 }
@@ -49,7 +49,7 @@ fn test_function() {
 
 引数付きの関数は `()` 内に型付きの変数を入れます。
 
-```rs:title=引数付きの関数
+```rust:title=引数付きの関数
 fn main() {
     test_function(5);
 }
@@ -76,7 +76,7 @@ Rust の関数は**文**と**式**から形成されます。
 
 以下にコード例を示します。
 
-```rs:title=文と式
+```rust:title=文と式
 fn main() {
     let x = {
         let y = 3;
@@ -110,7 +110,7 @@ Rust では**関数の戻り値は関数の最後の式の値と同義です。*
 
 以下に値を返す関数の例を示します。
 
-```rs:title=戻り値
+```rust:title=戻り値
 fn five() -> i32 {
     5
 }
@@ -152,7 +152,7 @@ Rust の `if` 文は `if 条件式 {実行処理}` で書かれます。
 
 以下に例を示します。
 
-```rs:title=if文
+```rust:title=if文
 fn main() {
     let number = 3;
 
@@ -172,7 +172,7 @@ fn main() {
 
 下記の例では `condition` の値に応じて `number` に代入される値が 5 か 6 かが変わります。
 
-```rs:title=let内でif文を使う
+```rust:title=let内でif文を使う
 fn main() {
     let condition = true;
     let number = if condition { 5 } else { 6 };
@@ -187,7 +187,7 @@ fn main() {
 
 以下にコード例を示します。
 
-```rs:title=loop文
+```rust:title=loop文
 fn main() {
     let mut i = 0;
     loop {
@@ -210,7 +210,7 @@ fn main() {
 
 以下に例を示します。
 
-```rs:title=ループラベル
+```rust:title=ループラベル
 fn main() {
     let mut count = 0;
     'counting_up: loop {
@@ -248,7 +248,7 @@ fn main() {
 
 以下の例では 0 になるまでカウントダウンしてループを終了しています。
 
-```rs:title=while文
+```rust:title=while文
 fn main() {
     let mut number = 3;
 
@@ -267,7 +267,7 @@ fn main() {
 
 以下の例では配列 `a` から順に値を表示させています。
 
-```rs:title=for文
+```rust:title=for文
 fn main() {
     let a = [10, 20, 30, 40, 50];
 
@@ -279,7 +279,7 @@ fn main() {
 
 ## 参考サイト
 
-- [The Rust Programming Language 日本語版 - The Rust Programming Language 日本語版](https://doc.rust-jp.rs/book-ja/title-page.html)
+- [The Rust Programming Language 日本語版 - The Rust Programming Language 日本語版](https://doc.rust-jp.rust/book-ja/title-page.html)
 
 ## まとめ
 
