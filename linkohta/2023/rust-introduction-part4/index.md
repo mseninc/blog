@@ -29,7 +29,7 @@ link です。
 
 以下のコードはユーザーアカウントに関する情報を保持する構造体です。
 
-```rs:title=基本の構造体
+```rust:title=基本の構造体
 struct User {
     username: String,
     email: String,
@@ -46,7 +46,7 @@ struct User {
 
 たとえば、以下のコードのように特定のユーザーを宣言できます。
 
-```rs:title=インスタンスの生成
+```rust:title=インスタンスの生成
 let user1 = User {
     email: String::from("someone@example.com"),
     username: String::from("username123"),
@@ -61,7 +61,7 @@ let user1 = User {
 
 インスタンスが可変であればドット記法を使い、特定のフィールドに代入することで値を変更できます。
 
-```rs:title=フィールドの取得・代入
+```rust:title=フィールドの取得・代入
 let mut user1 = User {
     email: String::from("someone@example.com"),
     username: String::from("username123"),
@@ -76,7 +76,7 @@ user1.email = String::from("anotheremail@example.com");
 
 また、構造体の新規インスタンスを関数本体の最後の式として、そのインスタンスを返すことができます。
 
-```rs:title=インスタンスを返す関数
+```rust:title=インスタンスを返す関数
 fn build_user(email: String, username: String) -> User {
     User {
         email: email,
@@ -93,7 +93,7 @@ JavaScript のオブジェクト生成と同じように、関数の仮引数名
 
 以下のコードのように `email` と `username` を繰り返し記述する必要がなくなります。
 
-```rs:title=フィールド初期化省略記法
+```rust:title=フィールド初期化省略記法
 fn build_user(email: String, username: String) -> User {
     User {
         email,
@@ -112,7 +112,7 @@ JavaScript のオブジェクト生成と同じように、前のインスタン
 
 `email` と `username` には新しい値をセットしていますが、それ以外には `user1` の値を使用しています。
 
-```rs:title=構造体更新記法なし
+```rust:title=構造体更新記法なし
 let user1 = User {
     email: String::from("someone@example.com"),
     username: String::from("username123"),
@@ -130,7 +130,7 @@ let user2 = User {
 
 `..` という記法で構造体更新記法を使用すると、明示的にセットされていない残りのフィールドが、与えられたインスタンスのフィールドと同じ値になるように指定します。
 
-```rs:title=構造体更新記法あり
+```rust:title=構造体更新記法あり
 let user2 = User {
     email: String::from("another@example.com"),
     username: String::from("anotherusername567"),
@@ -152,7 +152,7 @@ Rust には**構造体はありますが、クラスはありません。**
 
 以下のコードでは `Rectangle` 構造体上に `area` メソッドを定義しています。
 
-```rs:title=メソッド記法
+```rust:title=メソッド記法
 struct Rectangle {
     width: u32,
     height: u32,
@@ -187,7 +187,7 @@ fn main() {
 
 たとえば、以下のコードのように、正方形の `Rectangle` を生成できます。
 
-```rs:title=正方形を生成する関連関数
+```rust:title=正方形を生成する関連関数
 impl Rectangle {
     fn square(size: u32) -> Rectangle {
         Rectangle { width: size, height: size }
@@ -201,7 +201,7 @@ impl Rectangle {
 
 複数の `impl` ブロックを存在させることができます。
 
-```rs:title=複数のimplブロック
+```rust:title=複数のimplブロック
 impl Rectangle {
     fn area(&self) -> u32 {
         self.width * self.height
