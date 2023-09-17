@@ -43,7 +43,7 @@ Rust では上述のどちらも使わず、メモリーはコンパイラがコ
 
 分かりやすい例としてまず、変数のスコープについてみていきます。
 
-```rs:title=変数のスコープ
+```rust:title=変数のスコープ
 {
     let s = "scope"; // ここから有効
     // s で作業
@@ -79,7 +79,7 @@ C や C++ では `free()` でメモリー開放を宣言し、 Java や C# で�
 
 では、以下のコードのように 2 つの変数の片方がもう片方のポインターを参照しているとどうなるでしょうか。
 
-```rs:title=ムーブ
+```rust:title=ムーブ
 let s1 = String::from("hello");
 let s2 = s1;
 
@@ -94,7 +94,7 @@ println!("{}, world!", s2);
 
 なお、ムーブではなく変数の値をディープコピーする場合は `clone()` メソッドを利用しれば可能です。
 
-```rs:title=コピー
+```rust:title=コピー
 let s1 = String::from("hello");
 let s2 = s1.clone();
 
@@ -103,7 +103,7 @@ println!("s1 = {}, s2 = {}", s1, s2);
 
 また、ヒープ領域ではなくスタック領域に保存される変数は別変数に代入しても元の変数が無効化されることはありません。
 
-```rs:title=スタック型の変数のコピー
+```rust:title=スタック型の変数のコピー
 let x = 5;
 let y = x;
 
@@ -124,7 +124,7 @@ Rust では以下の変数型がスタック領域に保存されます。
 
 以下のコードでは `takes_ownership()` に渡された文字列はそのまま所有権がムーブし、関数の終了とともに解放されています。そして、 `takes_ownership()` に渡された変数はそのまま値が関数内にコピーされるため、関数が終了してもそのまま変数を利用し続けることができます。
 
-```rs:title=引数の所有権
+```rust:title=引数の所有権
 fn main() {
     let s = String::from("hello"); // 文字列型
     takes_ownership(s); // s の値が関数にムーブされ、 s はこの後使えなくなる
@@ -149,7 +149,7 @@ fn makes_copy(some_integer: i32) {
 以下のコードでは `gives_ownership()` では戻り値の所有権をそのまま代入先の `s1` にムーブしています。
 また `takes_and_gives_back()` に渡された `s2` の所有権は関数に渡りますが、関数から返された値の所有権がそのまま `s3` に渡されています。
 
-```rs:title=戻り値の所有権
+```rust:title=戻り値の所有権
 fn main() {
     let s1 = gives_ownership(); // gives_ownership は、戻り値を s1 にムーブする
     let s2 = String::from("hello");
@@ -172,7 +172,7 @@ fn takes_and_gives_back(a_string: String) -> String {
 
 以下のコードでは通常の変数の代わりに `$` がついた**参照型の変数**を引数に指定しています。
 
-```rs:title=変数の借用
+```rust:title=変数の借用
 fn main() {
     let s1 = String::from("hello");
     let len = calculate_length(&s1);
@@ -189,7 +189,7 @@ fn calculate_length(s: &String) -> usize {
 
 参照型の変数の値を変更する必要がある場合は以下のコードのように `&mut` をつける必要があります。
 
-```rs:title=可変な参照型
+```rust:title=可変な参照型
 fn main() {
     let mut s = String::from("hello");
 
@@ -217,7 +217,7 @@ Rust では**スライス**という可変サイズのコレクションの一�
 
 たとえば、 `String` 型なら以下のコードのように指定した範囲の文字にのみ参照を取ることができます。
 
-```rs:title=文字列スライス
+```rust:title=文字列スライス
 let s = String::from("hello world");
 
 let hello = &s[0..5]; // hello
@@ -228,7 +228,7 @@ let world = &s[6..11]; // world
 
 配列も同様にスライス型の参照を取ることができます。
 
-```rs:title=配列のスライス
+```rust:title=配列のスライス
 let a = [1, 2, 3, 4, 5];
 
 let slice = &a[1..3];
