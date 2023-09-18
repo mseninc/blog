@@ -1,6 +1,6 @@
 ---
 title: "はじめての Rust 入門 Part1 ～Hello world! して変数について学ぶまで～"
-date: 
+date: 2023-09-18
 author: linkohta
 tags: [Rust]
 description: "Rust を実際に触りながら勉強していきます。その１。"
