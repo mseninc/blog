@@ -40,11 +40,11 @@ JWT を用いた認証でも、ログイン時はセッションによる認証�
 1. サーバーは受け取った認証情報が正しいか検証する
 1. 認証情報が正しければ JWT を生成して HTTP レスポンスとして返す
 
-![](images/passport-jwt-authentication-on-express-1.png "JWT によるログイン処理の流れ")
+![JWT によるログイン処理の流れ](images/passport-jwt-authentication-on-express-1.png "JWT によるログイン処理の流れ")
 
 JWT のトークンはヘッダー、ペイロード、電子署名をドット (`.`) で連結した文字列の構成になっています。 **電子署名** がトークンに含まれることで、トークンの内容が改ざんされてもサーバー側で **改ざんを検知** できます。
 
-![](images/passport-jwt-authentication-on-express-2.png "JWT の構造")
+![JWT の構造](images/passport-jwt-authentication-on-express-2.png "JWT の構造")
 
 > [【JWT】 入門 - Qiita](https://qiita.com/Naoto9282/items/8427918564400968bd2b)
 
@@ -58,7 +58,7 @@ JWT のトークンはヘッダー、ペイロード、電子署名をドット 
 1. サーバーは 受け取った JWT を検証する
 1. 検証した JWT が正しければ同一ユーザーとして処理を継続する
 
-![](images/passport-jwt-authentication-on-express-3.png "JWT 認証によるログイン中のユーザーの検証の流れ")
+![JWT 認証によるログイン中のユーザーの検証の流れ](images/passport-jwt-authentication-on-express-3.png "JWT 認証によるログイン中のユーザーの検証の流れ")
 
 ## JWT トークンによるログイン
 

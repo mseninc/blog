@@ -26,7 +26,7 @@ ASP.NET Core では自動的に Secret Manager が利用できるように設定
 
 `Main()` を含むクラス `Program` においてシークレットを読み込むプログラム例は以下の通りです。
 
-```csharp
+```csharp:title=コンソールアプリケーションでシークレットを読み込むコード例
 class Program
 {
     static void Main(string[] args)

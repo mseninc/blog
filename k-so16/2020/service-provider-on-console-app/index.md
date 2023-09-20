@@ -34,7 +34,7 @@ DI で渡すインスタンスを設定するためには、 `IServiceCollection
 
 例えば、コンストラクタの引数に `HogeDbContext` を受け取る `HogeService` クラスを、クライアントの接続ごとにインスタンスを生成して DI で取得できるように設定するには、 `AddScoped<HogeService>()` を用いて以下のように記述します。
 
-```csharp
+```csharp:title=DI&nbsp;の設定
 public void ConfigureServices(IServiceCollection services)
 {
     /* 中略 */
