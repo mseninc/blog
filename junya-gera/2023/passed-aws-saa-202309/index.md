@@ -1,6 +1,6 @@
 ---
 title: "AWS SAA-C03 に合格しました"
-date: 
+date: 2023-09-20
 author: junya-gera
 tags: [AWS, 〇〇奮闘記]
 description: "AWS 認定試験 SAA-C03 に合格したので、私が行った勉強法と受験した感想を紹介します。"
