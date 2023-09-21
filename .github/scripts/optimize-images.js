@@ -224,8 +224,16 @@ async function writeFiles(resultSummary) {
   return reports;
 }
 
+/**
+ * get size string (KB)
+ * @param {number} size
+ * @returns {string}
+ */
+function sizeText(size) {
+  return `${Math.round(size / 1024).toLocaleString()}KB`;
+}
+
 function reportAll(reports) {
-  const sizeText = (size) => `${Math.round(size / 1024).toLocaleString()}KB`;
   for (const { source, minimum, reducedSize, percent, status } of reports) {
     const percentText = `${Math.round(percent * 100)}%`;
     console.log(
@@ -234,6 +242,10 @@ function reportAll(reports) {
       )} -> ${sizeText(minimum.size)}; -${sizeText(reducedSize)})`
     );
   }
+  const totalReducedSize = reports.reduce((acc, x) => acc + x.reducedSize, 0);
+  console.log(
+    `Total reduced: ${reports.length} files, ${sizeText(totalReducedSize)}`
+  );
 }
 
 commander
@@ -246,6 +258,7 @@ commander
   .option("-s, --silent", "show no results")
   .option("-B, --no-backup", "without backup for original files")
   .option("-r, --recover", "recover original files before processing")
+  .option("-t, --threshold <sizeKb>", "threshold size (KB) of difference")
   .parse(process.argv);
 
 const options = commander.opts();
@@ -254,6 +267,7 @@ async function main() {
   const MAX_WIDTH = Number(process.env.MAX_WIDTH) || 1200;
   const MAX_HEIGHT = Number(process.env.MAX_HEIGHT) || 1200;
   const maxResolution = { width: MAX_WIDTH, height: MAX_HEIGHT };
+  const thresholdSize = Number(options.threshold) || 5; // default 5KB
 
   // source dir
   const dirPath = process.argv[2].replace(/\/$/, "");
@@ -314,7 +328,7 @@ async function main() {
     optimizeResults,
     resizedOptimizeResults
   );
-  resultSummary = resultSummary.filter((x) => x.percent < 0.8);
+  resultSummary = resultSummary.filter((x) => x.reducedSize / 1024 >= thresholdSize); // ignore less than threshold
   if (options.debug) {
     console.group("Summary:");
     console.debug(resultSummary);
@@ -323,7 +337,7 @@ async function main() {
       0
     );
     console.debug(
-      `Total reduced size: ${Math.round(reducedSize / 1024).toLocaleString()}KB`
+      `Total (to be reduced): ${resultSummary.length} files, ${sizeText(reducedSize)}`
     );
     console.groupEnd();
   }
