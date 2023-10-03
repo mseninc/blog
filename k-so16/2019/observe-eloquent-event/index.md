@@ -19,7 +19,7 @@ tags: [Laravel, Eloquent, Web]
 ## 外部キー制約を変更する方法
 外部キー制約に `CASCADE` を割り当てれば、紐づいている先のレコードが削除された際に一緒に削除されます。 Laravel では、 `onDelete()` メソッドの引数に `'cascade'` を追加することで、外部キー制約を `CASCADE` に変更できます。
 
-```php
+```php:title=テーブルを新規追加する際に&nbsp;cascade&nbsp;制約を追加する方法
 Schema::table('books', function (Blueprint $table) {
     $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 });
@@ -27,7 +27,7 @@ Schema::table('books', function (Blueprint $table) {
 
 既にテーブルを作成している場合、 **一度外部キーを削除してから** 外部キー制約を設定し直します。 Laravel では、 `dropForeign()` メソッドで外部キー制約を削除出来ます。引数には、 `リレーション元のテーブル名_外部キーのカラム名_foreign` という規則から成り立つ文字列を指定します。自動生成ルールに基づいて外部キー制約を作成していれば、 `dropForeign()` の引数はカラム名の文字列を持つ配列を指定することも出来ます。
 
-```php
+```php:title=外部キー制約を削除したあとで&nbsp;cascade&nbsp;制約を追加する方法
 Schema::table('books', function (Blueprint $table) {
     $table->dropForeign(['user_id']);
     $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
@@ -43,7 +43,7 @@ Eloquent のイベントを監視する方法はいくつかありますが、�
 
 Observer は、 `artisan` の `make:observer` コマンドで生成出来ます。例えば、 User モデルの Observer である UserObserver の生成コマンドは以下の通りです。
 
-```bash
+```bash:title=Observer&nbsp;の作成
 php artisan make:observer UserObserver --model=User
 ```
 
@@ -51,7 +51,7 @@ php artisan make:observer UserObserver --model=User
 
 紐づいているレコード群をまとめて消す場合、リレーション元のモデルでは `deleting` イベントが発火しないので、 **さらにリレーションが紐づいている場合** はエラーになります。エラーを回避するためには、 `each()` メソッドを用いて、モデルを 1 つずつ削除するように記述する必要があります。
 
-```php
+```php:title=Observer::deleting()&nbsp;でモデルを&nbsp;1&nbsp;つずつ削除する
 class UserObserver
 {
     public function deleting(User $user)

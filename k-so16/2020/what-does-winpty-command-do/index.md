@@ -28,7 +28,7 @@ TTY は **teletypewriter** の略で、キーボードでタイプしたアル�
 
 UNIX/Linux における `tty` コマンドは、標準入力に接続された端末のファイル名を表示します。Git Bash で `tty` を実行すると、以下のように表示されます。
 
-```bash
+```bash:title=tty&nbsp;コマンドの実行例
 $ tty
 /dev/pty0
 ```

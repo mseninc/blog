@@ -22,11 +22,11 @@ tags: [Raspberry Pi, Linux, Ubuntu, その他, 〇〇奮闘記]
 
 まず、 OS 設定画面で以下の画像のように **Ubuntu** を選択します。
 
-![](images/setting-ubuntu-desktop-environment-on-raspberry-pi-1.png "インストールする OS の選択画面")
+![インストールする OS の選択画面](images/setting-ubuntu-desktop-environment-on-raspberry-pi-1.png "インストールする OS の選択画面")
 
 次に、 OS のバージョンを選択します。特にこだわりがなければ、最新のバージョンをインストールします。本記事執筆時点 (2020 年 8 月現在) では、 Ubuntu 20.04.1 が最新なので、こちらを選択します。 Raspberry Pi 3 以降では 64bit 版が利用できるので、 64bit 版を選択しました。
 
-![](images/setting-ubuntu-desktop-environment-on-raspberry-pi-2.png "OS のバージョン選択画面")
+![OS のバージョン選択画面](images/setting-ubuntu-desktop-environment-on-raspberry-pi-2.png "OS のバージョン選択画面")
 
 ## Ubuntu の初期設定
 ### ログイン
@@ -92,7 +92,7 @@ sudo apt install xubuntu-desktop
 
 デフォルトでは、デスクトップ環境として **GNOME** が動くようなので、起動するデスクトップ環境を変更します。ログインユーザーを選択した後、画面右下に歯車マークが表示されるので、それをクリックすると以下の画面のような選択肢が表示されます。
 
-![](images/setting-ubuntu-desktop-environment-on-raspberry-pi-4.png "右下の歯車マークを押して選択肢を表示")
+![右下の歯車マークを押して選択肢を表示](images/setting-ubuntu-desktop-environment-on-raspberry-pi-4.png "右下の歯車マークを押して選択肢を表示")
 
 選択肢が表示されたら **Xubuntu Session** を選択します。
 
