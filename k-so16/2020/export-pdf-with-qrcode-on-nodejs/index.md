@@ -34,7 +34,7 @@ PDF の内容は 2. で引数に指定するオブジェクトの **`content`** 
 
 以下は PDF の内容を表すオブジェクトの例です。
 
-```js
+```js:title=pdfmake&nbsp;で扱うオブジェクトの例
 const document = {
   content: [
     {

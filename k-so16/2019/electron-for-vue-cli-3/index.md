@@ -23,7 +23,7 @@ tags: [Vue.js, Electron, Web]
 ### Vue CLI 3 Plugin for Electron を導入する方法
 最初に、 Vue CLI でプロジェクトを作成します。
 
-```bash
+```bash:title=プロジェクトの作成
 vue create my-project
 ```
 
