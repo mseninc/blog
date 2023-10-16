@@ -1,6 +1,6 @@
 ---
 title: "はじめての Rust 入門 Part2 ～関数と制御フローについて学ぶまで～"
-date: 
+date: 2023-10-16
 author: linkohta
 tags: [Rust]
 description: "Rust を実際に触りながら勉強していきます。その２。"
