@@ -1,9 +1,9 @@
 ---
-title: "Visual Studio 2022 のキーバインド設定を変更する方法"
+title: "Visual Studio 2022 のキーバインド設定を VS Code に合わせる方法"
 date: 
 author: Ryotaro49
 tags: [Visual Studio,Visual Studio 2022]
-description: "Visual Studio 2022 のキーバインド設定を変更する方法を紹介します。"
+description: "Visual Studio 2022 のキーバインド設定を VS Code に合わせる方法を紹介します。"
 ---
 
 普段 VSCode と Visual Studio を使用して開発をしていますが、キーバインド設定が異なっており無駄な操作をしてしまうことが多々ありました。
@@ -24,7 +24,7 @@ description: "Visual Studio 2022 のキーバインド設定を変更する方�
 
 ![環境タブを探し、キーボードの設定項目を開く](images/002.png "環境タブを探し、キーボードの設定項目を開く")
 
-3. 次の追加キーボードマップ スキームを適用の場所で任意のキーバインドを選択します。
+3. 次の追加キーボードマップ スキームを適用の場所で 「Visual Studio Code」 を選択します。
 
 ![任意のキーバインドを適用](images/003.png "任意のキーバインドを適用")
 
