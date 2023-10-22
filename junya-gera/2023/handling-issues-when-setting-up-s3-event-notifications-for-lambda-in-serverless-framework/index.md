@@ -64,7 +64,7 @@ resources:
 
 考えてもわからなかったので [kenzauros](https://mseeeen.msen.jp/authors/kenzauros/) さんに聞いたところ、原因がわかりました。
 
-`events` に記載していた `S3` の `S` が大文字になっていたことが原因でした...。
+**`events` に記載していた `S3` の `S` が大文字になっていたこと**が原因でした...。
 
 ```yml{5}:title=serverless.yml&nbsp;の&nbsp;events&nbsp;部分
 functions:
@@ -92,13 +92,13 @@ CREATE_FAILED: S3Bucket20231022junjunbucket (AWS::S3::Bucket)
 
 ### 原因と対処法
 
-どうやら、 S3 のイベント通知を Lambda に設定した時点で、指定したバケットが作成されるようです。
+どうやら、 **S3 のイベント通知を Lambda に設定しただけで、指定したバケットが作成される**ようです。
 
 [Serverless Framework ドキュメント](https://www.serverless.com/framework/docs/providers/aws/events/s3) の S3 イベントの部分に「This will create a bucket」という記載がありました。
 
 ![公式ドキュメントの S3 イベントについて](images/3.png "公式ドキュメントの S3 イベントについて")
 
-対処法としては `resources` で S3 バケットを定義している部分を削除するか、 `events.s3` の部分に `existing: true` を追加するとデプロイが成功するようになりました。
+対処法としては **`resources` で S3 バケットを定義している部分を削除する**か、 **`events.s3` の部分に `existing: true` を追加する**とデプロイが成功するようになりました。
 
 コンソールで Lambda を確認すると、ちゃんと S3 のイベントトリガーが設定されていました。
 
