@@ -84,11 +84,11 @@ description: "業務 PC へのソフトウェア一括インストールを実�
 			"Packages" :
 			[
 				{
-					"PackageIdentifier" : "Microsoft.VisualStudio.2022.Community"
+					"PackageIdentifier" : "Microsoft.VisualStudio.2022.Community",
 					"Scope": "machine"
 				},
 				{
-					"PackageIdentifier" : "7zip.7zip"
+					"PackageIdentifier" : "7zip.7zip",
 					"Scope": "machine"
 				},
 				...
