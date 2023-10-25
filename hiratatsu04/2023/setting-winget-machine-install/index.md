@@ -52,6 +52,10 @@ description: "業務 PC へのソフトウェア一括インストールを実�
 
 今回はマシンインストールする方法を紹介します。
 
+## 想定環境
+
+- Windows 11 Enterprise 22H2
+
 ## マシンインストールする方法
 
 > scope の動作は、パッケージのインストール対象として、現在のユーザーとマシン全体のどちらが選択されるかに影響します。 対応するパラメーターは --scope で、同じ値 (user または machine) が使用されます。 [パッケージのインストール スコープに関する既知の問題](https://learn.microsoft.com/ja-jp/windows/package-manager/winget/troubleshooting#scope-for-specific-user-vs-machine-wide)を参照してください。
