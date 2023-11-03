@@ -11,7 +11,7 @@ UNIX/Linux において処理に時間のかかる処理を実行する場合、
 
 Linux で実行中のコマンドの情報を取得する方法はないか調べてみたところ、コマンドの進捗状況を取得できる **`pv`** コマンドがあるということを知りました。
 
-本記事では、 `pv` コマンドを使ってコマンドの進捗状況を取得する方法を紹介します。さらに BSD 系で `Ctrl-T` を押下した際に実行中のコマンドの情報が出力される仕組みについても紹介します。
+本記事では、 `pv` コマンドを使ってコマンドの進捗状況を取得する方法を紹介します。さらに BSD 系で `Ctrl-T` を押下した際に実行中のコマンドの情報が出力されるしくみについても紹介します。
 
 本記事で想定する読者層は以下の通りです。
 
@@ -22,12 +22,12 @@ Linux で実行中のコマンドの情報を取得する方法はないか調�
 標準で Linux に `pv` コマンドはインストールされていないので、利用するためにはインストール作業が必要です。基本的にはパッケージマネージャーからインストールできます。 CentOS の場合、**[pv の公式 YUM リポジトリの追加](http://www.ivarch.com/programs/yum.shtml)** があります。
 
 - Ubuntu の場合
-```bash
+```bash:title=Ubuntu&nbsp;でpv&nbsp;をインストールするコマンド
 apt install pv
 ```
 
 - CentOS の場合
-```bash
+```bash:title=CentOS&nbsp;でpv&nbsp;をインストールするコマンド
 yum install pv
 ```
 
@@ -39,7 +39,7 @@ yum install pv
 
 Raspberry Pi の OS のバックアップを `dd` を用いて作成する際に、 `pv` コマンドを用いて画面上に進捗状況を表示させる方法は以下の通りです。
 
-```bash
+```bash:title=pv&nbsp;でコマンドの進捗状況を表示
 $ pv /dev/sdc | dd of=raspbian-backup.img 
 5.04GiB 0:04:06 [19.6MiB/s] [==========>                       ] 34% ETA 0:07:40
 ```
@@ -53,11 +53,11 @@ $ pv /dev/sdc | dd of=raspbian-backup.img
 
 ## BSD 系における `Ctrl-T` の動作
 
-予めコマンドの進捗状況を見ながらコマンドを実行したいと考える場合は `pv` コマンドは便利なのですが、 **処理に時間がかかることが想定しづらい場合や `pv` コマンドを実行し忘れた場合にコマンドがハングしてないかが確認できなくなってしまう** ところが難点です。
+あらかじめコマンドの進捗状況を見ながらコマンドを実行したいと考える場合は `pv` コマンドは便利なのですが、 **処理に時間がかかることが想定しづらい場合や `pv` コマンドを実行し忘れた場合にコマンドがハングしてないかが確認できなくなってしまう** ところが難点です。
 
 一方、 FreeBSD や macOS などのBSD 系の OS では、 **`Ctrl-T`** を押下すると現在実行されているコマンドの情報が出力されます。以下の例では FreeBSD で Raspberry Pi のバックアップを `dd` を用いて作成している途中で `Ctrl-T` を押下してコマンドの情報を取得しています。
 
-```bash
+```bash:title=BSD&nbsp;系の&nbsp;OS&nbsp;でコマンドの進捗を表示する場合
 $ dd if=/dev/da0 of=raspbian-backup.img 
 # 実行途中に Ctrl-T を押下
 load: 0.49  cmd: dd 2687 [physrd] 19.84r 0.06u 0.21s 0% 2368k
@@ -72,16 +72,16 @@ BSD 系の OS では、 `Ctrl-T` を押下すると **`SIGINFO`** という **�
 
 ## シグナル
 
-UNIX/Linux でコマンドの実行中に特定のキーを押下すると、 **シグナル** が送られます。例えば、コマンドを中断する場合、 `Ctrl-C` を押下すると、 `SIGINT` が送られます。
+UNIX/Linux でコマンドの実行中に特定のキーを押下すると、 **シグナル** が送られます。たとえば、コマンドを中断する場合、 `Ctrl-C` を押下すると、 `SIGINT` が送られます。
 
 `Ctrl-C` や `Ctrl-D` などの特定のキーを押下すると、 **特殊文字** が入力されます。 **`Ctrl-C`** を押下すると **`INTR`** (interrupt), **`Ctrl-D`** の場合は **`EOF`** (end of file) のように、入力されるキーに対して入力される特殊文字がデフォルトで設定されています。 BSD 系の OS では、 **`Ctrl-T`** は **`STATUS`** が割り当てられています。
 
-入力キーと特殊文字との対応の確認や変更をするためには、 **`stty`** コマンドを利用します。 OS によって多少異なる箇所はありますが、 **基本的に特殊文字と入力キーの対応は共通している** ので、滅多に `stty` で対応を確認することはないかもしれませんね。
+入力キーと特殊文字との対応の確認や変更をするためには、 **`stty`** コマンドを利用します。 OS によって多少異なる箇所はありますが、 **基本的に特殊文字と入力キーの対応は共通している** ので、めったに `stty` で対応を確認することはないかもしれませんね。
 
 筆者の macOS と Ubuntu でそれぞれデフォルトの入力キーと特殊文字の対応を `stty` で確認した結果は以下の通りです。
 
 - macOS の場合
-```bash
+```bash:title=macOS&nbsp;で&nbsp;stty&nbsp;-a&nbsp;を実行した結果
 $ stty -a
 speed 9600 baud; 24 rows; 80 columns;
 lflags: icanon isig iexten echo echoe -echok echoke -echonl echoctl
@@ -99,8 +99,8 @@ cchars: discard = ^O; dsusp = ^Y; eof = ^D; eol = <undef>;
 ```
 
 - Ubuntu の場合
-```bash
-$ stty -a 
+```bash:title=Ubuntu&nbsp;で&nbsp;stty&nbsp;-a&nbsp;を実行した結果
+$ stty -a
 speed 38400 baud; rows 24; columns 80; line = 0;
 intr = ^C; quit = ^\; erase = ^?; kill = ^U; eof = ^D; eol = <undef>;
 eol2 = <undef>; swtch = <undef>; start = ^Q; stop = ^S; susp = ^Z; rprnt = ^R;

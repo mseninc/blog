@@ -23,7 +23,7 @@ tags: [Node.js, MongoDB, Web]
 
 本記事では、以下の構造のドキュメントについてデータの更新を行う場合を考えます。
 
-```json
+```json:title=本記事で更新するドキュメント
 {
   "name": "博多旅行",
   "description": "2泊3日で博多を満喫する",
@@ -52,7 +52,7 @@ tags: [Node.js, MongoDB, Web]
 
 例として、 `items` の配列に要素を追加するコードを記述します。
 
-```js
+```js:title=items&nbsp;に要素を追加するコード例
 await collection.updateOne({
   _id: mongo.ObjecID('0123456789abcdef0123456789abcd'),
 }, {
@@ -75,7 +75,7 @@ await collection.updateOne({
 
 例として、 `items` に追加した要素を削除するコードを記述します。
 
-```js
+```js:title=items&nbsp;から要素を削除するコード例
 await collection.updateOne({
   _id: mongo.ObjecID('0123456789abcdef0123456789abcd'),
 }, {
@@ -100,7 +100,7 @@ await collection.updateOne({
 配列の特定の要素を丸ごと更新する場合は、キーを `更新対象の配列.添字番号` と指定し、更新したいデータを `update()` などのメソッドの第 2 引数に指定します。指定の要素内に更新対象のプロパティが多い場合は、配列の要素全体を更新した方が単純でしょう。
 
 以下のプログラムは、 `items` の先頭の要素を更新する例です。
-```js
+```js:title=items&nbsp;の先頭の要素を更新するコード例
 await collection.updateOne({
   _id: mongo.ObjecID('0123456789abcdef0123456789abcd'),
 }, {
@@ -122,7 +122,7 @@ await collection.updateOne({
 ドキュメントの特定のプロパティのみを更新したい際に、多階層のプロパティを更新対象とする場合も同様にドットでプロパティ名を連結して更新対象の要素を指定します。
 
 以下のプログラムは、 `items` の先頭要素の `date` プロパティを更新する例です。
-```js
+```js:title=items&nbsp;の先頭の要素の&nbsp;date&nbsp;プロパティを更新するコード例
 await collection.updateOne({
   _id: mongo.ObjecID('0123456789abcdef0123456789abcd'),
 }, {
