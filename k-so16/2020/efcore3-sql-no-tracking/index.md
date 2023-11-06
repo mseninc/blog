@@ -42,7 +42,7 @@ EF Core 3.0 で変更追跡を無効化する方法として、 **個別の SQL 
 ### 個別のクエリの実行に対する変更追跡の無効化
 更新前のデータを取得する処理に **`AsNoTraking()`** を追加することで、そのクエリの実行結果の変更追跡を防ぐことができます。 `AsNoTracking()` はメソッドチェーンで `FromSqlRaw()` に繋げることができます。
 
-```csharp
+```cs:title=変更追跡の無効化
 _Context.Books
     .FromSqlRaw("SELECT ID AS Id, TITLE AS Title FROM books")
     .AsNoTracking()

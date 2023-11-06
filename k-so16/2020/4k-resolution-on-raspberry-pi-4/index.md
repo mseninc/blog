@@ -27,7 +27,7 @@ tags: [Raspberry Pi, その他, 〇〇奮闘記]
 
 モニターは 4K 出力に対応しているのですが、 Raspberry Pi を接続すると以下の画像のように両端が切れてしまいます。解像度を確認したら、 1920 × 1080 になっていました。
 
-![](images/4k-resolution-on-raspberry-pi-4-1.png "両端が黒く画面全体が使われていない")
+![両端が黒く画面全体が使われていない](images/4k-resolution-on-raspberry-pi-4-1.png "両端が黒く画面全体が使われていない")
 
 ## 解像度の設定
 
@@ -42,7 +42,7 @@ HDMI で 4K 出力を可能にするには **`hdmi_enable_4kp60=1`** と記述�
 
 これらの設定を書き加えて Raspberry Pi を再起動すると、HDMI 出力での画面出力が 4K になります。
 
-![](images/4k-resolution-on-raspberry-pi-4-2.png "再起動後に画面全体にデスクトップが表示された")
+![再起動後に画面全体にデスクトップが表示された](images/4k-resolution-on-raspberry-pi-4-2.png "再起動後に画面全体にデスクトップが表示された")
 
 ちなみに、 Raspberry Pi 3 以前は `/boot/config.txt` と **設定ファイルのパスが異なる** ので注意が必要です。
 

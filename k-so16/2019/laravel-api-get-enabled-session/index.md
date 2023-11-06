@@ -18,7 +18,7 @@ Laravel でログイン中のユーザー情報をAPI経由で取得しようと
 - Cookie, セッションについて知っている
 
 ## 原因
-Laravel から返ってくるAPIのレスポンスヘッダに、Cookieが付随していないことが原因でした。セッションが有効ではないので、ログイン状態が維持されず、 `Auth::check()` が `false` を返し、認証情報が得られませんでした。
+Laravel から返ってくるAPIのレスポンスヘッダーに、Cookieが付随していないことが原因でした。セッションが有効ではないので、ログイン状態が維持されず、 `Auth::check()` が `false` を返し、認証情報が得られませんでした。
 
 APIではトークンによって認証情報を扱うことを想定しているので、Cookie やセッションが有効化されていないと考えられます。
 
@@ -26,7 +26,7 @@ APIではトークンによって認証情報を扱うことを想定してい�
 ## 解決方法
 Laravel のデフォルトでは、 `route/web.php` に記述されるURLには Cookie やセッションに関するミドルウェアが動作しますが、 `route/api.php` にルーティングされているURLには動作しません。APIへのルーティングに設定されているレスポンスにも Cookie やセッションを有効化するために、 `app/Http/Kernel.php` に記述されている API のミドルウェアの設定に Cookie とセッションのミドルウェアを追加します。設定例は以下の通りです。
 
-```PHP
+```PHP:title=route/api.php&nbsp;に追加するミドルウェアの設定
 protected $middleWareGroups = [
     // 中略
     'api' => [
@@ -55,4 +55,4 @@ API に対してセッションを有効化する方法について、以下の�
 
 以上、 k-so16 でした。 Laravel について、また1つ詳しくなった気分になりました（笑）
 
-[^1]: 最近はデスクトップで [Ubuntu](https://ubuntu.com/) か [FreeBSD](https://www.freebsd.org/) しか動かさなくなったのでプレイ出来るか不安だったが、意外と Ubuntu にも対応していて驚いた
+[^1]: 最近はデスクトップで [Ubuntu](https://ubuntu.com/) か [FreeBSD](https://www.freebsd.org/) しか動重なくなったのでプレイできるか不安だったが、意外と Ubuntu にも対応していて驚いた

@@ -39,29 +39,29 @@ Visual Studio から WPF のプロジェクトを作成する方法を説明し�
 
 まず Visual Studio を開き、 **新しいプロジェクトの作成** を選択し、プロジェクトのテンプレート一覧から **WPF アプリケーション** を選択ます。
 
-![](images/reactive-property-programming-by-wpf-beginner-1.png "Visual Studio の起動画面")
+![Visual Studio の起動画面](images/reactive-property-programming-by-wpf-beginner-1.png "Visual Studio の起動画面")
 
-![](images/reactive-property-programming-by-wpf-beginner-2.png "テンプレートの選択画面")
+![テンプレートの選択画面](images/reactive-property-programming-by-wpf-beginner-2.png "テンプレートの選択画面")
 
 プロジェクト名やプロジェクトの保存先の設定画面に遷移したら、それぞれの項目について設定を行います。ソリューション名はプロジェクト名を入力すると自動的に入力されます。
 
-![](images/reactive-property-programming-by-wpf-beginner-3.png "プロジェクト名の入力画面")
+![プロジェクト名の入力画面](images/reactive-property-programming-by-wpf-beginner-3.png "プロジェクト名の入力画面")
 
 追加情報は特に変更する必要はないので、 **作成** ボタンを押します。これで WPF プロジェクトの作成が完了します。
 
-![](images/reactive-property-programming-by-wpf-beginner-4.png "追加情報の設定画面")
+![追加情報の設定画面](images/reactive-property-programming-by-wpf-beginner-4.png "追加情報の設定画面")
 
 ## ReactiveProperty のインストール
 
 ソリューションエクスプローラーから、 **依存関係** を右クリックし、 **NuGet パッケージの管理** を選択します。
 
-![](images/reactive-property-programming-by-wpf-beginner-5.png "依存関係のコンテキストメニューから NuGet パッケージの管理を選択")
+![依存関係のコンテキストメニューから NuGet パッケージの管理を選択](images/reactive-property-programming-by-wpf-beginner-5.png "依存関係のコンテキストメニューから NuGet パッケージの管理を選択")
 
 **参照** タブを選択し、 **ReactiveProperty** と検索してください。検索結果の一番上に **ReactiveProperty** と表示されるはずなので、それを選択してインストールします。特に事情がなければ最新版をインストールしましょう。
 
-![](images/reactive-property-programming-by-wpf-beginner-6.png "ReactiveProperty を検索")
+![ReactiveProperty を検索](images/reactive-property-programming-by-wpf-beginner-6.png "ReactiveProperty を検索")
 
-![](images/reactive-property-programming-by-wpf-beginner-7.png "ReactiveProperty のインストール設定画面")
+![ReactiveProperty のインストール設定画面](images/reactive-property-programming-by-wpf-beginner-7.png "ReactiveProperty のインストール設定画面")
 
 ## View の編集
 
@@ -84,11 +84,11 @@ Visual Studio から WPF のプロジェクトを作成する方法を説明し�
 
 画面のプレビューが以下の画像のように表示されるはずです。
 
-![](images/reactive-property-programming-by-wpf-beginner-9.png "コード例を実装したときのプレビュー画面")
+![コード例を実装したときのプレビュー画面](images/reactive-property-programming-by-wpf-beginner-9.png "コード例を実装したときのプレビュー画面")
 
 デバッグ実行すると、実際に動作する際の画面が確認できます。
 
-![](images/reactive-property-programming-by-wpf-beginner-10.png "デバッグの実行画面")
+![デバッグの実行画面](images/reactive-property-programming-by-wpf-beginner-10.png "デバッグの実行画面")
 
 ## ViewModel の作成
 
@@ -99,15 +99,15 @@ Visual Studio から WPF のプロジェクトを作成する方法を説明し�
 1. **プロジェクトを右クリック** して「**追加**」を選択し「**新しいフォルダー**」を選択
     - フォルダー名を `ViewModels` として作成
 
-![](images/reactive-property-programming-by-wpf-beginner-11.png "フォルダーの作成")
+![フォルダーの作成](images/reactive-property-programming-by-wpf-beginner-11.png "フォルダーの作成")
 
 1. **`ViewModels` フォルダーを右クリック** して「**追加**」を選択し「**クラス**」を選択
 
-![](images/reactive-property-programming-by-wpf-beginner-12.png "クラスの新規作成")
+![クラスの新規作成](images/reactive-property-programming-by-wpf-beginner-12.png "クラスの新規作成")
 
 1. `ViewModel.cs` という名前で C# クラスファイルを作成
 
-![](images/reactive-property-programming-by-wpf-beginner-13.png "新規作成のメニュー画面")
+![新規作成のメニュー画面](images/reactive-property-programming-by-wpf-beginner-13.png "新規作成のメニュー画面")
 
 `ViewModel` クラスのファイルを作成したら、クラスファイルを選択して編集画面を開きます。 `ViewModel` クラスの作成の流れは次の通りです。
 
@@ -183,7 +183,7 @@ namespace MyFirstWpfApp
 
 実際に実行すると、 `TextBox` に入力された内容が `Label` に自動的に反映されることを確認できるはずです。
 
-![](images/reactive-property-programming-by-wpf-beginner-14.gif "実際の動作の確認")
+![実際の動作の確認](images/reactive-property-programming-by-wpf-beginner-14.gif "実際の動作の確認")
 
 ReactiveProperty を利用することで、手軽に簡単に MVVM のように UI コンポーネントとデータを制御できました。複雑な WPF アプリケーションを開発するには、 ReactiveProperty は不可欠といっても過言ではないですね(笑)
 

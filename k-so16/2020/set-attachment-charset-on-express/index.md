@@ -30,7 +30,7 @@ Web サーバーから PDF や一部のテキストファイルをブラウザ�
 
 ファイル名 `hoge.csv` としてデータをファイルとして保存させるには、以下のような記述になります。
 
-```
+```:title=ファイルとしてダウンロードさせるレスポンスヘッダの例
 Content-Disposition: attachment; filename=hoge.csv
 ```
 

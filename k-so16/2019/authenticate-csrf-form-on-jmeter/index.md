@@ -25,11 +25,11 @@ tags: [JMeter, Web]
     - 認証ページの URL を指定
         - HTTP メソッドには GET を指定
         - リダイレクトで遷移する場合は **Follow Redirects** をチェック
-            ![](images/authenticate-csrf-form-on-jmeter-1.png)
+            ![HTTP Request の Sampler を追加](images/authenticate-csrf-form-on-jmeter-1.png)
 
 1. 追加した HTTP Request に **CSS Selector Extractor** を追加
     - 右クリックして Add > Post Processor > CSS Selector Extractor を選択
-            ![](images/authenticate-csrf-form-on-jmeter-2.png)
+            ![追加した HTTP Request に CSS Selector Extractor を追加](images/authenticate-csrf-form-on-jmeter-2.png)
 
 1. CSS Selector Extractor の項目欄に入力
     - Name of created variable: 任意の変数名
@@ -37,7 +37,7 @@ tags: [JMeter, Web]
         - 例. `<input type="hidden" name="csrf_token" value="hoge">` → `input[name=csrf_token]`
     - Attribute: 取得したい属性
         - 隠しフィールドの値を取得するので `value` を指定
-            ![](images/authenticate-csrf-form-on-jmeter-3.png)
+            ![CSS Selector Extractor の項目欄に入力](images/authenticate-csrf-form-on-jmeter-3.png)
 
 ## CSRF 保護フィールドの値を POST データに埋め込み
 前節で取得した CSRF の値を POST に埋め込む方法を説明します。
@@ -45,12 +45,12 @@ tags: [JMeter, Web]
 手順は以下の通りです。
 
 1. CSS Selector Extractor を追加した Sampler の下に認証ページにアクセスする HTTP Request Sampler を追加
-    ![](images/authenticate-csrf-form-on-jmeter-4.png)
+    ![認証ページにアクセスする HTTP Request Sampler を追加](images/authenticate-csrf-form-on-jmeter-4.png)
 
 1. **Send Parameter with the Request** の Name と Value を入力
     - Name に隠しフィールドの `name` プロパティの内容を入力
     - Value に CSS Selector Extractor で指定した変数名を `${変数名}` の形で入力
-    ![](images/authenticate-csrf-form-on-jmeter-5.png)
+    ![Send Parameter with the Request の項目を入力](images/authenticate-csrf-form-on-jmeter-5.png)
 
 1. 他に送信する内容を入力
     - 必要に応じて Send Parameter with the Request に送信データを追加
@@ -61,7 +61,7 @@ tags: [JMeter, Web]
 
 Thread Group を右クリックし、 Add > Config Element > HTTP Cookie Manager を選択すると JMeter で Cookie が有効になります。
 
-![](images/authenticate-csrf-form-on-jmeter-6.png)
+![HTTP Cookie Manager を追加](images/authenticate-csrf-form-on-jmeter-6.png)
 
 これでテストを実行すると、認証が通るようになります。認証を通す Sampler に Listener の **View Results Tree** を追加すると、 Response data の Response Header や Reponse Body などで結果を確認できます。
 
