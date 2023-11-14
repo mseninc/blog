@@ -1,9 +1,9 @@
 ---
-title: "Serverless Framework で Lambda に S3 のイベント通知が設定されないときの対処法"
+title: "Serverless Framework で Lambda に S3 のイベント通知が設定されないときの確認点"
 date: 
 author: junya-gera
 tags: [Serverless Framework, Lambda, S3]
-description: "Serverless Framework でデプロイしても Lambda に S3 のイベント通知が設定されないときの対処法を紹介します。"
+description: "Serverless Framework でデプロイしても Lambda に S3 のイベント通知が設定されないときの確認点を紹介します。"
 ---
 
 こんにちは、じゅんじゅんです。
@@ -14,7 +14,7 @@ description: "Serverless Framework でデプロイしても Lambda に S3 のイ
 
 また、ほかにも「bucket already exists in stack」というエラーにも遭遇しました。
 
-今回は上記のように Serverless Framework でデプロイしても Lambda に S3 のイベント通知が設定されないときの対処法を紹介します。
+今回は上記のように Serverless Framework でデプロイしても Lambda に S3 のイベント通知が設定されないときの確認点を紹介します。
 
 ## Lambda 関数にイベントが設定されない
 
@@ -60,7 +60,7 @@ resources:
 
 デプロイ時にエラーも出ておらず、 ChatGPT に聞いても「正しく設定されているように見えます」と言われてしまいました。
 
-### 原因と対処法
+### 原因と確認点
 
 考えてもわからなかったので [kenzauros](https://mseeeen.msen.jp/authors/kenzauros/) さんに聞いたところ、原因がわかりました。
 
