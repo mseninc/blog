@@ -1,6 +1,6 @@
 ---
 title: "Visual Studio 2022 のキーバインド設定を VS Code に合わせる方法"
-date: 
+date: 2023-11-15
 author: Ryotaro49
 tags: [Visual Studio,Visual Studio 2022]
 description: "Visual Studio 2022 のキーバインド設定を VS Code に合わせる方法を紹介します。"
