@@ -31,7 +31,7 @@ Actix Web は Rust 製の Web フレームワークです。
 
 sqlx は Rust の非 O/M マッパーのクレートで、直接書いたクエリーを実行することを特徴としています。
 
-PostgreSQL 、 MySQL 、 SQLite をサポートしており、データベースに依存しない設計がされています。
+PostgreSQL 、 MySQL 、 SQLite をサポートしており、データベースに依存しない設計になっています。
 
 ## REST API を実装してみる
 
