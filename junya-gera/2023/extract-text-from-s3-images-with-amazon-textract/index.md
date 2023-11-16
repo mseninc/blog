@@ -14,23 +14,23 @@ description: "S3 に保存した画像に書かれている文字を Amazon Text
 
 最初から PC に打ち込むことも考えましたが、本番を想定して紙と鉛筆で練習がしたかったのです。
 
-せっかくなので、書いた英文を写真に撮り、 Amazon Textract を使って写真の文字を検出してテキストデータにする Lambda 関数を作ろうと考えました。
+せっかくですので、書いた英文を写真に撮り、 Amazon Textract を使って写真の文字を検出してテキストデータにする Lambda 関数を作ろうと考えました。
 
 今回はその方法を紹介します。
 
-↓ Serverless Framework を使って作成した記事はこちら
+↓ Serverless Framework を使って作成した記事はこちら。
 
 [[Serverless Framework] S3 に保存した画像から Amazon Textract でテキストデータを取得する](https://mseeeen.msen.jp/serverless-framework-s3-image-textract-text)
 
 ## 前提
 
-- node.js v18.16.0
+- Node.js v18.16.0
 
 ## Amazon Textract とは
 
 [Amazon Textract](https://docs.aws.amazon.com/ja_jp/textract/latest/dg/what-is.html) は、スキャンしたドキュメントのテキストや手書き文字を検出する機械学習サービスです。
 
-紙の文書を写真に撮ったり PDF 化したものから文字を読み取り、テキストデータとして使用することができます。使用方法はシンプルで、機械学習についての知識も必要ありません。
+紙の文書を写真に撮ったり PDF 化したものから文字を読み取り、テキストデータとして使用できます。使用方法はシンプルで、機械学習についての知識も必要ありません。
 
 現在 (2023年10月) サポートしている言語は英語、スペイン語、ドイツ語、イタリア語、フランス語、ポルトガル語であり、日本語には未対応ですが、今回は英文をテキストデータにしたいので問題ありません。
 
@@ -38,9 +38,9 @@ description: "S3 に保存した画像に書かれている文字を Amazon Text
 
 ## 構成
 
-今回は S3 のイベント通知を利用し、 S3 に画像がアップロードされたら Textract で文字の検出を行う処理を記載した Lambda を実行します。
+今回は S3 のイベント通知を利用し、 S3 に画像がアップロードされたら Textract で文字を検出する処理を記載した Lambda を実行します。
 
-検出したテキストデータはテキストファイルにして別の S3 にアップロードするようにします。
+検出したテキストデータはテキストファイルにし、別の S3 にアップロードします。
 
 ![アーキテクチャ図](images/1.png "アーキテクチャ図")
 
@@ -173,19 +173,19 @@ async function getTextractText(jobId) {
 
 [`startDocumentTextDetection()`](https://docs.aws.amazon.com/ja_jp/textract/latest/dg/API_StartDocumentTextDetection.html#API_StartDocumentTextDetection_ResponseSyntax) は S3 バケットに保存されているオブジェクトからテキストデータの検出を開始します。
 
-どのバケットのどのオブジェクトから検出を行うかの情報を第一引数 (`params`) に渡します。  
+どのバケットのどのオブジェクトから検出するかの情報を第一引数 (`params`) に渡します。  
 
 今回は 20231028-image-bucket にオブジェクトが配置されたイベント通知による `event` 引数からバケット名とオブジェクトのキーを取得し、 `params` に設定しています。
 
 `response` の中身は以下のようになっています。
 
-```js
+```js:title=response&nbsp;の中身
 {
    "JobId": "string"
 }
 ```
 
-この `JobId` を使用して `waitForJobCompletion` にて Textract による検出を行い、完了まで待ちます。
+この `JobId` を使用して `waitForJobCompletion` にて Textract により検出し、完了まで待ちます。
 
 ```js:title=waitForJobCompletion()
 // Textractのジョブが完了するのを待つ
@@ -206,7 +206,7 @@ async function waitForJobCompletion(jobId) {
 }
 ```
 
-[getDocumentTextDetection](https://docs.aws.amazon.com/textract/latest/dg/API_GetDocumentTextDetection.html#API_GetDocumentTextDetection_ResponseSyntax) はテキスト検出を行った結果を取得する関数です。
+[getDocumentTextDetection](https://docs.aws.amazon.com/textract/latest/dg/API_GetDocumentTextDetection.html#API_GetDocumentTextDetection_ResponseSyntax) はテキスト検出した結果を取得する関数です。
 
 `getDocumentTextDetection()` は非同期処理であり、検出には時間がかかるため、検出が完了するまで `waitForJobCompletion()` でポーリングしています。
 
@@ -291,7 +291,7 @@ async function getTextractText(jobId) {
 
 `BlockType` には `PAGE` ・ `LINE` ・ `WORD` などの種類があり、それぞれページごと、行ごと、単語ごとのブロックを表します。
 
-ここでは `LINE` で `filter` することで、行ごとに検出を行うようにしています。
+ここでは `LINE` で `filter` することで、行ごとに検出しています。
 
 これで `index.mjs` の準備ができたので、 `zip -r deploy_package.zip *` コマンドで zip 化し、コンソールにアップロードします。
 
@@ -357,7 +357,7 @@ IAM のコンソール画面でそのロールを選択し、「許可を追加�
 
 ![英作文の画像](images/16.png "英作文の画像")
 
-S3 のコンソール画面から「20231028-image-bucket」を選択し、英作文の画像 (`sample.png`) をドラッグ＆ドロップでアップロードします。
+S3 のコンソール画面から「20231028-image-bucket」を選択し、英作文の画像 (`sample.png`) をドラッグ&ドロップでアップロードします。
 
 ![sample.png を 20231028-image-bucket にアップロード](images/17.png "sample.png を 20231028-image-bucket にアップロード")
 
@@ -373,6 +373,6 @@ S3 のコンソール画面から「20231028-image-bucket」を選択し、英�
 
 英検の勉強中にふと思い立ってやってみたら結構時間がかかってしまい、実は完成したのは英検が終わってからでした...。
 
-今回実際に活用することはできませんでしたが、次回受験時に使ってみようと思います。
+今回実際に活用できませんでしたが、次回受験時に使ってみようと思います。
 
-スマホで写真を撮ってから PC に移すのが面倒なので、 LINE API を連携させて LINE に画像を送ると英文が返ってくるようにするのも良さそうです。
+スマホで写真を撮ってから PC に移すのが面倒ですので、 LINE API を連携させて LINE に画像を送ると英文が返ってくるようにするのも良さそうです。
