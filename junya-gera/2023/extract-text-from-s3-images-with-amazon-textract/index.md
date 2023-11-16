@@ -122,7 +122,7 @@ export const detectText = async (event) => {
     
     // テキストを使用して必要な処理を行う
     const putparams = {
-      Bucket: '20231113-text-bucket',
+      Bucket: '20231028-text-bucket',
       Key: 'sample.txt',
       Body: text,
       ContentType: 'text/plain',
