@@ -24,56 +24,76 @@ jobs:
         github-token: ${{ secrets.CI_GITHUB_TOKEN }}
         script: |
           const { repo: { owner, repo } } = context;
-          const query = `query listPulls($owner: String!, $name: String!) {
-            repository(owner: $owner, name: $name) {
-              pullRequests(states: OPEN, first: 10, orderBy: {field: CREATED_AT, direction: ASC}, baseRefName: "release", labels: "release") {
-                totalCount
-                nodes {
-                  number
-                  title
-                  createdAt
-                  baseRefName
-                  headRefName
-                  url
-                  state
-                  isDraft
-                  merged
-                  mergeable
-                  mergeStateStatus
+          async function listPulls() {
+            const query = `query listPulls($owner: String!, $name: String!) {
+              repository(owner: $owner, name: $name) {
+                pullRequests(states: OPEN, first: 10, orderBy: {field: CREATED_AT, direction: ASC}, baseRefName: "release", labels: "release") {
+                  totalCount
+                  nodes {
+                    number
+                    title
+                    createdAt
+                    baseRefName
+                    headRefName
+                    url
+                    state
+                    isDraft
+                    merged
+                    mergeable
+                    mergeStateStatus
+                  }
                 }
               }
             }
+            `
+            const variables = {
+              owner,
+              name: repo,
+              mediaType: {
+                previews: ["merge-info-preview"]
+              }
+            }
+            const data = await github.graphql(query, variables)
+            const { repository: { pullRequests: { nodes } } } = data
+            const pulls = nodes || []
+            return pulls.filter(pull => pull.headRefName.startsWith('post/'));
           }
-          `
-          const variables = {
-            owner,
-            name: repo,
-            mediaType: {
-              previews: ["merge-info-preview"]
+          function main() {
+            core.info(`Listing pull requests...`)
+            let pulls = await listPulls();
+            console.debug(JSON.stringify(pulls, null, 2))
+            if (pulls.length > 0 && pulls[0].mergeable === "UNKNOWN") {
+              // UNKNOWN の場合は再取得
+              core.info(`Pull request status is UNKNOWN. Waiting for 5 seconds...`)
+              await new Promise(resolve => setTimeout(resolve, 5000));
+              core.info(`Retrying...`)
+              pulls = await listPulls();
+              if (pulls.length > 0 && pulls[0].mergeable === "UNKNOWN") {
+                // それでも UNKNOWN の場合はエラー
+                core.setFailed(`Pull request status is UNKNOWN`);
+              }
+            }
+            const candidates = pulls
+              .filter(pull => {
+                const { number, url, headRefName, isDraft, mergeable, mergeStateStatus } = pull
+                const isCandidate = !isDraft && mergeable === 'MERGEABLE' && mergeStateStatus === 'CLEAN'
+                core.info(`#${number} ${url} ${headRefName}: ${isCandidate} (isDraft: ${isDraft}, mergeable: ${mergeable}, mergeStateStatus: ${mergeStateStatus})`)
+                return isCandidate
+              })
+              console.debug('Candidates: ', JSON.stringify(pulls, null, 2))
+            if (candidates.length > 0) {
+              core.info(`Found ${candidates.length} pull requests to be merged`)
+              const { number, url } = candidates[0]
+              core.info(`Merging #${number}...`)
+              await github.rest.pulls.merge({
+                owner,
+                repo,
+                pull_number: number
+              })
+              core.info(`Merged #${number} (${url})`)
+              core.notice(`Merged #${number} (${url})`)
+            } else {
+              core.notice('No pull request to be merged')
             }
           }
-          const data = await github.graphql(query, variables)
-          const { repository: { pullRequests: { nodes } } } = data
-          const pulls = nodes || []
-          console.debug(JSON.stringify(pulls, null, 2))
-          const candidates = pulls
-            .filter(pull => pull.headRefName.startsWith('post/'))
-            .filter(pull => {
-              const { number, url, headRefName, isDraft, mergeable, mergeStateStatus } = pull
-              const isCandidate = !isDraft && mergeable === 'MERGEABLE' && mergeStateStatus === 'CLEAN'
-              console.log(`#${number} ${url} ${headRefName}: ${isCandidate} (isDraft: ${isDraft}, mergeable: ${mergeable}, mergeStateStatus: ${mergeStateStatus})`)
-              return isCandidate
-            })
-          if (candidates.length > 0) {
-            const { number, url } = candidates[0]
-            console.log(`Merging #${number}...`)
-            await github.rest.pulls.merge({
-              owner,
-              repo,
-              pull_number: number
-            })
-            console.log(`Merged #${number} (${url})`)
-          } else {
-            // set failed when no pull request merged
-            core.setFailed(`No pull request to be merged`);
-          }
+          main();
