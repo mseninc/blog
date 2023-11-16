@@ -194,7 +194,7 @@ layers:
 
 ### provider の部分
 
-Amazon Textract は東京リージョン (ap-northeast-1) には未対応のため、今回 `region` は us-west-1 としています。
+Amazon Textract は東京リージョン (ap-northeast-1) には未対応のため、今回 `region` は us-west-1 (北カリフォルニア) としています。
 
 `iam.role.statements` では、 S3 と Textract の操作権限を付与しています。
 
