@@ -12,7 +12,7 @@ description: "S3 に保存した画像の文字を Textract でテキストデ�
 
 [S3 に保存した画像から Amazon Textract でテキストデータを取得する](https://mseeeen.msen.jp/extract-text-from-s3-images-with-amazon-textract)
 
-しかし、コンソール画面からバケットを一つ一つ作成したり、 Lambda の zip をアップロードするのは面倒です。
+しかし、コンソール画面からバケットを1つ1つ作成したり、 Lambda の zip をアップロードするのは面倒です。
 
 今回は Serverless Framework を使って上記の記事と同じ構成を構築する方法を紹介します。
 
@@ -260,7 +260,7 @@ aws s3api list-objects-v2 --bucket 20231113-image-bucket
 
 以下のように表示されていればアップロードが成功しています。
 
-```json
+```json:title=sample.png&nbsp;がアップロードされていることを確認
 {
     "Contents": [
         {
@@ -282,7 +282,7 @@ aws s3api list-objects-v2 --bucket 20231113-text-bucket
 
 こちらも同様に以下のように表示されればテキストファイルが無事作成されています。
 
-```json
+```json:title=sample.txt&nbsp;が作成されていることを確認
 {
     "Contents": [
         {
