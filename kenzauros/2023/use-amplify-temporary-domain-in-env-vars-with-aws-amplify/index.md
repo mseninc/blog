@@ -26,7 +26,7 @@ Amplify コンソールの環境変数設定機能を利用すれば、ブラン
 
 Amplify のビルド環境では APP_ID は `AWS_APP_ID`、ブランチ名は `AWS_BRANCH` として環境変数に設定されています。既定の環境変数については [AWS Amplifyの公式ドキュメント](https://docs.aws.amazon.com/amplify/latest/userguide/environment-variables.html) を参照してください。
 
-ただし、 *ブランチ名である `AWS_BRANCH` には `/` などの URL で意味のある文字列が含まれる場合があります*。Amplify の仮ドメインでも特殊文字は `-` に置換されますので、環境変数に用いる場合も同様に置換する必要があります。
+ただし、 *ブランチ名である `AWS_BRANCH` には `/` などの URL で意味のある文字列が含まれる場合もあります*。Amplify の仮ドメインでも特殊文字は `-` に置換されますので、環境変数に用いる場合も同様に置換する必要があります。
 
 たとえば `main` や `dev` ブランチ以外の場合に、環境変数を上書きする場合は、下記のようなコマンドをビルドコマンドに追加します。
 
@@ -34,9 +34,9 @@ Amplify のビルド環境では APP_ID は `AWS_APP_ID`、ブランチ名は `A
 test "$AWS_BRANCH" != 'next' -a "$AWS_BRANCH" != "main" && export NEXT_PUBLIC_AUTH_COOKIE_STORAGE_DOMAIN=${AWS_BRANCH//[^a-zA-Z0-9]/-}.${AWS_APP_ID}.amplifyapp.com
 ```
 
-`test` 部分はブランチを除外しているだけなので、主には `export` の後の **`${AWS_BRANCH//[^a-zA-Z0-9]/-}.${AWS_APP_ID}.amplifyapp.com`** がポイントです。 `AWS_BRANCH` に含まれる英数字以外は `-` に置換しています。
+`test` 部分はブランチを除外しているだけですので、主には `export` の後の **`${AWS_BRANCH//[^a-zA-Z0-9]/-}.${AWS_APP_ID}.amplifyapp.com`** がポイントです。 `AWS_BRANCH` に含まれる英数字以外は `-` に置換しています。
 
-このサンプルは Next.js のプロジェクト向けなので、上記のコマンドでは、環境変数 `NEXT_PUBLIC_AUTH_COOKIE_STORAGE_DOMAIN` に Cookie のドメインを設定しています。
+この例では Next.js のプロジェクト向けのため、上記のコマンドでは、環境変数 `NEXT_PUBLIC_AUTH_COOKIE_STORAGE_DOMAIN` にアプリのドメインを設定しています。
 
 Amplify のビルド設定 (amplify.yml) は下記のようになります。
 
