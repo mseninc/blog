@@ -1,6 +1,6 @@
 ---
 title: "[AWS] CLI での SSO ログインを簡単にする（プロファイル名自動補完付き）"
-date: 
+date: 2023-11-17
 author: kenzauros
 tags: [AWS, IAM Identity Center, AWS SSO, Linux]
 description: "AWS の IAM Identity Center を使用した SSO で、 Linux から 1 コマンドでログインできるようにします。またプロファイル名を忘れてしまうことが多いため complete によるオートコンプリートができるようにしました。"
