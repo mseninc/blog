@@ -58,7 +58,7 @@ jobs:
             const pulls = nodes || []
             return pulls.filter(pull => pull.headRefName.startsWith('post/'));
           }
-          function main() {
+          async function main() {
             core.info(`Listing pull requests...`)
             let pulls = await listPulls();
             console.debug(JSON.stringify(pulls, null, 2))
@@ -96,4 +96,4 @@ jobs:
               core.notice('No pull request to be merged')
             }
           }
-          main();
+          await main();
