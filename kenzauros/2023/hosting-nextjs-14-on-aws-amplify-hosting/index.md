@@ -80,7 +80,7 @@ Amplify コンソールでカスタム構築イメージを設定する手順は
 
 ### 注意：Server Component の動作には未対応
 
-Next.js 14 の App Router では Server Components が利用してサーバー側で API リクエストなどの処理が行えます。ただし、この機能は AWS Amplify Hosting ではまだサポートされていないようです。実際にデプロイしてアクセスすると、下記のようなエラーが発生します。
+Next.js 14 の App Router では Server Components を利用してサーバー側で API リクエストなどの処理が行えます。ただし、この機能は AWS Amplify Hosting ではまだサポートされていないようです。実際にデプロイしてアクセスすると、下記のようなエラーが発生します。
 
 ```
 Application error: a server-side exception has occurred (see the server logs for more information).
