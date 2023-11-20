@@ -12,7 +12,7 @@ description: "S3 に保存した画像の文字を Textract でテキストデ�
 
 [S3 に保存した画像から Amazon Textract でテキストデータを取得する](https://mseeeen.msen.jp/extract-text-from-s3-images-with-amazon-textract)
 
-しかし、コンソール画面からバケットを1つ1つ作成したり、 Lambda の zip をアップロードするのは面倒です。
+しかし、コンソール画面からバケットを一つ一つ作成したり、 Lambda の zip をアップロードするのは面倒です。
 
 今回は Serverless Framework を使って上記の記事と同じ構成を構築する方法を紹介します。
 
@@ -214,7 +214,7 @@ Textract のほうは、 Lambda に記載した処理の中で使用している
 
 `layers` は `{Ref: AwsLayerLambdaLayer}` としていて、 yml の一番下に定義している `aws-layer` を呼び出しています ([[AWS] Lambda レイヤーの node_modules が読み込まれないときの解決法](https://mseeeen.msen.jp/how-to-solve-lambda-layer-error-in-serverless-framework/) 参照) 。
 
-## layer ディレクトリの作成
+## Lambda レイヤーディレクトリの作成
 
 serverless.yml で定義したように、 s3-textract ディレクトリ下に aws-layer というディレクトリを作成し、その中に nodejs というディレクトリを作成し、 node_modules を格納します。
 
@@ -312,4 +312,4 @@ s3-textract ディレクトリに sample.txt が保存されました！中身�
 
 開発中はどうしてもトライ＆エラーを繰り返すことになるので、コマンドひとつでデプロイや関数の実行ができたり、合わせて AWS CLI も活用することでコンソール画面を極力使用せず動作確認まで行うことができました。
 
-今後似たような構成を構築するときも今回作成した Serverless.yml を参考にできるので、作れば作るほど効率が上がっていきそうです。
+今後似たような構成を構築するときも今回作成した serverless.yml を参考にできるので、作れば作るほど効率が上がっていきそうです。
