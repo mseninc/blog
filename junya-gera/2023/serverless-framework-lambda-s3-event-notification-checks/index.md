@@ -1,6 +1,6 @@
 ---
 title: "Serverless Framework で Lambda に S3 のイベント通知が設定されないときの確認点"
-date: 
+date: 2023-11-20
 author: junya-gera
 tags: [Serverless Framework, Lambda, S3]
 description: "Serverless Framework でデプロイしても Lambda に S3 のイベント通知が設定されないときの確認点を紹介します。"
