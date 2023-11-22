@@ -1,6 +1,6 @@
 ---
 title: "はじめての Rust 入門 Part4 ～構造体について学ぶまで～"
-date: 
+date: 2023-11-22
 author: linkohta
 tags: [Rust]
 description: "Rust を実際に触りながら勉強していきます。その４。"
