@@ -1,6 +1,6 @@
 ---
 title: "はじめての Rust 入門 Part5 ～列挙型について学ぶまで～"
-date: 
+date: 2023-11-24
 author: linkohta
 tags: [Rust]
 description: "Rust を実際に触りながら勉強していきます。その５。"
