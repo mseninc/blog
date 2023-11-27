@@ -1,6 +1,6 @@
 ---
 title: "はじめての Rust 入門 Part6 ～コレクションについて学ぶまで～"
-date: 
+date: 2023-11-27
 author: linkohta
 tags: [Rust]
 description: "Rust を実際に触りながら勉強していきます。その６。"
