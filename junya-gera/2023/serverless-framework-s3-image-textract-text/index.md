@@ -1,6 +1,6 @@
 ---
 title: "[Serverless Framework] S3 に保存した画像から Amazon Textract でテキストデータを取得する"
-date: 
+date: 2023-12-01
 author: junya-gera
 tags: [Serverless Framework, S3, Lambda, Amazon Textract]
 description: "S3 に保存した画像の文字を Textract でテキストデータとして取得する構成を Serverless Framework を使って構築する方法を紹介します。"
