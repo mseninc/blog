@@ -1,6 +1,6 @@
 ---
 title: "AWS Amplify Hosting で Next.js 14 の SSR (App Router) をホストする"
-date: 
+date: 2023-12-04
 author: kenzauros
 tags: ["Next.js", "AWS", "Amplify Hosting", "Node.js", "SSR"]
 description: "Amplify Hosting に Next.js 14 の SSR (Server-Side Rendering) アプリをデプロイする方法を紹介します。"
