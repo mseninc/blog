@@ -1,6 +1,6 @@
 ---
 title: "Actix Web + sqlx で REST API を作成する第一歩"
-date: 
+date: 2023-12-11
 author: linkohta
 tags: [Actix Web, Rust, Web]
 description: "Actix Web で REST API を作成する手順について解説します。"
