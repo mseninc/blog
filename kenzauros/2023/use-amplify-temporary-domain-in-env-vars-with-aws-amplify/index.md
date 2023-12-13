@@ -1,6 +1,6 @@
 ---
 title: "AWS Amplify で環境変数に amplifyapp.com ドメインを自動的に設定する"
-date: 
+date: 2023-12-13
 author: kenzauros
 tags: ["AWS", "Amplify"]
 description: "AWS Amplifyで複数のビルドやステージに対応するため、amplifyapp.com ドメインを環境変数として自動的に設定する方法を紹介します。"
