@@ -1,6 +1,6 @@
 ---
 title: "基本情報技術者試験の合格体験記"
-date: 
+date: 2023-12-18
 author: Ryotaro49
 tags: [〇〇奮闘記]
 description: ""
