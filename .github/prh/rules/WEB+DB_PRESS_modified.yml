@@ -2852,7 +2852,7 @@ rules:
   - expected: Vimスクリプト
     pattern:  /\bvim script\b/
   - expected: Visual Basic
-    pattern:  /\bVisualBasic\b|\bVB\b/
+    pattern:  /\bVisualBasic\b|\bVB\b(?!\.NET)/
   - expected: Visual Studio .NET
     pattern:  /Visual Studio\.NET/
   - expected: VMware
