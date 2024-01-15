@@ -1,6 +1,6 @@
 ---
 title: "2024年も今宮十日戎にいってきました"
-date: 
+date: 2024-01-15
 author: norikazum
 tags: [〇〇奮闘記]
 description: ""
