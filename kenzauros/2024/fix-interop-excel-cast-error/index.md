@@ -1,6 +1,6 @@
 ---
 title: "型 'Microsoft.Office.Interop.Excel.ApplicationClass' の COM オブジェクトをインターフェイス型 'Microsoft.Office.Interop.Excel._Application' にキャストできません を解消する"
-date: 
+date: 2024-01-19
 author: kenzauros
 tags: [VB.NET, .NET, Excel]
 description: "VB.NET で Excelを操作する際に発生した `InvalidCastException` エラーの解決策について説明します。この問題は複数の Office がインストールされているときに発生するらしく、不要なバージョンを削除したあと Office の修復を行うことで解消できました。"
