@@ -3,7 +3,7 @@ title: "2023 冬レク in 和歌山 (2日目) "
 date: 
 author: Ryotaro49
 tags: [レク]
-description: "1日目の続きです。"
+description: "1日目の続きです！"
 ---
 
 [1日目](https://mseeeen.msen.jp/2024-winter-recreation-in-wakayama-day1/)の続きです。
