@@ -70,7 +70,7 @@ description: "1日目の続きです。"
 
 甘くておいしいです。
 
-![ミックス(ミルク&イチゴ)](images/nachinotaki.jpg)
+![ミックス(ミルク&イチゴ)](images/ice.jpg)
 
 ### 串本海中公園
 
@@ -94,9 +94,11 @@ description: "1日目の続きです。"
 
 ![海中展望台へと続く橋](images/hashi.jpg)
 
-![海の中](images/uminonaka.jpg)
+たくさん見られました！
 
-記念撮影もしました！
+![海の中から見える魚](images/uminonaka.jpg)
+
+オリジナルの掛け声で記念撮影も！
 
 ![いちにのサンゴ礁！](images/kinensyasin.jpg)
 
@@ -109,4 +111,5 @@ description: "1日目の続きです。"
 ![見えているのは魚?](images/sakana.jpg)
 
 運転してくれた方々や企画してくださった方々、ありがとうございました。
+
 次回も、楽しいレクリエーションができるように頑張っていきたいです！
