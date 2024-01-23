@@ -1,5 +1,5 @@
 ---
-title: "冬レク in 和歌山 (1日目) "
+title: "2023 冬レク in 和歌山 (1日目) "
 date: 
 author: Ryotaro49
 tags: [レク]
@@ -80,4 +80,4 @@ description: "冬レクで和歌山に行ってきました！"
 
 おいしいご飯食べて温泉に2回も入れて充実した1日でした。
 
-2日目へと続く...。
+[2日目](https://mseeeen.msen.jp/2024-winter-recreation-in-wakayama-day2/)へと続く...。
