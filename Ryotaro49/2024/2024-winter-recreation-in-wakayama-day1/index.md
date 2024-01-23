@@ -78,10 +78,12 @@ description: "冬レクで和歌山に行ってきました！"
 
 言わずもがな最高です。
 
+![公式のイメージ写真です](images/onsen2.jpg)
+
 湯上りはラウンジでゆっくり。なんと梅酒も日本酒も飲み放題です。
 
 ![ラウンジで2次会](images/nizikai.jpg)
 
-おいしいご飯食べて温泉に2回も入れて充実した1日でした。
+おいしいご飯食べて温泉に2回も入れて充実した1日でした！
 
 [2日目](https://mseeeen.msen.jp/2024-winter-recreation-in-wakayama-day2/)へと続く...。
