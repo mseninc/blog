@@ -1,6 +1,6 @@
 ---
 title: "2023 冬レク in 和歌山 (2日目) "
-date: 
+date: 2024-01-24
 author: Ryotaro49
 tags: [レク]
 description: "1日目の続きです！"
