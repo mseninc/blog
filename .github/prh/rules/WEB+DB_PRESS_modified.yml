@@ -463,7 +463,7 @@ rules:
     expected: しくみ$1
   - pattern: 仕組み
     expected: しくみ
-  - pattern: しし
+  - pattern: (!?話)しし
     expected: し
   - pattern: しだい
     expected: 次第
@@ -662,8 +662,6 @@ rules:
     expected: なにがしか
   - pattern: /成り?済ま?([さしすせそ])|成り?すま([さしすせそ])/
     expected: なりすま$1
-  - pattern: なので、
-    expected: ですので、
   - pattern: 何となく
     expected: なんとなく
   - pattern: /に当た([っらりるれろ])/
@@ -1654,8 +1652,10 @@ rules:
     pattern:  /インスパイヤ/
   - expected: インスペクター
     pattern:  /インスペクタ(?!ー)/
+  - expected: インターフェース
+    pattern:  /インターフェイス|インターフェィス/
   - expected: インタフェース
-    pattern:  /インタフェイス|インターフェイス|インターフェース|インターフェィス/
+    pattern:  /インタフェイス|インタフェイス|インタフェィス/
   - expected: インタプリター
     pattern:  /インタープリタ(?!ー)|インタプリタ(?!ー)/
   - expected: インデックス
@@ -2056,8 +2056,6 @@ rules:
       - Unitテスト
       # 単体テストはケースバイケース
       - 単体テスト
-  - expected: ライブラリー
-    pattern:  /ライブラリ(?!ー)/
   - expected: ラスター
     pattern:  /ラスタ(?!ー)/
   - expected: ラッパー
