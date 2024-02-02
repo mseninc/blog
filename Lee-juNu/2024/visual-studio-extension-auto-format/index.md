@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio Extension - 自動整形"
+title: "Visual Studio Extension - Format Documet On Save（自動整形）の紹介"
 date: 2024/02/02
 author: Lee-juNu
 tags: [Visual Studio, Format, 整形, コード整理, 自動整形, 拡張機能, Extension ]
