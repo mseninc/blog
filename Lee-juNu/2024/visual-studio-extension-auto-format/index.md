@@ -9,12 +9,12 @@ description: "Format document on Save の紹介"
 ## 始めに
 こんにちはリリです。本日は Visual Studio の拡張機能
 皆さんはコードレビューで「コード整形」を指摘されたことがありましたか？私は数え切れないほどありました。
-たしかに Ctrl + K + D を押したはず何のにコミット後にはどこがずれていますもんね。
+たしかにドキュメントのフォーマット（Ctrl + K + D）を押したはずなのにコミット後に確認すればどこがずれていますもんね。
 私が整形を漏れなくする日より自動化させた方が早いと判断してセーブを押した時に整形をするように設定をしようとした瞬間気付きました。
 
 > もし拡張機能にあるのでは？
 
-私が不便であればすでに誰かが解決してくれているものです。本日紹介する拡張機能は「[Format Document On Save](https://marketplace.visualstudio.com/items?itemName=mynkow.FormatdocumentonSave)」セーブするときに Ctrl + K + D の整形を走らせてくれる拡張機能です。
+私が不便であればすでに誰かが解決してくれているいい世の中です。本日紹介する拡張機能は「[Format Document On Save](https://marketplace.visualstudio.com/items?itemName=mynkow.FormatdocumentonSave)」セーブするときに Ctrl + K + D の整形を走らせてくれる拡張機能です。
 ![Format Document On Save](images/AutoFormat01.png)
 
 
