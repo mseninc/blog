@@ -1,6 +1,6 @@
 ---
 title: "DMARC のレポートを表示するアプリを Next.js で作ってみた話"
-date: 
+date: 2024-02-07
 author: kenzauros
 tags: [Next.js, MUI, DMARC]
 description: "DMARC のレポートを表示するアプリ DMARCy を作りました！Next.js と Material UI を使用しています。無料で使えますので、お試しください。ファイルはサーバーにアップロードされませんので、ご安心ください😁"
