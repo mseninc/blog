@@ -216,7 +216,7 @@ $ sudo yum -y install nginx
 
 `/etc/nginx/conf.d/rails.conf` を作成して以下の内容を記述します。
 
-```conf:title=/etc/nginx/conf.d/rails.conf
+```nginx:title=/etc/nginx/conf.d/rails.conf
 # Unicorn と連携させるための設定
 upstream app_server {
   server unix:/var/www/AwsRails/tmp/sockets/unicorn.sock;
