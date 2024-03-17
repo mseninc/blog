@@ -54,7 +54,7 @@ WantedBy=multi-user.target
 
 デーモンをリロードし、作成したサービスを起動しておきます。
 
-```basah
+```bash
 [root@jinna-i ~]# systemctl daemon-reload
 
 [root@jinna-i ~]# systemctl enable msen --now
