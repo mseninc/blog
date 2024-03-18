@@ -1,6 +1,6 @@
 ---
 title: "フロントエンド生成型AI v0.dev レビュー"
-date: 
+date: 2024-03-18
 author: Lee-juNu
 tags: [AI, V0, Vercel]
 description: "フロントエンド生成型 AI v0.dev のベータになりましたので一度レビューしてみました。"
