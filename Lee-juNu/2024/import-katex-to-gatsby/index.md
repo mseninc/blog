@@ -1,5 +1,5 @@
 ---
-title: "Gatsby で KaTeX を適用しました"
+title: "Gatsby に KaTeX をインストールし適用してみました。"
 date: 
 author: Lee-juNu
 tags: [KaTex, 数式, マークダウン]
