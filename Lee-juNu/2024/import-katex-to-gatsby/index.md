@@ -113,10 +113,8 @@ $$
 ```
 
 $$
-\begin{cases} 
 x+y=5\\
 x+2y=7\\
-\end{cases}\\
 x=3\\
 y=2
 $$
