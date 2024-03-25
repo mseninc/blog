@@ -2,17 +2,17 @@
 title: "Gatsby に KaTeX をインストールし適用してみました。"
 date: 
 author: Lee-juNu
-tags: [KaTex, 数式, マークダウン]
-description: "Gatsby で gatsby-remark-katex をインストールし KaTex を書けるようにする方法。
+tags: [KaTeX, 数式, マークダウン]
+description: "Gatsby で gatsby-remark-KaTeX をインストールし KaTeX を書けるようにする方法。
 インストールから初めて簡単な出力まで書いてみました。"
 ---
 
 ## 挨拶
 
-こんにちは「リリ」です。ブログで何を書くかを悩んでいた時がありましたが昔趣味でいじっていた Shader に関して少し書いてみたいと思って Katex を適用しました。
+こんにちは「リリ」です。ブログで何を書くかを悩んでいた時がありましたが昔趣味でいじっていた Shader に関して少し書いてみたいと思って KaTeX を採用しました。
 今日は**KaTeX**、**適用方法**そして簡単に書き方を書きたいと思います。
 
-## なぜ KaTeX だったのか？
+## なぜ KaTeX なのか？
 1. イメージではなく SVG で出力されるためブラウザ、大きさに関係なくきれいに描かれる。
 2. SVG で描かれる分 LaTeX、MathJax より早くレンダリングされる。
 3. インストール後適用までが簡単だったため。
@@ -20,15 +20,15 @@ description: "Gatsby で gatsby-remark-katex をインストールし KaTex を�
 ## Gatsby に適用する方法
 
 
-[gatsby-remark-katex](https://www.gatsbyjs.com/plugins/gatsby-remark-katex/)
+[gatsby-remark-KaTeX](https://www.gatsbyjs.com/plugins/gatsby-remark-KaTeX/)
 
 1. KaTeX の Plugin をインストールします。
 
 ```shell:title=インストール
-npm install gatsby-transformer-remark gatsby-remark-katex katex
+npm install gatsby-transformer-remark gatsby-remark-KaTeX KaTeX
 ```
 
-2. gatsby-config.js を探して下記のコードを追加しましょう
+2. gatsby-config.js を探して下記のコードを追加しましょう。
 
 ```js:title=gatsby-config.js
 plugins: [
@@ -37,7 +37,7 @@ plugins: [
     options: {
       plugins: [
         {
-          resolve: `gatsby-remark-katex`,
+          resolve: `gatsby-remark-KaTeX`,
           options: {
             // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
             strict: `ignore`
@@ -58,7 +58,7 @@ plugins: [
     options: {
       plugins: [
         {
-          resolve: `gatsby-remark-katex`,
+          resolve: `gatsby-remark-KaTeX`,
           options: {
             // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
             strict: `ignore`,
@@ -84,7 +84,7 @@ plugins: [
 
 無事に適用が終わったのか確認するためロゴを出力してみます。
 
-```:title=KaTex&nbsp;出力
+```:title=KaTeX&nbsp;出力
 ${\KaTeX}$
 ```
 ${\KaTeX}$
