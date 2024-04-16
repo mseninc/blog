@@ -54,9 +54,9 @@ ENGINE = mroonga DEFAULT CHARSET=utf8mb4
 
 素直に書くと以下のようなクエリーになるでしょう。
 
-```sql:title="title_ja"に「レーザー」または"title_en"に「laser」を含むレコードを検索
+```sql:title="title_ja"または"title_en"に「laser」を含むレコードを検索
 SELECT * FROM blog.posts
-WHERE MATCH (title_ja) AGAINST ('レーザー' IN BOOLEAN MODE)
+WHERE MATCH (title_ja) AGAINST ('laser' IN BOOLEAN MODE)
   OR MATCH (title_en) AGAINST ('laser' IN BOOLEAN MODE)
 ORDER BY post_id
 LIMIT 10;
@@ -123,9 +123,9 @@ WHERE VARIABLE_NAME IN ('mroonga_boolean_mode_syntax_flags');
 
 下記のようになります。なお Groonga のクエリーを用いる場合、 `IN BOOLEAN MODE` は必須です（付けない場合は通常の自然言語検索になりました）。
 
-```sql:title="title_ja"に「レーザー」または"title_en"に「laser」を含むレコードを検索
+```sql:title="title_ja"または"title_en"に「laser」を含むレコードを検索
 SELECT * FROM blog.posts
-WHERE MATCH (title_ja) AGAINST ('title_ja:@レーザー title_en:@laser' IN BOOLEAN MODE)
+WHERE MATCH (title_ja) AGAINST ('title_ja:@laser title_en:@laser' IN BOOLEAN MODE)
 ORDER BY post_id
 LIMIT 10;
 ```
@@ -155,13 +155,13 @@ MySQL/MariaDB は Groonga のクエリーを解釈していないので、1カ�
 
 ```sql:title=3つ以上のカラムを対象に検索
 SELECT * FROM blog.posts
-WHERE MATCH (title_ja) AGAINST ('レーザー description_ja:@レーザー title_en:@laser description_en:@laser' IN BOOLEAN MODE)
+WHERE MATCH (title_ja) AGAINST ('laser description_ja:@laser title_en:@laser description_en:@laser' IN BOOLEAN MODE)
 ORDER BY post_id
 LIMIT 10;
 ```
 
-ちなみに `MATCH` 句に書いたカラム名は Groonga クエリー部分では上記のように省略できます。
-省略せずに `title_ja:@レーザー` のように書いても問題ありません。
+ちなみに `MATCH` 句に書いたカラム名（ここでは `title_ja`）は Groonga クエリー部分では上記のように省略できます。
+省略せずに `title_ja:@laser` のように書いても問題ありません。
 
 クエリーを機械的に生成する場合は、省略せずに明示的に書いたほうがいいでしょう。
 
@@ -169,22 +169,22 @@ LIMIT 10;
 
 複数の単語を含むクエリーも可能ですが、この場合は条件を括弧 `()` で囲む必要があります。
 
-```sql:title=「レーザー(laser)」または「プラズマ(plasma)」を含むレコードを検索
+```sql:title=「laser」または「plasma」を含むレコードを検索
 SELECT * FROM blog.posts
-WHERE MATCH (title_ja) AGAINST ('title_ja:@(レーザ－ プラズマ) title_en:@(laser plasma)' IN BOOLEAN MODE)
+WHERE MATCH (title_ja) AGAINST ('title_ja:@(laser plasma) title_en:@(laser plasma)' IN BOOLEAN MODE)
 ORDER BY post_id
 LIMIT 10;
 ```
 
-条件を括弧でくくらず `'title_ja:@レーザ－ 核融合 title_en:@laser fusion'` のようにした場合、スペースで区切られた「核融合」と「fusion」が `MATCH` 句の `title_ja` の条件として解釈されるようです。
+条件を括弧でくくらず `'title_ja:@laser plasma title_en:@laser plasma'` のようにした場合、スペースで区切られた「plasma」が `MATCH` 句の `title_ja` の条件として解釈されるようです。
 
 #### BOOLEAN MODE の演算子を含むクエリー
 
 `+`, `-` などのブーリアン演算子を含むクエリーも可能ですが、先頭に記号がくるとエラーになるため、この場合も条件を括弧 `()` で囲むのが無難です。
 
-```sql:title=「レーザ－(laser)」と「核融合(fusion)」を"必ず"含むレコードを検索
+```sql:title=「laser」と「plasma」を"必ず"含むレコードを検索
 SELECT * FROM blog.posts
-WHERE MATCH (title_ja) AGAINST ('title_ja:@(+レーザ－ +核融合) title_en:@(+laser +fusion)' IN BOOLEAN MODE)
+WHERE MATCH (title_ja) AGAINST ('title_ja:@(+laser +plasma) title_en:@(+laser +plasma)' IN BOOLEAN MODE)
 ORDER BY post_id
 LIMIT 10;
 ```
