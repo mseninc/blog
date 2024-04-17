@@ -58,7 +58,7 @@ v5 以前は Next.js のアプリケーションを本番環境にデプロイ�
 
 `.env` には上記の 4 行を記載しておきます。
 
-以下のように `auth.ts` を作成し、 `handlers`、 `auth`、 `signIn`、 `signOut` をエクスポートします。
+以下のように `auth.ts` を作成し、 `handlers`・ `auth`・ `signIn`・ `signOut` をエクスポートします。
 
 ```TS:title=auth.ts
 import NextAuth, { NextAuthConfig } from "next-auth";
