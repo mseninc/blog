@@ -45,16 +45,15 @@ Auth.js v5 では、 `.env` に `AUTH_URL` または `NEXTAUTH_URL` が記載さ
 
 v5 以前は Next.js のアプリケーションを本番環境にデプロイする際、 `AUTH_URL` または `NEXTAUTH_URL` にサイトの正規の URL を設定する必要がありました。
 
-しかし、 v5 では[公式ドキュメント](https://authjs.dev/getting-started/migrating-to-v5) に記載されているように不要となりました。
+しかし、 v5 では[公式ドキュメント](https://authjs.dev/getting-started/migrating-to-v5)に記載されているように不要となりました。
 
 > The NEXTAUTH_URL/AUTH_URL is not strictly necessary anymore in most environments. We will auto-detect the host based on the request headers.
+
 訳) NEXTAUTH_URL/AUTH_URL は、ほとんどの環境では厳密には必要なくなりました。リクエストヘッダーに基づいてホストを自動検出します。
 
 ## 修正前の状態
 
-では実際のソースコードと画面を紹介します。
-
-まずは `AUTH_URL` を記載した状態を見てみます。
+では実際のソースコードと画面を紹介します。まずは `AUTH_URL` を記載した状態を見てみます。
 
 `.env` には上記の 4 行を記載しておきます。
 
@@ -183,7 +182,7 @@ AUTH_GITHUB_SECRET=
 
 Auth.js (NextAuth.js) を触ること自体初めてだったこと、情報が少ない最新バージョンを採用したことで、原因を見つけるのに苦労しました。
 
-ただそのおかげで Auth.js の理解が深まったので良かったと思うことにしました。
+ただそのおかげで Auth.js の理解が深まったので良かったと思うことにします。
 
 ## 参考
 - [Next.js 14 + NextAuth.js 5で、ユーザ名/IDを表示したい](http://blog.livedoor.jp/ragi_d/archives/65910068.html)
