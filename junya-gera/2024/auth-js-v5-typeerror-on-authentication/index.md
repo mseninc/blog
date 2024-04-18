@@ -1,6 +1,6 @@
 ---
 title: "[Next.js] Auth.js v5 で認証時に TypeError が発生する"
-date: 
+date:
 author: junya-gera
 tags: [Auth.js, NextAuth.js, Next.js]
 description: "Auth.js (NextAuth.js) の v5 で実装した認証が TypeError で失敗する場合の解決法を紹介します。"
@@ -21,6 +21,7 @@ TypeError: next_dist_server_web_exports_next_request__WEBPACK_IMPORTED_MODULE_0_
 今回はこのエラーが発生する原因と解決法を紹介します。
 
 ## 前提
+
 - Next.js 14.1.0
 - Auth.js (next-auth) ^5.0.0-beta.16
 
@@ -37,7 +38,7 @@ AUTH_GITHUB_SECRET=
 
 Auth.js v5 では、 `.env` に `AUTH_URL` または `NEXTAUTH_URL` が記載されていた場合、上述した TypeError が発生するようです。
 
-この問題について GitHub に issue が立てられており、 Next.js Canary では修正がされているようなので、いずれ安定版でも修正されるはずです。
+この問題について GitHub に issue が立てられており、 Next.js Canary では修正されているようなので、いずれ安定版でも修正されるはずです。
 
 - [NextAuth v5 TypeError: next_dist_server_web_exports_next_request__WEBPACK_IMPORTED_MODULE_0__ is not a constructor](https://github.com/nextauthjs/next-auth/issues/9922)
 
@@ -59,19 +60,18 @@ v5 以前は Next.js のアプリケーションを本番環境にデプロイ�
 
 以下のように `auth.ts` を作成し、 `handlers`・ `auth`・ `signIn`・ `signOut` をエクスポートします。
 
-```TS:title=auth.ts
-import NextAuth, { NextAuthConfig } from "next-auth";
-import Github from "next-auth/providers/github";
-
+```ts:title=auth.ts
 export const config: NextAuthConfig = {
-    providers: [Github({
-        clientId: process.env.AUTH_GITHUB_ID,
-        clientSecret: process.env.AUTH_GITHUB_SECRET
-    })],
-    basePath: "/api/auth",
-}
+  providers: [
+    Github({
+      clientId: process.env.AUTH_GITHUB_ID,
+      clientSecret: process.env.AUTH_GITHUB_SECRET,
+    }),
+  ],
+  basePath: "/api/auth",
+};
 
-export const {handlers, auth, signIn, signOut} = NextAuth(config);
+export const { handlers, auth, signIn, signOut } = NextAuth(config);
 ```
 
 `api/auth/[...nextauth]/route.ts` を作成し、 `auth.ts` からインポートした `handlers` の中にある GET メソッドを使って API を実装します。
@@ -189,4 +189,5 @@ Auth.js (NextAuth.js) を触ること自体初めてだったこと、情報が�
 ただそのおかげで Auth.js の理解が深まったので良かったと思うことにします。
 
 ## 参考
-- [Next.js 14 + NextAuth.js 5で、ユーザ名/IDを表示したい](http://blog.livedoor.jp/ragi_d/archives/65910068.html)
+
+- [Next.js 14 + NextAuth.js 5 で、ユーザ名/ID を表示したい](http://blog.livedoor.jp/ragi_d/archives/65910068.html)
