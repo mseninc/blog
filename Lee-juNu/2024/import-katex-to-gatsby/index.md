@@ -1,6 +1,6 @@
 ---
 title: "Gatsby に KaTeX をインストールし適用してみました。"
-date: 
+date: 2024-04-19
 author: Lee-juNu
 tags: [KaTeX, 数式, マークダウン]
 description: "Gatsby で gatsby-remark-KaTeX をインストールし KaTeX を書けるようにする方法。
