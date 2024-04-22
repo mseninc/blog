@@ -1,6 +1,6 @@
 ---
 title: "[MySQL/MariaDB] Mroonga で複数カラムに対してインデックスを使った全文検索する"
-date: 
+date: 2024-04-22
 author: kenzauros
 tags: [MySQL, MariaDB, Mroonga]
 description: "今回は全文検索エンジン Mroonga がインストールされた MySQL/MariaDB で、複数のカラムに対してインデックスを使った全文検索する方法について紹介します。"
