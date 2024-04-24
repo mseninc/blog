@@ -1,6 +1,6 @@
 ---
 title: "[Next.js] Auth.js v5 で認証時に TypeError が発生する"
-date:
+date: 2024-04-24
 author: junya-gera
 tags: [Auth.js, NextAuth.js, Next.js]
 description: "Auth.js (NextAuth.js) の v5 で実装した認証が TypeError で失敗する場合の解決法を紹介します。"
