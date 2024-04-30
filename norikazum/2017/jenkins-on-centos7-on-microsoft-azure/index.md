@@ -119,27 +119,28 @@ Nginxをインストールし、リバースプロキシとして動作させ、
 nginxの証明書は証明書＋中間証明書の形式となります。
 
 1. nginxのインストールと有効化
- ```
+```
  rpm -ivh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
 yum -y --enablerepo=nginx install nginx
 systemctl start nginx
 systemctl enable nginx
- ```
+```
 
 1. 証明書ファイルのパーミッション
- ```
+```
 chmod 600 /etc/nginx/example.cert
 chmod 400 /etc/nginx/example.key
- ```
+```
 
 1. リバースプロキシ設定
 標準の設定ファイルをリネームし、リバースプロキシ用のコンフィグを作成します。
- ```
+```
 mv /etc/nginx/conf.d/default.conf{,.org}
 vi /etc/nginx/conf.d/ssl.conf
- ```
+```
 ssl.confの例は以下のとおりです。
 
+```
  > server {
     listen 80;
     server_name jenkins.example.com;
@@ -176,6 +177,7 @@ server {
                 proxy_pass http://127.0.0.1:8080;
         }
 }
+```
 
 1. 設定の反映
 `systemctl restart nginx`
@@ -195,10 +197,10 @@ server {
 `/var/log/nginx/jenkins_error.log`のエラーログを確認すると、`127.0.0.1:8080 failed (13: Permission denied) while connecting to upstream`というエラーが出ていました。
 事例を見ると、どうもSELINUXが有効の際に出るようで、設定を無効にして再起動します。
 今回はこの対処としましたが、SELINUXを無効にせず対処できる方法があれば是非教えてください。
- ```
+```
 sed -i -e 's/SELINUX\=enforcing/SELINUX\=disabled/g' /etc/selinux/config
 reboot
- ```
+```
 
 無事、接続することができました。
 
