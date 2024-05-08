@@ -1,0 +1,58 @@
+name: Release Facebook
+
+on:
+  push:
+    branches:
+      - release
+
+jobs:
+  release_facebook:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Get data from RSS feed
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const https = require('https');
+            
+            const rssUrl = 'https://example.com/rss.xml';
+            const outputFile = 'rss.xml';
+            
+            https.get(rssUrl, (res) => {
+              let data = '';
+            
+              res.on('data', (chunk) => {
+                data += chunk;
+              });
+            
+              res.on('end', () => {
+                fs.writeFileSync(outputFile, data);
+
+                // POST PHOTO TO FACEBOOK
+                const { exec } = require('child_process');
+
+                exec('
+                curl -i -X POST \
+                  -d "url=https://www.facebook.com/images/fb_icon_325x325.png" \
+                  -d "published=false" \
+                  -d "access_token=<access_token>" \
+                  "https://graph.facebook.com/me/photos"                
+                , (error, stdout, stderr) => {
+                  if (error) {
+                    console.error(`Error: ${error}`);
+                    return;
+                  }
+                  if (stderr) {
+                    console.error(`stderr: ${stderr}`);
+                    return;
+                  }
+                  console.log(`stdout: ${stdout}`);
+                });
+
+              });
+            });
