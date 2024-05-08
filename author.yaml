@@ -1,45 +1,60 @@
 - github: norikazum
   name: 社長
   bio: 専門分野はサーバ・ネットワークです。 2023年で9期目を迎えました。 昨年、目標に掲げていた脂質値は高止まりなので今年こそは。。節目の10期目に向けて頑張ります！
+  active: true
 - github: kiyoshin
   name: きよしん
   bio: バックエンドエンジニアですが、フロントエンドもたまにやってみたります。 ネットゲーム大好き人間でしたが、最近はごぶさたです。
+  active: true
 - github: kenzauros
   name: kenzauros
   bio: CTO です。好きなのは .NET (C#), React, Vue, Node(JS) です。もともとは電子回路設計や実験装置開発をやっていました。趣味は旅行ですが、最近はいけなくてちょっと哀しいです。海外ドラマが好きでいろいろ見ています。
+  active: true
 - github: jinna-i
   name: じんない
   bio: インフラ担当してます。関西の某お笑い芸人に似ていると言われます。でっかいものと、美しいものが好きです。よく聞かれますが、筋トレはしていません。
+  active: true
 - github: kosshii
   name: こっしー
   bio: 将来の夢は、「これがないと困る」そう言ってくれるものを作ることです。
+  active: false
 - github: hiroki-Fukumoto
   name: ふっくん
   bio: ふっくんです。そろそろ夏ですね。
+  active: false
 - github: k-so16
   name: k-so16
   bio: 入社 4 年目をむかえた MSEN のプログラマーです。最近は基礎技術の磨き直しに力を入れています。自炊もそこそこ頑張っています(笑)
+  active: false
 - github: junya-gera
   name: じゅんじゅん
   bio: 2年目プログラマーです。今は C# と AWS に興味があります。Vtuber に沼っています。
+  active: true
 - github: kohei-iwamoto-wa
   name: IwamotoKohei
   bio: 
+  active: false
 - github: linkohta
   name: link
   bio: ゲームを作るのとゲームを遊ぶのが趣味です。 得意言語は Ruby 、 Java 、 C# などのオブジェクト指向系です。 最近は Rust などにも手を出し始めています。世界史にもそれなりに深い知識を持っています（自称）。
+  active: false
 - github: hiratatsu04
   name: ひらたつ
   bio: ここ数年、運動や食生活の改善に力を入れていますが、継続することの大切さをひしひしと感じています。「小さなことを積み重ねることが、とんでもないところへ行くただ一つの道」 の通りだと感じます。ブログもコツコツ更新していきます。
+  active: false
 - github: r-Funakoshi
   name: LEAF
   bio: 新人エンジニアです。同調圧力に負けて何らかの運動を始めようと考えています。ゲーム、音楽、お菓子作りと多趣味なインドア派です。
+  active: false
 - github: Ryotaro49
   name: Makky
   bio: 新人エンジニアです。朝にプロテインを飲むことと帰宅後の勉強を習慣にしようと頑張ってます。
+  active: true
 - github: Lee-juNu
   name: リリ
   bio: 韓国から来た新人エンジニアです。プログラムは広く浅く学んできたので早めに基礎をしっかり整えて立派なエンジニアになりたいです。趣味はVRゲームに関連する3DモデリングやUnityを通じたプログラミングです。
+  active: true
 - github: moxi1021
   name: もいもい
   bio: 社会人15年生、入社1年目のエンジニアです。今まではC、C++が主のミドルウェアを開発していました。GUIはC#が得意です。最近は何か自分に刺さるゲームが作りたい！と思いつつ日々を過ごしています。
+  active: true

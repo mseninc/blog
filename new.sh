@@ -32,7 +32,7 @@ if [[ -n $FIND_RESULT ]]; then
 fi
 
 # select author
-authors=($(cat author.yaml | grep '^- github: ' | sed 's/^- github: //'))
+authors=($(awk -F': ' '/github:/ {github=$2} /active: true/ {print github}' author.yaml))
 
 echo $BOUNDARY
 echo "著者番号を指定してください"
