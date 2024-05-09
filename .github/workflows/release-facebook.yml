@@ -71,5 +71,4 @@ jobs:
             curl -i -X POST \
               -d "url=${{ steps.latest-data.outputs.result }}" \
               -d "published=true" \
-              -d "access_token=${{ vars.FACEBOOK_APP_ID }}|${{ secrets.FACEBOOK_APP_SECRET }}" \
-              "https://graph.facebook.com/me/photos"
+              "https://graph.facebook.com/me/photos&access_token=${{ vars.FACEBOOK_APP_ID }}|${{ secrets.FACEBOOK_APP_SECRET }}"
