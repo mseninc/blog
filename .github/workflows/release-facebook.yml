@@ -29,9 +29,9 @@ jobs:
             const rssUrl = '${{ env.RSS_CONVERTER }}${{ env.BLOG_URL }}';
             
             fetch(rssUrl)
-            .then(response => {
+            .then((response) => {
               const data = response.json()
-              fs.writeFileSync(${{ env.RSS_FILENAME }}, JSON.stringify(data.items));
+              fs.writeFileSync('${{ env.RSS_FILENAME }}', JSON.stringify(data.items));
             })
             ;
         
@@ -49,7 +49,7 @@ jobs:
         with:
           script: |
             const fs = require('fs');
-            const data = fs.readfilesync(${{ env.RSS_FILENAME }});
+            const data = fs.readfilesync('${{ env.RSS_FILENAME }}');
             const items = JSON.parse(data)
 
             let date
