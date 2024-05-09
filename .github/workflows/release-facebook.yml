@@ -37,7 +37,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: .cache
-          key: blog-post-${{ hashFiles(env.RSS_FILE_PATH) }}          
+          key: blog-post-${{ hashFiles(env.RSS_FILENAME) }}          
       
       - if: ${{ steps.blog-posts-cache.outputs.cache-hit != 'true' }}
         name: Get latest posts
@@ -46,7 +46,7 @@ jobs:
         with:
           script: |
             const fs = require('fs');
-            const data = fs.readfilesync('${{ env.RSS_FILENAME }}');
+            const data = fs.readFileSync('${{ env.RSS_FILENAME }}');
             const items = JSON.parse(data)
 
             let date
@@ -65,14 +65,11 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const fs = require('fs');
-            const data = fs.readfilesync(outputFile, data);
-
             const { exec } = require('child_process');
             exec('
             curl -i -X POST \
               -d "url=${{ steps.latest-data.outputs.result }}" \
-              -d "published=false" \
+              -d "published=true" \
               -d "access_token=${{ secrets.FACEBOOK_APP_ID }}|${{ secrets.FACEBOOK_APP_SECRET }}" \
               "https://graph.facebook.com/me/photos"                
             , (error, stdout, stderr) => {
