@@ -66,9 +66,18 @@ jobs:
             return photoUrl
           result-encoding: string
 
+      - name: Get Facebook access token
+        id: token
+        run: |
+          echo 'token=$(curl -X GET "https://graph.facebook.com/oauth/access_token
+            ?client_id=${{ vars.FACEBOOK_APP_ID }}
+            &client_secret=${{ secrets.FACEBOOK_APP_SECRET }}
+            &grant_type=client_credentials")' >> $GITHUB_OUTPUT
+
       - name: Post data to Facebook
         run: |
             curl -i -X POST \
               -d "url=${{ steps.latest-data.outputs.result }}" \
               -d "published=true" \
-              "https://graph.facebook.com/me/photos&access_token=${{ vars.FACEBOOK_APP_ID }}|${{ secrets.FACEBOOK_APP_SECRET }}"
+              -d "access_token=${{ steps.token.outputs.token }}" \
+              "https://graph.facebook.com/me/photos"
