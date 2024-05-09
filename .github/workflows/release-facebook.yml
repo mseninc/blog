@@ -62,7 +62,10 @@ jobs:
               photoUrl = item.enclosure.link;
             }
 
+            console.log(photoUrl)
+
             return photoUrl
+          result-encoding: string
 
       - name: Post data to Facebook
         run: |
