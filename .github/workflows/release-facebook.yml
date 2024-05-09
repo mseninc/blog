@@ -69,10 +69,7 @@ jobs:
       - name: Get Facebook access token
         id: token
         run: |
-          token=$(curl -X GET "https://graph.facebook.com/oauth/access_token
-            ?client_id=${{ vars.FACEBOOK_APP_ID }}
-            &client_secret=${{ secrets.FACEBOOK_APP_SECRET }}
-            &grant_type=client_credentials")
+          token=$(curl -X GET "https://graph.facebook.com/oauth/access_token?client_id=${{ vars.FACEBOOK_APP_ID }}&client_secret=${{ secrets.FACEBOOK_APP_SECRET }}&grant_type=client_credentials")
           echo "token=${token}" >> $GITHUB_OUTPUT
 
       - name: Post data to Facebook
