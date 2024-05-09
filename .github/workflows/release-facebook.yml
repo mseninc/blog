@@ -14,6 +14,7 @@ jobs:
     env:
       BLOG_URL: https://mseeeen.msen.jp/rss.xml
       RSS_FILENAME: rss.xml 
+      RSS_CONVERTER: https://api.rss2json.com/v1/api.json?rss_url=
 
     steps:
       - name: Checkout repository
@@ -25,15 +26,12 @@ jobs:
           script: |
             const fs = require('fs');
             
-            const rssUrl = '${{ env.BLOG_URL }}';
-            const outputFile = '${{ env.RSS_FILENAME }}';
+            const rssUrl = '${{ env.RSS_CONVERTER }}${{ env.BLOG_URL }}';
             
             fetch(rssUrl)
-            .then(response => response.text())
-            .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
-            .then(data => {
-              const items = data.querySelectorAll("item");
-              fs.writeFileSync(outputFile, JSON.stringify(items));
+            .then(response => {
+              const data = response.json()
+              fs.writeFileSync(${{ env.RSS_FILENAME }}, JSON.stringify(data.items));
             })
             ;
         
@@ -51,11 +49,12 @@ jobs:
         with:
           script: |
             const fs = require('fs');
-            const str = fs.readfilesync(outputFile, data);
+            const data = fs.readfilesync(${{ env.RSS_FILENAME }});
+            const items = JSON.parse(data)
 
             let date
             let photoUrl
-            for (const item of JSON.parse(str)) {
+            for (const item of items) {
               if (!date || new Date(date).getTime() < new Date(item.pubDate).getTime()) {
                 break;
               }
