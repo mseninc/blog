@@ -56,10 +56,9 @@ jobs:
             let photoUrl
             for (const item of items) {
               if (!date || new Date(date).getTime() < new Date(item.pubDate).getTime()) {
-                break;
+                date = item.pubDate;
+                photoUrl = item.enclosure.link;
               }
-              date = item.pubDate;
-              photoUrl = item.enclosure.link;
             }
 
             console.log(photoUrl)
