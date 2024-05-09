@@ -6,7 +6,7 @@ tags: [確定拠出年金]
 description: "iDeCo をやめて企業型 DC に移換する手順を紹介します。"
 ---
 
-会社を辞めて一度 企業型 DC の資産を iDeCo に移換した方など、もともと iDeco に資産を持っていらっしゃる方などいるかと思います。
+会社を辞めて一度 企業型 DC の資産を iDeCo に移換した方など、もともと iDeCo に資産を持っていらっしゃる方などいるかと思います。
 
 当記事では iDeCo をやめて 企業型 DC に移換する手順を紹介します。
 
@@ -15,7 +15,7 @@ description: "iDeCo をやめて企業型 DC に移換する手順を紹介し�
 ### 1. iDeCo の資格喪失手続きを行う
 
 手続きの方法は iDeCo の運営管理機関によって異なるので、問い合わせが必要です。
-例としては、著者の場合 SBI の iDeCo を利用していたためこのフォームから加入者資格喪失届を申請します。
+例としては、著者の場合 SBI 証券で iDeCo を利用していたため、以下のフォームから加入者資格喪失届を申請しました。
 https://site0.sbisec.co.jp/marble/dc/application/changeRequest/input.do?Param6=522
 
 喪失理由については「04:運用指図者」になるためでいいようです。
@@ -24,7 +24,7 @@ https://site0.sbisec.co.jp/marble/dc/application/changeRequest/input.do?Param6=5
 
 ![加入者と運用指図者の違い](images/kanyusya_unyousasizusya.png)
 
-iDeco には掛け金を搬出しないので「運用指図者」となります。
+iDeCo には掛け金を搬出しないので「運用指図者」となります。
 
 ### 2.個人別管理資産移換依頼書（DC）を提出する
 
@@ -35,14 +35,14 @@ iDeco には掛け金を搬出しないので「運用指図者」となりま�
 
 ## まとめ
 
-**iDeco の資格喪失をし移換依頼をしましょう。**
+**iDeCo の資格喪失手続きと資産移換依頼をしましょう。**
 
-著者の場合、移換依頼のみで十分だと思っていたため意図せず iDeco と 企業型 DC の同時加入をしておりました。
+著者の場合、移換依頼のみで十分だと思っていたため意図せず iDeCo と 企業型 DC の同時加入をしておりました。
 
 調べたところ、2022 年 10 月から同時加入が可能になっていたため、資格喪失をしないとそのような状態になるようです。
 
-[iDeco 公式サイトより](https://www.ideco-koushiki.jp/library/2022kaisei/)
-![2022年の制度改正](images/DC_iDeco.png)
+[iDeCo 公式サイトより](https://www.ideco-koushiki.jp/library/2022kaisei/)
+![2022年の制度改正](images/DC_iDeCo.png)
 
 この記事が、少しでもみなさんのお役に立てれば幸いです。
 
