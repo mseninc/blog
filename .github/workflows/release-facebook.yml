@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - release
+      - 317-add-workflow-for-facebook-post
 
 jobs:
   release_facebook:
