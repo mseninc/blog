@@ -65,26 +65,9 @@ jobs:
             return photoUrl
 
       - name: Post data to Facebook
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const { exec } = require('child_process');
-            exec('
+        run: |
             curl -i -X POST \
               -d "url=${{ steps.latest-data.outputs.result }}" \
               -d "published=true" \
-              -d "access_token=${{ secrets.FACEBOOK_APP_ID }}|${{ secrets.FACEBOOK_APP_SECRET }}" \
-              "https://graph.facebook.com/me/photos"                
-            , (error, stdout, stderr) => {
-              if (error) {
-                console.error(`Error: ${error}`);
-                return;
-              }
-              if (stderr) {
-                console.error(`stderr: ${stderr}`);
-                return;
-              }
-              console.log(`stdout: ${stdout}`);
-            });
-
-  
+              -d "access_token=${{ vars.FACEBOOK_APP_ID }}|${{ secrets.FACEBOOK_APP_SECRET }}" \
+              "https://graph.facebook.com/me/photos"
