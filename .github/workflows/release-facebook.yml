@@ -28,12 +28,9 @@ jobs:
             
             const rssUrl = '${{ env.RSS_CONVERTER }}${{ env.BLOG_URL }}';
             
-            fetch(rssUrl)
-            .then((response) => {
-              const data = response.json()
-              fs.writeFileSync('${{ env.RSS_FILENAME }}', JSON.stringify(data.items));
-            })
-            ;
+            await fetch(rssUrl);
+            const data = await response.json();
+            fs.writeFileSync('${{ env.RSS_FILENAME }}', JSON.stringify(data.items));
         
       - name: Caching Hash
         id: blog-posts-cache
