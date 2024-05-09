@@ -11,6 +11,9 @@ jobs:
   release_facebook:
     runs-on: ubuntu-latest
 
+    environment:
+      name: Release
+
     env:
       BLOG_URL: https://mseeeen.msen.jp/rss.xml
       RSS_FILENAME: rss.xml 
@@ -56,7 +59,7 @@ jobs:
                 break;
               }
               date = item.pubDate;
-              photoUrl = item['media:content'][url];
+              photoUrl = item.enclosure.link;
             }
 
             return photoUrl
