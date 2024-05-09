@@ -28,7 +28,7 @@ jobs:
             
             const rssUrl = '${{ env.RSS_CONVERTER }}${{ env.BLOG_URL }}';
             
-            await fetch(rssUrl);
+            const response = await fetch(rssUrl);
             const data = await response.json();
             fs.writeFileSync('${{ env.RSS_FILENAME }}', JSON.stringify(data.items));
         
