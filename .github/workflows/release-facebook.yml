@@ -46,7 +46,9 @@ jobs:
         id: blog-posts-cache
         uses: actions/cache@v4
         with:
-          path: .cache
+          path: |
+            public
+            .cache
           key: blog-post-${{ hashFiles(env.RSS_FILENAME) }}          
       
       - if: ${{ steps.blog-posts-cache.outputs.cache-hit != 'true' }}
