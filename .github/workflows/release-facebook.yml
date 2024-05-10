@@ -80,7 +80,8 @@ jobs:
           echo "token=${token}" >> $GITHUB_OUTPUT
           echo $json
           echo $token
-          id_json=$(curl -X GET "https://graph.facebook.com/me?fields=id&access_token=${token}")
+          id_json=$(curl -X GET "https://graph.facebook.com/me?fields=id"\
+          -H 'Authorization: Bearer ${{ steps.token.outputs.token }}')
           echo "userid=${id_json}" >> $GITHUB_OUTPUT
 
 
