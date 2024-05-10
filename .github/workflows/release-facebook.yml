@@ -69,8 +69,6 @@ jobs:
               }
             }
 
-            console.log(photoUrl)
-
             return photoUrl
           result-encoding: string
 
