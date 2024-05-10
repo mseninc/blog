@@ -23,7 +23,7 @@ jobs:
       BLOG_URL: https://mseeeen.msen.jp/rss.xml
       RSS_FILENAME: rss.xml
       RSS_CONVERTER: https://api.rss2json.com/v1/api.json?rss_url=
-      URL_PARAM: ${{ github.event.inputs.url_param || 'me' }}
+      URL_PARAM: ${{ github.event.inputs.url_param || 'msenjp' }}
 
     steps:
       - name: Checkout repository
