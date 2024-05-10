@@ -78,11 +78,14 @@ jobs:
           json=$(curl -X GET "https://graph.facebook.com/oauth/access_token?client_id=${{ vars.FACEBOOK_APP_ID }}&client_secret=${{ secrets.FACEBOOK_APP_SECRET }}&grant_type=client_credentials")
           token=$(echo $json | grep -o '"access_token":"[^"]*' | grep -o '[^"]*$')
           echo "token=${token}" >> $GITHUB_OUTPUT
+          id_json=$(curl -X GET "https://graph.facebook.com/me?fields=id&client_secret=${{ secrets.FACEBOOK_APP_SECRET }}&grant_type=client_credentials")
+          echo "userid=${id_json}" >> $GITHUB_OUTPUT
+
 
       - name: Post data to Facebook
         run: |
             curl -i -X POST \
               -d "url=${{ steps.latest-data.outputs.result }}" \
               -d "published=true" \
-              "https://graph.facebook.com/v19.0/${{ env.URL_PARAM }}/photos" \
+              "https://graph.facebook.com/v19.0/${{ steps.token.outputs.userid }}/photos" \
               -H 'Authorization: Bearer ${{ steps.token.outputs.token }}' \
