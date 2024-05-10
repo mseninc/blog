@@ -3,10 +3,10 @@ name: Release Facebook
 on:
   workflow_dispatch:
     inputs:
-      url_param:
-        description: 'The param part of /${param}/photos URL'
+      page_id:
+        description: 'The pageId part of /${pageId}/photos URL'
         required: true
-        default: 'me'
+        default: 'msenjp'
   push:
     branches:
       - release
@@ -23,7 +23,7 @@ jobs:
       BLOG_URL: https://mseeeen.msen.jp/rss.xml
       RSS_FILENAME: rss.xml
       RSS_CONVERTER: https://api.rss2json.com/v1/api.json?rss_url=
-      URL_PARAM: ${{ github.event.inputs.url_param || 'msenjp' }}
+      PAGE_ID: ${{ github.event.inputs.page_id || 'msenjp' }}
       PAGE: https://www.facebook.com/msenjp/
 
     steps:
@@ -78,15 +78,9 @@ jobs:
       - name: Get Facebook access token
         id: token
         run: |
-          client=$(curl -X GET "https://www.facebook.com/dialog/oauth?client_id=${{ vars.FACEBOOK_APP_ID }}&redirect_uri=${{ env.PAGE }}")
-          echo $client
           json=$(curl -X GET "https://graph.facebook.com/oauth/access_token?client_id=${{ vars.FACEBOOK_APP_ID }}&client_secret=${{ secrets.FACEBOOK_APP_SECRET }}&redirect_uri=${{ env.PAGE }}&grant_type=client_credentials")
           token=$(echo $json | grep -o '"access_token":"[^"]*' | grep -o '[^"]*$')
           echo "token=${token}" >> $GITHUB_OUTPUT
-          echo $json
-          echo $token
-          id_json=$(curl -H 'Authorization: Bearer ${token}' -X GET "https://graph.facebook.com/v19.0/msenjp?fields=id")
-          echo "userid=${id_json}" >> $GITHUB_OUTPUT
 
 
       - name: Post data to Facebook
@@ -94,5 +88,5 @@ jobs:
             curl -i -X POST \
               -d "url=${{ steps.latest-data.outputs.result }}" \
               -d "published=true" \
-              "https://graph.facebook.com/v19.0/${{ steps.token.outputs.userid }}/photos" \
+              "https://graph.facebook.com/v19.0/${{ env.PAGE_ID }}/photos" \
               -H 'Authorization: Bearer ${{ steps.token.outputs.token }}' \
