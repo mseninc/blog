@@ -79,4 +79,4 @@ jobs:
               -d "url=${{ steps.latest-data.outputs.result }}" \
               -d "published=true" \
               -d "access_token=${{ steps.token.outputs.token }}" \
-              "https://graph.facebook.com/msenjp/photos"
+              "https://graph.facebook.com/v19.0/msenjp/photos"
