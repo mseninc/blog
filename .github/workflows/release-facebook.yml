@@ -78,7 +78,7 @@ jobs:
         id: token
         run: |
           json=$(curl -X GET "https://graph.facebook.com/oauth/access_token?client_id=${{ vars.FACEBOOK_APP_ID }}&client_secret=${{ secrets.FACEBOOK_APP_SECRET }}&redirect_uri=${{ env.PAGE }}&grant_type=client_credentials")
-          token=$(echo $json | grep -o '"access_token":"[^"]*' | grep -o '[^"]*$')
+          token=$(echo $json | jq -r '.access_token')
           echo "token=${token}" >> $GITHUB_OUTPUT
 
 
