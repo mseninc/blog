@@ -2,6 +2,11 @@ name: Release Facebook
 
 on:
   workflow_dispatch:
+    inputs:
+      url_param:
+        description: 'The param part of /${param}/photos URL'
+        required: true
+        default: 'me'
   push:
     branches:
       - release
@@ -16,8 +21,9 @@ jobs:
 
     env:
       BLOG_URL: https://mseeeen.msen.jp/rss.xml
-      RSS_FILENAME: rss.xml 
+      RSS_FILENAME: rss.xml
       RSS_CONVERTER: https://api.rss2json.com/v1/api.json?rss_url=
+      URL_PARAM: ${{ github.event.inputs.url_param || 'me' }}
 
     steps:
       - name: Checkout repository
@@ -79,4 +85,4 @@ jobs:
               -d "url=${{ steps.latest-data.outputs.result }}" \
               -d "published=true" \
               -d "access_token=${{ steps.token.outputs.token }}" \
-              "https://graph.facebook.com/v19.0/msenjp/photos"
+              "https://graph.facebook.com/v19.0/${{ env.URL_PARAM }}/photos"
