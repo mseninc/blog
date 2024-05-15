@@ -20,8 +20,8 @@ jobs:
       name: Release
 
     env:
-      BLOG_URL: https://mseeeen.msen.jp/rss.xml
-      RSS_FILENAME: rss.xml
+      RSS_URL: https://mseeeen.msen.jp/rss.xml
+      RSS_FILENAME: rss.json
       RSS_CONVERTER: https://api.rss2json.com/v1/api.json?rss_url=
       PAGE_ID: ${{ github.event.inputs.page_id || 'msenjp' }}
       PAGE: https://www.facebook.com/msenjp/
@@ -36,7 +36,7 @@ jobs:
           script: |
             const fs = require('fs');
             
-            const rssUrl = '${{ env.RSS_CONVERTER }}${{ env.BLOG_URL }}';
+            const rssUrl = '${{ env.RSS_CONVERTER }}${{ env.RSS_URL }}';
             
             const response = await fetch(rssUrl);
             const data = await response.json();
