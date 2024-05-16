@@ -86,5 +86,5 @@ jobs:
             curl -i -X POST \
               -d "url=${{ steps.latest-data.outputs.result }}" \
               -d "published=true" \
-              "https://graph.facebook.com/v19.0/${{ env.PAGE_ID }}/photos" \
-              -H 'Authorization: Bearer ${{ steps.token.outputs.token }}' \
+              -d "access_token=${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}" \
+              "https://graph.facebook.com/v19.0/${{ env.PAGE_ID }}/photos" 
