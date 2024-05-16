@@ -51,7 +51,7 @@ jobs:
           key: blog-post-${{ hashFiles(env.RSS_FILENAME) }}          
       
       - name: Get latest posts
-        if: ${{ steps.blog-posts-cache.outputs.cache-hit != 'true' }}
+#        if: ${{ steps.blog-posts-cache.outputs.cache-hit != 'true' }}
         id: latest-data
         uses: actions/github-script@v7
         with:
@@ -73,7 +73,7 @@ jobs:
           result-encoding: string
 
       - name: Get Facebook access token
-        if: ${{ steps.blog-posts-cache.outputs.cache-hit != 'true' }}
+#        if: ${{ steps.blog-posts-cache.outputs.cache-hit != 'true' }}
         id: token
         run: |
           json=$(curl -X GET "https://graph.facebook.com/oauth/access_token?client_id=${{ vars.FACEBOOK_APP_ID }}&client_secret=${{ secrets.FACEBOOK_APP_SECRET }}&redirect_uri=${{ env.PAGE }}&grant_type=client_credentials")
@@ -81,7 +81,7 @@ jobs:
           echo "token=${token}" >> $GITHUB_OUTPUT
 
       - name: Post data to Facebook
-        if: ${{ steps.blog-posts-cache.outputs.cache-hit != 'true' }}
+#        if: ${{ steps.blog-posts-cache.outputs.cache-hit != 'true' }}
         run: |
             curl -i -X POST \
               -d "url=${{ steps.latest-data.outputs.result }}" \
