@@ -80,11 +80,23 @@ jobs:
           token=$(echo $json | jq -r '.data[].access_token')
           echo "page_access_token=${token}" >> $GITHUB_OUTPUT
 
-      - name: Post data to Facebook
+      - name: Upload photo to Facebook
+#        if: ${{ steps.blog-posts-cache.outputs.cache-hit != 'true' }}
+        id: photo_upload
+        run: |
+            json=$(curl -X POST \
+              -d "url=${{ steps.latest-data.outputs.result }}" \
+              -d "published=true" \
+              -d "access_token=${{ steps.token.outputs.page_access_token }}" \
+              "https://graph.facebook.com/${{ env.PAGE_ID }}/photos")
+              photo_id=$(echo $json | jq -r '.id')
+              echo "photo_id=${photo_id}" >> $GITHUB_OUTPUT
+    
+      - name: Post to Facebook
 #        if: ${{ steps.blog-posts-cache.outputs.cache-hit != 'true' }}
         run: |
             curl -i -X POST \
-              -d "url=https://msen.jp/img/logo.png" \
-              -d "published=true" \
+              -d "message=" \
+              -d "attached_media[0]={"media_fbid":"${{ steps.photo_upload.outputs.photo_id }}"}" \
               -d "access_token=${{ steps.token.outputs.page_access_token }}" \
-              "https://graph.facebook.com/${{ env.PAGE_ID }}/photos" 
+              "https://graph.facebook.com/${{ env.PAGE_ID }}/feed"
