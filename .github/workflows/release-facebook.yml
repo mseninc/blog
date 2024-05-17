@@ -85,7 +85,7 @@ jobs:
         id: photo_upload
         run: |
             json=$(curl -X POST \
-              -d "url=${{ steps.latest-data.outputs.result }}" \
+              -d "url=https://msen.jp/img/logo.png" \
               -d "published=true" \
               -d "access_token=${{ steps.token.outputs.page_access_token }}" \
               "https://graph.facebook.com/${{ env.PAGE_ID }}/photos")
