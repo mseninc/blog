@@ -72,11 +72,19 @@ jobs:
             return photoUrl
           result-encoding: string
 
+      - name: Get Facebook page access token
+#        if: ${{ steps.blog-posts-cache.outputs.cache-hit != 'true' }}
+        id: token
+        run: |
+          json=$(curl -X GET "https://graph.facebook.com/${{ vars.FACEBOOK_USER_ID }}/accounts?access_token=${{ secrets.FACEBOOK_USER_ACCESS_TOKEN }}"            
+          token=$(echo $json | jq -r '.data[].access_token')
+          echo "page_access_token=${token}" >> $GITHUB_OUTPUT
+
       - name: Post data to Facebook
 #        if: ${{ steps.blog-posts-cache.outputs.cache-hit != 'true' }}
         run: |
             curl -i -X POST \
               -d "url=${{ steps.latest-data.outputs.result }}" \
               -d "published=true" \
-              -d "access_token=${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}" \
+              -d "access_token=${{ steps.token.outputs.page_access_token }}" \
               "https://graph.facebook.com/${{ env.PAGE_ID }}/photos" 
