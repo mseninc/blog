@@ -76,7 +76,7 @@ jobs:
 #        if: ${{ steps.blog-posts-cache.outputs.cache-hit != 'true' }}
         id: token
         run: |
-          json=$(curl -X GET "https://graph.facebook.com/${{ vars.FACEBOOK_USER_ID }}/accounts?access_token=${{ secrets.FACEBOOK_USER_ACCESS_TOKEN }}"            
+          json=$(curl -X GET "https://graph.facebook.com/${{ vars.FACEBOOK_USER_ID }}/accounts?access_token=${{ secrets.FACEBOOK_USER_ACCESS_TOKEN }}")            
           token=$(echo $json | jq -r '.data[].access_token')
           echo "page_access_token=${token}" >> $GITHUB_OUTPUT
 
