@@ -86,7 +86,7 @@ jobs:
         run: |
             json=$(curl -X POST \
               -d "url=https://msen.jp/img/logo.png" \
-              -d "published=true" \
+              -d "published=false" \
               -d "access_token=${{ steps.token.outputs.page_access_token }}" \
               "https://graph.facebook.com/${{ env.PAGE_ID }}/photos")
               photo_id=$(echo $json | jq -r '.id')
