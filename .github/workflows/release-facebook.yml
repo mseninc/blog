@@ -79,4 +79,4 @@ jobs:
               -d "url=${{ steps.latest-data.outputs.result }}" \
               -d "published=true" \
               -d "access_token=${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}" \
-              "https://graph.facebook.com/v19.0/${{ env.PAGE_ID }}/photos" 
+              "https://graph.facebook.com/${{ env.PAGE_ID }}/photos" 
