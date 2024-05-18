@@ -1,7 +1,12 @@
 {
   "filters": {
     "node-types": {
-      "nodeTypes": ["BlockQuote", "Link", "ReferenceDef", "Code"]
+      "nodeTypes": [
+        "BlockQuote",
+        "Link",
+        "ReferenceDef",
+        "Code"
+      ]
     }
   },
   "rules": {
@@ -16,7 +21,14 @@
       },
       "ja-no-mixed-period": {
         "periodMark": "。",
-        "allowPeriodMarks": ["👍", "👏", "🖊️", "😅", "🚀"],
+        "allowPeriodMarks": [
+          "👍",
+          "👏",
+          "🖊️",
+          "😅",
+          "🚀",
+          "👌"
+        ],
         "allowEmojiAtEnd": true,
         "forceAppendPeriod": false
       },
@@ -24,8 +36,12 @@
         "max": 8
       },
       "no-doubled-joshi": {
-        "severity" : "warning",
-        "allow": ["も", "としても", "にも"]
+        "severity": "warning",
+        "allow": [
+          "も",
+          "としても",
+          "にも"
+        ]
       }
     },
     "prh": {
