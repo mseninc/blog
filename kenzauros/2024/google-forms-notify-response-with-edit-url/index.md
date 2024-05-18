@@ -2,13 +2,13 @@
 title: "[Google Forms] フォーム送信時に「回答を編集」リンクを含んだ通知メールを管理者に送信する"
 date: 
 author: kenzauros
-tags: [Google Forms, GAS]
+tags: [Google Forms, Google Apps Script, GAS]
 description: "今回はGoogle Formsでフォーム送信時に「回答を編集」リンクを含んだ通知メールを管理者に送信する方法を紹介します。「回答を編集」を有効にすると、フォーム送信後に編集リンクが表示されますが、これを紛失すると回答者は再編集できなくなります。管理者がこのリンクを保持し、必要に応じて回答者に提供できるようにするためのスクリプトを作成します。スクリプトはフォーム送信時のトリガーを設定し、回答内容と編集リンクを含んだメールを送信します。"
 ---
 
 こんにちは、 kenzauros です。
 
-今回は Google Forms で**フォーム送信時に「回答を編集」リンクを含んだ通知メールを管理者に送信**できるようにします。
+今回は Google Forms で**フォーム送信時に「回答を編集」リンクを含んだ通知メールを管理者へ送信**できるようにします。
 
 ## はじめに：「回答を編集」とは
 
@@ -20,25 +20,25 @@ description: "今回はGoogle Formsでフォーム送信時に「回答を編集
 
 ![](images/edit-response1.png "確認メールの「回答を編集」リンク")
 
-ただ、この画面を閉じてしまったり、確認メールを削除してしまうと、**回答者は回答を編集することができなくなります**。
-そもそも Google Forms では、*管理者ですら回答を修正することができません*ので、この「回答を編集」リンクはとても大切です。
+ただ、この画面を閉じてしまったり、確認メールを削除してしまうと、**回答者は回答を編集できなくなります**。
+そもそも Google Forms では、*管理者ですら回答を修正できません*ので、この「回答を編集」リンクはとても大事です。
 
-回答者の IT リテラシーによっては「どうやって編集すればいいですか？」という質問が管理者に山ほど飛んでくることになりかねません。
+ユーザーから「どうやって編集すればいいですか？」という質問が山ほど管理者へ飛んでくることにもなりかねません。
 
-ということで、「回答を編集」するための URL を管理者に送信しておき、ユーザーから問い合わせがあった場合にはその URL を教えることで対応できるようにしましょう、というモチベーションです。
+よって、「回答を編集」するための URL を管理者に送信しておき、ユーザーから問い合わせがあった場合にはその URL を教えることで対応できるようにしましょう、というのが目的です。
 
-なお、本稿では回答を編集できるように設定する方法や、トリガーの設定方法などについては触れません。
+本稿では回答を編集できるように設定する方法や、トリガーの設定方法などについては触れません。
 そのあたりは他に情報がたくさんあるので、 AI に聞くか適宜調べてください。
 
 ## 実装
 
-**Form 側のスクリプトエディタから設定できる「フォーム送信時」のトリガー**を利用します。
+**フォームのスクリプトエディタから設定できる「フォーム送信時」のトリガー**を利用します。
 
 ![](images/available-triggers.png "Google Apps Script で使用可能なトリガーのタイプ")
 
 - [使用可能なトリガーのタイプ - シンプルなトリガー  |  Apps Script  |  Google for Developers](https://developers.google.com/apps-script/guides/triggers?hl=ja)
 
-ちなみに「フォーム送信時」のトリガーは、フォームに紐付いた Spreadsheet 側でも設定できますが、イベント引数が異なり、 `Form` オブジェクトが取得しづらいため、特に Spreadsheet との連携が必要なければフォーム側で設定します。
+なお「フォーム送信時」のトリガーは、フォームに紐付いたスプレッドシート側でも設定できますが、イベント引数が異なり、 `Form` オブジェクトが取得しづらいため、特に理由がなければフォーム側で設定します。
 
 
 ### フォーム送信時のイベント引数
@@ -114,7 +114,7 @@ function getEntriesFromResponse(response) {
 `FormResponse` オブジェクトから取得できるデータ（回答内容とメタデータ）をここで整理しています。
 
 `onFormSubmit` がフォーム送信時のトリガーで呼び出される関数です。
-フォームのタイトルと URL などと回答内容からメールを作成して送信します📨
+フォームのタイトルと URL などと回答内容からメールを作成して送信します。
 メールアドレス (`to`) は管理者のメールアドレスに変更してください。
 
 ### `getEntriesFromResponse` の詳解
@@ -157,7 +157,24 @@ function getEntriesFromResponse(response) {
 
 ## まとめ
 
-### 参考：Spreadsheet 側のスクリプトで処理する場合
+今回は Google Forms でフォーム送信時に「回答を編集」リンクを含んだ通知メールを管理者に送信する方法を紹介しました。
+
+「回答を編集」の URL を取得して、「編集できないんだけど？」という問い合わせに対応しましょう👍
+
+## 参考
+
+- [イベント オブジェクト  |  Apps Script  |  Google for Developers](https://developers.google.com/apps-script/guides/triggers/events?hl=ja)
+- [Forms Service  |  Apps Script  |  Google for Developers](https://developers.google.com/apps-script/reference/forms?hl=ja)
+- [Class Form  |  Apps Script  |  Google for Developers](https://developers.google.com/apps-script/reference/forms/form?hl=ja)
+- [Class FormResponse  |  Apps Script  |  Google for Developers](https://developers.google.com/apps-script/reference/forms/form-response?hl=ja)
+
+余談ですが、Google Apps Script の日本語リファレンスは機械翻訳のため、 `FormApp` や `Form` などのクラス名まで日本語になっていて、とても参照しづらいです。
+画面上部の "Switch to English" をクリックして、英語版で見るのが吉です👌
+
+![](images/gas-class-reference-ja-en.png "GAS リファレンスの日本語版と英語版")
+
+
+### 補足：Spreadsheet 側のスクリプトで処理する場合
 
 ちなみに Spreadsheet 側の「フォーム送信時トリガー」の場合は以下のようなイベント引数になります。
 
@@ -173,7 +190,7 @@ function getEntriesFromResponse(response) {
 
 Spreadsheet 側の「フォーム送信時トリガー」から Form オブジェクトを取得する方法は以下のようになります。
 
-```js:title=Spreadsheet側のスクリプトでFormオブジェクトを取得する
+```js:title=SpreadsheetのGASでフォームオブジェクトを取得
 const formUrl = SpreadsheetApp.getActiveSheet().getFormUrl();
 const form = FormApp.openByUrl(formUrl);
 ```
@@ -182,7 +199,7 @@ const form = FormApp.openByUrl(formUrl);
 
 以下のように `Form.getResponses()` ですべての回答を取得して、最終要素を取得することで最後の回答を使うのがよいでしょう。
 
-```js:title=Spreadsheet側のスクリプトでFormResponseオブジェクトを取得する
+```js:title=SpreadsheetのGASで回答オブジェクトを取得
 const responses = form.getResponses();
 const lastResponse = responses[responses.length - 1];
 if (lastResponse) {
@@ -190,16 +207,3 @@ if (lastResponse) {
   // ...
 }
 ```
-
-
-## 参考
-
-- [イベント オブジェクト  |  Apps Script  |  Google for Developers](https://developers.google.com/apps-script/guides/triggers/events?hl=ja)
-- [Forms Service  |  Apps Script  |  Google for Developers](https://developers.google.com/apps-script/reference/forms?hl=ja)
-- [Class Form  |  Apps Script  |  Google for Developers](https://developers.google.com/apps-script/reference/forms/form?hl=ja)
-- [Class FormResponse  |  Apps Script  |  Google for Developers](https://developers.google.com/apps-script/reference/forms/form-response?hl=ja)
-
-余談ですが、Google Apps Script の日本語リファレンスは機械翻訳のため、本来翻訳されるべきでない `FormApp` や `Form` などのクラス名まで日本語になっていて、大変参照しづらいです。
-画面上部の "Switch to English" をクリックして、英語版で見るのが吉です👌
-
-![](images/gas-class-reference-ja-en.png "GAS リファレンスの日本語版と英語版")
