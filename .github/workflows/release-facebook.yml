@@ -95,6 +95,7 @@ jobs:
         run: |
           json=$(curl -X GET "https://graph.facebook.com/${{ env.FACEBOOK_USER_ID }}/accounts?access_token=${{ env.FACEBOOK_USER_ACCESS_TOKEN }}")            
           token=$(echo $json | jq -r '.data[].access_token')
+          echo "::add-mask::$token"
           echo "page_access_token=${token}" >> $GITHUB_OUTPUT
 
       - name: Upload photo to Facebook (If published is 'true', the photo will be published on the page's timeline.)
