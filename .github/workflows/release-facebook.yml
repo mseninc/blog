@@ -22,7 +22,7 @@ jobs:
       RSS_URL: ${{ vars.RSS_FEED_URL }}
       RSS_FILENAME: rss.json
       RSS_CONVERTER: https://api.rss2json.com/v1/api.json?rss_url=
-      PAGE_ID: ${{ github.event.inputs.page_id || vars.FACEBOOK_PAGE_ID }}
+      PAGE_ID: ${{ vars.FACEBOOK_PAGE_ID }}
 
     steps:
       - name: Checkout repository
