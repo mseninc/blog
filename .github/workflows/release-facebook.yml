@@ -15,6 +15,7 @@ on:
       facebook_user_access_token:
         description: 'User access token to access Facebook'
         required: false
+        default: '1234567890'
   
   push:
     branches:
