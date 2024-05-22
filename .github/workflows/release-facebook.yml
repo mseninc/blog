@@ -67,10 +67,7 @@ jobs:
               if (!date || new Date(date).getTime() < new Date(item.pubDate).getTime()) {
                 date = item.pubDate;
                 photoUrl = item.enclosure.link;
-                caption = `
-                ${item.title}
-                ${item.link}
-                ${item.description}`;
+                caption = `${item.title}\n${item.link}\n${item.description}`;
               }
             }
 
@@ -85,7 +82,7 @@ jobs:
           token=$(echo $json | jq -r '.data[].access_token')
           echo "page_access_token=${token}" >> $GITHUB_OUTPUT
 
-      - name: Upload photo to Facebook (If published is true, the photo will be published on the page's timeline.)
+      - name: Upload photo to Facebook (If published is 'true', the photo will be published on the page's timeline.)
 #        if: ${{ steps.blog-posts-cache.outputs.cache-hit != 'true' }}
         id: photo_upload
         run: |
@@ -100,7 +97,7 @@ jobs:
               photo_id=$(echo $json | jq -r '.id')
               echo "photo_id=${photo_id}" >> $GITHUB_OUTPUT
     
-#       - name: Post to Facebook
+#       - name: Post feed to Facebook using the uploaded photo
 # #        if: ${{ steps.blog-posts-cache.outputs.cache-hit != 'true' }}
 #         run: |
 #             curl -i -X POST \
