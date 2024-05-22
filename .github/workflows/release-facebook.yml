@@ -19,7 +19,6 @@ on:
   push:
     branches:
       - release
-      - 317-add-workflow-for-facebook-post
 
 jobs:
   release_facebook:
@@ -66,7 +65,7 @@ jobs:
           key: blog-post-${{ hashFiles(env.RSS_FILENAME) }}          
       
       - name: Get latest posts
-#        if: ${{ steps.blog-posts-cache.outputs.cache-hit != 'true' }}
+        if: ${{ steps.blog-posts-cache.outputs.cache-hit != 'true' }}
         id: latest-data
         uses: actions/github-script@v7
         with:
@@ -90,7 +89,7 @@ jobs:
           result-encoding: string
 
       - name: Get Facebook page access token
-#        if: ${{ steps.blog-posts-cache.outputs.cache-hit != 'true' }}
+        if: ${{ steps.blog-posts-cache.outputs.cache-hit != 'true' }}
         id: token
         run: |
           json=$(curl -X GET "https://graph.facebook.com/${{ env.FACEBOOK_USER_ID }}/accounts?access_token=${{ env.FACEBOOK_USER_ACCESS_TOKEN }}")            
@@ -99,7 +98,7 @@ jobs:
           echo "page_access_token=${token}" >> $GITHUB_OUTPUT
 
       - name: Upload photo to Facebook (If published is 'true', the photo will be published on the page's timeline.)
-#        if: ${{ steps.blog-posts-cache.outputs.cache-hit != 'true' }}
+        if: ${{ steps.blog-posts-cache.outputs.cache-hit != 'true' }}
         id: photo_upload
         run: |
             photoUrl=$(echo '${{ steps.latest-data.outputs.result }}' | jq -r '.photoUrl')
@@ -113,11 +112,11 @@ jobs:
               photo_id=$(echo $json | jq -r '.id')
               echo "photo_id=${photo_id}" >> $GITHUB_OUTPUT
     
-#       - name: Post feed to Facebook using the uploaded photo
-# #        if: ${{ steps.blog-posts-cache.outputs.cache-hit != 'true' }}
-#         run: |
-#             curl -i -X POST \
-#               -d "message=" \
-#               -d "attached_media[0]={"media_fbid":"${{ steps.photo_upload.outputs.photo_id }}"}" \
-#               -d "access_token=${{ steps.token.outputs.page_access_token }}" \
-#               "https://graph.facebook.com/${{ env.PAGE_ID }}/feed"
+      # - name: Post feed to Facebook using the uploaded photos (Useful to post multiple photos)
+      #   if: ${{ steps.blog-posts-cache.outputs.cache-hit != 'true' }}
+      #   run: |
+      #       curl -i -X POST \
+      #         -d "message=" \
+      #         -d "attached_media[0]={"media_fbid":"${{ steps.photo_upload.outputs.photo_id }}"}" \
+      #         -d "access_token=${{ steps.token.outputs.page_access_token }}" \
+      #         "https://graph.facebook.com/${{ env.PAGE_ID }}/feed"
