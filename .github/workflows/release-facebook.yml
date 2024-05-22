@@ -6,6 +6,16 @@ on:
       page_id:
         description: 'Path parameter for /v19.0/{page-id}/photos endpoint'
         required: false
+      rss_url:
+        description: 'Url of the blog RSS'
+        required: false
+      facebook_user_id:
+        description: 'User ID to access Facebook'
+        required: false
+      facebook_user_access_token:
+        description: 'User access token to access Facebook'
+        required: false
+  
   push:
     branches:
       - release
@@ -19,12 +29,20 @@ jobs:
       name: Release
 
     env:
-      RSS_URL: ${{ vars.RSS_FEED_URL }}
+      RSS_URL: ${{ github.event.inputs.rss_url || vars.RSS_FEED_URL }}
       RSS_FILENAME: rss.json
       RSS_CONVERTER: https://api.rss2json.com/v1/api.json?rss_url=
-      PAGE_ID: ${{ vars.FACEBOOK_PAGE_ID }}
+      PAGE_ID: ${{ github.event.inputs.page_id || vars.FACEBOOK_PAGE_ID }}
+      FACEBOOK_USER_ID: ${{ github.event.inputs.facebook_user_id || vars.FACEBOOK_USER_ID }}
 
     steps:
+
+      - name: Add mask to secret parameter
+        run: |
+          user_token=${{ github.event.inputs.facebook_user_access_token || vars.secrets.FACEBOOK_USER_ACCESS_TOKEN }}
+          echo "::add-mask::$user_token" 
+          echo "FACEBOOK_USER_ACCESS_TOKEN=$user_token" >> $GITHUB_ENV
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -76,7 +94,7 @@ jobs:
 #        if: ${{ steps.blog-posts-cache.outputs.cache-hit != 'true' }}
         id: token
         run: |
-          json=$(curl -X GET "https://graph.facebook.com/${{ vars.FACEBOOK_USER_ID }}/accounts?access_token=${{ secrets.FACEBOOK_USER_ACCESS_TOKEN }}")            
+          json=$(curl -X GET "https://graph.facebook.com/${{ env.FACEBOOK_USER_ID }}/accounts?access_token=${{ secrets.FACEBOOK_USER_ACCESS_TOKEN }}")            
           token=$(echo $json | jq -r '.data[].access_token')
           echo "page_access_token=${token}" >> $GITHUB_OUTPUT
 
