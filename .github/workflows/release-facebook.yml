@@ -67,7 +67,10 @@ jobs:
               if (!date || new Date(date).getTime() < new Date(item.pubDate).getTime()) {
                 date = item.pubDate;
                 photoUrl = item.enclosure.link;
-                caption = item.title + item.link + item.description;
+                caption = `
+                ${item.title}
+                ${item.link}
+                ${item.description}`;
               }
             }
 
@@ -86,8 +89,8 @@ jobs:
 #        if: ${{ steps.blog-posts-cache.outputs.cache-hit != 'true' }}
         id: photo_upload
         run: |
-            photoUrl=$(echo ${{ steps.latest-data.outputs.result }} | jq -r '.photoUrl')
-            caption=$(echo ${{ steps.latest-data.outputs.result }} | jq -r '.caption')
+            photoUrl=$(echo '${{ steps.latest-data.outputs.result }}' | jq -r '.photoUrl')
+            caption=$(echo '${{ steps.latest-data.outputs.result }}' | jq -r '.caption')
             json=$(curl -X POST \
               -d "url=${photoUrl}" \
               -d "caption=${caption}" \
