@@ -65,7 +65,7 @@ jobs:
               if (!date || new Date(date).getTime() < new Date(item.pubDate).getTime()) {
                 date = item.pubDate;
                 photoUrl = item.enclosure.link;
-                caption = `${item.title}\n${item.link}\n${item.description}`;
+                caption = `${item.title}\n\n${item.link}\n\n${item.description}`;
               }
             }
 
