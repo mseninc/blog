@@ -1,6 +1,10 @@
 name: Release Facebook
 
 on:
+  schedule:
+    # Run every day at 4:00 UTC (1:00 PM JST)
+    - cron: "0 4 * * *" 
+
   workflow_dispatch:
     inputs:
       page_id:
@@ -16,10 +20,6 @@ on:
         description: 'User access token to access Facebook'
         required: false
   
-  push:
-    branches:
-      - release
-
 jobs:
   release_facebook:
     runs-on: ubuntu-latest
