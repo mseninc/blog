@@ -4,9 +4,8 @@ on:
   workflow_dispatch:
     inputs:
       page_id:
-        description: 'The pageId part of /${pageId}/photos URL'
-        required: true
-        default: 'msenjp'
+        description: 'Path parameter for /v19.0/{page-id}/photos endpoint'
+        required: false
   push:
     branches:
       - release
@@ -20,11 +19,10 @@ jobs:
       name: Release
 
     env:
-      RSS_URL: https://mseeeen.msen.jp/rss.xml
+      RSS_URL: ${{ vars.RSS_FEED_URL }}
       RSS_FILENAME: rss.json
       RSS_CONVERTER: https://api.rss2json.com/v1/api.json?rss_url=
-      PAGE_ID: ${{ github.event.inputs.page_id || 'msenjp' }}
-      PAGE: https://www.facebook.com/msenjp/
+      PAGE_ID: ${{ github.event.inputs.page_id || vars.FACEBOOK_PAGE_ID }}
 
     steps:
       - name: Checkout repository
