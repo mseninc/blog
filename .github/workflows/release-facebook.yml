@@ -112,11 +112,16 @@ jobs:
               photo_id=$(echo $json | jq -r '.id')
               echo "photo_id=${photo_id}" >> $GITHUB_OUTPUT
     
-      # - name: Post feed to Facebook using the uploaded photos (Useful to post multiple photos)
+      # This is an example of posting a feed to Facebook using multiple uploaded photos.
+      # You only need to pass the ids of the uploaded photo into the 'attach_media' object.
+      # The attached_media object has index for each media file like attached_media[0], attached_media[1] and so on.  
+      # The message parameter is optional and is used to add a message to the post.
+      # - name: Post to Facebook using multiple uploaded photos
       #   if: ${{ steps.blog-posts-cache.outputs.cache-hit != 'true' }}
       #   run: |
       #       curl -i -X POST \
       #         -d "message=" \
-      #         -d "attached_media[0]={"media_fbid":"${{ steps.photo_upload.outputs.photo_id }}"}" \
+      #         -d "attached_media[0]={"media_fbid":"${{ steps.photo_upload.outputs.photo_id1 }}"}" \
+      #         -d "attached_media[1]={"media_fbid":"${{ steps.photo_upload.outputs.photo_id2 }}"}" \
       #         -d "access_token=${{ steps.token.outputs.page_access_token }}" \
       #         "https://graph.facebook.com/${{ env.PAGE_ID }}/feed"
