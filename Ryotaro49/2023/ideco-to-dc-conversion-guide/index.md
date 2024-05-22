@@ -1,6 +1,6 @@
 ---
 title: "iDeCo をやめて企業型 DC に移換する手順"
-date:
+date: 2024-05-22
 author: Ryotaro49
 tags: [確定拠出年金]
 description: "iDeCo をやめて企業型 DC に移換する手順を紹介します。"
