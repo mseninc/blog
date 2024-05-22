@@ -62,14 +62,16 @@ jobs:
 
             let date
             let photoUrl
+            let caption
             for (const item of items) {
               if (!date || new Date(date).getTime() < new Date(item.pubDate).getTime()) {
                 date = item.pubDate;
                 photoUrl = item.enclosure.link;
+                caption = item.title + item.link + item.description;
               }
             }
 
-            return photoUrl
+            return JSON.stringify({photoUrl, caption});
           result-encoding: string
 
       - name: Get Facebook page access token
@@ -84,8 +86,11 @@ jobs:
 #        if: ${{ steps.blog-posts-cache.outputs.cache-hit != 'true' }}
         id: photo_upload
         run: |
+            photoUrl=$(echo ${{ steps.latest-data.outputs.result }} | jq -r '.photoUrl')
+            caption=$(echo ${{ steps.latest-data.outputs.result }} | jq -r '.caption')
             json=$(curl -X POST \
-              -d "url=${{ steps.latest-data.outputs.result }}" \
+              -d "url=${photoUrl}" \
+              -d "caption=${caption}" \
               -d "published=false" \
               -d "access_token=${{ steps.token.outputs.page_access_token }}" \
               "https://graph.facebook.com/${{ env.PAGE_ID }}/photos")
