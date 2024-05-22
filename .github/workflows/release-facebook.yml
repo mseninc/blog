@@ -85,7 +85,7 @@ jobs:
           token=$(echo $json | jq -r '.data[].access_token')
           echo "page_access_token=${token}" >> $GITHUB_OUTPUT
 
-      - name: Upload photo to Facebook
+      - name: Upload photo to Facebook (If published is true, the photo will be published on the page's timeline.)
 #        if: ${{ steps.blog-posts-cache.outputs.cache-hit != 'true' }}
         id: photo_upload
         run: |
@@ -94,17 +94,17 @@ jobs:
             json=$(curl -X POST \
               -d "url=${photoUrl}" \
               -d "caption=${caption}" \
-              -d "published=false" \
+              -d "published=true" \
               -d "access_token=${{ steps.token.outputs.page_access_token }}" \
               "https://graph.facebook.com/${{ env.PAGE_ID }}/photos")
               photo_id=$(echo $json | jq -r '.id')
               echo "photo_id=${photo_id}" >> $GITHUB_OUTPUT
     
-      - name: Post to Facebook
-#        if: ${{ steps.blog-posts-cache.outputs.cache-hit != 'true' }}
-        run: |
-            curl -i -X POST \
-              -d "message=" \
-              -d "attached_media[0]={"media_fbid":"${{ steps.photo_upload.outputs.photo_id }}"}" \
-              -d "access_token=${{ steps.token.outputs.page_access_token }}" \
-              "https://graph.facebook.com/${{ env.PAGE_ID }}/feed"
+#       - name: Post to Facebook
+# #        if: ${{ steps.blog-posts-cache.outputs.cache-hit != 'true' }}
+#         run: |
+#             curl -i -X POST \
+#               -d "message=" \
+#               -d "attached_media[0]={"media_fbid":"${{ steps.photo_upload.outputs.photo_id }}"}" \
+#               -d "access_token=${{ steps.token.outputs.page_access_token }}" \
+#               "https://graph.facebook.com/${{ env.PAGE_ID }}/feed"
