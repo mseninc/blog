@@ -1,0 +1,127 @@
+name: Release Facebook
+
+on:
+  schedule:
+    # Run every day at 4:00 UTC (1:00 PM JST)
+    - cron: "0 4 * * *" 
+
+  workflow_dispatch:
+    inputs:
+      page_id:
+        description: 'Path parameter for /v19.0/{page-id}/photos endpoint'
+        required: false
+      rss_url:
+        description: 'Url of the blog RSS'
+        required: false
+      facebook_user_id:
+        description: 'User ID to access Facebook'
+        required: false
+      facebook_user_access_token:
+        description: 'User access token to access Facebook'
+        required: false
+  
+jobs:
+  release_facebook:
+    runs-on: ubuntu-latest
+
+    environment:
+      name: Release
+
+    env:
+      RSS_URL: ${{ github.event.inputs.rss_url || vars.RSS_FEED_URL }}
+      RSS_FILENAME: rss.json
+      RSS_CONVERTER: https://api.rss2json.com/v1/api.json?rss_url=
+      PAGE_ID: ${{ github.event.inputs.page_id || vars.FACEBOOK_PAGE_ID }}
+      FACEBOOK_USER_ID: ${{ github.event.inputs.facebook_user_id || vars.FACEBOOK_USER_ID }}
+
+    steps:
+      - name: Add mask to FACEBOOK_USER_ACCESS_TOKEN parameter
+        run: |
+          user_token=${{ github.event.inputs.facebook_user_access_token || secrets.FACEBOOK_USER_ACCESS_TOKEN }}
+          echo "::add-mask::$user_token" 
+          echo "FACEBOOK_USER_ACCESS_TOKEN=$user_token" >> $GITHUB_ENV
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Get data from RSS feed
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            
+            const rssUrl = '${{ env.RSS_CONVERTER }}${{ env.RSS_URL }}';
+            const response = await fetch(rssUrl);
+            const data = await response.json();
+
+            fs.writeFileSync('${{ env.RSS_FILENAME }}', JSON.stringify(data.items));
+        
+      - name: Caching Hash
+        id: blog-posts-cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ${{ env.RSS_FILENAME }}
+          key: blog-post-${{ hashFiles(env.RSS_FILENAME) }}          
+      
+      - name: Get latest posts
+        if: ${{ steps.blog-posts-cache.outputs.cache-hit != 'true' }}
+        id: latest-data
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const data = fs.readFileSync('${{ env.RSS_FILENAME }}');
+            const items = JSON.parse(data)
+
+            let date
+            let photoUrl
+            let caption
+            for (const item of items) {
+              if (!date || new Date(date).getTime() < new Date(item.pubDate).getTime()) {
+                date = item.pubDate;
+                photoUrl = item.enclosure.link;
+                caption = `${item.title}\n\n${item.link}\n\n${item.description}`;
+              }
+            }
+
+            return JSON.stringify({photoUrl, caption});
+          result-encoding: string
+
+      - name: Get Facebook page access token
+        if: ${{ steps.blog-posts-cache.outputs.cache-hit != 'true' }}
+        id: token
+        run: |
+          json=$(curl -X GET "https://graph.facebook.com/${{ env.FACEBOOK_USER_ID }}/accounts?access_token=${{ env.FACEBOOK_USER_ACCESS_TOKEN }}")            
+          token=$(echo $json | jq -r '.data[].access_token')
+          echo "::add-mask::$token"
+          echo "page_access_token=${token}" >> $GITHUB_OUTPUT
+
+      - name: Upload photo to Facebook (If published is 'true', the photo will be published on the page's timeline.)
+        if: ${{ steps.blog-posts-cache.outputs.cache-hit != 'true' }}
+        id: photo_upload
+        run: |
+            photoUrl=$(echo '${{ steps.latest-data.outputs.result }}' | jq -r '.photoUrl')
+            caption=$(echo '${{ steps.latest-data.outputs.result }}' | jq -r '.caption')
+            json=$(curl -X POST \
+              -d "url=${photoUrl}" \
+              -d "caption=${caption}" \
+              -d "published=true" \
+              -d "access_token=${{ steps.token.outputs.page_access_token }}" \
+              "https://graph.facebook.com/${{ env.PAGE_ID }}/photos")
+              photo_id=$(echo $json | jq -r '.id')
+              echo "photo_id=${photo_id}" >> $GITHUB_OUTPUT
+    
+      # This is an example of posting a feed to Facebook using multiple uploaded photos.
+      # You only need to pass the ids of the uploaded photo into the 'attach_media' object.
+      # The attached_media object has index for each media file like attached_media[0], attached_media[1] and so on.  
+      # The message parameter is optional and is used to add a message to the post.
+      # - name: Post to Facebook using multiple uploaded photos
+      #   if: ${{ steps.blog-posts-cache.outputs.cache-hit != 'true' }}
+      #   run: |
+      #       curl -i -X POST \
+      #         -d "message=" \
+      #         -d "attached_media[0]={"media_fbid":"${{ steps.photo_upload.outputs.photo_id1 }}"}" \
+      #         -d "attached_media[1]={"media_fbid":"${{ steps.photo_upload.outputs.photo_id2 }}"}" \
+      #         -d "access_token=${{ steps.token.outputs.page_access_token }}" \
+      #         "https://graph.facebook.com/${{ env.PAGE_ID }}/feed"
