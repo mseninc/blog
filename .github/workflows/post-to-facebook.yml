@@ -1,4 +1,4 @@
-name: Release Facebook
+name: Post to Facebook
 
 on:
   schedule:
