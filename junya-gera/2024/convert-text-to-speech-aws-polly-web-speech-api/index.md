@@ -170,7 +170,7 @@ sls deploy
 
 デプロイが完了すると、作成された Lambda 関数 URL が表示されます。
 
-```:title=デプロイ後のコンソール{5}
+```{5}:title=デプロイ後のコンソール
 Deploying wordMemorizationApp to stage dev (us-west-2)
 
 ✔ Service deployed to stack wordMemorizationApp-dev (102s)
@@ -271,7 +271,7 @@ audio.play();
 
 同様の機能を Web Speech API を使って実装すると、 `Audio.tsx` は以下のようになります。
 
-```ts:title=Audio.tsx
+```ts{4-11}:title=Audio.tsx
 import AudiotrackIcon from "@mui/icons-material/Audiotrack";
 
 export default function AudioPlayback(props: { phrase: string }) {
@@ -299,7 +299,7 @@ export default function AudioPlayback(props: { phrase: string }) {
 
 `utterance.lang = "en-US"` で言語を英語に設定します。
 
-このインスタンス (`utterance`) を [speechSynthesis.speak()](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/speak) に渡すことで音声を流します。
+このインスタンス (`utterance`) を [`speechSynthesis.speak()`](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/speak) に渡すことで音声を流します。
 
 Web Speech API ではたったこれだけで音声再生機能が実装できました。
 
