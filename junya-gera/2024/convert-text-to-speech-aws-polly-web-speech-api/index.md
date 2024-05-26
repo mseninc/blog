@@ -71,11 +71,11 @@ layers:
 
 `iamRoleStatements` の部分で AWS Polly の `SynthesizeSpeech` を使用する許可を与えています。
 
-(SynthesizeSpeech)[https://docs.aws.amazon.com/polly/latest/dg/API_SynthesizeSpeech.html] は Lambda 内で使用する、音声を合成する関数です。
+[SynthesizeSpeech](https://docs.aws.amazon.com/polly/latest/dg/API_SynthesizeSpeech.html) は Lambda 内で使用する、音声を合成する関数です。
 
 `functions` に Lambda 関数の設定を記述しています。
 
-今回、関数名を `generateSpeech` としています。
+今回は関数名を `generateSpeech` としています。
 
 `url` を記述することで Lambda の関数 URL を作成できます。 CORS の設定が不要な場合は `url: true` だけでも大丈夫です。
 
