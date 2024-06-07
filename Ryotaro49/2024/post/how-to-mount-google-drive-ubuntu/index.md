@@ -36,6 +36,7 @@ OAuth 同意画面の設定をされていない方は先にそちらを済ま�
 ## google-drive-ocamlfuse をインストールする
 
 google-drive-ocamlfuse は Linux に Google Drive をマウントするアプリケーションです。
+
 まずは、Ubuntu に google-drive-ocamlfuse をインストールします。
 
 ```:title=google-drive-ocamlfuseをインストール
