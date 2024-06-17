@@ -6,7 +6,7 @@ tags: [Ubuntu, Ubuntu 22.04, Google Drive]
 description: "Ubuntu に Google Drive をマウントする方法を紹介します。"
 ---
 
-Ubuntu で Google Drive を参照したい方に向けて、Ubuntu に Google Drive をマウントする方法を紹介します。
+Ubuntu に Google Drive をマウントする方法を紹介します。
 
 本記事では下記の環境で動作確認を行っています。
 
@@ -14,7 +14,7 @@ Ubuntu で Google Drive を参照したい方に向けて、Ubuntu に Google Dr
 
 ## Google Drive API を有効化する
 
-Ubuntu に Google Drive をマウントするには、Google Drive API を有効化する必要があります。
+Ubuntu に Google Drive をマウントするには、**Google Drive API** を有効化する必要があります。
 
 [Google Cloud コンソール](https://console.cloud.google.com) にアクセスしてプロジェクトのコンソールに入ります。
 
@@ -37,7 +37,9 @@ OAuth 同意画面の設定をされていない方は先にそちらを済ま�
 
 google-drive-ocamlfuse は Linux に Google Drive をマウントするアプリケーションです。
 
-まずは、Ubuntu に google-drive-ocamlfuse をインストールします。
+- [astrada/google-drive-ocamlfuse: FUSE filesystem over Google Drive](https://github.com/astrada/google-drive-ocamlfuse)
+
+Ubuntu に google-drive-ocamlfuse をインストールします。
 
 ```:title=google-drive-ocamlfuseをインストール
 $ sudo add-apt-repository ppa:alessandro-strada/ppa
