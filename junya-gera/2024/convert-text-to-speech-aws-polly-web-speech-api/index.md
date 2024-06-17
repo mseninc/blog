@@ -1,6 +1,6 @@
 ---
 title: "AWS Polly を使ってテキストを音声に変換してアプリ上で再生する方法"
-date: 
+date: 2024-06-03
 author: junya-gera
 tags: [AWS Polly, Web Speech API, Serverless Framework]
 description: "AWS Polly と Web Speech API を使ったテキストを音声に変換してアプリから再生する方法を紹介します。"
