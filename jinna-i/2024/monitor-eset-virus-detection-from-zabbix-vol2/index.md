@@ -1,6 +1,6 @@
 ---
 title: "[第2弾] Zabbix から ESET Server Security for Linux のウイルス検出を監視する"
-date: 
+date: 2024-06-17
 author: jinna-i
 tags: [ESET, Zabbix]
 description: ZabbixとESET Server Security for Linuxを使用してウイルス検出を監視する方法のアップデート版を紹介しています。前回必要だったcron設定やログファイルの準備は不要になり、アイテムやトリガーもシンプルになっています。
