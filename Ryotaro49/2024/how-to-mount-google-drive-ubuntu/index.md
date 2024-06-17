@@ -88,7 +88,7 @@ drwxr-xr-x 1 user user    4096 Jun  7  2023  sampleDir
 
 ## アンマウントする
 
-以下のコマンドで先ほどマウントしたディレクトリをアンマウントできます。
+以下のコマンドでマウントしたディレクトリをアンマウントできます。
 
 ```
 $ fusermount -u google-drive
