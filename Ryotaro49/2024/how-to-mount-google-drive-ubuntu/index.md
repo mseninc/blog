@@ -3,7 +3,7 @@ title: "Ubuntu に Google Drive をマウントする方法"
 date:
 author: Ryotaro49
 tags: [Ubuntu, Ubuntu 22.04, Google Drive]
-description: "Ubuntu に Google Drive をマウントする方法を紹介します。"
+description: "Ubuntu に Google Drive をマウントする方法を紹介します。Google Drive API を有効化し、OAuth クライアント ID を取得して google-drive-ocamlfuse をインストール。認証後、指定したディレクトリにマウントすることができます。"
 ---
 
 Ubuntu に Google Drive をマウントする方法を紹介します。
@@ -58,13 +58,40 @@ $ google-drive-ocamlfuse -id <クライアントID> -secret <クライアント�
 ```
 
 コマンドを実行すると、コンソールに URL が表示されます。
+
 URL をクリックして Google アカウントで認証します。
+
+![認証用 URL](images/url.png)
+
+この画面が出たら認証完了です。
+
+![認証完了](images/success.png)
 
 あとは以下のコマンドでお好きな場所にマウントしてください。
 
 ```:title=例としてgoogle-driveというディレクトリにマウント
 $ mkdir google-drive
-$ google-drive-ocamlfuse google-drive/
+$ google-drive-ocamlfuse google-drive
+```
+
+マウントされていることが確認できました。
+
+```:title=マウントされたディレクトリ
+$ ls -l google-drive/
+total 3745
+-rw-r--r-- 1 user user  374638 Apr 10  2023  sample.pdf
+-rw-r--r-- 1 user user 1276683 Apr 10  2023  example.pdf
+drwxr-xr-x 1 user user    4096 Jun  7  2023  sampleDir
+```
+
+デフォルトではマイドライブがマウントされています。
+
+## アンマウントする
+
+以下のコマンドで先ほどマウントしたディレクトリをアンマウントできます。
+
+```
+$ fusermount -u google-drive
 ```
 
 ## あとがき
