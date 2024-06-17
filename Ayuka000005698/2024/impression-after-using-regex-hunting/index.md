@@ -1,6 +1,6 @@
 ---
 title: "Regex Huntingを使ってみた感想"
-date: 
+date: 2024-06-17
 author: Ayuka000005698
 tags: [勉強,正規表現]
 
