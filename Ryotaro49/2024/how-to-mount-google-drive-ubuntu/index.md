@@ -67,6 +67,10 @@ URL をクリックして Google アカウントで認証します。
 
 ![認証完了](images/success.png)
 
+もし、GUI 環境がない場合は以下のリンクを参照して認証してください。
+
+- [google-drive-ocamlfuse で Google ドライブをマウント](https://qiita.com/cabbage_lettuce/items/c4544b3e5cd28caf04bc#%E8%AA%8D%E8%A8%BC)
+
 あとは以下のコマンドでお好きな場所にマウントしてください。
 
 ```:title=例としてgoogle-driveというディレクトリにマウント
