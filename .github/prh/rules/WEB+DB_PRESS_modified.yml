@@ -521,8 +521,6 @@ rules:
     expected: だいたい
   - pattern: 大抵
     expected: たいてい
-  - pattern: 大変
-    expected: たいへん
   - pattern: 沢山
     expected: たくさん
   - pattern:
@@ -2276,7 +2274,7 @@ rules:
     pattern:  /Chromeウェブストア|Chrome Webストア/
   - expected: Chromium
     pattern:  /\bChronium\b/
-  - expected: CloudFlare
+  - expected: Cloudflare
     pattern:  /\bCloudFlare\b/i
   - expected: Cloudinary
     pattern:  /\bCloudinary\b/i
