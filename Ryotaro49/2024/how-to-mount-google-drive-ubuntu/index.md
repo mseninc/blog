@@ -1,6 +1,6 @@
 ---
 title: "Ubuntu に Google Drive をマウントする方法"
-date:
+date: 2024-07-01
 author: Ryotaro49
 tags: [Ubuntu, Ubuntu 22.04, Google Drive]
 description: "Ubuntu に Google Drive をマウントする方法を紹介します。Google Drive API を有効化し、OAuth クライアント ID を取得して google-drive-ocamlfuse をインストール。認証後、指定したディレクトリにマウントすることができます。"
