@@ -8,7 +8,7 @@ description: "Cloudflare Zero Trust で Windows の Google Drive や Git を使�
 
 こんにちは、 kenzauros です。
 
-**Cloudflare Zero Trust** で Windows の Google Drive や Git を使う際に発生する証明書の問題を解決する方法を紹介します。基本的には各ツールが参照する証明書に Cloudflare の証明書を追加することで解決します。
+**Cloudflare Zero Trust** で Windows の Google Drive や Git を使う際に発生する証明書の問題を解決する方法を紹介します。基本的には各ツールが参照する証明書ストアに Cloudflare のルート証明書を追加することで解決します。
 
 なお、説明が不要な方は [一括設定用 PowerShell スクリプト](#一括設定用-powershell-スクリプト) をご利用いただくと便利です。
 
@@ -41,12 +41,12 @@ Windows では、証明書の信頼性を確認するために、*信頼され�
 
 ただ、一部のアプリケーションは、Windows の証明書ストアの証明書を使用せず、独自の証明書ストアを使用しているため、Cloudflare の証明書が信頼されていないとエラーになります。
 
-### Windows (OS) への証明書のインストール
+### Windows (OS) へのルート証明書のインストール
 
-本記事では Windows 自身の証明書ストアに証明書を追加する方法は紹介しません。
+本記事では Windows 自身の証明書ストアにルート証明書を追加する方法は紹介しません。
 *Zero Trust の設定で WARP からのインストールが有効になっている場合、自動的にインストールされているはずです。*
 
-手動で Windows の証明書ストアに証明書を追加する方法は、以下の公式ドキュメントの [Add the certificate to operating systems] - [Windows] の項を参照してください。
+手動で Windows の証明書ストアにルート証明書を追加する方法は、以下の公式ドキュメントの [Add the certificate to operating systems] - [Windows] の項を参照してください。
 
 - [Windows​​ - Install certificate manually · Cloudflare Zero Trust docs](https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/user-side-certificates/install-cloudflare-cert/#windows)
 
@@ -55,13 +55,13 @@ Windows では、証明書の信頼性を確認するために、*信頼され�
 
 ### PowerShell を管理者モードで開く
 
-各ツールへの証明書追加の操作には管理者権限が必要なため、**PowerShell を管理者モードで開きます**。
+各ツールへのルート証明書追加の操作には管理者権限が必要なため、**PowerShell を管理者モードで開きます**。
 
 以下、変数を使い回すため、 PowerShell を閉じず、同じセッションで操作してください。
 
 ### 事前確認
 
-OS に証明書がインストールされている場合は、`C:\ProgramData\Cloudflare\installed_cert.pem` が存在しているはずです。
+OS にルート証明書がインストールされている場合は、`C:\ProgramData\Cloudflare\installed_cert.pem` が存在しているはずです。
 
 
 このファイルが存在するか確認します。
@@ -71,9 +71,9 @@ $cf_cert = "C:\ProgramData\Cloudflare\installed_cert.pem"
 Test-Path "$cf_cert"
 ```
 
-`True` が返ってきたら、証明書がインストールされているため、次の手順に進みます。
+`True` が返ってきたら、ルート証明書がインストールされているため、次の手順に進みます。
 
-インストールされていない場合は「Windows (OS) への証明書のインストール」の項を参照してください。
+インストールされていない場合は「Windows (OS) へのルート証明書のインストール」の項を参照してください。
 
 ### Google Drive (File Stream)
 
@@ -87,23 +87,23 @@ Zero Trust に接続した状態だと、 Google Drive のファイルを開く�
 
 Google Drive File Stream の証明書設定の大まかな流れは以下の通りです。
 
-1. Google Drive File Stream が使用する証明書位置の特定
-2. Google Drive File Stream の証明書をコピー
-3. Cloudflare の証明書をコピーした証明書に追加
-4. Google Drive File Stream でコピーした証明書を使用するようレジストリを設定
+1. Google Drive File Stream が使用するルート証明書ファイル位置の特定
+2. Google Drive File Stream のルート証明書ファイルをコピー
+3. Cloudflare のルート証明書をコピーしたルート証明書ファイルに追加
+4. Google Drive File Stream でコピーしたルート証明書ファイルを使用するようレジストリを設定
 5. Google Drive File Stream を再起動
 
 概要は Cloudflare Zero Trust のドキュメントにも掲載されています。
 
 - [​​Google Drive for desktop - Install certificate manually · Cloudflare Zero Trust docs](https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/user-side-certificates/install-cloudflare-cert/#google-drive-for-desktop)
 
-#### Google Drive File Stream が使用する証明書位置の特定
+#### Google Drive File Stream が使用するルート証明書ファイル位置の特定
 
-*Google Drive File Stream が使用する証明書は、インストールディレクトリに配置*されています。
+*Google Drive File Stream が使用するルート証明書ファイルは、インストールディレクトリに配置*されています。
 
-ただし、**Google Drive File Stream のインストールディレクトリは、バージョンによって異なる**ため、最新バージョンの証明書を特定する必要があります。
+ただし、**Google Drive File Stream のインストールディレクトリは、バージョンによって異なる**ため、最新バージョンのパスを特定する必要があります。
 
-以下の PowerShell スクリプトを使用して、Google Drive File Stream の証明書の位置を特定します。
+以下の PowerShell スクリプトを使用して、Google Drive File Stream のルート証明書ファイルの位置を特定します。
 
 ```powershell:title=PowerShell
 $gdfs_app_root = "C:\Program Files\Google\Drive File Stream"
@@ -111,9 +111,9 @@ $gdfs_cert = Get-ChildItem -Directory -Path "${gdfs_app_root}" | Where-Object { 
 Write-Host "Google Drive File Stream のルート証明書: ${gdfs_cert}"
 ```
 
-#### Google Drive File Stream の証明書をコピー
+#### Google Drive File Stream のルート証明書ファイルをコピー
 
-まず、Google Drive File Stream の証明書をコピーします。
+まず、Google Drive File Stream のルート証明書ファイルをコピーします。
 
 コピー先はどこでもかまいませんが、どのユーザーでも利用できるように、ここではパブリックフォルダにコピーします。
 
@@ -122,9 +122,9 @@ $cert_path = "C:\Users\Public\GoogleDriveRootCerts.pem"
 Copy-Item "$gdfs_cert" "$cert_path"
 ```
 
-#### Cloudflare の証明書をコピーした証明書に追加
+#### Cloudflare のルート証明書をコピーしたルート証明書ファイルに追加
 
-次に、Cloudflare の証明書をコピーした証明書に追加します。
+次に、Cloudflare のルート証明書をコピーしたルート証明書ファイルに追加します。
 
 ```powershell:title=PowerShell
 Get-Content "$cf_cert" | Add-Content "$cert_path"
@@ -132,9 +132,9 @@ Get-Content "$cf_cert" | Add-Content "$cert_path"
 
 ※ `$cf_cert` は事前確認で使用した変数です。
 
-#### Google Drive File Stream でコピーした証明書を使用するようレジストリを設定
+#### Google Drive File Stream でコピーしたルート証明書ファイルを使用するようレジストリを設定
 
-Google Drive File Stream が使用する証明書を変更するために、レジストリを設定します。
+Google Drive File Stream が使用するルート証明書ファイルを変更するため、レジストリを設定します。
 
 ```powershell:title=PowerShell
 reg ADD "HKEY_LOCAL_MACHINE\Software\Google\DriveFS" /f /v TrustedRootCertsFile /t REG_SZ /d "$cert_path"
@@ -154,32 +154,32 @@ $gdfs_exe = Join-Path $gdfs_app_root "GoogleDriveFS.exe"
 Start-Process -FilePath $gdfs_exe
 ```
 
-これで Google Drive for Desktop が Cloudflare の証明書を追加した証明書ファイルを参照するようになったはずです。
+これで Google Drive for Desktop が Cloudflare のルート証明書を追加したルート証明書ファイルを参照するようになったはずです。
 
 再起動されたら、Google Drive File Stream でファイルが開けることを確認します。
 
 
 ### Git for Windows
 
-Git for Windows の場合は、Git が参照している証明書ファイルに Cloudflare の証明書を追加します。
+Git for Windows の場合は、Git が参照しているルート証明書ファイルに Cloudflare のルート証明書を追加します。
 
 大まかな流れは以下の通りです。
 
-1. Git for Windows が使用する証明書位置の特定
-2. Cloudflare の証明書を Git for Windows の証明書に追加
+1. Git for Windows が使用するルート証明書位置の特定
+2. Cloudflare のルート証明書を Git for Windows のルート証明書ファイルに追加
 
-#### Git for Windows が使用する証明書位置の特定
+#### Git for Windows が使用するルート証明書位置の特定
 
-Git for Windows が使用する証明書ファイルの位置は `git config --get http.sslcainfo` コマンドで確認できます。
+Git for Windows が使用するルート証明書ファイルの位置は `git config --get http.sslcainfo` コマンドで確認できます。
 
 ```powershell:title=PowerShell
 $git_cert = git config --get http.sslcainfo
 Write-Host "Git for Windows のルート証明書: $git_cert"
 ```
 
-#### Cloudflare の証明書を Git for Windows の証明書に追加
+#### Cloudflare のルート証明書を Git for Windows のルート証明書ファイルに追加
 
-Git for Windows が使用する証明書ファイルに Cloudflare の証明書を追加します。
+Git for Windows が使用するルート証明書ファイルに Cloudflare のルート証明書を追加します。
 
 ```powershell:title=PowerShell
 Get-Content "$cf_cert" | Add-Content "$git_cert"
@@ -192,9 +192,9 @@ Get-Content "$cf_cert" | Add-Content "$git_cert"
 
 ### Node.js
 
-Node.js で追加の証明書を設定するには、環境変数 `NODE_EXTRA_CA_CERTS` に証明書ファイルのパスを指定します。
+Node.js で追加のルート証明書を設定するには、環境変数 `NODE_EXTRA_CA_CERTS` にルート証明書ファイルのパスを指定します。
 
-Windows で Node.js で使う追加の証明書を指定する環境変数 `NODE_EXTRA_CA_CERTS` を設定する場合は PowerShell で以下のようにします。
+Windows で Node.js で使う追加のルート証明書を指定する環境変数 `NODE_EXTRA_CA_CERTS` を設定する場合は PowerShell で以下のようにします。
 
 ```powershell:title=PowerShell
 $cf_cert = "C:\ProgramData\Cloudflare\installed_cert.pem"
@@ -244,14 +244,14 @@ cd cloudflare-zero-trust-integration
 
 ※ Zero Trust ネットワークに接続していない状態（WARP Off の状態）で行ってください。
 
-証明書の追加が完了したら、各ツールを再起動して、証明書の追加が正常に行われたか確認してください。
+ルート証明書の追加が完了したら、各ツールを再起動して、正常に動作するか確認してください。
 
 ## まとめ
 
-Windows の Google Drive や Git を使う際に発生する証明書の問題を解決する方法を紹介しました。
+Windows の Google Drive や Git を使う際に発生するルート証明書の問題を解決する方法を紹介しました。
 
-基本的には各ツールが参照する証明書に Cloudflare の証明書を追加することで解決します。
+基本的には各ツールが参照するルート証明書ファイルに Cloudflare のルート証明書を追加することで解決します。
 
-証明書の追加は、手動で行うこともできますが、一括設定用の PowerShell スクリプトを使用すると、簡単に証明書を追加できます。
+ルート証明書の追加は、手動で行うこともできますが、一括設定用の PowerShell スクリプトを使用すると、簡単に追加できます。
 
 どなたかのお役に立てれば幸いです。
