@@ -194,15 +194,7 @@ Get-Content "$cf_cert" | Add-Content "$git_cert"
 
 Node.js で追加の証明書を設定するには、環境変数 `NODE_EXTRA_CA_CERTS` に証明書ファイルのパスを指定します。
 
-ちなみに Node.js を直接使用していなくても、 Visual Studio Code など Node.js ベースで動作しているプログラムでは GitHub Copilot など拡張機能の動作が制限される場合があるようです。
-
-私の場合、 Visual Studio Code で GitHub Copilot の拡張機能が以下のようなエラーで動作しなくなっていました。
-
-```:title=VS&nbsp;Code&nbsp;GitHub&nbsp;Copilot拡張機能のエラー
-[error] [ghostText] Error on ghost text request: FetchError: The pending stream has been canceled (caused by: unable to get local issuer certificate)
-```
-
-Node.js で使う追加の証明書を指定する環境変数 `NODE_EXTRA_CA_CERTS` を Windows で設定する場合は、 PowerShell で以下のようにします。
+Windows で Node.js で使う追加の証明書を指定する環境変数 `NODE_EXTRA_CA_CERTS` を設定する場合は PowerShell で以下のようにします。
 
 ```powershell:title=PowerShell
 $cf_cert = "C:\ProgramData\Cloudflare\installed_cert.pem"
