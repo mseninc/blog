@@ -52,6 +52,20 @@ VS Code に限れば、 [win-ca](https://marketplace.visualstudio.com/items?item
 
 運用ポリシー的に「GitHub に関する証明書をいちいち検査しなくて OK」とできるのであれば、ポリシー設定で除外してしまったほうがシンプルでしょう。
 
+Cloudflare の公式ドキュメントにも以下のように一部のアプリケーションでは Do Not Inspect ポリシーを追加する必要があるとされています。
+
+> Some applications require the use of a publicly trusted certificate — they do not trust the system certificate, nor do they have a configurable private store. For these applications to function, you must add a Do Not Inspect policy for the domains or IPs that the application relies on.
+> 
+> アプリケーションによっては、一般に信頼されている証明書を使用する必要があります。これらのアプリケーションは、システム証明書を信頼しませんし、設定可能なプライベートストアも持っていません。このようなアプリケーションを機能させるには、アプリケーションが依存するドメインまたはIPに対してDo Not Inspectポリシーを追加する必要があります。
+> 
+> <cite>[​Add the certificate to applications​ - Install certificate manually · Cloudflare Zero Trust docs](https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/user-side-certificates/install-cloudflare-cert/#add-the-certificate-to-applications)</cite>
+
+なお、 GitHub Copilot の公式ドキュメントにも証明書関連のトラブルシューティング方法がいくつか掲載されています。
+
+- [GitHub Copilot のネットワーク エラーのトラブルシューティング - GitHub ドキュメント](https://docs.github.com/en/copilot/troubleshooting-github-copilot/troubleshooting-network-errors-for-github-copilot)
+
+この中でもっともユーザー・管理者ともに簡便な方法はやはりプロキシのポリシーで GitHub Copilot が利用するドメイン名を検査しないように設定することでしょう。
+
 
 ## 設定方法
 
@@ -59,7 +73,7 @@ VS Code に限れば、 [win-ca](https://marketplace.visualstudio.com/items?item
 
 - [Troubleshooting firewall settings for GitHub Copilot - GitHub Docs](https://docs.github.com/en/copilot/troubleshooting-github-copilot/troubleshooting-firewall-settings-for-github-copilot)
 
-| ドメイン                         | 正規表現                      |
+| 対象ドメイン                     | 正規表現                      |
 | -------------------------------- | ----------------------------- |
 | `github.com`<br>`api.github.com` | `^(api\.)?github\.com$`       |
 | `*.githubusercontent.com`        | `.*\.githubusercontent\.com$` |
