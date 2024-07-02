@@ -1,5 +1,5 @@
 ---
-title: "[Cloudflare Zero Trust] GitHub Copilot を使えるようにする"
+title: "[Cloudflare Zero Trust] GitHub Copilot を使えるようにファイアウォールポリシーを設定する"
 date: 
 author: kenzauros
 tags: [Cloudflare Zero Trust, GitHub Copilot, Visual Studio Code]
@@ -10,7 +10,7 @@ description: "Cloudflare Zero Trust が導入された環境で、Visual Studio 
 
 Cloudflare Zero Trust が導入された環境で、 Visual Studio Code (VS Code) と [GitHub Copilot](https://copilot.github.com/) を使っている場合に証明書エラーを回避するための設定方法を紹介します。
 
-## はじめに
+## エラー
 
 VS Code で GitHub Copilot を使おうとすると、 Copilot のアイコンに停止マークがつき、 OUTPUT（出力）ペインに以下のようなエラーが表示されることがあります。
 
@@ -44,6 +44,9 @@ VS Code で GitHub Copilot を使おうとすると、 Copilot のアイコン�
 
 いずれも原因は **`unable to get local issuer certificate`** となっており、 SSL/TLS 証明書の検査が行われたことで、証明書エラーが発生したことを示しています。
 
+
+## 解決策
+
 この問題は Cloudflare に限らず、 zScaler や他のプロキシ環境でも発生するため、 GitHub でも議論されています。
 
 - [error: "unable to get local issuer certificate" behind zScaler proxy · community · Discussion #8866](https://github.com/orgs/community/discussions/8866)
@@ -52,7 +55,9 @@ VS Code に限れば、 [win-ca](https://marketplace.visualstudio.com/items?item
 
 運用ポリシー的に「GitHub に関する証明書をいちいち検査しなくて OK」とできるのであれば、ポリシー設定で除外してしまったほうがシンプルでしょう。
 
-Cloudflare の公式ドキュメントにも以下のように一部のアプリケーションでは Do Not Inspect ポリシーを追加する必要があるとされています。
+ということで、今回は解決策として **Cloudflare Zero Trust の HTTP ファイアウォールポリシーで GitHub Copilot が利用するドメイン名を検査しないように設定**します。
+
+Cloudflare の公式ドキュメントにも以下のように一部のアプリケーションでは *Do Not Inspect （検査しない）* ポリシーを追加する必要があるとされています。
 
 > Some applications require the use of a publicly trusted certificate — they do not trust the system certificate, nor do they have a configurable private store. For these applications to function, you must add a Do Not Inspect policy for the domains or IPs that the application relies on.
 > 
@@ -64,12 +69,12 @@ Cloudflare の公式ドキュメントにも以下のように一部のアプリ
 
 - [GitHub Copilot のネットワーク エラーのトラブルシューティング - GitHub ドキュメント](https://docs.github.com/en/copilot/troubleshooting-github-copilot/troubleshooting-network-errors-for-github-copilot)
 
-この中でもっともユーザー・管理者ともに簡便な方法はやはりプロキシのポリシーで GitHub Copilot が利用するドメイン名を検査しないように設定することでしょう。
+この中でユーザー・管理者ともに簡便な方法はやはりプロキシのポリシーで対象のドメイン名を検査しないように設定することでしょう。
 
 
 ## 設定方法
 
-以下のドキュメントにある URL を参考に、 **Cloudflare Zero Trust のファイアウォールポリシーで GitHub Copilot が利用するドメイン名を検査しないように設定**します。
+前述のとおり **Cloudflare Zero Trust の HTTP ファイアウォールポリシーで GitHub Copilot が利用するドメイン名を検査しないように設定**します。対象のドメイン名については以下のドキュメントにある URL を参考に正規表現で指定することにします。
 
 - [Troubleshooting firewall settings for GitHub Copilot - GitHub Docs](https://docs.github.com/en/copilot/troubleshooting-github-copilot/troubleshooting-firewall-settings-for-github-copilot)
 
