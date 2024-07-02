@@ -87,7 +87,7 @@ Zero Trust に接続した状態だと、 Google Drive のファイルを開く�
 
 Google Drive File Stream の証明書設定の大まかな流れは以下の通りです。
 
-1. Google Drive File Stream が使用するルート証明書ファイル位置の特定
+1. Google Drive File Stream が使用するルート証明書ファイルの特定
 2. Google Drive File Stream のルート証明書ファイルをコピー
 3. Cloudflare のルート証明書をコピーしたルート証明書ファイルに追加
 4. Google Drive File Stream でコピーしたルート証明書ファイルを使用するようレジストリを設定
@@ -97,7 +97,7 @@ Google Drive File Stream の証明書設定の大まかな流れは以下の通�
 
 - [​​Google Drive for desktop - Install certificate manually · Cloudflare Zero Trust docs](https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/user-side-certificates/install-cloudflare-cert/#google-drive-for-desktop)
 
-#### Google Drive File Stream が使用するルート証明書ファイル位置の特定
+#### Google Drive File Stream が使用するルート証明書ファイルの特定
 
 *Google Drive File Stream が使用するルート証明書ファイルは、インストールディレクトリに配置*されています。
 
@@ -165,12 +165,12 @@ Git for Windows の場合は、Git が参照しているルート証明書ファ
 
 大まかな流れは以下の通りです。
 
-1. Git for Windows が使用するルート証明書位置の特定
+1. Git for Windows が使用するルート証明書ファイルの特定
 2. Cloudflare のルート証明書を Git for Windows のルート証明書ファイルに追加
 
-#### Git for Windows が使用するルート証明書位置の特定
+#### Git for Windows が使用するルート証明書ファイルの特定
 
-Git for Windows が使用するルート証明書ファイルの位置は `git config --get http.sslcainfo` コマンドで確認できます。
+Git for Windows が使用するルート証明書ファイルのパスは `git config --get http.sslcainfo` コマンドで確認できます。
 
 ```powershell:title=PowerShell
 $git_cert = git config --get http.sslcainfo
