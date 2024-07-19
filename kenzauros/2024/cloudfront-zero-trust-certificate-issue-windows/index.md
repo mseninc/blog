@@ -1,6 +1,6 @@
 ---
 title: "[Cloudflare Zero Trust] Windows の Google Drive や Git を使えるようにする"
-date: 
+date: 2024-07-19
 author: kenzauros
 tags: [Cloudflare Zero Trust,Google Drive,Git,Node.js,Windows,winget]
 description: "Cloudflare Zero Trust で Windows の Google Drive や Git を使う際に発生する証明書の問題を解決する方法を紹介します。基本的には各ツールが参照する証明書に Cloudflare の証明書を追加することで解決します。"
