@@ -1,6 +1,6 @@
 ---
 title: "[Cloudflare Zero Trust] GitHub Copilot を使えるようにファイアウォールポリシーを設定する"
-date: 
+date: 2024-07-22
 author: kenzauros
 tags: [Cloudflare Zero Trust, GitHub Copilot, Visual Studio Code]
 description: "Cloudflare Zero Trust が導入された環境で、Visual Studio Code (VS Code) と GitHub Copilot を使っている場合に証明書エラーを回避するための設定方法を紹介します。基本的には Cloudflare Zero Trust の HTTP ファイアウォールポリシーで GitHub Copilot が利用するドメイン名を検査しないように設定するだけです。"
