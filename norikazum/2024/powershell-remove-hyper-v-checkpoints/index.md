@@ -43,7 +43,7 @@ Hyper-Vマネージャーからコピーするのが視覚的で分かり易い�
 例として、`仮想マシンの名前=vm1`, `チェックポイントの名前をコピー=chekpoint1` とします。
 
 ```powershell
-Remove-VMCheckpoint -VMName "jun-int-dns-mail" -Name "ARCSERVE UDP Host Based VM Backup Checkpoint"
+Remove-VMCheckpoint -VMName "vm1" -Name "chekpoint1"
 ```
 
 実行結果は以下のようになります。
