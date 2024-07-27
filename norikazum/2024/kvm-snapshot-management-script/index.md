@@ -129,6 +129,11 @@ echo "Operation completed."
 
 ### 詳細なスクリプト機能
 
+`<vm_name>` が分からない時は、標準コマンドの `virsh list` で取得し確認します。
+
+![virsh list の結果](images/2024-07-27_16h32_43.png "virsh list の結果")
+
+
 #### 1. スナップショットの作成 (`snap`)
 
 スナップショットを作成するには、以下のコマンドを使用します：
@@ -168,6 +173,9 @@ kvm-snap.sh list <vm_name>
 ```
 
 このコマンドは、指定されたVMに関連する全てのスナップショットを表示します。
+
+以下のような出力になります。
+![kvm-snap.sh list の結果](images/2024-07-27_16h35_48.png "kvm-snap.sh list の結果")
 
 ### アクションの確認
 
