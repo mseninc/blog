@@ -56,4 +56,4 @@ Not Found
 
 ## 参考
 
-- [stackoverflow | docker Buildx "ERROR: BuildKit is enabled but the buildx component is missing or broken" error](https://stackoverflow.com/questions/75739545/docker-buildx-error-buildkit-is-enabled-but-the-buildx-component-is-missing-or)
+- [windows subsystem for linux - docker Buildx "ERROR: BuildKit is enabled but the buildx component is missing or broken" error - Stack Overflow](https://stackoverflow.com/questions/75739545/docker-buildx-error-buildkit-is-enabled-but-the-buildx-component-is-missing-or)
