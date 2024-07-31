@@ -2,7 +2,7 @@
 title: "[Docker] ERROR: BuildKit is enabled but the buildx component is missing or broken エラーの解決方法"
 date:
 author: Ryotaro49
-tags: []
+tags: [Docker, Ubuntu, Ubuntu 22.04]
 description: "Docker の ERROR: BuildKit is enabled but the buildx component is missing or broken エラー解決法を解説します。破損したファイルが残っていることが原因の場合があるため、そのファイルを削除することで対処します。"
 ---
 
