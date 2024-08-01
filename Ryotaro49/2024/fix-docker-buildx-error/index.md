@@ -10,7 +10,9 @@ description: "Docker の ERROR: BuildKit is enabled but the buildx component is 
 
 本記事では下記の環境で動作確認を行っています。
 
-- Ubuntu 22.04.4 LTS
+- Windows 11
+- Ubuntu 22.04.4 LTS (WSL2)
+- Docker Desktop 4.32.0
 - Docker version 27.0.3
 
 ## 解決方法
