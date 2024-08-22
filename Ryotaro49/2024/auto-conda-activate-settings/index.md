@@ -1,34 +1,34 @@
 ---
-title: "ログイン時に自動で conda 環境の割り当てを行う"
+title: "ログイン時に自動で Conda 環境の割り当てを行う"
 date: 
 author: Ryotaro49
-tags: [conda, Ubuntu, Ubuntu 22.04, bash]
-description: "conda 環境をログイン時に自動で割り当てる方法を紹介します。手順は簡単で、.bash_profile に数行のコマンドを追加するだけです。"
+tags: [Conda, Ubuntu, Ubuntu 22.04, bash, Python]
+description: "Conda 環境をログイン時に自動で割り当てる方法を紹介します。手順は簡単で、.bash_profile に数行のコマンドを追加するだけです。"
 ---
 
-conda を使いたいとき、ログインするたびに毎回 conda activate をするのは面倒です。
+Conda を使いたいとき、ログインするたびに毎回 conda activate をするのは面倒です。
 
-そこで、Ubuntu へのログイン時に自動で conda 環境の割り当てる方法を紹介します。
+そこで、Ubuntu へのログイン時に自動で Conda 環境の割り当てる方法を紹介します。
 
 本記事では下記の環境で動作確認を行っています。
 
 - Ubuntu 22.04.4 LTS
-- conda 24.5.0
+- Conda 24.5.0
 
 ## 方法
 
-自動で conda 環境の割り当てるユーザーの `/home/user/.bash_profile` に 以下を記載します。
+自動で Conda 環境の割り当てるユーザーの `/home/user/.bash_profile` に 以下を記載します。
 
 `/home/user/.bash_profile` がない場合は新規作成してください。
 
 ```
 . /path/to/conda/etc/profile.d/conda.sh
-conda activate [conda 環境名]
+conda activate [Conda 環境名]
 ```
 
-**conda を初期化するスクリプトの起動コマンド**と**アクティベートコマンド**を記載することで、ユーザーログイン時に自動で conda 環境を割り当てています。
+**Conda を初期化するスクリプトの起動コマンド**と**アクティベートコマンド**を記載することで、ユーザーログイン時に自動で Conda 環境を割り当てています。
 
-`/path/to/conda` の部分には conda のインストールパスを、[conda 環境名] の部分はログイン時に activate したい環境名を記載してください。
+`/path/to/conda` の部分には Conda のインストールパスを、[Conda 環境名] の部分はログイン時に activate したい環境名を記載してください。
 
 ## まとめ
 
