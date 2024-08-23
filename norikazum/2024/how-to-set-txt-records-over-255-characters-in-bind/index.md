@@ -22,7 +22,7 @@ description: "BIND"
 ## 回避策
 [RFC 4408](https://datatracker.ietf.org/doc/html/rfc4408#section-3.1.3) で定義されているように、複数の文字列を使用することです。TXT リソースレコードの文字列コンテンツは、以下の方法で連結されます。
 
-```
+```bash:title=zone&nbsp;string
 example.com. 3600 IN TXT "first string" " second string"
 ```
 
@@ -35,7 +35,7 @@ example.com. 3600 IN TXT "first string" " second string"
 ※値はマスキングしています。
 
 
-```
+```bash:title=zone&nbsp;string
 DKIM-2024081720454._domainkey.example.com. IN TXT (
     "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgAAAQEAzOOQxLUv9HVtTtfAZ0rlBTcZOYVEiLCVtmVyzU"
     "GXUO+S9-gIAKDyTnkv7H70DUlkuCduBe+6efwYwpZSACCaQ3TILF2ZDg4WL9S/3KBWIU7jEc/jEmuW/Ii0ae+eacyAjAWQRtDZovH"
