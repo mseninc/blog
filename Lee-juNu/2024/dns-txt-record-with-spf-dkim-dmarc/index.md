@@ -1,18 +1,19 @@
 ---
-title: ""
+title: "DNS レコードとは"
 date: 
 author: Lee-juNu
-tags: []
-description: ""
+tags: [DNS Record, SPF, DKIM, DMARC ]
+description: "DNS レコードに関しての記事を書いています。
+"
 ---
 
 ## 挨拶
-最近メールサーバーを学んでいるリリです。勉強しながら学んだことを整理するためにブログに上げて見ようかと思います。
+最近メールサーバーを学んでいるリリです。勉強したことを整理するためにブログに記事として書いてみました。
 
 
 ## DNS TXT レコードとは？
 
-本来の TXT レコードは人が読めるノートを入力する用途だったらしいです（コーディングするときのコメント見たいなイメージですね）
+本来の TXT レコードは人が読めるノートを入力する用途だったらしいです。昔の TXT レコードはコーディングするときのコメント見たいな説明を目的としていたイメージですね。
 
 | example.com | レコードのタイプ： | 値：                                       | TTL   |
 | ----------- | --------- | ------------------------------------------------- | ----- |
@@ -22,13 +23,13 @@ description: ""
 
 現在は機械が読めるレコードを一緒に追加できるようになっています。
 
-追加可能なレコードなりすましまたはスパムなどを防ぐことができる SPF・DKIM・DMARC です。
-
+追加可能なレコードの機能としてはなりすましまたはスパムなどを防ぐことができる SPF・DKIM・DMARC です。
+順番通り調べて見ます。
 
 ## SPF（Sender Policy Framework）レコード
 
 ### DNS SPF とは？
-SPF TXT レコードはド特定ドメインからのメール送信が許されたすべてのサーバーをリスト化した一種のDNS TXTレコードです。
+SPF TXT レコードは特定ドメインからのメール送信が許されたすべてのサーバーをリスト化した一種の DNS TXTレコードです。
 
 ### SPF 作成
 
@@ -43,7 +44,7 @@ v=spf1 ip4:192.0.2.0 ip4:192.0.2.1 include:examplesender.email -all
 - ` ~all ` 列挙されないすべてのアドレスをスパムなどで表示はするが許容はしない
 - ` +all ` 列挙されなくっても許容する。
 
-ドメインと結びつける SPF は一つだけ許可されます（[RFC4408](https://datatracker.ietf.org/doc/html/rfc4408))）。
+ドメインと結びつける SPF は一つだけ許可されます（[RFC4408](https://datatracker.ietf.org/doc/html/rfc4408)）。
 > [3.1.2](https://datatracker.ietf.org/doc/html/rfc4408#section-3.1.2).  Multiple DNS Records
    A domain name MUST NOT have multiple records that would cause an
    authorization check to select more than one record.  See [Section 4.5](https://datatracker.ietf.org/doc/html/rfc4408#section-4.5)
@@ -76,13 +77,14 @@ DKIMレコードも SPF と同じく DNS TXT レコードに書かれます。
 
 ## DMARC（Domain-based Message Authenication Reporting And Conformance）レコード
 
- SPF や DKIMと併用することで送信認証をより強固にし、なりすましなどを防ぐしくみです。 DMARC では、SPF や DKIM と組み合わせて、認証が失敗したときにバウンスさせるかスパムフォルダーに入れるかの振る舞いを設定します。
-
+ SPF や DKIMと併用することで送信認証をより強固にし、なりすましなどを防ぐしくみです。 DMARC では、SPF や DKIM と組み合わせて、認証が失敗したときにバウンスさせるかスパムフォルダーに入れるかなおの振る舞いを設定します。
 
 ```
 v=DMARC1; p=quarantine; adkim=s; aspf=s; 
 ```
 
+## 終わりに
+メールサーバー移行の件を聞いてメールサーバーを一度見てみたいと思いました案件をもらった後に調べている途中一番多く振れたのはこの DNS レコードでした。さすがまだ知らないパソコンの知識を学ぶことは楽しいですね。また別の知識を持ってきます。
 
 ## 参考サイト
 
