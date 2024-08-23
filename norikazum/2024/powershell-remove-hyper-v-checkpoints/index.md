@@ -24,7 +24,7 @@ description: ""
 
 調べたところ、以下のコマンドで削除できました。
 
-```powershell
+```powershell:title=Remove-VMCheckpoint&nbsp;usage
 Remove-VMCheckpoint -VMName "仮想マシンの名前" -Name "チェックポイントの名前"
 ```
 
@@ -42,7 +42,7 @@ Hyper-Vマネージャーからコピーするのが視覚的で分かり易い�
 
 例として、`仮想マシンの名前=vm1`, `チェックポイントの名前をコピー=chekpoint1` とします。
 
-```powershell
+```powershell:title=vm1のchekpoint1を削除するコマンド
 Remove-VMCheckpoint -VMName "vm1" -Name "chekpoint1"
 ```
 
