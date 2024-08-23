@@ -6,7 +6,7 @@ tags: [KVM,script]
 description: "KVMのスナップショットの作成、復元、削除、およびリスト表示するスクリプトの説明。"
 ---
 
-今回の記事は、`KVM（Kernel-based Vikortual Machine）` を使用する際、仮想マシン（VM）のスナップショットの作成、復元、削除、およびリストの表示するためのbashスクリプトを紹介します。
+今回の記事は、`KVM（Kernel-based Vikortual Machine）` で動作する仮想マシンに対し、スナップショットの作成・復元・削除・リスト表示するためのbashスクリプトの紹介です。
 
 このスクリプトを利用すれば、作業を簡素化し、VMのスナップショットを効率的に管理できます。
 
@@ -25,7 +25,7 @@ description: "KVMのスナップショットの作成、復元、削除、およ
 
 スクリプトを使用するには、以下の構文を使用します。
 
-```bash
+```bash:title=kvm.snap.sh&nbsp;usage
 kvm-snap.sh {snap|restore|delete|list} <vm_name> [snapshot_name]
 ```
 
@@ -38,7 +38,7 @@ kvm-snap.sh {snap|restore|delete|list} <vm_name> [snapshot_name]
 
 以下が`kvm-snap.sh`スクリプトのコードです。
 
-```bash
+```bash:title=kvm.snap.sh&nbsp;code
 #!/bin/bash
 
 # 関数定義
@@ -138,7 +138,7 @@ echo "Operation completed."
 
 スナップショットを作成するには、以下のコマンドを使用します。
 
-```bash
+```bash:title=kvm.snap&nbsp;snap&nbsp;usage
 kvm-snap.sh snap <vm_name> <snapshot_name>
 ```
 
@@ -148,7 +148,7 @@ kvm-snap.sh snap <vm_name> <snapshot_name>
 
 スナップショットを復元するには、次のコマンドを実行します。
 
-```bash
+```bash:title=kvm.snap&nbsp;restore&nbsp;usage
 kvm-snap.sh restore <vm_name> <snapshot_name>
 ```
 
@@ -158,7 +158,7 @@ kvm-snap.sh restore <vm_name> <snapshot_name>
 
 スナップショットを削除するには、次のコマンドを実行します。
 
-```bash
+```bash:title=kvm.snap&nbsp;delete&nbsp;usage
 kvm-snap.sh delete <vm_name> <snapshot_name>
 ```
 
@@ -168,7 +168,7 @@ kvm-snap.sh delete <vm_name> <snapshot_name>
 
 すべてのスナップショットを表示するには、以下のコマンドを使用します。
 
-```bash
+```bash:title=kvm.snap&nbsp;list&nbsp;usage
 kvm-snap.sh list <vm_name>
 ```
 
@@ -181,7 +181,7 @@ kvm-snap.sh list <vm_name>
 
 `snap`、`restore`、および`delete`のアクションについては、スクリプトが実行前に確認を求めます。
 
-```bash
+```bash:title=kvm.snap&nbsp;proceed
 Do you want to proceed? (Y/N)
 ```
 
