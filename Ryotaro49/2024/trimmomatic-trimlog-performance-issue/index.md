@@ -49,11 +49,13 @@ Conda で Trimmomatic をインストールしている方は、バイナリー�
 
 インストール後、解凍するだけで使用できます。
 
-## ネットワーク上のディレクトリで実行している場合は、ローカルで実行する
+## ネットワーク上のディレクトリに出力している場合は、ローカルに出力する
 
-こちらは使用する fastq ファイルによっては大幅に実行時間が変わります。
+ネットワーク上のディレクトリを出力先にしている場合は、ローカルを出力先にすることで速度が改善するかもしれません。
 
-ネットワーク上のディレクトリで実行する必要がない場合は、ローカルで実行することを推奨します。
+I/O の速度がボトルネックになり遅くなっていることがあるためです。
+
+ネットワーク上のディレクトリに出力する必要がない場合は、ローカルに出力することを推奨します。
 
 ## まとめ
 
@@ -63,7 +65,7 @@ Conda で Trimmomatic をインストールしている方は、バイナリー�
 - 使用している Trimmomatic のインストール方法の見直し
 - 実行場所の見直し
 
-[fastp](https://github.com/OpenGene/fastp) や [BBDuk](https://www.seqanswers.com/forum/bioinformatics/bioinformatics-aa/37399-introducing-bbduk-adapter-quality-trimming-and-filtering?t=42776) 等の他のツールを使うのも手段として有効かもしれません。
+[fastp](https://github.com/OpenGene/fastp) や [BBDuk](https://www.seqanswers.com/forum/bioinformatics/bioinformatics-aa/37399-introducing-bbduk-adapter-quality-trimming-and-filtering?t=42776) 等の他のツールを使うのも有効な手段かもしれません。
 
 本記事が少しでも改善のお役に立てれば幸いです。
 
