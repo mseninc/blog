@@ -16,6 +16,15 @@ Trimmomatic の処理速度が遅い時にオプション等を見直すこと�
 - Ubuntu Server 22.04.3 LTS
 - Trimmomatic v0.39
 
+## Trimmomatic とは
+
+Trimmomatic についての説明は以下の記事に書かれています。
+
+>Trimmomatic は Java で書かれているアダプタートリミングツールである。Trimmomatic はアダプターの除去のみならず、リードの末端から一定数の塩基をトリムしたりする、簡単なクオリティフィルタリングも行える。シングルエンドリードのみならずペアエンドリードにも対応している。また、gzip （拡張子 .fq.gz など）や bzip2 （拡張子 .fq.bz2 など）で圧縮されている FASTQ ファイルを展開せずに処理することができる。
+> <cite>[生命情報科学](https://bi.biopapyrus.jp/rnaseq/qc/trimmomatic.html)</cite>
+
+インストール方法はバイナリファイルをダウンロードする方法か Conda でインストールする方法があります。
+
 ## `-trimlog` オプション
 
 `-trilmlog` オプションをつけることでログを出力できますが、筆者の環境では大幅に実行時間が増加することを確認しています。
