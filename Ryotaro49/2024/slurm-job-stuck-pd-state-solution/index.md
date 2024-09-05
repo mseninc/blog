@@ -1,5 +1,5 @@
 ---
-title: "[Slurm] Nodes required for job are DOWN, DRAINED or reserved for jobs in higher priority partitions エラーの解決方法"
+title: "[Slurm] Nodes required for job are DOWN, DRAINED or reserved for jobs in higher priority partitions の解決方法"
 date: 
 author: Ryotaro49
 tags: [Slurm, Ubuntu Server 22.04, Ubuntu]
@@ -13,9 +13,11 @@ Slurm でジョブを投入した際、ジョブが PD 状態のまま実行さ�
 - Ubuntu Server 22.04.3 LTS
 - Slurm v22.05.2
 
-## エラーの確認
+## ステータスの確認
 
-ジョブのステータスを確認すると、以下のようなエラーメッセージが表示されていました。
+ジョブのステータスを確認すると、以下のようなメッセージが表示されていました。
+
+他にジョブは登録されてませんが、PD のままになっています。
 
 ```log:title=squeue&nbsp;の結果
 JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
