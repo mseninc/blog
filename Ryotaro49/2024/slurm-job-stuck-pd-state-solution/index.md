@@ -47,7 +47,7 @@ NodeName=localhost Arch=x86_64 CoresPerSocket=32
    Reason=Kill task failed [root@2024-08-08T19:12:57]
 ```
 
-なんらかのプロセスが終了せずに残っていたことが原因で、Slurm のジョブ実行が一時的に停止していたと考えられます。
+何らかのプロセスが終了せずに残っていたことが原因で、Slurm のジョブ実行が一時的に停止していたと考えられます。
 
 ## 解決方法
 
