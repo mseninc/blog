@@ -1,9 +1,9 @@
 ---
-title: "[Slurm] Nodes required for job are DOWN, DRAINED or reserved for jobs in higher priority partitions の解決方法"
+title: "[Slurm] ジョブが PD 状態のまま実行されない場合の解決方法"
 date: 
 author: Ryotaro49
 tags: [Slurm, Ubuntu Server 22.04, Ubuntu]
-description: "Slurm でジョブが PD 状態のまま実行されない問題の解決方法を紹介します。ノードの状態が IDLE+DRAIN になっているときの対処方法について解説しています。"
+description: "Slurm でジョブが PD 状態のまま実行されない場合の解決方法を紹介します。ノードの状態が IDLE+DRAIN になっているときの対処方法について解説しています。"
 ---
 
 Slurm でジョブを投入した際、ジョブが PD 状態のまま実行されない問題に遭遇しました。
@@ -15,9 +15,9 @@ Slurm でジョブを投入した際、ジョブが PD 状態のまま実行さ�
 
 ## ステータスの確認
 
-ジョブのステータスを確認すると、以下のようなメッセージが表示されていました。
+ジョブのステータス (`ST`) を確認すると **PD** となっており、理由 (`REASON`) には **Nodes required for job are DOWN, DRAINED or reserved for jobs in higher priority partitions** と表示されていました。
 
-他にジョブは登録されてませんが、PD のままになっています。
+`squeue` の結果を見る限り、他にジョブは登録されていないにも関わらず、ジョブに必要なノードが割り当てられていないという状態のようでした。
 
 ```log:title=squeue&nbsp;の結果
 JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
@@ -53,7 +53,7 @@ NodeName=localhost Arch=x86_64 CoresPerSocket=32
 
 ## 解決方法
 
-以下のコマンドをrootユーザーで実行し、ノードの状態を `IDLE` に変更することで、再びジョブを正常に実行できるようになりました！
+以下のコマンドを root ユーザーで実行し、ノードの状態を `IDLE` に変更することで、再びジョブを正常に実行できるようになりました！
 
 ```bash:title=ノードの&nbsp;State&nbsp;を変更するコマンド
 scontrol update nodename=localhost state=idle
