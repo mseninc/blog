@@ -1,6 +1,6 @@
 ---
 title: "PowerShell コマンドから Hyper-V 仮想マシンのメモリダンプを採取する"
-date: 
+date: 2024-09-13
 author: jinna-i
 tags: [Windows Server,Hyper-V]
 description: Hyper-V上の仮想マシンでメモリダンプを簡単に取得する方法を解説しています。事前設定をしておけば、PowerShellコマンド一発でメモリダンプを採取可能です。サーバーに余計なツールを入れることなくトラブルシューティングがスムーズに！詳細な手順とコマンド例も紹介しています。
