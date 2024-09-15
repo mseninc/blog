@@ -2,7 +2,7 @@
 title: "KVMのスナップショットを管理するスクリプト"
 date: 
 author: norikazum
-tags: [KVM,script]
+tags: [KVM,Shell Script]
 description: "KVMのスナップショットの作成、復元、削除、およびリスト表示するスクリプトの説明。"
 ---
 
