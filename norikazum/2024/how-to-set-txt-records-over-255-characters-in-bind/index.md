@@ -2,7 +2,7 @@
 title: "BINDで255文字超のTXTレコードを設定する方法"
 date: 
 author: norikazum
-tags: []
+tags: [DNS,DKIM]
 description: "BIND"
 ---
 
