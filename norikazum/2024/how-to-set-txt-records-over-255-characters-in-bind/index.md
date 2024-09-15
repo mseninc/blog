@@ -15,6 +15,8 @@ description: "BIND"
 ## 原因
 Red Hat の公開情報で、**TXT レコードは、文字列あたり 255 文字に制限されています** という記述を確認しました。
 
+[バインドは 255 文字を超える TXT レコードのコンテンツをサポートしますか? - Red Hat Customer Portal](https://access.redhat.com/ja/solutions/7056227)
+
 - bind 9.8.2 で TXT リソースレコードを作成すると、invalid rdata format: ran out of space というエラーが発生します。
 
 - bind 9.11.20 で TXT リソースレコードを作成すると、dns_rdata_fromtext: example.db:XX: syntax error というエラーが発生して起動に失敗します。
