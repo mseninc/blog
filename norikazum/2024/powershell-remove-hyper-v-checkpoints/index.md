@@ -1,6 +1,6 @@
 ---
 title: "Hyper-VのチェックポイントをPowerShellから削除する方法"
-date: 
+date: 2024-09-16
 author: norikazum
 tags: [Hyper-V,PowerShell]
 description: ""
