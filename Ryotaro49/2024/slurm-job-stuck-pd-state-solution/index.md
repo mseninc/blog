@@ -17,7 +17,7 @@ Slurm でジョブを投入した際、ジョブが PD 状態のまま実行さ�
 
 ジョブのステータス (`ST`) を確認すると **PD** となっており、理由 (`REASON`) には **Nodes required for job are DOWN, DRAINED or reserved for jobs in higher priority partitions** と表示されていました。
 
-`squeue` の結果を見る限り、他にジョブは登録されていないにも関わらず、ジョブに必要なノードが割り当てられていないという状態のようでした。
+`squeue` の結果を見る限り、他にジョブは登録されていないにもかかわらず、ジョブに必要なノードが割り当てられていないという状態のようでした。
 
 ```log:title=squeue&nbsp;の結果
 JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
