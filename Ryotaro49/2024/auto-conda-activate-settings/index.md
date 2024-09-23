@@ -1,6 +1,6 @@
 ---
 title: "ログイン時に自動で Conda 環境の割り当てを行う"
-date: 
+date: 2024-09-23
 author: Ryotaro49
 tags: [Conda, Ubuntu, Ubuntu 22.04, bash, Python]
 description: "Conda 環境をログイン時に自動で割り当てる方法を紹介します。手順は簡単で、.bash_profile に数行のコマンドを追加するだけです。"
