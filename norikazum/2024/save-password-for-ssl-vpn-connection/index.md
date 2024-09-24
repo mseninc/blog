@@ -44,18 +44,20 @@ description: "FortiClientに接続パスワードを保存する方法を紹介�
 
 1. レジストリエディタを開き、 `HKEY_CURRENT_USER\Software\Fortinet\FortiClient\Sslvpn\Tunnels` へ進みます。デフォルトは画像のようになっています。
     ![デフォルト値](images/2024-09-24_22h09_42.png "デフォルト値")
-1. 管理者でコマンドプロンプトを開き、以下のコマンドを実行します。MSEN の部分は設定名称です
-`reg add HKEY_CURRENT_USER\SOFTWARE\Fortinet\FortiClient\Sslvpn\Tunnels\MSEN /v show_remember_password /t REG_DWORD /d 1 /f`
-1. `show_remember_password` が、1 になったことが確認できます
-1. 接続設定を確認すると、**パスワードを保存** というチェックボックスが出ていることが確認できます
+1. 管理者でコマンドプロンプトを開き、以下のコマンドを実行します。MSEN の部分は設定名称です。
+    ```
+    reg add HKEY_CURRENT_USER\SOFTWARE\Fortinet\FortiClient\Sslvpn\Tunnels\MSEN /v show_remember_password /t REG_DWORD /d 1 /f
+    ```
+1. `show_remember_password` が、1 になったことが確認できます。
+1. 接続設定を確認すると、**パスワードを保存** というチェックボックスが出ていることが確認できます。
     ![パスワード保存のチェックボックス](images/2024-09-24_22h15_11.png "パスワード保存のチェックボックス")
 
 以下の赤枠のレジストリ値は増えていることが確認できます。
 ![変更されたレジストリ値](images/2024-09-24_22h22_37.png "変更されたレジストリ値")
 
 ### これまでと同じように接続する 
-1. **パスワードを保存にチェックを入れた状態** でこれまでどおり接続します
-1. 切断しても、パスワードが保存された状態になります
+1. **パスワードを保存にチェックを入れた状態** でこれまでどおり接続します。
+1. 切断しても、パスワードが保存された状態になります。
     ![パスワード保存された状態](images/2024-09-24_22h17_01.png "パスワード保存された状態")
 
 ## 参考情報
@@ -63,8 +65,11 @@ description: "FortiClientに接続パスワードを保存する方法を紹介�
 SSL-VPNポータルの設定を変更する際、気になった方もいるかもしれませんが、**クライアントの自動接続を許可する** という項目が合ったと思います。
 ![クライアントの自動接続設定](images/2024-09-24_22h19_56.png "クライアントの自動接続設定")
 
-この設定をONにし、管理者でコマンドプロンプトを開き、以下のコマンドを実行します。MSEN の部分は設定名称です
-`reg add HKEY_CURRENT_USER\SOFTWARE\Fortinet\FortiClient\Sslvpn\Tunnels\MSEN /v show_autoconnect /t REG_DWORD /d 1 /f`
+この設定をONにし、管理者でコマンドプロンプトを開き、以下のコマンドを実行します。MSEN の部分は設定名称です。
+
+```
+reg add HKEY_CURRENT_USER\SOFTWARE\Fortinet\FortiClient\Sslvpn\Tunnels\MSEN /v show_autoconnect /t REG_DWORD /d 1 /f
+```
 
 `show_autoconnect` が、1 になったことが確認できます。
 
