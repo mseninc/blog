@@ -3,14 +3,14 @@ title: "Hyper-VのチェックポイントをPowerShellから削除する方法"
 date: 2024-09-16
 author: norikazum
 tags: [Hyper-V,PowerShell]
-description: ""
+description: "Arcserve UDP使用後、Hyper-Vのチェックポイントが削除できず、PowerShellコマンド「Remove-VMCheckpoint」で無事に削除できた手順を紹介します。"
 ---
 
 こんにちは。
 
-今回は、`Hyper-V` のチェックポイントを `PowerShell` で削除する記事です。
+今回は、Hyper-V のチェックポイントを PowerShell で削除する記事です。
 
-発生したシーンとして、評価のため `Arcserve UDP` をサーバーにインストールし、
+発生したシーンとして、評価のため Arcserve UDP をサーバーにインストールし、
 バックアップの取得を試行していたのですが、気付いたらチェックポイントが取得されていました。
 
 ![ARCSERVE UDP でチェックポイントが作成された](images/2024-07-23_18h42_54.png "ARCSERVE UDP でチェックポイントが作成された")

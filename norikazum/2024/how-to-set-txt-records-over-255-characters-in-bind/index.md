@@ -2,8 +2,8 @@
 title: "BINDで255文字超のTXTレコードを設定する方法"
 date: 2024-09-20
 author: norikazum
-tags: [DNS,DKIM]
-description: "BIND"
+tags: [BIND,DNS,DKIM]
+description: "BINDでDKIMレコード設定時にsyntax errorが発生し、原因はTXTレコードの255文字制限でした。複数文字列に分割して回避しました。"
 ---
 
 こんにちは。
