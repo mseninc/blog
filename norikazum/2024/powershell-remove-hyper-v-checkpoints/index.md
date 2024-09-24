@@ -8,9 +8,9 @@ description: "Arcserve UDP使用後、Hyper-Vのチェックポイントが削�
 
 こんにちは。
 
-今回は、`Hyper-V` のチェックポイントを `PowerShell` で削除する記事です。
+今回は、Hyper-V のチェックポイントを PowerShell で削除する記事です。
 
-発生したシーンとして、評価のため `Arcserve UDP` をサーバーにインストールし、
+発生したシーンとして、評価のため Arcserve UDP をサーバーにインストールし、
 バックアップの取得を試行していたのですが、気付いたらチェックポイントが取得されていました。
 
 ![ARCSERVE UDP でチェックポイントが作成された](images/2024-07-23_18h42_54.png "ARCSERVE UDP でチェックポイントが作成された")
