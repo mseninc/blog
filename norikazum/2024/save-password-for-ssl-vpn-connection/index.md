@@ -72,9 +72,10 @@ reg add HKEY_CURRENT_USER\SOFTWARE\Fortinet\FortiClient\Sslvpn\Tunnels\MSEN /v s
 ```
 
 `show_autoconnect` が、1 になったことが確認できます。
+![変更されたレジストリ値](images/2024-09-24_22h26_14.png "変更されたレジストリ値")
 
 これで、**自動接続のチェックボックスが出現** しました。
-![自動接続のチェックボックス](images/2024-09-24_22h19_56.png "自動接続のチェックボックス")
+![自動接続のチェックボックス](images/2024-09-24_22h27_28.png "自動接続のチェックボックス")
 
 しかし、チェックを入れると、以下のように表示され、**FortiClientの無料バージョンでは使用できない** ことが分かります。
 ![This feature is unavailableと表示](images/2024-09-24_22h29_22.png "This feature is unavailableと表示")
