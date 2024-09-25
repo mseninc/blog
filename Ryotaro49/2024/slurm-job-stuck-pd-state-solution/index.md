@@ -1,6 +1,6 @@
 ---
 title: "[Slurm] ジョブが PD 状態のまま実行されない場合の解決方法"
-date: 
+date: 2024-09-25
 author: Ryotaro49
 tags: [Slurm, Ubuntu Server 22.04, Ubuntu]
 description: "Slurm でジョブが PD 状態のまま実行されない場合の解決方法を紹介します。ノードの状態が IDLE+DRAIN になっているときの対処方法について解説しています。"
