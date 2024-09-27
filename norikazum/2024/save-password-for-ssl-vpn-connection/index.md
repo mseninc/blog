@@ -1,5 +1,5 @@
 ---
-title: "FortiClientでSSL VPN接続時にパスワードを保存する方法"
+title: "FortiClient VPN で SSL VPN 接続時にパスワードを保存する方法"
 date: 
 author: norikazum
 tags: [FortiGate,VPN]
@@ -18,6 +18,7 @@ description: "FortiClientでSSL VPN接続時にパスワードを保存する方
 そんな方に朗報です。
 以下の手順でパスワードを保存できます。
 
+1. クライアント OS は Windows を対象とする
 1. FortiGate の設定変更
 1. 接続元端末のレジストリ値変更
 1. これまでと同じように接続する
@@ -63,7 +64,7 @@ description: "FortiClientでSSL VPN接続時にパスワードを保存する方
 以上で、FortiClient を利用して、SSL VPN接続する際のパスワードを保存できます。
 
 ## 参考情報
-### 自動接続
+### 自動接続するには EMS (専用サーバ)が必要
 SSL-VPNポータルの設定を変更する際、気になった方もいるかもしれませんが、**クライアントの自動接続を許可する** という項目があったと思います。
 ![](images/2024-09-24_22h19_56.png "クライアントの自動接続設定")
 
@@ -81,6 +82,10 @@ reg add HKEY_CURRENT_USER\SOFTWARE\Fortinet\FortiClient\Sslvpn\Tunnels\MSEN /v s
 
 しかし、チェックを入れると、以下のように表示され、**FortiClientの無料バージョンでは使用できない** ことが分かります。
 ![This feature is unavailableと表示](images/2024-09-24_22h29_22.png "This feature is unavailableと表示")
+
+某代理店に確認したところ、**25endpoint 1年間ライセンス で 85,000円 (税抜)** でした。
+
+参考記事: [【3分で分かるFortinet】【第18回】FortiClient/EMS(Fabric Agent) 機能概要｜技術ブログ｜C&S ENGINEER VOICE](https://licensecounter.jp/engineer-voice/blog/articles/20210326_forticlientems_fabric_agent.html)
 
 ### 保存したパスワードを削除
 保存したパスワードを削除するためには、`SavePass` のレジストリ値を **1→0** に変更します。
