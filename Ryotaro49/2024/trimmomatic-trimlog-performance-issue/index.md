@@ -1,6 +1,6 @@
 ---
 title: "Trimmomatic 処理速度の改善方法"
-date: 
+date: 2024-09-27
 author: Ryotaro49
 tags: [Ubuntu Server 22.04, Ubuntu, Conda, Java]
 description: "
