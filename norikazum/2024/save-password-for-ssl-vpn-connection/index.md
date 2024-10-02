@@ -1,6 +1,6 @@
 ---
 title: "FortiClient VPN で SSL VPN 接続時にパスワードを保存する方法"
-date: 
+date: 2024-10-02
 author: norikazum
 tags: [FortiGate,VPN]
 description: "FortiClientでSSL VPN接続時にパスワードを保存する方法を、FortiGateの設定変更とレジストリの変更手順を含めて詳しく解説しています。"
