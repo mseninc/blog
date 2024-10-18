@@ -1,6 +1,6 @@
 ---
 title: "2024 秋レク in 京都 (2日目)"
-date: 
+date: 2024-10-18
 author: junya-gera
 tags: [レク]
 description: "社員旅行で京都に行ってきました！(2日目)"
