@@ -99,4 +99,4 @@ v=DMARC1; p=quarantine; adkim=s; aspf=s;
 
 ## 参考サイト
 
-- CloudFlare
+- [CloudFlare - DNS TXTレコードとは？](https://www.cloudflare.com/ja-jp/learning/dns/dns-records/dns-txt-record/)
