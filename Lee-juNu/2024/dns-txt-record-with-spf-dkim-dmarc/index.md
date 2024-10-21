@@ -79,11 +79,11 @@ DKIM レコードも SPF と同じく DNS TXT レコードに書かれます。
 
 | 名称                                 | 種類    | 本文                                                                                           | TTL    |
 | ---------------------------------- | ----- | -------------------------------------------------------------------------------------------- | ------ |
-| `big-email._domainkey.example.com` | `TXT` | `v=DKIM1; p=76E629F05F70   9EF665853333   EEC3F5ADE69A   2362BECE4065   8267AB2FC3CB   6CBE` | `6000` |
+| big-email._domainkey.example.com | TXT | v=DKIM1; p=76E629F05F70   9EF665853333   EEC3F5ADE69A   2362BECE4065   8267AB2FC3CB   6CBE | 6000 |
 
 
-- `名称` : DKIM レコードの名前。この例では `big-email._domainkey.example.com` となっており、`big-email` はセレクター、`_domainkey` は固定のプレフィックスです。
-- `本文` : DKIM レコードの内容。以下のように構成されます。
+- 名称 : DKIM レコードの名前。この例では `big-email._domainkey.example.com` となっており、`big-email` はセレクター、`_domainkey` は固定のプレフィックスです。
+- 本文 : DKIM レコードの内容。以下のように構成されます。
     - `v=DKIM1` : DKIM レコードのバージョンを示します。必須です。
     - `p=76E629...` : 公開鍵の値です。メールのヘッダーに含まれる署名を検証するために使用されます。
 
