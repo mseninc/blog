@@ -21,9 +21,10 @@ description: "DNS レコードの基本であるSPF、DKIM、DMARCについて�
 | @           | TXT       | This is an awesome domain! Definitely not spammy. | 32600 |
 
 > Today, two of the most important uses for DNS TXT records are email spam prevention and domain ownership verification, although TXT records were not designed for these uses originally.
-> <cite>[CLOUDFLARE - DNS TXTレコードとは？]https://www.cloudflare.com/ja-jp/learning/dns/dns-records/dns-txt-record/</cite>
 >
 > 現在、DNS TXT レコードの最も重要な使用用途は、メールのスパム防止とドメイン所有権の確認ですが、TXT レコードはもともとこれらの用途のために設計されたものではありません。
+>
+> <cite>[CLOUDFLARE - DNS TXTレコードとは？]https://www.cloudflare.com/ja-jp/learning/dns/dns-records/dns-txt-record/</cite>
 
 ### 現在の TXT レコードの用途
 
