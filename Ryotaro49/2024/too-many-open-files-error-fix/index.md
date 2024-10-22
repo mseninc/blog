@@ -1,12 +1,12 @@
 ---
-title: "[Linux] too many open files エラーの対処方法と恒久的な解決策"
+title: "[Linux] Too many open files エラーの対処方法と恒久的な解決策"
 date: 
 author: Ryotaro49
 tags: [Linux, Ubuntu Server 22.04, Ubuntu]
-description: "Linux システムで `too many open files` エラーに対処する方法を解説します。`ulimit` コマンドを使った一時的な対策と `/etc/security/limits.conf` を編集して恒久的に設定する方法を紹介します。"  
+description: "Linux システムで `Too many open files` エラーに対処する方法を解説します。`ulimit` コマンドを使った一時的な対策と `/etc/security/limits.conf` を編集して恒久的に設定する方法を紹介します。"  
 ---
 
-`too many open files` というエラーは、一度に開けるファイルの数の制限に達したとき発生します。
+`Too many open files` というエラーは、一度に開けるファイルの数の制限に達したとき発生します。
 
 私は `manta` の使用時、この問題に直面しましたが、`ulimit` コマンドで一時的に解決し、後に恒久的な設定を適用して問題を解消しました。
 
@@ -16,7 +16,7 @@ description: "Linux システムで `too many open files` エラーに対処す�
 - Python 2.7.18
 - manta 1.6.0
 
-## `too many open files` エラーの原因
+## `Too many open files` エラーの原因
 
 このエラーは、システムが一度に開けるファイルの最大数を超えると発生します。
 
@@ -94,7 +94,7 @@ $ ulimit -Hn
 
 ## まとめ
 
-`too many open files` エラーは、特に多くのファイルを扱うアプリケーションを実行する際に発生しやすい問題です。
+`Too many open files` エラーは、特に多くのファイルを扱うアプリケーションを実行する際に発生しやすい問題です。
 
 `ulimit` コマンドで一時的に解決可能ですが、恒久的な設定には `limits.conf` の修正が必要です。
 
