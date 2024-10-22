@@ -37,7 +37,7 @@ description: "DNS レコードの基本であるSPF、DKIM、DMARCについて�
 
 SPF TXT レコードは特定ドメインからのメール送信が許されたすべてのサーバーをリスト化した DNS TXT レコードの一種です。
 
-### SPF レコードの作成
+### SPF レコードの記述方法
 
 ```
 v=spf1 ip4:192.0.2.0 ip4:192.0.2.1 include:examplesender.email -all
@@ -70,7 +70,7 @@ v=spf1 ip4:192.0.2.0 ip4:192.0.2.1 include:examplesender.email -all
 
 メールにデジタル署名を追加し、受信メールが送信ドメインから許可された送信者によって送信されたものであることを確認できる機能です。
 
-### DKIM レコードの作成
+### DKIM レコードの記述方法
 
 DKIM レコードも SPF と同じく DNS TXT レコードに書かれます。
 
@@ -83,17 +83,26 @@ DKIM レコードも SPF と同じく DNS TXT レコードに書かれます。
   - `v=DKIM1` : DKIM レコードのバージョンを示します。必須です。
   - `p=76E629...` : 公開鍵の値です。メールのヘッダーに含まれる署名を検証するために使用されます。
 
-## DMARC（Domain-based Message Authenication Reporting And Conformance）レコード
+申し訳ありません、DMARC レコードの説明が不足していました。簡潔に説明を追加します。
+
+---
+
+## DMARC（Domain-based Message Authentication Reporting and Conformance）レコード
 
 ### DMARC とは？
 
-SPF や DKIM と併用することで送信認証をより強固にし、なりすましなどを防ぐしくみです。DMARC では、SPF や DKIM と組み合わせて、認証が失敗したときにバウンスさせるかスパムフォルダーに入れるかなどの振る舞いを設定します。
+DMARC は、SPF や DKIM と組み合わせてメールのなりすましを防ぐプロトコルです。認証に失敗したメールの処理方法を指定できます。
 
-### DMARC レコードの作成
+### DMARC レコードの記述方法
 
 ```
-v=DMARC1; p=quarantine; adkim=s; aspf=s; 
+v=DMARC1; p=quarantine; adkim=s; aspf=s;
 ```
+
+- `v=DMARC1` : DMARC のバージョンを示します。
+- `p=quarantine` : 認証に失敗したメールを隔離（スパムフォルダに移動）します。
+- `adkim=s` : DKIM の判定を厳格（strict）にします。
+- `aspf=s` : SPF の判定を厳格にします。
 
 ## 終わりに
 
