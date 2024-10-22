@@ -103,4 +103,4 @@ $ ulimit -Hn
 それではまた！
 
 ## 参考文献
-- Linux `ulimit` ドキュメント  
+- [Linux サーバでの「Too many open files」対策について](https://akishin.hatenablog.jp/entry/20130213/1360711554) 
