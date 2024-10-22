@@ -14,7 +14,7 @@ Cloudflare Pages を使い、 Next.js で作成した静的サイトをデプロ
 Error: Output directory "out" not found.
 ```
 
-## 原因
+## 原因と解決策
 
 Cloudflare Pages では、ビルド後に静的ファイルが生成される「出力ディレクトリ」を指定する必要があります。
 
