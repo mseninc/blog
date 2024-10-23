@@ -83,10 +83,6 @@ DKIM レコードも SPF と同じく DNS TXT レコードに書かれます。
   - `v=DKIM1` : DKIM レコードのバージョンを示します。必須です。
   - `p=76E629...` : 公開鍵の値です。メールのヘッダーに含まれる署名を検証するために使用されます。
 
-申し訳ありません、DMARC レコードの説明が不足していました。簡潔に説明を追加します。
-
----
-
 ## DMARC（Domain-based Message Authentication Reporting and Conformance）レコード
 
 ### DMARC とは？
