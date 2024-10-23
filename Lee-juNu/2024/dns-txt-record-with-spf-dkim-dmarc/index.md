@@ -10,6 +10,11 @@ description: "DNS レコードの基本であるSPF、DKIM、DMARCについて�
 ## 挨拶
 
 最近、メールサーバーについて学んでいるリリです。DNS レコードを触りながら学んだ内容を整理するために、ブログ記事として書いてみました。
+## DNS（Domain Name System）とは？
+
+DNS は、インターネット上でドメイン名と IP アドレスを対応付けるシステムです。人間にとって覚えやすいドメイン名（例: example.com）を機械が読み取れる IP アドレス（例: 192.0.2.1）に変換します。これにより、インターネットサービスが円滑に機能しています。
+
+DNS はさまざまな種類のレコードを持っており、その中の一つが TXT（テキスト）レコードです。
 
 ## DNS TXT レコードとは？
 
@@ -106,5 +111,6 @@ v=DMARC1; p=quarantine; adkim=s; aspf=s;
 
 ## 参考サイト
 
+- [AWS - DNS とは](https://aws.amazon.com/jp/route53/what-is-dns/?nc1=h_ls)
 - [CloudFlare - DNS TXTレコードとは？](https://www.cloudflare.com/ja-jp/learning/dns/dns-records/dns-txt-record/)
 - [電子メールのドメイン使用を認証するための送信者ポリシーフレームワーク (SPF)](https://datatracker.ietf.org/doc/html/rfc4408)
