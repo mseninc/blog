@@ -8,7 +8,7 @@ description: "Cloudflare Pages で Next.js の静的サイトをデプロイす�
 
 こんにちは、じゅんじゅんです。
 
-Cloudflare Pages を使い、 Next.js で作成した静的サイトをデプロイしようとしたところ、以下のエラーが発生しました。
+Next.js で作成した静的サイトを Cloudflare Pages にデプロイしようとしたところ、以下のエラーが発生しました。
 
 ```
 Error: Output directory "out" not found.
@@ -16,7 +16,7 @@ Error: Output directory "out" not found.
 
 ## 原因と解決策
 
-Cloudflare Pages では、ビルド後に静的ファイルが生成される「出力ディレクトリ」を指定する必要があります。
+Cloudflare Pages で静的エクスポートを行う場合、ビルド後に静的ファイルが生成される「出力ディレクトリ」を指定する必要があります。
 
 Next.js の場合、静的サイトとしてエクスポートすると `out` というディレクトリがデフォルトで作成されます。このディレクトリに HTML や CSS、 JavaScript ファイルが入ります。
 
@@ -36,7 +36,11 @@ const nextConfig = {
 
 初期状態だと `nextConfig` は空のため、この設定を追加する必要があります。追加すると `npx next build` を実行した際に静的ファイルを含んだ `out` ディレクトリが自動的に作成されます。
 
+これを知らなかったため、 Next.js 側は静的エクスポートになっていませんでした。ただ、 Cloudflare Pages 側では選択肢に「Next.js (Static HTML Export)」が表示されるので静的エクスポートにできたため、ずれが生じていました。
+
 ちなみにビルドコマンドを `npx next build && npx next export` とすることでも静的エクスポートが実行されます。しかし、設定ファイルに記載しておくほうがビルド時にコマンドを気にする必要がないので効率的です。
+
+デプロイ方法に合わせて、next.config.js を適切に設定しましょう。
 
 原因は以上ですが、せっかくなのでデプロイまでの手順を記載します。
 
