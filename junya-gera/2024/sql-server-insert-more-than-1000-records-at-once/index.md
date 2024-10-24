@@ -16,49 +16,89 @@ description: "SQL Server で、エラーを発生させず一度に 1000 件以�
 
 ## エラーが発生する SQL
 
-まずはエラーが発生する SQL を以下に記載します。
+まずはエラーが発生する SQL の例を紹介します。以下のように Visual Basic で 1001 行の VALUES 句が書かれた INSERT 文を作成します。 
 
-VALUES 句をループ処理などで 1000 行以上記載したとき、制限に引っかかり「INSERT ステートメントの行値式の数が、1000 行値の許容最大数を超えています。」のエラーが発生します。
+`valueExpressions` は `('SampleName1', 1)` から `('SampleName1001', 1001)` の文字列が格納された配列です。
+
+```VB:title=エラーが発生する&nbsp;SQL&nbsp;文作成するプログラム
+Dim sqlText = $"
+-- サンプルテーブルを作成
+CREATE TABLE TargetTable (
+  ID INT IDENTITY(1,1) PRIMARY KEY,
+  NAME NVARCHAR(100),
+  VALUE INT
+);
+
+-- 一時テーブルに全件挿入
+INSERT INTO TargetTable (NAME, VALUE)
+VALUES
+  {String.Join(vbCrLf + ", ", valueExpressions)}
+;"
+```
+
+INSERT 部分の SQL は以下のようになります。
+
+```SQL:title=エラーが発生する&nbsp;INSERT&nbsp;文
+INSERT INTO TargetTable (NAME, VALUE)
+VALUES
+  ('SampleName1', 1),
+  ('SampleName2', 2),
+  ('SampleName3', 3),
+  -- 省略: 998行分のデータ
+  ('SampleName1000', 1000),
+  ('SampleName1001', 1001); -- この行でエラーが発生します
+;
+```
+
+この SQL を実行すると制限に引っかかり「INSERT ステートメントの行値式の数が、1000 行値の許容最大数を超えています。」のエラーが発生します。
 
 ## エラーを回避する方法
 
-`INSERT INTO ... SELECT` の書き方をすればこのエラーを回避できます。以下に SQL を記載します。
+`INSERT INTO ... SELECT` の書き方をすればこのエラーを回避できます。
 
-```SQL
--- サンプルテーブルを作成する
-CREATE TABLE SourceTable (
-    ID INT IDENTITY(1,1) PRIMARY KEY,
-    Name NVARCHAR(100),
-    Value INT
-);
-
+```VB:title=エラーが発生しない&nbsp;SQL&nbsp;文作成するプログラム
+Dim sqlText = $"
+-- サンプルテーブルを作成
 CREATE TABLE TargetTable (
-    ID INT IDENTITY(1,1) PRIMARY KEY,
-    Name NVARCHAR(100),
-    Value INT
+  ID INT IDENTITY(1,1) PRIMARY KEY,
+  NAME NVARCHAR(100),
+  VALUE INT
 );
 
--- SourceTable にサンプルデータを 1200 件挿入する
-INSERT INTO SourceTable (Name, Value)
-SELECT TOP 1200
-    'SampleName' + CAST(ROW_NUMBER() OVER (ORDER BY (SELECT NULL)) AS NVARCHAR(10)),
-    ROW_NUMBER() OVER (ORDER BY (SELECT NULL))
-FROM sys.objects a
-CROSS JOIN sys.objects b;
-
--- INSERT INTO SELECT を使って 1000 件以上のデータを TargetTable に挿入する
-INSERT INTO TargetTable (Name, Value)
-SELECT Name, Value
-FROM SourceTable
-WHERE Value <= 1200; -- この条件により、1000 件以上のデータが挿入される
-
--- 挿入した結果を確認する
-SELECT * FROM TargetTable;
+-- 一時テーブルに全件挿入
+INSERT INTO TargetTable (NAME, VALUE)
+SELECT
+  targetData.NAME, targetData.VALUE
+FROM (
+  VALUES
+    {String.Join(vbCrLf + ", ", valueExpressions)}
+  ) AS targetData(
+    NAME
+  , VALUE
+);"
 ```
 
-## このエラーが発生する背景
+INSERT 部分の SQL は以下のようになります。
 
+```SQL:title=エラーが発生しない&nbsp;INSERT&nbsp;文
+INSERT INTO TargetTable (NAME, VALUE)
+SELECT
+  targetData.NAME, targetData.VALUE
+FROM (
+  VALUES
+    ('SampleName1', 1),
+    ('SampleName2', 2),
+    ('SampleName3', 3),
+    -- 省略: 998行分のデータ
+    ('SampleName1000', 1000),
+    ('SampleName1001', 1001);
+  ) AS targetData(
+    NAME
+  , VALUE
+);
+```
 
+この書き方であればエラーなく 1000 件以上の INSERT が可能です。
 
 ## 参考
 
