@@ -97,13 +97,21 @@ DMARC は、SPF や DKIM と組み合わせてメールのなりすましを防�
 ### DMARC レコードの記述方法
 
 ```
-v=DMARC1; p=quarantine; adkim=s; aspf=s;
+v=DMARC1; p=quarantine; adkim=s; aspf=s; rua=mailto:dmarc-reports@example.com;
 ```
 
 - `v=DMARC1` : DMARC のバージョンを示します。
-- `p=quarantine` : 認証に失敗したメールを隔離（スパムフォルダに移動）します。
-- `adkim=s` : DKIM の判定を厳格（strict）にします。
-- `aspf=s` : SPF の判定を厳格にします。
+- `p` : 認証に失敗したメールの処理方法を決定するポリシーです。
+    - `none` : 監視モード。処理はせず、レポートのみを送信します（推奨）。
+    - `quarantine` : 認証に失敗したメールを隔離します（スパムフォルダに移動）。
+    - `reject` : 認証に失敗したメールを拒否します。
+- `adkim=s` : DKIM の判定を厳格にします。送信元ドメインと完全に一致する DKIM 署名のみを許可します。（strict）
+    - `adkim=r`: サブドメインの DKIM 署名も許可します。 (relaxed) 
+- `aspf=s` : SPF の判定を厳格にします。送信元ドメインと完全に一致する SPF のみを許可します。（strict）
+    - `aspf=r`  : サブドメインの SPF も許可します。(relaxed)
+- `rua=mailto:dmarc-reports@example.com` : 認証結果のレポートを送信するメールアドレスを指定します。DMARCレポートは、メールの認証状況を把握し、設定を調整するために必要です。
+    - `rua` : レポーティング URI Aggregateの略で、DMARCの集計レポートの受け取り先を指定します。
+    - `malito` : レポートを送信するメールアドレスを指定する際に使うURIスキームです。
 
 ## 終わりに
 
