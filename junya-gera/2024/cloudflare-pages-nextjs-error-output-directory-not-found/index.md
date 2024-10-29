@@ -18,7 +18,7 @@ Error: Output directory "out" not found.
 
 原因は **Next.js の出力モードが静的エクスポートに設定されていなかったため、ビルド時に `out` ディレクトリが作成されず、 Cloudflare Pages 側と設定が異なっていたから**です。
 
-Next.js のアプリを静的サイトとしてエクスポートするには、 `next.config.js` の `nextConfig` に以下の設定を追加して、出力モードを静的エクスポートします。
+Next.js のアプリを静的サイトとしてエクスポートするには、 `next.config.js` の `nextConfig` に以下の設定を追加して、出力モードを静的エクスポートにします。
 
 ```js:title=next.config.js
 const nextConfig = {
