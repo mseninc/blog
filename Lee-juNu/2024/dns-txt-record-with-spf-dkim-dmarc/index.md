@@ -1,5 +1,5 @@
 ---
-title: "DNSレコード：SPF、DKIM、DMARC の基礎"
+title: "DNSレコード：SPF、DKIM、DMARC とは？"
 date: 
 author: Lee-juNu
 tags: [Mail Server, DNS Record, SPF, DKIM, DMARC]
