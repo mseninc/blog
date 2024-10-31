@@ -1,5 +1,5 @@
 ---
-title: "DNSレコード：SPF、DKIM、DMARCの基礎"
+title: "DNSレコード：SPF、DKIM、DMARC の基礎"
 date: 
 author: Lee-juNu
 tags: [Mail Server, DNS Record, SPF, DKIM, DMARC]
@@ -82,20 +82,51 @@ DKIM レコードも SPF と同じく DNS TXT レコードに書かれます。
 
 | 名称 | 種類 | 本文 | TTL |
 | ------------------------- | ---- | ---------------------------------------------------------------------------------------------- | ---- |
-| selector-name._domainkey.example.com（` [セレクタ名]._domainkey.[ドメイン名] `）    | TXT  | v=DKIM1; p=76E629F05F70 9EF665853333 EEC3F5ADE69A 2362BECE4065 8267AB2FC3CB 6CBE             | 6000 |
+| example-selector._domainkey.example.com   | TXT  | v=DKIM1; p=76E629F05F70 9EF665853333 EEC3F5ADE69A 2362BECE4065 8267AB2FC3CB 6CBE             | 6000 |
 
 
-#### 名称 
-- `selector-name`：DKIM のセレクター名です。セレクター名は、ドメインが使用しているメールサービスプロバイダが発行する特殊な値です。メールサーバーが DNS で必要な DKIM 検索を実行できるように DKIM のヘッダーに含まれています。
+#### 名称
+- `セレクター(example-selector)`：DKIM のセレクター名です。セレクター名は、ドメインが使用しているメールサービスプロバイダが発行する特殊な値です。メールサーバーが DNS で必要な DKIM 検索を実行できるように DKIM のヘッダーに含まれています。
 - `_domainkey`：_domainkey.は、すべての DKIM レコード名に含まれています。
-- `example.com`：メールのドメイン名です。
-
-
+- `ドメイン名(example.com)`：メールのドメイン名です。
 
 #### 本文
  DKIM レコードの内容。以下のように構成されます。
   - `v=DKIM1` : DKIM レコードのバージョンを示します。（必須）
   - `p=76E629...` : 公開鍵の値です。メールのヘッダーに含まれる署名を検証するために使用されます。
+
+### DKIM ヘッダー
+
+送信側のメールサーバーは、メールヘッダー、メール本文、秘密鍵を用いてデジタル署名を作成します。
+この電子署名は、DKIMヘッダーの一部としてメールに挿入されます。
+
+DKIM ヘッダーは、電子メールに挿入される数あるヘッダーの一つです。ほとんどのメールアプリケーションでは、ユーザーが特定のオプションを選択しない限り、ヘッダーは表示されません。
+
+以下に、DKIMヘッダーの例を示します。
+
+```
+v=1; a=rsa-sha256; 
+        d=example.com; s=example-selector;
+        h=from:to:subject;
+      bh=uMixy0BsCqhbru4fqPZQdeZY5Pq865sNAnOAxNgUS0s=;
+  b=LiIvJeRyqMo0gngiCygwpiKphJjYezb5kXBKCNj8DqRVcCk7obK6OUg4o+EufEbB
+tRYQfQhgIkx5m70IqA6dP+DBZUcsJyS9C+vm2xRK7qyHi2hUFpYS5pkeiNVoQk/Wk4w
+ZG4tu/g+OA49mS7VX+64FXr79MPwOMRRmJ3lNwJU=
+```
+
+- `v=1;` : 使用している DKIM のバージョンです。
+- `d=example.com;` : 送信者のドメイン名です。
+- `s=example-selector;` : 送信者側サーバーが DNS レコードを検索する際に使用するセレクタです。
+- `h=from:to:subect:Date;` : デジタル署名 (b) を作成するために使用されるヘッダーフィールドを列挙たものです。通常「From」は必須で、改ざんを防ぐために「To」「Subect」「Date」なども追加されることがあります。
+- `bh=uMixy0B…` : メール本文のハッシュ値です。ハッシュ値とは、ハッシュ関数と呼ばれる特殊な数学関数の結果です。この値は、受信側のメールサーバーがメール本文全体を読み込む前に署名を計算できるように含まれています。場合によっては読み込みに時間がかかることがあるため、メール本文は任意の長さにすることができます。
+- `a=rsa-sha256;` : デジタル署名（b）の計算と、ハッシュ（bh）の生成に使用されるアルゴリズムが指定されます。この例では、RSA-SHA-256が使用されています
+- `b=LiIvJeR…` : hとbhから生成された**デジタル署名**で、秘密鍵で署名されたものです。
+
+デジタル署名により、受信サーバーは以下を確認できます
+1. 送信サーバーを認証
+2. 電子メールが改ざんされていないことを保証
+
+受信サーバーは、`h` に列挙されているのと同じ内容を取得し、本文のハッシュ値（`bh`）を加え、DKIMレコードの公開鍵を使ってデジタル署名が有効かどうかをチェックすることでこれを行います。正しい秘密鍵が使用され、ヘッダーと本文が変更されていなければ、メールはDKIMチェックを許可します。
 
 ## DMARC（Domain-based Message Authentication Reporting and Conformance）レコード
 
@@ -121,6 +152,9 @@ v=DMARC1; p=quarantine; adkim=s; aspf=s; rua=mailto:dmarc-reports@example.com;
 - `rua=mailto:dmarc-reports@example.com` : 認証結果のレポートを送信するメールアドレスを指定します。DMARCレポートは、メールの認証状況を把握し、設定を調整するために必要です。
     - `rua` : レポーティング URI Aggregateの略で、DMARCの集計レポートの受け取り先を指定します。
     - `malito` : レポートを送信するメールアドレスを指定する際に使うURIスキームです。
+
+### DMARC、SPF、DKIM の関係は？
+DMARCは、DKIMとSPFをベースに構築された電子メール認証方式です。DMARCには、SPFとDKIMに失敗した電子メールへの対処法が記載されています。SPF、DKIM、DMARCを併用することで、メールスパムやメールスプーフィングを防止することができます。DKIMレコードと同様に、DMARCポリシーはDNS TXTレコードとして登録されます。
 
 ## 終わりに
 
