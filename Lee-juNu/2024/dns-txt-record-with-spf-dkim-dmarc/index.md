@@ -132,7 +132,7 @@ ZG4tu/g+OA49mS7VX+64FXr79MPwOMRRmJ3lNwJU=
 
 ### DMARC とは？
 
-DMARC は、SPF や DKIM と組み合わせてメールのなりすましを防ぐプロトコルです。認証に失敗したメールの処理方法を指定できます。
+DMARCは、DKIMとSPFをベースに構築された電子メール認証方式です。DMARCには、SPFとDKIMに失敗した電子メールへの対処法が記載されています。SPF、DKIM、DMARCを併用することで、メールスパムやメールスプーフィングを防止できます。DKIMレコードと同様に、DMARCポリシーはDNS TXTレコードとして登録されます。
 
 ### DMARC レコードの記述方法
 
@@ -152,9 +152,6 @@ v=DMARC1; p=quarantine; adkim=s; aspf=s; rua=mailto:dmarc-reports@example.com;
 - `rua=mailto:dmarc-reports@example.com` : 認証結果のレポートを送信するメールアドレスを指定します。DMARCレポートは、メールの認証状況を把握し、設定を調整するために必要です。
     - `rua` : レポーティング URI Aggregateの略で、DMARCの集計レポートの受け取り先を指定します。
     - `malito` : レポートを送信するメールアドレスを指定する際に使うURIスキームです。
-
-### DMARC、SPF、DKIM の関係は？
-DMARCは、DKIMとSPFをベースに構築された電子メール認証方式です。DMARCには、SPFとDKIMに失敗した電子メールへの対処法が記載されています。SPF、DKIM、DMARCを併用することで、メールスパムやメールスプーフィングを防止できます。DKIMレコードと同様に、DMARCポリシーはDNS TXTレコードとして登録されます。
 
 ## 終わりに
 
