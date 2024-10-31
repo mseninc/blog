@@ -3,7 +3,7 @@ title: "[Slurm] UnkillableStepTimeout を設定することでノードが意図
 date: 
 author: Ryotaro49
 tags: [Slurm, Ubuntu Server 22.04, Ubuntu]
-description: ""
+description: "Slurmを使用していると、ノードが意図せずDRAIN状態になることがあります。本記事では、UnkillableStepTimeout の設定を変更することで、この問題を解決する方法を紹介します。"
 ---
 
 Slurm でジョブを実行していると、またまた PD 状態のまま実行されない問題に遭遇しました。
@@ -90,3 +90,5 @@ $ scontrol show config | grep UnkillableStepTimeout
 
 ## 参考文献
 - [Server drains after kill task failed - JOB NOT ENDING WITH SIGNALS](https://support.schedmd.com/show_bug.cgi?id=5262)
+- [Slurm Workload Manager - slurm.conf](http://www.dna-ltd.co.jp/slurm_doc/20.02.04/slurm.conf.html)
+- [Slurm nodes that go into drain 'DUE TO JOB NOT ENDING WITH SIGNALS' #1849](https://github.com/usegalaxy-au/infrastructure/issues/1849#issuecomment-2132585238)
