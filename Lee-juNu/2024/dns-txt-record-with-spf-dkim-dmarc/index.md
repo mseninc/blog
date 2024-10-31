@@ -161,4 +161,6 @@ v=DMARC1; p=quarantine; adkim=s; aspf=s; rua=mailto:dmarc-reports@example.com;
 
 - [AWS - DNS とは](https://aws.amazon.com/jp/route53/what-is-dns/?nc1=h_ls)
 - [CloudFlare - DNS TXTレコードとは？](https://www.cloudflare.com/ja-jp/learning/dns/dns-records/dns-txt-record/)
+- [CloudFlare - DNS の DKIM レコードとは？](https://www.cloudflare.com/ja-jp/learning/dns/dns-records/dns-dkim-record/)
+- [CloudFlare - DNS の DMARC レコードとは？](https://www.cloudflare.com/ja-jp/learning/dns/dns-records/dns-dmarc-record/)
 - [電子メールのドメイン使用を認証するための送信者ポリシーフレームワーク (SPF)](https://datatracker.ietf.org/doc/html/rfc4408)
