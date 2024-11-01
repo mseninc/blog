@@ -3,8 +3,7 @@ title: "DNSレコード：SPF、DKIM、DMARC とは？"
 date: 
 author: Lee-juNu
 tags: [Mail Server, DNS Record, SPF, DKIM, DMARC]
-description: "DNS レコードの基本であるSPF、DKIM、DMARCについて解説しています。
- 最近メールサーバーを初めて調べながら理解する目的として書いたブログ記事です。"
+description: "DNS レコードの基本である SPF、DKIM、DMARC について解説しています。最近メールサーバーについて初めてちゃんと調べたので、理解を深めるために記事にしました。"
 ---
 
 ## 挨拶
