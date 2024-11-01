@@ -1,6 +1,6 @@
 ---
 title: "[Linux] Too many open files エラーの対処方法と恒久的な解決策"
-date: 
+date: 2024-11-01
 author: Ryotaro49
 tags: [Linux, Ubuntu Server 22.04, Ubuntu]
 description: "Linux システムで Too many open files エラーに対処する方法を解説します。ulimit コマンドを使った一時的な対策と /etc/security/limits.conf を編集して恒久的に設定する方法を紹介します。"  
