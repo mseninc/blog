@@ -44,10 +44,12 @@ SPF TXT レコードは特定ドメインからのメール送信が許された
 ### SPF レコードの記述方法
 
 ```
-v=spf1 ip4:192.0.2.0 ip4:192.0.2.1 include:examplesender.email -all
+v=spf1 +a +mx ip4:192.0.2.0 ip4:192.0.2.1 include:examplesender.email -all
 ```
 
 - `v=spf1` : SPF レコードであることを明示します（必須）
+- `a` : A レコードで定義した、IP アドレスからの送信を許容する。
+- `mx` : MX レコードで定義した、メールサーバーからの送信を許容する。
 - `ip4:192.0.2.0` : 承認するメール送信元の IP アドレス（複数定義可能）
 - `include:examplesender.mail` : 第三者組織のメール送信元 DNS アドレス（複数定義可能）
 - `-all` : 列挙した以外の送信元を拒否する。
