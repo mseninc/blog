@@ -1,9 +1,9 @@
 ---
-title: "Cloudflare Pages で Next.js の静的サイトをデプロイすると「Error: Output directory out not found.」と出る"
+title: "Cloudflare Pages で Next.js の静的サイトをデプロイすると「Error: Output directory \"out\" not found.」と出る"
 date: 
 author: junya-gera
 tags: [Next.js, Cloudflare Pages]
-description: "Cloudflare Pages で Next.js の静的サイトをデプロイすると「Error: Output directory out not found.」と出る原因と解決法を紹介します。"
+description: "Cloudflare Pages で Next.js の静的サイトをデプロイすると「Error: Output directory \"out\" not found.」と出る原因と解決法を紹介します。"
 ---
 
 こんにちは、じゅんじゅんです。
@@ -16,9 +16,17 @@ Error: Output directory "out" not found.
 
 ## 原因と解決策
 
-原因は **Next.js の出力モードが静的エクスポートに設定されていなかったため、ビルド時に `out` ディレクトリが作成されず、 Cloudflare Pages 側と設定が異なっていたから**です。
+原因は **Next.js の出力モードが静的エクスポートに設定されていなかったため、ビルド時に `out` ディレクトリが作成されなかったこと**です。
 
-Next.js のアプリを静的サイトとしてエクスポートするには、 `next.config.js` の `nextConfig` に以下の設定を追加して、出力モードを静的エクスポートにします。
+Cloudflare Pages で Next.js の静的エクスポートを行う場合、ビルド後に静的ファイルが生成される「出力ディレクトリ」を指定します。
+
+「ビルド構成」の「フレームワーク プリセット」で「Next.js (Static HTML Export)」を選択すると、「ビルド出力ディレクトリ」にデフォルトで `out` が入ります。
+
+![](images/11.png "Cloudflare Pages のビルド構成")
+
+これで静的エクスポートができると思いデプロイを実行したところ、「Error: Output directory "out" not found.」が発生しました。
+
+調べたところ、 Next.js のアプリを静的サイトとしてエクスポートするには、 `next.config.js` の `nextConfig` に以下の設定を追加して、出力モードを静的エクスポートにする必要がありました。
 
 ```js:title=next.config.js
 const nextConfig = {
@@ -28,15 +36,9 @@ const nextConfig = {
 
 上記により、 `npx next build` を実行した際に静的ファイルを含んだ `out` ディレクトリが自動的に作成されます。初期状態だと `nextConfig` は空のため、この設定を追加する必要があります。
 
-また、 Cloudflare Pages で Next.js の静的エクスポートを行う場合、ビルド後に静的ファイルが生成される「出力ディレクトリ」を指定します。
+Next.js 側は `next.config.js` の修正ができていなかったため静的エクスポートになっていませんでしたが、 Cloudflare Pages 側では「Next.js (Static HTML Export)」が選択できるので、ずれが生じていました。
 
-「ビルド構成」の「フレームワーク プリセット」で「Next.js (Static HTML Export)」を選択すると、「ビルド出力ディレクトリ」にデフォルトで `out` が入ります。
-
-![](images/11.png "Cloudflare Pages のビルド構成")
-
-Next.js 側は `next.config.js` の修正ができていなかったため静的エクスポートになっていませんでしたが、 Cloudflare Pages 側では選択肢に「Next.js (Static HTML Export)」が表示されるので静的エクスポートにできたため、ずれが生じていました。
-
-デプロイ方法に合わせて、next.config.js を適切に設定しましょう。
+デプロイ方法に合わせて、 `next.config.js` を適切に設定しましょう。
 
 原因は以上ですが、せっかくなのでデプロイまでの手順を記載します。
 
