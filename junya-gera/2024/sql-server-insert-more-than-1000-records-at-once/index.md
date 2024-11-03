@@ -1,9 +1,9 @@
 ---
-title: "SQL Server で一度に 1000 件以上のレコードを INSERT する"
+title: "SQL Server で VALUES 句を使って一度に 1000 件以上のレコードを INSERT する"
 date: 
 author: junya-gera
 tags: [SQL Server]
-description: "SQL Server で、エラーを発生させず一度に 1000 件以上のレコードの INSERT を実行する方法を紹介します。"
+description: "SQL Server で、VALUES 句を使ってエラーを発生させず一度に 1000 件以上のレコードの INSERT を実行する方法を紹介します。"
 ---
 
 こんばんは、じゅんじゅんです。
@@ -18,7 +18,7 @@ description: "SQL Server で、エラーを発生させず一度に 1000 件以�
 
 まずはエラーが発生する SQL の例を紹介します。以下のように Visual Basic で 1001 行の VALUES 句が書かれた INSERT 文を作成します。 
 
-`valueExpressions` は `('SampleName1', 1)` から `('SampleName1001', 1001)` の文字列が格納された配列です。
+`valueExpressions` は `(@Name1, @Value1)` から `(@Name1001, @Value1001)` の文字列が格納された配列だとします。
 
 ```VB:title=エラーが発生する&nbsp;SQL&nbsp;文作成するプログラム
 Dim sqlText = $"
@@ -41,12 +41,12 @@ INSERT 部分の SQL は以下のようになります。
 ```SQL:title=エラーが発生する&nbsp;INSERT&nbsp;文
 INSERT INTO TargetTable (NAME, VALUE)
 VALUES
-  ('SampleName1', 1),
-  ('SampleName2', 2),
-  ('SampleName3', 3),
+  ('@Name1', '@Value1'),
+  ('@Name2', '@Value2'),
+  ('@Name3', '@Value3'),
   -- 省略: 998行分のデータ
-  ('SampleName1000', 1000),
-  ('SampleName1001', 1001); -- この行でエラーが発生します
+  ('@Name1000', '@Value1000'),
+  ('@Name1001', '@Value1001') -- この行でエラーが発生します
 ;
 ```
 
@@ -54,7 +54,7 @@ VALUES
 
 ## エラーを回避する方法
 
-`INSERT INTO ... SELECT` の書き方をすればこのエラーを回避できます。
+INSERT INTO ... SELECT 構文を使用し、VALUES のデータを派生テーブルとして扱うことでこのエラーを回避できます。
 
 ```VB:title=エラーが発生しない&nbsp;SQL&nbsp;文作成するプログラム
 Dim sqlText = $"
@@ -86,12 +86,12 @@ SELECT
   targetData.NAME, targetData.VALUE
 FROM (
   VALUES
-    ('SampleName1', 1),
-    ('SampleName2', 2),
-    ('SampleName3', 3),
+    ('@Name1', '@Value1'),
+    ('@Name2', '@Value2'),
+    ('@Name3', '@Value3'),
     -- 省略: 998行分のデータ
-    ('SampleName1000', 1000),
-    ('SampleName1001', 1001);
+    ('@Name1000', '@Value1000'),
+    ('@Name1001', '@Value1001')
   ) AS targetData(
     NAME
   , VALUE
