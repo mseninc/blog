@@ -2,7 +2,7 @@
 title: "[CSharp]デザインパターン - Singleton Pattern"
 date: 
 author: Lee-juNu
-tags: [Singleton, Designe Pattern,デザインパターン, GoF, Gang of Four]
+tags: [Singleton, Designe Pattern,デザインパターン, GoF, Gang of Four, CSharp]
 description: "GoF の23デザインパターンの１つ [Singleton] に関して簡単に扱っている記事です。
 シングルトンの紹介、利点、注意点、作成方法に関して書いて見ました。"
 ---
