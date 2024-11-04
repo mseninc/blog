@@ -1,6 +1,6 @@
 ---
 title: "[Slurm] UnkillableStepTimeout を設定することでノードが意図せず DRAIN 状態になるのを防ぐ"
-date: 
+date: 2024-11-04
 author: Ryotaro49
 tags: [Slurm, Ubuntu Server 22.04, Ubuntu]
 description: "Slurmを使用していると、ノードが意図せずDRAIN状態になることがあります。本記事では、UnkillableStepTimeout の設定を変更することで、この問題を解決する方法を紹介します。"
