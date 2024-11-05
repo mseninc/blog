@@ -41,12 +41,12 @@ INSERT 部分の SQL は以下のようになります。
 ```SQL:title=エラーが発生する&nbsp;INSERT&nbsp;文
 INSERT INTO TargetTable (NAME, VALUE)
 VALUES
-  ('@Name1', '@Value1'),
-  ('@Name2', '@Value2'),
-  ('@Name3', '@Value3'),
+  (@Name1, @Value1),
+  (@Name2, @Value2),
+  (@Name3, @Value3),
   -- 省略: 998行分のデータ
-  ('@Name1000', '@Value1000'),
-  ('@Name1001', '@Value1001') -- この行でエラーが発生します
+  (@Name1000, @Value1000),
+  (@Name1001, @Value1001) -- この行でエラーが発生します
 ;
 ```
 
@@ -86,12 +86,12 @@ SELECT
   targetData.NAME, targetData.VALUE
 FROM (
   VALUES
-    ('@Name1', '@Value1'),
-    ('@Name2', '@Value2'),
-    ('@Name3', '@Value3'),
+    (@Name1, @Value1),
+    (@Name2, @Value2),
+    (@Name3, @Value3),
     -- 省略: 998行分のデータ
-    ('@Name1000', '@Value1000'),
-    ('@Name1001', '@Value1001')
+    (@Name1000, @Value1000),
+    (@Name1001, @Value1001)
   ) AS targetData(
     NAME
   , VALUE
