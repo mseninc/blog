@@ -1,6 +1,6 @@
 ---
 title: "Cloudflare Pages で Next.js の静的サイトをデプロイすると「Error: Output directory \"out\" not found.」と出る"
-date: 
+date: 2024-11-06
 author: junya-gera
 tags: [Next.js, Cloudflare Pages]
 description: "Cloudflare Pages で Next.js の静的サイトをデプロイすると「Error: Output directory \"out\" not found.」と出る原因と解決法を紹介します。"
