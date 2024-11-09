@@ -14,14 +14,14 @@ description: "MSEN の DevOps チームで採用している GitHub Projects の
 
 ## GitHub Projects とは
 
-GitHub Projects は、以下のように公式ドキュメントに記載されているとおり、 GitHub 上でプロジェクト管理をするための機能です。
+GitHub Projects は、以下のように公式ドキュメントに記載されているとおり、 issue や Pull Request を使って GitHub 上でプロジェクト管理をするための機能です。
 
 > プロジェクトは、作業の計画と追跡を効果的に行えるように GitHub 上の issue および pull request と統合できる、適応性のあるスプレッドシート、タスク ボード、ロード マップです。 issue と pull request をフィルター処理、並べ替え、グループ化することで複数のビューを作成してカスタマイズしたり、構成可能なグラフを使って作業を視覚化したり、team 固有のメタデータを追跡するためのカスタム フィールドを追加したりすることができます。 プロジェクトには、特定の手法を適用するのではなく、チームのニーズやプロセスに合わせてカスタマイズできる柔軟な機能があります。
 <cite>[GitHub Projects について](https://docs.github.com/ja/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)</cite>
 
 ## タスク管理のルール
 
-タスク管理のルールは以下になります。
+タスク管理をするうえで、各メンバーにやってもらうことは以下になります。
 
 1. タスクの追加
     - 優先度・期日の設定
@@ -43,7 +43,7 @@ GitHub Projects は、以下のように公式ドキュメントに記載され�
 
 2・3 についてはチケットが発行されていない、社内で発覚したバグや機能追加のためにタスクを作成する場合が多いです。
 
-issue が追加されたら、プロジェクト上に追加します。 Assignees は、対応をしてもらうメンバーをサブリーダーがアサインします。
+issue が追加されたら、プロジェクト上に追加します。 Assignees は、サブリーダーが対応をしてもらうメンバーをアサインします。
 
 また、 issue を立てるほどでもない作業については draft でタスクを追加します。
 
