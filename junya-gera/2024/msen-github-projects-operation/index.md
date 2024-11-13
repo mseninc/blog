@@ -3,12 +3,12 @@ title: "MSEN の GitHub Projects 運用方法"
 date: 
 author: junya-gera
 tags: [GitHub Projects]
-description: "MSEN の DevOps チームで採用している GitHub Projects の運用方法について紹介します。"
+description: "MSEN の 開発チームで採用している GitHub Projects の運用方法について紹介します。"
 ---
 
 こんにちは、じゅんじゅんです。
 
-8 月より DevOps チームのサブリーダーを務めることになり、この機会にチーム内のタスク管理方法を刷新しました。
+8 月より 開発チームのサブリーダーを務めることになり、この機会にチーム内のタスク管理方法を刷新しました。
 
 チーム全体の作業状況が一目で把握でき、タスク管理の効率化にも優れた [GitHub Projects](https://docs.github.com/ja/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects) を採用しました。
 
@@ -29,7 +29,7 @@ GitHub Projects は、以下のように公式ドキュメントに記載され�
 
 2. タスク作業中
     - ステータスの変更
-    - Detail Status の更新
+    - Status Description の更新
 
 ## 1. タスクの追加
 
@@ -37,7 +37,7 @@ GitHub Projects は、以下のように公式ドキュメントに記載され�
 
 1. お客様よりチケットが発行されて issue が作成される
 2. サブリーダーが issue を作成する
-3. サブリーダーの指示により作業者が issue を作成される
+3. サブリーダーの指示により作業者が issue を作成する
 
 1 について、弊社はお客様との課題管理を [Redmine](https://redmine.jp/) で行っています。お客様からチケットが発行されると、対応する GitHub のリポジトリへ issue が作成されるようにしています。
 
@@ -59,7 +59,7 @@ issue が追加されたら、プロジェクト上に追加します。 Assigne
 - 「Pending」: 何らかの理由で作業が進められないタスク
 - 「Done」: 作業が完了したタスク
 
-追加したばかりのタスクは、すぐ着手できないものは「To Do」に、着手できるものは「In progress」に置きます。
+追加したばかりのタスクは、すぐ着手できないものは「To Do」に、着手中のものは「In progress」に置きます。
 
 ### 優先度・期日の設定
 
@@ -117,15 +117,15 @@ Issue 単位という違いはありますが、似たようなことが公式�
 
 その後の「朝会」または「夕会」で Done になったことを報告したら、サブリーダーがそのタスクを Archive します。
 
-![](images/5.png "Arvhive するボタン")
+![](images/5.png "Archive するボタン")
 
 Archive したタスクはタスク一覧に表示されなくなりますが、 Archived items で確認できます。
 
-![](images/6.png "Arvhived items ボタン")
+![](images/6.png "Archived items ボタン")
 
-### Detail Status の更新
+### Status Description の更新
 
-各タスクに Detail Status というテキスト入力欄を用意しています。このタスクが今どういう状態なのかを記載してもらい、サブリーダーや他のメンバーが一目で把握できるようにしています。
+各タスクに Status Description というテキスト入力欄を用意しています。このタスクが今どういう状態なのかを記載してもらい、サブリーダーや他のメンバーが一目で把握できるようにしています。
 
 たとえばステータスごとに以下のような内容が考えられます。
 
