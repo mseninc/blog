@@ -107,7 +107,7 @@ Issue 単位という違いはありますが、似たようなことが公式�
 
 - [Projects のベスト プラクティス - 大きなIssueを小さなIssueに分割する](https://docs.github.com/ja/Issues/planning-and-tracking-with-projects/learning-about-projects/best-practices-for-projects#break-down-large-issues-into-smaller-issues)
 
-
+弊社はタスクを Issue 単位としているため、 Issue で作業を細かく分割すると管理が大変になってしまうので、 Issue の中にサブタスクを作るという形にしました。
 
 サブタスクの内容が完了したらリアルタイムでチェックを入れていきます。
 
