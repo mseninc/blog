@@ -14,7 +14,7 @@ description: "MSEN の 開発チームで採用している GitHub Projects の�
 
 ## GitHub Projects とは
 
-GitHub Projects は、以下のように公式ドキュメントに記載されているとおり、 issue や Pull Request を使って GitHub 上でプロジェクト管理をするための機能です。
+GitHub Projects は、以下のように公式ドキュメントに記載されているとおり、 Issue や Pull Request を使って GitHub 上でプロジェクト管理をするための機能です。
 
 > プロジェクトは、作業の計画と追跡を効果的に行えるように GitHub 上の issue および pull request と統合できる、適応性のあるスプレッドシート、タスク ボード、ロード マップです。 issue と pull request をフィルター処理、並べ替え、グループ化することで複数のビューを作成してカスタマイズしたり、構成可能なグラフを使って作業を視覚化したり、team 固有のメタデータを追跡するためのカスタム フィールドを追加したりすることができます。 プロジェクトには、特定の手法を適用するのではなく、チームのニーズやプロセスに合わせてカスタマイズできる柔軟な機能があります。
 <cite>[GitHub Projects について](https://docs.github.com/ja/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)</cite>
@@ -33,23 +33,23 @@ GitHub Projects は、以下のように公式ドキュメントに記載され�
 
 ## 1. タスクの追加
 
-まずはタスクの追加について説明します。基本的に issue がタスクの単位です。追加するタイミングは以下の 3 点です。
+まずはタスクの追加について説明します。基本的に Issue がタスクの単位です。追加するタイミングは以下の 3 点です。
 
-1. お客様よりチケットが発行されて issue が作成される
-2. サブリーダーが issue を作成する
-3. サブリーダーの指示により作業者が issue を作成する
+1. お客様よりチケットが発行されて Issue が作成される
+2. サブリーダーが Issue を作成する
+3. サブリーダーの指示により作業者が Issue を作成する
 
-1 について、弊社はお客様との課題管理を [Redmine](https://redmine.jp/) で行っています。お客様からチケットが発行されると、対応する GitHub のリポジトリへ issue が作成されるようにしています。
+1 について、弊社はお客様との課題管理を [Redmine](https://redmine.jp/) で行っています。お客様からチケットが発行されると、対応する GitHub のリポジトリへ Issue が作成されるようにしています。
 
 2・3 についてはチケットが発行されていない、社内で発覚したバグや機能追加のためにタスクを作成する場合が多いです。
 
-issue が追加されたら、プロジェクト上に追加します。 Assignees は、サブリーダーが対応をしてもらうメンバーをアサインします。
+Issue が追加されたら、プロジェクト上に追加します。 Assignees は、サブリーダーが対応をしてもらうメンバーをアサインします。
 
-また、 issue を立てるほどでもない作業については draft でタスクを追加します。
+また、 Issue を立てるほどでもない作業については draft でタスクを追加します。
 
-![](images/1.png "issue をタスクとしてプロジェクトに追加")
+![](images/1.png "Issue をタスクとしてプロジェクトに追加")
 
-ちなみに GitHub Projects では Pull Request も管理できますが、元となる issue と Pull Request がどちらもあると管理が二度手間になり、見た目もわかりづらくなるので、 issue のみ扱うようにしています。
+ちなみに GitHub Projects では Pull Request も管理できますが、元となる Issue と Pull Request がどちらもあると管理が二度手間になり、見た目もわかりづらくなるので、 Issue のみ扱うようにしています。
 
 ### ステータスの種類
 
@@ -87,9 +87,9 @@ issue が追加されたら、プロジェクト上に追加します。 Assigne
 
 ### サブタスクの作成
 
-追加したタスクの issue の最初のコメントにチェックリストでサブタスクを作成します。すると issue の上部に「2 of 6」のように全体のうちいくつチェックが入ったか表示されます。
+追加したタスクの Issue の最初のコメントにチェックリストでサブタスクを作成します。すると Issue の上部に「2 of 6」のように全体のうちいくつチェックが入ったか表示されます。
 
-![](images/4.png "issue の最初のコメントにチェックリストでサブタスクを作成")
+![](images/4.png "Issue の最初のコメントにチェックリストでサブタスクを作成")
 
 このようなサブタスクを作成する理由は 2 つあります。
 
@@ -105,7 +105,9 @@ issue が追加されたら、プロジェクト上に追加します。 Assigne
 
 Issue 単位という違いはありますが、似たようなことが公式ドキュメントにも書かれていました。
 
-- [Projects のベスト プラクティス - 大きなIssueを小さなIssueに分割する](https://docs.github.com/ja/issues/planning-and-tracking-with-projects/learning-about-projects/best-practices-for-projects#break-down-large-issues-into-smaller-issues)
+- [Projects のベスト プラクティス - 大きなIssueを小さなIssueに分割する](https://docs.github.com/ja/Issues/planning-and-tracking-with-projects/learning-about-projects/best-practices-for-projects#break-down-large-issues-into-smaller-issues)
+
+
 
 サブタスクの内容が完了したらリアルタイムでチェックを入れていきます。
 
@@ -143,7 +145,7 @@ Archive したタスクはタスク一覧に表示されなくなりますが、
 
 毎日の朝会・夕会で各メンバーのタスクを GitHub Projects で確認しています。
 
-カンバンやタスク一覧から issue のタイトルをクリックすると、ページ遷移もせず別タブも開かずに中身が確認できるので便利です。このままチェックリストにチェックを入れたり内容の修正もできます。
+カンバンやタスク一覧から Issue のタイトルをクリックすると、ページ遷移もせず別タブも開かずに中身が確認できるので便利です。このままチェックリストにチェックを入れたり内容の修正もできます。
 
 ## 2ヵ月運用してみた感想
 
