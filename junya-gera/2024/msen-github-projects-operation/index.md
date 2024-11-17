@@ -8,7 +8,7 @@ description: "MSEN の 開発チームで採用している GitHub Projects の�
 
 こんにちは、じゅんじゅんです。
 
-8 月より 開発チームのサブリーダーを務めることになり、この機会にチーム内のタスク管理方法を刷新しました。
+8 月から開発チームのサブリーダーを務めることになり、この機会にチーム内のタスク管理方法を刷新しました。
 
 チーム全体の作業状況が一目で把握でき、タスク管理の効率化にも優れた [GitHub Projects](https://docs.github.com/ja/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects) を採用しました。
 
