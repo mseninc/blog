@@ -2,7 +2,7 @@
 title: "WSL 環境の Markdown PDF で「Failed to launch the browser process!」エラーが発生したときの対処法"
 date: 
 author: Ryotaro49
-tags: []
+tags: [Visual Studio Code, WSL, Ubuntu]
 description: "「Failed to launch the browser process!」エラーは、Markdown PDF 拡張機能を WSL 環境で利用する際に発生する問題です。本記事では、WSL にブラウザをインストールし、パスを設定することで解決した方法を解説します。"
 ---
 
