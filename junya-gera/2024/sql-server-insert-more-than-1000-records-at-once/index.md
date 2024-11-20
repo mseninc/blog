@@ -1,6 +1,6 @@
 ---
 title: "SQL Server で VALUES 句を使って一度に 1000 件以上のレコードを INSERT する"
-date: 
+date: 2024-11-20
 author: junya-gera
 tags: [SQL Server]
 description: "SQL Server で、VALUES 句を使ってエラーを発生させず一度に 1000 件以上のレコードの INSERT を実行する方法を紹介します。"
