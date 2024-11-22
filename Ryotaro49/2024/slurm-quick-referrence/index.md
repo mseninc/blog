@@ -1,5 +1,5 @@
 ---
-title: "[Slurm] 基本的な Slurm コマンド集"
+title: "[Slurm] Slurm コマンド集"
 date: 
 author: Ryotaro49
 tags: [Slurm, Ubuntu Server 22.04, Ubuntu]
