@@ -1,6 +1,6 @@
 ---
 title: "MSEN の GitHub Projects 運用方法"
-date: 
+date: 2024-11-22
 author: junya-gera
 tags: [GitHub Projects]
 description: "MSEN の 開発チームで採用している GitHub Projects の運用方法について紹介します。"
