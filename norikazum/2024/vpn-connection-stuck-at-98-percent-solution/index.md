@@ -1,5 +1,5 @@
 ---
-title: "VPN接続が98％で止まる原因と解決方法"
+title: "FortiGateのSSL-VPN接続が98％で止まる原因と解決方法"
 date: 
 author: norikazum
 tags: [VPN,FortiGate]
