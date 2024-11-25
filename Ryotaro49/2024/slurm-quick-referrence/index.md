@@ -24,6 +24,11 @@ description: "Slurm を使用してジョブを管理する際に役立つ基本
 $ sbatch <ジョブ>
 ```
 
+```bash:title=実行例
+$ sbatch myjob.sh
+Submitted batch job 12345
+```
+
 送信後、ジョブ ID が出力されます。
 この ID を使ってジョブの状況を確認できます。
 
@@ -51,6 +56,12 @@ sbatch <次のジョブ> --dependency=afterok:"$job_id"
 $ squeue
 ```
 
+```bash:title=実行例
+$ squeue
+JOBID   PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+12345   example       myjob    user  R    00:00:00      1 node-001
+```
+
 特定のユーザーのジョブだけを表示するには、-u オプションを使います。
 
 ```bash:title=特定のユーザーのジョブだけを表示
@@ -74,6 +85,8 @@ $ sacct -j <ジョブID>
 $ sacct
 ```
 
+
+
 `squeue` コマンドと同じように特定のユーザーのジョブの履歴を表示するには、-u オプションを使います。
 
 ```bash:title=特定のユーザーのジョブの履歴を表示
@@ -92,6 +105,13 @@ $ sacct -S 2024-11-01 -E 2024-11-20
 
 ```bash:title=formatを指定
 $ sacct -j <ジョブID> --format=JobID,State,Elapsed,AllocCPUs
+```
+
+```bash:title=実行例
+$ sacct -j 12345 --format=JobID,State,Elapsed,AllocCPUs
+       JobID    State  Elapsed      AllocCPUS
+------------ -------- -------- ----------------
+12345         COMPLETED   00:02:45             8
 ```
 
 `--format`オプションで表示する情報をカスタマイズできます。
