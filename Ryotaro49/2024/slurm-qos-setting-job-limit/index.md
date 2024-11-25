@@ -1,6 +1,6 @@
 ---
 title: "[Slurm] QOSを設定してジョブの同時実行数を制限する"
-date: 
+date: 2024-11-25
 author: Ryotaro49
 tags: [Slurm]
 description: "QOSを使用して、ジョブの同時実行数を制限することで、リソースの公平な利用や管理する方法を解説します。"
