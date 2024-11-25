@@ -2,8 +2,8 @@
 title: "iPad で GitHub Codespaces を使ってみた"
 date: 
 author: Ryotaro49
-tags: []
-description: ""
+tags: [iPad, GitHub Codespaces, VS Code]
+description: "iPadでGitHub Codespacesを使ってみました！その手順を紹介します！"
 ---
 
 最近、iPad をもっと活用したいなと思い、iPad 用のキーボードを買いました！
