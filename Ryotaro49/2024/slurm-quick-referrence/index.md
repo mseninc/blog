@@ -70,27 +70,40 @@ $ squeue -u <ユーザー名>
 
 ## ジョブ履歴の確認
 
+ジョブの履歴を確認するにはあらかじめ**設定が必要**です。
+
+設定方法については以下の記事などが参考になると思います。
+
+- [slurm/accounting](https://web.chaperone.jp/w/index.php?slurm/accounting)
+
 ジョブの履歴を確認するためコマンド。
 
 
-```bash:title=ジョブの履歴を確認
-$ sacct -j <ジョブID>
-```
-
-### 便利なオプション
-
-#### 全ジョブの履歴を確認
-
-```bash:title=全ジョブの履歴を確認
+```bash:title=全てのジョブの履歴を確認
 $ sacct
 ```
 
+```bash:title=実行例
+$ sacct
+       JobID    State  Elapsed      AllocCPUS
+------------ -------- -------- ----------------
+12345         COMPLETED   00:02:45             8
+12346         FAILED      00:01:10             4
 
+```
+
+### 便利なオプション
 
 `squeue` コマンドと同じように特定のユーザーのジョブの履歴を表示するには、-u オプションを使います。
 
 ```bash:title=特定のユーザーのジョブの履歴を表示
 $ sacct -u <ユーザー名>
+```
+
+ジョブ ID を指定することで、特定のジョブの履歴を確認できます。
+
+```bash:title=ジョブの履歴を確認
+$ sacct -j <ジョブID>
 ```
 
 #### 期間を指定して履歴を表示
@@ -104,19 +117,17 @@ $ sacct -S 2024-11-01 -E 2024-11-20
 #### 詳細情報を表示
 
 ```bash:title=formatを指定
-$ sacct -j <ジョブID> --format=JobID,State,Elapsed,AllocCPUs
+$ sacct -j <ジョブID> --format=JobID,State,Elapsed
 ```
 
 ```bash:title=実行例
-$ sacct -j 12345 --format=JobID,State,Elapsed,AllocCPUs
-       JobID    State  Elapsed      AllocCPUS
------------- -------- -------- ----------------
-12345         COMPLETED   00:02:45             8
+$ sacct -j 12345 --format=JobID,State,Elapsed
+       JobID    State  Elapsed
+------------ -------- --------
+12345         COMPLETED   00:02:45
 ```
 
 `--format`オプションで表示する情報をカスタマイズできます。
-
-`JobID`, `State`, `Elapsed`（実行時間）, `AllocCPUs`（割り当てられたCPU数）などを表示可能です。
 
 ### ジョブのキャンセル
 
@@ -126,9 +137,9 @@ $ sacct -j 12345 --format=JobID,State,Elapsed,AllocCPUs
 $ scancel <ジョブID>
 ```
 
-ユーザーのすべてのジョブをキャンセルするコマンド。
+特定のユーザーのすべてのジョブをキャンセルするコマンド。
 
-```bash:title=ユーザーのすべてのジョブをキャンセル
+```bash:title=特定のユーザーのすべてのジョブをキャンセル
 $ scancel -u <ユーザー名>
 ```
 
@@ -158,12 +169,26 @@ $ scontrol show node <ノード名>
 $ sstat -a
 ```
 
+```bash:title=実行例
+$ sstat -a
+       JobID   MaxRSS  AveRSS   MaxVMSize  AveVMSize  MaxDiskWrite
+------------ -------- --------  ----------- ---------- --------------
+12345         1G       900M      2G           1.5G       1GB
+```
+
 ### ジョブのリソース使用状況を確認
 
 実行中のジョブが使用しているリソースを確認するコマンド。
 
 ```bash:title=実行中のジョブが使用しているリソースを確認
 $ sacct -j <ジョブID>
+```
+
+```bash:title=実行例
+$ sacct -j 12345
+       JobID    State  Elapsed      AllocCPUs  MaxRSS
+------------ -------- -------- --------------- -------
+12345         COMPLETED   00:02:45        8       1G
 ```
 
 ## まとめ
