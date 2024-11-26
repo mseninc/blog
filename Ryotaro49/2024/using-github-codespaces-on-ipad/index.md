@@ -53,6 +53,8 @@ GitHub のリポジトリがあればすぐに開発を始められます。
 
 なんと、拡張機能も設定の同期をオンにすることで同期できます。
 
+そのやり方も[Codespace とローカルの VSCode の設定を同期する](#codespace-とローカルの-vscode-の設定を同期する)のセクションで紹介しています。
+
 ### Codespace で Docker を使ってみる
 
 Codespace 上で Docker も使えるようなので、使ってみました。
@@ -68,6 +70,34 @@ Docker コンテナーを起動して localhost:8000 でアプリーションを
 すると、自動でポートフォワーディングされ、リモートアクセス用の URL が生成されました！
 
 無事、URL からアプリケーションが動いていることを確認できました👏
+
+### Codespace とローカルの VSCode の設定を同期する
+
+[アカウントの GitHub Codespaces をパーソナライズする](https://docs.github.com/ja/codespaces/setting-your-user-preferences/personalizing-github-codespaces-for-your-account) を参考に設定しました。
+
+同期する手順を紹介します。
+
+#### 1. ローカル側の VSCode で設定の同期をオンにする
+
+ローカル側の VSCode で左下の設定から設定の同期をオンにします。
+
+![設定の同期をオン](./images/2024-11-26_18h16_34.png)
+
+#### 2. GitHub で Settings Sync を有効にする
+
+GitHub の設定のサイドバーから Codespaces をクリックします。
+
+Settings Sync の Enable にチェックをいれます。
+
+![Settings Sync を有効にチェック](./images/2024-11-26_18h21_06.png)
+
+#### 3. Codespace で設定の同期をオンにする
+
+ローカル側で設定の同期をオンにしたのと同じ手順で、Codespace 側でも設定の同期をオンにします。
+
+![Codespace で設定の同期をオン](./images/2024-11-26_18h27_59.png)
+
+これで、ローカルで使っていた拡張機能などがそのまま使えるようになると思います！
 
 ## あとがき
 
