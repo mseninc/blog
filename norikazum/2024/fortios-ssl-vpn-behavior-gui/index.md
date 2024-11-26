@@ -75,6 +75,7 @@ FortiOS 7.4.1以降の挙動を確認し、適切に設定を調整しましょ�
 ![](images/2024-11-26_15h29_20.png "メモリ容量の確認コマンド")
 
 参考ページ: 
+
 [【FortiGate】FortiOS7.6.0における一部小型モデルの仕様変更について｜大塚商会](https://mypage.otsuka-shokai.co.jp/news/detail?linkBeforeScreenId=OMP20F0102S01P&oshiraseNo=MDAwMDAwNDc3Mg==&navi=1)
 
 [SSL VPN removed from 2GB RAM models for tunnel and web mode | FortiGate / FortiOS 7.6.0 | Fortinet Document Library](https://docs.fortinet.com/document/fortigate/7.6.0/fortios-release-notes/877104/ssl-vpn-removed-from-2gb-ram-models-for-tunnel-and-web-mode)
