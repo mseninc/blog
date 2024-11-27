@@ -159,38 +159,6 @@ $ scontrol show node <ノード名>
 
 - [[Slurm] ジョブが PD 状態のまま実行されない場合の解決方法](https://mseeeen.msen.jp/slurm-job-stuck-pd-state-solution/)
 
-## リソース関連のコマンド
-
-### 空きリソースの確認
-
-現在利用可能なリソース (CPU、メモリーなど) を確認するコマンド。
-
-```bash:title=現在利用可能なリソースを確認
-$ sstat -a
-```
-
-```bash:title=実行例
-$ sstat -a
-       JobID   MaxRSS  AveRSS   MaxVMSize  AveVMSize  MaxDiskWrite
------------- -------- --------  ----------- ---------- --------------
-12345         1G       900M      2G           1.5G       1GB
-```
-
-### ジョブのリソース使用状況を確認
-
-実行中のジョブが使用しているリソースを確認するコマンド。
-
-```bash:title=実行中のジョブが使用しているリソースを確認
-$ sacct -j <ジョブID>
-```
-
-```bash:title=実行例
-$ sacct -j 12345
-       JobID    State  Elapsed      AllocCPUs  MaxRSS
------------- -------- -------- --------------- -------
-12345         COMPLETED   00:02:45        8       1G
-```
-
 ## まとめ
 
 Slurm の基本的なコマンドを紹介しました。
