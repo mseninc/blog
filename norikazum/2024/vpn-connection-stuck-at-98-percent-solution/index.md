@@ -1,6 +1,6 @@
 ---
 title: "FortiGateのSSL-VPN接続が98％で止まる原因と解決方法"
-date: 
+date: 2024-11-27
 author: norikazum
 tags: [VPN,FortiGate]
 description: "VPN接続を試みた際、進捗バーが98％で停止し接続が完了しない問題について解説します。この現象の原因となるIPv6設定やデュアルスタック方式の影響を説明し、対応方法を紹介します。Docomoテザリングなど、特定の環境で発生しやすいこの問題を迅速に解決するための手順をまとめました。"
