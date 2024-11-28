@@ -1,9 +1,9 @@
 ---
-title: "iPad で GitHub Codespaces を使ってみた"
+title: "GitHub Codespaces を使ってみた"
 date: 
 author: Ryotaro49
 tags: [iPad, GitHub Codespaces, VS Code]
-description: "iPadでGitHub Codespacesを使ってみました！その手順を紹介します！"
+description: "GitHub Codespaces を使ってみました！Codespace の使い方やローカルの VSCode との設定の同期方法などの手順を紹介します！"
 ---
 
 最近、iPad をもっと活用したいなと思い、iPad 用のキーボードを買いました！
@@ -12,7 +12,7 @@ description: "iPadでGitHub Codespacesを使ってみました！その手順を
 
 iPad で VSCode が使えれば、PC のような感覚で開発ができるのではないかと思い、調べてみると **GitHub Codespaces** というものを見つけました。
 
-そこで、今回は iPad で GitHub Codespaces を使ってみた手順を紹介しようと思います。
+そこで、今回は GitHub Codespaces を使ってみた手順を紹介しようと思います。
 
 ## GitHub Codespaces とは
 
@@ -29,7 +29,7 @@ GitHub のリポジトリがあればすぐに開発を始められます。
 
 ## GitHub Codespaces を使ってみる
 
-実際に iPad で GitHub Codespeces を使ってみました。
+実際に GitHub Codespeces を iPad で使ってみました。
 
 その手順を紹介します。
 
