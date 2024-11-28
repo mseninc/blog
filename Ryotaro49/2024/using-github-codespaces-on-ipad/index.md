@@ -10,7 +10,9 @@ description: "GitHub Codespaces を使ってみました！Codespace の使い�
 
 ![iPad+SmartKeyboardFolio](./images/IMG_4475.jpg)
 
-iPad で VSCode が使えれば、PC のような感覚で開発ができるのではないかと思い、調べてみると **GitHub Codespaces** というものを見つけました。
+iPad で VSCode が使えれば、PC のような感覚で開発ができるのではないかと思い、調べてみると VSCode をブラウザ上で使える **GitHub Codespaces** というものを見つけました。
+
+ブラウザが使える端末であれば良いので、iPad などで使うのに適していると思いました。
 
 そこで、今回は GitHub Codespaces を使ってみた手順を紹介しようと思います。
 
