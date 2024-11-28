@@ -13,6 +13,14 @@ description: "Slurm を使用してジョブを管理する際に役立つ基本
 - Ubuntu Server 22.04.3 LTS
 - Slurm v22.05.2
 
+## Slurm とは
+
+**Slurm Workload Manager (Slurm)** は、オープンソースのジョブ管理システムです。
+
+クラスターのリソース（計算ノード）を効率的に管理し、ジョブのスケジューリング、実行、監視できます。
+
+詳しい説明は以下を参照してください。
+- [Slurm Workload Manager - Overview](http://www.dna-ltd.co.jp/slurm_doc/20.02.04/overview.html)
 
 ## ジョブ関連のコマンド
 
