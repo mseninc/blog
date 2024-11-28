@@ -69,12 +69,12 @@ FortiOS 7.4.1以降の挙動を確認し、適切に設定を調整しましょ�
 
 ## FortiOS 7.6.0 における注意点について
 
-執筆時点で最新のOSバージョンは、7.6.0 ですが、メモリ2G搭載モデルを対象として、SSL-VPN機能が無効化されたようです。
+執筆時点で最新のOSバージョンは、7.6.0 ですが、メモリー2G搭載モデルを対象として、SSL-VPN機能が無効化されたようです。
 
-メモリの確認は、`diagnose hardware sysinfo conserve` というコマンドで可能です。
+メモリーの確認は、`diagnose hardware sysinfo conserve` というコマンドで可能です。
 ![](images/2024-11-26_15h29_20.png "メモリ容量の確認コマンド")
 
-参考ページ: 
+参考ページ:
 
 [【FortiGate】FortiOS7.6.0における一部小型モデルの仕様変更について｜大塚商会](https://mypage.otsuka-shokai.co.jp/news/detail?linkBeforeScreenId=OMP20F0102S01P&oshiraseNo=MDAwMDAwNDc3Mg==&navi=1)
 
