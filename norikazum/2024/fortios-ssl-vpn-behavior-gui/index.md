@@ -11,9 +11,9 @@ description: "FortiOS 7.4.1以降、SSL VPNのデフォルト動作とGUI設定�
 FortiOS 7.4.1以降、SSL VPNのデフォルト動作とGUIの可視性に関する仕様変更が加えられました。
 
 この変更により、SSL VPN設定が初期状態では非表示となり、設定方法や管理が変更されています。本記事ではその詳細と対処法について解説します。
-※ **バージョン 7.4.5 build2702 で確認** しました。
+※ 今回評価した環境は **バージョン 7.4.5 build2702** です。
 
-## 主な変更点
+## FortiOS 7.4.1 の主な変更点
 
 1. **表示機能設定の非表示化**
    デフォルトでシステム-表示機能設定から非表示になります。   
@@ -52,7 +52,7 @@ end
 
 ## デバイスのアップグレード後の挙動
 
-FortiOS 7.4.1以前のファームウェアでSSL VPN設定が有効化されていた場合、アップグレード後も設定とメニューは保持されます。一方、初期状態や設定が無効だった場合、GUIおよびCLIから非表示となります。
+FortiOS 7.4.1 より前のファームウェアでSSL VPN設定が有効化されていた場合、アップグレード後も設定とメニューは保持されます。一方、初期状態や設定が無効だった場合、GUIおよびCLIから非表示となります。
 
 ## 代替案：IPsec VPNとZTNA
 
@@ -64,14 +64,13 @@ Fortinetは、SSL VPNに代わるリモートアクセスソリューション�
 
 [Fortinet公式ドキュメント: Update SSL VPN default behavior and visibility in the GUI 7.4.1](https://docs.fortinet.com/document/fortigate/7.4.0/new-features/233856/update-ssl-vpn-default-behavior-and-visibility-in-the-gui-7-4-1)
 
-SSL VPN設定の変更は管理者にとって重要なポイントです。
-FortiOS 7.4.1以降の挙動を確認し、適切に設定を調整しましょう。
-
 ## FortiOS 7.6.0 における注意点について
 
-執筆時点で最新のOSバージョンは、7.6.0 ですが、メモリー2G搭載モデルを対象として、SSL-VPN機能が無効化されたようです。
-
+なお、執筆時点で最新バージョンである 7.6.0 では、メモリー2G搭載モデルを対象として、SSL-VPN機能が無効化されたようです。
 メモリーの確認は、`diagnose hardware sysinfo conserve` というコマンドで可能です。
+
+SSL-VPNを利用している場合は、アップデートを避けるよう案内されていますので、注意してください。
+
 ![](images/2024-11-26_15h29_20.png "メモリ容量の確認コマンド")
 
 参考ページ:
@@ -79,7 +78,5 @@ FortiOS 7.4.1以降の挙動を確認し、適切に設定を調整しましょ�
 [【FortiGate】FortiOS7.6.0における一部小型モデルの仕様変更について｜大塚商会](https://mypage.otsuka-shokai.co.jp/news/detail?linkBeforeScreenId=OMP20F0102S01P&oshiraseNo=MDAwMDAwNDc3Mg==&navi=1)
 
 [SSL VPN removed from 2GB RAM models for tunnel and web mode | FortiGate / FortiOS 7.6.0 | Fortinet Document Library](https://docs.fortinet.com/document/fortigate/7.6.0/fortios-release-notes/877104/ssl-vpn-removed-from-2gb-ram-models-for-tunnel-and-web-mode)
-
-SSL VPN が運用上必要な場合は、現段階で7.6にアップデートしないようにご注意ください。
 
 それでは、次回の記事でお会いしましょう。
