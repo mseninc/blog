@@ -1,6 +1,6 @@
 ---
 title: "[Slurm] Slurm コマンド集"
-date: 
+date: 2024-11-29
 author: Ryotaro49
 tags: [Slurm, Ubuntu Server 22.04, Ubuntu]
 description: "Slurm を使用してジョブを管理する際に役立つ基本的なコマンドを集めました。"
