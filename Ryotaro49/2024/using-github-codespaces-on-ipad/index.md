@@ -1,6 +1,6 @@
 ---
 title: "iPad で GitHub Codespaces を使ってみた"
-date: 
+date: 2024-11-30
 author: Ryotaro49
 tags: [iPad, GitHub Codespaces, VS Code]
 description: "GitHub Codespaces を使ってみました！Codespace の使い方やローカルの VSCode との設定の同期方法などの手順を紹介します！"
