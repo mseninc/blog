@@ -1,5 +1,5 @@
 ---
-title: "GitHub Codespaces を使ってみた"
+title: "iPad で GitHub Codespaces を使ってみた"
 date: 
 author: Ryotaro49
 tags: [iPad, GitHub Codespaces, VS Code]
@@ -73,6 +73,22 @@ Docker コンテナーを起動して localhost:8000 でアプリーションを
 
 無事、URL からアプリケーションが動いていることを確認できました👏
 
+### iPad で使ってみた感想
+
+特に大きな不満はなく使えました！
+
+iPad では PC のように画面分割できるので、右側にアプリケーションを表示したり、調べものをしたりしながら作業していました。
+
+![画面分割して作業](./images/split.png)
+
+フォルダに画像をアップロードなども簡単にできます。
+
+![フォルダを長押ししてアップロード](./images/upload.jpg)
+
+しかし、やはり画面が小さいのは難点です😅
+
+外出先などでちょっとした作業をしたいときに使うのがよさそうです。
+
 ### Codespace とローカルの VSCode の設定を同期する
 
 [アカウントの GitHub Codespaces をパーソナライズする](https://docs.github.com/ja/codespaces/setting-your-user-preferences/personalizing-github-codespaces-for-your-account) を参考に設定しました。
@@ -100,6 +116,22 @@ Settings Sync の Enable にチェックをいれます。
 ![Codespace で設定の同期をオン](./images/2024-11-26_18h27_59.png)
 
 これで、ローカルで使っていた拡張機能などがそのまま使えるようになると思います！
+
+## GitHub Codespaces と github.dev の違い
+
+ちなみにコード修正や閲覧だけ行う場合は **github.dev** の方が良いと思います。
+
+github.dev は無料で使えて、コード修正や閲覧だけ行うなら十分な機能を持っていると思っています。
+
+![github.dev の画面](./images/githubdev.png)
+
+一番簡単な開き方は、**リポジトリの画面で `.` キーを押す**と開けます。
+
+他の方法は [github.dev エディターを開く](https://docs.github.com/ja/codespaces/the-githubdev-web-based-editor#githubdev-%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF%E3%83%BC%E3%82%92%E9%96%8B%E3%81%8F) に記載されています。
+
+GitHub Codespaces との大きな違いとして、github.dev はターミナルが使用できなかったり、拡張機能が Web で実行できるものに限られます。
+
+**フル機能を使いたいなら GitHub Codespaces を使う**ということになるかと思います。
 
 ## あとがき
 
