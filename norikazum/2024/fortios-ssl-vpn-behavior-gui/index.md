@@ -1,6 +1,6 @@
 ---
 title: "FortiGate から SSL VPN設定がGUIから消えた？FortiOS 7.4.1の仕様変更"
-date: 
+date: 2024-12-03
 author: norikazum
 tags: [FortiGate,VPN]
 description: "FortiOS 7.4.1以降、SSL VPNのデフォルト動作とGUI設定が変更されました。本記事では、非表示となる設定やその対処方法について解説します。"
