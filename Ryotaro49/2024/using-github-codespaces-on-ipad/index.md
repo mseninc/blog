@@ -1,5 +1,5 @@
 ---
-title: "iPad で GitHub Codespaces を使ってみた"
+title: "iPad で VSCode を使いたい！GitHub Codespaces の利用方法"
 date: 2024-11-30
 author: Ryotaro49
 tags: [iPad, GitHub Codespaces, VS Code]
