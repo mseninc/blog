@@ -36,11 +36,9 @@ SyntaxError: Cannot use import statement outside a module
 
 ts-node は Node.js 上で TypeScript を直接実行できるツールです。
 
-**TypeScript のコードを即座に JavaScript へトランスパイルしたうえで、 Node.js のモジュールシステムに従って実行します。**Node.js はデフォルトで CommonJS を使用します。
+**TypeScript のコードを即座に JavaScript へトランスパイルしたうえで、 Node.js のモジュールシステムに従って実行します。** Node.js はデフォルトで CommonJS を使用します。
 
-一方、 Next.js はデフォルトで ESM 準拠のトランスパイルを行うよう設計されています。
-
-これは `tsconfig.json` 内で `module` が `ESNext` に設定されているからです。
+一方、 Next.js はデフォルトで ESM 準拠のトランスパイルを行うよう設計されています。これは `tsconfig.json` 内で `module` が `ESNext` に設定されているからです。
 
 **ESM は `import` や `export` をそのまま残して JavaScript へトランスパイルするため、 JavaScript を実行する際に `import` が解釈できず、エラーが発生します。**
 
@@ -74,8 +72,7 @@ tsx も ts-node と同じ TypeScript のコードを直接実行するツール�
 
 tsx は公式に以下のように記載されているように、**CommonJS ・ ESM どちらにも対応しているため、モジュールシステムを気にする必要がなくなります。**
 
-> No need to wonder whether a package is CommonJS or ESM again.
-If you've encountered the ERR_REQUIRE_ESM error in Node, you'll never see it again!
+> No need to wonder whether a package is CommonJS or ESM again. If you've encountered the ERR_REQUIRE_ESM error in Node, you'll never see it again!
 
 まず tsx をプロジェクトにインストールします。
 
