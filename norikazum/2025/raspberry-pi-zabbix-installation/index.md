@@ -3,7 +3,7 @@ title: "Raspberry PiにZabbixをインストールする方法"
 date: 
 author: norikazum
 tags: [Raspberry Pi,Zabbix]
-description: ""
+description: "Raspberry PiにZabbixをインストールする際、公式リポジトリがサポートしていない問題を解決するため、ソースからビルドする方法を解説します。Apache、PHP、MariaDBのセットアップ手順も含め説明しています。"
 ---
 
 こんにちは。
@@ -34,7 +34,8 @@ BUG_REPORT_URL="https://bugs.debian.org/"
 ```
 
 ## 必要なソフトウェアのインストール
-各ソフトウェアを以下のコマンドを利用してインストールします。
+Zabbixを動作させるためには、Apache、PHP、MariaDBといった周辺ソフトウェアの準備が必要です。
+それぞれを順にインストールし、設定を進めていきます。
 
 ### Apache のインストールと起動
 ```
@@ -145,7 +146,8 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 MariaDB [(none)]>
 ```
 
-## Zabbix の 構築
+## Zabbix の構築
+Zabbix公式リポジトリがRaspberry Piのアーキテクチャをサポートしていないため、Zabbixのソースコードを取得してビルドを行う必要があります。このセクションでは、ソースのダウンロードからビルド、必要な設定までを解説します。
 
 ### ソースのダウンロードと配置
 
@@ -172,7 +174,7 @@ apt install libpcre3-dev libevent-dev libmariadb-dev libcurl4-openssl-dev libssh
 ```
 
 ### ビルドとインストール
-※ 今回は `--enable-server` `--enable-agent` `--enable-proxy` でインストールしていますが必要に応じて調整ください。※他のモジュールも同様。
+※ 今回は `--enable-server` `--enable-agent` `--enable-proxy` のすべてをインストールしていますが必要に応じて調整ください。※他のモジュールも同様。
 
 ```
 cd /usr/local/src/zabbix-7.0.8/
@@ -185,10 +187,8 @@ make install
 mkdir /var/log/zabbix
 chown zabbix:zabbix /var/log/zabbix
 
-## プロセスフォルダの作成
+### プロセスフォルダの作成
 mkdir /var/run/zabbix
-
-## DB の初期化
 
 ### DB の作成
 以下の各情報で作成します。
@@ -204,7 +204,7 @@ grant all privileges on zabbix.* to 'zabbix'@'localhost';
 SET GLOBAL log_bin_trust_function_creators = 1;
 ```
 
-### スキーマーのインポート
+### DB スキーマーのインポート
 ```
 cd /usr/local/src/zabbix-7.0.8/database/mysql
 cat schema.sql  | mysql -u zabbix -p -D zabbix
@@ -265,14 +265,16 @@ quit;
 
 ### Zabbix の起動
 
+以下のコマンドで起動します。
 ```
 # zabbix_server
 #
 ```
 
 ### ui 整備
+Zabbix UIはWebブラウザを通じて管理・操作を行うための重要な部分です。
+以下の手順でUIの準備を行います。
 
-以下の流れで実施します。
 ```
 mkdir /var/www/html/zabbix
 cd /usr/local/src/zabbix-7.0.8/ui
@@ -302,3 +304,80 @@ http://192.168.111.250/zabbix
 
 ![](images/2025-01-27_13h11_49.png "")
 
+Zabbix Agentの設定は割愛します。
+
+## zabbix serverとzabbix agent のサービス化
+## Zabbix Server
+
+以下のコマンドで設定ファイルを作成します。
+
+```
+vi /etc/systemd/system/zabbix-server.service
+```
+
+ファイルの内容は以下のとおりです。
+```
+[Unit]
+Description=Zabbix Server
+After=syslog.target
+After=network.target
+
+[Service]
+Environment="DAEMON_ARGS= -c /usr/local/etc/zabbix_server.conf"
+EnvironmentFile=-/etc/default/%p
+Type=simple
+KillMode=control-group
+PIDFile=/var/run/zabbix/zabbix_server.pid
+ExecStart=/usr/local/sbin/zabbix_server $DAEMON_ARGS
+ExecStop=/bin/sh -c '[ -n "$1" ] && kill -s TERM "$1"' -- "$MAINPID"
+RestartSec=10s
+User=zabbix
+Group=zabbix
+Restart=on-abnormal
+
+[Install]
+WantedBy=multi-user.target
+```
+
+自動起動を有効に、起動します。
+```
+systemctl enable zabbix-server.service
+systemctl start zabbix-server
+```
+
+## Zabbix Agent
+
+以下のコマンドで設定ファイルを作成します。
+
+```
+vi /etc/systemd/system/zabbix-agent.service
+```
+
+ファイルの内容は以下のとおりです。
+```
+[Unit]
+Description=Zabbix Agent
+Documentation=man:zabbix_agentd
+After=network.target
+
+[Service]
+Type=simple
+User=zabbix
+Group=zabbix
+ExecStart=/usr/sbin/zabbix_agentd --foreground
+Restart=on-abnormal
+
+[Install]
+WantedBy=multi-user.target
+```
+
+自動起動を有効に、起動します。
+```
+systemctl enable zabbix-agent
+systemctl start zabbix-agent
+```
+
+以上で、Raspberry Pi上にZabbixをインストールするための設定は完了です。
+この手順を進めることで、Raspberry Piを利用したZabbix環境を構築できます。
+
+それでは次回の記事でお会いしましょう。
