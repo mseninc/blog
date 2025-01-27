@@ -18,7 +18,7 @@ N: リポジトリ 'https://repo.zabbix.com/zabbix/7.0/debian bookworm InRelease
 W: http://raspbian.raspberrypi.com/raspbian/dists/bookworm/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
 ```
 
-利用した Raspberry Pi OS は以下のとおりです。
+利用した Raspberry Pi OS ( 64bit )は以下のとおりです。
 
 ```
 # cat /etc/os-release
@@ -148,6 +148,7 @@ MariaDB [(none)]>
 
 ## Zabbix の構築
 Zabbix公式リポジトリがRaspberry Piのアーキテクチャをサポートしていないため、Zabbixのソースコードを取得してビルドを行う必要があります。このセクションでは、ソースのダウンロードからビルド、必要な設定までを解説します。
+※今回、Zabbix Agent の設定説明は割愛します。
 
 ### ソースのダウンロードと配置
 
@@ -263,6 +264,18 @@ quit;
  max_file_uploads = 20
  ```
 
+### Zabbix Server の設定ファイル作成
+設定ファイルは、`/usr/local/etc` に展開されます。
+
+今回の記事では構築ができるところまでを対象としているため、デフォルト設定でも動作します。ただし、前述のログフォルダおよびプロセスフォルダを作成したことに合わせて、以下の箇所を修正します。
+
+```diff
+- # PidFile=/tmp/zabbix_agentd.pid
++ PidFile=/var/run/zabbix/zabbix_agentd.pid
+- # LogFile=/tmp/zabbix_agentd.log
++ LogFile=/var/log/zabbix/zabbix_agentd.log
+```
+
 ### Zabbix の起動
 
 以下のコマンドで起動します。
@@ -309,8 +322,6 @@ http://192.168.111.250/zabbix
 パスワード: zabbix でログインが可能です。
 
 ![](images/2025-01-27_13h22_12.png "ログイン画面")
-
-Zabbix Agentの設定は割愛します。
 
 ## zabbix serverとzabbix agent のサービス化
 ### Zabbix Server
