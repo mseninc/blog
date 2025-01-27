@@ -272,8 +272,8 @@ quit;
 ```
 
 ### ui 整備
-Zabbix UIはWebブラウザを通じて管理・操作を行うための重要な部分です。
-以下の手順でUIの準備を行います。
+Zabbix UIはブラウザを通じて管理・操作するための重要な部分です。
+以下の手順でUIの準備します。
 
 ```
 mkdir /var/www/html/zabbix
@@ -291,23 +291,29 @@ http://192.168.111.250/zabbix
 ## Zabbix の初期設定
 以下の流れで実施します。
 
-![](images/2025-01-27_13h11_49.png "")
-![](images/2025-01-27_13h17_25.png "")
-![](images/2025-01-27_13h17_47.png "")
-![](images/2025-01-27_13h18_06.png "")
-![](images/2025-01-27_13h18_25.png "")
-![](images/2025-01-27_13h21_31.png "")
+![](images/2025-01-27_13h11_49.png "ようこそ画面")
+
+![](images/2025-01-27_13h17_25.png "前提条件のチェック")
+
+![](images/2025-01-27_13h17_47.png "データベースの接続設定")
+
+![](images/2025-01-27_13h18_06.png "サーバー設定")
+
+![](images/2025-01-27_13h18_25.png "設定パラメーターの確認")
+
+![](images/2025-01-27_13h21_31.png "インストール完了")
 
 以上でセットアップが完了です。
+
 ユーザー名: Admin
 パスワード: zabbix でログインが可能です。
 
-![](images/2025-01-27_13h11_49.png "")
+![](images/2025-01-27_13h22_12.png "ログイン画面")
 
 Zabbix Agentの設定は割愛します。
 
 ## zabbix serverとzabbix agent のサービス化
-## Zabbix Server
+### Zabbix Server
 
 以下のコマンドで設定ファイルを作成します。
 
@@ -345,7 +351,7 @@ systemctl enable zabbix-server.service
 systemctl start zabbix-server
 ```
 
-## Zabbix Agent
+### Zabbix Agent
 
 以下のコマンドで設定ファイルを作成します。
 
