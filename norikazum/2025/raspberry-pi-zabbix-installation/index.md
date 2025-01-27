@@ -205,10 +205,12 @@ DBユーザー名: zabbix
 パスワード: password
 
 ```
+mysql -u root -p
 create database zabbix character set utf8mb4 collate utf8mb4_bin;
 create user 'zabbix'@'localhost' identified by 'password';
 grant all privileges on zabbix.* to 'zabbix'@'localhost';
 SET GLOBAL log_bin_trust_function_creators = 1;
+quit
 ```
 
 ### DB スキーマーのインポート
@@ -387,8 +389,10 @@ After=network.target
 Type=simple
 User=zabbix
 Group=zabbix
-ExecStart=/usr/sbin/zabbix_agentd --foreground
-Restart=on-abnormal
+PIDFile=/var/run/zabbix/zabbix_agentd.pid
+ExecStart=/usr/local/sbin/zabbix_agentd -c /usr/local/etc/zabbix_agentd.conf
+Restart=on-failure
+RestartSec=5s
 
 [Install]
 WantedBy=multi-user.target
@@ -398,6 +402,40 @@ WantedBy=multi-user.target
 ```
 systemctl enable zabbix-agent
 systemctl start zabbix-agent
+```
+
+### Zabbix Proxy
+
+以下のコマンドで設定ファイルを作成します。
+
+```
+vi /etc/systemd/system/zabbix-proxy.service
+```
+
+ファイルの内容は以下のとおりです。
+```
+[Unit]
+Description=Zabbix Proxy
+Documentation=man:zabbix_proxyd
+After=network.target
+
+[Service]
+Type=simple
+User=zabbix
+Group=zabbix
+PIDFile=/var/run/zabbix/zabbix_proxy.pid
+ExecStart=/usr/local/sbin/zabbix_proxy -c /usr/local/etc/zabbix_proxy.conf
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
+```
+
+自動起動を有効に、起動します。
+```
+systemctl enable zabbix-proxy
+systemctl start zabbix-proxy
 ```
 
 以上で、Raspberry Pi上にZabbixをインストールするための設定は完了です。
