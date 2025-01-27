@@ -10,7 +10,7 @@ description: ""
 
 Raspberry PiにZabbixをインストールしようとした際に、公式リポジトリからのインストールでエラーが発生し、ソースからのビルドが必要になりました。本記事では、インストール流れについて解説します。
 
-具体的には、以下のようなエラーが表示され、Zabbix公式リポジトリがRaspberry Piのアーキテクチャ（armhfやarm64）をサポートしていないことが原因であることが判明しました。
+具体的には、以下のようなエラーが表示されました。その原因を調査した結果、Zabbix公式リポジトリがRaspberry Piのアーキテクチャ（armhfやarm64）をサポートしていないことが判明しました。
 
 ```
 N: リポジトリ 'https://repo.zabbix.com/zabbix/7.0/debian bookworm InRelease' がアーキテクチャ 'armhf' をサポートしないため設定ファイル 'main/binary-armhf/Packages' の取得をスキップ
@@ -191,6 +191,8 @@ mkdir /var/run/zabbix
 ## DB の初期化
 
 ### DB の作成
+以下の各情報で作成します。
+
 DB名: zabbix
 DBユーザー名: zabbix
 パスワード: password
@@ -280,7 +282,7 @@ systemctl restart php8.2-fpm
 systemctl restart apache2
 ```
 
-ここまでで、以下のURLにすると初期設定が始まります。
+これで、以下のURLにすると初期設定が始まります。
 
 http://192.168.111.250/zabbix
 
