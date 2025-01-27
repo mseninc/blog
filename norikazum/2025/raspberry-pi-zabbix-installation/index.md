@@ -185,11 +185,17 @@ make install
 ```
 
 ### ログフォルダの作成
+以下のコマンドでログ用のフォルダを作成し、権限を変更します。
+```
 mkdir /var/log/zabbix
 chown zabbix:zabbix /var/log/zabbix
+```
 
 ### プロセスフォルダの作成
+以下のプロセスが作成されるフォルダを作成します。
+```
 mkdir /var/run/zabbix
+```
 
 ### DB の作成
 以下の各情報で作成します。
