@@ -175,7 +175,7 @@ apt install libpcre3-dev libevent-dev libmariadb-dev libcurl4-openssl-dev libssh
 ```
 
 ### ビルドとインストール
-※ 今回は `--enable-server` `--enable-agent` `--enable-proxy` のすべてをインストールしていますが必要に応じて調整ください。※他のモジュールも同様。
+今回は `--enable-server` `--enable-agent` `--enable-proxy` のすべてをインストールしていますが必要に応じて調整ください。※他のモジュールも同様。
 
 ```
 cd /usr/local/src/zabbix-7.0.8/
@@ -207,6 +207,7 @@ chown zabbix:zabbix /var/log/zabbix
 以下のプロセスが作成されるフォルダを作成します。
 ```
 mkdir /var/run/zabbix
+chown zabbix:zabbix /var/run/zabbix
 ```
 
 ### DB の作成
@@ -221,8 +222,35 @@ mysql -u root -p
 create database zabbix character set utf8mb4 collate utf8mb4_bin;
 create user 'zabbix'@'localhost' identified by 'password';
 grant all privileges on zabbix.* to 'zabbix'@'localhost';
+ALTER USER 'zabbix'@'localhost' IDENTIFIED BY 'password';
 SET GLOBAL log_bin_trust_function_creators = 1;
+FLUSH PRIVILEGES;
 quit
+```
+※ zabbix_agent のみ利用する場合は、データベースは不要です。
+
+### DB のエラーログ出力設定
+以下のDiffのとおり設定します。
+
+```diff
+root@szabproxy:~# diff -u /etc/mysql/mariadb.conf.d/50-server.cnf.org /etc/mysql/mariadb.conf.d/50-server.cnf
+--- /etc/mysql/mariadb.conf.d/50-server.cnf.org 2025-01-28 21:50:13.962559926 +0900
++++ /etc/mysql/mariadb.conf.d/50-server.cnf     2025-01-28 21:50:39.290593366 +0900
+@@ -59,7 +59,7 @@
+ # and when running legacy init error logging goes to syslog due to
+ # /etc/mysql/conf.d/mariadb.conf.d/50-mysqld_safe.cnf
+ # Enable this if you want to have error logging into a separate file
+-#log_error = /var/log/mysql/error.log
++log_error = /var/log/mysql/error.log
+ # Enable the slow query log to see queries with especially long duration
+ #log_slow_query_file    = /var/log/mysql/mariadb-slow.log
+ #log_slow_query_time    = 10
+ ```
+
+ログフォルダを作成します。
+```
+mkdir /var/log/mysql
+chown -R mysql:mysql /var/log/mysql
 ```
 
 ### DB スキーマーのインポート
@@ -232,11 +260,13 @@ cat schema.sql  | mysql -u zabbix -p -D zabbix
 cat images.sql  | mysql -u zabbix -p -D zabbix
 cat data.sql  | mysql -u zabbix -p -D zabbix
 ```
+※ zabbix_proxy のみ利用する場合は、`schema.sql` のみのインポートでOKです。
 
 ### log_bin_trust_function_creators の無効化
 ```
 mysql -u root -p
 SET GLOBAL log_bin_trust_function_creators = 0;
+FLUSH PRIVILEGES;
 quit;
 ```
 
@@ -290,10 +320,10 @@ quit;
 今回の記事では構築ができるところまでを対象としているため、デフォルト設定でも動作します。ただし、前述のログフォルダおよびプロセスフォルダを作成したことに合わせて、以下の箇所を修正します。
 
 ```diff
-- # PidFile=/tmp/zabbix_agentd.pid
-+ PidFile=/var/run/zabbix/zabbix_agentd.pid
-- # LogFile=/tmp/zabbix_agentd.log
-+ LogFile=/var/log/zabbix/zabbix_agentd.log
+- # PidFile=/tmp/zabbix_server.pid
++ PidFile=/var/run/zabbix/zabbix_server.pid
+- # LogFile=/tmp/zabbix_server.log
++ LogFile=/var/log/zabbix/zabbix_server.log
 ```
 
 ### Zabbix の起動
@@ -317,7 +347,8 @@ systemctl restart php8.2-fpm
 systemctl restart apache2
 ```
 
-これで、以下のURLにすると初期設定が始まります。
+これで、以下のURLに接続すると初期設定が始まります。
+※IPアドレスは適宜読み替えてください。
 
 http://192.168.111.250/zabbix
 
@@ -452,5 +483,35 @@ systemctl start zabbix-proxy
 
 以上で、Raspberry Pi上にZabbixをインストールするための設定は完了です。
 この手順を進めることで、Raspberry Piを利用したZabbix環境を構築できます。
+
+## メモ
+
+Zabbix Server が 別で存在する場合に、Server側のOpenSSLのバージョン不一致で以下のエラーがクライアント側で出力されることがあります。
+
+```
+31765:20250128:221055.249 Unable to connect to [46.51.224.24]:10051 [TCP successful, cannot establish TLS to [[46.51.224.24]:10051]: SSL_connect() set result code to SSL_ERROR_SSL: file ../ssl/record/rec_layer_s3.c line 1605 func ssl3_read_bytes: error:0A000417:SSL routines::sslv3 alert illegal parameter: SSL alert number 47: TLS read fatal alert "illegal parameter"]
+```
+
+上記のケースでは、サーバー側とクライアント側でバージョンが不一致していることが確認できました。
+
+- サーバー側: `OpenSSL 3.0.15 3 Sep 2024`
+- クライアント側: `OpenSSL 1.1.1f  31 Mar 2020`
+
+上記のとおり、サーバー側は古い OpenSSL 1.1.1f を使用しておる、これにより、TLS PSK のバインダー（ `tls_psk_do_binder` ）に互換性の問題が発生しています。
+
+しかし、今回のケースではサーバーとの通信ができないということはありませんでした。
+
+対策として、以下が考えられます。
+※記事執筆時点で未確認のため、実施の際は十分に評価をお願いします。
+
+1. Zabbix Server 側の OpenSSL をアップグレード
+1. Proxy 側の OpenSSL をダウングレード
+1. TLS 暗号スイートの互換性を明示的に設定 ( PSK に限定せずすべての暗号スイートを制御 )
+   - サーバー側 ( `/etc/zabbix/zabbix_server.conf`)
+        - TLSCipherAll=ECDHE-PSK-AES256-GCM-SHA384
+        - TLSCipherAll13=TLS_AES_256_GCM_SHA384
+   - クライアント側 ( `/etc/zabbix/zabbix_agent.conf` や `/etc/zabbix/zabbix_proxy.conf` )
+        - TLSCipherAll=ECDHE-PSK-AES256-GCM-SHA384
+        - TLSCipherAll13=TLS_AES_256_GCM_SHA384
 
 それでは次回の記事でお会いしましょう。
