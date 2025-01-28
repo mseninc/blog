@@ -179,7 +179,19 @@ apt install libpcre3-dev libevent-dev libmariadb-dev libcurl4-openssl-dev libssh
 
 ```
 cd /usr/local/src/zabbix-7.0.8/
-./configure --enable-server --enable-agent --enable-proxy --with-mysql --enable-ipv6 --with-net-snmp --with-libcurl --with-libxml2 --with-openipmi --with-ssh2 --with-ldap
+./configure \
+  --enable-server \
+  --enable-agent \
+  --enable-proxy \
+  --with-mysql \
+  --enable-ipv6 \
+  --with-net-snmp \
+  --with-libcurl \
+  --with-libxml2 \
+  --with-openipmi \
+  --with-ssh2 \
+  --with-ldap \
+  --with-openssl
 make
 make install
 ```
