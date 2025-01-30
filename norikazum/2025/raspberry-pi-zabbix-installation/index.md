@@ -8,15 +8,7 @@ description: "Raspberry PiにZabbixをインストールする際、公式リポ
 
 こんにちは。
 
-Raspberry PiにZabbixをインストールしようとした際に、公式リポジトリからのインストールでエラーが発生し、ソースからのビルドが必要になりました。本記事では、インストール流れについて解説します。
-
-具体的には、以下のようなエラーが表示されました。その原因を調査した結果、Zabbix公式リポジトリがRaspberry Piのアーキテクチャ（armhfやarm64）をサポートしていないことが判明しました。
-
-```
-N: リポジトリ 'https://repo.zabbix.com/zabbix/7.0/debian bookworm InRelease' がアーキテクチャ 'armhf' をサポートしないため設定ファイル 'main/binary-armhf/Packages' の取得をスキップ
-N: リポジトリ 'https://repo.zabbix.com/zabbix/7.0/debian bookworm InRelease' がアーキテクチャ 'arm64' をサポートしないため設定ファイル 'main/binary-arm64/Packages' の取得をスキップ
-W: http://raspbian.raspberrypi.com/raspbian/dists/bookworm/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
-```
+Raspberry PiにZabbixをソースからのビルドからインストール流れについて解説します。
 
 利用した Raspberry Pi OS ( 64bit )は以下のとおりです。
 
