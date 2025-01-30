@@ -25,6 +25,9 @@ SUPPORT_URL="https://www.debian.org/support"
 BUG_REPORT_URL="https://bugs.debian.org/"
 ```
 
+なお、公式の手順からインストールするには以下を参考にしてください。
+[Download and install Zabbix 7.0 LTS for Raspberry Pi OS 12 (Bookworm), MySQL, Nginx](https://www.zabbix.com/download?zabbix=7.0&os_distribution=raspberry_pi_os&os_version=12&components=server_frontend_agent&db=mysql&ws=nginx)
+
 ## 必要なソフトウェアのインストール
 Zabbixを動作させるためには、Apache、PHP、MariaDBといった周辺ソフトウェアの準備が必要です。
 それぞれを順にインストールし、設定を進めていきます。
