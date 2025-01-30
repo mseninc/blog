@@ -1,5 +1,5 @@
 ---
-title: "Raspberry PiにZabbixをインストールする方法"
+title: "Raspberry PiにZabbixをソースからインストールする方法"
 date: 
 author: norikazum
 tags: [Raspberry Pi,Zabbix]
