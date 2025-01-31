@@ -1,6 +1,6 @@
 ---
 title: "Next.js で Prisma の seed を使うと Cannot use import statement outside a module が出る"
-date: 
+date: 2025-01-31
 author: junya-gera
 tags: [Next.js, Prisma]
 description: "Next.js で Prisma の seed を使うと発生する Cannot use import statement outside a module エラーの原因と解決法を紹介します。"
