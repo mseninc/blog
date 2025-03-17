@@ -1,6 +1,6 @@
 ---
 title: "Raspberry PiにZabbixをソースからインストールする方法"
-date: 
+date: 2025-03-17
 author: norikazum
 tags: [Raspberry Pi,Zabbix]
 description: "Raspberry PiにZabbixをインストールする際、公式リポジトリがサポートしていない問題を解決するため、ソースからビルドする方法を解説します。Apache、PHP、MariaDBのセットアップ手順も含め説明しています。"
