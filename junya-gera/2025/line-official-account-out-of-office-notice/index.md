@@ -1,6 +1,6 @@
 ---
 title: "LINE 公式アカウントで応答時間外であることを知らせる方法"
-date: 
+date: 2025-03-19
 author: junya-gera
 tags: [LINE]
 description: "LINE 公式アカウントで応答時間外を知らせるステータスバーが終了したので、それ以外の方法を紹介します。"
