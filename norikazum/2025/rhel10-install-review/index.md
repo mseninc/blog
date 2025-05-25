@@ -3,7 +3,7 @@ title: "Red Hat Enterprise Linux 10をインストールしてみた"
 date: 
 author: norikazum
 tags: [Red Hat]
-description: ""
+description: "ed Hat Enterprise Linux 10の正式リリースに合わせて、EOL情報や新機能、実際のインストールプロセスをスクリーンショットと共に解説します。"
 ---
 
 ## はじめに
