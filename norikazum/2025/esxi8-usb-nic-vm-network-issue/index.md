@@ -2,8 +2,8 @@
 title: "USB NIC構成のESXiで仮想マシンがネットワークに接続できない問題の対処法"
 date: 
 author: norikazum
-tags: []
-description: ""
+tags: [VMware]
+description: "ノートPC＋USB NICのESXi構成で発生したVMの通信不可トラブル。スタンバイ設定の落とし穴とその対処法を解説します。"
 ---
 
 ## はじめに
