@@ -1,17 +1,9 @@
 ---
-title: ""
+title: "USB NIC構成のESXiで仮想マシンがネットワークに接続できない問題の対処法"
 date: 
 author: norikazum
 tags: []
 description: ""
----
-
-# USB NIC構成のESXiで仮想マシンがネットワークに接続できない問題の対処法
-
-**Slug**: `esxi8-usb-nic-vm-network-issue`
-
-![USB NIC構成のESXiで仮想マシンがネットワークに接続できない問題の対処法](/mnt/data/A_Japanese_language_troubleshooting_guide_cover_im.png)
-
 ---
 
 ## はじめに
