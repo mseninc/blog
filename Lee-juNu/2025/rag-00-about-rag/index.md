@@ -1,5 +1,5 @@
 ---
-title: "ローカルでRAGを動かしてみよう 00：はじめに – RAGとは何か？"
+title: "ローカルでRAGを動かしてみよう 01：はじめに – RAGとは何か？"
 date: 
 author: Lee-juNu
 tags: ["RAG", "検索拡張生成", "LLM"]
