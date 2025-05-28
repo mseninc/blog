@@ -3,25 +3,24 @@ title: "Red Hat Enterprise Linux 10をインストールしてみた"
 date: 
 author: norikazum
 tags: [Red Hat]
-description: "ed Hat Enterprise Linux 10の正式リリースに合わせて、EOL情報や新機能、実際のインストールプロセスをスクリーンショットと共に解説します。"
+description: "Red Hat Enterprise Linux 10の正式リリースに合わせて、EOL情報や新機能、実際のインストールプロセスをスクリーンショットと共に解説します。"
 ---
 
 ## はじめに
 
-2025年5月20日（米国現地時間）、Red Hatは最新のエンタープライズ向けLinuxディストリビューション  
-**Red Hat Enterprise Linux 10** を正式にリリースしました。
+2025年5月20日（米国現地時間）、Red Hatは最新のエンタープライズ向けLinuxディストリビューション **Red Hat Enterprise Linux 10** を正式にリリースしました。
 
 この記事では、 Red Hat Enterprise Linux 10のサポート期間、主な変更点、そして実際のインストール手順について解説します。
 
 ---
 
-##  Red Hat Enterprise Linux 10のサポートライフサイクル
+## Red Hat Enterprise Linux 10のサポートライフサイクル
 
 - **リリース日**：2025年5月20日  
 - **フルサポート終了**：2030年5月31日  
 - **メンテナンスサポート終了**：2035年5月31日  
 - **延長ライフサイクルサポート（ELS）終了**：2038年5月31日  
-（[出典](https://endoflife.date/rhel)）
+情報元: [endoflife.data](https://endoflife.date/rhel)
 
 ## 主な変更点と新機能
 
@@ -29,19 +28,19 @@ description: "ed Hat Enterprise Linux 10の正式リリースに合わせて、E
 
 - 32ビットx86アーキテクチャのサポート終了  
 - **x86-64-v3** 以降のCPU（Intel HaswellまたはAMD Excavator以降）必須  
-（[情報元](https://www.theregister.com/2025/05/14/red_hat_enterprise_linux_10/)）
+情報元: [Red Hat Enterprise Linux 10 starts trickling quietly out • The Register](https://www.theregister.com/2025/05/14/red_hat_enterprise_linux_10/)
 
 ### ✅ セキュリティとコンプライアンスの強化
 
 - ポスト量子暗号アルゴリズムの導入  
 - OpenSSLのFIPS認証とCVEパッチ適用の分離  
-（[詳細](https://www.redhat.com/en/blog/whats-new-rhel-10)）
+情報元: [What's next? Red Hat Enterprise Linux 10 and beyond](https://www.redhat.com/en/blog/whats-new-rhel-10)）
 
 ### ✅ AI支援・開発者支援の強化
 
 - **Red Hat Enterprise Linux Lightspeed**：生成AIによるCLI支援  
 - 最新の開発ツール群：PHP 8.3、nginx 1.26、Git 2.47 など  
-（[参照](https://www.redhat.com/en/resources/new-in-enterprise-linux-10-datasheet)）
+情報元: [What is new in Red Hat Enterprise Linux 10 and beyond](https://www.redhat.com/en/resources/new-in-enterprise-linux-10-datasheet)
 
 ### ✅ クラウド/コンテナー統合の強化
 
