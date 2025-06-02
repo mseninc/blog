@@ -1,0 +1,101 @@
+---
+title: "Red Hat Enterprise Linux 10をインストールしてみた"
+date: 
+author: norikazum
+tags: [Red Hat]
+description: "Red Hat Enterprise Linux 10の正式リリースに合わせて、EOL情報や新機能、実際のインストールプロセスをスクリーンショットと共に解説します。"
+---
+
+## はじめに
+
+2025年5月20日（米国現地時間）、Red Hatは最新のエンタープライズ向けLinuxディストリビューション **Red Hat Enterprise Linux 10** を正式にリリースしました。
+
+この記事では、 Red Hat Enterprise Linux 10のサポート期間、主な変更点、そして実際のインストール手順について解説します。
+
+---
+
+## Red Hat Enterprise Linux 10のサポートライフサイクル
+
+- **リリース日**：2025年5月20日  
+- **フルサポート終了**：2030年5月31日  
+- **メンテナンスサポート終了**：2035年5月31日  
+- **延長ライフサイクルサポート（ELS）終了**：2038年5月31日  
+情報元: [endoflife.data](https://endoflife.date/rhel)
+
+## 主な変更点と新機能
+
+### ✅ ハードウェア要件の更新
+
+- 32ビットx86アーキテクチャのサポート終了  
+- **x86-64-v3** 以降のCPU（Intel HaswellまたはAMD Excavator以降）必須  
+情報元: [Red Hat Enterprise Linux 10 starts trickling quietly out • The Register](https://www.theregister.com/2025/05/14/red_hat_enterprise_linux_10/)
+
+### ✅ セキュリティとコンプライアンスの強化
+
+- ポスト量子暗号アルゴリズムの導入  
+- OpenSSLのFIPS認証とCVEパッチ適用の分離  
+情報元: [What's next? Red Hat Enterprise Linux 10 and beyond](https://www.redhat.com/en/blog/whats-new-rhel-10)）
+
+### ✅ AI支援・開発者支援の強化
+
+- **Red Hat Enterprise Linux Lightspeed**：生成AIによるCLI支援  
+- 最新の開発ツール群：PHP 8.3、nginx 1.26、Git 2.47 など  
+情報元: [What is new in Red Hat Enterprise Linux 10 and beyond](https://www.redhat.com/en/resources/new-in-enterprise-linux-10-datasheet)
+
+### ✅ クラウド/コンテナー統合の強化
+
+- AWS / GCP / Azureとの統合強化  
+- Webコンソールの改善（Stratis FS管理、HAクラスター統合など）
+
+
+## インストール手順とスクリーンショット
+
+実際にインストールを行った手順を、スクリーンショット付きで解説します。
+利用したメディアは、Red Hat Customer Portal からダウンロードした `rhel-10.0-x86_64-boot.iso` を利用しています。
+
+- ブート画面は旧バージョンと特に変わっていません
+![](images/2025-05-25_14h56_19.png "ブート")
+
+- 言語選択画面も変わりません
+![](images/2025-05-25_14h57_13.png "言語選択")
+
+- インストール概要の画面です。2つほどこれまでと異なる点があります。
+  - 1つめは、インストールソースがデフォルトで「Red Hat CDN」となっている点
+  - 2つめは、デフォルトで「rootアカウントが無効になっています」となっている点
+![](images/2025-05-25_14h58_18.png "インストール概要")
+
+- インストールソースをブートディスクに変更しようと「自動検出したインストールメディア」を選択しますが、末尾に「失敗した」とでています。
+![](images/2025-05-25_14h58_39.png "インストールソースの変更")
+
+- 確認すると、インストールソース が正しく読み込めず、必要なメタデータ repomd.xml を取得できなかったというエラーでした。デフォルトがCDNになっているということはRed Hat 社の意図を感じましたのでこれ以上頑張らず、CDNでインストールを進めました
+![](images/2025-05-25_15h04_00.png "インストールソースの変更時のエラー")
+
+- インストール概要の「Red Hat に接続」からRed Hatにログインします。※ ライセンス契約があるアカウントの必要があります
+![](images/2025-05-25_15h06_25.png "Red Hatアカウントにログイン")
+
+- ログインに成功したことが確認できました
+![](images/2025-05-25_15h07_07.png "Red Hatアカウントにログイン成功")
+
+- ソフトウェアの選択が選べるようになりました。今回は「最小限のインストール」で進めます
+![](images/2025-05-25_15h07_33.png "ソフトウェアの選択")
+![](images/2025-05-25_15h07_51.png "最小限のインストールを選択")
+
+- root アカウントがデフォルトで無効化になっている内容を確認します
+![](images/2025-05-25_15h08_27.png "rootアカウント無効化")
+
+- インストールを開始します
+![](images/2025-05-25_15h09_43.png "インストールの開始")
+![](images/2025-05-25_15h11_01.png "インストールの進捗状況")
+
+- インストールが完了しました。およそ10分程度要しました
+![](images/2025-05-25_15h19_50.png "インストールの完了")
+![](images/2025-05-25_15h21_02.png "ログイン画面")
+
+インストール直後のカーネルは `6.12-0-55.12.1.el10_0.x86_64`、OSバージョンは `Red Hat Enterprise Linux release 10.0 (Coughlan)` でした。
+![](images/2025-05-25_16h21_06.png "バージョン確認")
+
+## あとがき
+
+初めて業務で触ったバージョンが、3 だったと思うので約20年でバージョンアップが7回もあったと思うと、感慨深いですね。
+
+それでは、次回の記事でお会いしましょう。
