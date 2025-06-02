@@ -1,5 +1,5 @@
 ---
-title: "ローカルでRAGを動かしてみよう 0１： RAG ナレッジデータの準備"
+title: "ローカルでRAGを動かしてみよう 02： RAG ナレッジデータの準備"
 date: 
 author: Lee-juNu
 tags: []
