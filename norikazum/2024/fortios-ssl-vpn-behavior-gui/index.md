@@ -79,4 +79,25 @@ SSL-VPNを利用している場合は、アップデートを避けるよう案�
 
 [SSL VPN removed from 2GB RAM models for tunnel and web mode | FortiGate / FortiOS 7.6.0 | Fortinet Document Library](https://docs.fortinet.com/document/fortigate/7.6.0/fortios-release-notes/877104/ssl-vpn-removed-from-2gb-ram-models-for-tunnel-and-web-mode)
 
+
+## 2025年6月追記
+
+以下のサイトに、モデル別のSSL-VPN利用可否が分かりやすく記載されています。  
+参考: [FortiGate 2GB RAMモデルにおける機能の制限について | NVC FAQ](https://support.nvc.co.jp/faq/show/677?site_domain=default)
+
+FortiOS 7.6系にアップデートしても、SSL-VPNが利用可能な機種は以下のとおりです。
+
+- FG-70F / 71F  
+- FG-80F / 81F  
+- FG-100 以上のモデル  
+
+また、各バージョンのサポート終了日は以下のとおりです。  
+参考: [Fortinet社製品ファームウェアサポート終了情報](https://www.networld.co.jp/product_file/file/fortinet_download_sup_20250114.pdf)
+
+- FortiOS 7.0：2025年10月20日  
+- FortiOS 7.2：2026年10月14日  
+- FortiOS 7.4：2027年12月1日  
+
+つまり、 FortiOS 7.4 までアップデートしておけば、**2027年12月1日までは SSL-VPN が利用できます**。
+
 それでは、次回の記事でお会いしましょう。
