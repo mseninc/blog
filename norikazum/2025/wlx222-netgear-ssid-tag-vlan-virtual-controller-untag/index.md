@@ -25,6 +25,16 @@ NETGEAR側の設定に少し癖があり、はまりましたので記録も兼�
 ![](images/2025-06-07_16h45_13.png "イメージ図")
 
 ## 設定
+ポイントは以下の3点です。
+
+1. WLX222 と接続するポートでは「タグ VLAN」と「ポート VLAN（= Untag VLAN）」を併用すること
+    - タグ VLAN はSSID用、ポート VLANは仮想コントローラー接続用に分けて使います。
+2. タグ VLAN はSSIDとして利用する
+    - たとえば VLAN 10 や VLAN 20 をSSIDに割り当ててWi-Fiネットワークを構成します。
+3. ポート VLAN（Untag VLAN）は仮想コントローラー用に利用する
+    - 仮想コントローラーはUntag通信のみ対応なので、接続ポートのPVIDにVLAN 1を設定する必要があります。
+
+※ ポート VLAN = PVID
 
 ### NETGEAR S3300-28X 
 
@@ -33,10 +43,10 @@ NETGEAR側の設定に少し癖があり、はまりましたので記録も兼�
 
 `Switching -> VLAN -> Advanced -> VLAN Membership` に進みます。
 
-VLAN 1 の 設定で設定するポートをクリックして `U` にします。
+仮想コントローラーとの接続に使用する VLAN 1 を設定するポートをクリックして `U` にします。
 ![](images/2025-06-07_17h06_28.png "Untagポートの設定")
 
-この設定がポイント (**仮想コントローラー、Untag VLAN しか通らない**) です。
+この設定がポイント (**仮想コントローラーは Untag VLAN しか通信できない**) です。
 これが分からず、ずっと通信できなかったという結論です。
 
 次に、`Switching -> VLAN -> Advanced -> Port PVID Configuration` に進みます。
