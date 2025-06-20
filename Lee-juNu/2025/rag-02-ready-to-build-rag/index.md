@@ -2,8 +2,8 @@
 title: "ローカルでRAGを動かしてみよう 02： RAG ナレッジデータの準備"
 date: 
 author: Lee-juNu
-tags: []
-description: ""
+tags: [RAG, ナレッジデータ, LLM, AI, 検索拡張生成]
+description: "RAG 検索、拡張、生成を行う前に検索対象となるナレッジデータの概念と準備過程を紹介していく記事です。"
 ---
 
 
