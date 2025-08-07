@@ -27,3 +27,17 @@ Ollama（オラマ）とは、ローカル環境で大規模言語モデル（LL
 llama.cpp から初めてモデルの準備、モデル設定準備などなどをする時間を使って次の開発ができるから Ollama を選びました。
 
 ## Ollama のダウンロード
+
+Ollama は公式ページからダウンロードが可能です。
+
+1. [Windows](https://ollama.com/download/windows)
+2. [MacOs](https://ollama.com/download/mac)
+3. [Linux](https://ollama.com/download/linux)
+
+
+## Ollama の使用（Windows）
+
+1. Ollama のインストールを行う
+
+
+## Ollama の使用（Linux）
