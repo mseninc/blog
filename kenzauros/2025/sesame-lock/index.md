@@ -134,7 +134,7 @@ SwitchBot のロック Pro は本体に押しボタン（クイックキー）�
 
 施錠や解錠の履歴は、クラウドにアップロードされ、アプリのほか、メーカーが提供している **SESAME Biz** というサービスで確認できます。個人レベルの利用では無料の Free プランでも十分でしょう。
 
-- [入退室管理システム SESAME Biz【セサミビズ】| 簡単取付けでオフィスのセキュリティ化](https://jp.candyhouse.co/pages/sesamebiz?srsltid=AfmBOor-YmI9Ufc8CtHcw7o8Ubi_xna2QN7LpUXAzUUDPB-rkP_rvxCl)
+- [入退室管理システム SESAME Biz【セサミビズ】| 簡単取付けでオフィスのセキュリティ化](https://jp.candyhouse.co/pages/sesamebiz)
 
 ただし、Hub3 がない場合、履歴はスマホアプリを開いたときにしか取得・アップロードされません。定期的に履歴をアップロードしたい場合は、Hub3 を設置することを強くお勧めします。
 
