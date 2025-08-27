@@ -1,6 +1,6 @@
 ---
 title: "WLX222とNETGEARスイッチでSSIDにタグVLAN、仮想コントローラーuntagを設定する方法"
-date: 
+date: 2025-08-27
 author: norikazum
 tags: [YAMAHA,NETGEAR,vlan,Wi-Fi]
 description: "YAMAHA WLX222とNETGEARスイッチでSSIDごとにタグVLANを設定しつつ、仮想コントローラーはuntagで接続する構成の設定手順を解説します。"
