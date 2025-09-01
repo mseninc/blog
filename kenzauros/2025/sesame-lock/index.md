@@ -1,6 +1,6 @@
 ---
 title: "[セサミロック] オフィスの入退出履歴を顔認証で記録する"
-date: 
+date: 2025-09-01
 author: kenzauros
 tags: [セサミ,ISMS]
 description: "オフィスのスマートロックとして CANDY HOUSE のセサミを導入し、オフィスの入退出履歴を顔認証で記録する取り組みについて紹介します。"
