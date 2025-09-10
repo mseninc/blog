@@ -1,6 +1,6 @@
 ---
 title: "[GAS] セサミロックの履歴を Google スプレッドシートに記録する"
-date: 
+date: 2025-09-10
 author: kenzauros
 tags: [GAS,Google スプレッドシート,Google Apps Script,セサミ]
 description: "オフィスの入退出を記録するために導入しているスマートロック「セサミ」の履歴を Google Apps Script (GAS) を使って Google スプレッドシートに記録する方法を紹介します。"
