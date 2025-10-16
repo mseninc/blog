@@ -8,7 +8,7 @@
   active: true
 - github: kenzauros
   name: kenzauros
-  bio: CTO です。好きなのは .NET (C#), React, Vue, Node(JS) です。もともとは電子回路設計や実験装置開発をやっていました。趣味は旅行ですが、最近はいけなくてちょっと哀しいです。海外ドラマが好きでいろいろ見ています。
+  bio: CTO です。好きなのは .NET (C#), React, Node(JS) です。もともとは電子回路設計や実験装置開発をやっていました。趣味は旅行で、2025年はひさびさにヨーロッパへ行けたのでちょっと満足です。子連れでなかなか大変になりましたが、こりずに出かけようと思います。
   active: true
 - github: jinna-i
   name: じんない
@@ -49,7 +49,7 @@
 - github: Ryotaro49
   name: Makky
   bio: 最近の趣味はフェスに行くこととダーツです。個人的に Web サイトを作ったりもしてます。よく使う言語は Python と TypeScript です。
-  active: true
+  active: false
 - github: Lee-juNu
   name: リリ
   bio: 韓国から来た新人エンジニアです。プログラムは広く浅く学んできたので早めに基礎をしっかり整えて立派なエンジニアになりたいです。趣味はVRゲームに関連する3DモデリングやUnityを通じたプログラミングです。
@@ -61,8 +61,4 @@
 - github: Ayuka000005698
   name: koya
   bio: 入社1年目の新人です。小さい頃からバレエやダンス、チアをしてきたのでまた踊りたいなぁと思っています。エンジニアとして1日でも早く仕事ができるよう、日々勉強を頑張ります。
-  active: true
-- github: Doitaro
-  name: DoiChan
-  bio: 西の端っこの長崎からやってきました。スキルアップして成長できるよう、日々楽しみながら気合入れて頑張っていきます。趣味はスポーツ観戦です！
-  active: true
+  active: false
