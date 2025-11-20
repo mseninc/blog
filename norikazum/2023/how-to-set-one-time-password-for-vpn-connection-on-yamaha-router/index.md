@@ -83,7 +83,9 @@ L2TP/IPsec で設定した `pp auth username` に対応したキーを設定し�
 ## Lua スクリプトの配置と関連設定
 各ファイルは以下よりダウンロードします。
 
-[Google 認証システムの確認コード生成方法に準じたワンタイムパスワードを設定する](https://network.yamaha.com/setting/router_firewall/monitor/lua_script/one_time_password2-rtx1200)
+[Google 認証システムの確認コード生成方法に準じたワンタイムパスワードを設定する](https://network.yamaha.com/setting/router_firewall/monitor/lua_script/one_time_password-rtx1200)
+
+2025/11/29 追記: 以前公開されていたページがリンク切れになり更新しました。`onetimepass.lua` と `sha1.lua` がダウンロードできなくなったようです。
 
 **注意点**
 以降の手順でリンク先から各 Lua スクリプトを取得します。このとき、文字コードの変更を防ぐために各ファイルは**「名前を付けてリンク先を保存」で保存** してください。
